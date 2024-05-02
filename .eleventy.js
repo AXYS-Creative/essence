@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // Copy custom CSS and JavaScript to /_site
-  eleventyConfig.addPassthroughCopy("./src/static/css");
+  eleventyConfig.addPassthroughCopy("./src/static/styles");
   eleventyConfig.addPassthroughCopy("./src/javascript");
 
   // Copy Image Folder to /_site

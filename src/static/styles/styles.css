@@ -1,13 +1,13 @@
 :root {
-  --background-color: #111;
-  --primary-font-color: #fefefe;
-  --secondary-font-color: #c0c0c0;
-  --link-color: #c0c0c0;
-  --link-color-hover: #fefefe;
+  --background-color: #faf8f4;
+  --primary-font-color: #0e0e0e;
+  --secondary-font-color: #898c83;
+  --link-color: #898c83;
+  --link-color-hover: #0e0e0e;
 }
 
 .h1, h1 {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 80px;
   font-weight: 400;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
 }
 
 .h2, h2, nav .nav-links .nav-link {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 64px;
   font-weight: 400;
   text-transform: uppercase;
@@ -61,7 +61,7 @@
 }
 
 .h3, h3 {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 56px;
   font-weight: 400;
   text-transform: uppercase;
@@ -88,7 +88,7 @@
 }
 
 .h4, h4 {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 48px;
   font-weight: 400;
   text-transform: uppercase;
@@ -115,7 +115,7 @@
 }
 
 .h5 {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 40px;
   font-weight: 400;
   text-transform: uppercase;
@@ -142,7 +142,7 @@
 }
 
 .h6 {
-  font-family: "Swera Demo", sans-serif;
+  font-family: "Atyp Display", sans-serif;
   font-size: 32px;
   font-weight: 400;
   text-transform: uppercase;
@@ -213,7 +213,6 @@ header .header-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  mix-blend-mode: difference;
 }
 @media screen and (max-width: 1512px) {
   header .header-logo {
@@ -290,7 +289,7 @@ header .header-links::after {
   bottom: -24px;
   width: calc(100vw - 128px);
   height: 1px;
-  background: rgba(49, 49, 49, 0.8);
+  background: rgba(137, 140, 131, 0.8);
   transition: 0.8s ease 0.2s;
 }
 header .header-links__link {
@@ -388,7 +387,7 @@ header .menu-btn-wrapper .menu-btn .menu-btn-dots-wrapper {
 header .menu-btn-wrapper .menu-btn-dot {
   width: 4px;
   height: 4px;
-  background: #fefefe;
+  background: #faf8f4;
   transition: 0.3s ease;
 }
 header .menu-btn-wrapper .menu-btn.menu-active {
@@ -646,7 +645,7 @@ nav .nav-abstract {
   bottom: 0;
   width: 100vw;
   height: 24px;
-  background: #111;
+  background: #0e0e0e;
   animation: nav-abstract-default 0.75s ease 0s forwards;
 }
 nav.menu-active {
@@ -870,22 +869,29 @@ ul {
 }
 
 @font-face {
-  font-family: "Swera Demo";
-  src: url("../fonts/swera-regular-demo.otf") format("opentype");
-  font-weight: normal;
+  font-family: "Atyp Display";
+  src: url("../fonts/AtypDisplay-Light.otf") format("opentype");
+  font-weight: light;
 }
 @font-face {
-  font-family: "Swera Demo";
-  src: url("../fonts/swera-bold-demo.otf") format("opentype");
+  font-family: "Atyp Display";
+  src: url("../fonts/AtypDisplay-Regular.otf") format("opentype");
+  font-weight: regular;
+}
+@font-face {
+  font-family: "Atyp Display";
+  src: url("../fonts/AtypDisplay-Medium.otf") format("opentype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Atyp Display";
+  src: url("../fonts/AtypDisplay-Semibold.otf") format("opentype");
+  font-weight: semibold;
+}
+@font-face {
+  font-family: "Atyp Display";
+  src: url("../fonts/AtypDisplay-Bold.otf") format("opentype");
   font-weight: bold;
-}
-@font-face {
-  font-family: "Satoshi";
-  src: url("../fonts/Satoshi-Light.otf") format("truetype");
-}
-@font-face {
-  font-family: "Satoshi";
-  src: url("../fonts/Satoshi-Medium.otf") format("truetype");
 }
 .cta-wrapper {
   display: flex;

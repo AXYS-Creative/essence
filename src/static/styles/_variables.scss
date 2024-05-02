@@ -1,18 +1,18 @@
-$brand-font-family-heading: "Swera Demo", sans-serif;
-$brand-font-family-body: "Satoshi", sans-serif;
+$brand-font-family-heading: "Atyp Display", sans-serif;
+// $brand-font-family-body: "Satoshi", sans-serif;
 
-$black: #111;
-$grey-dark: #313131;
-$grey-light: #c0c0c0;
-$white: #fefefe;
+$black: #0e0e0e;
+$grey-dark: #898c83;
+$grey-light: #fdfaf5;
+$white: #faf8f4;
 
 :root {
-  --background-color: #{$black};
-  --primary-font-color: #{$white};
-  --secondary-font-color: #{$grey-light};
+  --background-color: #{$white};
+  --primary-font-color: #{$black};
+  --secondary-font-color: #{$grey-dark};
 
-  --link-color: #{$grey-light};
-  --link-color-hover: #{$white};
+  --link-color: #{$grey-dark};
+  --link-color-hover: #{$black};
 }
 
 // If you add a dark/light theme
