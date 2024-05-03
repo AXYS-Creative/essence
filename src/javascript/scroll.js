@@ -26,6 +26,8 @@ const siteHeader = document.querySelector(".site-header"),
   menuBtnWrapper = document.querySelector(".menu-btn-wrapper"),
   menuBtn = document.querySelector(".menu-btn");
 
+const headerLinks = document.querySelectorAll(".header-links__link");
+
 // Header Defaults
 menuBtn.setAttribute("tabindex", "-1");
 
@@ -35,7 +37,7 @@ menuBtn.setAttribute("tabindex", "-1");
 
 const checkScroll = () => {
   const scrollPosition = window.scrollY;
-  const windowHeight = window.innerHeight;
+  // const windowHeight = window.innerHeight;
 
   // Header/Nav scroll logic
   const isNavOpen = navMenu.classList.contains("menu-active");
@@ -45,8 +47,11 @@ const checkScroll = () => {
 
     menuBtn.setAttribute("aria-hidden", "false");
     menuBtn.removeAttribute("tabindex");
+
+    headerLinks.forEach((link) => link.setAttribute("tabindex", -1));
   } else {
     siteHeader.classList.remove("scroll-active");
+    headerLinks.forEach((link) => link.removeAttribute("tabindex"));
 
     menuBtn.setAttribute("aria-hidden", "true");
     menuBtn.setAttribute("tabindex", "-1");
@@ -61,15 +66,15 @@ const checkScroll = () => {
   // Text background fill animations
 
   // Helper function for broken subtext
-  function getOffsetTop(elem) {
-    let offsetTop = 0;
-    do {
-      if (!isNaN(elem.offsetTop)) {
-        offsetTop += elem.offsetTop;
-      }
-    } while ((elem = elem.offsetParent));
-    return offsetTop;
-  }
+  // function getOffsetTop(elem) {
+  //   let offsetTop = 0;
+  //   do {
+  //     if (!isNaN(elem.offsetTop)) {
+  //       offsetTop += elem.offsetTop;
+  //     }
+  //   } while ((elem = elem.offsetParent));
+  //   return offsetTop;
+  // }
 };
 
 window.addEventListener("scroll", throttle(checkScroll, 50)); // Throttle checkScroll, adjust 100ms as needed
