@@ -27,24 +27,24 @@
   --background-color: #faf8f4;
   --primary-font-color: #0e0e0e;
   --secondary-font-color: #898c83;
-  --link-color: #898c83;
-  --link-color-hover: #0e0e0e;
+  --link-color: #0e0e0e;
+  --link-color-hover: #898c83;
 }
 
 .h1, h1 {
   font-family: "Atyp Display", sans-serif;
-  font-size: 80px;
-  font-weight: 400;
+  font-size: 96px;
+  font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
   .h1, h1 {
-    font-size: 68px;
+    font-size: 84px;
   }
 }
 @media screen and (max-width: 1200px) {
   .h1, h1 {
-    font-size: 60px;
+    font-size: 76px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -61,7 +61,7 @@
 .h2, h2, nav .nav-links .nav-link {
   font-family: "Atyp Display", sans-serif;
   font-size: 64px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
@@ -88,7 +88,7 @@
 .h3, h3 {
   font-family: "Atyp Display", sans-serif;
   font-size: 56px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
@@ -115,7 +115,7 @@
 .h4, h4 {
   font-family: "Atyp Display", sans-serif;
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
@@ -142,7 +142,7 @@
 .h5 {
   font-family: "Atyp Display", sans-serif;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
@@ -169,7 +169,7 @@
 .h6 {
   font-family: "Atyp Display", sans-serif;
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
   font-weight: 100;
 }

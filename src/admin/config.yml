@@ -49,5 +49,13 @@ collections:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Author", name: "author", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
+      - label: "Site Configuration"
+        name: "configuration"
+        file: "src/_data/configuration.yaml"
+        fields:
+          - { label: "Site Title", name: "name", widget: "string" }
+          - { label: "Author", name: "author", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+
     editor:
       preview: false
