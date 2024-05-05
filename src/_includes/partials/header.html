@@ -41,52 +41,34 @@
     </span>
   </a>
 
+  <!-- VISIT: _data > navidation.yaml -->
+  {% if navigation.items %}
+
   <ul class="header-links">
-    <li class="">
-      <a class="header-links__link tab-element-page" href="blog">Blog</a>
+    {% for item in navigation.items %}
+    <li>
+      <a class="header-links__link tab-element-page" href="{{ item.url }}">
+        {{ item.text }}
+      </a>
     </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Podcast</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Books</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Films</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Events</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Resources</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">About</a>
-    </li>
-    <li class="">
-      <a class="header-links__link tab-element-page" href="">Patreon</a>
-    </li>
+    {% endfor %}
   </ul>
 
-  <div class="menu-btn-wrapper">
+  {% endif %}
+
+  <div class="menu-btn__wrapper">
     <button
       class="menu-btn"
       aria-controls="site-navigation"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
     >
-      <div class="menu-btn-dots-wrapper">
-        <span class="menu-btn-dot top-left"></span>
-        <span class="menu-btn-dot top-center"></span>
-        <span class="menu-btn-dot top-right"></span>
-
-        <span class="menu-btn-dot middle-left"></span>
-        <span class="menu-btn-dot middle-center"></span>
-        <span class="menu-btn-dot middle-right"></span>
-
-        <span class="menu-btn-dot bottom-left"></span>
-        <span class="menu-btn-dot bottom-center"></span>
-        <span class="menu-btn-dot bottom-right"></span>
+      <div class="dots-wrapper">
+        <span class="dots-wrapper__dot top-left"></span>
+        <span class="dots-wrapper__dot top-right"></span>
+        <span class="dots-wrapper__dot center-dot"></span>
+        <span class="dots-wrapper__dot bottom-left"></span>
+        <span class="dots-wrapper__dot bottom-right"></span>
       </div>
     </button>
   </div>

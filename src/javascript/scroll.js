@@ -23,7 +23,7 @@ const throttle = (func, limit) => {
 
 const siteHeader = document.querySelector(".site-header"),
   navMenu = document.querySelector(".nav-menu"),
-  menuBtnWrapper = document.querySelector(".menu-btn-wrapper"),
+  menuBtnWrapper = document.querySelector(".menu-btn__wrapper"),
   menuBtn = document.querySelector(".menu-btn");
 
 const headerLinks = document.querySelectorAll(".header-links__link");

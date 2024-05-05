@@ -1,12 +1,28 @@
 ---
+#component for dev
+
 items:
-  - text: Home
-    url: "/"
-  - text: About
-    url: "/about"
   - text: Blog
     url: "/blog"
-  - text: Services
-    ulr: "/services"
+    index: "01"
+  - text: Podcasts
+    url: "/podcasts"
+    index: "02"
+  - text: Books
+    url: "/books"
+    index: "03"
+  - text: Films
+    url: "/films"
+    index: "04"
+  - text: About
+    url: "/about"
+    index: "05"
+  - text: Resources
+    url: "/resources"
+    index: "06"
   - text: Contact
-    ulr: "/contact"
+    url: "/contact"
+    index: "07"
+  - text: Patreon
+    url: "/patreon"
+    index: "08"
