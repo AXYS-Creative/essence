@@ -1,3 +1,5 @@
+export const minMd = window.matchMedia("(min-width: 768px)");
+
 // Clear focus from any element (except inputs) on mousemove
 (function clearFocusOnMouseMove() {
   function removeFocus() {

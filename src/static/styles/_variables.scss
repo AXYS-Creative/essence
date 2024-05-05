@@ -42,6 +42,12 @@ $horizontal-section-padding: 148px;
 // $horizontal-section-padding-lg: 96px;
 // $horizontal-section-padding-md: 48px;
 
+// Easing
+$cubic-ease-sudden: cubic-bezier(0.8, 0, 0.11, 1.11);
+
+$cubic-ease-sudden-back: cubic-bezier(0.8, -0.11, 0.11, 1.11);
+$cubic-ease-sudden-back-strong: cubic-bezier(0.77, -0.43, 0.11, 1.11);
+
 // Debugging
 
 $test: 1px dashed rgba(crimson, 0.75);

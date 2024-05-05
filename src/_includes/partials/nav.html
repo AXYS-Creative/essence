@@ -11,8 +11,14 @@
       <ul class="nav-links">
         {% for item in navigation.items %}
         <li>
-          <span>{{item.index}}</span>
           <a class="nav-link tab-element-nav" href="{{ item.url }}">
+            <span
+              class="nav-link__number"
+              role="presentation"
+              aria-hidden="true"
+            >
+              {{item.index}}
+            </span>
             {{ item.text }}
           </a>
         </li>
@@ -20,7 +26,7 @@
       </ul>
     </div>
 
-    {% endif %} {% include "./social-media.html" %}
+    {% endif %}
   </div>
   <div class="nav-abstract"></div>
 </nav>

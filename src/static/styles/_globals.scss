@@ -224,7 +224,7 @@ header {
         height: 100%;
 
         rotate: 45deg;
-        transition: 0.2s ease;
+        transition: 0.8s $cubic-ease-sudden-back-strong;
 
         &__dot {
           width: 6px;
@@ -402,8 +402,8 @@ nav {
   }
 
   .nav-slider {
-    // border: $test;
     // padding: 128px 0;
+    translate: 0px 50vh;
     transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
   }
 
@@ -424,6 +424,15 @@ nav {
       }
     }
 
+    @include mq-max("xxl") {
+      gap: 48px;
+    }
+
+    @include mq-max("md") {
+      gap: 12px;
+      left: $body-padding-md;
+    }
+
     li {
       display: flex;
       overflow: hidden;
@@ -434,11 +443,15 @@ nav {
       }
 
       &:first-of-type {
-        margin-top: 1200px;
+        margin-top: 1440px;
       }
       &:last-of-type {
-        margin-bottom: 1200px;
+        margin-bottom: 1440px;
       }
+
+      // &:nth-of-type(even) {
+      //   margin-inline-start: 48px;
+      // }
 
       @for $i from 2 through 6 {
         &:nth-of-type(#{$i}) {
@@ -454,6 +467,7 @@ nav {
 
     .nav-link {
       @extend .h1;
+      display: flex;
       text-transform: uppercase;
       line-height: 100%;
       height: 100%;
@@ -463,6 +477,22 @@ nav {
       &:hover,
       &:focus {
         opacity: 1;
+      }
+
+      @include mq-max("lg") {
+        font-size: 48px;
+      }
+      @include mq-max("md") {
+        font-size: 24px;
+      }
+
+      &__number {
+        font-size: 14px;
+        translate: 0 -42%;
+
+        @include mq-max("md") {
+          display: none;
+        }
       }
     }
   }
@@ -495,7 +525,8 @@ nav {
     height: 0;
     // background: $white;
     background: #fff;
-    transition: all 0.3s ease, width 0s;
+    // transition: all 1s cubic-bezier(0.75, 0, 0.25, 1), width 0s;
+    transition: all 1s $cubic-ease-sudden, width 0s;
     // animation: nav-abstract-default 0.75s ease 0s forwards;
     z-index: -1;
   }

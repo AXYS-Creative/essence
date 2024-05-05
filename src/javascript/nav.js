@@ -1,3 +1,5 @@
+import { minMd } from "./utility.js";
+
 const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
@@ -60,19 +62,39 @@ menuBtn.addEventListener("click", toggleNav);
 
 headerLogo.addEventListener("click", closeNav);
 
-// Nav Slider
+//
+// Nav Slider (responsive)
+//
 
-const minY = 360;
-const maxY = window.innerHeight - 150;
+// const minY = 360;
+// const maxY = window.innerHeight - 150;
+const minY = 0.2 * window.innerHeight; // 20% of the viewport height
+const maxY = 0.8 * window.innerHeight;
 
-navSlider.addEventListener("mousemove", (e) => {
+const handleNavSlider = (e) => {
   // const mouseY = e.clientY;
   const mouseY = Math.min(Math.max(e.clientY, minY), maxY);
   const translateY = (maxY + minY) / 2 - mouseY;
 
   navSlider.style.translate = `0 calc(50vh + ${translateY}px)`;
-});
+};
 
-navSlider.addEventListener("mouseleave", (e) => {
-  navSlider.style.translate = `0 50vh`;
-});
+// Restore Original Position
+// navSlider.addEventListener("mouseleave", (e) => {
+//   navSlider.style.translate = `0 50vh`;
+// });
+
+const handleScreenChange = (e) => {
+  if (e.matches) {
+    navSlider.addEventListener("mousemove", handleNavSlider);
+  } else {
+    navSlider.removeEventListener("mousemove", handleNavSlider);
+    navSlider.style.translate = `0 50vh`;
+  }
+};
+
+//
+// To handle responsive javascript
+//
+minMd.addEventListener("change", handleScreenChange);
+handleScreenChange(minMd);

@@ -470,7 +470,7 @@ header .menu-btn__wrapper .menu-btn .dots-wrapper {
   width: 100%;
   height: 100%;
   rotate: 45deg;
-  transition: 0.2s ease;
+  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11);
 }
 header .menu-btn__wrapper .menu-btn .dots-wrapper__dot {
   width: 6px;
@@ -607,6 +607,7 @@ nav .nav-social-media li a {
   font-family: "Atyp Display", sans-serif;
 }
 nav .nav-slider {
+  translate: 0px 50vh;
   transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
 }
 nav .nav-links {
@@ -623,6 +624,17 @@ nav .nav-links {
 nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
   opacity: 0.5;
 }
+@media screen and (max-width: 1512px) {
+  nav .nav-links {
+    gap: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links {
+    gap: 12px;
+    left: 24px;
+  }
+}
 nav .nav-links li {
   display: flex;
   overflow: hidden;
@@ -632,10 +644,10 @@ nav .nav-links li:focus-within {
   box-shadow: 0 0 0 3px rgba(35, 83, 193, 0.75), 0 0 0 5px rgba(255, 255, 255, 0.75);
 }
 nav .nav-links li:first-of-type {
-  margin-top: 1200px;
+  margin-top: 1440px;
 }
 nav .nav-links li:last-of-type {
-  margin-bottom: 1200px;
+  margin-bottom: 1440px;
 }
 nav .nav-links li:nth-of-type(2) .nav-link {
   transition: 0.2s ease, translate 0.25s ease 0.65s;
@@ -653,6 +665,7 @@ nav .nav-links li:nth-of-type(6) .nav-link {
   transition: 0.2s ease, translate 1.05s ease 0.85s;
 }
 nav .nav-links .nav-link {
+  display: flex;
   text-transform: uppercase;
   line-height: 100%;
   height: 100%;
@@ -661,6 +674,25 @@ nav .nav-links .nav-link {
 }
 nav .nav-links .nav-link:hover, nav .nav-links .nav-link:focus {
   opacity: 1;
+}
+@media screen and (max-width: 1024px) {
+  nav .nav-links .nav-link {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links .nav-link {
+    font-size: 24px;
+  }
+}
+nav .nav-links .nav-link__number {
+  font-size: 14px;
+  translate: 0 -42%;
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links .nav-link__number {
+    display: none;
+  }
 }
 nav .nav-social-media {
   right: 64px;
@@ -701,7 +733,7 @@ nav .nav-abstract {
   width: 100vw;
   height: 0;
   background: #fff;
-  transition: all 0.3s ease, width 0s;
+  transition: all 1s cubic-bezier(0.8, 0, 0.11, 1.11), width 0s;
   z-index: -1;
 }
 nav.menu-active {
