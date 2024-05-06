@@ -631,52 +631,85 @@ ul {
 
 // Components
 
-.social-media-links {
+.social-media-wrapper {
+  // border: $test;
+  @include left-spacing;
+  // @include column-center;
+  bottom: $body-padding;
   display: flex;
-  gap: 24px;
+  flex-direction: column-reverse;
 
-  @include mq-max("md") {
-    gap: 12px;
-  }
-
-  @include mq-max("sm") {
+  .social-media-links {
     gap: 24px;
-  }
 
-  li.magnet {
-    transition: 0.4s ease;
-  }
-
-  .social-media-link {
-    @include row-center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    overflow: hidden;
-    transition: 0.25s ease;
+    @include mq-max("md") {
+      gap: 12px;
+    }
 
     @include mq-max("sm") {
-      width: 24px;
-      height: 24px;
-    }
-
-    &:hover,
-    &:focus {
-      .social-media-icon-wrapper {
-        translate: 0 -40%;
-      }
-    }
-
-    .social-media-icon-wrapper {
-      @include column-center;
       gap: 24px;
-      translate: 0 36%;
+    }
+
+    li.magnet {
+      transition: 0.4s ease;
+    }
+
+    .social-media-link {
+      @include row-center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
       transition: 0.25s ease;
 
-      .social-media-icon {
-        path {
-          fill: var(--primary-font-color);
+      @include mq-max("sm") {
+        width: 24px;
+        height: 24px;
+      }
+
+      &:hover,
+      &:focus {
+        .social-media-icon-wrapper {
+          translate: 0 -40%;
         }
+      }
+
+      .social-media-icon-wrapper {
+        @include column-center;
+        gap: 24px;
+        translate: 0 36%;
+        transition: 0.25s ease;
+
+        .social-media-icon {
+          path {
+            fill: var(--primary-font-color);
+          }
+        }
+      }
+    }
+  }
+
+  .social-media-toggle {
+    @include row-center;
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      padding: 10px;
+    }
+
+    &__text {
+      text-transform: uppercase;
+    }
+  }
+
+  &.social-media-active {
+    .social-media-links {
+      .social-media-link {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }

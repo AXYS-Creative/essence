@@ -1,20 +1,37 @@
 {% if social_media.links %}
 
-<ul class="nav-social-media social-media-links">
-  {% for item in social_media.links %}
-  <li class="magnet">
-    <a
-      href="{{item.url}}"
-      target="_blank"
-      class="social-media-link tab-element-nav"
-    >
-      <span class="social-media-icon-wrapper">
-        <img src="{{item.src}}" alt="{{item.title}}" />
-        <img src="{{item.src}}" alt="{{item.title}}" />
-      </span>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+<div class="social-media-wrapper">
+  <button
+    class="social-media-toggle"
+    type="button"
+    aria-controls="social-media-links"
+    aria-expanded="false"
+  >
+    <img
+      class="social-media-toggle__icon"
+      src="../../static/img/icon-social-links.svg"
+      alt="social media toggle icon"
+    />
+    <span class="social-media-toggle__text">Connect</span>
+  </button>
+
+  <ul class="social-media-links" aria-hidden="true">
+    {% for item in social_media.links %}
+    <li class="magnet">
+      <a
+        href="{{item.url}}"
+        target="_blank"
+        class="social-media-link"
+        tabindex="-1"
+      >
+        <span class="social-media-icon-wrapper">
+          <img src="{{item.src}}" alt="{{item.title}}" />
+          <img src="{{item.src}}" alt="{{item.title}}" />
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 
 {% endif %}

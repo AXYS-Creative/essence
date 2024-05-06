@@ -859,24 +859,39 @@ ul {
   opacity: 0.5;
 }
 
-.social-media-links {
+.social-media-wrapper {
+  left: 64px;
+  bottom: 64px;
   display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (max-width: 1512px) {
+  .social-media-wrapper {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .social-media-wrapper {
+    left: 24px;
+  }
+}
+.social-media-wrapper .social-media-links {
   gap: 24px;
 }
 @media screen and (max-width: 768px) {
-  .social-media-links {
+  .social-media-wrapper .social-media-links {
     gap: 12px;
   }
 }
 @media screen and (max-width: 480px) {
-  .social-media-links {
+  .social-media-wrapper .social-media-links {
     gap: 24px;
   }
 }
-.social-media-links li.magnet {
+.social-media-wrapper .social-media-links li.magnet {
   transition: 0.4s ease;
 }
-.social-media-links .social-media-link {
+.social-media-wrapper .social-media-links .social-media-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -884,18 +899,20 @@ ul {
   height: 36px;
   border-radius: 50%;
   overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
   transition: 0.25s ease;
 }
 @media screen and (max-width: 480px) {
-  .social-media-links .social-media-link {
+  .social-media-wrapper .social-media-links .social-media-link {
     width: 24px;
     height: 24px;
   }
 }
-.social-media-links .social-media-link:hover .social-media-icon-wrapper, .social-media-links .social-media-link:focus .social-media-icon-wrapper {
+.social-media-wrapper .social-media-links .social-media-link:hover .social-media-icon-wrapper, .social-media-wrapper .social-media-links .social-media-link:focus .social-media-icon-wrapper {
   translate: 0 -40%;
 }
-.social-media-links .social-media-link .social-media-icon-wrapper {
+.social-media-wrapper .social-media-links .social-media-link .social-media-icon-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -904,8 +921,25 @@ ul {
   translate: 0 36%;
   transition: 0.25s ease;
 }
-.social-media-links .social-media-link .social-media-icon-wrapper .social-media-icon path {
+.social-media-wrapper .social-media-links .social-media-link .social-media-icon-wrapper .social-media-icon path {
   fill: var(--primary-font-color);
+}
+.social-media-wrapper .social-media-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-wrapper .social-media-toggle__icon {
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+}
+.social-media-wrapper .social-media-toggle__text {
+  text-transform: uppercase;
+}
+.social-media-wrapper.social-media-active .social-media-links .social-media-link {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .sr-only {
