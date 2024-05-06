@@ -1,0 +1,23 @@
+@keyframes nav-abstract-open {
+}
+
+@keyframes nav-abstract-default {
+}
+
+@keyframes nav-link-open {
+  from {
+    translate: 0 100%;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes nav-link-default {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 0 100%;
+  }
+}
