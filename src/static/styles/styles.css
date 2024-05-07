@@ -530,6 +530,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.37s ease 0.03s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.42s ease 0.06s forwards;
@@ -537,6 +539,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(2) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.42s ease 0.06s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.47s ease 0.09s forwards;
@@ -544,6 +548,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(3) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.47s ease 0.09s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.52s ease 0.12s forwards;
@@ -551,6 +557,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(4) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.52s ease 0.12s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.57s ease 0.15s forwards;
@@ -558,6 +566,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(5) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.57s ease 0.15s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.62s ease 0.18s forwards;
@@ -565,6 +575,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(6) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.62s ease 0.18s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.67s ease 0.21s forwards;
@@ -572,6 +584,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(7) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.67s ease 0.21s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.72s ease 0.24s forwards;
@@ -579,6 +593,8 @@ header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(8) .letter-w
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(3), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(3) {
   animation: logo-2-active 0.72s ease 0.24s forwards;
   translate: 0 -200%;
+  opacity: 1;
+  transition: 0.25s ease 0.25s;
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1) {
   animation: slide-up 0.37s ease 0.03s forwards;
@@ -1263,7 +1279,7 @@ ul {
 }
 @keyframes logo-3-active {
   0% {
-    opacity: 1;
+    opacity: 0;
     translate: 0 -200%;
   }
   98% {

@@ -284,7 +284,8 @@ header {
                 animation: logo-2-active $duration ease $delay forwards;
 
                 translate: 0 -200%;
-                // opacity: 0;
+                opacity: 1;
+                transition: 0.25s ease 0.25s;
               }
             }
           }
