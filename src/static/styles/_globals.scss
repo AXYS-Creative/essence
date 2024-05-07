@@ -54,8 +54,18 @@ header {
     &:hover,
     &:focus {
       .header-logo__text {
-        .letter-wrapper__letter {
-          translate: 0 -100%;
+        .letter-wrapper {
+          @for $i from 1 through 8 {
+            &:nth-of-type(#{$i}) {
+              .letter-wrapper__letter:nth-of-type(1),
+              .letter-wrapper__letter:nth-of-type(2) {
+                $duration: 0.32s + 0.05s * $i;
+                $delay: 0.03s * $i;
+
+                animation: slide-up $duration ease $delay forwards;
+              }
+            }
+          }
         }
       }
     }
@@ -83,18 +93,13 @@ header {
         overflow: hidden;
         height: 24px;
 
-        span {
-          transition: 0.28s ease 0s;
+        &__letter:nth-of-type(1) {
+          transition: 0.25s ease 0.5s;
+          // opacity: 0 !important;
         }
-
-        @for $i from 2 through 7 {
-          &:nth-of-type(#{$i}) {
-            span {
-              $duration: 0.28s + 0.04s * ($i - 1);
-              $delay: 0.03s * ($i - 1);
-              transition: $duration ease $delay;
-            }
-          }
+        &__letter:nth-of-type(3) {
+          translate: 0 -200%;
+          opacity: 0;
         }
       }
     }
@@ -167,7 +172,7 @@ header {
       @for $i from 1 through 8 {
         &:nth-of-type(#{$i}) {
           a {
-            $opacityDelay: 0.5s - 0.06s * ($i - 1);
+            $opacityDelay: 0.5s - 0.06s * $i;
             transition: color 0.3s ease, opacity 0.8s ease $opacityDelay;
           }
         }
@@ -266,19 +271,45 @@ header {
     .header-logo {
       &:hover,
       &:focus {
-        // .header-logo__text {
-        .letter-wrapper__letter {
-          translate: 0 0;
+        .letter-wrapper {
+          @for $i from 1 through 8 {
+            $duration: 0.32s + 0.05s * $i;
+            $delay: 0.03s * $i;
+
+            &:nth-of-type(#{$i}) {
+              .letter-wrapper__letter:nth-of-type(2) {
+                animation: logo-2-active $duration ease $delay forwards;
+              }
+              .letter-wrapper__letter:nth-of-type(3) {
+                animation: logo-2-active $duration ease $delay forwards;
+
+                translate: 0 -200%;
+                // opacity: 0;
+              }
+            }
+          }
         }
-        // }
       }
 
       &__text {
-        // .letter-wrapper {
-        .letter-wrapper__letter {
-          translate: 0 100%;
+        .letter-wrapper {
+          @for $i from 1 through 8 {
+            $duration: 0.32s + 0.05s * $i;
+            $delay: 0.03s * $i;
+
+            &:nth-of-type(#{$i}) {
+              .letter-wrapper__letter:nth-of-type(1) {
+                animation: slide-up $duration ease $delay forwards;
+                opacity: 0;
+              }
+              .letter-wrapper__letter:nth-of-type(3) {
+                // translate: 0 -200%;
+                // opacity: 0.2;
+                animation: logo-3-active $duration ease $delay forwards;
+              }
+            }
+          }
         }
-        // }
       }
     }
 
@@ -530,12 +561,14 @@ nav {
       li {
         @for $i from 1 through 8 {
           &:nth-of-type(#{$i}) {
-            $transition: 0.25s + $i * 0.05s;
-            $delay: 0.75s + $i * 0.05s;
+            $transition: 0.5s + $i * 0.05s;
+            $delay: 0.5s + $i * 0.05s;
 
             .nav-link {
               translate: 0 100%;
               animation: nav-link-open $transition ease $delay forwards;
+
+              // make me accessible
             }
           }
         }

@@ -9,6 +9,28 @@
   border: 0;
 }
 
+.classic-link {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-font-color);
+    animation: classic-link-default 0.3s ease forwards;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      animation: classic-link-hover 0.3s ease forwards;
+    }
+  }
+}
+
 .lg-screen-and-up {
   display: none;
 
