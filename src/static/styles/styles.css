@@ -543,6 +543,11 @@ header .social-media-wrapper {
     left: 24px;
   }
 }
+@media screen and (min-width: 1921px) {
+  header .social-media-wrapper {
+    left: calc(50% - 960px + 64px);
+  }
+}
 @media (max-height: 320px) {
   header .social-media-wrapper {
     display: none;
@@ -863,59 +868,43 @@ nav {
 nav .width-constraint {
   position: relative;
   max-width: 1920px;
-  height: 90vh;
-  min-height: 768px;
+  height: 100vh;
+  height: 100dvh;
   margin: auto;
-}
-@media screen and (max-width: 1512px) {
-  nav .width-constraint {
-    min-height: 640px;
-  }
 }
 @media screen and (max-width: 768px) {
   nav .width-constraint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     overflow: auto;
   }
 }
-@media screen and (max-width: 480px) {
-  nav .width-constraint {
-    min-height: 520px;
-  }
-}
-nav .nav-slider {
-  translate: 0px 50vh;
-  transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
-}
-@media screen and (max-width: 768px) {
-  nav .nav-slider {
-    translate: unset;
-  }
-}
 nav .nav-links {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: 0 -50%;
+  width: 50%;
   pointer-events: none;
+  translate: 100% -30%;
+  transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
 }
 nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
   opacity: 0.5;
 }
 @media screen and (max-width: 1512px) {
   nav .nav-links {
-    gap: 48px;
+    gap: 64px;
   }
 }
 @media screen and (max-width: 768px) {
   nav .nav-links {
     gap: 12px;
-    left: 24px;
+    padding: 64px 0;
+    translate: 24px 0;
   }
 }
 nav .nav-links li {
@@ -927,7 +916,7 @@ nav .nav-links li:focus-within {
   box-shadow: 0 0 0 3px rgba(35, 83, 193, 0.75), 0 0 0 5px rgba(255, 255, 255, 0.75);
 }
 nav .nav-links li:first-of-type {
-  margin-top: 1440px;
+  margin-top: 480px;
 }
 @media screen and (max-width: 768px) {
   nav .nav-links li:first-of-type {
@@ -935,7 +924,7 @@ nav .nav-links li:first-of-type {
   }
 }
 nav .nav-links li:last-of-type {
-  margin-bottom: 1440px;
+  margin-bottom: 480px;
 }
 @media screen and (max-width: 768px) {
   nav .nav-links li:last-of-type {
@@ -1010,7 +999,7 @@ nav .nav-abstract {
   translate: -50% 0;
   width: 100vw;
   height: 0;
-  background: linear-gradient(0deg, yellow, coral);
+  background: #fff;
   transition: all 1.25s cubic-bezier(0.8, 0, 0.11, 1.11) 0.5s, width 0s;
   z-index: -1;
 }
@@ -1018,7 +1007,6 @@ nav.menu-active {
   opacity: 1;
   pointer-events: all;
   background: var(--background-color);
-  background: linear-gradient(red, blue);
   transition: background 0s ease 0.4s;
 }
 nav.menu-active .nav-abstract {

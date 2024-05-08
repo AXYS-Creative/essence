@@ -4,7 +4,7 @@ const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
   headerLogo = document.querySelector(".header-logo"),
-  navSlider = document.querySelector(".nav-slider");
+  navLinksWrapper = document.querySelector(".nav-links");
 
 const navLinks = document.querySelectorAll(".nav-link"),
   tabElementsPage = document.querySelectorAll(".tab-element-page"),
@@ -62,7 +62,7 @@ menuBtn.addEventListener("click", toggleNav);
 headerLogo.addEventListener("click", closeNav);
 
 //
-// Nav Slider (responsive)
+// Nav LinksWrapper (responsive)
 //
 
 // const minY = 360;
@@ -70,25 +70,25 @@ headerLogo.addEventListener("click", closeNav);
 const minY = 0.2 * window.innerHeight; // 20% of the viewport height
 const maxY = 0.8 * window.innerHeight;
 
-const handleNavSlider = (e) => {
-  // const mouseY = e.clientY;
+const handleNavLinksWrapper = (e) => {
   const mouseY = Math.min(Math.max(e.clientY, minY), maxY);
   const translateY = (maxY + minY) / 2 - mouseY;
 
-  navSlider.style.translate = `0 calc(50vh + ${translateY}px)`;
+  navLinksWrapper.style.translate = `100% calc(${translateY}px - 30%)`;
 };
 
-// Restore Original Position
-// navSlider.addEventListener("mouseleave", (e) => {
-//   navSlider.style.translate = `0 50vh`;
+// // Restore Original Position
+// navLinksWrapper.addEventListener("mouseleave", (e) => {
+//   navLinksWrapper.style.translate = `50% -55vh`;
 // });
 
 const handleScreenChange = (e) => {
   if (e.matches) {
-    navSlider.addEventListener("mousemove", handleNavSlider);
+    navLinksWrapper.style.translate = `100% -30%`;
+    navLinksWrapper.addEventListener("mousemove", handleNavLinksWrapper);
   } else {
-    navSlider.removeEventListener("mousemove", handleNavSlider);
-    navSlider.style.translate = `unset`;
+    navLinksWrapper.style.translate = `unset`;
+    navLinksWrapper.removeEventListener("mousemove", handleNavLinksWrapper);
   }
 };
 

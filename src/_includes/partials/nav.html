@@ -7,24 +7,18 @@
   <div class="width-constraint">
     {% if navigation.items %}
 
-    <div class="nav-slider">
-      <ul class="nav-links">
-        {% for item in navigation.items %}
-        <li>
-          <a class="nav-link tab-element-nav" href="{{ item.url }}">
-            <span
-              class="nav-link__number"
-              role="presentation"
-              aria-hidden="true"
-            >
-              {{item.index}}
-            </span>
-            <span class="nav-link__text"> {{ item.text }} </span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <ul class="nav-links">
+      {% for item in navigation.items %}
+      <li>
+        <a class="nav-link tab-element-nav" href="{{ item.url }}">
+          <span class="nav-link__number" role="presentation" aria-hidden="true">
+            {{item.index}}
+          </span>
+          <span class="nav-link__text"> {{ item.text }} </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
 
     {% endif %}
   </div>
