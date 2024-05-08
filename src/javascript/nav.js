@@ -29,8 +29,8 @@ const toggleNav = () => {
     el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
 
-  // // Pevent scroll when nav is open
-  // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
+  // Pevent scroll when nav is open
+  document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
 };
 
 const closeNav = () => {
@@ -88,7 +88,7 @@ const handleScreenChange = (e) => {
     navSlider.addEventListener("mousemove", handleNavSlider);
   } else {
     navSlider.removeEventListener("mousemove", handleNavSlider);
-    navSlider.style.translate = `0 50vh`;
+    navSlider.style.translate = `unset`;
   }
 };
 

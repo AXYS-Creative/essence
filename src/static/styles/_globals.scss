@@ -273,7 +273,7 @@ header {
     translate: -10px 0;
     bottom: $body-padding;
 
-    @media (max-height: 320px) {
+    @media (max-height: 520px) {
       display: none;
     }
 
@@ -287,10 +287,6 @@ header {
       .social-media-links {
         translate: 0 -12px;
         transition: 0.25s ease;
-
-        @include mq-max("md") {
-          translate: -72px 0;
-        }
 
         li.magnet {
           opacity: 1;
@@ -318,7 +314,7 @@ header {
 
       @include mq-max("md") {
         flex-direction: row;
-        translate: -72px 0;
+        translate: 0 0;
         gap: 12px;
       }
 
@@ -328,6 +324,10 @@ header {
 
       li.magnet {
         opacity: 0;
+
+        @include mq-max("md") {
+          opacity: 1;
+        }
 
         @for $i from 1 through 4 {
           &:nth-of-type(#{$i}) {
@@ -373,6 +373,10 @@ header {
     .social-media-toggle {
       @include row-center;
 
+      @include mq-max("md") {
+        display: none;
+      }
+
       &__icon {
         width: 36px;
         height: 36px;
@@ -383,15 +387,6 @@ header {
         text-transform: uppercase;
         translate: 0 -1px;
         transition: 0.25s ease 0.4s;
-      }
-    }
-
-    &.social-media-active {
-      .social-media-links {
-        .social-media-link {
-          opacity: 1;
-          pointer-events: all;
-        }
       }
     }
   }
@@ -510,22 +505,20 @@ header {
         opacity: 0;
       }
     }
+
+    .social-media-wrapper {
+      border: $test;
+    }
   }
 }
 
 nav {
-  // border: 4px dashed blue;
+  border: 4px dashed blue;
   position: fixed;
   top: 0;
   left: 50%;
   translate: -50% 0;
-  // background: transparent;
-  // background: lightblue;
-  // background: #313131;
   width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-  // overflow: hidden;
   opacity: 0;
   pointer-events: none;
   // user-select: none;
@@ -533,20 +526,22 @@ nav {
   transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
 
   .width-constraint {
+    background: lightgreen;
     position: relative;
     max-width: $content-width;
-    height: 100vh;
-    height: 100dvh;
-    min-height: 768px;
+    // height: 100vh;
+    // height: 100dvh;
+    // min-height: 768px;
     margin: auto;
+    overflow: auto;
 
-    @include mq-max("xxl") {
-      min-height: 640px;
-    }
+    // @include mq-max("xxl") {
+    //   min-height: 640px;
+    // }
 
-    @include mq-max("sm") {
-      min-height: 520px;
-    }
+    // @include mq-max("sm") {
+    //   min-height: 520px;
+    // }
   }
 
   .nav-slider {
@@ -556,6 +551,7 @@ nav {
   }
 
   .nav-links {
+    border: $test;
     @include column-start;
     gap: 80px;
     position: absolute;
@@ -577,8 +573,12 @@ nav {
     }
 
     @include mq-max("md") {
+      position: static;
+      translate: unset;
+      top: unset;
+      left: unset;
       gap: 12px;
-      left: $body-padding-md;
+      margin-left: $body-padding-md;
     }
 
     li {
