@@ -273,7 +273,7 @@ header {
     translate: -10px 0;
     bottom: $body-padding;
 
-    @media (max-height: 520px) {
+    @media (max-height: 320px) {
       display: none;
     }
 
@@ -506,14 +506,13 @@ header {
       }
     }
 
-    .social-media-wrapper {
-      border: $test;
-    }
+    // .social-media-wrapper {
+    //   border: $test;
+    // }
   }
 }
 
 nav {
-  border: 4px dashed blue;
   position: fixed;
   top: 0;
   left: 50%;
@@ -526,28 +525,34 @@ nav {
   transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
 
   .width-constraint {
-    background: lightgreen;
     position: relative;
     max-width: $content-width;
-    // height: 100vh;
+    height: 90vh;
     // height: 100dvh;
-    // min-height: 768px;
+    min-height: 768px;
     margin: auto;
-    overflow: auto;
 
-    // @include mq-max("xxl") {
-    //   min-height: 640px;
-    // }
+    @include mq-max("xxl") {
+      min-height: 640px;
+    }
 
-    // @include mq-max("sm") {
-    //   min-height: 520px;
-    // }
+    @include mq-max("md") {
+      overflow: auto;
+    }
+
+    @include mq-max("sm") {
+      min-height: 520px;
+    }
   }
 
   .nav-slider {
     // padding: 128px 0;
     translate: 0px 50vh;
     transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
+
+    @include mq-max("md") {
+      translate: unset;
+    }
   }
 
   .nav-links {
@@ -573,12 +578,8 @@ nav {
     }
 
     @include mq-max("md") {
-      position: static;
-      translate: unset;
-      top: unset;
-      left: unset;
       gap: 12px;
-      margin-left: $body-padding-md;
+      left: $body-padding-md;
     }
 
     li {
@@ -666,7 +667,8 @@ nav {
     width: 100vw;
     height: 0;
     // background: $white;
-    background: #fff;
+    // background: #fff;
+    background: linear-gradient(0deg, yellow, coral);
     transition: all 1.25s $cubic-ease-sudden 0.5s, width 0s;
     // animation: nav-abstract-default 0.75s ease 0s forwards;
     z-index: -1;
@@ -676,6 +678,7 @@ nav {
     opacity: 1;
     pointer-events: all;
     background: var(--background-color);
+    background: linear-gradient(red, blue);
     transition: background 0s ease 0.4s;
 
     .nav-abstract {

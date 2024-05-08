@@ -543,7 +543,7 @@ header .social-media-wrapper {
     left: 24px;
   }
 }
-@media (max-height: 520px) {
+@media (max-height: 320px) {
   header .social-media-wrapper {
     display: none;
   }
@@ -848,12 +848,8 @@ header.menu-active .header-links::after {
 header.menu-active .header-links__link {
   opacity: 0;
 }
-header.menu-active .social-media-wrapper {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
-}
 
 nav {
-  border: 4px dashed blue;
   position: fixed;
   top: 0;
   left: 50%;
@@ -865,15 +861,35 @@ nav {
   transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
 }
 nav .width-constraint {
-  background: lightgreen;
   position: relative;
   max-width: 1920px;
+  height: 90vh;
+  min-height: 768px;
   margin: auto;
-  overflow: auto;
+}
+@media screen and (max-width: 1512px) {
+  nav .width-constraint {
+    min-height: 640px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .width-constraint {
+    overflow: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  nav .width-constraint {
+    min-height: 520px;
+  }
 }
 nav .nav-slider {
   translate: 0px 50vh;
   transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
+}
+@media screen and (max-width: 768px) {
+  nav .nav-slider {
+    translate: unset;
+  }
 }
 nav .nav-links {
   border: 1px dashed rgba(220, 20, 60, 0.75);
@@ -898,12 +914,8 @@ nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
 }
 @media screen and (max-width: 768px) {
   nav .nav-links {
-    position: static;
-    translate: unset;
-    top: unset;
-    left: unset;
     gap: 12px;
-    margin-left: 24px;
+    left: 24px;
   }
 }
 nav .nav-links li {
@@ -998,7 +1010,7 @@ nav .nav-abstract {
   translate: -50% 0;
   width: 100vw;
   height: 0;
-  background: #fff;
+  background: linear-gradient(0deg, yellow, coral);
   transition: all 1.25s cubic-bezier(0.8, 0, 0.11, 1.11) 0.5s, width 0s;
   z-index: -1;
 }
@@ -1006,6 +1018,7 @@ nav.menu-active {
   opacity: 1;
   pointer-events: all;
   background: var(--background-color);
+  background: linear-gradient(red, blue);
   transition: background 0s ease 0.4s;
 }
 nav.menu-active .nav-abstract {
