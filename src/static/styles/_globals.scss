@@ -267,6 +267,135 @@ header {
     }
   }
 
+  .social-media-wrapper {
+    @include left-spacing;
+    @include column-start;
+    translate: -10px 0;
+    bottom: $body-padding;
+
+    @media (max-height: 320px) {
+      display: none;
+    }
+
+    @include mq-max("md") {
+      flex-direction: row-reverse;
+      bottom: $body-padding-md;
+    }
+
+    &:hover,
+    &:focus-within {
+      .social-media-links {
+        translate: 0 -12px;
+        transition: 0.25s ease;
+
+        @include mq-max("md") {
+          translate: -72px 0;
+        }
+
+        li.magnet {
+          opacity: 1;
+        }
+      }
+
+      .social-media-toggle__text {
+        translate: -12px -1px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s ease;
+
+        @include mq-max("md") {
+          translate: 0 -1px;
+        }
+      }
+    }
+
+    .social-media-links {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 8px;
+      translate: 0 24px;
+      transition: 0.25s ease 0.5s;
+
+      @include mq-max("md") {
+        flex-direction: row;
+        translate: -72px 0;
+        gap: 12px;
+      }
+
+      @include mq-max("sm") {
+        gap: 24px;
+      }
+
+      li.magnet {
+        opacity: 0;
+
+        @for $i from 1 through 4 {
+          &:nth-of-type(#{$i}) {
+            transition: 0.25s ease 0.05s * $i;
+          }
+        }
+      }
+
+      .social-media-link {
+        @include row-center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @include mq-max("sm") {
+          width: 24px;
+          height: 24px;
+        }
+
+        &:hover,
+        &:focus {
+          .social-media-icon-wrapper {
+            translate: 0 -40%;
+          }
+        }
+
+        .social-media-icon-wrapper {
+          @include column-center;
+          gap: 24px;
+          translate: 0 36%;
+          transition: 0.25s ease;
+
+          .social-media-icon {
+            path {
+              fill: var(--primary-font-color);
+            }
+          }
+        }
+      }
+    }
+
+    .social-media-toggle {
+      @include row-center;
+
+      &__icon {
+        width: 36px;
+        height: 36px;
+        padding: 10px;
+      }
+
+      &__text {
+        text-transform: uppercase;
+        translate: 0 -1px;
+        transition: 0.25s ease 0.4s;
+      }
+    }
+
+    &.social-media-active {
+      .social-media-links {
+        .social-media-link {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+
   &.scroll-active {
     .header-logo {
       &:hover,
@@ -513,8 +642,9 @@ nav {
       @include mq-max("lg") {
         font-size: 48px;
       }
+
       @include mq-max("md") {
-        font-size: 24px;
+        font-size: 36px;
       }
 
       &__number {
@@ -660,91 +790,5 @@ ul {
 
   p {
     opacity: 0.5;
-  }
-}
-
-// Components
-
-.social-media-wrapper {
-  // border: $test;
-  @include left-spacing;
-  // @include column-center;
-  bottom: $body-padding;
-  display: flex;
-  flex-direction: column-reverse;
-
-  .social-media-links {
-    gap: 24px;
-
-    @include mq-max("md") {
-      gap: 12px;
-    }
-
-    @include mq-max("sm") {
-      gap: 24px;
-    }
-
-    li.magnet {
-      transition: 0.4s ease;
-    }
-
-    .social-media-link {
-      @include row-center;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      overflow: hidden;
-      opacity: 0;
-      pointer-events: none;
-      transition: 0.25s ease;
-
-      @include mq-max("sm") {
-        width: 24px;
-        height: 24px;
-      }
-
-      &:hover,
-      &:focus {
-        .social-media-icon-wrapper {
-          translate: 0 -40%;
-        }
-      }
-
-      .social-media-icon-wrapper {
-        @include column-center;
-        gap: 24px;
-        translate: 0 36%;
-        transition: 0.25s ease;
-
-        .social-media-icon {
-          path {
-            fill: var(--primary-font-color);
-          }
-        }
-      }
-    }
-  }
-
-  .social-media-toggle {
-    @include row-center;
-
-    &__icon {
-      width: 36px;
-      height: 36px;
-      padding: 10px;
-    }
-
-    &__text {
-      text-transform: uppercase;
-    }
-  }
-
-  &.social-media-active {
-    .social-media-links {
-      .social-media-link {
-        opacity: 1;
-        pointer-events: all;
-      }
-    }
   }
 }

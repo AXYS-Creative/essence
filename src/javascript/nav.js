@@ -7,7 +7,6 @@ const navMenu = document.querySelector(".nav-menu"),
   navSlider = document.querySelector(".nav-slider");
 
 const navLinks = document.querySelectorAll(".nav-link"),
-  navFooterLinks = document.querySelectorAll(".nav-footer-link"),
   tabElementsPage = document.querySelectorAll(".tab-element-page"),
   tabElementsNav = document.querySelectorAll(".tab-element-nav");
 
@@ -30,8 +29,8 @@ const toggleNav = () => {
     el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
 
-  // Pevent scroll when nav is open
-  document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
+  // // Pevent scroll when nav is open
+  // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
 };
 
 const closeNav = () => {
