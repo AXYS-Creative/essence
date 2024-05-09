@@ -280,6 +280,7 @@ header {
     @include mq-max("md") {
       flex-direction: row-reverse;
       bottom: $body-padding-md;
+      pointer-events: none;
     }
 
     &:hover,
@@ -476,6 +477,19 @@ header {
       pointer-events: all;
       transition: all 0.3s ease, opacity 0.2s ease 0.6s;
     }
+
+    .social-media-wrapper {
+      .social-media-toggle__text {
+        translate: -12px -1px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s ease;
+
+        @include mq-max("md") {
+          translate: 0 -1px;
+        }
+      }
+    }
   }
 
   &.menu-active {
@@ -516,6 +530,9 @@ header {
     }
 
     .social-media-wrapper {
+      pointer-events: all;
+      border: none;
+
       li.magnet {
         @include mq-max("md") {
           opacity: 1;
@@ -805,4 +822,8 @@ button {
 
 ul {
   list-style: none;
+}
+
+img {
+  object-fit: cover;
 }

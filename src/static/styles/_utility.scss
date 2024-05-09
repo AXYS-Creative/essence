@@ -19,7 +19,7 @@
   &:focus {
     .classic-link__letters {
       .classic-link__letter {
-        @for $i from 1 through 9 {
+        @for $i from 1 through 16 {
           &:nth-of-type(#{$i}) {
             animation: jump 0.32s ease $i * 0.04s forwards;
           }

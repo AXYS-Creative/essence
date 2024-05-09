@@ -93,7 +93,8 @@
 
 .essence-resources {
   &__header {
-    @include row-center(space-between);
+    @include row-end(space-between);
+    margin-bottom: 24px;
   }
 
   &__heading {
@@ -101,11 +102,61 @@
     @include column-start;
 
     span:nth-of-type(2) {
-      translate: 180px;
+      translate: 180px 0;
+
+      @include mq-max("xxl") {
+        translate: 140px 0;
+      }
+
+      @include mq-max("xl") {
+        translate: 112px 0;
+      }
+
+      @include mq-max("lg") {
+        translate: 96px 0;
+      }
+
+      @include mq-max("md") {
+        translate: 0 0;
+      }
     }
   }
 
   &__images {
     @include row-center(space-between);
+    gap: 40px;
+
+    @include mq-max("xxl") {
+      gap: 32px;
+    }
+
+    @include mq-max("xl") {
+      gap: 24px;
+    }
+
+    @include mq-max("lg") {
+      gap: 16px;
+    }
+
+    @include mq-max("md") {
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    figure {
+      flex-grow: 1;
+
+      @include mq-max("md") {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+
+        @include mq-max("md") {
+          height: 420px;
+        }
+      }
+    }
   }
 }
