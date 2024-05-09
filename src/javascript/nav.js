@@ -87,7 +87,7 @@ const handleScreenChange = (e) => {
     navLinksWrapper.style.translate = `100% -30%`;
     navLinksWrapper.addEventListener("mousemove", handleNavLinksWrapper);
   } else {
-    navLinksWrapper.style.translate = `unset`;
+    navLinksWrapper.style.translate = `24px 0`;
     navLinksWrapper.removeEventListener("mousemove", handleNavLinksWrapper);
   }
 };
