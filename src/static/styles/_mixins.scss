@@ -164,7 +164,7 @@ $min-breakpoints: (
 }
 
 .h3 {
-  // Essence Paragraph Body-text
+  // Essence Resources Heading & Essence Paragraph Body-text
   @include heading(52px, 28px, calc(8px + 3.2vw));
 }
 
@@ -177,7 +177,7 @@ $min-breakpoints: (
 }
 
 .h6 {
-  // section headings  "h2"
+  // Essence Paragraph Heading
   font-family: $brand-font-family-heading;
   font-size: 24px;
   font-weight: 100;

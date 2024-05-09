@@ -10,6 +10,11 @@
 }
 
 .classic-link {
+  @extend .h6;
+  @include row-center;
+  gap: 4px;
+  transition: 0.25s ease;
+
   &:hover,
   &:focus {
     .classic-link__letters {

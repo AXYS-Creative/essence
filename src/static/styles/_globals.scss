@@ -307,6 +307,10 @@ header {
           translate: 0 -1px;
         }
       }
+
+      .social-media-toggle__icon {
+        opacity: 0.5;
+      }
     }
 
     .social-media-links {
@@ -385,6 +389,7 @@ header {
         width: 36px;
         height: 36px;
         padding: 10px;
+        transition: 0.25s ease;
       }
 
       &__text {
@@ -780,7 +785,8 @@ h4 {
 }
 
 p,
-span {
+span,
+figcaption {
   color: var(--primary-font-color);
   font-family: $brand-font-family-body;
 }

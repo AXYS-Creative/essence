@@ -26,7 +26,6 @@
 }
 
 .essence-paragraph {
-  // border: $test;
   @include column-center;
   gap: 48px;
   padding: 420px $body-padding;
@@ -67,12 +66,8 @@
   }
 
   &__link {
-    position: relative;
-    @include row-center;
-    gap: 4px;
     align-self: flex-start;
     translate: 128px 0;
-    transition: 0.25s ease;
 
     @include mq-max("lg") {
       translate: 64px 0;
@@ -93,5 +88,24 @@
     .icon-arrow-right {
       transition: 0.25s ease;
     }
+  }
+}
+
+.essence-resources {
+  &__header {
+    @include row-center(space-between);
+  }
+
+  &__heading {
+    @extend .h3;
+    @include column-start;
+
+    span:nth-of-type(2) {
+      translate: 180px;
+    }
+  }
+
+  &__images {
+    @include row-center(space-between);
   }
 }
