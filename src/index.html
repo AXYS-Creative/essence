@@ -1,5 +1,5 @@
 ---
-title: ESSENCE | Simple Living
+title: ESSENCE • Home
 layout: app
 path: home
 cta1:
@@ -8,8 +8,6 @@ cta1:
 
 section2Heading: "Our Mission"
 section2Paragraph: "ESSENCE helps millions of people end their obsession with stuff, and live more meaningfully, with less. Driven by a desire to reshape the world, our goal is to help people narrow their focus on the essential aspects of life."
-section2LinkText: "Learn More"
-section2LinkUrl: "/about"
 ---
 
 <section class="hero-section home__hero">
@@ -26,11 +24,35 @@ section2LinkUrl: "/about"
   <!-- prettier-ignore -->
 </section>
 
-<section class="essential-paragraph our-mission">
-  <!-- <h2 class="h6">Our Mission</h2> -->
-  <h2 class="essential-paragraph__heading">{{ section2Heading }}</h2>
-  <p class="essential-paragraph__body-text">{{ section2Paragraph }}</p>
-  <a class="essential-paragraph__link" href="{{ section2LinkUrl }}"
-    >{{ section2LinkText }}</a
-  >
+<section class="essence-paragraph our-mission">
+  <h2 class="essence-paragraph__heading">
+    {{ section2Heading }}
+    <img
+      class="icon-arrow-down"
+      src="./static/img/icons/angle-arrow-down.svg"
+      alt="decorative angled arrow"
+      role="presentation"
+    />
+  </h2>
+  <p class="essence-paragraph__body-text">{{ section2Paragraph }}</p>
+  <a class="essence-paragraph__link classic-link" href="/about">
+    <span class="classic-link__letters" aria-label="learn more">
+      <span class="classic-link__letter">L</span>
+      <span class="classic-link__letter">e</span>
+      <span class="classic-link__letter">a</span>
+      <span class="classic-link__letter">r</span>
+      <span class="classic-link__letter">n</span>
+      &nbsp;
+      <span class="classic-link__letter">M</span>
+      <span class="classic-link__letter">o</span>
+      <span class="classic-link__letter">r</span>
+      <span class="classic-link__letter">e</span>
+    </span>
+    <img
+      class="icon-arrow-right"
+      src="./static/img/icons/arrow-right.svg"
+      alt="decorative right arrow"
+      role="presentation"
+    />
+  </a>
 </section>

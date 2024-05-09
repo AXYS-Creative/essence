@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  // background: var(--background-color);
   background: linear-gradient(#f8f1e4, $white 90%);
   color: var(--primary-font-color);
 
@@ -801,36 +800,3 @@ button {
 ul {
   list-style: none;
 }
-
-// Sections
-
-.hero-section {
-  @include column-center;
-  padding-top: 420px;
-  gap: 24px;
-
-  @include mq-max("xxl") {
-    padding-top: 320px;
-  }
-
-  @include mq-max("lg") {
-    padding-top: 248px;
-  }
-
-  @include mq-max("md") {
-    padding-top: 196px;
-  }
-
-  h1,
-  p {
-    text-align: center;
-  }
-
-  p {
-    opacity: 0.5;
-  }
-}
-
-// .essential-paragraph {
-//   border: $test;
-// }

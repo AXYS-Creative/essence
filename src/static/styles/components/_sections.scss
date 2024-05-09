@@ -1,0 +1,97 @@
+.hero-section {
+  @include column-center;
+  padding-top: 420px;
+  gap: 24px;
+
+  @include mq-max("xxl") {
+    padding-top: 348px;
+  }
+
+  @include mq-max("lg") {
+    padding-top: 296px;
+  }
+
+  @include mq-max("md") {
+    padding-top: 248px;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  p {
+    opacity: 0.5;
+  }
+}
+
+.essence-paragraph {
+  // border: $test;
+  @include column-center;
+  gap: 48px;
+  padding: 420px $body-padding;
+
+  @include mq-max("xxl") {
+    gap: 32px;
+    padding: 296px $body-padding-xxl;
+  }
+  @include mq-max("md") {
+    gap: 24px;
+    padding: 164px $body-padding-md;
+  }
+
+  &__heading {
+    @extend .h6;
+    @include row-center;
+    gap: 12px;
+
+    .icon-arrow-down {
+      translate: 0 4px;
+    }
+  }
+
+  &__body-text {
+    @extend .h3;
+    text-transform: initial;
+    text-indent: 128px;
+
+    @include mq-max("lg") {
+      text-indent: 64px;
+    }
+
+    @include mq-max("md") {
+      text-indent: 36px;
+      // text-indent: 0;
+      // text-align: center;
+    }
+  }
+
+  &__link {
+    position: relative;
+    @include row-center;
+    gap: 4px;
+    align-self: flex-start;
+    translate: 128px 0;
+    transition: 0.25s ease;
+
+    @include mq-max("lg") {
+      translate: 64px 0;
+    }
+
+    @include mq-max("md") {
+      align-self: unset;
+      translate: 0 0;
+    }
+
+    &:hover,
+    &:focus {
+      .icon-arrow-right {
+        translate: 4px 0;
+      }
+    }
+
+    .icon-arrow-right {
+      transition: 0.25s ease;
+    }
+  }
+}

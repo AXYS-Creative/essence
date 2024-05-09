@@ -1,6 +1,8 @@
 // Base
-@import "fonts", "variables", "mixins", "globals", "utility", "buttons",
-  "animations";
+@import "fonts", "variables", "mixins", "globals", "utility", "animations";
 
 // Pages
 @import "./pages/home";
+
+// Components
+@import "./components/sections", "./components/buttons";

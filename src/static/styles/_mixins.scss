@@ -75,7 +75,7 @@ $min-breakpoints: (
 // Site Scaffolding
 //
 
-@mixin section-padding($thin: false) {
+@mixin section-padding($thin: false, $short: false) {
   @if $thin {
     padding: 256px 148px;
   } @else {
@@ -154,15 +154,18 @@ $min-breakpoints: (
 }
 
 .h1 {
+  // Title & Recorded Growth
   @include heading(96px, 72px, calc(20px + 6.4vw));
 }
 
 .h2 {
+  // Recorded Digits
   @include heading(64px, 56px, calc(12px + 5.6vw));
 }
 
 .h3 {
-  @include heading(56px, 48px, calc(12px + 4.8vw));
+  // Essence Paragraph Body-text
+  @include heading(52px, 28px, calc(8px + 3.2vw));
 }
 
 .h4 {
@@ -174,15 +177,15 @@ $min-breakpoints: (
 }
 
 .h6 {
-  @include heading(32px, 20px, calc(8px + 3.6vw));
+  // section headings  "h2"
+  font-family: $brand-font-family-heading;
+  font-size: 24px;
   font-weight: 100;
-
-  @include mq-max("xl") {
-    font-size: 20px;
-  }
+  font-style: italic;
+  text-transform: initial;
 
   @include mq-max("md") {
-    font-size: calc(8px + 3.6vw);
+    font-size: 18px;
   }
 }
 
