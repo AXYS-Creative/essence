@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  height: 200vh;
-  background: var(--background-color);
+  // background: var(--background-color);
+  background: linear-gradient(#f8f1e4, $white 90%);
   color: var(--primary-font-color);
 
   & > * {
@@ -29,9 +29,6 @@ body {
 }
 
 header {
-  padding: 12px;
-  // isolation: isolate;
-
   & > * {
     z-index: 5;
     position: fixed;
@@ -705,7 +702,7 @@ nav {
     opacity: 1;
     pointer-events: all;
     background: var(--background-color);
-    transition: background 0s ease 0.4s;
+    transition: background 0s ease 1s;
 
     .nav-abstract {
       height: 100%;
@@ -807,10 +804,22 @@ ul {
 
 // Sections
 
-#hero-section {
+.hero-section {
   @include column-center;
+  padding-top: 420px;
   gap: 24px;
-  margin-top: 196px;
+
+  @include mq-max("xxl") {
+    padding-top: 320px;
+  }
+
+  @include mq-max("lg") {
+    padding-top: 248px;
+  }
+
+  @include mq-max("md") {
+    padding-top: 196px;
+  }
 
   h1,
   p {
@@ -821,3 +830,7 @@ ul {
     opacity: 0.5;
   }
 }
+
+// .essential-paragraph {
+//   border: $test;
+// }

@@ -1,13 +1,18 @@
 ---
-title: ESSENCE
+title: ESSENCE | Simple Living
 layout: app
 path: home
 cta1:
   url: "#featured-section"
   title: "Join newsletter"
+
+section2Heading: "Our Mission"
+section2Paragraph: "ESSENCE helps millions of people end their obsession with stuff, and live more meaningfully, with less. Driven by a desire to reshape the world, our goal is to help people narrow their focus on the essential aspects of life."
+section2LinkText: "Learn More"
+section2LinkUrl: "/about"
 ---
 
-<section class="hero-section__home">
+<section class="hero-section home__hero">
   <h1 class="h1">Live more with less</h1>
   <p>
     Values &nbsp;•&nbsp; Priorities &nbsp;•&nbsp; Meaning &nbsp;•&nbsp; Intent
@@ -19,4 +24,13 @@ cta1:
   <!-- prettier-ignore -->
   <!-- {% include "./_includes/partials/social-media.html" %} -->
   <!-- prettier-ignore -->
+</section>
+
+<section class="essential-paragraph our-mission">
+  <!-- <h2 class="h6">Our Mission</h2> -->
+  <h2 class="essential-paragraph__heading">{{ section2Heading }}</h2>
+  <p class="essential-paragraph__body-text">{{ section2Paragraph }}</p>
+  <a class="essential-paragraph__link" href="{{ section2LinkUrl }}"
+    >{{ section2LinkText }}</a
+  >
 </section>

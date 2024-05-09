@@ -220,8 +220,7 @@ html {
 }
 
 body {
-  height: 200vh;
-  background: var(--background-color);
+  background: linear-gradient(#f8f1e4, #faf8f4 90%);
   color: var(--primary-font-color);
 }
 body > * {
@@ -229,9 +228,6 @@ body > * {
   margin: auto;
 }
 
-header {
-  padding: 12px;
-}
 header > * {
   z-index: 5;
   position: fixed;
@@ -1087,7 +1083,7 @@ nav.menu-active {
   opacity: 1;
   pointer-events: all;
   background: var(--background-color);
-  transition: background 0s ease 0.4s;
+  transition: background 0s ease 1s;
 }
 nav.menu-active .nav-abstract {
   height: 100%;
@@ -1201,20 +1197,34 @@ ul {
   list-style: none;
 }
 
-#hero-section, .hero-section__home {
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 420px;
   gap: 24px;
-  margin-top: 196px;
 }
-#hero-section h1, .hero-section__home h1,
-#hero-section p,
-.hero-section__home p {
+@media screen and (max-width: 1512px) {
+  .hero-section {
+    padding-top: 320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    padding-top: 248px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding-top: 196px;
+  }
+}
+.hero-section h1,
+.hero-section p {
   text-align: center;
 }
-#hero-section p, .hero-section__home p {
+.hero-section p {
   opacity: 0.5;
 }
 
