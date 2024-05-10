@@ -22,9 +22,8 @@ const throttle = (func, limit) => {
 };
 
 const siteHeader = document.querySelector(".site-header"),
-  navMenu = document.querySelector(".nav-menu"),
-  menuBtnWrapper = document.querySelector(".menu-btn__wrapper"),
-  menuBtn = document.querySelector(".menu-btn");
+  menuBtn = document.querySelector(".menu-btn"),
+  ctaWrapper = document.querySelector(".cta-wrapper");
 
 const headerLinks = document.querySelectorAll(".header-links__link");
 
@@ -38,11 +37,10 @@ menuBtn.setAttribute("tabindex", "-1");
 const checkScroll = () => {
   const scrollPosition = window.scrollY;
 
-  // Header/Nav scroll logic
-  const isNavOpen = navMenu.classList.contains("menu-active");
-
+  // Detect if the user has scrolled away from the top of the page
   if (scrollPosition >= 24) {
     siteHeader.classList.add("scroll-active");
+    // ctaWrapper.classList.add("scroll-active");
 
     menuBtn.setAttribute("aria-hidden", "false");
     menuBtn.removeAttribute("tabindex");
@@ -50,16 +48,18 @@ const checkScroll = () => {
     headerLinks.forEach((link) => link.setAttribute("tabindex", -1));
   } else {
     siteHeader.classList.remove("scroll-active");
+    // ctaWrapper.classList.remove("scroll-active");
+
     headerLinks.forEach((link) => link.removeAttribute("tabindex"));
 
     menuBtn.setAttribute("aria-hidden", "true");
     menuBtn.setAttribute("tabindex", "-1");
   }
 
-  if (scrollPosition < 24 && isNavOpen) {
-    menuBtnWrapper.classList.add("menu-wrapper-page-top");
+  if (scrollPosition >= 400) {
+    ctaWrapper.classList.add("scroll-active");
   } else {
-    menuBtnWrapper.classList.remove("menu-wrapper-page-top");
+    ctaWrapper.classList.remove("scroll-active");
   }
 
   // Detect if the user is near the bottom of the page

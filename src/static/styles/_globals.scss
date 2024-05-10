@@ -532,6 +532,10 @@ header {
       bottom: 548px;
       left: $body-padding;
 
+      @include mq-min("xxxl") {
+        left: calc(50% - calc($content-width / 2) + $body-padding);
+      }
+
       @include mq-max("xxl") {
         left: $body-padding-xxl;
         bottom: 402px;
@@ -552,6 +556,7 @@ header {
 
     .menu-btn__wrapper {
       opacity: 0;
+      pointer-events: none;
     }
   }
 }
