@@ -210,3 +210,38 @@ $min-breakpoints: (
   left: 50%;
   translate: -50% -50%;
 }
+
+//
+// Custom
+//
+
+// Active/hover state for social media
+@mixin social-media-open {
+  .social-media-links {
+    translate: 0 -12px;
+    transition: 0.25s ease;
+
+    @include mq-max("md") {
+      translate: unset;
+    }
+
+    li.magnet {
+      opacity: 1;
+    }
+  }
+
+  .social-media-toggle__text {
+    translate: -12px -1px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+
+    @include mq-max("md") {
+      translate: 0 -1px;
+    }
+  }
+
+  .social-media-toggle__icon {
+    opacity: 0.5;
+  }
+}

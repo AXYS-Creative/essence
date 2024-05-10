@@ -195,6 +195,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--background-color);
   color: var(--primary-font-color);
 }
@@ -889,6 +890,61 @@ header.menu-active .social-media-wrapper {
     transition: 0.6s ease 1.24s;
   }
 }
+header.header-scroll-bottom .social-media-wrapper {
+  position: absolute;
+  bottom: 548px;
+  left: 64px;
+}
+header.header-scroll-bottom .social-media-wrapper .social-media-links {
+  translate: 0 -12px;
+  transition: 0.25s ease;
+}
+@media screen and (max-width: 768px) {
+  header.header-scroll-bottom .social-media-wrapper .social-media-links {
+    translate: unset;
+  }
+}
+header.header-scroll-bottom .social-media-wrapper .social-media-links li.magnet {
+  opacity: 1;
+}
+header.header-scroll-bottom .social-media-wrapper .social-media-toggle__text {
+  translate: -12px -1px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+@media screen and (max-width: 768px) {
+  header.header-scroll-bottom .social-media-wrapper .social-media-toggle__text {
+    translate: 0 -1px;
+  }
+}
+header.header-scroll-bottom .social-media-wrapper .social-media-toggle__icon {
+  opacity: 0.5;
+}
+@media screen and (max-width: 1512px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: 40px;
+    bottom: 402px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    bottom: 364px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    bottom: 484px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: 24px;
+  }
+}
+header.header-scroll-bottom .menu-btn__wrapper {
+  opacity: 0;
+}
 
 nav {
   position: fixed;
@@ -1184,14 +1240,14 @@ footer .site-footer__top .footer-nav-links {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 36px;
-  width: 196px;
-  height: 196px;
-  margin-inline-start: 124px;
+  gap: 40px;
+  width: 212px;
+  height: 212px;
+  margin-inline-start: 164px;
 }
 @media screen and (max-width: 1200px) {
   footer .site-footer__top .footer-nav-links {
-    margin-inline-start: 80px;
+    margin-inline-start: 96px;
   }
 }
 footer .site-footer__top .footer-nav-links .footer-nav-link {

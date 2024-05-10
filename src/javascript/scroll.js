@@ -1,4 +1,4 @@
-let minMd = window.matchMedia("(min-width: 768px)");
+import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
 
 const throttle = (func, limit) => {
   let lastFunc;
@@ -37,7 +37,6 @@ menuBtn.setAttribute("tabindex", "-1");
 
 const checkScroll = () => {
   const scrollPosition = window.scrollY;
-  // const windowHeight = window.innerHeight;
 
   // Header/Nav scroll logic
   const isNavOpen = navMenu.classList.contains("menu-active");
@@ -63,18 +62,27 @@ const checkScroll = () => {
     menuBtnWrapper.classList.remove("menu-wrapper-page-top");
   }
 
-  // Text background fill animations
+  // Detect if the user is near the bottom of the page
+  const scrollHeight = document.documentElement.scrollHeight;
+  const clientHeight = document.documentElement.clientHeight;
 
-  // Helper function for broken subtext
-  // function getOffsetTop(elem) {
-  //   let offsetTop = 0;
-  //   do {
-  //     if (!isNaN(elem.offsetTop)) {
-  //       offsetTop += elem.offsetTop;
-  //     }
-  //   } while ((elem = elem.offsetParent));
-  //   return offsetTop;
-  // }
+  const handleScrollBottom = (threshold) => {
+    if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
+      siteHeader.classList.add("header-scroll-bottom");
+    } else {
+      siteHeader.classList.remove("header-scroll-bottom");
+    }
+  };
+
+  if (maxLg.matches) {
+    handleScrollBottom(424);
+  } else if (maxXl.matches) {
+    handleScrollBottom(296);
+  } else if (maxXxl.matches) {
+    handleScrollBottom(340);
+  } else {
+    handleScrollBottom(480);
+  }
 };
 
 window.addEventListener("scroll", throttle(checkScroll, 50)); // Throttle checkScroll, adjust 100ms as needed
