@@ -1629,6 +1629,22 @@ img {
     translate: 0 0;
   }
 }
+@keyframes cta {
+  from {
+    top: 160px;
+  }
+  to {
+    top: calc(100vh - 96px);
+  }
+}
+@keyframes cta-default {
+  from {
+    top: calc(150vh - 96px);
+  }
+  to {
+    top: 640px;
+  }
+}
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -1807,11 +1823,11 @@ img {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 640px;
   right: 50%;
   translate: 50% 0;
   gap: 12px;
-  transition: top 0.5s ease, right 0.5s ease;
+  transition: 0.5s ease;
+  animation: cta-default 0.5s ease forwards;
 }
 .cta-wrapper .cta-1 {
   color: var(--primary-font-color);
@@ -1821,6 +1837,7 @@ img {
 }
 .cta-wrapper.scroll-active {
   position: fixed;
-  top: calc(100vh - 64px);
+  animation: cta 0.5s ease forwards;
   right: 64px;
+  translate: 0 0;
 }/*# sourceMappingURL=styles.css.map */

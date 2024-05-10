@@ -56,7 +56,8 @@ const checkScroll = () => {
     menuBtn.setAttribute("tabindex", "-1");
   }
 
-  if (scrollPosition >= 400) {
+  // if (scrollPosition >= 196) {
+  if (scrollPosition >= 480) {
     ctaWrapper.classList.add("scroll-active");
   } else {
     ctaWrapper.classList.remove("scroll-active");

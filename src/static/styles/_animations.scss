@@ -144,3 +144,21 @@
     translate: 0 0;
   }
 }
+
+@keyframes cta {
+  from {
+    top: 640px - 480; // from js scroll point
+  }
+  to {
+    top: calc(100vh - $body-padding * 1.5);
+  }
+}
+
+@keyframes cta-default {
+  from {
+    top: calc(150vh - $body-padding * 1.5);
+  }
+  to {
+    top: 640px;
+  }
+}
