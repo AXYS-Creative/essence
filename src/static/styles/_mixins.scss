@@ -71,34 +71,6 @@ $min-breakpoints: (
   }
 }
 
-//
-// Site Scaffolding
-//
-
-@mixin section-padding($thin: false, $short: false) {
-  @if $thin {
-    padding: 256px 148px;
-  } @else {
-    padding: 196px 148px;
-  }
-
-  @include mq-max("xxl") {
-    @if $thin {
-      padding: 228px 148px;
-    } @else {
-      padding: 148px 96px;
-    }
-  }
-
-  @include mq-max("md") {
-    @if $thin {
-      padding: 128px 96px;
-    } @else {
-      padding: 96px 48px;
-    }
-  }
-}
-
 // header logo, nav items
 @mixin left-spacing {
   left: $body-padding;

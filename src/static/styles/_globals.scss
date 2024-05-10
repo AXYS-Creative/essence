@@ -18,7 +18,8 @@ html {
 }
 
 body {
-  background: linear-gradient(#f8f1e4, $white 90%);
+  background-color: var(--background-color);
+  // background: linear-gradient(#f8f1e4, $white 90%);
   color: var(--primary-font-color);
 
   & > * {
@@ -618,33 +619,33 @@ nav {
       }
 
       &:first-of-type {
-        margin-top: 520px;
+        margin-block-start: 520px;
 
         @include mq-max("xxl") {
-          margin-top: 464px;
+          margin-block-start: 464px;
         }
 
         @include mq-max("lg") {
-          margin-top: 360px;
+          margin-block-start: 360px;
         }
 
         @include mq-max("md") {
-          margin-top: unset;
+          margin-block-start: unset;
         }
       }
       &:last-of-type {
-        margin-bottom: 464px;
+        margin-block-end: 464px;
 
         @include mq-max("xxl") {
-          margin-bottom: 420px;
+          margin-block-end: 420px;
         }
 
         @include mq-max("lg") {
-          margin-bottom: 248px;
+          margin-block-end: 248px;
         }
 
         @include mq-max("md") {
-          margin-bottom: unset;
+          margin-block-end: unset;
         }
       }
 
@@ -756,34 +757,147 @@ nav {
 }
 
 section {
-  @include section-padding;
+  padding: 196px $body-padding * 2.5;
+
+  @include mq-max("xxl") {
+    padding: 148px $body-padding-xxl * 2.5;
+  }
+
+  @include mq-max("md") {
+    padding: 96px $body-padding-md * 2.5;
+  }
+
+  &.essence-paragraph {
+    padding: 316px $body-padding * 2.5;
+
+    @include mq-max("xxl") {
+      gap: 32px;
+      padding: 296px $body-padding-xxl * 2.5;
+    }
+    @include mq-max("md") {
+      gap: 24px;
+      padding: 164px $body-padding-md * 2.5;
+    }
+  }
 }
 
 footer {
   padding: $body-padding;
   position: relative;
-  @include row-center(space-between);
+  @include column-center;
+  gap: 248px;
 
-  .copyright {
-    @include row-center;
-    gap: 10px;
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(calc(-50% - 6px), 50%);
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+  @include mq-max("xxl") {
+    gap: 164px;
+  }
 
-    @include mq-max("lg") {
-      width: 100%;
-      bottom: $body-padding;
-      transform: translate(calc(-50% - 6px), 0);
+  @include mq-max("md") {
+    padding: $body-padding-md;
+  }
+
+  & > * {
+    width: 100%;
+  }
+
+  .site-footer__top {
+    @include row-start(space-between);
+
+    .footer-nav-links {
+      @include column-start;
+      flex-wrap: wrap;
+      gap: 36px;
+      width: 196px;
+      height: 196px;
+      margin-inline-start: 124px;
+
+      @include mq-max("xl") {
+        margin-inline-start: 80px;
+      }
+
+      .footer-nav-link {
+        text-transform: uppercase;
+      }
     }
 
-    @include mq-max("md") {
-      font-size: 10px;
-      transform: translate(calc(-50% - 5.5px), 0);
+    .footer-cta-title {
+      @extend .h6;
+      text-transform: uppercase;
+      font-style: normal;
+      text-align: right;
+    }
+  }
+
+  .site-footer__bottom {
+    @include row-end(space-between);
+
+    @include mq-max("lg") {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    .brand-name-wrapper {
+      @include mq-max("lg") {
+        translate: -8px 0;
+      }
+
+      &__locations {
+        @include row-center(flex-start);
+        gap: 64px;
+        translate: 16px 0;
+
+        @include mq-max("xxl") {
+          gap: 48px;
+          translate: 10px 0;
+        }
+      }
+
+      &__brand-name {
+        font-size: 224px;
+        line-height: 1;
+
+        @include mq-max("xxl") {
+          font-size: 164px;
+        }
+
+        @include mq-max("xl") {
+          font-size: 124px;
+        }
+
+        @include mq-max("lg") {
+          font-size: 20vw;
+          translate: -4px 0;
+        }
+
+        @include mq-max("md") {
+          font-size: 21.4vw;
+        }
+      }
+    }
+
+    .credits {
+      @include row-center;
+      gap: 48px;
+      translate: 0 -16px;
+
+      @include mq-max("xxl") {
+        gap: 24px;
+      }
+
+      @media (max-width: 1280px) {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+      }
+
+      @include mq-max("lg") {
+        flex-direction: row;
+        margin-bottom: 24px;
+      }
+
+      small {
+        text-align: right;
+        flex-shrink: 0;
+      }
     }
   }
 }
@@ -803,7 +917,8 @@ h4 {
 
 p,
 span,
-figcaption {
+figcaption,
+small {
   color: var(--primary-font-color);
   font-family: $brand-font-family-body;
 }

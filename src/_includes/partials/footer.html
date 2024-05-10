@@ -1,1 +1,37 @@
-<footer></footer>
+<footer aria-label="site-footer">
+  <div class="site-footer__top">
+    <ul class="footer-nav-links">
+      {% for item in navigation.items %}
+      <li>
+        <a class="footer-nav-link tab-element-page" href="{{ item.url }}">
+          {{ item.text }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3 class="footer-cta-title">
+      Embrace <br />
+      The Change
+    </h3>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="brand-name-wrapper">
+      <div class="brand-name-wrapper__locations">
+        <small>New York City • USA</small>
+        <small>London • EN</small>
+        <small>Dubai • UAE</small>
+      </div>
+      <h2 class="brand-name-wrapper__brand-name">Essence</h2>
+    </div>
+
+    <div class="credits">
+      <small>
+        Website made in partnership with
+        <a href="https://axyscreative.com/" target="_blank"> AXYS Creative</a>
+      </small>
+      <small>© <span class="year-text"></span> Essence</small>
+    </div>
+  </div>
+</footer>

@@ -15,10 +15,10 @@ export const minMd = window.matchMedia("(min-width: 768px)");
 })();
 
 // Get Current Year for Copyright
-// (function getCurrentYear() {
-//   const yearText = document.querySelector(".year-text");
-//   const currentYear = new Date().getFullYear();
+(function getCurrentYear() {
+  const yearText = document.querySelector(".year-text");
+  const currentYear = new Date().getFullYear();
 
-//   yearText.innerHTML = currentYear;
-//   yearText.setAttribute("datetime", currentYear);
-// })();
+  yearText.innerHTML = currentYear;
+  yearText.setAttribute("datetime", currentYear);
+})();

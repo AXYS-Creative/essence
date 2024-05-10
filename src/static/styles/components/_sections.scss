@@ -1,18 +1,18 @@
 .hero-section {
   @include column-center;
-  padding-top: 420px;
+  padding-block-start: 420px;
   gap: 24px;
 
   @include mq-max("xxl") {
-    padding-top: 348px;
+    padding-block-start: 348px;
   }
 
   @include mq-max("lg") {
-    padding-top: 296px;
+    padding-block-start: 296px;
   }
 
   @include mq-max("md") {
-    padding-top: 248px;
+    padding-block-start: 248px;
   }
 
   h1,
@@ -26,18 +26,9 @@
 }
 
 .essence-paragraph {
+  // See section in _globals.scss padding
   @include column-center;
   gap: 48px;
-  padding: 420px $body-padding;
-
-  @include mq-max("xxl") {
-    gap: 32px;
-    padding: 296px $body-padding-xxl;
-  }
-  @include mq-max("md") {
-    gap: 24px;
-    padding: 164px $body-padding-md;
-  }
 
   &__heading {
     @extend .h6;
@@ -152,9 +143,20 @@
 
       img {
         width: 100%;
+        margin-block-end: 12px;
 
         @include mq-max("md") {
           height: 420px;
+        }
+      }
+
+      figcaption {
+        font-size: 24px;
+        font-weight: 300;
+        font-style: normal;
+
+        @include mq-max("xl") {
+          font-size: 16px;
         }
       }
     }
