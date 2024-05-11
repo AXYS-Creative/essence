@@ -696,6 +696,12 @@ header .cta-wrapper.scroll-active {
     right: calc(50% - 896px);
   }
 }
+header .cta-wrapper.scroll-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 536px;
+  animation: unset;
+}
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.37s ease 0.03s forwards;
 }

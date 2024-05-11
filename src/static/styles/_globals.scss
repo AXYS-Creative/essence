@@ -405,6 +405,13 @@ header {
         right: calc(50% - calc($content-width / 2 - $body-padding));
       }
     }
+
+    &.scroll-bottom {
+      position: absolute;
+      top: auto;
+      bottom: 536px;
+      animation: unset;
+    }
   }
 
   &.scroll-active {

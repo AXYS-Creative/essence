@@ -61,27 +61,6 @@ const updateScrollDependentElements = (scrollPosition) => {
     menuBtn.setAttribute("tabindex", "-1");
   }
 
-  // Adjust header at bottom of page
-  const handleScrollBottom = (threshold) => {
-    if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
-      siteHeader.classList.add("header-scroll-bottom");
-      menuBtn.setAttribute("tabindex", "-1");
-    } else {
-      siteHeader.classList.remove("header-scroll-bottom");
-      menuBtn.setAttribute("tabindex", "0");
-    }
-  };
-
-  if (maxLg.matches) {
-    handleScrollBottom(424);
-  } else if (maxXl.matches) {
-    handleScrollBottom(296);
-  } else if (maxXxl.matches) {
-    handleScrollBottom(340);
-  } else {
-    handleScrollBottom(480);
-  }
-
   // CTA position in the hero/page
   const rootElem = document.documentElement;
 
@@ -106,7 +85,43 @@ const updateScrollDependentElements = (scrollPosition) => {
     ctaWrapper.style.animationName = "cta-default";
   }
 
+  // Adjust header at bottom of page
+  const handleScrollBottom = (threshold) => {
+    if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
+      siteHeader.classList.add("header-scroll-bottom");
+      menuBtn.setAttribute("tabindex", "-1");
+
+      // ctaWrapper.style.animationName = "";
+      ctaWrapper.classList.add("scroll-bottom");
+    } else {
+      siteHeader.classList.remove("header-scroll-bottom");
+      menuBtn.setAttribute("tabindex", "0");
+
+      ctaWrapper.classList.remove("scroll-bottom");
+    }
+  };
+
+  if (maxLg.matches) {
+    handleScrollBottom(424);
+  } else if (maxXl.matches) {
+    handleScrollBottom(296);
+  } else if (maxXxl.matches) {
+    handleScrollBottom(340);
+  } else {
+    handleScrollBottom(480);
+  }
+
   ctaStylesheet.innerHTML = `
+
+  @keyframes cta-default {
+    from {
+      top: calc(${scrollPosition + clientHeight}px - 64px * 1.5);
+    }
+    to {
+      top: ${ctaPosition}px;
+    }
+  }
+
   @keyframes cta-animated {
     from {
       top: calc(${ctaPosition}px - ${scrollFromTop}px);
@@ -116,12 +131,17 @@ const updateScrollDependentElements = (scrollPosition) => {
     }
   }
 
-  @keyframes cta-default {
+  /* Maybe just add a class that uses !important to override the styles? */
+
+  @keyframes cta-bottom {
     from {
-      top: calc(${scrollPosition + clientHeight}px - 64px * 1.5);
+      top: calc(100vh - 64px * 1.5);
     }
     to {
-      top: ${ctaPosition}px;
+      position: absolute;
+      top: auto;
+      /* bottom: 640px; */
+      bottom: 532px;
     }
   }`;
 };
