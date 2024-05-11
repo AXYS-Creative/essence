@@ -29,8 +29,14 @@
   --secondary-font-color: #898c83;
   --link-color: #0e0e0e;
   --link-color-hover: #898c83;
+  --cta-position: 640px;
 }
 
+@media (max-width: 1512px) {
+  :root {
+    --cta-position: 548;
+  }
+}
 .h1, h1, nav .nav-links .nav-link {
   font-family: "Atyp Display", sans-serif;
   font-size: 96px;
@@ -1503,6 +1509,16 @@ img {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
 @keyframes nav-link-open {
   from {
     translate: 0 100%;
@@ -1629,20 +1645,12 @@ img {
     translate: 0 0;
   }
 }
-@keyframes cta {
-  from {
-    top: 160px;
-  }
-  to {
-    top: calc(100vh - 96px);
-  }
-}
 @keyframes cta-default {
   from {
-    top: calc(150vh - 96px);
+    top: var(--cta-position);
   }
   to {
-    top: 640px;
+    top: var(--cta-position);
   }
 }
 .hero-section {
@@ -1826,8 +1834,8 @@ img {
   right: 50%;
   translate: 50% 0;
   gap: 12px;
-  transition: 0.5s ease;
-  animation: cta-default 0.5s ease forwards;
+  transition: 0.8s ease;
+  animation: cta-default 0.8s ease forwards;
 }
 .cta-wrapper .cta-1 {
   color: var(--primary-font-color);
@@ -1837,7 +1845,12 @@ img {
 }
 .cta-wrapper.scroll-active {
   position: fixed;
-  animation: cta 0.5s ease forwards;
+  animation: cta 0.8s ease forwards;
   right: 64px;
   translate: 0 0;
+}
+@media screen and (min-width: 1921px) {
+  .cta-wrapper.scroll-active {
+    right: calc(50% - 896px);
+  }
 }/*# sourceMappingURL=styles.css.map */

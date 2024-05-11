@@ -13,6 +13,14 @@ $white: #faf8f4;
 
   --link-color: #{$black};
   --link-color-hover: #{$grey-dark};
+
+  --cta-position: 640px;
+}
+
+@media (max-width: 1512px) {
+  :root {
+    --cta-position: 548;
+  }
 }
 
 // If you add a dark/light theme

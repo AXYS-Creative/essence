@@ -1,15 +1,13 @@
 .cta-wrapper {
-  $position-trasition-timing: 0.5s;
+  $duration: 0.8s;
 
   @include row-center;
   position: absolute;
-  // top: 640px; // reset by keyframe
   right: 50%;
   translate: 50% 0;
   gap: 12px;
-  // transition: top 0.5s ease, right 0.5s ease;
-  transition: $position-trasition-timing ease;
-  animation: cta-default $position-trasition-timing ease forwards;
+  transition: $duration ease;
+  animation: cta-default $duration ease forwards;
 
   .cta-1 {
     color: var(--primary-font-color);
@@ -20,10 +18,12 @@
 
   &.scroll-active {
     position: fixed;
-    // top: calc(100vh - $body-padding * 1.5);
-    // bottom: $body-padding;/
-    animation: cta $position-trasition-timing ease forwards;
+    animation: cta $duration ease forwards;
     right: $body-padding;
     translate: 0 0;
+
+    @include mq-min("xxxl") {
+      right: calc(50% - calc($content-width / 2 - $body-padding));
+    }
   }
 }
