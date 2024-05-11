@@ -33,7 +33,8 @@
 
     <main>{{ content | safe }}</main>
 
-    {%include "./partials/footer.html" %}
+    {% if page.path != "404" %} {%include "./partials/footer.html" %} {% endif%}
+
     <!-- prettier-ignore -->
 
     <script src="/static/js/alpine.js"></script>
