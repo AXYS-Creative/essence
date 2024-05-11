@@ -156,12 +156,13 @@
   }
 }
 
-// @keyframes cta {
+// @keyframes cta-animated {
 //   from {
-//     top: 640px - 480; // from js scroll point
+//     // top: calc(${ctaPosition}px - ${ctaScrollTrigger}px);
+//     top: calc(640px - 480px);
 //   }
 //   to {
-//     top: calc(100vh - $body-padding * 1.5);
+//     top: calc(100vh - 64px * 1.5);
 //   }
 // }
 

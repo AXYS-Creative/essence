@@ -669,6 +669,33 @@ header .social-media-wrapper .social-media-toggle__text {
   translate: 0 -1px;
   transition: 0.25s ease 0.4s;
 }
+header .cta-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  translate: 50% 0;
+  gap: 12px;
+  transition: 0.8s ease;
+  animation: cta-default 0.8s ease forwards;
+}
+header .cta-wrapper .cta-1 {
+  color: var(--primary-font-color);
+  padding: 8px 24px;
+  border: 1px solid var(--primary-font-color);
+  border-radius: 24px;
+}
+header .cta-wrapper.scroll-active {
+  position: fixed;
+  right: 64px;
+  translate: 0 0;
+}
+@media screen and (min-width: 1921px) {
+  header .cta-wrapper.scroll-active {
+    right: calc(50% - 896px);
+  }
+}
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.37s ease 0.03s forwards;
 }
@@ -895,6 +922,10 @@ header.menu-active .social-media-wrapper {
   header.menu-active .social-media-wrapper li.magnet:nth-of-type(4) {
     transition: 0.6s ease 1.24s;
   }
+}
+header.menu-active .cta-wrapper {
+  right: 64px;
+  translate: 0 0;
 }
 header.header-scroll-bottom .social-media-wrapper {
   position: absolute;
@@ -1823,34 +1854,5 @@ img {
 @media screen and (max-width: 1200px) {
   .essence-resources__images figure figcaption {
     font-size: 16px;
-  }
-}
-
-.cta-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 50%;
-  translate: 50% 0;
-  gap: 12px;
-  transition: 0.8s ease;
-  animation: cta-default 0.8s ease forwards;
-}
-.cta-wrapper .cta-1 {
-  color: var(--primary-font-color);
-  padding: 8px 24px;
-  border: 1px solid var(--primary-font-color);
-  border-radius: 24px;
-}
-.cta-wrapper.scroll-active {
-  position: fixed;
-  animation: cta 0.8s ease forwards;
-  right: 64px;
-  translate: 0 0;
-}
-@media screen and (min-width: 1921px) {
-  .cta-wrapper.scroll-active {
-    right: calc(50% - 896px);
   }
 }/*# sourceMappingURL=styles.css.map */

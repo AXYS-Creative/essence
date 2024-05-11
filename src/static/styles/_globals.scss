@@ -377,6 +377,36 @@ header {
     }
   }
 
+  .cta-wrapper {
+    $duration: 0.8s;
+
+    @include row-center;
+    position: absolute;
+    right: 50%;
+    translate: 50% 0;
+    gap: 12px;
+    transition: $duration ease;
+    animation: cta-default $duration ease forwards;
+
+    .cta-1 {
+      color: var(--primary-font-color);
+      padding: 8px 24px;
+      border: 1px solid var(--primary-font-color);
+      border-radius: 24px;
+    }
+
+    &.scroll-active {
+      position: fixed;
+      // animation: cta $duration ease forwards;
+      right: $body-padding;
+      translate: 0 0;
+
+      @include mq-min("xxxl") {
+        right: calc(50% - calc($content-width / 2 - $body-padding));
+      }
+    }
+  }
+
   &.scroll-active {
     .header-logo {
       &:hover,
@@ -522,6 +552,14 @@ header {
           }
         }
       }
+    }
+
+    .cta-wrapper {
+      // $duration: 0.8s;
+
+      // animation: cta-animated $duration ease forwards;
+      right: $body-padding;
+      translate: 0 0;
     }
   }
 

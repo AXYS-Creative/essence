@@ -1,6 +1,6 @@
 import { minMd } from "./utility.js";
 
-const navMenu = document.querySelector(".nav-menu"),
+export const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
   headerLogo = document.querySelector(".header-logo"),
