@@ -83,6 +83,14 @@
   {% include "./social-media.html" %}
 
   <div class="cta-wrapper">
-    <a class="cta-1" href="{{ cta1.url }}">{{ cta1.title }}</a>
+    <a class="cta-1" href="{{ cta1.url }}">
+      <span>{{ cta1.title1 }}</span>
+      <span>{{ cta1.title2 }}</span>
+      <img
+        class="cta-1__icon"
+        src="../../static/img/icons/email.svg"
+        alt="email icon"
+      />
+    </a>
   </div>
 </header>

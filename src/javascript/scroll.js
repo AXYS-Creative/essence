@@ -115,7 +115,7 @@ const updateScrollDependentElements = (scrollPosition) => {
 
   @keyframes cta-default {
     from {
-      top: calc(${scrollPosition + clientHeight}px - 64px * 1.5);
+      top: calc(${scrollPosition + clientHeight}px - 64px * 1.6);
     }
     to {
       top: ${ctaPosition}px;
@@ -127,7 +127,7 @@ const updateScrollDependentElements = (scrollPosition) => {
       top: calc(${ctaPosition}px - ${scrollFromTop}px);
     }
     to {
-      top: calc(100vh - 64px * 1.5);
+      top: calc(100vh - 64px * 1.6);
     }
   }
 
@@ -135,7 +135,7 @@ const updateScrollDependentElements = (scrollPosition) => {
 
   @keyframes cta-bottom {
     from {
-      top: calc(100vh - 64px * 1.5);
+      top: calc(100vh - 64px * 1.6);
     }
     to {
       position: absolute;

@@ -74,7 +74,8 @@ const handleNavLinksWrapper = (e) => {
   const mouseY = Math.min(Math.max(e.clientY, minY), maxY);
   const translateY = (maxY + minY) / 2 - mouseY;
 
-  navLinksWrapper.style.translate = `100% calc(${translateY}px - 30%)`;
+  // navLinksWrapper.style.translate = `0% calc(${translateY}px - 30%)`;
+  navLinksWrapper.style.translate = `0% ${translateY}px`;
 };
 
 // // Restore Original Position
@@ -84,7 +85,7 @@ const handleNavLinksWrapper = (e) => {
 
 const handleScreenChange = (e) => {
   if (e.matches) {
-    navLinksWrapper.style.translate = `100% -30%`;
+    navLinksWrapper.style.translate = `0 0`;
     navLinksWrapper.addEventListener("mousemove", handleNavLinksWrapper);
   } else {
     navLinksWrapper.style.translate = `24px 0`;

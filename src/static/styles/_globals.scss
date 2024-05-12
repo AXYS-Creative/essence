@@ -389,20 +389,68 @@ header {
     animation: cta-default $duration ease forwards;
 
     .cta-1 {
+      position: relative;
+      text-transform: uppercase;
       color: var(--primary-font-color);
       padding: 8px 24px;
       border: 1px solid var(--primary-font-color);
       border-radius: 24px;
+      width: 188px;
+      height: 37px;
+      transition: 0.4s ease;
+
+      span:nth-of-type(2) {
+        position: absolute;
+        translate: 4px 0;
+        opacity: 1;
+        pointer-events: all;
+        transition: 0.3s ease 0.2s;
+      }
+
+      &__icon {
+        @include absolute-center;
+        translate: 120% -50%;
+        opacity: 0;
+        transition: 0.3s ease;
+      }
     }
 
     &.scroll-active {
       position: fixed;
-      // animation: cta $duration ease forwards;
       right: $body-padding;
       translate: 0 0;
+      // animation: cta $duration ease forwards;
 
       @include mq-min("xxxl") {
         right: calc(50% - calc($content-width / 2 - $body-padding));
+      }
+      @include mq-max("xxl") {
+        right: $body-padding-xxl;
+      }
+      @include mq-max("md") {
+        right: $body-padding-md;
+      }
+
+      .cta-1 {
+        display: flex;
+        width: 96px;
+        background: var(--background-color);
+
+        span:nth-of-type(1) {
+          translate: -8px 0;
+        }
+
+        span:nth-of-type(2) {
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.3s ease 0s;
+        }
+
+        &__icon {
+          translate: 100% -50%;
+          opacity: 1;
+          transition: 0.3s ease 0.2s;
+        }
       }
     }
 
@@ -607,6 +655,8 @@ header {
 }
 
 nav {
+  $right-spacing: 96px;
+
   position: fixed;
   top: 0;
   left: 50%;
@@ -619,6 +669,8 @@ nav {
   transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
 
   .width-constraint {
+    @include row-center(flex-end);
+    padding-inline-end: $right-spacing;
     position: relative;
     max-width: $content-width;
     height: 100vh;
@@ -634,9 +686,8 @@ nav {
   .nav-links {
     @include column-start;
     gap: 80px;
-    width: 50%;
+    width: calc(50% - $right-spacing);
     pointer-events: none;
-    translate: 100% -30%;
     transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
 
     &:hover,
@@ -843,6 +894,7 @@ footer {
   gap: 248px;
 
   @include mq-max("xxl") {
+    padding: $body-padding-xxl;
     gap: 164px;
   }
 

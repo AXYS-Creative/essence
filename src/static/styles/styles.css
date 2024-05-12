@@ -681,10 +681,31 @@ header .cta-wrapper {
   animation: cta-default 0.8s ease forwards;
 }
 header .cta-wrapper .cta-1 {
+  position: relative;
+  text-transform: uppercase;
   color: var(--primary-font-color);
   padding: 8px 24px;
   border: 1px solid var(--primary-font-color);
   border-radius: 24px;
+  width: 188px;
+  height: 37px;
+  transition: 0.4s ease;
+}
+header .cta-wrapper .cta-1 span:nth-of-type(2) {
+  position: absolute;
+  translate: 4px 0;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s ease 0.2s;
+}
+header .cta-wrapper .cta-1__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  translate: 120% -50%;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 header .cta-wrapper.scroll-active {
   position: fixed;
@@ -695,6 +716,34 @@ header .cta-wrapper.scroll-active {
   header .cta-wrapper.scroll-active {
     right: calc(50% - 896px);
   }
+}
+@media screen and (max-width: 1512px) {
+  header .cta-wrapper.scroll-active {
+    right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header .cta-wrapper.scroll-active {
+    right: 24px;
+  }
+}
+header .cta-wrapper.scroll-active .cta-1 {
+  display: flex;
+  width: 96px;
+  background: var(--background-color);
+}
+header .cta-wrapper.scroll-active .cta-1 span:nth-of-type(1) {
+  translate: -8px 0;
+}
+header .cta-wrapper.scroll-active .cta-1 span:nth-of-type(2) {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease 0s;
+}
+header .cta-wrapper.scroll-active .cta-1__icon {
+  translate: 100% -50%;
+  opacity: 1;
+  transition: 0.3s ease 0.2s;
 }
 header .cta-wrapper.scroll-bottom {
   position: absolute;
@@ -1007,6 +1056,10 @@ nav {
   transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
 }
 nav .width-constraint {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-inline-end: 96px;
   position: relative;
   max-width: 1920px;
   height: 100vh;
@@ -1028,9 +1081,8 @@ nav .nav-links {
   justify-content: center;
   align-items: flex-start;
   gap: 80px;
-  width: 50%;
+  width: calc(50% - 96px);
   pointer-events: none;
-  translate: 100% -30%;
   transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
 }
 nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
@@ -1267,6 +1319,7 @@ footer {
 }
 @media screen and (max-width: 1512px) {
   footer {
+    padding: 40px;
     gap: 164px;
   }
 }
