@@ -684,6 +684,7 @@ header .cta-wrapper .cta-1 {
   position: relative;
   text-transform: uppercase;
   color: var(--primary-font-color);
+  background: var(--background-color);
   padding: 8px 24px;
   border: 1px solid var(--primary-font-color);
   border-radius: 24px;
@@ -730,7 +731,6 @@ header .cta-wrapper.scroll-active {
 header .cta-wrapper.scroll-active .cta-1 {
   display: flex;
   width: 96px;
-  background: var(--background-color);
 }
 header .cta-wrapper.scroll-active .cta-1 span:nth-of-type(1) {
   translate: -8px 0;
@@ -748,8 +748,11 @@ header .cta-wrapper.scroll-active .cta-1__icon {
 header .cta-wrapper.scroll-bottom {
   position: absolute;
   top: auto;
-  bottom: 536px;
+  bottom: 640px;
   animation: unset;
+}
+header .cta-wrapper.scroll-bottom .cta-1 {
+  width: 188px;
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.37s ease 0.03s forwards;

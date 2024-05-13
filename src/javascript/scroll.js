@@ -1,9 +1,10 @@
 import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
 import { navMenu } from "./nav.js";
 
-const siteHeader = document.querySelector(".site-header");
-const menuBtn = document.querySelector(".menu-btn");
-const ctaWrapper = document.querySelector(".cta-wrapper");
+const siteHeader = document.querySelector(".site-header"),
+  menuBtn = document.querySelector(".menu-btn"),
+  ctaWrapper = document.querySelector(".cta-wrapper"),
+  footerNavLinks = document.querySelector(".footer-nav-links");
 
 const headerLinks = document.querySelectorAll(".header-links__link");
 
@@ -33,7 +34,7 @@ const throttle = (func, limit) => {
 };
 
 const updateScrollDependentElements = (scrollPosition) => {
-  const scrollHeight = document.documentElement.scrollHeight;
+  const scrollHeight = document.body.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
 
   // Manage header scroll animations
@@ -62,18 +63,23 @@ const updateScrollDependentElements = (scrollPosition) => {
   }
 
   // CTA position in the hero/page
-  const rootElem = document.documentElement;
+  const rootElem = document.documentElement; // for css vars
 
   let ctaPosition;
-  if (maxLg.matches) {
+  if (maxMd.matches) {
+    rootElem.style.setProperty("--body-padding", `24px`);
+  } else if (maxLg.matches) {
     ctaPosition = 424;
   } else if (maxXl.matches) {
     ctaPosition = 296;
   } else if (maxXxl.matches) {
     ctaPosition = 548;
     rootElem.style.setProperty("--cta-position", `${ctaPosition}px`);
+    rootElem.style.setProperty("--body-padding", `40px`);
   } else {
     ctaPosition = 640;
+
+    rootElem.style.setProperty("--body-padding", `64px`);
   }
 
   // Update CTA animation based on scroll position
@@ -85,31 +91,50 @@ const updateScrollDependentElements = (scrollPosition) => {
     ctaWrapper.style.animationName = "cta-default";
   }
 
-  // Adjust header at bottom of page
-  const handleScrollBottom = (threshold) => {
+  // Adjust header/cta at bottom of page
+  const footerLinksDistance =
+    scrollHeight -
+    (footerNavLinks.getBoundingClientRect().bottom + scrollPosition);
+
+  const handleScrollBottom = (threshold, ctaOffset) => {
+    // header/social logic
     if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
       siteHeader.classList.add("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "-1");
-
-      // ctaWrapper.style.animationName = "";
-      ctaWrapper.classList.add("scroll-bottom");
     } else {
       siteHeader.classList.remove("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "0");
+    }
 
+    // cta logic
+    if (
+      scrollHeight - (scrollPosition + clientHeight) <
+      threshold - ctaOffset
+    ) {
+      ctaWrapper.classList.add("scroll-bottom");
+    } else {
       ctaWrapper.classList.remove("scroll-bottom");
     }
   };
 
-  if (maxLg.matches) {
-    handleScrollBottom(424);
-  } else if (maxXl.matches) {
-    handleScrollBottom(296);
-  } else if (maxXxl.matches) {
-    handleScrollBottom(340);
-  } else {
-    handleScrollBottom(480);
-  }
+  let bodyPadding = parseInt(
+    getComputedStyle(rootElem).getPropertyValue("--body-padding"),
+    10
+  );
+
+  // This will replace manually having to enter the distance from the bottom.
+  // Now I just need to to it again for the cta (replace -96)
+  handleScrollBottom(footerLinksDistance - bodyPadding, -96);
+
+  // if (maxLg.matches) {
+  //   handleScrollBottom(424, -96);
+  // } else if (maxXl.matches) {
+  //   handleScrollBottom(296, -96);
+  // } else if (maxXxl.matches) {
+  //   handleScrollBottom(280, -96);
+  // } else {
+  //   handleScrollBottom(480, -96);
+  // }
 
   ctaStylesheet.innerHTML = `
 
