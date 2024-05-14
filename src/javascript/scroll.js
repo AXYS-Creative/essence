@@ -3,7 +3,9 @@ import { navMenu } from "./nav.js";
 
 const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
-  ctaWrapper = document.querySelector(".cta-wrapper"),
+  ctaWrapper = document.querySelector(".cta-wrapper");
+
+const heroSubText = document.querySelector(".hero-section__subtext"),
   footerNavLinks = document.querySelector(".footer-nav-links"),
   footerCtaTitle = document.querySelector(".footer-cta-title");
 
@@ -66,19 +68,8 @@ const updateScrollDependentElements = (scrollPosition) => {
   // CTA position in the hero/page
   const rootElem = document.documentElement; // for css vars
 
-  // REMOVE THIS ISHHH, use the same logic as before to account for the bottom of the floating text above
-  let ctaHeroPosition;
-  if (maxMd.matches) {
-    ctaHeroPosition = 472;
-  } else if (maxLg.matches) {
-    ctaHeroPosition = 472;
-  } else if (maxXl.matches) {
-    ctaHeroPosition = 532;
-  } else if (maxXxl.matches) {
-    ctaHeroPosition = 548;
-  } else {
-    ctaHeroPosition = 640;
-  }
+  let ctaHeroPosition =
+    heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
 
   // Update CTA animation based on scroll position
   if (scrollPosition >= scrollFromTop) {
@@ -163,7 +154,6 @@ const updateScrollDependentElements = (scrollPosition) => {
 let ctaStylesheet = document.createElement("style");
 document.head.appendChild(ctaStylesheet);
 
-updateScrollDependentElements();
 // Event listener for scroll events
 window.addEventListener(
   "scroll",
@@ -172,3 +162,5 @@ window.addEventListener(
     updateScrollDependentElements(scrollPosition);
   }, 50)
 );
+
+updateScrollDependentElements(0);

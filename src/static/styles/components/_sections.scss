@@ -1,18 +1,22 @@
 .hero-section {
   @include column-center;
-  padding-block-start: 420px;
+  padding-block-start: 396px;
   gap: 24px;
 
   @include mq-max("xxl") {
-    padding-block-start: 348px;
+    padding-block-start: 312px;
+  }
+
+  @include mq-max("xl") {
+    padding-block-start: 264px;
   }
 
   @include mq-max("lg") {
-    padding-block-start: 296px;
+    padding-block-start: 224px;
   }
 
   @include mq-max("md") {
-    padding-block-start: 248px;
+    padding-block-start: 196px;
   }
 
   h1,
@@ -20,7 +24,7 @@
     text-align: center;
   }
 
-  p {
+  &__subtext {
     opacity: 0.5;
   }
 }
