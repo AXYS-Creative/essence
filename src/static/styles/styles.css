@@ -30,6 +30,10 @@
   --link-color: #0e0e0e;
   --link-color-hover: #898c83;
   --cta-position: 640px;
+  --content-width: 1920px;
+  --body-padding: 64px;
+  --body-padding-xxl: 40px;
+  --body-padding-md: 24px;
 }
 
 @media (max-width: 1512px) {
@@ -194,10 +198,6 @@
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--primary-font-color);
   -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -690,7 +690,7 @@ header .cta-wrapper .cta-1 {
   border-radius: 24px;
   width: 188px;
   height: 37px;
-  transition: 0.4s ease;
+  transition: 0.4s ease, background 0.25s ease 0.75s;
 }
 header .cta-wrapper .cta-1 span:nth-of-type(2) {
   position: absolute;
@@ -748,7 +748,7 @@ header .cta-wrapper.scroll-active .cta-1__icon {
 header .cta-wrapper.scroll-bottom {
   position: absolute;
   top: auto;
-  bottom: 640px;
+  bottom: calc(var(--bottom-distance-footer-cta-title) - 56px);
   animation: unset;
 }
 header .cta-wrapper.scroll-bottom .cta-1 {
@@ -985,9 +985,23 @@ header.menu-active .cta-wrapper {
   right: 64px;
   translate: 0 0;
 }
+@media screen and (max-width: 1512px) {
+  header.menu-active .cta-wrapper {
+    right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.menu-active .cta-wrapper {
+    right: 24px;
+  }
+}
+header.menu-active .cta-wrapper .cta-1 {
+  background-color: transparent;
+  transition: 0.4s ease, background 0.25s ease 0.8s;
+}
 header.header-scroll-bottom .social-media-wrapper {
   position: absolute;
-  bottom: 548px;
+  bottom: var(--bottom-distance-social-media);
   left: 64px;
 }
 header.header-scroll-bottom .social-media-wrapper .social-media-links {
@@ -1024,17 +1038,6 @@ header.header-scroll-bottom .social-media-wrapper .social-media-toggle__icon {
 @media screen and (max-width: 1512px) {
   header.header-scroll-bottom .social-media-wrapper {
     left: 40px;
-    bottom: 402px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  header.header-scroll-bottom .social-media-wrapper {
-    bottom: 364px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  header.header-scroll-bottom .social-media-wrapper {
-    bottom: 484px;
   }
 }
 @media screen and (max-width: 768px) {

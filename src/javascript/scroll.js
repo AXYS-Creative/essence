@@ -4,7 +4,8 @@ import { navMenu } from "./nav.js";
 const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
   ctaWrapper = document.querySelector(".cta-wrapper"),
-  footerNavLinks = document.querySelector(".footer-nav-links");
+  footerNavLinks = document.querySelector(".footer-nav-links"),
+  footerCtaTitle = document.querySelector(".footer-cta-title");
 
 const headerLinks = document.querySelectorAll(".header-links__link");
 
@@ -64,39 +65,51 @@ const updateScrollDependentElements = (scrollPosition) => {
 
   // CTA position in the hero/page
   const rootElem = document.documentElement; // for css vars
+  rootElem.style.setProperty("--test-border", `navy`);
 
-  let ctaPosition;
+  siteHeader.style.backgroundColor = "var(--test-border)";
+
+  let ctaHeroPosition;
   if (maxMd.matches) {
-    rootElem.style.setProperty("--body-padding", `24px`);
   } else if (maxLg.matches) {
-    ctaPosition = 424;
+    ctaHeroPosition = 424;
   } else if (maxXl.matches) {
-    ctaPosition = 296;
+    ctaHeroPosition = 296;
   } else if (maxXxl.matches) {
-    ctaPosition = 548;
-    rootElem.style.setProperty("--cta-position", `${ctaPosition}px`);
-    rootElem.style.setProperty("--body-padding", `40px`);
+    ctaHeroPosition = 548;
   } else {
-    ctaPosition = 640;
-
-    rootElem.style.setProperty("--body-padding", `64px`);
+    ctaHeroPosition = 640;
   }
 
   // Update CTA animation based on scroll position
   if (scrollPosition >= scrollFromTop) {
     ctaWrapper.classList.add("scroll-active");
-    ctaWrapper.style.animationName = "cta-animated";
+    ctaWrapper.style.animationName = "cta-animated-top";
   } else {
     ctaWrapper.classList.remove("scroll-active");
     ctaWrapper.style.animationName = "cta-default";
   }
 
   // Adjust header/cta at bottom of page
-  const footerLinksDistance =
+  const footerLinksDistance = Math.ceil(
     scrollHeight -
-    (footerNavLinks.getBoundingClientRect().bottom + scrollPosition);
+      (footerNavLinks.getBoundingClientRect().bottom + scrollPosition)
+  );
+  const footerCtaTitleDistance = Math.ceil(
+    scrollHeight -
+      (footerCtaTitle.getBoundingClientRect().bottom + scrollPosition)
+  );
 
-  const handleScrollBottom = (threshold, ctaOffset) => {
+  rootElem.style.setProperty(
+    "--bottom-distance-social-media",
+    `${footerLinksDistance}px`
+  );
+  rootElem.style.setProperty(
+    "--bottom-distance-footer-cta-title",
+    `${footerCtaTitleDistance}px`
+  );
+
+  const handleScrollBottom = (threshold, threshold2) => {
     // header/social logic
     if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
       siteHeader.classList.add("header-scroll-bottom");
@@ -107,10 +120,7 @@ const updateScrollDependentElements = (scrollPosition) => {
     }
 
     // cta logic
-    if (
-      scrollHeight - (scrollPosition + clientHeight) <
-      threshold - ctaOffset
-    ) {
+    if (scrollHeight - (scrollPosition + clientHeight) < threshold2) {
       ctaWrapper.classList.add("scroll-bottom");
     } else {
       ctaWrapper.classList.remove("scroll-bottom");
@@ -122,20 +132,12 @@ const updateScrollDependentElements = (scrollPosition) => {
     10
   );
 
-  // This will replace manually having to enter the distance from the bottom.
-  // Now I just need to to it again for the cta (replace -96)
-  handleScrollBottom(footerLinksDistance - bodyPadding, -96);
+  handleScrollBottom(
+    footerLinksDistance - bodyPadding,
+    footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
+  );
 
-  // if (maxLg.matches) {
-  //   handleScrollBottom(424, -96);
-  // } else if (maxXl.matches) {
-  //   handleScrollBottom(296, -96);
-  // } else if (maxXxl.matches) {
-  //   handleScrollBottom(280, -96);
-  // } else {
-  //   handleScrollBottom(480, -96);
-  // }
-
+  // Animate CTA from the top
   ctaStylesheet.innerHTML = `
 
   @keyframes cta-default {
@@ -143,30 +145,16 @@ const updateScrollDependentElements = (scrollPosition) => {
       top: calc(${scrollPosition + clientHeight}px - 64px * 1.6);
     }
     to {
-      top: ${ctaPosition}px;
+      top: ${ctaHeroPosition}px;
     }
   }
 
-  @keyframes cta-animated {
+  @keyframes cta-animated-top {
     from {
-      top: calc(${ctaPosition}px - ${scrollFromTop}px);
+      top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
     }
     to {
       top: calc(100vh - 64px * 1.6);
-    }
-  }
-
-  /* Maybe just add a class that uses !important to override the styles? */
-
-  @keyframes cta-bottom {
-    from {
-      top: calc(100vh - 64px * 1.6);
-    }
-    to {
-      position: absolute;
-      top: auto;
-      /* bottom: 640px; */
-      bottom: 532px;
     }
   }`;
 };

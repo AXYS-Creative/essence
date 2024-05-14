@@ -6,31 +6,6 @@ $grey-dark: #898c83;
 $grey-light: #fdfaf5;
 $white: #faf8f4;
 
-:root {
-  --background-color: #{$white};
-  --primary-font-color: #{$black};
-  --secondary-font-color: #{$grey-dark};
-
-  --link-color: #{$black};
-  --link-color-hover: #{$grey-dark};
-
-  --cta-position: 640px;
-}
-
-@media (max-width: 1512px) {
-  :root {
-    --cta-position: 548;
-  }
-}
-
-// If you add a dark/light theme
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background-color: #{$black};
-//     --primary-font-color: #{$white};
-//   }
-// }
-
 // Site Scaffolding
 
 $content-width: 1920px;
@@ -48,3 +23,33 @@ $cubic-ease-sudden-back-strong: cubic-bezier(0.77, -0.43, 0.11, 1.11);
 
 $test: 1px dashed rgba(crimson, 0.75);
 $test-bg: rgba(navy, 0.75);
+
+:root {
+  --background-color: #{$white};
+  --primary-font-color: #{$black};
+  --secondary-font-color: #{$grey-dark};
+
+  --link-color: #{$black};
+  --link-color-hover: #{$grey-dark};
+
+  --cta-position: 640px;
+
+  --content-width: #{$content-width};
+  --body-padding: #{$body-padding};
+  --body-padding-xxl: #{$body-padding-xxl};
+  --body-padding-md: #{$body-padding-md};
+}
+
+@media (max-width: 1512px) {
+  :root {
+    --cta-position: 548;
+  }
+}
+
+// If you add a dark/light theme
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background-color: #{$black};
+//     --primary-font-color: #{$white};
+//   }
+// }
