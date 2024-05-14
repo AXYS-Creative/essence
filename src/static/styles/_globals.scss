@@ -148,26 +148,12 @@ header {
       &:hover,
       &:focus {
         color: var(--link-color-hover);
-
-        &::after {
-          background: var(--primary-font-color);
-        }
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        translate: -50% 0;
-        bottom: -24px;
-        width: 160%;
-        height: 1px;
-        background: transparent;
-        transition: 0.3s ease;
       }
     }
 
     li {
+      position: relative;
+
       @for $i from 1 through 8 {
         &:nth-of-type(#{$i}) {
           a {
@@ -175,6 +161,26 @@ header {
             transition: color 0.3s ease, opacity 0.8s ease $opacityDelay;
           }
         }
+      }
+    }
+
+    li.header-links__underline {
+      position: absolute;
+      left: 100%;
+      bottom: -24px;
+      width: 0;
+      height: 3px;
+      background: var(--link-color-hover);
+
+      @include mq-motion-allow {
+        transition: 0.5s $cubic-ease-sudden, opacity 0.5s ease 0.5s,
+          height 0.2s ease;
+      }
+
+      &.revert-underline {
+        // left: 100% !important;
+        width: 0 !important;
+        height: 1px;
       }
     }
   }
@@ -389,6 +395,11 @@ header {
     transition: $duration ease;
     animation: cta-default $duration ease forwards;
 
+    @include mq-motion-reduce {
+      transition: 0s;
+      animation: cta-default 0s ease forwards;
+    }
+
     .cta-1 {
       position: relative;
       text-transform: uppercase;
@@ -399,21 +410,30 @@ header {
       border-radius: 24px;
       width: 188px;
       height: 37px;
-      transition: 0.4s ease, background 0.25s ease 0.75s;
+
+      @include mq-motion-allow {
+        transition: 0.4s ease, background 0.25s ease 0.75s;
+      }
 
       span:nth-of-type(2) {
         position: absolute;
         translate: 4px 0;
         opacity: 1;
         pointer-events: all;
-        transition: 0.3s ease 0.2s;
+
+        @include mq-motion-allow {
+          transition: 0.3s ease 0.2s;
+        }
       }
 
       &__icon {
         @include absolute-center;
         translate: 120% -50%;
         opacity: 0;
-        transition: 0.3s ease;
+
+        @include mq-motion-allow {
+          transition: 0.3s ease;
+        }
       }
     }
 
@@ -444,13 +464,19 @@ header {
         span:nth-of-type(2) {
           opacity: 0;
           pointer-events: none;
-          transition: 0.3s ease 0s;
+
+          @include mq-motion-allow {
+            transition: 0.3s ease 0s;
+          }
         }
 
         &__icon {
           translate: 100% -50%;
           opacity: 1;
-          transition: 0.3s ease 0.2s;
+
+          @include mq-motion-allow {
+            transition: 0.3s ease 0.2s;
+          }
         }
       }
     }
@@ -460,7 +486,7 @@ header {
       top: auto;
       bottom: calc(
         var(--bottom-distance-footer-cta-title) - 56px
-      ); // Maintain 56px in JS as well
+      ); // Maintain 56px in scroll.js as well
       animation: unset;
 
       .cta-1 {
@@ -536,6 +562,14 @@ header {
               transition: opacity 0.3s ease calc(0.04s * $i);
             }
           }
+        }
+      }
+
+      li.header-links__underline {
+        opacity: 0;
+
+        @include mq-motion-allow {
+          transition: 0.5s $cubic-ease-sudden, opacity 0.5s ease;
         }
       }
     }
@@ -617,9 +651,6 @@ header {
     }
 
     .cta-wrapper {
-      // $duration: 0.8s;
-
-      // animation: cta-animated $duration ease forwards;
       right: $body-padding;
       translate: 0 0;
 
@@ -642,8 +673,9 @@ header {
     .social-media-wrapper {
       @include social-media-open;
       position: absolute;
-      // bottom: calc(var(--bottom-distance-social-media) - 4px);
-      bottom: var(--bottom-distance-social-media);
+      bottom: calc(
+        var(--bottom-distance-social-media) - 4px
+      ); // Maintain 4px in scroll.js as wel
       left: $body-padding;
 
       @include mq-min("xxxl") {

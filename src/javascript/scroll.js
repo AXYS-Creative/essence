@@ -65,9 +65,6 @@ const updateScrollDependentElements = (scrollPosition) => {
 
   // CTA position in the hero/page
   const rootElem = document.documentElement; // for css vars
-  rootElem.style.setProperty("--test-border", `navy`);
-
-  siteHeader.style.backgroundColor = "var(--test-border)";
 
   let ctaHeroPosition;
   if (maxMd.matches) {
@@ -133,7 +130,7 @@ const updateScrollDependentElements = (scrollPosition) => {
   );
 
   handleScrollBottom(
-    footerLinksDistance - bodyPadding,
+    footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well
     footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
   );
 
