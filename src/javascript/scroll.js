@@ -66,12 +66,14 @@ const updateScrollDependentElements = (scrollPosition) => {
   // CTA position in the hero/page
   const rootElem = document.documentElement; // for css vars
 
+  // REMOVE THIS ISHHH, use the same logic as before to account for the bottom of the floating text above
   let ctaHeroPosition;
   if (maxMd.matches) {
+    ctaHeroPosition = 472;
   } else if (maxLg.matches) {
-    ctaHeroPosition = 424;
+    ctaHeroPosition = 472;
   } else if (maxXl.matches) {
-    ctaHeroPosition = 296;
+    ctaHeroPosition = 532;
   } else if (maxXxl.matches) {
     ctaHeroPosition = 548;
   } else {

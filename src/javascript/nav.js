@@ -29,8 +29,8 @@ const toggleNav = () => {
     el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
 
-  // Pevent scroll when nav is open
-  document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
+  // // Pevent scroll when nav is open // Doesn't work with Lenis out of the box
+  // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
 };
 
 const closeNav = () => {
@@ -62,7 +62,7 @@ menuBtn.addEventListener("click", toggleNav);
 headerLogo.addEventListener("click", closeNav);
 
 //
-// Nav LinksWrapper (responsive)
+// Nav LinksWrapper based on mouse movement(responsive)
 //
 
 // const minY = 360;

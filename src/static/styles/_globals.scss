@@ -110,7 +110,6 @@ header {
     width: calc(100% - $body-padding * 2);
     max-width: $content-width;
     top: 68px;
-    gap: 48px;
     z-index: 0;
 
     @include mq-min("xxxl") {
@@ -120,7 +119,6 @@ header {
 
     @include mq-max("xxl") {
       width: calc(100% - $body-padding-xxl * 2);
-      gap: 24px;
     }
 
     @include mq-max("lg") {
@@ -144,6 +142,11 @@ header {
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--link-color);
+      padding: 4px 24px;
+
+      @include mq-max("xxl") {
+        padding: 4px 12px;
+      }
 
       &:hover,
       &:focus {
@@ -173,13 +176,13 @@ header {
       background: var(--link-color-hover);
 
       @include mq-motion-allow {
-        transition: 0.5s $cubic-ease-sudden, opacity 0.5s ease 0.5s,
+        transition: 0.8s $cubic-ease-sudden, opacity 0.5s ease 0.5s,
           height 0.2s ease;
       }
 
       &.revert-underline {
         // left: 100% !important;
-        width: 0 !important;
+        width: 36px !important;
         height: 1px;
       }
     }
