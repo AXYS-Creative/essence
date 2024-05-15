@@ -1,0 +1,12 @@
+.home-hero {
+  &__heading {
+    display: flex;
+    gap: 24px;
+
+    @include mq-max("lg") {
+      flex-direction: column;
+      line-height: 80%;
+      font-size: calc(8vw + 24px);
+    }
+  }
+}

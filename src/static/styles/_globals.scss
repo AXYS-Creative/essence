@@ -383,6 +383,17 @@ header {
         text-transform: uppercase;
         translate: 0 -1px;
         transition: 0.25s ease 0.4s;
+
+        @include mq-max("lg") {
+          translate: -12px -1px;
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.25s ease;
+
+          @include mq-max("md") {
+            translate: 0 -1px;
+          }
+        }
       }
     }
   }
