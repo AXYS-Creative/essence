@@ -29,7 +29,7 @@ const toggleNav = () => {
     el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
 
-  // // Pevent scroll when nav is open // Doesn't work with Lenis out of the box
+  // // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
   // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
 };
 

@@ -11,9 +11,7 @@ const heroSubText = document.querySelector(".hero-section__subtext"),
 
 const headerLinks = document.querySelectorAll(".header-links__link");
 
-// Header Defaults
-menuBtn.setAttribute("tabindex", "-1");
-const isNavOpen = navMenu.classList.contains("menu-active");
+const rootElem = document.documentElement; // For CSS variables
 
 const throttle = (func, limit) => {
   let lastFunc;
@@ -56,26 +54,15 @@ const updateScrollDependentElements = (scrollPosition) => {
   if (scrollPosition >= scrollFromTop) {
     siteHeader.classList.add("scroll-active");
     menuBtn.setAttribute("aria-hidden", "false");
-    menuBtn.removeAttribute("tabindex");
+    menuBtn.setAttribute("tabindex", "0");
     headerLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
+    ctaWrapper.classList.add("scroll-active");
+    ctaWrapper.style.animationName = "cta-animated-top";
   } else {
     siteHeader.classList.remove("scroll-active");
     headerLinks.forEach((link) => link.removeAttribute("tabindex"));
     menuBtn.setAttribute("aria-hidden", "true");
     menuBtn.setAttribute("tabindex", "-1");
-  }
-
-  // CTA position in the hero/page
-  const rootElem = document.documentElement; // for css vars
-
-  let ctaHeroPosition =
-    heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
-
-  // Update CTA animation based on scroll position
-  if (scrollPosition >= scrollFromTop) {
-    ctaWrapper.classList.add("scroll-active");
-    ctaWrapper.style.animationName = "cta-animated-top";
-  } else {
     ctaWrapper.classList.remove("scroll-active");
     ctaWrapper.style.animationName = "cta-default";
   }
@@ -104,9 +91,14 @@ const updateScrollDependentElements = (scrollPosition) => {
     if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
       siteHeader.classList.add("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "-1");
-    } else {
+    } else if (
+      scrollHeight - (scrollPosition + clientHeight) < threshold &&
+      scrollPosition > scrollFromTop
+    ) {
       siteHeader.classList.remove("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "0");
+    } else {
+      siteHeader.classList.remove("header-scroll-bottom");
     }
 
     // cta logic
@@ -126,6 +118,10 @@ const updateScrollDependentElements = (scrollPosition) => {
     footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well
     footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
   );
+
+  // CTA position in the hero/page
+  let ctaHeroPosition =
+    heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
 
   // Animate CTA from the top
   ctaStylesheet.innerHTML = `
@@ -164,3 +160,5 @@ window.addEventListener(
 );
 
 updateScrollDependentElements(0);
+
+menuBtn.setAttribute("tabindex", "-1");

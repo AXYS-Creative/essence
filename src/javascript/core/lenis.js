@@ -9,6 +9,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// Prevent scroll when nav is open
 let menuOpen = false;
 menuBtn.addEventListener("click", () => {
   menuOpen = !menuOpen;
