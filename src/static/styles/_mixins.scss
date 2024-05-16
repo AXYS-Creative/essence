@@ -156,7 +156,11 @@ $min-breakpoints: (
   font-style: italic;
   text-transform: initial;
 
-  @include mq-max("md") {
+  @include mq-max("xl") {
+    font-size: 20px;
+  }
+
+  @include mq-max("lg") {
     font-size: 18px;
   }
 }

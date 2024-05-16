@@ -1,4 +1,11 @@
-import { minMd } from "./utility.js";
+import { minMd, maxLg } from "./utility.js";
+import {
+  scrollPosition,
+  scrollFromTop,
+  throttle,
+  updateScrollDependentElements,
+  ctaWrapper,
+} from "./scroll.js";
 
 export const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
@@ -13,10 +20,11 @@ const navLinks = document.querySelectorAll(".nav-link"),
 tabElementsNav.forEach((elem) => elem.setAttribute("tabIndex", "-1"));
 
 const toggleNav = () => {
-  const isNavOpen = navMenu.classList.contains("menu-active");
   navMenu.classList.toggle("menu-active");
   menuBtn.classList.toggle("menu-active");
   siteHeader.classList.toggle("menu-active");
+
+  const isNavOpen = navMenu.classList.contains("menu-active");
 
   navMenu.setAttribute("aria-hidden", isNavOpen);
   menuBtn.setAttribute("aria-expanded", !isNavOpen);
@@ -28,6 +36,21 @@ const toggleNav = () => {
   tabElementsNav.forEach((el) =>
     el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
+
+  //
+  // Reposition CTA based on menu toggle (MD screen and below)
+  //
+  if (!minMd.matches) {
+    if (isNavOpen) {
+      ctaWrapper.classList.add("scroll-active");
+      ctaWrapper.style.animationName = "cta-animated-top";
+    } else {
+      if (scrollPosition < scrollFromTop) {
+        ctaWrapper.classList.remove("scroll-active");
+        ctaWrapper.style.animationName = "cta-default";
+      }
+    }
+  }
 
   // // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
   // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
@@ -62,39 +85,71 @@ menuBtn.addEventListener("click", toggleNav);
 headerLogo.addEventListener("click", closeNav);
 
 //
-// Nav LinksWrapper based on mouse movement(responsive)
+// Nav LinksWrapper based on mouse vertical mouse movement (responsive) INACCESSIBLE!
 //
 
-// const minY = 360;
-// const maxY = window.innerHeight - 150;
-const minY = 0.2 * window.innerHeight; // 20% of the viewport height
-const maxY = 0.8 * window.innerHeight;
+const handleNavGlide = () => {
+  let minOffset = 0.2;
+  let maxOffset = 0.8;
+  let customOffset = 0;
+  let minY, maxY;
 
-const handleNavLinksWrapper = (e) => {
-  const mouseY = Math.min(Math.max(e.clientY, minY), maxY);
-  const translateY = (maxY + minY) / 2 - mouseY;
+  const updateYBounds = () => {
+    minY = minOffset * window.innerHeight;
+    maxY = maxOffset * window.innerHeight;
+  };
 
-  // navLinksWrapper.style.translate = `0% calc(${translateY}px - 30%)`;
-  navLinksWrapper.style.translate = `0% ${translateY}px`;
+  const handleNavLinksWrapper = (e) => {
+    updateYBounds();
+    const mouseY = Math.min(Math.max(e.clientY, minY), maxY);
+    const translateY = (maxY + minY) / 2 - mouseY;
+    navLinksWrapper.style.translate = `0% calc(${translateY}px + ${customOffset}px)`;
+  };
+
+  const queryMdHandler = (e) => {
+    if (e.matches) {
+      navLinksWrapper.style.translate = `0 0`;
+      window.addEventListener("mousemove", handleNavLinksWrapper);
+    } else {
+      navLinksWrapper.style.translate = `24px 0`;
+      window.removeEventListener("mousemove", handleNavLinksWrapper);
+    }
+  };
+
+  const queryLgHandler = (e) => {
+    if (e.matches) {
+      minOffset = 0.3;
+      maxOffset = 0.75;
+      customOffset = -32; // in px
+    } else {
+      minOffset = 0.2;
+      maxOffset = 0.8;
+      customOffset = 0;
+    }
+    updateYBounds();
+  };
+
+  //
+  // To handle responsive javascript
+  //
+  minMd.addEventListener("change", queryMdHandler);
+  queryMdHandler(minMd);
+
+  maxLg.addEventListener("change", queryLgHandler);
+  queryLgHandler(maxLg);
 };
 
-// // Restore Original Position
-// navLinksWrapper.addEventListener("mouseleave", (e) => {
-//   navLinksWrapper.style.translate = `50% -55vh`;
-// });
-
-const handleScreenChange = (e) => {
-  if (e.matches) {
-    navLinksWrapper.style.translate = `0 0`;
-    navLinksWrapper.addEventListener("mousemove", handleNavLinksWrapper);
-  } else {
-    navLinksWrapper.style.translate = `24px 0`;
-    navLinksWrapper.removeEventListener("mousemove", handleNavLinksWrapper);
-  }
-};
+handleNavGlide();
 
 //
-// To handle responsive javascript
+// Scroll logic for cta... basically it's returning when closing the menu on smaller devices
 //
-minMd.addEventListener("change", handleScreenChange);
-handleScreenChange(minMd);
+
+// Event listener for scroll events
+window.addEventListener(
+  "scroll",
+  throttle(() => {
+    const scrollPosition = window.scrollY;
+    updateScrollDependentElements(scrollPosition);
+  }, 50)
+);

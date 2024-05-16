@@ -295,6 +295,10 @@ header {
       pointer-events: none;
     }
 
+    @include mq-max("sm") {
+      bottom: $body-padding-xxl;
+    }
+
     &:hover,
     &:focus-within {
       @include social-media-open;
@@ -668,9 +672,6 @@ header {
     }
 
     .social-media-wrapper {
-      pointer-events: all;
-      border: none;
-
       li.magnet {
         @include mq-max("md") {
           opacity: 1;
@@ -739,6 +740,7 @@ header {
 
 nav {
   $right-spacing: 96px;
+  $right-spacing-lg: 40px;
 
   position: fixed;
   top: 0;
@@ -786,6 +788,7 @@ nav {
 
     @include mq-max("lg") {
       gap: 48px;
+      width: calc(50% - 28px);
     }
 
     @include mq-max("md") {
@@ -957,6 +960,10 @@ section {
     padding: 96px $body-padding-md * 2.5;
   }
 
+  @include mq-max("sm") {
+    padding: 96px $body-padding-md;
+  }
+
   &.essence-paragraph {
     padding: 316px $body-padding * 2.5;
 
@@ -1053,6 +1060,17 @@ footer {
         @include mq-max("lg") {
           gap: 16px;
         }
+
+        @include mq-max("md") {
+          translate: 0.5vw -8px;
+          gap: 24px;
+        }
+
+        @include mq-max("sm") {
+          font-size: 14px;
+          width: 97%;
+          justify-content: space-between;
+        }
       }
 
       &__brand-name {
@@ -1074,6 +1092,10 @@ footer {
 
         @include mq-max("md") {
           font-size: 22.5vw;
+        }
+
+        @include mq-max("md") {
+          font-size: 21.6vw;
         }
       }
     }
@@ -1102,6 +1124,15 @@ footer {
       @include mq-max("md") {
         translate: 0 16px;
         align-self: flex-end;
+      }
+
+      @include mq-max("sm") {
+        align-self: flex-start;
+        width: calc(100vw - $body-padding-md * 1.5);
+        translate: -2vw 16px;
+        font-size: 12px;
+        justify-content: space-between;
+        font-size: 3.6vw;
       }
 
       small {

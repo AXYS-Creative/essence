@@ -6,7 +6,21 @@
     @include mq-max("lg") {
       flex-direction: column;
       line-height: 80%;
-      font-size: calc(8vw + 24px);
+      font-size: calc(4vw + 32px);
+    }
+
+    @include mq-max("md") {
+      gap: 12px;
+    }
+  }
+
+  &__subtext {
+    @include mq-max("md") {
+      font-size: 14px;
+    }
+
+    @include mq-max("sm") {
+      font-size: 12px;
     }
   }
 }

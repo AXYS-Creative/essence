@@ -1,7 +1,9 @@
 import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
-import { navMenu } from "./nav.js";
 
-const siteHeader = document.querySelector(".site-header"),
+export let scrollPosition;
+export let scrollFromTop = 0;
+
+export const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
   ctaWrapper = document.querySelector(".cta-wrapper");
 
@@ -13,7 +15,7 @@ const headerLinks = document.querySelectorAll(".header-links__link");
 
 const rootElem = document.documentElement; // For CSS variables
 
-const throttle = (func, limit) => {
+export const throttle = (func, limit) => {
   let lastFunc;
   let lastRan;
   return function () {
@@ -34,12 +36,11 @@ const throttle = (func, limit) => {
   };
 };
 
-const updateScrollDependentElements = (scrollPosition) => {
+export const updateScrollDependentElements = (scrollPosition) => {
   const scrollHeight = document.body.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
 
   // Manage header scroll animations
-  let scrollFromTop; // Distance from the top (in px) needed to scroll to reposition the CTA
 
   if (maxLg.matches) {
     scrollFromTop = 24;
@@ -141,6 +142,19 @@ const updateScrollDependentElements = (scrollPosition) => {
     }
     to {
       top: calc(100vh - 64px * 1.6);
+      top: calc(100dvh - 64px * 1.6);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    @keyframes cta-animated-top {
+      from {
+        top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
+      }
+      to {
+        top: calc(100vh - 72px);
+        top: calc(100dvh - 72px);
+      }
     }
   }`;
 };
@@ -154,7 +168,7 @@ document.head.appendChild(ctaStylesheet);
 window.addEventListener(
   "scroll",
   throttle(() => {
-    const scrollPosition = window.scrollY;
+    scrollPosition = window.scrollY;
     updateScrollDependentElements(scrollPosition);
   }, 50)
 );
