@@ -1,28 +1,31 @@
 ---
-title: Blog
+title: ESSENCE • Blog
 layout: app
+path: home
 cta1:
   url: "/"
-  title: "Return Home"
+  title1: "Join"
+  title2: "newsletter"
+
+heroHeading: "Our Blog"
 ---
 
-<section class="hero-section blog__hero">
-  <!-- <h1>Access the power <br />of Decap CMS</h1> -->
-  <h1 class="h1">{{title}}</h1>
-  <p>The things we've learned. The journal we keep.</p>
-  <!-- <p>
-    Powered by Decap CMS, AXYS Creative let's you <br />
-    control the content of your site, with ease.
+<section class="essence-paragraph our-mission">
+  <h2 class="essence-paragraph__heading">
+    {{ heroHeading }}
+    <img
+      class="icon-arrow-down"
+      src="./static/img/icons/angle-arrow-down.svg"
+      alt="decorative angled arrow"
+      role="presentation"
+    />
+  </h2>
+  <p class="essence-paragraph__body-text">
+    ESSENCE blog serves as a sanctuary for thoughts, a space where clarity meets
+    inspiration. Each post is crafted with intention, guiding you to reflect on
+    what truly matters. Join us on a journey of discovery, as we explore the art
+    of simplicity and the profound impact of living with purpose.
   </p>
-  -->
-
-  <div class="cta-wrapper">
-    <a class="cta-1 tab-element-page" href="{{ cta1.url }}">{{ cta1.title }}</a>
-  </div>
-
-  <!-- prettier-ignore -->
-  {% include "./partials/social-media.html" %}
-  <!-- prettier-ignore -->
 </section>
 
 <section id="blog-list">

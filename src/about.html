@@ -1,34 +1,97 @@
 ---
-title: ESSENCE
+title: ESSENCE • About
 layout: app
-path: about
+path: home
 cta1:
-  url: "/blog"
-  title: "Visit Blog"
+  url: "/"
+  title1: "Join"
+  title2: "newsletter"
+
+section2Heading: "About Us"
 ---
 
-<section class="hero-section about__hero">
-  <!-- <h1>Access the power <br />of Decap CMS</h1> -->
-  <h1 class="h1">About</h1>
-  <p>
-    User Friendly &nbsp;•&nbsp; Secure &nbsp;•&nbsp; Quick Updates &nbsp;•&nbsp;
-    Flexible &nbsp;•&nbsp; Asset Library
+<section class="hero-section home-hero">
+  <h1 class="h1 home-hero__heading">
+    <span>IMAGES HERE</span>
+  </h1>
+  <p class="hero-section__subtext home-hero__subtext">
+    This won't exist ... need to move cta to bottom
   </p>
-  <!-- <p>
-    Powered by Decap CMS, AXYS Creative let's you <br />
-    control the content of your site, with ease.
-  </p>
-  -->
-
-  <div class="cta-wrapper">
-    <a class="cta-1 tab-element-page" href="{{ cta1.url }}">{{ cta1.title }}</a>
-  </div>
-
-  <!-- prettier-ignore -->
-  <!-- {% include "./_includes/partials/social-media.html" %} -->
-  <!-- prettier-ignore -->
 </section>
 
-<section id="about-us">
-  <p>We handle the complexity to keep things simple for you.</p>
+<section class="essence-paragraph our-mission">
+  <h2 class="essence-paragraph__heading">
+    {{ section2Heading }}
+    <img
+      class="icon-arrow-down"
+      src="./static/img/icons/angle-arrow-down.svg"
+      alt="decorative angled arrow"
+      role="presentation"
+    />
+  </h2>
+  <p class="essence-paragraph__body-text">
+    ESSENCE is a nimble team of coaches that help people end their obsession
+    with stuff and live more meaningful lives. We help people narrow their focus
+    on the essential aspects of life, so they can start living with more intent.
+  </p>
+</section>
+
+<section class="essence-resources">
+  <div class="essence-resources__header">
+    <h2 class="essence-resources__heading">
+      <span>Areas we</span>
+      <span>focus on</span>
+    </h2>
+    <a
+      class="essence-resources__link classic-link tab-element-page"
+      href="/resources"
+    >
+      <span class="classic-link__letters" aria-label="View resources">
+        <span class="classic-link__letter">V</span>
+        <span class="classic-link__letter">i</span>
+        <span class="classic-link__letter">e</span>
+        <span class="classic-link__letter">w</span>
+        &nbsp;
+        <span class="classic-link__letter">R</span>
+        <span class="classic-link__letter">e</span>
+        <span class="classic-link__letter">s</span>
+        <span class="classic-link__letter">o</span>
+        <span class="classic-link__letter">u</span>
+        <span class="classic-link__letter">r</span>
+        <span class="classic-link__letter">c</span>
+        <span class="classic-link__letter">e</span>
+        <span class="classic-link__letter">s</span>
+      </span>
+      <img
+        class="icon-arrow-right"
+        src="./static/img/icons/arrow-right.svg"
+        alt="decorative right arrow"
+        role="presentation"
+      />
+    </a>
+  </div>
+
+  <div class="essence-resources__images">
+    <figure>
+      <img
+        src="./static/img/photos/resources-img-1.png"
+        alt="An open cardboard box next to scissors and tape."
+      />
+      <figcaption>01. Physical Clutter</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="./static/img/photos/resources-img-2.png"
+        alt="An open cardboard box next to scissors and tape."
+      />
+      <figcaption>02. Emotional Clutter</figcaption>
+    </figure>
+    <figure>
+      <img
+        src="./static/img/photos/resources-img-3.png"
+        alt="An open cardboard box next to scissors and tape."
+      />
+      <figcaption>03. Financial Clutter</figcaption>
+    </figure>
+  </div>
 </section>

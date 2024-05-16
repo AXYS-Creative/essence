@@ -3,6 +3,8 @@ import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
 export let scrollPosition;
 export let scrollFromTop = 0;
 
+let ctaHeroPosition;
+
 export const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
   ctaWrapper = document.querySelector(".cta-wrapper");
@@ -121,8 +123,12 @@ export const updateScrollDependentElements = (scrollPosition) => {
   );
 
   // CTA position in the hero/page
-  let ctaHeroPosition =
-    heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
+  if (heroSubText) {
+    ctaHeroPosition =
+      heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
+  } else {
+    ctaHeroPosition = clientHeight - bodyPadding;
+  }
 
   // Animate CTA from the top
   ctaStylesheet.innerHTML = `
