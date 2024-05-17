@@ -10,13 +10,13 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // Prevent scroll when nav is open
-let menuOpen = false;
-menuBtn.addEventListener("click", () => {
-  menuOpen = !menuOpen;
+// let menuOpen = false;
+// menuBtn.addEventListener("click", () => {
+//   menuOpen = !menuOpen;
 
-  if (menuOpen) {
-    lenis.stop();
-  } else {
-    lenis.start();
-  }
-});
+//   if (menuOpen) {
+//     lenis.stop();
+//   } else {
+//     lenis.start();
+//   }
+// });

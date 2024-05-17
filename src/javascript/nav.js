@@ -40,15 +40,17 @@ const toggleNav = () => {
   //
   // Reposition CTA based on menu toggle (MD screen and below)
   //
-  if (!minMd.matches) {
+  if (maxLg.matches) {
     if (isNavOpen) {
       ctaWrapper.classList.add("scroll-active");
       ctaWrapper.style.animationName = "cta-animated-top";
+    } else if (scrollPosition < scrollFromTop) {
+      ctaWrapper.classList.remove("scroll-active");
+      ctaWrapper.style.animationName = "cta-default";
     } else {
-      if (scrollPosition < scrollFromTop) {
-        ctaWrapper.classList.remove("scroll-active");
-        ctaWrapper.style.animationName = "cta-default";
-      }
+      // Keep the scroll-active class if user has scrolled down
+      ctaWrapper.classList.add("scroll-active");
+      ctaWrapper.style.animationName = "cta-animated-top";
     }
   }
 

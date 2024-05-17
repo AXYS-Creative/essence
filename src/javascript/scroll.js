@@ -1,7 +1,7 @@
 import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
 
-export let scrollPosition;
-export let scrollFromTop = 0;
+export let scrollPosition = 0;
+export let scrollFromTop;
 
 let ctaHeroPosition;
 

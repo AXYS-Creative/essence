@@ -191,7 +191,7 @@ header {
   .menu-btn__wrapper {
     @include right-spacing;
     top: 74px;
-    translate: 0 -50%;
+    translate: 0 -50%; //???
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -430,7 +430,7 @@ header {
       height: 37px;
 
       @include mq-motion-allow {
-        transition: 0.4s ease, background 0.25s ease 0.75s;
+        transition: 0.4s ease, background 0.25s ease 0.75s, width 0.5s ease 1s;
       }
 
       span:nth-of-type(2) {
@@ -440,7 +440,7 @@ header {
         pointer-events: all;
 
         @include mq-motion-allow {
-          transition: 0.3s ease 0.2s;
+          transition: 0.3s ease 1s;
         }
       }
 
