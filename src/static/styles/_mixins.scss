@@ -75,6 +75,10 @@ $min-breakpoints: (
 @mixin left-spacing {
   left: $body-padding;
 
+  @include mq-min("xxxl") {
+    left: calc(50% - calc($content-width / 2) + $body-padding);
+  }
+
   @include mq-max("xxl") {
     left: $body-padding-xxl;
   }
@@ -87,6 +91,10 @@ $min-breakpoints: (
 // header menu button, nav social items
 @mixin right-spacing {
   right: $body-padding;
+
+  @include mq-min("xxxl") {
+    right: calc(50% - calc($content-width / 2 - $body-padding));
+  }
 
   @include mq-max("xxl") {
     right: $body-padding-xxl;
@@ -247,5 +255,18 @@ $min-breakpoints: (
 
   .social-media-toggle__icon {
     opacity: 0.5;
+  }
+}
+
+// Different states: top, scroll, bottom
+@mixin cta-default-size {
+  font-size: 16px;
+  width: 188px;
+  height: 36px;
+
+  @include mq-max("md") {
+    font-size: 14px;
+    width: 162px;
+    height: 32px;
   }
 }

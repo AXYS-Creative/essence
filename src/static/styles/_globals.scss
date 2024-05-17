@@ -42,10 +42,6 @@ header {
     gap: 12px;
     top: 64px;
 
-    @include mq-min("xxxl") {
-      left: calc(50% - calc($content-width / 2) + $body-padding);
-    }
-
     @include mq-max("md") {
       top: 38px;
     }
@@ -191,15 +187,11 @@ header {
   .menu-btn__wrapper {
     @include right-spacing;
     top: 74px;
-    translate: 0 -50%; //???
+    translate: 0 -50%;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     // mix-blend-mode: difference;
-
-    @include mq-min("xxxl") {
-      right: calc(50% - calc(1920px / 2) + $body-padding);
-    }
 
     @include mq-max("lg") {
       opacity: 1;
@@ -280,10 +272,6 @@ header {
     @include column-start;
     translate: -10px 0;
     bottom: $body-padding;
-
-    @include mq-min("xxxl") {
-      left: calc(50% - calc($content-width / 2) + $body-padding);
-    }
 
     @media (max-height: 420px) {
       display: none;
@@ -403,6 +391,9 @@ header {
   }
 
   .cta-wrapper {
+    $edge-spacing: 22px;
+    $edge-spacing-scroll: 14px;
+
     $duration: 0.8s;
 
     @include row-center;
@@ -419,34 +410,53 @@ header {
     }
 
     .cta-1 {
+      @include cta-default-size;
       position: relative;
       text-transform: uppercase;
       color: var(--primary-font-color);
       background: var(--background-color);
-      padding: 8px 24px;
       border: 1px solid var(--primary-font-color);
       border-radius: 24px;
-      width: 188px;
-      height: 37px;
 
       @include mq-motion-allow {
-        transition: 0.4s ease, background 0.25s ease 0.75s, width 0.5s ease 1s;
+        transition: 0.4s ease, background 0.25s ease 0.75s, width 0.4s ease 0.3s;
+      }
+
+      & > * {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+      }
+
+      span:nth-of-type(1) {
+        left: $edge-spacing;
+
+        @include mq-motion-allow {
+          transition: 0.4s ease 0.3s;
+        }
+
+        @include mq-max("md") {
+          left: calc($edge-spacing - 4px);
+        }
       }
 
       span:nth-of-type(2) {
-        position: absolute;
-        translate: 4px 0;
+        right: $edge-spacing;
         opacity: 1;
         pointer-events: all;
 
         @include mq-motion-allow {
-          transition: 0.3s ease 1s;
+          transition: 0.4s ease 0.4s;
+        }
+
+        @include mq-max("md") {
+          right: calc($edge-spacing - 4px);
         }
       }
 
       &__icon {
-        @include absolute-center;
-        translate: 120% -50%;
+        translate: 0 -40%;
+        right: $edge-spacing-scroll;
         opacity: 0;
 
         @include mq-motion-allow {
@@ -456,31 +466,27 @@ header {
     }
 
     &.scroll-active {
+      @include right-spacing;
       position: fixed;
-      right: $body-padding;
       translate: 0 0;
-      // animation: cta $duration ease forwards;
-
-      @include mq-min("xxxl") {
-        right: calc(50% - calc($content-width / 2 - $body-padding));
-      }
-      @include mq-max("xxl") {
-        right: $body-padding-xxl;
-      }
-      @include mq-max("md") {
-        right: $body-padding-md;
-      }
 
       .cta-1 {
-        display: flex;
-        width: 96px;
+        width: 92px;
 
         @include mq-motion-allow {
           transition: 0.4s ease 0.25s, background 0.25s ease 0.75s;
         }
 
+        @include mq-max("md") {
+          width: 86px;
+        }
+
+        // span:nth-of-type(1) {
+        //   translate: -8px 0;
+        // }
+
         span:nth-of-type(1) {
-          translate: -8px 0;
+          left: $edge-spacing-scroll;
         }
 
         span:nth-of-type(2) {
@@ -493,7 +499,7 @@ header {
         }
 
         &__icon {
-          translate: 100% -50%;
+          // translate: 100% -50%;
           opacity: 1;
 
           @include mq-motion-allow {
@@ -512,11 +518,10 @@ header {
       animation: unset;
 
       .cta-1 {
-        display: unset;
-        width: 188px;
+        @include cta-default-size;
 
         span:nth-of-type(1) {
-          translate: 0 0;
+          left: $edge-spacing;
         }
 
         span:nth-of-type(2) {
@@ -739,8 +744,7 @@ header {
 }
 
 nav {
-  $right-spacing: 96px;
-  $right-spacing-lg: 40px;
+  $right-padding: 96px;
 
   position: fixed;
   top: 0;
@@ -755,7 +759,7 @@ nav {
 
   .width-constraint {
     @include row-center(flex-end);
-    padding-inline-end: $right-spacing;
+    padding-inline-end: $right-padding;
     position: relative;
     max-width: $content-width;
     height: 100vh;
@@ -765,15 +769,20 @@ nav {
     @include mq-max("md") {
       @include column-start;
       overflow: auto;
+      padding-inline-end: 0;
     }
   }
 
   .nav-links {
     @include column-start;
     gap: 80px;
-    width: calc(50% - $right-spacing);
+    width: calc(50% - $right-padding);
     pointer-events: none;
     transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
+
+    @include mq-max("md") {
+      width: 100%;
+    }
 
     &:hover,
     &:focus-within {
