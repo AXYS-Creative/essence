@@ -19,6 +19,10 @@
     padding-block-start: 196px;
   }
 
+  @include mq-max("md") {
+    padding-block-start: 248px;
+  }
+
   h1,
   p {
     text-align: center;

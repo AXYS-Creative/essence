@@ -172,7 +172,7 @@ header {
       background: var(--link-color-hover);
 
       @include mq-motion-allow {
-        transition: 0.5s $cubic-ease-sudden, opacity 0.4s ease 0.4s,
+        transition: 0.75s $cubic-ease-sudden, opacity 0.4s ease 0.4s,
           height 0.2s ease;
       }
 
@@ -284,7 +284,8 @@ header {
     }
 
     @include mq-max("sm") {
-      bottom: $body-padding-xxl;
+      bottom: 44px;
+      translate: -4px 0;
     }
 
     &:hover,
@@ -677,6 +678,8 @@ header {
     }
 
     .social-media-wrapper {
+      pointer-events: all;
+
       li.magnet {
         @include mq-max("md") {
           opacity: 1;
@@ -693,20 +696,15 @@ header {
     }
 
     .cta-wrapper {
-      right: $body-padding;
+      @include right-spacing;
       translate: 0 0;
-
-      @include mq-max("xxl") {
-        right: $body-padding-xxl;
-      }
-
-      @include mq-max("md") {
-        right: $body-padding-md;
-      }
 
       .cta-1 {
         background-color: transparent;
-        transition: 0.4s ease, background 0.25s ease 0.8s;
+
+        @include mq-motion-allow {
+          transition: 0.4s ease, background 0.25s ease 0.8s;
+        }
       }
     }
   }
@@ -755,7 +753,10 @@ nav {
   pointer-events: none;
   // user-select: none;
   z-index: 4;
-  transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
+
+  @include mq-motion-allow {
+    transition: background 0s ease 0.4s, opacity 0s ease 1.5s;
+  }
 
   .width-constraint {
     @include row-center(flex-end);
@@ -932,6 +933,7 @@ nav {
       height: 100%;
       pointer-events: none;
       // animation: nav-abstract-open 0.75s ease 0s forwards;
+
       transition: all 1.25s $cubic-ease-sudden 0s, width 0s;
     }
 
@@ -970,7 +972,7 @@ section {
   }
 
   @include mq-max("sm") {
-    padding: 96px $body-padding-md;
+    padding: 96px 16px;
   }
 
   &.essence-paragraph {
@@ -983,6 +985,11 @@ section {
     @include mq-max("md") {
       gap: 24px;
       padding: 164px $body-padding-md * 2.5;
+    }
+
+    @include mq-max("sm") {
+      gap: 24px;
+      padding: 164px 16px;
     }
   }
 }

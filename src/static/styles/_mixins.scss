@@ -86,6 +86,10 @@ $min-breakpoints: (
   @include mq-max("md") {
     left: $body-padding-md;
   }
+
+  @include mq-max("sm") {
+    left: 16px;
+  }
 }
 
 // header menu button, nav social items
@@ -102,6 +106,10 @@ $min-breakpoints: (
 
   @include mq-max("md") {
     right: $body-padding-md;
+  }
+
+  @include mq-max("sm") {
+    right: 16px;
   }
 }
 

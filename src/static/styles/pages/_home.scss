@@ -1,5 +1,7 @@
 .home-hero {
   &__heading {
+    $text-shift: 24px;
+
     display: flex;
     gap: 24px;
 
@@ -11,6 +13,18 @@
 
     @include mq-max("md") {
       gap: 12px;
+    }
+
+    span:first-of-type {
+      @include mq-max("md") {
+        translate: -$text-shift 0;
+      }
+    }
+
+    span:last-of-type {
+      @include mq-max("md") {
+        translate: $text-shift 0;
+      }
     }
   }
 

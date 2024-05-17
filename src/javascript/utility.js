@@ -4,6 +4,7 @@ export const maxXxl = window.matchMedia("(max-width: 1512px)");
 export const maxXl = window.matchMedia("(max-width: 1200px)");
 export const maxLg = window.matchMedia("(max-width: 1024px)");
 export const maxMd = window.matchMedia("(max-width: 768px)");
+export const maxSm = window.matchMedia("(max-width: 480px)");
 
 // Clear focus from any element (except inputs) on mousemove
 (function clearFocusOnMouseMove() {

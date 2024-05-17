@@ -1,4 +1,4 @@
-import { minMd, maxLg } from "./utility.js";
+import { maxSm, minMd, maxLg } from "./utility.js";
 import {
   scrollPosition,
   scrollFromTop,
@@ -139,6 +139,15 @@ const handleNavGlide = () => {
     }
   };
 
+  const querySmHandler = (e) => {
+    if (e.matches) {
+      console.log("tiny");
+      navLinksWrapper.style.translate = `16px 0`;
+    } else {
+      console.log("not small");
+    }
+  };
+
   const queryLgHandler = (e) => {
     if (e.matches) {
       minOffset = 0.3;
@@ -159,11 +168,15 @@ const handleNavGlide = () => {
   //
   // To handle responsive javascript
   //
-  minMd.addEventListener("change", queryMdHandler);
-  queryMdHandler(minMd);
 
   maxLg.addEventListener("change", queryLgHandler);
   queryLgHandler(maxLg);
+
+  minMd.addEventListener("change", queryMdHandler);
+  queryMdHandler(minMd);
+
+  maxSm.addEventListener("change", querySmHandler);
+  querySmHandler(maxSm);
 };
 
 handleNavGlide();

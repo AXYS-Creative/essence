@@ -42,8 +42,6 @@ export const updateScrollDependentElements = (scrollPosition) => {
   const scrollHeight = document.body.scrollHeight;
   const clientHeight = document.documentElement.clientHeight;
 
-  // Manage header scroll animations
-
   if (maxLg.matches) {
     scrollFromTop = 24;
   } else if (maxXl.matches) {
@@ -158,11 +156,25 @@ export const updateScrollDependentElements = (scrollPosition) => {
         top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
       }
       to {
+        top: calc(100vh - 56px);
+        top: calc(100dvh - 56px);
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    @keyframes cta-animated-top {
+      from {
+        top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
+      }
+      to {
         top: calc(100vh - 72px);
         top: calc(100dvh - 72px);
       }
     }
-  }`;
+  }
+  
+  `;
 };
 
 // CTA Reposition
