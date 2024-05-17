@@ -31,10 +31,10 @@ const toggleNav = () => {
 
   //   Update tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) =>
-    el.setAttribute("tabindex", isNavOpen ? "0" : "-1")
+    el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
   );
   tabElementsNav.forEach((el) =>
-    el.setAttribute("tabindex", isNavOpen ? "-1" : "0")
+    el.setAttribute("tabindex", isNavOpen ? "0" : "-1")
   );
 
   //
@@ -70,8 +70,8 @@ const closeNav = () => {
   menuBtn.setAttribute("aria-expanded", "false");
 
   // Reset tabindex for tabElementsPage and tabElementsNav
-  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "0"));
-  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "-1"));
+  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
+  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
 };
 
 // This may not be needed since most links will take the user to a new page and refresh
@@ -87,8 +87,29 @@ menuBtn.addEventListener("click", toggleNav);
 headerLogo.addEventListener("click", closeNav);
 
 //
-// Nav LinksWrapper based on mouse vertical mouse movement (responsive) INACCESSIBLE!
+// Nav LinksWrapper based on mouse vertical mouse movement (responsive & accessible)
 //
+
+// Keyboard accessible nav-links. Reposition on focus
+const keyboardAccessibleNavLinks = (percentage, multiplier) => {
+  const focusHandler = (index) => {
+    const translationValue = calculateTranslation(index);
+    navLinksWrapper.style.translate = `0 calc(${percentage}% - ${translationValue}px)`;
+  };
+
+  const blurHandler = () => {
+    navLinksWrapper.style.translate = "0 0";
+  };
+
+  const calculateTranslation = (index) => {
+    return index * multiplier;
+  };
+
+  navLinks.forEach((link, index) => {
+    link.addEventListener("focus", () => focusHandler(index));
+    link.addEventListener("blur", blurHandler);
+  });
+};
 
 const handleNavGlide = () => {
   let minOffset = 0.2;
@@ -113,7 +134,7 @@ const handleNavGlide = () => {
       navLinksWrapper.style.translate = `0 0`;
       window.addEventListener("mousemove", handleNavLinksWrapper);
     } else {
-      navLinksWrapper.style.translate = `24px 0`;
+      navLinksWrapper.style.translate = `24px 0`; // body-padding-md
       window.removeEventListener("mousemove", handleNavLinksWrapper);
     }
   };
@@ -123,10 +144,14 @@ const handleNavGlide = () => {
       minOffset = 0.3;
       maxOffset = 0.75;
       customOffset = -32; // in px
+
+      keyboardAccessibleNavLinks(15, 50); // arg1: percentage offset,  arg2; how dramatic the slide is
     } else {
       minOffset = 0.2;
       maxOffset = 0.8;
       customOffset = 0;
+
+      keyboardAccessibleNavLinks(10, 75);
     }
     updateYBounds();
   };
