@@ -98,29 +98,29 @@
   }
 }
 
-.h3, .essence-resources__heading, .essence-paragraph__body-text, h3 {
+.h3, .essence-resources__heading, .essence-paragraph__body-text, h3, section.essence-resources__heading, section.essence-paragraph__body-text {
   font-family: "Atyp Display", sans-serif;
   font-size: 52px;
   font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
-  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3 {
+  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3, section.essence-resources__heading, section.essence-paragraph__body-text {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3 {
+  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3, section.essence-resources__heading, section.essence-paragraph__body-text {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3 {
+  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3, section.essence-resources__heading, section.essence-paragraph__body-text {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 768px) {
-  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3 {
+  .h3, .essence-resources__heading, .essence-paragraph__body-text, h3, section.essence-resources__heading, section.essence-paragraph__body-text {
     font-size: calc(8px + 3.2vw);
   }
 }
@@ -179,7 +179,7 @@
   }
 }
 
-.h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title {
+.h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title, section.essence-paragraph__heading {
   font-family: "Atyp Display", sans-serif;
   font-size: 24px;
   font-weight: 100;
@@ -187,12 +187,12 @@
   text-transform: initial;
 }
 @media screen and (max-width: 1200px) {
-  .h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title {
+  .h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title, section.essence-paragraph__heading {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title {
+  .h6, .essence-paragraph__heading, .simple-link, footer .site-footer__top .footer-cta-title, section.essence-paragraph__heading {
     font-size: 18px;
   }
 }
@@ -1537,8 +1537,53 @@ section {
     padding: 96px 16px;
   }
 }
+section.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 396px;
+  gap: 24px;
+}
+@media screen and (max-width: 1512px) {
+  section.hero-section {
+    padding-block-start: 312px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.hero-section {
+    padding-block-start: 264px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.hero-section {
+    padding-block-start: 224px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.hero-section {
+    padding-block-start: 196px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.hero-section {
+    padding-block-start: 248px;
+  }
+}
+section.hero-section h1,
+section.hero-section p {
+  text-align: center;
+}
+section.hero-section__subtext {
+  opacity: 0.5;
+}
 section.essence-paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 316px 160px;
+  gap: 48px;
 }
 @media screen and (max-width: 1512px) {
   section.essence-paragraph {
@@ -1556,6 +1601,133 @@ section.essence-paragraph {
   section.essence-paragraph {
     gap: 24px;
     padding: 164px 16px;
+  }
+}
+section.essence-paragraph__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+section.essence-paragraph__heading .icon-arrow-down {
+  translate: 0 4px;
+}
+section.essence-paragraph__body-text {
+  text-transform: initial;
+  text-indent: 128px;
+}
+@media screen and (max-width: 1024px) {
+  section.essence-paragraph__body-text {
+    text-indent: 64px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.essence-paragraph__body-text {
+    text-indent: 36px;
+  }
+}
+section.essence-paragraph__link {
+  align-self: flex-start;
+  translate: 128px 0;
+}
+@media screen and (max-width: 1024px) {
+  section.essence-paragraph__link {
+    translate: 64px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.essence-paragraph__link {
+    align-self: unset;
+    translate: 0 0;
+  }
+}
+section.essence-resources__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+section.essence-resources__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+section.essence-resources__heading span:nth-of-type(2) {
+  translate: 180px 0;
+}
+@media screen and (max-width: 1512px) {
+  section.essence-resources__heading span:nth-of-type(2) {
+    translate: 140px 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.essence-resources__heading span:nth-of-type(2) {
+    translate: 112px 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.essence-resources__heading span:nth-of-type(2) {
+    translate: 96px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.essence-resources__heading span:nth-of-type(2) {
+    translate: 0 0;
+  }
+}
+section.essence-resources__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 1512px) {
+  section.essence-resources__images {
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  section.essence-resources__images {
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.essence-resources__images {
+    gap: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section.essence-resources__images {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+section.essence-resources__images figure {
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  section.essence-resources__images figure {
+    width: 100%;
+  }
+}
+section.essence-resources__images figure img {
+  width: 100%;
+  margin-block-end: 12px;
+}
+@media screen and (max-width: 768px) {
+  section.essence-resources__images figure img {
+    height: 420px;
+  }
+}
+section.essence-resources__images figure figcaption {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+}
+@media screen and (max-width: 1200px) {
+  section.essence-resources__images figure figcaption {
+    font-size: 16px;
   }
 }
 
@@ -2162,47 +2334,6 @@ img {
   .home-hero__subtext {
     font-size: 12px;
   }
-}
-
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-block-start: 396px;
-  gap: 24px;
-}
-@media screen and (max-width: 1512px) {
-  .hero-section {
-    padding-block-start: 312px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .hero-section {
-    padding-block-start: 264px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .hero-section {
-    padding-block-start: 224px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero-section {
-    padding-block-start: 196px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero-section {
-    padding-block-start: 248px;
-  }
-}
-.hero-section h1,
-.hero-section p {
-  text-align: center;
-}
-.hero-section__subtext {
-  opacity: 0.5;
 }
 
 .essence-paragraph {

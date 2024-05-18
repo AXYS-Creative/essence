@@ -57,20 +57,21 @@ export const updateScrollDependentElements = (scrollPosition) => {
     scrollFromTop = 96;
   }
 
-  if (scrollPosition >= scrollFromTop) {
-    siteHeader.classList.add("scroll-active");
-    menuBtn.setAttribute("aria-hidden", "false");
-    menuBtn.setAttribute("tabindex", "0");
-    headerLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
-    ctaWrapper.classList.add("scroll-active");
-    ctaWrapper.style.animationName = "cta-animated-top";
-  } else {
-    siteHeader.classList.remove("scroll-active");
-    headerLinks.forEach((link) => link.removeAttribute("tabindex"));
-    menuBtn.setAttribute("aria-hidden", "true");
-    menuBtn.setAttribute("tabindex", "-1");
-    ctaWrapper.classList.remove("scroll-active");
-    ctaWrapper.style.animationName = "cta-default";
+  // Account for different pages, some pages don't have heroSubText
+  const hasScrolled = scrollPosition >= scrollFromTop;
+
+  siteHeader.classList.toggle("scroll-active", hasScrolled);
+  headerLinks.forEach((link) =>
+    link.setAttribute("tabindex", hasScrolled ? "-1" : "")
+  );
+  menuBtn.setAttribute("aria-hidden", String(!hasScrolled));
+  menuBtn.setAttribute("tabindex", hasScrolled ? "0" : "-1");
+
+  if (heroSubText) {
+    ctaWrapper.classList.toggle("scroll-active", hasScrolled);
+    ctaWrapper.style.animationName = hasScrolled
+      ? "cta-animated-top"
+      : "cta-default";
   }
 
   // Adjust header/cta at bottom of page
@@ -107,7 +108,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
       siteHeader.classList.remove("header-scroll-bottom");
     }
 
-    // cta logic
+    // CTA logic - scroll bottom
     if (scrollHeight - (scrollPosition + clientHeight) < threshold2) {
       ctaWrapper.classList.add("scroll-bottom");
     } else {
@@ -120,12 +121,14 @@ export const updateScrollDependentElements = (scrollPosition) => {
     footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
   );
 
-  // CTA position in the hero/page
+  // CTA position based on different pages
   if (heroSubText) {
     ctaHeroPosition =
       heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
   } else {
     ctaHeroPosition = clientHeight - bodyPadding;
+    ctaWrapper.classList.add("scroll-active");
+    ctaWrapper.style.animationName = "cta-animated-top";
   }
 
   // Animate CTA from the top

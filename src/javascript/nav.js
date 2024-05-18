@@ -135,11 +135,9 @@ const handleNavGlide = () => {
 
   const queryMdHandler = (e) => {
     if (e.matches) {
-      console.log("mdmatches");
       navLinksWrapper.style.translate = `0 0`;
       window.addEventListener("mousemove", handleNavLinksWrapper);
     } else {
-      console.log("md no match");
       navLinksWrapper.style.translate = `24px 0`; // body-padding-md
       window.removeEventListener("mousemove", handleNavLinksWrapper);
 

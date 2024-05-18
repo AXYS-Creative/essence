@@ -6,7 +6,7 @@ layout: blog
   {% set postslist = collections.post %} {% for post in postslist | reverse %}
   <article class="">
     <h2 class="">
-      <a href="{{ post.url | url }}">
+      <a href="{{ post.url | url }}" class="tab-element-page">
         <!-- prettier-ignore -->
         {% if post.data.title %} 
             {{ post.data.title }} 
@@ -27,7 +27,7 @@ layout: blog
     {% endif %}
 
     <p>
-      <a href="{{ post.url | url }}" class=""> Read more → </a>
+      <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
     </p>
   </article>
   {% endfor %}
