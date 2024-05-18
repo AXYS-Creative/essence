@@ -1034,8 +1034,24 @@ footer {
         height: 196px;
       }
 
+      &:hover,
+      &:focus-within {
+        .footer-nav-link {
+          opacity: 0.5;
+
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+        }
+      }
+
       .footer-nav-link {
         text-transform: uppercase;
+
+        @include mq-motion-allow {
+          transition: 0.2s ease;
+        }
       }
     }
 

@@ -9,7 +9,7 @@
   border: 0;
 }
 
-.classic-link {
+.simple-link {
   @extend .h6;
   @include row-center;
   gap: 4px;
@@ -17,8 +17,8 @@
 
   &:hover,
   &:focus {
-    .classic-link__letters {
-      .classic-link__letter {
+    .simple-link__letters {
+      .simple-link__letter {
         @for $i from 1 through 16 {
           &:nth-of-type(#{$i}) {
             animation: jump 0.32s ease $i * 0.04s forwards;
@@ -26,34 +26,51 @@
         }
       }
     }
+
+    .icon-arrow-right {
+      translate: 4px 0;
+    }
   }
 
   &__letters {
     @include row-center;
   }
+
+  .icon-arrow-right {
+    @include mq-motion-allow {
+      transition: 0.25s ease;
+    }
+  }
 }
 
-// .classic-link {
-//   position: relative;
+.classic-link {
+  position: relative;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     width: 0;
-//     height: 2px;
-//     background-color: var(--primary-font-color);
-//     animation: classic-link-default 0.3s ease forwards;
-//   }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-font-color);
+    animation: classic-link-default $cubic-ease-sudden forwards;
 
-//   &:hover,
-//   &:focus {
-//     &::before {
-//       animation: classic-link-hover 0.3s ease forwards;
-//     }
-//   }
-// }
+    @include mq-motion-allow {
+      animation-duration: 0.64s;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      animation: classic-link-hover $cubic-ease-sudden forwards;
+      @include mq-motion-allow {
+        animation-duration: 0.64s;
+      }
+    }
+  }
+}
 
 .lg-screen-and-up {
   display: none;

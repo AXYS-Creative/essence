@@ -76,17 +76,6 @@
       align-self: unset;
       translate: 0 0;
     }
-
-    &:hover,
-    &:focus {
-      .icon-arrow-right {
-        translate: 4px 0;
-      }
-    }
-
-    .icon-arrow-right {
-      transition: 0.25s ease;
-    }
   }
 }
 
