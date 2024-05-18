@@ -116,7 +116,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
   );
 
   handleScrollBottom(
-    footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well
+    footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
     footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
   );
 

@@ -141,10 +141,7 @@ const handleNavGlide = () => {
 
   const querySmHandler = (e) => {
     if (e.matches) {
-      console.log("tiny");
       navLinksWrapper.style.translate = `16px 0`;
-    } else {
-      console.log("not small");
     }
   };
 
