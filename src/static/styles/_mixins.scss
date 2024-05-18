@@ -269,12 +269,12 @@ $min-breakpoints: (
 // Different states: top, scroll, bottom
 @mixin cta-default-size {
   font-size: 16px;
-  width: 188px;
+  width: var(--cta-home-width);
   height: 36px;
 
   @include mq-max("md") {
     font-size: 14px;
-    width: 162px;
+    width: var(--cta-home-width-md);
     height: 32px;
   }
 }

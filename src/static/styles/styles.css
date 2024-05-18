@@ -30,6 +30,8 @@
   --link-color: #0e0e0e;
   --link-color-hover: #898c83;
   --cta-position: 640px;
+  --cta-home-width: 188px;
+  --cta-home-width-md: 162px;
   --content-width: 1920px;
   --body-padding: 64px;
   --body-padding-xxl: 40px;
@@ -203,6 +205,10 @@
 *:-webkit-autofill, *:-webkit-autofill:hover, *:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--primary-font-color);
   -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -733,8 +739,7 @@ header .cta-wrapper {
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 50%;
-  translate: 50% 0;
+  right: calc(50vw - var(--cta-home-width) / 2);
   gap: 12px;
   transition: 0.8s ease;
   animation: cta-default 0.8s ease forwards;
@@ -745,9 +750,14 @@ header .cta-wrapper {
     animation: cta-default 0s ease forwards;
   }
 }
+@media screen and (max-width: 768px) {
+  header .cta-wrapper {
+    right: calc(50vw - var(--cta-home-width-md) / 2);
+  }
+}
 header .cta-wrapper .cta-1 {
   font-size: 16px;
-  width: 188px;
+  width: var(--cta-home-width);
   height: 36px;
   position: relative;
   text-transform: uppercase;
@@ -759,13 +769,13 @@ header .cta-wrapper .cta-1 {
 @media screen and (max-width: 768px) {
   header .cta-wrapper .cta-1 {
     font-size: 14px;
-    width: 162px;
+    width: var(--cta-home-width-md);
     height: 32px;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper .cta-1 {
-    transition: 0.4s ease, background 0.25s ease 0.75s, width 0.4s ease 0.3s;
+    transition: 0.4s ease, background 0.25s ease 0.9s, width 0.4s ease 0.3s;
   }
 }
 header .cta-wrapper .cta-1 > * {
@@ -882,13 +892,13 @@ header .cta-wrapper.scroll-bottom {
 }
 header .cta-wrapper.scroll-bottom .cta-1 {
   font-size: 16px;
-  width: 188px;
+  width: var(--cta-home-width);
   height: 36px;
 }
 @media screen and (max-width: 768px) {
   header .cta-wrapper.scroll-bottom .cta-1 {
     font-size: 14px;
-    width: 162px;
+    width: var(--cta-home-width-md);
     height: 32px;
   }
 }

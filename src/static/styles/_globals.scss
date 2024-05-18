@@ -13,10 +13,10 @@
   }
 }
 
-// Doesn't work with Lenis
-// html {
-//   scroll-behavior: smooth;
-// }
+// Doesn't work with Lenis :(
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   position: relative;
@@ -399,8 +399,7 @@ header {
 
     @include row-center;
     position: absolute;
-    right: 50%;
-    translate: 50% 0;
+    right: calc(50vw - calc(var(--cta-home-width) / 2));
     gap: 12px;
     transition: $duration ease;
     animation: cta-default $duration ease forwards;
@@ -408,6 +407,10 @@ header {
     @include mq-motion-reduce {
       transition: none;
       animation: cta-default 0s ease forwards;
+    }
+
+    @include mq-max("md") {
+      right: calc(50vw - calc(var(--cta-home-width-md) / 2));
     }
 
     .cta-1 {
@@ -420,7 +423,7 @@ header {
       border-radius: 24px;
 
       @include mq-motion-allow {
-        transition: 0.4s ease, background 0.25s ease 0.75s, width 0.4s ease 0.3s;
+        transition: 0.4s ease, background 0.25s ease 0.9s, width 0.4s ease 0.3s;
       }
 
       & > * {
