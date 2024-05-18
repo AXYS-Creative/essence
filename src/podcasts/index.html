@@ -6,11 +6,14 @@ cta1:
   title1: "Join"
   title2: "newsletter"
 
-heroHeading: "Our Podcast"
+category: "Podcasts"
+heroParagraph: "ESSENCE audio experiences are your gateway to a world of thoughtful dialogue and transformative insights. Every episode is an invitation to engage with experts and enthusiasts who believe in the power of less. Discover the sounds of simplicity with us."
 ---
 
-{% set podcastlist = collections.podcasts %} {% for post in podcastlist |
-reverse %}
+<!-- prettier-ignore -->
+{% set podcastlist = collections.podcasts %} 
+{% for post in podcastlist |reverse%}
+<!-- prettier-ignore -->
 
 <article class="">
   <h2 class="">

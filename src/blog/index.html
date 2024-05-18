@@ -6,10 +6,15 @@ cta1:
   title1: "Join"
   title2: "newsletter"
 
-heroHeading: "Our Blog"
+category: "Blog"
+heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where clarity meets inspiration. Each post is crafted with intention, guiding you to reflect on what truly matters. Join us on a journey of discovery, as we explore the art of simplicity and the profound impact of living with purpose."
 ---
 
-{% set bloglist = collections.blog %} {% for post in bloglist | reverse %}
+<!-- prettier-ignore -->
+{% set bloglist = collections.blog %} 
+{% for post in bloglist | reverse %}
+<!-- prettier-ignore -->
+
 <article class="">
   <h2 class="">
     <a href="{{ post.url | url }}" class="tab-element-page">
