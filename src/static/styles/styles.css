@@ -36,6 +36,7 @@
   --body-padding: 64px;
   --body-padding-xxl: 40px;
   --body-padding-md: 24px;
+  --body-padding-sm: 16px;
 }
 
 @media (max-width: 1512px) {
@@ -1326,6 +1327,11 @@ nav .nav-links {
 nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
   opacity: 0.5;
 }
+@media (max-height: 480px) {
+  nav .nav-links {
+    padding: 360px 0 64px;
+  }
+}
 @media screen and (max-width: 1512px) {
   nav .nav-links {
     gap: 64px;
@@ -1342,11 +1348,6 @@ nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
     gap: 12px;
     padding: 64px 0;
     translate: 24px 0;
-  }
-}
-@media (max-height: 480px) {
-  nav .nav-links {
-    padding: 360px 0 64px;
   }
 }
 nav .nav-links li {

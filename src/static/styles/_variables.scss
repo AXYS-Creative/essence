@@ -42,6 +42,7 @@ $test-bg: rgba(navy, 0.75);
   --body-padding: #{$body-padding};
   --body-padding-xxl: #{$body-padding-xxl};
   --body-padding-md: #{$body-padding-md};
+  --body-padding-sm: #{$body-padding-sm};
 }
 
 @media (max-width: 1512px) {

@@ -840,6 +840,10 @@ nav {
       }
     }
 
+    @media (max-height: 480px) {
+      padding: 360px 0 64px;
+    }
+
     @include mq-max("xxl") {
       gap: 64px;
     }
@@ -853,10 +857,6 @@ nav {
       gap: 12px;
       padding: 64px 0;
       translate: $body-padding-md 0;
-    }
-
-    @media (max-height: 480px) {
-      padding: 360px 0 64px;
     }
 
     li {

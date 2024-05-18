@@ -54,8 +54,8 @@ const toggleNav = () => {
     }
   }
 
-  // // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
-  // document.body.style = `overflow: ${!isNavOpen ? "hidden" : "auto"}`;
+  // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
+  document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
 };
 
 const closeNav = () => {
@@ -91,10 +91,14 @@ headerLogo.addEventListener("click", closeNav);
 //
 
 // Keyboard accessible nav-links. Reposition on focus
-const keyboardAccessibleNavLinks = (percentage, multiplier) => {
+const keyboardAccessibleNavLinks = (
+  percentage,
+  multiplier,
+  leftPadding = 0
+) => {
   const focusHandler = (index) => {
     const translationValue = calculateTranslation(index);
-    navLinksWrapper.style.translate = `0 calc(${percentage}% - ${translationValue}px)`;
+    navLinksWrapper.style.translate = `${leftPadding}px calc(${percentage}% - ${translationValue}px)`;
   };
 
   const blurHandler = () => {
@@ -131,17 +135,22 @@ const handleNavGlide = () => {
 
   const queryMdHandler = (e) => {
     if (e.matches) {
+      console.log("mdmatches");
       navLinksWrapper.style.translate = `0 0`;
       window.addEventListener("mousemove", handleNavLinksWrapper);
     } else {
+      console.log("md no match");
       navLinksWrapper.style.translate = `24px 0`; // body-padding-md
       window.removeEventListener("mousemove", handleNavLinksWrapper);
+
+      keyboardAccessibleNavLinks(0, 0, 24);
     }
   };
 
   const querySmHandler = (e) => {
     if (e.matches) {
       navLinksWrapper.style.translate = `16px 0`;
+      keyboardAccessibleNavLinks(0, 0, 16);
     }
   };
 

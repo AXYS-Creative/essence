@@ -17,6 +17,11 @@ const headerLinks = document.querySelectorAll(".header-links__link");
 
 const rootElem = document.documentElement; // For CSS variables
 
+let bodyPadding = parseInt(
+  getComputedStyle(rootElem).getPropertyValue("--body-padding"),
+  10
+);
+
 export const throttle = (func, limit) => {
   let lastFunc;
   let lastRan;
@@ -109,11 +114,6 @@ export const updateScrollDependentElements = (scrollPosition) => {
       ctaWrapper.classList.remove("scroll-bottom");
     }
   };
-
-  let bodyPadding = parseInt(
-    getComputedStyle(rootElem).getPropertyValue("--body-padding"),
-    10
-  );
 
   handleScrollBottom(
     footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
