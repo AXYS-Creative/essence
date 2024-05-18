@@ -1,0 +1,15 @@
+.archive-section {
+  display: flex;
+
+  .archive-header {
+    width: 50%;
+
+    &__heading {
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

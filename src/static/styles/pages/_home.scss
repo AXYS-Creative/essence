@@ -1,4 +1,33 @@
 .home-hero {
+  @include column-center;
+  padding-block-start: 396px;
+  gap: 24px;
+
+  @include mq-max("xxl") {
+    padding-block-start: 312px;
+  }
+
+  @include mq-max("xl") {
+    padding-block-start: 264px;
+  }
+
+  @include mq-max("lg") {
+    padding-block-start: 224px;
+  }
+
+  @include mq-max("md") {
+    padding-block-start: 196px;
+  }
+
+  @include mq-max("md") {
+    padding-block-start: 248px;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
   &__heading {
     $text-shift: 24px;
 
@@ -29,6 +58,8 @@
   }
 
   &__subtext {
+    opacity: 0.5;
+
     @include mq-max("md") {
       font-size: 14px;
     }

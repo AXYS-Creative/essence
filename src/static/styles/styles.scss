@@ -2,7 +2,7 @@
 @import "fonts", "variables", "mixins", "globals", "utility", "animations";
 
 // Pages
-@import "./pages/home";
+@import "./pages/home", "./pages/archives";
 
-// Components
-@import "./components/sections";
+// Partials
+@import "./partials/paragraph", "./partials/resources";

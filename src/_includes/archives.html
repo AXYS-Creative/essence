@@ -15,10 +15,20 @@ layout: app
   <p class="essence-paragraph__body-text">{{ heroParagraph }}</p>
 </section>
 
-<section id="archive-list">
-  <!-- prettier-ignore -->
-  {{ content | safe }}
-  <!-- prettier-ignore -->
+<section class="archive-section" id="archive-list">
+  <div class="archive-header">
+    <h2 class="archive-header__heading h1">
+      {{ category }} <br />
+      archives
+    </h2>
+    <p class="archive-header__sub-heading">{{ subheading }}</p>
+  </div>
+
+  <div class="archive-list">
+    <!-- prettier-ignore -->
+    {{ content | safe }}
+    <!-- prettier-ignore -->
+  </div>
 </section>
 
 {% include "./partials/resources.html" %}

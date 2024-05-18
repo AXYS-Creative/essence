@@ -1,0 +1,59 @@
+.essence-paragraph {
+  @include column-center;
+  padding: 316px $body-padding * 2.5;
+  gap: 48px;
+
+  @include mq-max("xxl") {
+    gap: 32px;
+    padding: 296px $body-padding-xxl * 2.5;
+  }
+  @include mq-max("md") {
+    gap: 24px;
+    padding: 164px $body-padding-md * 2;
+  }
+
+  @include mq-max("sm") {
+    gap: 24px;
+    padding: 164px $body-padding-sm;
+  }
+
+  &__heading {
+    @extend .h6;
+    @include row-center;
+    gap: 12px;
+
+    .icon-arrow-down {
+      translate: 0 4px;
+    }
+  }
+
+  &__body-text {
+    @extend .h3;
+    text-transform: initial;
+    text-indent: 128px;
+
+    @include mq-max("lg") {
+      text-indent: 64px;
+    }
+
+    @include mq-max("md") {
+      text-indent: 36px;
+      // text-indent: 0;
+      // text-align: center;
+    }
+  }
+
+  &__link {
+    align-self: flex-start;
+    translate: 128px 0;
+
+    @include mq-max("lg") {
+      translate: 64px 0;
+    }
+
+    @include mq-max("md") {
+      align-self: unset;
+      translate: 0 0;
+    }
+  }
+}
