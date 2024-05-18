@@ -27,9 +27,9 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
-  - label: "Podcast"
-    name: "podcast"
-    folder: "src/podcasts"
+  - label: "Podcasts"
+    name: "podcasts"
+    folder: "src/post-podcasts"
     create: true
     editor:
       preview: false
