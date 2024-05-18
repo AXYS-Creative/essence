@@ -7,7 +7,8 @@ description: This blog explores the transformative power of essentialism, a
 author: Wayne Kerr
 date: 2024-05-18T23:38:06.778Z
 tags:
-  - Tags
+  - popular
+  - general
 ---
 **Introduction to Essentialism: The Path to a Focused Life**
 
