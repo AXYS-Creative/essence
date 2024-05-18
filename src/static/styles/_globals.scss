@@ -172,7 +172,7 @@ header {
       background: var(--link-color-hover);
 
       @include mq-motion-allow {
-        transition: 0.75s $cubic-ease-sudden, opacity 0.4s ease 0.4s,
+        transition: 0.5s $cubic-ease-sudden, opacity 0.4s ease 0.4s,
           height 0.2s ease;
       }
 
@@ -432,7 +432,14 @@ header {
       &:focus {
         &::after {
           left: 0;
-          border-radius: 0;
+        }
+
+        span {
+          color: var(--background-color);
+        }
+
+        img {
+          filter: invert(1);
         }
       }
 
@@ -442,12 +449,12 @@ header {
         left: -100%;
         width: 100%;
         height: 100%;
-        border-radius: 64px;
+        border-radius: 48px;
         background: var(--primary-font-color);
         z-index: -1;
 
         @include mq-motion-allow {
-          transition: 0.75s $cubic-ease-sudden;
+          transition: 0.5s $cubic-ease-sudden;
         }
       }
 
@@ -457,20 +464,11 @@ header {
         translate: 0 -50%;
       }
 
-      span,
-      img {
-        mix-blend-mode: difference;
-        color: white;
-      }
-      img {
-        filter: invert(1);
-      }
-
       span:nth-of-type(1) {
         left: $edge-spacing;
 
         @include mq-motion-allow {
-          transition: 0.4s ease 0.3s;
+          transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
         }
 
         @include mq-max("md") {
@@ -484,7 +482,7 @@ header {
         pointer-events: all;
 
         @include mq-motion-allow {
-          transition: 0.4s ease 0.4s;
+          transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
         }
 
         @include mq-max("md") {
@@ -575,7 +573,7 @@ header {
           pointer-events: all;
 
           @include mq-motion-allow {
-            transition: 0.3s ease 0.4s;
+            transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
           }
         }
 
