@@ -1,15 +1,52 @@
 .archive-section {
   display: flex;
+  gap: 48px;
+
+  @include mq-max("md") {
+    flex-direction: column;
+  }
 
   .archive-header {
-    width: 50%;
+    // border: $test;
+    flex: 1.5;
 
     &__heading {
       text-transform: lowercase;
+      line-height: 1;
+      margin-block-end: 24px;
 
       &::first-letter {
         text-transform: capitalize;
       }
+    }
+
+    &__sub-heading {
+      font-style: normal;
+      width: 50%;
+    }
+  }
+
+  .archive-list {
+    flex: 1;
+
+    &__category {
+      @include column-start;
+      gap: 12px;
+    }
+
+    &__heading {
+      text-transform: lowercase;
+      padding-block-end: 24px;
+      margin-block-end: 24px;
+      border-block-end: 2px solid var(--secondary-font-color);
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    &__link {
+      font-style: normal;
     }
   }
 }

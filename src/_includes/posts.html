@@ -2,15 +2,16 @@
 layout: app
 ---
 
-<div>
-  <div>
-    <h1>{{title}}</h1>
-    <p>
-      <time>
-        {{ date | readableDate }} by
-        <a>{{ author }}</a>
-      </time>
-    </p>
-  </div>
+<section class="post-hero">
+  <h1>{{title}}</h1>
+  <p>
+    <time>
+      {{ date | readableDate }} by
+      <a>{{ author }}</a>
+    </time>
+  </p>
+</section>
+
+<section class="post-body">
   <article>{{ content | safe }}</article>
-</div>
+</section>

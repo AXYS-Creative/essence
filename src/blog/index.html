@@ -12,35 +12,40 @@ subheading: "Dive deeper into a life less ordinary, enriched by the essentials."
 heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where clarity meets inspiration. Each post is crafted with intention, guiding you to reflect on what truly matters. Join us on a journey of discovery, as we explore the art of simplicity and the profound impact of living with purpose."
 ---
 
-<!-- prettier-ignore -->
-{% set bloglist = collections.blog %} 
-{% for post in bloglist | reverse %}
-<!-- prettier-ignore -->
+{% set bloglist = collections.blog %}
 
-<article class="">
-  <h2 class="">
-    <a href="{{ post.url | url }}" class="tab-element-page">
-      <!-- prettier-ignore -->
-      {% if post.data.title %} 
-            {{ post.data.title }} 
-        {% else %} 
-            Untitled 
-        {%endif %}
-      <!-- prettier-ignore -->
-    </a>
-  </h2>
-  <p class="">
-    <time>
-      {{ post.date | readableDate }} by
-      <a>{{ post.data.author }}</a>
-    </time>
-  </p>
-  {% if post.data.description %}
-  <p class="">{{ post.data.description }}</p>
-  {% endif %}
+<div class="archive-list__category">
+  <h3 class="archive-list__heading">All blogs</h3>
 
-  <p>
-    <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
-  </p>
-</article>
-{% endfor %}
+  {% for post in bloglist | reverse %}
+
+  <!-- <article class="archive-list__article"> -->
+  <a
+    href="{{ post.url | url }}"
+    class="archive-list__link h6 tab-element-page classic-link"
+  >
+    <!-- prettier-ignore -->
+    {% if post.data.title %} 
+              {{ post.data.title }} 
+          {% else %} 
+              Untitled 
+          {%endif %}
+    <!-- prettier-ignore -->
+  </a>
+
+  <!-- <p class="">
+      <time>
+        {{ post.date | readableDate }} by
+        <a>{{ post.data.author }}</a>
+      </time>
+    </p>
+    {% if post.data.description %}
+    <p class="">{{ post.data.description }}</p>
+    {% endif %} -->
+
+  <!-- <p>
+      <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
+    </p> -->
+  <!-- </article> -->
+  {% endfor %}
+</div>

@@ -2185,15 +2185,49 @@ img {
 
 .archive-section {
   display: flex;
+  gap: 48px;
+}
+@media screen and (max-width: 768px) {
+  .archive-section {
+    flex-direction: column;
+  }
 }
 .archive-section .archive-header {
-  width: 50%;
+  flex: 1.5;
 }
 .archive-section .archive-header__heading {
   text-transform: lowercase;
+  line-height: 1;
+  margin-block-end: 24px;
 }
 .archive-section .archive-header__heading::first-letter {
   text-transform: capitalize;
+}
+.archive-section .archive-header__sub-heading {
+  font-style: normal;
+  width: 50%;
+}
+.archive-section .archive-list {
+  flex: 1;
+}
+.archive-section .archive-list__category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+}
+.archive-section .archive-list__heading {
+  text-transform: lowercase;
+  padding-block-end: 24px;
+  margin-block-end: 24px;
+  border-block-end: 2px solid var(--secondary-font-color);
+}
+.archive-section .archive-list__heading::first-letter {
+  text-transform: capitalize;
+}
+.archive-section .archive-list__link {
+  font-style: normal;
 }
 
 .essence-paragraph {

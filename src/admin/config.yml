@@ -26,7 +26,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "created", "from", "config.yml"]
+        options: ["popular", "general", "physical", "emotion", "finance"]
   - label: "Podcasts"
     name: "podcasts"
     folder: "src/posts/podcasts"
@@ -44,7 +44,7 @@ collections:
         name: "tags"
         multiple: true
         create: true
-        options: ["general", "physical", "emotion", "finance"]
+        options: ["popular", "general", "physical", "emotion", "finance"]
   - label: "Settings"
     name: "settings"
     files:
