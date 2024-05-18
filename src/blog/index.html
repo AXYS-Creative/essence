@@ -9,33 +9,31 @@ cta1:
 heroHeading: "Our Blog"
 ---
 
-<section class="bloggg">
-  {% set postslist = collections.post %} {% for post in postslist | reverse %}
-  <article class="">
-    <h2 class="">
-      <a href="{{ post.url | url }}" class="tab-element-page">
-        <!-- prettier-ignore -->
-        {% if post.data.title %} 
+{% set bloglist = collections.blog %} {% for post in bloglist | reverse %}
+<article class="">
+  <h2 class="">
+    <a href="{{ post.url | url }}" class="tab-element-page">
+      <!-- prettier-ignore -->
+      {% if post.data.title %} 
             {{ post.data.title }} 
         {% else %} 
             Untitled 
         {%endif %}
-        <!-- prettier-ignore -->
-      </a>
-    </h2>
-    <p class="">
-      <time>
-        {{ post.date | readableDate }} by
-        <a>{{ post.data.author }}</a>
-      </time>
-    </p>
-    {% if post.data.description %}
-    <p class="">{{ post.data.description }}</p>
-    {% endif %}
+      <!-- prettier-ignore -->
+    </a>
+  </h2>
+  <p class="">
+    <time>
+      {{ post.date | readableDate }} by
+      <a>{{ post.data.author }}</a>
+    </time>
+  </p>
+  {% if post.data.description %}
+  <p class="">{{ post.data.description }}</p>
+  {% endif %}
 
-    <p>
-      <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
-    </p>
-  </article>
-  {% endfor %}
-</section>
+  <p>
+    <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
+  </p>
+</article>
+{% endfor %}

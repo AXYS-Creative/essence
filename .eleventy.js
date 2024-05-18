@@ -17,6 +17,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // Adjust to include all markdown files in subdirectories
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("./src/posts/**/*.md");
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
