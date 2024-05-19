@@ -27,7 +27,13 @@
   }
 
   .archive-list {
+    @include column-start;
+    gap: 96px;
     flex: 1;
+
+    @include mq-max("xxl") {
+      gap: 64px;
+    }
 
     &__category {
       @include column-start;

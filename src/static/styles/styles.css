@@ -2208,7 +2208,17 @@ img {
   width: 50%;
 }
 .archive-section .archive-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 96px;
   flex: 1;
+}
+@media screen and (max-width: 1512px) {
+  .archive-section .archive-list {
+    gap: 64px;
+  }
 }
 .archive-section .archive-list__category {
   display: flex;
