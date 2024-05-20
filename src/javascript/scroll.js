@@ -10,6 +10,7 @@ export const siteHeader = document.querySelector(".site-header"),
   ctaWrapper = document.querySelector(".cta-wrapper");
 
 const heroSubText = document.querySelector(".hero-section__subtext"),
+  siteFooter = document.querySelector(".site-footer"),
   footerNavLinks = document.querySelector(".footer-nav-links"),
   footerCtaTitle = document.querySelector(".footer-cta-title");
 
@@ -94,8 +95,11 @@ export const updateScrollDependentElements = (scrollPosition) => {
   );
 
   const handleScrollBottom = (threshold, threshold2) => {
-    // header/social logic
-    if (scrollHeight - (scrollPosition + clientHeight) < threshold) {
+    let atBottom = scrollHeight - (scrollPosition + clientHeight) < threshold;
+
+    siteFooter.classList.toggle("footer-scroll-bottom", atBottom);
+
+    if (atBottom) {
       siteHeader.classList.add("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "-1");
     } else if (

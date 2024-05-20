@@ -431,15 +431,31 @@ header {
       &:hover,
       &:focus {
         &::after {
-          left: 0;
+          animation: classic-link-hover 0.75s $cubic-ease-sudden forwards;
         }
 
         span {
           color: var(--background-color);
+
+          &:nth-of-type(1) {
+            @include mq-motion-allow {
+              transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
+            }
+          }
+
+          &:nth-of-type(2) {
+            @include mq-motion-allow {
+              transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+            }
+          }
         }
 
         img {
           filter: invert(1);
+
+          @include mq-motion-allow {
+            transition: 0.3s ease, filter 0.3s ease 0.3s !important;
+          }
         }
       }
 
@@ -452,9 +468,10 @@ header {
         border-radius: 48px;
         background: var(--primary-font-color);
         z-index: -1;
+        animation: classic-link-default 0s $cubic-ease-sudden forwards;
 
         @include mq-motion-allow {
-          transition: 0.5s $cubic-ease-sudden;
+          animation-duration: 0.75s;
         }
       }
 
@@ -468,7 +485,7 @@ header {
         left: $edge-spacing;
 
         @include mq-motion-allow {
-          transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
+          transition: 0.4s ease 0.3s, color 0.2s ease 0.5s;
         }
 
         @include mq-max("md") {
@@ -482,7 +499,7 @@ header {
         pointer-events: all;
 
         @include mq-motion-allow {
-          transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+          transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
         }
 
         @include mq-max("md") {
@@ -496,7 +513,7 @@ header {
         opacity: 0;
 
         @include mq-motion-allow {
-          transition: 0.3s ease;
+          transition: 0.3s ease, filter 0.3s ease 0.52s !important;
         }
       }
     }
@@ -560,6 +577,15 @@ header {
       .cta-1 {
         @include cta-default-size;
 
+        &:hover,
+        &:focus {
+          span:nth-of-type(2) {
+            @include mq-motion-allow {
+              transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+            }
+          }
+        }
+
         span:nth-of-type(1) {
           left: $edge-spacing;
 
@@ -573,7 +599,7 @@ header {
           pointer-events: all;
 
           @include mq-motion-allow {
-            transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+            transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
           }
         }
 
@@ -1162,11 +1188,25 @@ footer {
         @include mq-max("xs") {
           font-size: 13px;
         }
+
+        small {
+          @include mq-motion-allow {
+            opacity: 0;
+
+            @for $i from 1 through 3 {
+              &:nth-of-type(#{$i}) {
+                transition: opacity 0.8s ease calc(0.5s + 0.1s * $i);
+              }
+            }
+          }
+        }
       }
 
       &__brand-name {
         font-size: 224px;
         line-height: 1;
+        display: inline-flex;
+        overflow: hidden;
 
         @include mq-max("xxl") {
           font-size: 164px;
@@ -1187,6 +1227,21 @@ footer {
 
         @include mq-max("sm") {
           font-size: 21.6vw;
+        }
+
+        span {
+          @include mq-motion-allow {
+            translate: 0 100%;
+
+            @for $i from 1 through 8 {
+              &:nth-of-type(#{$i}) {
+                transition: translate
+                  calc(0.25s + 0.1s * $i)
+                  ease
+                  calc(0.25s + 0.05s * $i);
+              }
+            }
+          }
         }
       }
     }
@@ -1230,6 +1285,24 @@ footer {
         text-align: right;
         flex-shrink: 0;
         text-wrap: nowrap;
+      }
+    }
+  }
+
+  &.footer-scroll-bottom {
+    .site-footer__bottom {
+      .brand-name-wrapper {
+        &__locations {
+          small {
+            opacity: 1;
+          }
+        }
+
+        &__brand-name {
+          span {
+            translate: 0 0;
+          }
+        }
       }
     }
   }

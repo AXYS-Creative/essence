@@ -4,4 +4,4 @@ import "./utility.js";
 
 import "./components/header.js";
 
-// import "./core/lenis.js";
+import "./core/loading.js";

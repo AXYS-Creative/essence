@@ -1,26 +1,26 @@
 .home-hero {
   @include column-center;
-  padding-block-start: 396px;
+  padding-block: 396px;
   gap: 24px;
 
   @include mq-max("xxl") {
-    padding-block-start: 312px;
+    padding-block: 312px;
   }
 
   @include mq-max("xl") {
-    padding-block-start: 264px;
+    padding-block: 264px;
   }
 
   @include mq-max("lg") {
-    padding-block-start: 224px;
+    padding-block: 224px;
   }
 
   @include mq-max("md") {
-    padding-block-start: 196px;
+    padding-block: 196px;
   }
 
-  @include mq-max("md") {
-    padding-block-start: 248px;
+  @include mq-max("sm") {
+    padding-block: 248px;
   }
 
   h1,
@@ -68,4 +68,12 @@
       font-size: 12px;
     }
   }
+}
+
+// Might not have traditional loader (see bonnies dance school)
+.loading-screen {
+  border: $test;
+  position: fixed;
+  top: 0;
+  display: none;
 }
