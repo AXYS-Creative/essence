@@ -106,7 +106,7 @@ header {
     width: calc(100% - $body-padding * 2);
     max-width: $content-width;
     top: 68px;
-    z-index: 0;
+    // z-index: 0; // Why is this set???
 
     @include mq-min("xxxl") {
       right: calc(50% - calc($content-width / 2 - $body-padding));
@@ -394,7 +394,6 @@ header {
   .cta-wrapper {
     $edge-spacing: 22px;
     $edge-spacing-scroll: 14px;
-
     $duration: 0.8s;
 
     @include row-center;
@@ -418,14 +417,13 @@ header {
       position: relative;
       text-transform: uppercase;
       color: var(--primary-font-color);
-      background: var(--background-color);
       border: 1px solid var(--primary-font-color);
       border-radius: 24px;
       isolation: isolate;
       overflow: hidden;
 
       @include mq-motion-allow {
-        transition: 0.4s ease, background 0.25s ease 0.9s, width 0.4s ease 0.3s;
+        transition: 0.4s ease, background 0.25s ease 0s, width 0.4s ease 0.3s;
       }
 
       &:hover,
@@ -707,6 +705,17 @@ header {
         }
       }
     }
+
+    .cta-wrapper {
+      .cta-1 {
+        background: var(--background-color);
+
+        @include mq-motion-allow {
+          transition: 0.4s ease, background 0.25s ease 0.9s,
+            width 0.4s ease 0.3s;
+        }
+      }
+    }
   }
 
   &.menu-active {
@@ -800,7 +809,7 @@ header {
         left: $body-padding-md;
         bottom: calc(
           var(--bottom-distance-social-media) - 56px
-        ); // Maintain 4px in scroll.js as well - search banana
+        ); // Maintain 56px in scroll.js as well - search banana
       }
 
       @include mq-max("sm") {
@@ -1048,12 +1057,28 @@ section {
   @include mq-max("sm") {
     padding: 96px $body-padding-sm;
   }
+
+  &.hero-section {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50% 0;
+      width: 100vw;
+      height: 100%;
+      background: linear-gradient($grey-light, $white);
+      z-index: -1;
+    }
+  }
 }
 
 footer {
-  padding: $body-padding;
-  position: relative;
   @include column-center;
+  position: relative;
+  padding: $body-padding;
   gap: 248px;
 
   @include mq-max("xxl") {
@@ -1071,6 +1096,18 @@ footer {
 
   & > * {
     width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(0deg, $grey-light, $white);
+    z-index: -1;
   }
 
   .site-footer__top {

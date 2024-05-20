@@ -24,7 +24,7 @@
   font-weight: 700;
 }
 :root {
-  --background-color: #faf8f4;
+  --background-color: #fdfaf5;
   --primary-font-color: #0e0e0e;
   --secondary-font-color: #898c83;
   --link-color: #0e0e0e;
@@ -343,7 +343,6 @@ header .header-links {
   width: calc(100% - 128px);
   max-width: 1920px;
   top: 68px;
-  z-index: 0;
 }
 @media screen and (min-width: 1921px) {
   header .header-links {
@@ -763,7 +762,6 @@ header .cta-wrapper .cta-1 {
   position: relative;
   text-transform: uppercase;
   color: var(--primary-font-color);
-  background: var(--background-color);
   border: 1px solid var(--primary-font-color);
   border-radius: 24px;
   isolation: isolate;
@@ -778,7 +776,7 @@ header .cta-wrapper .cta-1 {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper .cta-1 {
-    transition: 0.4s ease, background 0.25s ease 0.9s, width 0.4s ease 0.3s;
+    transition: 0.4s ease, background 0.25s ease 0s, width 0.4s ease 0.3s;
   }
 }
 header .cta-wrapper .cta-1:hover::after, header .cta-wrapper .cta-1:focus::after {
@@ -1155,6 +1153,14 @@ header.scroll-active .social-media-wrapper .social-media-toggle__text {
 @media screen and (max-width: 768px) {
   header.scroll-active .social-media-wrapper .social-media-toggle__text {
     translate: 0 -1px;
+  }
+}
+header.scroll-active .cta-wrapper .cta-1 {
+  background: var(--background-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .cta-wrapper .cta-1 {
+    transition: 0.4s ease, background 0.25s ease 0.9s, width 0.4s ease 0.3s;
   }
 }
 header.menu-active .header-logo:hover .letter-wrapper__letter, header.menu-active .header-logo:focus .letter-wrapper__letter {
@@ -1558,14 +1564,28 @@ section {
     padding: 96px 16px;
   }
 }
+section.hero-section {
+  position: relative;
+}
+section.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(#f8f1e4, #fdfaf5);
+  z-index: -1;
+}
 
 footer {
-  padding: 64px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding: 64px;
   gap: 248px;
 }
 @media screen and (max-width: 1512px) {
@@ -1586,6 +1606,17 @@ footer {
 }
 footer > * {
   width: 100%;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% 0;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(0deg, #f8f1e4, #fdfaf5);
+  z-index: -1;
 }
 footer .site-footer__top {
   display: flex;

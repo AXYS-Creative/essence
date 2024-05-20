@@ -74,13 +74,13 @@ const closeNav = () => {
   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
 };
 
-// This may not be needed since most links will take the user to a new page and refresh
-navLinks.forEach((link) => {
-  // prevent-nav-close is used for links that take the user to a new page.
-  if (!link.classList.contains("prevent-nav-close")) {
-    link.addEventListener("click", closeNav);
-  }
-});
+// // Prevent certain navlinks from closing the nav (may not be needed)
+// navLinks.forEach((link) => {
+//   // prevent-nav-close is used for links that take the user to a new page.
+//   if (!link.classList.contains("prevent-nav-close")) {
+//     link.addEventListener("click", closeNav);
+//   }
+// });
 
 menuBtn.addEventListener("click", toggleNav);
 
@@ -136,10 +136,10 @@ const handleNavGlide = () => {
   const queryMdHandler = (e) => {
     if (e.matches) {
       navLinksWrapper.style.translate = `0 0`;
-      window.addEventListener("mousemove", handleNavLinksWrapper);
+      navLinksWrapper.addEventListener("mousemove", handleNavLinksWrapper);
     } else {
       navLinksWrapper.style.translate = `24px 0`; // body-padding-md
-      window.removeEventListener("mousemove", handleNavLinksWrapper);
+      navLinksWrapper.removeEventListener("mousemove", handleNavLinksWrapper);
 
       keyboardAccessibleNavLinks(0, 0, 24);
     }
