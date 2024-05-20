@@ -1,5 +1,5 @@
 ---
-title: Dedicating Time to What Truly Matters
+title: Dedicating Time for What Truly Matters
 description: This post explores the importance of intentionally allocating time
   to the aspects of life that truly matter to you. Learn how to make conscious
   choices that align with your core values and priorities, leading to a more
@@ -10,6 +10,7 @@ tags:
   - emotion
   - general
 ---
+
 **The Importance of Prioritizing**
 
 In a world filled with endless tasks and distractions, it’s easy to lose sight of what’s truly important. Dedicating time to what matters most isn’t just about finding balance; it’s about living with purpose and intention. This means making conscious choices about how you spend your time and energy.
@@ -38,6 +39,6 @@ One of the toughest but most necessary skills in dedicating time to what matters
 
 Your priorities may shift as your life changes, so it’s important to regularly review and adjust your goals and schedule. This ensures that you continue to dedicate time to what’s truly important, even as your circumstances evolve.
 
-- - -
+---
 
 By taking these steps to dedicate time to what truly matters, you can live a more intentional and satisfying life. It’s not just about doing more; it’s about doing what’s right for you and aligning your daily actions with your deepest values and aspirations.

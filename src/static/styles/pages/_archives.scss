@@ -7,7 +7,6 @@
   }
 
   .archive-header {
-    // border: $test;
     flex: 1.5;
 
     &__heading {
@@ -37,7 +36,7 @@
 
     &__category {
       @include column-start;
-      gap: 12px;
+      gap: 24px;
     }
 
     &__heading {
@@ -52,7 +51,13 @@
     }
 
     &__link {
+      font-size: 20px;
+      font-weight: 300;
       font-style: normal;
+
+      @include mq-max("sm") {
+        font-size: 16px;
+      }
     }
   }
 }

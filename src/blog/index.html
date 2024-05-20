@@ -21,7 +21,7 @@ heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where c
     {% if "popular" in post.data.tags %}
   <a
     href="{{ post.url | url }}"
-    class="archive-list__link h6 tab-element-page classic-link"
+    class="archive-list__link tab-element-page classic-link"
   >
     {{ post.data.title | default('Untitled') }}
   </a>
@@ -37,7 +37,7 @@ heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where c
   <!-- <article class="archive-list__article"> -->
   <a
     href="{{ post.url | url }}"
-    class="archive-list__link h6 tab-element-page classic-link"
+    class="archive-list__link tab-element-page classic-link"
   >
     <!-- prettier-ignore -->
     {% if post.data.title %} 

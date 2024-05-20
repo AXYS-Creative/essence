@@ -2304,7 +2304,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 12px;
+  gap: 24px;
 }
 .archive-section .archive-list__heading {
   text-transform: lowercase;
@@ -2316,7 +2316,14 @@ img {
   text-transform: capitalize;
 }
 .archive-section .archive-list__link {
+  font-size: 20px;
+  font-weight: 300;
   font-style: normal;
+}
+@media screen and (max-width: 480px) {
+  .archive-section .archive-list__link {
+    font-size: 16px;
+  }
 }
 
 .essence-paragraph {
