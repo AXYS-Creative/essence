@@ -9,6 +9,7 @@ tags:
   - general
   - physical
   - emotion
+  - popular
 ---
 Are you ready to reset your life, clear your mind, and simplify your surroundings? Over the next 30 days, this challenge will guide you through various activities designed to foster a minimalist lifestyle. Each day, you'll be given a task that helps reduce clutter—both physically and mentally.
 
