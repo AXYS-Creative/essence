@@ -1,15 +1,15 @@
 .essence-paragraph {
   @include column-center;
-  padding: 316px $body-padding * 2.5;
+  padding: 316px $content-padding;
   gap: 48px;
 
   @include mq-max("xxl") {
     gap: 32px;
-    padding: 296px $body-padding-xxl * 2.5;
+    padding: 296px $content-padding-xxl;
   }
   @include mq-max("md") {
     gap: 24px;
-    padding: 164px $body-padding-md * 2;
+    padding: 164px $content-padding-md;
   }
 
   @include mq-max("sm") {

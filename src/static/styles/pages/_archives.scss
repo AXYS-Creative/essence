@@ -1,13 +1,54 @@
 .archive-section {
-  display: flex;
+  $header-height: 280px;
+  $header-height-xxl: 256px;
+  $header-height-xl: 236px;
+
+  @include row-start;
+  padding-inline: 248px;
   gap: 48px;
+
+  @include mq-max("xxl") {
+    padding-inline: 196px;
+  }
+
+  @include mq-max("xl") {
+    padding-inline: $content-padding-xxl;
+    gap: 24px;
+  }
+
+  @include mq-max("lg") {
+    gap: 16px;
+  }
 
   @include mq-max("md") {
     flex-direction: column;
+    padding-inline: $content-padding-md;
   }
 
   .archive-header {
+    position: sticky;
+    top: 50%;
+    translate: 0 -50%;
     flex: 1.5;
+    height: $header-height;
+
+    @include mq-max("xxl") {
+      flex: 1.25;
+      height: $header-height-xxl;
+    }
+
+    @include mq-max("xl") {
+      height: $header-height-xl;
+    }
+
+    @include mq-max("lg") {
+      flex: 1.12;
+    }
+
+    @include mq-max("md") {
+      position: static;
+      margin-bottom: 64px;
+    }
 
     &__heading {
       text-transform: lowercase;
@@ -21,7 +62,11 @@
 
     &__sub-heading {
       font-style: normal;
-      width: 50%;
+      width: 420px;
+
+      @include mq-max("xl") {
+        width: 360px;
+      }
     }
   }
 
@@ -29,9 +74,15 @@
     @include column-start;
     gap: 96px;
     flex: 1;
+    translate: 0 calc($header-height / -2);
 
     @include mq-max("xxl") {
       gap: 64px;
+      translate: 0 calc($header-height-xxl / -2);
+    }
+
+    @include mq-max("xxl") {
+      translate: 0 calc($header-height-xl / -2);
     }
 
     &__category {
@@ -40,10 +91,16 @@
     }
 
     &__heading {
+      align-self: stretch;
       text-transform: lowercase;
       padding-block-end: 24px;
       margin-block-end: 24px;
       border-block-end: 2px solid var(--secondary-font-color);
+
+      @include mq-max("xl") {
+        padding-block-end: 16px;
+        margin-block-end: 16px;
+      }
 
       &::first-letter {
         text-transform: capitalize;
@@ -54,6 +111,14 @@
       font-size: 20px;
       font-weight: 300;
       font-style: normal;
+
+      @include mq-max("xl") {
+        font-size: 16px;
+      }
+
+      @include mq-max("md") {
+        font-size: 18px;
+      }
 
       @include mq-max("sm") {
         font-size: 16px;

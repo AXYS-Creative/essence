@@ -2264,15 +2264,61 @@ img {
 
 .archive-section {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline: 248px;
   gap: 48px;
+}
+@media screen and (max-width: 1512px) {
+  .archive-section {
+    padding-inline: 196px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .archive-section {
+    padding-inline: 100px;
+    gap: 24px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .archive-section {
+    gap: 16px;
+  }
 }
 @media screen and (max-width: 768px) {
   .archive-section {
     flex-direction: column;
+    padding-inline: 48px;
   }
 }
 .archive-section .archive-header {
+  position: sticky;
+  top: 50%;
+  translate: 0 -50%;
   flex: 1.5;
+  height: 280px;
+}
+@media screen and (max-width: 1512px) {
+  .archive-section .archive-header {
+    flex: 1.25;
+    height: 256px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .archive-section .archive-header {
+    height: 236px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .archive-section .archive-header {
+    flex: 1.12;
+  }
+}
+@media screen and (max-width: 768px) {
+  .archive-section .archive-header {
+    position: static;
+    margin-bottom: 64px;
+  }
 }
 .archive-section .archive-header__heading {
   text-transform: lowercase;
@@ -2284,7 +2330,12 @@ img {
 }
 .archive-section .archive-header__sub-heading {
   font-style: normal;
-  width: 50%;
+  width: 420px;
+}
+@media screen and (max-width: 1200px) {
+  .archive-section .archive-header__sub-heading {
+    width: 360px;
+  }
 }
 .archive-section .archive-list {
   display: flex;
@@ -2293,10 +2344,17 @@ img {
   align-items: flex-start;
   gap: 96px;
   flex: 1;
+  translate: 0 -140px;
 }
 @media screen and (max-width: 1512px) {
   .archive-section .archive-list {
     gap: 64px;
+    translate: 0 -128px;
+  }
+}
+@media screen and (max-width: 1512px) {
+  .archive-section .archive-list {
+    translate: 0 -118px;
   }
 }
 .archive-section .archive-list__category {
@@ -2307,10 +2365,17 @@ img {
   gap: 24px;
 }
 .archive-section .archive-list__heading {
+  align-self: stretch;
   text-transform: lowercase;
   padding-block-end: 24px;
   margin-block-end: 24px;
   border-block-end: 2px solid var(--secondary-font-color);
+}
+@media screen and (max-width: 1200px) {
+  .archive-section .archive-list__heading {
+    padding-block-end: 16px;
+    margin-block-end: 16px;
+  }
 }
 .archive-section .archive-list__heading::first-letter {
   text-transform: capitalize;
@@ -2319,6 +2384,16 @@ img {
   font-size: 20px;
   font-weight: 300;
   font-style: normal;
+}
+@media screen and (max-width: 1200px) {
+  .archive-section .archive-list__link {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .archive-section .archive-list__link {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 480px) {
   .archive-section .archive-list__link {
