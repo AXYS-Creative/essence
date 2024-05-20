@@ -233,6 +233,7 @@ header .header-logo {
   align-items: center;
   gap: 12px;
   top: 64px;
+  z-index: 6;
 }
 @media screen and (min-width: 1921px) {
   header .header-logo {
@@ -570,11 +571,6 @@ header .social-media-wrapper {
 @media screen and (max-width: 480px) {
   header .social-media-wrapper {
     left: 16px;
-  }
-}
-@media (max-height: 420px) {
-  header .social-media-wrapper {
-    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1332,8 +1328,6 @@ nav .width-constraint {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    overflow: auto;
-    padding-inline-end: 0;
   }
 }
 nav .nav-links {
@@ -1344,20 +1338,7 @@ nav .nav-links {
   gap: 80px;
   width: calc(50% - 96px);
   pointer-events: none;
-  transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1);
-}
-@media screen and (max-width: 768px) {
-  nav .nav-links {
-    width: 100%;
-  }
-}
-nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
-  opacity: 0.5;
-}
-@media (max-height: 480px) {
-  nav .nav-links {
-    padding: 360px 0 64px;
-  }
+  transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
 }
 @media screen and (max-width: 1512px) {
   nav .nav-links {
@@ -1373,13 +1354,30 @@ nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
 @media screen and (max-width: 768px) {
   nav .nav-links {
     gap: 12px;
-    padding: 64px 0;
     translate: 24px 0;
+  }
+}
+@media (max-height: 520px) {
+  nav .nav-links {
+    justify-content: flex-start;
+    position: absolute;
+    top: 80px;
+    width: calc(100% - 48px);
+    height: calc(100vh - 152px);
+    height: calc(100dvh - 152px);
+    overflow: auto;
+    padding: 8px 0;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  nav .nav-links:hover .nav-link, nav .nav-links:focus-within .nav-link {
+    opacity: 0.5;
   }
 }
 nav .nav-links li {
   display: flex;
   overflow: hidden;
+  flex-shrink: 0;
 }
 nav .nav-links li:focus-within {
   border-radius: 4px;
@@ -1460,9 +1458,6 @@ nav .nav-links .nav-link {
   height: 100%;
   transition: 0.2s ease;
 }
-nav .nav-links .nav-link:hover, nav .nav-links .nav-link:focus {
-  opacity: 1;
-}
 @media screen and (max-width: 1024px) {
   nav .nav-links .nav-link {
     font-size: 48px;
@@ -1472,6 +1467,9 @@ nav .nav-links .nav-link:hover, nav .nav-links .nav-link:focus {
   nav .nav-links .nav-link {
     font-size: 36px;
   }
+}
+nav .nav-links .nav-link:hover, nav .nav-links .nav-link:focus {
+  opacity: 1;
 }
 nav .nav-links .nav-link__number {
   font-size: 14px;
@@ -1640,12 +1638,6 @@ footer .site-footer__top .footer-nav-links {
   height: 212px;
   margin-inline-start: 164px;
 }
-footer .site-footer__top .footer-nav-links:hover .footer-nav-link, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link {
-  opacity: 0.5;
-}
-footer .site-footer__top .footer-nav-links:hover .footer-nav-link:hover, footer .site-footer__top .footer-nav-links:hover .footer-nav-link:focus, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link:hover, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link:focus {
-  opacity: 1;
-}
 @media screen and (max-width: 1200px) {
   footer .site-footer__top .footer-nav-links {
     margin-inline-start: 96px;
@@ -1659,6 +1651,12 @@ footer .site-footer__top .footer-nav-links:hover .footer-nav-link:hover, footer 
     height: 180px;
     width: 186px;
   }
+}
+footer .site-footer__top .footer-nav-links:hover .footer-nav-link, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link {
+  opacity: 0.5;
+}
+footer .site-footer__top .footer-nav-links:hover .footer-nav-link:hover, footer .site-footer__top .footer-nav-links:hover .footer-nav-link:focus, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link:hover, footer .site-footer__top .footer-nav-links:focus-within .footer-nav-link:focus {
+  opacity: 1;
 }
 footer .site-footer__top .footer-nav-links .footer-nav-link {
   text-transform: uppercase;
@@ -1784,7 +1782,7 @@ footer .site-footer__bottom .brand-name-wrapper__brand-name {
 }
 @media screen and (max-width: 768px) {
   footer .site-footer__bottom .brand-name-wrapper__brand-name {
-    font-size: 22.5vw;
+    font-size: 22.3vw;
   }
 }
 @media screen and (max-width: 480px) {
@@ -2240,6 +2238,11 @@ img {
 @media screen and (max-width: 480px) {
   .home-hero {
     padding-block: 248px;
+  }
+}
+@media (max-height: 520px) {
+  .home-hero {
+    padding-block: 128px;
   }
 }
 .home-hero h1,

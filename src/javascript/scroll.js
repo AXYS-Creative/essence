@@ -1,4 +1,4 @@
-import { maxXxl, maxXl, maxLg, maxMd } from "./utility.js";
+import { maxXxl, maxXl, maxLg, minMd } from "./utility.js";
 
 export let scrollPosition = 0;
 export let scrollFromTop;
@@ -12,6 +12,8 @@ export const siteHeader = document.querySelector(".site-header"),
 const heroSubText = document.querySelector(".hero-section__subtext"),
   siteFooter = document.querySelector(".site-footer"),
   footerNavLinks = document.querySelector(".footer-nav-links"),
+  firstFooterNavLink = footerNavLinks.querySelector("li:first-of-type > a"),
+  headerLogo = document.querySelector(".header-logo"),
   footerCtaTitle = document.querySelector(".footer-cta-title");
 
 const headerLinks = document.querySelectorAll(".header-links__link");
@@ -22,6 +24,18 @@ let bodyPadding = parseInt(
   getComputedStyle(rootElem).getPropertyValue("--body-padding"),
   10
 );
+
+const tabPositioning = () => {
+  firstFooterNavLink.addEventListener("focus", () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+
+  headerLogo.addEventListener("focus", () => {
+    window.scrollTo(0, 0);
+  });
+};
+
+tabPositioning();
 
 export const throttle = (func, limit) => {
   let lastFunc;
@@ -120,10 +134,17 @@ export const updateScrollDependentElements = (scrollPosition) => {
     }
   };
 
-  handleScrollBottom(
-    footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
-    footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
-  );
+  if (minMd.matches) {
+    handleScrollBottom(
+      footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
+      footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
+    );
+  } else {
+    handleScrollBottom(
+      footerLinksDistance - bodyPadding - 16,
+      footerCtaTitleDistance - bodyPadding - 20
+    );
+  }
 
   // CTA position based on different pages
   if (heroSubText) {

@@ -10,7 +10,7 @@ import {
 export const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
-  headerLogo = document.querySelector(".header-logo"),
+  // headerLogo = document.querySelector(".header-logo"),
   navLinksWrapper = document.querySelector(".nav-links");
 
 const navLinks = document.querySelectorAll(".nav-link"),
@@ -58,21 +58,21 @@ const toggleNav = () => {
   document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
 };
 
-const closeNav = () => {
-  // Pevent scroll when nav is open
-  document.body.style = "overflow: auto;";
+// const closeNav = () => {
+//   // Pevent scroll when nav is open
+//   document.body.style = "overflow: auto;";
 
-  navMenu.classList.remove("menu-active");
-  menuBtn.classList.remove("menu-active");
-  siteHeader.classList.remove("menu-active");
+//   navMenu.classList.remove("menu-active");
+//   menuBtn.classList.remove("menu-active");
+//   siteHeader.classList.remove("menu-active");
 
-  navMenu.setAttribute("aria-hidden", "true");
-  menuBtn.setAttribute("aria-expanded", "false");
+//   navMenu.setAttribute("aria-hidden", "true");
+//   menuBtn.setAttribute("aria-expanded", "false");
 
-  // Reset tabindex for tabElementsPage and tabElementsNav
-  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
-  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
-};
+//   // Reset tabindex for tabElementsPage and tabElementsNav
+//   tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
+//   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
+// };
 
 // // Prevent certain navlinks from closing the nav (may not be needed)
 // navLinks.forEach((link) => {
@@ -84,7 +84,7 @@ const closeNav = () => {
 
 menuBtn.addEventListener("click", toggleNav);
 
-headerLogo.addEventListener("click", closeNav);
+// headerLogo.addEventListener("click", closeNav);
 
 //
 // Nav LinksWrapper based on mouse vertical mouse movement (responsive & accessible)

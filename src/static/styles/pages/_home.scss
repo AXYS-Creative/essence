@@ -23,6 +23,10 @@
     padding-block: 248px;
   }
 
+  @media (max-height: 520px) {
+    padding-block: 128px;
+  }
+
   h1,
   p {
     text-align: center;
