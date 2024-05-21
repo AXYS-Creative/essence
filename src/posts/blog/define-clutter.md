@@ -3,12 +3,13 @@ title: Define Clutter
 description: In this post, we explore the concept of clutter—what it is, why it
   matters, and how it impacts our lives. Understanding clutter is the first step
   towards a more organized and mindful existence.
-author: Wayne Kerr
-date: 2024-05-20T13:59:19.445Z
+author: Wayne Moss
+date: 2024-01-15T13:59:19.445Z
 tags:
   - physical
   - popular
 ---
+
 **What is Clutter?**
 
 Clutter can be defined as anything that does not add value to your life or actively takes away space, time, and energy from what truly matters. It goes beyond physical items piling up in your home—it includes outdated ideas, bad habits, and unnecessary commitments that drain your mental and emotional resources.

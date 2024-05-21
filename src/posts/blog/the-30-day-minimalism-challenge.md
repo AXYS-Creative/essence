@@ -3,14 +3,15 @@ title: The 30-Day Minimalism Challenge
 description: Embark on a 30-day journey to transform your life by simplifying
   it. This challenge will guide you through daily actions to declutter not just
   your physical space, but also your mind and schedule.
-author: Ben Dover
-date: 2024-05-19T00:15:56.542Z
+author: Ben Stowe
+date: 2023-07-19T00:15:56.542Z
 tags:
   - general
   - physical
   - emotion
   - popular
 ---
+
 Are you ready to reset your life, clear your mind, and simplify your surroundings? Over the next 30 days, this challenge will guide you through various activities designed to foster a minimalist lifestyle. Each day, you'll be given a task that helps reduce clutter—both physically and mentally.
 
 **Week 1: Declutter Your Space**

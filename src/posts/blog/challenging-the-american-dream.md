@@ -4,14 +4,15 @@ description: This post examines the traditional concept of the American Dream
   and explores alternative viewpoints that question its relevance and
   inclusivity in today's society. Dive into a thought-provoking discussion on
   how our aspirations and measures of success might be evolving.
-author: Anya Neaz
-date: 2024-05-20T14:17:08.187Z
+author: Maria Nieves
+date: 2023-05-12T14:17:08.187Z
 tags:
   - popular
   - general
 ---
-**Rethinking the American Dream**\
-\
+
+**Rethinking the American Dream**
+
 The American Dream, traditionally defined by a house with a white picket fence, a stable job, and upward socioeconomic mobility, has been a guiding narrative for generations. However, as we delve deeper into the 21st century, it's worth asking: Does this dream still hold relevance for everyone, and at what cost does it come?
 
 **The Shift in Economic Realities**

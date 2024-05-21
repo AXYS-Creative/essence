@@ -4,11 +4,12 @@ description: Explore key daily practices that embody the principles of
   essentialism, helping you to simplify your life and focus on what truly
   matters. These habits are designed to streamline your day, enhance your focus,
   and increase your overall satisfaction with life.
-author: Ben Dover
+author: Ben Stowe
 date: 2024-05-20T15:28:42.548Z
 tags:
   - general
 ---
+
 **Embracing Essentialism Every Day**
 
 Essentialism isn’t just a mindset; it’s a practical approach to daily life. By adopting specific habits, you can consistently focus on your most important goals and commitments, reducing stress and enhancing productivity. Here are some daily practices that can help you embody essentialism in your everyday routine.

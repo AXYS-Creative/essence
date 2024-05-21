@@ -4,6 +4,11 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 
 module.exports = function (eleventyConfig) {
+  // Add a custom filter for splitting strings
+  eleventyConfig.addFilter("split", (value, separator) =>
+    value.split(separator)
+  );
+
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
@@ -18,9 +23,9 @@ module.exports = function (eleventyConfig) {
   });
 
   // Adjust to include all markdown files in subdirectories
-  eleventyConfig.addCollection("posts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("./src/posts/**/*.md");
-  });
+  eleventyConfig.addCollection("posts", (collectionApi) =>
+    collectionApi.getFilteredByGlob("./src/posts/**/*.md")
+  );
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -41,7 +46,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/404.html": "404.html" }); // Copy it directly without making a sub directory
 
   // Minify HTML
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
     if (outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {

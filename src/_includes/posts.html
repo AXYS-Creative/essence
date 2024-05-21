@@ -2,12 +2,20 @@
 layout: app
 ---
 
-<section class="post-hero">
-  <h1>{{title}}</h1>
-  <p>
+<!-- prettier-ignore -->
+{% set pathParts = page.filePathStem | split('/') %} 
+{% set category =pathParts[2] %}
+<!-- prettier-ignore -->
+
+<section class="post-hero hero-section">
+  <span class="post-hero__category h6">{{ category | capitalize }}</span>
+  <h1 class="post-hero__heading">{{title}}</h1>
+  <p class="post-hero__author h6">
+    <span>
+      by {{ author }}
+    </span>
     <time>
-      {{ date | readableDate }} by
-      <a>{{ author }}</a>
+      {{ date | readableDate }}
     </time>
   </p>
 </section>

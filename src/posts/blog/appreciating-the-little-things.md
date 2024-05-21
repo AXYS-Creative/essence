@@ -3,11 +3,12 @@ title: Appreciating the Little Things
 description: This blog post highlights the importance of appreciating the small,
   often overlooked aspects of daily life. Discover how focusing on the little
   things can significantly enhance your overall happiness and satisfaction.
-author: Anya Neaz
+author: Maria Nieves
 date: 2024-05-20T15:22:54.927Z
 tags:
   - general
 ---
+
 **The Importance of Small Moments**
 
 In our pursuit of big goals and milestones, it's easy to overlook the small moments that make up the fabric of our daily lives. However, these little things—whether it's a warm cup of coffee, a smile from a stranger, or the comforting routine of a morning walk—can offer profound joy and grounding.

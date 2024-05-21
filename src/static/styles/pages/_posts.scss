@@ -1,0 +1,41 @@
+.post-hero {
+  padding-block-start: 360px;
+
+  @include mq-max("xxl") {
+    padding-block-start: 280px;
+  }
+
+  @include mq-max("xl") {
+    padding-block-start: 248px;
+  }
+
+  @include mq-max("lg") {
+    padding-block-start: 196px;
+  }
+
+  @include mq-max("md") {
+    padding-block-start: 164px;
+  }
+
+  @include mq-max("md") {
+    padding-block-start: 212px;
+  }
+
+  &__heading {
+    margin-block: 12px;
+  }
+
+  &__author {
+    font-style: normal;
+    @include column-start;
+    gap: 8px;
+
+    time {
+      font-size: 14px;
+
+      @include mq-max("md") {
+        font-size: 12px;
+      }
+    }
+  }
+}

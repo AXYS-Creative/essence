@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: $brand-font-family-body;
+  color: var(--primary-font-color);
 
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
@@ -1358,17 +1359,7 @@ h4 {
   @extend .h4;
 }
 
-p,
-span,
-figcaption,
-small {
-  color: var(--primary-font-color);
-  font-family: $brand-font-family-body;
-}
-
 a {
-  color: var(--primary-font-color);
-  font-family: $brand-font-family-body;
   text-decoration: none;
 }
 

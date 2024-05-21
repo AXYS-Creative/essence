@@ -4,12 +4,13 @@ description: This blog explores the transformative power of essentialism, a
   lifestyle choice focused on simplicity and prioritizing what truly matters.
   Join us as we delve into practical tips and inspiring stories to help you
   declutter your life and mind.
-author: Wayne Kerr
+author: Wayne Moss
 date: 2024-05-18T23:38:06.778Z
 tags:
   - popular
   - general
 ---
+
 **Introduction to Essentialism: The Path to a Focused Life**
 
 In a world brimming with choices, distractions, and perpetual busyness, essentialism offers a breath of fresh air. It's not just about decluttering your closet or downsizing your home; it's about honing in on what is truly essential. By stripping away the non-essential, we can give ourselves the freedom to focus on what truly matters.

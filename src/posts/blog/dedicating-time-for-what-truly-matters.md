@@ -4,7 +4,7 @@ description: This post explores the importance of intentionally allocating time
   to the aspects of life that truly matter to you. Learn how to make conscious
   choices that align with your core values and priorities, leading to a more
   fulfilling and balanced life.
-author: Wayne Kerr
+author: Wayne Moss
 date: 2024-05-20T15:30:32.840Z
 tags:
   - emotion

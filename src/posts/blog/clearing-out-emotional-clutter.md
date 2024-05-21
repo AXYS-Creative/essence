@@ -4,11 +4,12 @@ description: This blog post delves into the concept of emotional clutter—the
   unnecessary feelings and unresolved issues that can occupy our minds and
   hearts. Learn strategies to identify, process, and clear this type of clutter
   to achieve a healthier, more focused emotional state.
-author: Wayne Kerr
+author: Wayne Moss
 date: 2024-05-20T15:27:38.519Z
 tags:
   - emotion
 ---
+
 **Understanding Emotional Clutter**
 
 Emotional clutter refers to the accumulation of unresolved feelings, past grievances, and unhelpful thought patterns that weigh us down. Similar to how physical clutter obstructs our living spaces, emotional clutter obstructs our mental and emotional well-being, making it difficult to move forward or experience joy in the present.
