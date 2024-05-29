@@ -25,6 +25,10 @@
     padding-inline: $content-padding-md;
   }
 
+  @include mq-max("sm") {
+    padding-inline: $body-padding-sm;
+  }
+
   .archive-header {
     position: sticky;
     top: 50%;
@@ -47,7 +51,7 @@
 
     @include mq-max("md") {
       position: static;
-      margin-bottom: 64px;
+      margin-bottom: 96px;
     }
 
     &__heading {
@@ -65,7 +69,15 @@
       width: 420px;
 
       @include mq-max("xl") {
-        width: 360px;
+        width: 364px;
+      }
+
+      @include mq-max("md") {
+        width: 328px;
+      }
+
+      @include mq-max("sm") {
+        width: 100%;
       }
     }
   }
@@ -88,6 +100,10 @@
     &__category {
       @include column-start;
       gap: 24px;
+
+      @include mq-max("md") {
+        gap: 16px;
+      }
     }
 
     &__heading {
@@ -100,6 +116,10 @@
       @include mq-max("xl") {
         padding-block-end: 16px;
         margin-block-end: 16px;
+      }
+
+      @include mq-max("md") {
+        margin-block-end: 10px;
       }
 
       &::first-letter {
@@ -123,6 +143,29 @@
       @include mq-max("sm") {
         font-size: 16px;
       }
+    }
+  }
+}
+
+.archive-prefooter {
+  @include row-center;
+
+  &__heading {
+    // width: 596px; // h3
+    width: 464px; // h5
+    text-transform: lowercase;
+    text-align: center;
+
+    @include mq-max("xxl") {
+      width: 316px; // h5
+    }
+
+    @include mq-max("xl") {
+      width: 316px; // h5
+    }
+
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
 }

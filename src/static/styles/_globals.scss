@@ -204,6 +204,10 @@ header {
       top: 50px;
     }
 
+    @include mq-max("sm") {
+      scale: 0.9;
+    }
+
     .menu-btn {
       $btn-size: 18px; // also calculates the gap - keep it an even number
 
@@ -425,7 +429,9 @@ header {
       overflow: hidden;
 
       @include mq-motion-allow {
+        opacity: 0;
         transition: 0.4s ease, background 0.25s ease 0s, width 0.4s ease 0.3s;
+        animation: fade-in 0.5s ease 0.75s forwards;
       }
 
       &:hover,
@@ -1045,14 +1051,15 @@ nav {
 }
 
 section {
-  padding: 224px $body-padding * 2.5;
+  // padding: 224px $content-padding;
+  padding: 196px $content-padding;
 
   @include mq-max("xxl") {
-    padding: 148px $body-padding-xxl * 2.5;
+    padding: 148px $content-padding-xxl;
   }
 
   @include mq-max("md") {
-    padding: 96px $body-padding-md * 2.5;
+    padding: 96px $content-padding-md;
   }
 
   @include mq-max("sm") {
@@ -1201,14 +1208,13 @@ footer {
       &__locations {
         @include row-center(flex-start);
         gap: 64px;
-        translate: 16px 0;
 
         @include mq-max("xxl") {
           gap: 48px;
-          translate: 10px 0;
         }
 
         @include mq-max("lg") {
+          translate: calc(0.5vw + 4px) 0;
           gap: 16px;
         }
 
@@ -1245,9 +1251,11 @@ footer {
         line-height: 1;
         display: inline-flex;
         overflow: hidden;
+        translate: -16px 0;
 
         @include mq-max("xxl") {
           font-size: 164px;
+          translate: -10px 0;
         }
 
         @include mq-max("xl") {
@@ -1357,6 +1365,12 @@ h3 {
 }
 h4 {
   @extend .h4;
+}
+h5 {
+  @extend .h5;
+}
+h6 {
+  @extend .h6;
 }
 
 a {
