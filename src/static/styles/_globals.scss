@@ -1132,10 +1132,16 @@ footer {
       gap: 40px;
       width: 212px;
       height: 212px;
-      margin-inline-start: 164px;
+      margin-inline-start: calc($content-padding-thin - $body-padding);
+
+      @include mq-max("xxl") {
+        margin-inline-start: calc(
+          $content-padding-thin-xxl - $body-padding-xxl
+        );
+      }
 
       @include mq-max("xl") {
-        margin-inline-start: 96px;
+        margin-inline-start: calc($content-padding-thin-xl - $body-padding-xxl);
       }
 
       @include mq-max("md") {

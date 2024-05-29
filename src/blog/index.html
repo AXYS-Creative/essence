@@ -1,10 +1,6 @@
 ---
 title: "ESSENCE • Blog"
 layout: archives
-cta1:
-  url: "/"
-  title1: "Join"
-  title2: "newsletter"
 
 category: "Blog"
 subheading: "Dive deeper into a life less ordinary, enriched by the essentials."
@@ -12,12 +8,12 @@ subheading: "Dive deeper into a life less ordinary, enriched by the essentials."
 heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where clarity meets inspiration. Each post is crafted with intention, guiding you to reflect on what truly matters. Join us on a journey of discovery, as we explore the art of simplicity and the profound impact of living with purpose."
 ---
 
-{% set bloglist = collections.blog | sort(attribute='data.title') %}
+{% set listContent = collections.blog | sort(attribute='data.title') %}
 
 <div class="archive-list__category">
   <h3 class="archive-list__heading">Most popular</h3>
   <!-- prettier-ignore -->
-  {% for post in bloglist | reverse %} 
+  {% for post in listContent | reverse %} 
     {% if "popular" in post.data.tags %}
   <a
     href="{{ post.url | url }}"
@@ -32,9 +28,8 @@ heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where c
 <div class="archive-list__category">
   <h3 class="archive-list__heading">All blogs</h3>
 
-  {% for post in bloglist %}
+  {% for post in listContent %}
 
-  <!-- <article class="archive-list__article"> -->
   <a
     href="{{ post.url | url }}"
     class="archive-list__link tab-element-page classic-link"
@@ -47,20 +42,5 @@ heroParagraph: "ESSENCE blog serves as a sanctuary for thoughts, a space where c
           {%endif %}
     <!-- prettier-ignore -->
   </a>
-
-  <!-- <p class="">
-      <time>
-        {{ post.date | readableDate }} by
-        <a>{{ post.data.author }}</a>
-      </time>
-    </p>
-    {% if post.data.description %}
-    <p class="">{{ post.data.description }}</p>
-    {% endif %} -->
-
-  <!-- <p>
-      <a href="{{ post.url | url }}" class="tab-element-page"> Read more → </a>
-    </p> -->
-  <!-- </article> -->
   {% endfor %}
 </div>

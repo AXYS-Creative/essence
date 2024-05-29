@@ -191,6 +191,24 @@ $min-breakpoints: (
   }
 }
 
+@mixin body-font-styles {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+
+  @include mq-max("xl") {
+    font-size: 16px;
+  }
+
+  @include mq-max("md") {
+    font-size: 18px;
+  }
+
+  @include mq-max("sm") {
+    font-size: 16px;
+  }
+}
+
 //
 // Flex Layout
 //
@@ -250,6 +268,10 @@ $min-breakpoints: (
 
   @include mq-max("xxl") {
     padding-inline: $content-padding-thin-xxl;
+  }
+
+  @include mq-max("xl") {
+    padding-inline: $content-padding-thin-xl;
   }
 
   @include mq-max("md") {

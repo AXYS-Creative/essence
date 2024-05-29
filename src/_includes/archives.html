@@ -2,6 +2,8 @@
 layout: app
 ---
 
+{% set latestPost = collections.blog[0] %}
+
 <section class="essence-paragraph hero-section hero-paragraph">
   <h1 class="essence-paragraph__heading">
     Our {{ category }}
@@ -21,7 +23,44 @@ layout: app
       {{ category }} <br />
       archives
     </h2>
-    <p class="h6 archive-header__sub-heading">{{ subheading }}</p>
+    <p class="archive-header__sub-heading">{{ subheading }}</p>
+    {% if page.url === "/blog/" %}
+    <a href="{{ latestPost.url }}" class="simple-link">
+      <span class="simple-link__letters" aria-label="learn more">
+        <span class="simple-link__letter">V</span>
+        <span class="simple-link__letter">i</span>
+        <span class="simple-link__letter">e</span>
+        <span class="simple-link__letter">w</span>
+        &nbsp;
+        <span class="simple-link__letter">L</span>
+        <span class="simple-link__letter">a</span>
+        <span class="simple-link__letter">t</span>
+        <span class="simple-link__letter">e</span>
+        <span class="simple-link__letter">s</span>
+        <span class="simple-link__letter">t</span>
+      </span>
+      <img
+        class="icon-arrow-right"
+        src="./static/img/icons/arrow-right.svg"
+        alt="decorative right arrow"
+        role="presentation"
+    /></a>
+    {%endif%} {% if page.url === "/podcasts/" %}
+    <h3 class="h6 archive-header__cta">
+      Subscribe
+      <img
+        class="icon-arrow-down"
+        src="./static/img/icons/angle-arrow-down.svg"
+        alt="decorative angled arrow"
+        role="presentation"
+      />
+    </h3>
+    <div class="archive-header__cta-options">
+      <a href="" class="classic-link">Apple</a>
+      <a href="" class="classic-link">Spotify</a>
+      <a href="" class="classic-link">Youtube</a>
+    </div>
+    {%endif%}
   </div>
 
   <div class="archive-list">

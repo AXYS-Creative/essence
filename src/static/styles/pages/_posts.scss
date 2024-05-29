@@ -46,9 +46,10 @@
   @include thin-section;
 
   p:has(strong) {
-    @extend .h6;
+    @extend .h5;
     font-style: normal;
-    margin-block-end: 8px;
+    text-transform: capitalize;
+    margin-block-end: 12px;
 
     strong {
       font-weight: 400;
@@ -56,6 +57,6 @@
   }
 
   p {
-    margin-block-end: 24px;
+    margin-block-end: 48px;
   }
 }
