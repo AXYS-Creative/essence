@@ -183,6 +183,11 @@
     font-size: 28px;
   }
 }
+@media screen and (max-width: 480px) {
+  .h5, h5 {
+    font-size: 20px;
+  }
+}
 
 .h6, .essence-paragraph__heading, .simple-link, h6, footer .site-footer__top .footer-cta-title {
   font-family: "Atyp Display", sans-serif;

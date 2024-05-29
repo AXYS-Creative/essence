@@ -1,4 +1,4 @@
-import { maxXxl, maxXl, maxLg, minMd } from "./utility.js";
+import { maxXxl, maxXl, maxLg, maxMd, minMd, maxSm } from "./utility.js";
 
 export let scrollPosition = 0;
 export let scrollFromTop;
@@ -134,15 +134,20 @@ export const updateScrollDependentElements = (scrollPosition) => {
     }
   };
 
-  if (minMd.matches) {
+  if (maxSm.matches) {
     handleScrollBottom(
-      footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
-      footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
+      footerLinksDistance - bodyPadding - 36,
+      footerCtaTitleDistance - bodyPadding - 24
     );
-  } else {
+  } else if (maxMd.matches) {
     handleScrollBottom(
       footerLinksDistance - bodyPadding - 16,
       footerCtaTitleDistance - bodyPadding - 20
+    );
+  } else {
+    handleScrollBottom(
+      footerLinksDistance - bodyPadding - 4, // Maintain 4px in _globals.scss as well - search banana
+      footerCtaTitleDistance - bodyPadding - 56 // Maintain 56px in _globals.scss as well
     );
   }
 
