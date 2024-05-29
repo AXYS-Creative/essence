@@ -1,4 +1,5 @@
 .post-hero {
+  @include thin-section;
   padding-block-start: 360px;
 
   @include mq-max("xxl") {
@@ -23,6 +24,7 @@
 
   &__heading {
     margin-block: 12px;
+    text-transform: capitalize;
   }
 
   &__author {
@@ -37,5 +39,23 @@
         font-size: 12px;
       }
     }
+  }
+}
+
+.post-body {
+  @include thin-section;
+
+  p:has(strong) {
+    @extend .h6;
+    font-style: normal;
+    margin-block-end: 8px;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  p {
+    margin-block-end: 24px;
   }
 }

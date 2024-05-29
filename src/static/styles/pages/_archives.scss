@@ -151,17 +151,16 @@
   @include row-center;
 
   &__heading {
-    // width: 596px; // h3
-    width: 464px; // h5
+    width: 496px;
     text-transform: lowercase;
     text-align: center;
 
     @include mq-max("xxl") {
-      width: 316px; // h5
+      width: 348px;
     }
 
-    @include mq-max("xl") {
-      width: 316px; // h5
+    @include mq-max("sm") {
+      width: 312px;
     }
 
     &::first-letter {

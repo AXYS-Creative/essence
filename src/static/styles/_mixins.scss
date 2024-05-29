@@ -242,6 +242,22 @@ $min-breakpoints: (
 }
 
 //
+// Scaffolding
+//
+
+@mixin thin-section {
+  padding-inline: $content-padding-thin;
+
+  @include mq-max("xxl") {
+    padding-inline: $content-padding-thin-xxl;
+  }
+
+  @include mq-max("md") {
+    padding-inline: $content-padding-thin-md;
+  }
+}
+
+//
 // Custom
 //
 

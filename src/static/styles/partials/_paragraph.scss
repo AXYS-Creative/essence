@@ -69,13 +69,5 @@
     @include mq-max("lg") {
       padding-block: 196px;
     }
-
-    @include mq-max("md") {
-      padding-block: 164px;
-    }
-
-    @include mq-max("sm") {
-      padding-block: 164p;
-    }
   }
 }
