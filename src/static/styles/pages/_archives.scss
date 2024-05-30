@@ -56,13 +56,9 @@
     }
 
     &__heading {
-      text-transform: lowercase;
+      text-transform: initial;
       line-height: 1;
       margin-block-end: 24px;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
     }
 
     &__sub-heading {
@@ -127,7 +123,7 @@
 
     &__heading {
       align-self: stretch;
-      text-transform: lowercase;
+      text-transform: initial;
       padding-block-end: 24px;
       margin-block-end: 24px;
       border-block-end: 2px solid var(--secondary-font-color);
@@ -139,10 +135,6 @@
 
       @include mq-max("md") {
         margin-block-end: 10px;
-      }
-
-      &::first-letter {
-        text-transform: capitalize;
       }
     }
 
@@ -157,7 +149,7 @@
 
   &__heading {
     width: 496px;
-    text-transform: lowercase;
+    text-transform: initial;
     text-align: center;
 
     @include mq-max("xxl") {
@@ -166,10 +158,6 @@
 
     @include mq-max("sm") {
       width: 312px;
-    }
-
-    &::first-letter {
-      text-transform: uppercase;
     }
   }
 }

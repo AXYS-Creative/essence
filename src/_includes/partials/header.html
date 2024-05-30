@@ -83,17 +83,31 @@
 
   {% include "./social-media.html" %}
 
-  <div class="cta-wrapper">
-    <a class="cta-1" href="{{ cta1.url }}">
-      <!-- <span>{{ cta1.title1 }}</span> -->
-      <!-- <span>{{ cta1.title2 }}</span> -->
+  <form class="cta-wrapper">
+    <div class="cta">
+      <input
+        id="email"
+        type="email"
+        class="input"
+        placeholder="Join Newsletter"
+        required
+      />
+      <label class="label" for="email">Enter your email</label>
       <span>Join</span>
       <span>Newsletter</span>
       <img
-        class="cta-1__icon"
+        class="cta__icon"
         src="../../static/img/icons/email.svg"
         alt="email icon"
       />
-    </a>
-  </div>
+      <button class="cta__submit" type="submit">
+        <img
+          class="icon-arrow-right"
+          src="./static/img/icons/arrow-right.svg"
+          alt="decorative right arrow"
+          role="presentation"
+        />
+      </button>
+    </div>
+  </form>
 </header>

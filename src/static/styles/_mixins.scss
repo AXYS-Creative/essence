@@ -179,7 +179,6 @@ $min-breakpoints: (
   font-family: $brand-font-family-heading;
   font-size: 24px;
   font-weight: 100;
-  font-style: italic;
   text-transform: initial;
 
   @include mq-max("xl") {
@@ -194,7 +193,6 @@ $min-breakpoints: (
 @mixin body-font-styles {
   font-size: 20px;
   font-weight: 300;
-  font-style: normal;
 
   @include mq-max("xl") {
     font-size: 16px;
@@ -318,7 +316,7 @@ $min-breakpoints: (
 @mixin cta-default-size {
   font-size: 16px;
   width: var(--cta-home-width);
-  height: 36px;
+  height: 40px;
 
   @include mq-max("md") {
     font-size: 14px;

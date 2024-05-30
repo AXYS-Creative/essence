@@ -67,12 +67,11 @@
       }
 
       figcaption {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 300;
-        font-style: normal;
 
         @include mq-max("xl") {
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }

@@ -28,7 +28,6 @@
   }
 
   &__author {
-    font-style: normal;
     @include column-start;
     gap: 8px;
 
@@ -47,12 +46,15 @@
 
   p:has(strong) {
     @extend .h5;
-    font-style: normal;
     text-transform: capitalize;
     margin-block-end: 12px;
 
     strong {
-      font-weight: 400;
+      font-weight: 300;
+
+      @include mq-max("md") {
+        font-weight: 400;
+      }
     }
   }
 
