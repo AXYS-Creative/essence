@@ -776,6 +776,7 @@ header .cta-wrapper .cta {
   border: 1px solid var(--primary-font-color);
   border-radius: 24px;
   isolation: isolate;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   header .cta-wrapper .cta {
@@ -791,129 +792,61 @@ header .cta-wrapper .cta {
     animation: fade-in 0.5s ease 0.75s forwards;
   }
 }
-header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) {
-  border: none;
-  border-bottom: 1px solid var(--primary-font-color);
-  border-radius: 0;
+header .cta-wrapper .cta:hover::after, header .cta-wrapper .cta:focus::after {
+  left: 0;
 }
-header .cta-wrapper .cta:hover, header .cta-wrapper .cta:focus, header .cta-wrapper .cta:focus-within, header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) {
-  border: none;
-  border-bottom: 1px solid var(--primary-font-color);
-  border-radius: 0;
-}
-header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) .label {
-  opacity: 1;
-  pointer-events: all;
-}
-header .cta-wrapper .cta:hover .label, header .cta-wrapper .cta:focus .label, header .cta-wrapper .cta:focus-within .label, header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) .label {
-  opacity: 1;
-  pointer-events: all;
-}
-header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) span {
-  color: transparent;
-}
-header .cta-wrapper .cta:hover span, header .cta-wrapper .cta:focus span, header .cta-wrapper .cta:focus-within span, header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) span {
-  color: transparent;
+header .cta-wrapper .cta:hover span:nth-of-type(1), header .cta-wrapper .cta:focus span:nth-of-type(1) {
+  color: var(--background-color);
 }
 @media (prefers-reduced-motion: no-preference) {
-  header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) span:nth-of-type(1) {
-    -moz-transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
-    transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
+  header .cta-wrapper .cta:hover span:nth-of-type(1), header .cta-wrapper .cta:focus span:nth-of-type(1) {
+    transition: 0.4s ease 0.3s, color 0.3s ease 0.2s;
   }
-  header .cta-wrapper .cta:hover span:nth-of-type(1), header .cta-wrapper .cta:focus span:nth-of-type(1), header .cta-wrapper .cta:focus-within span:nth-of-type(1), header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) span:nth-of-type(1) {
-    transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
-  }
+}
+header .cta-wrapper .cta:hover span:nth-of-type(2), header .cta-wrapper .cta:focus span:nth-of-type(2) {
+  color: var(--background-color);
 }
 @media (prefers-reduced-motion: no-preference) {
-  header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) span:nth-of-type(2) {
-    -moz-transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
-    transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
-  }
-  header .cta-wrapper .cta:hover span:nth-of-type(2), header .cta-wrapper .cta:focus span:nth-of-type(2), header .cta-wrapper .cta:focus-within span:nth-of-type(2), header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) span:nth-of-type(2) {
-    transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+  header .cta-wrapper .cta:hover span:nth-of-type(2), header .cta-wrapper .cta:focus span:nth-of-type(2) {
+    transition: 0.3s ease 0.4s, color 0.3s ease 0.3s;
   }
 }
-header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) .cta__submit {
-  opacity: 1;
-  pointer-events: all;
+header .cta-wrapper .cta:hover .cta__icon, header .cta-wrapper .cta:focus .cta__icon {
+  filter: invert(1);
 }
-header .cta-wrapper .cta:hover .cta__submit, header .cta-wrapper .cta:focus .cta__submit, header .cta-wrapper .cta:focus-within .cta__submit, header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) .cta__submit {
-  opacity: 1;
-  pointer-events: all;
+@media (prefers-reduced-motion: no-preference) {
+  header .cta-wrapper .cta:hover .cta__icon, header .cta-wrapper .cta:focus .cta__icon {
+    transition: 0.3s ease, filter 0.3s ease 0.3s !important;
+  }
 }
-header .cta-wrapper .cta:has(.input:not(:-moz-placeholder-shown)) .cta__icon {
-  opacity: 0;
+header .cta-wrapper .cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-font-color);
+  border: none;
+  border-radius: 24px;
+  z-index: -1;
 }
-header .cta-wrapper .cta:hover .cta__icon, header .cta-wrapper .cta:focus .cta__icon, header .cta-wrapper .cta:focus-within .cta__icon, header .cta-wrapper .cta:has(.input:not(:placeholder-shown)) .cta__icon {
-  opacity: 0;
+@media (prefers-reduced-motion: no-preference) {
+  header .cta-wrapper .cta::after {
+    transition: 0.75s cubic-bezier(1, 0.07, 0.2, 1);
+  }
 }
 header .cta-wrapper .cta > * {
   position: absolute;
   top: 50%;
   translate: 0 -50%;
 }
-header .cta-wrapper .cta .input {
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-radius: inherit;
-  border: none;
-  text-align: center;
-  font-size: 14px;
-}
-header .cta-wrapper .cta .input::-moz-placeholder {
-  opacity: 0;
-  font-size: 16px;
-}
-header .cta-wrapper .cta .input::placeholder {
-  opacity: 0;
-  font-size: 16px;
-}
-@media screen and (max-width: 768px) {
-  header .cta-wrapper .cta .input::-moz-placeholder {
-    font-size: 14px;
-  }
-  header .cta-wrapper .cta .input::placeholder {
-    font-size: 14px;
-  }
-}
-header .cta-wrapper .cta .label {
-  top: 100%;
-  left: 50%;
-  translate: -50% 50%;
-  text-align: center;
-  width: 180px;
-  font-size: 14px;
-  opacity: 0;
-  pointer-events: none;
-  text-transform: capitalize;
-}
-@media (prefers-reduced-motion: no-preference) {
-  header .cta-wrapper .cta .label {
-    transition: 0.5s ease 0.4s;
-  }
-}
-@media screen and (max-width: 768px) {
-  header .cta-wrapper .cta .label {
-    font-size: 12px;
-  }
-}
-header .cta-wrapper .cta .input:not(:-moz-placeholder-shown).input:not(focus) ~ span {
-  opacity: 0;
-}
-header .cta-wrapper .cta .input:focus ~ span,
-header .cta-wrapper .cta .input:not(:placeholder-shown).input:not(focus) ~ span {
-  opacity: 0;
-}
-header .cta-wrapper .cta span {
-  pointer-events: none;
-}
 header .cta-wrapper .cta span:nth-of-type(1) {
   left: 22px;
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper .cta span:nth-of-type(1) {
-    transition: 0.4s ease 0.3s, color 0.2s ease 0.5s;
+    transition: 0.4s ease 0.3s, color 0.3s ease 0.4s;
   }
 }
 @media screen and (max-width: 768px) {
@@ -927,23 +860,12 @@ header .cta-wrapper .cta span:nth-of-type(2) {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper .cta span:nth-of-type(2) {
-    transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
+    transition: 0.3s ease 0.4s, color 0.3s ease 0.3s;
   }
 }
 @media screen and (max-width: 768px) {
   header .cta-wrapper .cta span:nth-of-type(2) {
     right: 18px;
-  }
-}
-header .cta-wrapper .cta__submit {
-  right: 0;
-  translate: 100% -50%;
-  opacity: 0;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  header .cta-wrapper .cta__submit {
-    transition: 0.3s ease 0.4s;
   }
 }
 header .cta-wrapper .cta__icon {
@@ -953,7 +875,7 @@ header .cta-wrapper .cta__icon {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper .cta__icon {
-    transition: 0.3s ease, filter 0.3s ease 0.52s !important;
+    transition: 0.3s ease 0.2s, filter 0.3s ease 0.52s;
   }
 }
 header .cta-wrapper.scroll-active {
@@ -986,16 +908,13 @@ header .cta-wrapper.scroll-active .cta {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-active .cta {
-    transition: 0.4s ease 0.25s, background 0.25s ease 0.75s;
+    transition: 0.4s ease 0.25s, background 0.25s ease 0.5s;
   }
 }
 @media screen and (max-width: 768px) {
   header .cta-wrapper.scroll-active .cta {
     width: 86px;
   }
-}
-header .cta-wrapper.scroll-active .cta .label {
-  translate: -50% 20%;
 }
 header .cta-wrapper.scroll-active .cta span:nth-of-type(1) {
   left: 14px;
@@ -1006,7 +925,7 @@ header .cta-wrapper.scroll-active .cta span:nth-of-type(2) {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-active .cta span:nth-of-type(2) {
-    transition: 0.3s ease 0s;
+    transition: 0.3s ease 0.2s;
   }
 }
 header .cta-wrapper.scroll-active .cta__icon {
@@ -1014,7 +933,7 @@ header .cta-wrapper.scroll-active .cta__icon {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-active .cta__icon {
-    transition: 0.3s ease 0.2s;
+    transition: 0.3s ease 0.5s;
   }
 }
 header .cta-wrapper.scroll-bottom {
@@ -1055,6 +974,7 @@ header .cta-wrapper.scroll-bottom .cta span:nth-of-type(1) {
 }
 header .cta-wrapper.scroll-bottom .cta span:nth-of-type(2) {
   opacity: 1;
+  pointer-events: all;
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-bottom .cta span:nth-of-type(2) {
@@ -1063,6 +983,11 @@ header .cta-wrapper.scroll-bottom .cta span:nth-of-type(2) {
 }
 header .cta-wrapper.scroll-bottom .cta__icon {
   opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  header .cta-wrapper.scroll-bottom .cta__icon {
+    transition: 0.3s ease 0.2s;
+  }
 }
 header.scroll-active .header-logo:hover .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2), header.scroll-active .header-logo:focus .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   animation: logo-2-active 0.37s ease 0.03s forwards;
@@ -1978,6 +1903,39 @@ footer.footer-scroll-bottom .site-footer__bottom .brand-name-wrapper__brand-name
   translate: 0 0;
 }
 
+dialog {
+  width: 240px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog {
+    transition: 0.5s ease;
+  }
+}
+dialog::backdrop {
+  background: var(--primary-font-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog::backdrop {
+    transition: 0.5s ease;
+  }
+}
+dialog[open] {
+  opacity: 1;
+}
+dialog[open]::backdrop {
+  width: 100vw;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+  }
+}
+@starting-style {
+  dialog[open]::backdrop {
+    width: 0vw;
+  }
+}
 a {
   text-decoration: none;
 }

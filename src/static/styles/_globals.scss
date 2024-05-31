@@ -426,6 +426,7 @@ header {
       border: 1px solid var(--primary-font-color);
       border-radius: 24px;
       isolation: isolate;
+      overflow: hidden;
 
       @include mq-motion-allow {
         opacity: 0;
@@ -434,41 +435,48 @@ header {
       }
 
       &:hover,
-      &:focus,
-      &:focus-within,
-      &:has(.input:not(:placeholder-shown)) {
-        border: none;
-        border-bottom: 1px solid var(--primary-font-color);
-        border-radius: 0;
-
-        .label {
-          opacity: 1;
-          pointer-events: all;
+      &:focus {
+        &::after {
+          left: 0;
         }
 
-        span {
-          color: transparent;
-
-          &:nth-of-type(1) {
-            @include mq-motion-allow {
-              transition: 0.4s ease 0.3s, color 0.2s ease 0.2s;
-            }
-          }
-
-          &:nth-of-type(2) {
-            @include mq-motion-allow {
-              transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
-            }
+        span:nth-of-type(1) {
+          color: var(--background-color);
+          @include mq-motion-allow {
+            transition: 0.4s ease 0.3s, color 0.3s ease 0.2s;
           }
         }
 
-        .cta__submit {
-          opacity: 1;
-          pointer-events: all;
+        span:nth-of-type(2) {
+          color: var(--background-color);
+          @include mq-motion-allow {
+            transition: 0.3s ease 0.4s, color 0.3s ease 0.3s;
+          }
         }
 
         .cta__icon {
-          opacity: 0;
+          filter: invert(1);
+
+          @include mq-motion-allow {
+            transition: 0.3s ease, filter 0.3s ease 0.3s !important;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--primary-font-color);
+        border: none;
+        border-radius: 24px;
+        z-index: -1;
+
+        @include mq-motion-allow {
+          transition: 0.75s $cubic-ease-sudden;
         }
       }
 
@@ -478,87 +486,28 @@ header {
         translate: 0 -50%;
       }
 
-      .input {
-        width: 100%;
-        height: 100%;
-        background: none;
-        border-radius: inherit;
-        border: none;
-        text-align: center;
-        font-size: 14px;
-
-        &::placeholder {
-          opacity: 0;
-          font-size: 16px;
-
-          @include mq-max("md") {
-            font-size: 14px;
-          }
-        }
-      }
-
-      .label {
-        top: 100%;
-        left: 50%;
-        translate: -50% 50%;
-        text-align: center;
-        width: 180px;
-        font-size: 14px;
-        opacity: 0;
-        pointer-events: none;
-        text-transform: capitalize;
+      span:nth-of-type(1) {
+        left: $edge-spacing;
 
         @include mq-motion-allow {
-          transition: 0.5s ease 0.4s;
+          transition: 0.4s ease 0.3s, color 0.3s ease 0.4s;
         }
 
         @include mq-max("md") {
-          font-size: 12px;
+          left: calc($edge-spacing - 4px);
         }
       }
 
-      .input:focus ~ span,
-      .input:not(:placeholder-shown).input:not(focus) ~ span {
-        opacity: 0;
-      }
-
-      span {
-        pointer-events: none;
-
-        &:nth-of-type(1) {
-          left: $edge-spacing;
-
-          @include mq-motion-allow {
-            transition: 0.4s ease 0.3s, color 0.2s ease 0.5s;
-          }
-
-          @include mq-max("md") {
-            left: calc($edge-spacing - 4px);
-          }
-        }
-
-        &:nth-of-type(2) {
-          right: $edge-spacing;
-          opacity: 1;
-
-          @include mq-motion-allow {
-            transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
-          }
-
-          @include mq-max("md") {
-            right: calc($edge-spacing - 4px);
-          }
-        }
-      }
-
-      &__submit {
-        right: 0;
-        translate: 100% -50%;
-        opacity: 0;
-        pointer-events: none;
+      span:nth-of-type(2) {
+        right: $edge-spacing;
+        opacity: 1;
 
         @include mq-motion-allow {
-          transition: 0.3s ease 0.4s;
+          transition: 0.3s ease 0.4s, color 0.3s ease 0.3s;
+        }
+
+        @include mq-max("md") {
+          right: calc($edge-spacing - 4px);
         }
       }
 
@@ -568,7 +517,8 @@ header {
         opacity: 0;
 
         @include mq-motion-allow {
-          transition: 0.3s ease, filter 0.3s ease 0.52s !important;
+          // transition: 0.3s ease 0.5s, filter 0.3s ease 0.52s !important;
+          transition: 0.3s ease 0.2s, filter 0.3s ease 0.52s;
         }
       }
     }
@@ -582,20 +532,12 @@ header {
         width: 92px;
 
         @include mq-motion-allow {
-          transition: 0.4s ease 0.25s, background 0.25s ease 0.75s;
+          transition: 0.4s ease 0.25s, background 0.25s ease 0.5s;
         }
 
         @include mq-max("md") {
           width: 86px;
         }
-
-        .label {
-          translate: -50% 20%;
-        }
-
-        // span:nth-of-type(1) {
-        //   translate: -8px 0;
-        // }
 
         span:nth-of-type(1) {
           left: $edge-spacing-scroll;
@@ -606,16 +548,15 @@ header {
           pointer-events: none;
 
           @include mq-motion-allow {
-            transition: 0.3s ease 0s;
+            transition: 0.3s ease 0.2s;
           }
         }
 
         &__icon {
-          // translate: 100% -50%;
           opacity: 1;
 
           @include mq-motion-allow {
-            transition: 0.3s ease 0.2s;
+            transition: 0.3s ease 0.5s;
           }
         }
       }
@@ -655,7 +596,7 @@ header {
 
         span:nth-of-type(2) {
           opacity: 1;
-          // pointer-events: all;
+          pointer-events: all;
 
           @include mq-motion-allow {
             transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
@@ -664,6 +605,10 @@ header {
 
         &__icon {
           opacity: 0;
+
+          @include mq-motion-allow {
+            transition: 0.3s ease 0.2s;
+          }
         }
       }
     }
@@ -1409,6 +1354,43 @@ footer {
         }
       }
     }
+  }
+}
+
+dialog {
+  width: 240px;
+  // See '@starting-style' below for default styles
+
+  @include mq-motion-allow {
+    transition: 0.5s ease;
+  }
+
+  &::backdrop {
+    background: var(--primary-font-color);
+
+    @include mq-motion-allow {
+      transition: 0.5s ease;
+    }
+  }
+
+  &[open] {
+    opacity: 1;
+
+    &::backdrop {
+      width: 100vw;
+    }
+  }
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+  }
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    width: 0vw;
   }
 }
 
