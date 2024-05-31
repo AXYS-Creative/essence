@@ -1904,36 +1904,35 @@ footer.footer-scroll-bottom .site-footer__bottom .brand-name-wrapper__brand-name
 }
 
 dialog {
-  width: 240px;
+  border: none;
+  background: transparent;
+  display: block;
+  position: fixed;
+  top: 0;
+  opacity: 0;
 }
 @media (prefers-reduced-motion: no-preference) {
   dialog {
     transition: 0.5s ease;
   }
 }
-dialog::backdrop {
-  background: var(--primary-font-color);
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog::backdrop {
-    transition: 0.5s ease;
-  }
+dialog > * {
+  color: var(--background-color);
 }
 dialog[open] {
   opacity: 1;
+  display: block;
 }
-dialog[open]::backdrop {
-  width: 100vw;
+dialog::backdrop {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 @starting-style {
   dialog[open] {
     opacity: 0;
-  }
-}
-@starting-style {
-  dialog[open]::backdrop {
-    width: 0vw;
+    display: block;
   }
 }
 a {

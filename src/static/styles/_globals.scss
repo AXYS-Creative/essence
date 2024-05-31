@@ -1358,39 +1358,39 @@ footer {
 }
 
 dialog {
-  width: 240px;
+  border: none;
+  background: transparent;
+
   // See '@starting-style' below for default styles
+  display: block;
+  position: fixed;
+  top: 0;
+  opacity: 0;
 
   @include mq-motion-allow {
     transition: 0.5s ease;
   }
 
-  &::backdrop {
-    background: var(--primary-font-color);
-
-    @include mq-motion-allow {
-      transition: 0.5s ease;
-    }
+  & > * {
+    color: var(--background-color);
   }
 
   &[open] {
     opacity: 1;
+    display: block;
+  }
 
-    &::backdrop {
-      width: 100vw;
-    }
+  &::backdrop {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
 @starting-style {
   dialog[open] {
     opacity: 0;
-  }
-}
-
-@starting-style {
-  dialog[open]::backdrop {
-    width: 0vw;
+    display: block;
   }
 }
 
