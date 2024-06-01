@@ -13,7 +13,6 @@ const heroSubText = document.querySelector(".hero-section__subtext"),
   siteFooter = document.querySelector(".site-footer"),
   footerNavLinks = document.querySelector(".footer-nav-links"),
   firstFooterNavLink = footerNavLinks.querySelector("li:first-of-type > a"),
-  headerLogo = document.querySelector(".header-logo"),
   footerCtaTitle = document.querySelector(".footer-cta-title");
 
 const headerLinks = document.querySelectorAll(".header-links__link");
@@ -25,17 +24,9 @@ let bodyPadding = parseInt(
   10
 );
 
-const tabPositioning = () => {
-  firstFooterNavLink.addEventListener("focus", () => {
-    window.scrollTo(0, document.body.scrollHeight);
-  });
-
-  headerLogo.addEventListener("focus", () => {
-    window.scrollTo(0, 0);
-  });
-};
-
-tabPositioning();
+firstFooterNavLink.addEventListener("focus", () => {
+  window.scrollTo(0, document.body.scrollHeight);
+});
 
 export const throttle = (func, limit) => {
   let lastFunc;

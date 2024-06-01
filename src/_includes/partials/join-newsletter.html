@@ -1,4 +1,26 @@
-<dialog>
-  <button type="button">Close</button>
-  <p>Some content here</p>
+<dialog class="dialog newsletter-dialog">
+  <button class="dialog__close-btn" type="button">Close</button>
+
+  <form class="dialog__form">
+    <h2 class="h4">
+      <span>Subscribe to our newsletter</span>
+    </h2>
+
+    <label class="sr-only" for="email">Enter your email address</label>
+    <input
+      class="input"
+      id="email"
+      type="email"
+      required
+      placeholder="Enter your email address"
+    />
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <div class="mouse-cursor" aria-hidden="true">
+    <p>Close</p>
+  </div>
 </dialog>

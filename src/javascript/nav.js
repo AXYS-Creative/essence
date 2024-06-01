@@ -7,10 +7,12 @@ import {
   ctaWrapper,
 } from "./scroll.js";
 
+export let isNavOpen;
+
 export const navMenu = document.querySelector(".nav-menu"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
-  // headerLogo = document.querySelector(".header-logo"),
+  headerLogo = document.querySelector(".header-logo"),
   navLinksWrapper = document.querySelector(".nav-links");
 
 const navLinks = document.querySelectorAll(".nav-link"),
@@ -24,7 +26,7 @@ const toggleNav = () => {
   menuBtn.classList.toggle("menu-active");
   siteHeader.classList.toggle("menu-active");
 
-  const isNavOpen = navMenu.classList.contains("menu-active");
+  isNavOpen = navMenu.classList.contains("menu-active");
 
   navMenu.setAttribute("aria-hidden", isNavOpen);
   menuBtn.setAttribute("aria-expanded", !isNavOpen);
@@ -57,6 +59,12 @@ const toggleNav = () => {
   // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
   document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
 };
+
+headerLogo.addEventListener("focus", () => {
+  if (!isNavOpen) {
+    window.scrollTo(0, 0);
+  }
+});
 
 // const closeNav = () => {
 //   // Pevent scroll when nav is open

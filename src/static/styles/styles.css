@@ -1904,37 +1904,218 @@ footer.footer-scroll-bottom .site-footer__bottom .brand-name-wrapper__brand-name
 }
 
 dialog {
+  isolation: isolate;
   border: none;
   background: transparent;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   display: block;
   position: fixed;
   top: 0;
-  opacity: 0;
+  pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
   dialog {
-    transition: 0.5s ease;
+    transition: opacity 1s ease;
   }
 }
-dialog > * {
+dialog:active .mouse-cursor p {
+  scale: 0.5 !important;
+}
+dialog .dialog__close-btn,
+dialog .dialog__form {
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .dialog__close-btn,
+  dialog .dialog__form {
+    transition: opacity 0.5s ease;
+  }
+}
+dialog .dialog__close-btn {
+  right: 64px;
+  position: absolute;
+  top: 48px;
+}
+@media screen and (min-width: 1921px) {
+  dialog .dialog__close-btn {
+    right: calc(50% - 896px);
+  }
+}
+@media screen and (max-width: 1512px) {
+  dialog .dialog__close-btn {
+    right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .dialog__close-btn {
+    right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__close-btn {
+    right: 16px;
+  }
+}
+dialog .dialog__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 1024px;
+  height: 50%;
+  opacity: 0;
+}
+dialog .dialog__form * {
   color: var(--background-color);
+}
+dialog .dialog__form h2 {
+  display: flex;
+  text-align: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+dialog .dialog__form h2 span {
+  translate: 0 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .dialog__form h2 span {
+    transition: 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s;
+  }
+}
+dialog .dialog__form input[type=email],
+dialog .dialog__form button[type=submit] {
+  width: calc(100% - 96px);
+  border: 1px solid var(--background-color);
+  border-radius: 64px;
+  padding: 12px 4px;
+  font-size: 20px;
+  translate: 0 100%;
+  opacity: 0;
+}
+dialog .dialog__form input[type=email] {
+  background: transparent;
+  text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .dialog__form input[type=email] {
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.32s;
+  }
+}
+dialog .dialog__form input[type=email]::-moz-placeholder {
+  color: var(--background-color);
+  opacity: 0.25;
+}
+dialog .dialog__form input[type=email]::placeholder {
+  color: var(--background-color);
+  opacity: 0.25;
+}
+dialog .dialog__form button[type=submit] {
+  background: var(--background-color);
+  color: var(--primary-font-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .dialog__form button[type=submit] {
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease;
+  }
+}
+dialog .dialog__form button[type=submit]:hover, dialog .dialog__form button[type=submit]:focus {
+  opacity: 0.75;
+}
+dialog .backdrop {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-font-color);
+  z-index: -1;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .backdrop {
+    transition: left 0.6s ease 0.5s;
+  }
+}
+dialog .mouse-cursor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  z-index: 20;
+  pointer-events: none;
+  transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+  opacity: 0;
+}
+@media screen and (max-width: 1512px) {
+  dialog .mouse-cursor {
+    width: 112px;
+    height: 112px;
+  }
+}
+dialog .mouse-cursor p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  rotate: -45deg;
+  scale: 0;
+  transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+  font-size: 20px;
+}
+@media screen and (max-width: 1512px) {
+  dialog .mouse-cursor p {
+    font-size: 18px;
+  }
+}
+dialog .mouse-cursor.active {
+  opacity: 1;
+}
+dialog .mouse-cursor.active p {
+  rotate: 0deg;
+  scale: 1;
 }
 dialog[open] {
   opacity: 1;
   display: block;
+  pointer-events: all;
 }
-dialog::backdrop {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
+dialog[open] .dialog__close-btn,
+dialog[open] .dialog__form {
+  opacity: 1;
+  pointer-events: all;
 }
-
-@starting-style {
-  dialog[open] {
-    opacity: 0;
-    display: block;
+dialog[open] .dialog__form h2 span {
+  translate: 0 0;
+}
+dialog[open] .dialog__form input[type=email],
+dialog[open] .dialog__form button[type=submit] {
+  translate: 0 0;
+  opacity: 1;
+}
+dialog[open] .backdrop {
+  left: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open] .backdrop {
+    transition: left 0.6s ease 0s;
   }
 }
+
 a {
   text-decoration: none;
 }

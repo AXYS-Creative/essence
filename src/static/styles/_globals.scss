@@ -1358,41 +1358,216 @@ footer {
 }
 
 dialog {
+  isolation: isolate;
   border: none;
   background: transparent;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
 
   // See '@starting-style' below for default styles
   display: block;
   position: fixed;
   top: 0;
-  opacity: 0;
+  pointer-events: none;
 
   @include mq-motion-allow {
-    transition: 0.5s ease;
+    transition: opacity 1s ease;
   }
 
-  & > * {
-    color: var(--background-color);
+  &:active {
+    .mouse-cursor {
+      p {
+        scale: 0.5 !important;
+      }
+    }
+  }
+
+  .dialog__close-btn,
+  .dialog__form {
+    opacity: 0;
+    pointer-events: none;
+
+    @include mq-motion-allow {
+      transition: opacity 0.5s ease;
+    }
+  }
+
+  .dialog__close-btn {
+    @include right-spacing;
+    position: absolute;
+    // top: $body-padding;
+    top: 48px;
+  }
+
+  .dialog__form {
+    @include absolute-center;
+    @include column-center;
+    gap: 12px;
+    max-width: 1024px;
+    height: 50%;
+    opacity: 0;
+
+    & * {
+      color: var(--background-color);
+    }
+
+    h2 {
+      display: flex;
+      text-align: center;
+      margin-bottom: 12px;
+      overflow: hidden;
+
+      span {
+        translate: 0 100%;
+
+        @include mq-motion-allow {
+          transition: 1s $cubic-ease 0.2s;
+        }
+      }
+    }
+
+    input[type="email"],
+    button[type="submit"] {
+      width: calc(100% - 96px);
+      border: 1px solid var(--background-color);
+      border-radius: 64px;
+      padding: 12px 4px;
+      font-size: 20px;
+
+      translate: 0 100%;
+      opacity: 0;
+    }
+
+    input[type="email"] {
+      background: transparent;
+      text-align: center;
+
+      @include mq-motion-allow {
+        transition: 0.8s $cubic-ease 0.32s;
+      }
+
+      &::placeholder {
+        color: var(--background-color);
+        opacity: 0.25;
+      }
+    }
+
+    button[type="submit"] {
+      background: var(--background-color);
+      color: var(--primary-font-color);
+
+      @include mq-motion-allow {
+        transition: 0.8s $cubic-ease 0.4s, background 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 0.75;
+      }
+    }
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-font-color);
+    // background: navy;
+    z-index: -1;
+
+    @include mq-motion-allow {
+      transition: left 0.6s ease 0.5s;
+    }
+  }
+
+  .mouse-cursor {
+    @include row-center;
+    position: fixed;
+    top: 0;
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    z-index: 20;
+    pointer-events: none;
+    transition: 0.8s $cubic-ease;
+    opacity: 0;
+
+    @include mq-max("xxl") {
+      width: 112px;
+      height: 112px;
+    }
+
+    p {
+      @include row-center;
+      background-color: var(--background-color);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      rotate: -45deg;
+      scale: 0;
+      transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+      font-size: 20px;
+
+      @include mq-max("xxl") {
+        font-size: 18px;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+
+      p {
+        rotate: 0deg;
+        scale: 1;
+      }
+    }
   }
 
   &[open] {
     opacity: 1;
     display: block;
-  }
+    pointer-events: all;
 
-  &::backdrop {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
+    .dialog__close-btn,
+    .dialog__form {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .dialog__form {
+      h2 {
+        span {
+          translate: 0 0;
+        }
+      }
+
+      input[type="email"],
+      button[type="submit"] {
+        translate: 0 0;
+        opacity: 1;
+      }
+    }
+
+    .backdrop {
+      left: 0;
+
+      @include mq-motion-allow {
+        transition: left 0.6s ease 0s;
+      }
+    }
   }
 }
 
-@starting-style {
-  dialog[open] {
-    opacity: 0;
-    display: block;
-  }
-}
+// @starting-style {
+//   dialog[open] {
+//     pointer-events: none;
+//     display: block;
+//   }
+// }
 
 h1 {
   @extend .h1;
