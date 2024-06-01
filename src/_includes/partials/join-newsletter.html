@@ -1,9 +1,26 @@
-<dialog class="dialog newsletter-dialog">
-  <button class="dialog__close-btn" type="button">Close</button>
+<dialog class="dialog newsletter-dialog" id="newsletter-dialog">
+  <div class="dialog__close-btn-wrapper">
+    <button
+      class="dialog__close-btn"
+      type="button"
+      aria-controls="newsletter-dialog"
+      aria-label="Close newsletter dialog"
+      aria-expanded="false"
+    >
+      <div class="dots-wrapper">
+        <span class="dots-wrapper__dot top-left"></span>
+        <span class="dots-wrapper__dot top-right"></span>
+        <span class="dots-wrapper__dot center-dot"></span>
+        <span class="dots-wrapper__dot bottom-left"></span>
+        <span class="dots-wrapper__dot bottom-right"></span>
+      </div>
+    </button>
+  </div>
 
   <form class="dialog__form">
     <h2 class="h4">
-      <span>Subscribe to our newsletter</span>
+      <span>Subscribe to</span>
+      <span>our newsletter</span>
     </h2>
 
     <label class="sr-only" for="email">Enter your email address</label>

@@ -1365,6 +1365,7 @@ dialog {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  max-height: 100vh; // Override system styles on dialog (mobile)
 
   // See '@starting-style' below for default styles
   display: block;
@@ -1384,21 +1385,71 @@ dialog {
     }
   }
 
-  .dialog__close-btn,
-  .dialog__form {
+  .dialog__close-btn-wrapper {
+    position: fixed;
+    @include right-spacing;
+    top: 74px;
+    translate: 0 -50%;
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s ease 0.5s;
 
-    @include mq-motion-allow {
-      transition: opacity 0.5s ease;
+    @include mq-max("md") {
+      top: 50px;
     }
-  }
 
-  .dialog__close-btn {
-    @include right-spacing;
-    position: absolute;
-    // top: $body-padding;
-    top: 48px;
+    @include mq-max("sm") {
+      scale: 0.9;
+    }
+
+    .dialog__close-btn {
+      $btn-size: 18px; // also calculates the gap - keep it an even number
+
+      @include row-center;
+      width: $btn-size;
+      height: $btn-size;
+      transition: 0.3s ease;
+
+      @include mq-max("sm") {
+        outline: none;
+      }
+
+      &:hover,
+      &:focus {
+        scale: 1.1;
+      }
+
+      &:active {
+        scale: 0.9;
+      }
+
+      .dots-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between; // Align content baby!
+        flex-wrap: wrap;
+        gap: calc($btn-size / 4);
+        width: 100%;
+        height: 100%;
+
+        rotate: 45deg;
+        transition: 0.8s $cubic-ease-sudden-back-strong 0s;
+
+        &__dot {
+          width: 6px;
+          height: 6px;
+          background-color: var(--background-color);
+          border-radius: 50%;
+          transition: 0.3s ease;
+        }
+
+        .center-dot {
+          @include absolute-center;
+          opacity: 0;
+          transition: 0.3s ease 0.2s;
+        }
+      }
+    }
   }
 
   .dialog__form {
@@ -1406,8 +1457,20 @@ dialog {
     @include column-center;
     gap: 12px;
     max-width: 1024px;
-    height: 50%;
-    opacity: 0;
+    padding: 96px;
+
+    @include mq-motion-allow {
+      transition: opacity 0.5s ease;
+    }
+
+    @include mq-max("md") {
+      padding: 128px 48px;
+      width: 86%;
+    }
+
+    @include mq-max("sm") {
+      padding: 128px 0;
+    }
 
     & * {
       color: var(--background-color);
@@ -1416,28 +1479,66 @@ dialog {
     h2 {
       display: flex;
       text-align: center;
+      gap: 12px;
       margin-bottom: 12px;
       overflow: hidden;
+      text-wrap: nowrap;
+
+      @include mq-max("xxl") {
+        gap: 10px;
+      }
+
+      @include mq-max("xl") {
+        gap: 8px;
+      }
+
+      @include mq-max("sm") {
+        flex-direction: column;
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: 24px;
+      }
 
       span {
         translate: 0 100%;
 
         @include mq-motion-allow {
-          transition: 1s $cubic-ease 0.2s;
+          transition: translate 1s $cubic-ease 0.12s;
+        }
+
+        @include mq-max("sm") {
+          translate: 0 240%;
         }
       }
     }
 
     input[type="email"],
     button[type="submit"] {
+      @include body-font-styles;
       width: calc(100% - 96px);
       border: 1px solid var(--background-color);
       border-radius: 64px;
       padding: 12px 4px;
       font-size: 20px;
+      width: 764px;
 
-      translate: 0 100%;
+      translate: 0 120%;
       opacity: 0;
+      pointer-events: none;
+
+      @include mq-max("xxl") {
+        width: 572px;
+      }
+
+      @include mq-max("xl") {
+        padding: 10px 4px;
+        width: 448px;
+      }
+
+      @include mq-max("md") {
+        padding: 12px 4px;
+        width: 100%;
+      }
     }
 
     input[type="email"] {
@@ -1445,7 +1546,7 @@ dialog {
       text-align: center;
 
       @include mq-motion-allow {
-        transition: 0.8s $cubic-ease 0.32s;
+        transition: 0.9s $cubic-ease 0.06s;
       }
 
       &::placeholder {
@@ -1455,17 +1556,17 @@ dialog {
     }
 
     button[type="submit"] {
-      background: var(--background-color);
+      border: none;
+      background: $grey-light;
       color: var(--primary-font-color);
 
       @include mq-motion-allow {
-        transition: 0.8s $cubic-ease 0.4s, background 0.3s ease;
+        transition: 0.8s $cubic-ease 0s, background 0.3s ease;
       }
 
       &:hover,
       &:focus {
-        background: lightcoral;
-        color: var(--background-color);
+        background: var(--background-color);
       }
     }
   }
@@ -1477,6 +1578,7 @@ dialog {
     width: 100%;
     height: 100%;
     background: var(--primary-font-color);
+    // background: forestgreen;
     z-index: -1;
 
     @include mq-motion-allow {
@@ -1488,6 +1590,7 @@ dialog {
     @include row-center;
     position: fixed;
     top: 0;
+    left: 0;
     width: 124px;
     height: 124px;
     border-radius: 50%;
@@ -1501,9 +1604,20 @@ dialog {
       height: 112px;
     }
 
+    @include mq-max("xl") {
+      width: 96px;
+      height: 96px;
+    }
+
+    @include mq-max("md") {
+      width: 80px;
+      height: 80px;
+    }
+
     p {
       @include row-center;
-      background-color: var(--background-color);
+      // background-color: var(--background-color);
+      background: linear-gradient($grey-light, $white);
       width: 100%;
       height: 100%;
       border-radius: 50%;
@@ -1532,8 +1646,23 @@ dialog {
     display: block;
     pointer-events: all;
 
-    .dialog__close-btn,
-    .dialog__form {
+    .dialog__close-btn-wrapper {
+      opacity: 1;
+      pointer-events: all;
+      transition: 0.3s ease 0.4s;
+
+      .dots-wrapper {
+        rotate: 90deg;
+        transition: 0.8s $cubic-ease-sudden-back-strong 0.4s;
+
+        .center-dot {
+          opacity: 1;
+          transition: 0.3s ease 1s;
+        }
+      }
+    }
+
+    .dialog__close-btn {
       opacity: 1;
       pointer-events: all;
     }
@@ -1542,6 +1671,10 @@ dialog {
       h2 {
         span {
           translate: 0 0;
+
+          @include mq-motion-allow {
+            transition: translate 0.8s $cubic-ease 0.3s;
+          }
         }
       }
 
@@ -1549,6 +1682,21 @@ dialog {
       button[type="submit"] {
         translate: 0 0;
         opacity: 1;
+        pointer-events: all;
+      }
+
+      input[type="email"] {
+        @include mq-motion-allow {
+          transition: translate 0.9s $cubic-ease 0.4s,
+            opacity 0.7s $cubic-ease 0.4s, background 0.3s ease, color 0.3s ease;
+        }
+      }
+
+      button[type="submit"] {
+        @include mq-motion-allow {
+          transition: translate 1s $cubic-ease 0.5s,
+            opacity 0.8s $cubic-ease 0.5s, background 0.3s ease, color 0.3s ease;
+        }
       }
     }
 
@@ -1561,13 +1709,6 @@ dialog {
     }
   }
 }
-
-// @starting-style {
-//   dialog[open] {
-//     pointer-events: none;
-//     display: block;
-//   }
-// }
 
 h1 {
   @extend .h1;

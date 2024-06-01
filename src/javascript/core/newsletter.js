@@ -35,19 +35,6 @@ dialog.addEventListener("click", (e) => {
   }
 });
 
-const matchInputWidthToHeading = () => {
-  const heading = document.querySelector(".dialog__form h2");
-  const dialogForm = document.querySelector(".dialog__form");
-
-  const headingWidth = heading.offsetWidth;
-
-  dialogForm.style.width = `${headingWidth + 96}px`;
-};
-
-matchInputWidthToHeading();
-
-window.addEventListener("resize", matchInputWidthToHeading);
-
 //
 // Mouse Cursor
 //

@@ -1911,6 +1911,7 @@ dialog {
   width: 100vw;
   height: 100vh;
   height: 100dvh;
+  max-height: 100vh;
   display: block;
   position: fixed;
   top: 0;
@@ -1924,41 +1925,89 @@ dialog {
 dialog:active .mouse-cursor p {
   scale: 0.5 !important;
 }
-dialog .dialog__close-btn,
-dialog .dialog__form {
+dialog .dialog__close-btn-wrapper {
+  position: fixed;
+  right: 64px;
+  top: 74px;
+  translate: 0 -50%;
   opacity: 0;
   pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .dialog__close-btn,
-  dialog .dialog__form {
-    transition: opacity 0.5s ease;
-  }
-}
-dialog .dialog__close-btn {
-  right: 64px;
-  position: absolute;
-  top: 48px;
+  transition: opacity 0.3s ease 0.5s;
 }
 @media screen and (min-width: 1921px) {
-  dialog .dialog__close-btn {
+  dialog .dialog__close-btn-wrapper {
     right: calc(50% - 896px);
   }
 }
 @media screen and (max-width: 1512px) {
-  dialog .dialog__close-btn {
+  dialog .dialog__close-btn-wrapper {
     right: 40px;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .dialog__close-btn {
+  dialog .dialog__close-btn-wrapper {
     right: 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .dialog__close-btn {
+  dialog .dialog__close-btn-wrapper {
     right: 16px;
   }
+}
+@media screen and (max-width: 768px) {
+  dialog .dialog__close-btn-wrapper {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__close-btn-wrapper {
+    scale: 0.9;
+  }
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__close-btn-wrapper .dialog__close-btn {
+    outline: none;
+  }
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn:hover, dialog .dialog__close-btn-wrapper .dialog__close-btn:focus {
+  scale: 1.1;
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn:active {
+  scale: 0.9;
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  gap: 4.5px;
+  width: 100%;
+  height: 100%;
+  rotate: 45deg;
+  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0s;
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper__dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper .center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  transition: 0.3s ease 0.2s;
 }
 dialog .dialog__form {
   position: absolute;
@@ -1971,8 +2020,23 @@ dialog .dialog__form {
   align-items: center;
   gap: 12px;
   max-width: 1024px;
-  height: 50%;
-  opacity: 0;
+  padding: 96px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .dialog__form {
+    transition: opacity 0.5s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .dialog__form {
+    padding: 128px 48px;
+    width: 86%;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__form {
+    padding: 128px 0;
+  }
 }
 dialog .dialog__form * {
   color: var(--background-color);
@@ -1980,26 +2044,93 @@ dialog .dialog__form * {
 dialog .dialog__form h2 {
   display: flex;
   text-align: center;
+  gap: 12px;
   margin-bottom: 12px;
   overflow: hidden;
+  text-wrap: nowrap;
+}
+@media screen and (max-width: 1512px) {
+  dialog .dialog__form h2 {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  dialog .dialog__form h2 {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__form h2 {
+    flex-direction: column;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
 }
 dialog .dialog__form h2 span {
   translate: 0 100%;
 }
 @media (prefers-reduced-motion: no-preference) {
   dialog .dialog__form h2 span {
-    transition: 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s;
+    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.12s;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__form h2 span {
+    translate: 0 240%;
   }
 }
 dialog .dialog__form input[type=email],
 dialog .dialog__form button[type=submit] {
+  font-size: 20px;
+  font-weight: 300;
   width: calc(100% - 96px);
   border: 1px solid var(--background-color);
   border-radius: 64px;
   padding: 12px 4px;
   font-size: 20px;
-  translate: 0 100%;
+  width: 764px;
+  translate: 0 120%;
   opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 1200px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1512px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    width: 572px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    padding: 10px 4px;
+    width: 448px;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .dialog__form input[type=email],
+  dialog .dialog__form button[type=submit] {
+    padding: 12px 4px;
+    width: 100%;
+  }
 }
 dialog .dialog__form input[type=email] {
   background: transparent;
@@ -2007,7 +2138,7 @@ dialog .dialog__form input[type=email] {
 }
 @media (prefers-reduced-motion: no-preference) {
   dialog .dialog__form input[type=email] {
-    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.32s;
+    transition: 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.06s;
   }
 }
 dialog .dialog__form input[type=email]::-moz-placeholder {
@@ -2019,17 +2150,17 @@ dialog .dialog__form input[type=email]::placeholder {
   opacity: 0.25;
 }
 dialog .dialog__form button[type=submit] {
-  background: var(--background-color);
+  border: none;
+  background: #f8f1e4;
   color: var(--primary-font-color);
 }
 @media (prefers-reduced-motion: no-preference) {
   dialog .dialog__form button[type=submit] {
-    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease;
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0s, background 0.3s ease;
   }
 }
 dialog .dialog__form button[type=submit]:hover, dialog .dialog__form button[type=submit]:focus {
-  background: lightcoral;
-  color: var(--background-color);
+  background: var(--background-color);
 }
 dialog .backdrop {
   position: fixed;
@@ -2051,6 +2182,7 @@ dialog .mouse-cursor {
   align-items: center;
   position: fixed;
   top: 0;
+  left: 0;
   width: 124px;
   height: 124px;
   border-radius: 50%;
@@ -2065,11 +2197,23 @@ dialog .mouse-cursor {
     height: 112px;
   }
 }
+@media screen and (max-width: 1200px) {
+  dialog .mouse-cursor {
+    width: 96px;
+    height: 96px;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .mouse-cursor {
+    width: 80px;
+    height: 80px;
+  }
+}
 dialog .mouse-cursor p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
+  background: linear-gradient(#f8f1e4, #fdfaf5);
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -2095,18 +2239,46 @@ dialog[open] {
   display: block;
   pointer-events: all;
 }
-dialog[open] .dialog__close-btn,
-dialog[open] .dialog__form {
+dialog[open] .dialog__close-btn-wrapper {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s ease 0.4s;
+}
+dialog[open] .dialog__close-btn-wrapper .dots-wrapper {
+  rotate: 90deg;
+  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0.4s;
+}
+dialog[open] .dialog__close-btn-wrapper .dots-wrapper .center-dot {
+  opacity: 1;
+  transition: 0.3s ease 1s;
+}
+dialog[open] .dialog__close-btn {
   opacity: 1;
   pointer-events: all;
 }
 dialog[open] .dialog__form h2 span {
   translate: 0 0;
 }
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open] .dialog__form h2 span {
+    transition: translate 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.3s;
+  }
+}
 dialog[open] .dialog__form input[type=email],
 dialog[open] .dialog__form button[type=submit] {
   translate: 0 0;
   opacity: 1;
+  pointer-events: all;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open] .dialog__form input[type=email] {
+    transition: translate 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, opacity 0.7s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease, color 0.3s ease;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog[open] .dialog__form button[type=submit] {
+    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, opacity 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, background 0.3s ease, color 0.3s ease;
+  }
 }
 dialog[open] .backdrop {
   left: 0;

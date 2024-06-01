@@ -25,7 +25,7 @@ layout: app
     </h2>
     <p class="archive-header__sub-heading">{{ subheading }}</p>
     {% if page.url === "/blog/" %}
-    <a href="{{ latestPost.url }}" class="simple-link">
+    <a href="{{ latestPost.url }}" class="simple-link tab-element-page">
       <span class="simple-link__letters" aria-label="learn more">
         <span class="simple-link__letter">V</span>
         <span class="simple-link__letter">i</span>
@@ -56,9 +56,9 @@ layout: app
       />
     </h3>
     <div class="archive-header__cta-options">
-      <a href="" class="classic-link">Apple</a>
-      <a href="" class="classic-link">Spotify</a>
-      <a href="" class="classic-link">Youtube</a>
+      <a href="" class="classic-link tab-element-page">Apple</a>
+      <a href="" class="classic-link tab-element-page">Spotify</a>
+      <a href="" class="classic-link tab-element-page">Youtube</a>
     </div>
     {%endif%}
   </div>

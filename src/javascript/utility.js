@@ -1,3 +1,4 @@
+// export const minXxxl = window.matchMedia("(min-width: 1921px)");
 export const minMd = window.matchMedia("(min-width: 769px)");
 
 export const maxXxl = window.matchMedia("(max-width: 1512px)");
