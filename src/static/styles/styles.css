@@ -2028,7 +2028,8 @@ dialog .dialog__form button[type=submit] {
   }
 }
 dialog .dialog__form button[type=submit]:hover, dialog .dialog__form button[type=submit]:focus {
-  opacity: 0.75;
+  background: lightcoral;
+  color: var(--background-color);
 }
 dialog .backdrop {
   position: fixed;

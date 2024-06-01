@@ -1,5 +1,5 @@
 const dialog = document.querySelector("dialog"),
-  showButton = document.querySelector(".cta"),
+  cta = document.querySelector(".cta"),
   closeButton = document.querySelector("dialog button"),
   mouseCursor = document.querySelector(".mouse-cursor");
 
@@ -11,26 +11,27 @@ const setTabIndex = (elements, value) => {
   elements.forEach((el) => el.setAttribute("tabindex", value));
 };
 
-showButton.addEventListener("click", () => {
+const openModal = () => {
   dialog.showModal();
   document.body.style.overflow = "hidden";
   setTabIndex(dialogElems, "0");
-});
+};
 
-closeButton.addEventListener("click", () => {
+const closeModal = () => {
   dialog.close();
   document.body.style.overflow = "auto";
   setTabIndex(dialogElems, "-1");
   mouseCursor.classList.remove("active");
-});
+};
+
+cta.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
 
 setTabIndex(dialogElems, "-1");
 
 dialog.addEventListener("click", (e) => {
   if (e.target.classList.contains("backdrop")) {
-    dialog.close();
-    document.body.style.overflow = "auto";
-    mouseCursor.classList.remove("active");
+    closeModal();
   }
 });
 
