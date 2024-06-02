@@ -75,7 +75,7 @@ if (newsletterForm) {
         newsletterForm.classList.remove("active");
         errorMessage.classList.remove("active");
         errorMessage.setAttribute("aria-hidden", true);
-      }, 5000);
+      }, 8000);
 
       return;
     } else {
@@ -100,7 +100,7 @@ if (newsletterForm) {
           newsletterForm.classList.remove("active");
           successMessage.classList.remove("active");
           successMessage.setAttribute("aria-hidden", true);
-        }, 5000);
+        }, 8000);
       })
       .catch((error) => {
         console.error("Fetch error:", error);
