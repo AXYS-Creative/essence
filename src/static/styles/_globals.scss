@@ -1452,7 +1452,7 @@ dialog {
     }
   }
 
-  .dialog__form {
+  .newsletter-form {
     @include absolute-center;
     @include column-center;
     gap: 12px;
@@ -1569,6 +1569,68 @@ dialog {
         background: var(--background-color);
       }
     }
+
+    .form-message-container {
+      position: relative;
+      width: 100%;
+      height: 36px;
+
+      .success-message,
+      .error-message {
+        @include row-center(space-between);
+        @include absolute-center;
+        gap: 12px;
+        font-size: 14px;
+        color: $green;
+        text-wrap: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.24s ease 0.12s;
+
+        @include mq-max("sm") {
+          font-size: 13px;
+        }
+
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+
+          .check-icon,
+          .error-icon {
+            scale: 1.2;
+          }
+        }
+
+        .check-icon,
+        .error-icon {
+          width: 24px;
+          height: 24px;
+          border: 1px solid $green;
+          border-radius: 50%;
+          padding: 4px;
+          scale: 0.5;
+          transition: 0.3s ease 0.24s;
+
+          path {
+            fill: $green;
+          }
+        }
+      }
+
+      .error-message {
+        color: $yellow;
+
+        .error-icon {
+          border-color: transparent;
+          border-radius: 0;
+          margin-right: -6px;
+
+          path {
+            fill: $yellow;
+          }
+        }
+      }
+    }
   }
 
   .backdrop {
@@ -1667,7 +1729,7 @@ dialog {
       pointer-events: all;
     }
 
-    .dialog__form {
+    .newsletter-form {
       h2 {
         span {
           translate: 0 0;

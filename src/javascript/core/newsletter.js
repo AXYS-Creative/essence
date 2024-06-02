@@ -48,3 +48,65 @@ document.addEventListener("mousemove", (e) => {
     mouseCursor.classList.remove("active");
   }
 });
+
+//
+// Form Logic
+//
+
+const newsletterForm = document.querySelector(".newsletter-form"),
+  successMessage = document.querySelector(".success-message"),
+  errorMessage = document.querySelector(".error-message"),
+  emailInput = document.querySelector(".email-input");
+
+if (newsletterForm) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const email = emailInput.value;
+    let submittedEmails =
+      JSON.parse(localStorage.getItem("submittedEmails")) || [];
+
+    if (submittedEmails.includes(email)) {
+      newsletterForm.classList.add("active");
+      errorMessage.classList.add("active");
+      errorMessage.setAttribute("aria-hidden", false);
+
+      setTimeout(function () {
+        newsletterForm.classList.remove("active");
+        errorMessage.classList.remove("active");
+        errorMessage.setAttribute("aria-hidden", true);
+      }, 5000);
+
+      return;
+    } else {
+      submittedEmails.push(email);
+      localStorage.setItem("submittedEmails", JSON.stringify(submittedEmails));
+    }
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => {
+        newsletterForm.classList.add("active");
+        successMessage.classList.add("active");
+        successMessage.setAttribute("aria-hidden", false);
+
+        setTimeout(function () {
+          newsletterForm.classList.remove("active");
+          successMessage.classList.remove("active");
+          successMessage.setAttribute("aria-hidden", true);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+        alert(error);
+      });
+  };
+
+  newsletterForm.addEventListener("submit", handleSubmit);
+}

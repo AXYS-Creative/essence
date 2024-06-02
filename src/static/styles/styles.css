@@ -2009,7 +2009,7 @@ dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper .center-dot {
   opacity: 0;
   transition: 0.3s ease 0.2s;
 }
-dialog .dialog__form {
+dialog .newsletter-form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2023,25 +2023,25 @@ dialog .dialog__form {
   padding: 96px;
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog .dialog__form {
+  dialog .newsletter-form {
     transition: opacity 0.5s ease;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .dialog__form {
+  dialog .newsletter-form {
     padding: 128px 48px;
     width: 86%;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .dialog__form {
+  dialog .newsletter-form {
     padding: 128px 0;
   }
 }
-dialog .dialog__form * {
+dialog .newsletter-form * {
   color: var(--background-color);
 }
-dialog .dialog__form h2 {
+dialog .newsletter-form h2 {
   display: flex;
   text-align: center;
   gap: 12px;
@@ -2050,38 +2050,38 @@ dialog .dialog__form h2 {
   text-wrap: nowrap;
 }
 @media screen and (max-width: 1512px) {
-  dialog .dialog__form h2 {
+  dialog .newsletter-form h2 {
     gap: 10px;
   }
 }
 @media screen and (max-width: 1200px) {
-  dialog .dialog__form h2 {
+  dialog .newsletter-form h2 {
     gap: 8px;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .dialog__form h2 {
+  dialog .newsletter-form h2 {
     flex-direction: column;
     font-size: 30px;
     line-height: 30px;
     margin-bottom: 24px;
   }
 }
-dialog .dialog__form h2 span {
+dialog .newsletter-form h2 span {
   translate: 0 100%;
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog .dialog__form h2 span {
+  dialog .newsletter-form h2 span {
     transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.12s;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .dialog__form h2 span {
+  dialog .newsletter-form h2 span {
     translate: 0 240%;
   }
 }
-dialog .dialog__form input[type=email],
-dialog .dialog__form button[type=submit] {
+dialog .newsletter-form input[type=email],
+dialog .newsletter-form button[type=submit] {
   font-size: 20px;
   font-weight: 300;
   width: calc(100% - 96px);
@@ -2095,72 +2095,140 @@ dialog .dialog__form button[type=submit] {
   pointer-events: none;
 }
 @media screen and (max-width: 1200px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 1512px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     width: 572px;
   }
 }
 @media screen and (max-width: 1200px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     padding: 10px 4px;
     width: 448px;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .dialog__form input[type=email],
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form input[type=email],
+  dialog .newsletter-form button[type=submit] {
     padding: 12px 4px;
     width: 100%;
   }
 }
-dialog .dialog__form input[type=email] {
+dialog .newsletter-form input[type=email] {
   background: transparent;
   text-align: center;
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog .dialog__form input[type=email] {
+  dialog .newsletter-form input[type=email] {
     transition: 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.06s;
   }
 }
-dialog .dialog__form input[type=email]::-moz-placeholder {
+dialog .newsletter-form input[type=email]::-moz-placeholder {
   color: var(--background-color);
   opacity: 0.25;
 }
-dialog .dialog__form input[type=email]::placeholder {
+dialog .newsletter-form input[type=email]::placeholder {
   color: var(--background-color);
   opacity: 0.25;
 }
-dialog .dialog__form button[type=submit] {
+dialog .newsletter-form button[type=submit] {
   border: none;
   background: #f8f1e4;
   color: var(--primary-font-color);
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog .dialog__form button[type=submit] {
+  dialog .newsletter-form button[type=submit] {
     transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0s, background 0.3s ease;
   }
 }
-dialog .dialog__form button[type=submit]:hover, dialog .dialog__form button[type=submit]:focus {
+dialog .newsletter-form button[type=submit]:hover, dialog .newsletter-form button[type=submit]:focus {
   background: var(--background-color);
+}
+dialog .newsletter-form .form-message-container {
+  position: relative;
+  width: 100%;
+  height: 36px;
+}
+dialog .newsletter-form .form-message-container .success-message,
+dialog .newsletter-form .form-message-container .error-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  gap: 12px;
+  font-size: 14px;
+  color: #869d7a;
+  text-wrap: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.24s ease 0.12s;
+}
+@media screen and (max-width: 480px) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    font-size: 13px;
+  }
+}
+dialog .newsletter-form .form-message-container .success-message.active,
+dialog .newsletter-form .form-message-container .error-message.active {
+  opacity: 1;
+  pointer-events: all;
+}
+dialog .newsletter-form .form-message-container .success-message.active .check-icon,
+dialog .newsletter-form .form-message-container .success-message.active .error-icon,
+dialog .newsletter-form .form-message-container .error-message.active .check-icon,
+dialog .newsletter-form .form-message-container .error-message.active .error-icon {
+  scale: 1.2;
+}
+dialog .newsletter-form .form-message-container .success-message .check-icon,
+dialog .newsletter-form .form-message-container .success-message .error-icon,
+dialog .newsletter-form .form-message-container .error-message .check-icon,
+dialog .newsletter-form .form-message-container .error-message .error-icon {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #869d7a;
+  border-radius: 50%;
+  padding: 4px;
+  scale: 0.5;
+  transition: 0.3s ease 0.24s;
+}
+dialog .newsletter-form .form-message-container .success-message .check-icon path,
+dialog .newsletter-form .form-message-container .success-message .error-icon path,
+dialog .newsletter-form .form-message-container .error-message .check-icon path,
+dialog .newsletter-form .form-message-container .error-message .error-icon path {
+  fill: #869d7a;
+}
+dialog .newsletter-form .form-message-container .error-message {
+  color: #fbffa4;
+}
+dialog .newsletter-form .form-message-container .error-message .error-icon {
+  border-color: transparent;
+  border-radius: 0;
+  margin-right: -6px;
+}
+dialog .newsletter-form .form-message-container .error-message .error-icon path {
+  fill: #fbffa4;
 }
 dialog .backdrop {
   position: fixed;
@@ -2256,27 +2324,27 @@ dialog[open] .dialog__close-btn {
   opacity: 1;
   pointer-events: all;
 }
-dialog[open] .dialog__form h2 span {
+dialog[open] .newsletter-form h2 span {
   translate: 0 0;
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog[open] .dialog__form h2 span {
+  dialog[open] .newsletter-form h2 span {
     transition: translate 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.3s;
   }
 }
-dialog[open] .dialog__form input[type=email],
-dialog[open] .dialog__form button[type=submit] {
+dialog[open] .newsletter-form input[type=email],
+dialog[open] .newsletter-form button[type=submit] {
   translate: 0 0;
   opacity: 1;
   pointer-events: all;
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog[open] .dialog__form input[type=email] {
+  dialog[open] .newsletter-form input[type=email] {
     transition: translate 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, opacity 0.7s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease, color 0.3s ease;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog[open] .dialog__form button[type=submit] {
+  dialog[open] .newsletter-form button[type=submit] {
     transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, opacity 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, background 0.3s ease, color 0.3s ease;
   }
 }
