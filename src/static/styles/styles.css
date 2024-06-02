@@ -2018,7 +2018,7 @@ dialog .newsletter-form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   max-width: 1024px;
   padding: 96px;
 }
@@ -2170,19 +2170,49 @@ dialog .newsletter-form .form-message-container {
 dialog .newsletter-form .form-message-container .success-message,
 dialog .newsletter-form .form-message-container .error-message {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  gap: 12px;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 300;
+  width: 100%;
   color: #869d7a;
   text-wrap: nowrap;
   opacity: 0;
   pointer-events: none;
-  transition: 0.24s ease 0.12s;
+}
+@media screen and (max-width: 1200px) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    transition: 0.24s ease 0.12s, font-size 0s;
+  }
+}
+@media screen and (max-width: 768px) {
+  dialog .newsletter-form .form-message-container .success-message,
+  dialog .newsletter-form .form-message-container .error-message {
+    text-wrap: wrap;
+  }
 }
 @media screen and (max-width: 480px) {
   dialog .newsletter-form .form-message-container .success-message,
@@ -2205,13 +2235,24 @@ dialog .newsletter-form .form-message-container .success-message .check-icon,
 dialog .newsletter-form .form-message-container .success-message .error-icon,
 dialog .newsletter-form .form-message-container .error-message .check-icon,
 dialog .newsletter-form .form-message-container .error-message .error-icon {
-  width: 24px;
-  height: 24px;
   border: 1px solid #869d7a;
   border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-inline-end: 12px;
   padding: 4px;
   scale: 0.5;
   transition: 0.3s ease 0.24s;
+}
+@media screen and (max-width: 480px) {
+  dialog .newsletter-form .form-message-container .success-message .check-icon,
+  dialog .newsletter-form .form-message-container .success-message .error-icon,
+  dialog .newsletter-form .form-message-container .error-message .check-icon,
+  dialog .newsletter-form .form-message-container .error-message .error-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 dialog .newsletter-form .form-message-container .success-message .check-icon path,
 dialog .newsletter-form .form-message-container .success-message .error-icon path,
@@ -2225,7 +2266,6 @@ dialog .newsletter-form .form-message-container .error-message {
 dialog .newsletter-form .form-message-container .error-message .error-icon {
   border-color: transparent;
   border-radius: 0;
-  margin-right: -6px;
 }
 dialog .newsletter-form .form-message-container .error-message .error-icon path {
   fill: #fbffa4;

@@ -1455,7 +1455,7 @@ dialog {
   .newsletter-form {
     @include absolute-center;
     @include column-center;
-    gap: 12px;
+    gap: 16px;
     max-width: 1024px;
     padding: 96px;
 
@@ -1577,15 +1577,22 @@ dialog {
 
       .success-message,
       .error-message {
-        @include row-center(space-between);
+        @include row-center;
         @include absolute-center;
-        gap: 12px;
-        font-size: 14px;
+        @include body-font-styles;
+        width: 100%;
         color: $green;
         text-wrap: nowrap;
         opacity: 0;
         pointer-events: none;
-        transition: 0.24s ease 0.12s;
+
+        @include mq-motion-allow {
+          transition: 0.24s ease 0.12s, font-size 0s;
+        }
+
+        @include mq-max("md") {
+          text-wrap: wrap;
+        }
 
         @include mq-max("sm") {
           font-size: 13px;
@@ -1603,13 +1610,20 @@ dialog {
 
         .check-icon,
         .error-icon {
-          width: 24px;
-          height: 24px;
           border: 1px solid $green;
           border-radius: 50%;
+          width: 28px;
+          height: 28px;
+          flex-shrink: 0;
+          margin-inline-end: 12px;
           padding: 4px;
           scale: 0.5;
           transition: 0.3s ease 0.24s;
+
+          @include mq-max("sm") {
+            width: 24px;
+            height: 24px;
+          }
 
           path {
             fill: $green;
@@ -1623,7 +1637,6 @@ dialog {
         .error-icon {
           border-color: transparent;
           border-radius: 0;
-          margin-right: -6px;
 
           path {
             fill: $yellow;
