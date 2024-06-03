@@ -7,7 +7,11 @@
   <div class="width-constraint">
     <div class="nav-img-container">
       {% for image in nav_images.images %}
-      <img src="{{ image.src }}" alt="{{ image.title }}" class="nav-img" />
+      <img
+        src="{{ image.src }}"
+        alt="{{ image.title }} cover image"
+        class="nav-img"
+      />
       {% endfor %}
     </div>
 

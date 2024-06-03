@@ -59,6 +59,17 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
               - { label: "Image Source", name: "src", widget: "image" }
+      - label: "Navigation Images"
+        name: "nav_images"
+        file: "src/_data/nav_images.yaml"
+        fields:
+          - label: "Nav Images"
+            name: "images"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image Source", name: "src", widget: "image" }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
