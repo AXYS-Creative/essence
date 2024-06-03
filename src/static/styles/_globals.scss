@@ -997,6 +997,46 @@ nav {
     }
   }
 
+  .nav-img-container {
+    position: absolute;
+    left: 16%;
+    width: 20%;
+    height: 50%;
+    opacity: 0;
+
+    @include mq-motion-allow {
+      transition: 0.4s ease 0.3s;
+    }
+
+    @include mq-max("md") {
+      left: 64%;
+    }
+
+    @include mq-touch {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      width: 0%;
+      height: 100%;
+      aspect-ratio: 4 / 7;
+      object-fit: cover;
+      object-position: left;
+      animation: classic-link-default 0.5s ease forwards;
+
+      @include mq-motion-allow {
+        transition: 0.3s ease 0s;
+      }
+
+      &.active {
+        // width: 100%;
+        animation: classic-link-hover 0.5s ease forwards;
+      }
+    }
+  }
+
   .nav-abstract {
     position: absolute;
     top: 0;
@@ -1043,6 +1083,14 @@ nav {
             }
           }
         }
+      }
+    }
+
+    .nav-img-container {
+      opacity: 1;
+
+      @include mq-motion-allow {
+        transition: 0.4s ease 1s;
       }
     }
   }

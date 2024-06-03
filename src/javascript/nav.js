@@ -205,3 +205,19 @@ window.addEventListener(
     updateScrollDependentElements(scrollPosition);
   }, 50)
 );
+
+//
+// Nav Image Hover/Focus
+//
+
+const navImgs = document.querySelectorAll(".nav-img");
+
+navLinks.forEach((link, index) => {
+  const addActiveClass = () => navImgs[index].classList.add("active");
+  const removeActiveClass = () => navImgs[index].classList.remove("active");
+
+  link.addEventListener("mouseenter", addActiveClass);
+  link.addEventListener("mouseleave", removeActiveClass);
+  link.addEventListener("focus", addActiveClass);
+  link.addEventListener("blur", removeActiveClass);
+});

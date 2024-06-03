@@ -5,6 +5,12 @@
   aria-hidden="true"
 >
   <div class="width-constraint">
+    <div class="nav-img-container">
+      {% for image in nav_images.images %}
+      <img src="{{ image.src }}" alt="{{ image.title }}" class="nav-img" />
+      {% endfor %}
+    </div>
+
     {% if navigation.items %}
 
     <ul class="nav-links">

@@ -1,0 +1,19 @@
+# CMS use
+
+images:
+  - title: blog
+    src: /static/img/nav-book-cover.png
+  - title: podcasts
+    src: /static/img/nav-film-cover.png
+  - title: books
+    src: /static/img/nav-book-cover.png
+  - title: films
+    src: /static/img/nav-film-cover.png
+  - title: about
+    src: /static/img/nav-book-cover.png
+  - title: resources
+    src: /static/img/nav-film-cover.png
+  - title: contact
+    src: /static/img/nav-book-cover.png
+  - title: patreon
+    src: /static/img/nav-film-cover.png
