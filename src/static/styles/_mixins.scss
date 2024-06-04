@@ -321,6 +321,6 @@ $min-breakpoints: (
   @include mq-max("md") {
     font-size: 14px;
     width: var(--cta-home-width-md);
-    height: 32px;
+    height: 36px;
   }
 }
