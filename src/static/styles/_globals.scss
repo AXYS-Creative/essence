@@ -863,7 +863,7 @@ nav {
 
   .nav-links {
     @include column-start;
-    gap: 80px;
+    // gap: 80px;
     width: calc(50% - $right-padding);
     pointer-events: none;
     transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
@@ -964,6 +964,7 @@ nav {
     .nav-link {
       @extend .h1;
       display: flex;
+      padding-block: 40px;
       text-transform: uppercase;
       line-height: 100%;
       height: 100%;
@@ -1023,8 +1024,9 @@ nav {
       height: 100%;
       aspect-ratio: 4 / 7;
       object-fit: cover;
-      object-position: left;
-      animation: classic-link-default 0.5s ease forwards;
+      // object-position: left;
+      // animation: classic-link-default 0.5s ease forwards;
+      animation: nav-image-default 0.4s linear forwards;
 
       @include mq-motion-allow {
         transition: 0.3s ease 0s;
@@ -1032,7 +1034,8 @@ nav {
 
       &.active {
         // width: 100%;
-        animation: classic-link-hover 0.5s ease forwards;
+        // animation: classic-link-hover 0.5s ease forwards;
+        animation: nav-image-active 0.4s linear forwards;
       }
     }
   }
