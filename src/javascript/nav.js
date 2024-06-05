@@ -6,10 +6,12 @@ import {
   updateScrollDependentElements,
   ctaWrapper,
 } from "./scroll.js";
+import { navCursor } from "./core/mouseCursor.js";
 
 export let isNavOpen;
 
 export const navMenu = document.querySelector(".nav-menu"),
+  navMenuBackdrop = document.querySelector(".nav-menu .backdrop"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
   headerLogo = document.querySelector(".header-logo"),
@@ -28,8 +30,8 @@ const toggleNav = () => {
 
   isNavOpen = navMenu.classList.contains("menu-active");
 
-  navMenu.setAttribute("aria-hidden", isNavOpen);
-  menuBtn.setAttribute("aria-expanded", !isNavOpen);
+  navMenu.setAttribute("aria-hidden", !isNavOpen);
+  menuBtn.setAttribute("aria-expanded", isNavOpen);
 
   //   Update tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) =>
@@ -56,7 +58,6 @@ const toggleNav = () => {
     }
   }
 
-  // Pevent scroll when nav is open // Doesn't work with Lenis out of the box... see lenis.js
   document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
 };
 
@@ -66,21 +67,21 @@ headerLogo.addEventListener("focus", () => {
   }
 });
 
-// const closeNav = () => {
-//   // Pevent scroll when nav is open
-//   document.body.style = "overflow: auto;";
+const closeNav = () => {
+  document.body.style = "overflow: auto;";
 
-//   navMenu.classList.remove("menu-active");
-//   menuBtn.classList.remove("menu-active");
-//   siteHeader.classList.remove("menu-active");
+  navMenu.classList.remove("menu-active");
+  menuBtn.classList.remove("menu-active");
+  siteHeader.classList.remove("menu-active");
+  navCursor.classList.remove("active");
 
-//   navMenu.setAttribute("aria-hidden", "true");
-//   menuBtn.setAttribute("aria-expanded", "false");
+  navMenu.setAttribute("aria-hidden", "true");
+  menuBtn.setAttribute("aria-expanded", "false");
 
-//   // Reset tabindex for tabElementsPage and tabElementsNav
-//   tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
-//   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
-// };
+  // Reset tabindex for tabElementsPage and tabElementsNav
+  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
+  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
+};
 
 // // Prevent certain navlinks from closing the nav (may not be needed)
 // navLinks.forEach((link) => {
@@ -91,6 +92,12 @@ headerLogo.addEventListener("focus", () => {
 // });
 
 menuBtn.addEventListener("click", toggleNav);
+
+navMenuBackdrop.addEventListener("click", (e) => {
+  if (e.target.classList.contains("backdrop")) {
+    closeNav();
+  }
+});
 
 // headerLogo.addEventListener("click", closeNav);
 

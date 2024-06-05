@@ -1,7 +1,9 @@
+import { newsletterCursor } from "./mouseCursor.js";
+
 const dialog = document.querySelector("dialog"),
   cta = document.querySelector(".cta"),
-  closeButton = document.querySelector("dialog button"),
-  mouseCursor = document.querySelector(".mouse-cursor");
+  closeButton = document.querySelector("dialog button");
+// mouseCursor = document.querySelector(".mouse-cursor");
 
 const dialogElems = dialog.querySelectorAll(
   "a, button, input, textarea, select"
@@ -21,7 +23,7 @@ const closeModal = () => {
   dialog.close();
   document.body.style.overflow = "auto";
   setTabIndex(dialogElems, "-1");
-  mouseCursor.classList.remove("active");
+  newsletterCursor.classList.remove("active");
 };
 
 cta.addEventListener("click", openModal);
@@ -39,15 +41,15 @@ dialog.addEventListener("click", (e) => {
 // Mouse Cursor
 //
 
-document.addEventListener("mousemove", (e) => {
-  mouseCursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
+// document.addEventListener("mousemove", (e) => {
+//   s.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
 
-  if (e.target.classList.contains("backdrop")) {
-    mouseCursor.classList.add("active");
-  } else {
-    mouseCursor.classList.remove("active");
-  }
-});
+//   if (e.target.classList.contains("backdrop")) {
+//     mouseCursor.classList.add("active");
+//   } else {
+//     mouseCursor.classList.remove("active");
+//   }
+// });
 
 //
 // Form Logic
