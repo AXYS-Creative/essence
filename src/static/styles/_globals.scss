@@ -28,6 +28,14 @@ body {
     max-width: $content-width;
     margin: auto;
   }
+
+  &:active {
+    .mouse-cursor {
+      p {
+        scale: 0.75 !important;
+      }
+    }
+  }
 }
 
 header {

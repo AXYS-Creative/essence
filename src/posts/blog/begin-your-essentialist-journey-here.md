@@ -4,7 +4,7 @@ description: This blog explores the transformative power of essentialism, a
   lifestyle choice focused on simplicity and prioritizing what truly matters.
   Join us as we delve into practical tips and inspiring stories to help you
   declutter your life and mind.
-author: Wayne Moss
+author: Wayne Thomas
 date: 2024-05-18T23:38:06.778Z
 tags:
   - popular

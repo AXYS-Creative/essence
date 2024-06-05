@@ -4,7 +4,7 @@ description: This blog post delves into the concept of emotional clutter—the
   unnecessary feelings and unresolved issues that can occupy our minds and
   hearts. Learn strategies to identify, process, and clear this type of clutter
   to achieve a healthier, more focused emotional state.
-author: Wayne Moss
+author: Wayne Thomas
 date: 2024-05-20T15:27:38.519Z
 tags:
   - emotion

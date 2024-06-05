@@ -3,7 +3,7 @@ title: Define Clutter
 description: In this post, we explore the concept of clutter—what it is, why it
   matters, and how it impacts our lives. Understanding clutter is the first step
   towards a more organized and mindful existence.
-author: Wayne Moss
+author: Wayne Thomas
 date: 2024-01-15T13:59:19.445Z
 tags:
   - physical

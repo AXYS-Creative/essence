@@ -4,7 +4,7 @@ description: This post explores the concept of living without compromise,
   focusing on how steadfast adherence to one's principles and desires can lead
   to a more authentic and fulfilling life. Dive into strategies that help
   maintain your core values in the face of societal pressures.
-author: Wayne Moss
+author: Wayne Thomas
 date: 2024-05-20T14:21:05.064Z
 tags:
   - general

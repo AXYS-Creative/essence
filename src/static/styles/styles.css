@@ -231,6 +231,9 @@ body > * {
   max-width: 1920px;
   margin: auto;
 }
+body:active .mouse-cursor p {
+  scale: 0.75 !important;
+}
 
 header > * {
   z-index: 5;
