@@ -1,3 +1,5 @@
+export const navElements = ["backdrop__nav", "nav-img-container"]; // e.target to close the nav
+
 export const mouseCursors = document.querySelectorAll(".mouse-cursor");
 
 export const navCursor = document.querySelector(".mouse-cursor__original");
@@ -16,7 +18,7 @@ document.addEventListener("mousemove", (e) => {
     newsletterCursor.classList.remove("active");
   }
 
-  if (e.target.classList.contains("backdrop__nav")) {
+  if (navElements.some((className) => e.target.classList.contains(className))) {
     navCursor.classList.add("active");
   } else {
     navCursor.classList.remove("active");

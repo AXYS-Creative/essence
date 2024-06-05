@@ -6,7 +6,7 @@ import {
   updateScrollDependentElements,
   ctaWrapper,
 } from "./scroll.js";
-import { navCursor } from "./core/mouseCursor.js";
+import { navCursor, navElements } from "./core/mouseCursor.js";
 
 export let isNavOpen;
 
@@ -94,7 +94,7 @@ const closeNav = () => {
 menuBtn.addEventListener("click", toggleNav);
 
 navMenuBackdrop.addEventListener("click", (e) => {
-  if (e.target.classList.contains("backdrop")) {
+  if (navElements.some((className) => e.target.classList.contains(className))) {
     closeNav();
   }
 });
