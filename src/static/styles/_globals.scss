@@ -22,20 +22,11 @@ html {
 body {
   position: relative;
   background-color: var(--background-color);
-  // background: linear-gradient(#f8f1e4, $white 90%);
   color: var(--primary-font-color);
 
   & > * {
     max-width: $content-width;
     margin: auto;
-  }
-
-  &:active {
-    .mouse-cursor.active {
-      p {
-        scale: 0.5 !important;
-      }
-    }
   }
 }
 
@@ -80,11 +71,11 @@ header {
     }
 
     &__icon {
-      width: 20px;
+      width: 24px;
       transition: 0.2s ease;
 
       @include mq-max("xxl") {
-        width: 18px;
+        width: 22px;
       }
     }
 
@@ -209,6 +200,7 @@ header {
   }
 
   .menu-btn__wrapper {
+    // DUPLICATE CODE AT .dialog__close-btn-wrapper
     @include right-spacing;
     top: 74px;
     translate: 0 -50%;
@@ -230,11 +222,12 @@ header {
     }
 
     .menu-btn {
-      $btn-size: 18px; // also calculates the gap - keep it an even number
+      $btn-size: 40px; // also calculates the gap - keep it an even number
 
       @include row-center;
       width: $btn-size;
       height: $btn-size;
+      padding: 10px;
       transition: 0.2s ease 0s;
 
       &:hover,
@@ -251,7 +244,7 @@ header {
         justify-content: space-between;
         align-content: space-between; // Align content baby!
         flex-wrap: wrap;
-        gap: calc($btn-size / 4);
+        gap: calc($btn-size / 6);
         width: 100%;
         height: 100%;
 
@@ -1435,6 +1428,7 @@ dialog {
   }
 
   .dialog__close-btn-wrapper {
+    // DUPLICATE CODE AT .menu-btn__wrapper
     position: fixed;
     @include right-spacing;
     top: 74px;
@@ -1452,11 +1446,12 @@ dialog {
     }
 
     .dialog__close-btn {
-      $btn-size: 18px; // also calculates the gap - keep it an even number
+      $btn-size: 40px; // also calculates the gap - keep it an even number
 
       @include row-center;
       width: $btn-size;
       height: $btn-size;
+      padding: 10px;
       transition: 0.3s ease;
 
       @include mq-max("sm") {
@@ -1477,7 +1472,7 @@ dialog {
         justify-content: space-between;
         align-content: space-between; // Align content baby!
         flex-wrap: wrap;
-        gap: calc($btn-size / 4);
+        gap: calc($btn-size / 6);
         width: 100%;
         height: 100%;
 
@@ -1717,43 +1712,9 @@ dialog {
   }
 
   .mouse-cursor {
-    // @include row-center;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 124px;
-    // height: 124px;
-    // border-radius: 50%;
-    z-index: 50;
-    // pointer-events: none;
-    transition: 0.8s $cubic-ease;
-    // opacity: 0;
-
     p {
-      // @include row-center;
-      // background-color: var(--background-color);
       background: linear-gradient($grey-light, $white);
       color: var(--primary-font-color);
-      // width: 100%;
-      // height: 100%;
-      // border-radius: 50%;
-      // rotate: -45deg;
-      // scale: 0;
-      // transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
-      // font-size: 20px;
-
-      // @include mq-max("xxl") {
-      //   font-size: 18px;
-      // }
-    }
-
-    &.active {
-      opacity: 1;
-
-      p {
-        rotate: 0deg;
-        scale: 1;
-      }
     }
   }
 
@@ -1894,7 +1855,7 @@ img {
   border-radius: 50%;
   pointer-events: none;
   transition: 0.8s $cubic-ease;
-  // opacity: 0;
+  opacity: 0;
 
   @include mq-max("xxl") {
     width: 112px;

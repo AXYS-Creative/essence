@@ -231,9 +231,6 @@ body > * {
   max-width: 1920px;
   margin: auto;
 }
-body:active .mouse-cursor.active p {
-  scale: 0.5 !important;
-}
 
 header > * {
   z-index: 5;
@@ -338,12 +335,12 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .let
   translate: 0 0;
 }
 header .header-logo__icon {
-  width: 20px;
+  width: 24px;
   transition: 0.2s ease;
 }
 @media screen and (max-width: 1512px) {
   header .header-logo__icon {
-    width: 18px;
+    width: 22px;
   }
 }
 header .header-logo__text {
@@ -593,8 +590,9 @@ header .menu-btn__wrapper .menu-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   transition: 0.2s ease 0s;
 }
 header .menu-btn__wrapper .menu-btn:hover, header .menu-btn__wrapper .menu-btn:focus {
@@ -608,7 +606,7 @@ header .menu-btn__wrapper .menu-btn .dots-wrapper {
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
-  gap: 4.5px;
+  gap: 6.6666666667px;
   width: 100%;
   height: 100%;
   rotate: 45deg;
@@ -2029,8 +2027,9 @@ dialog .dialog__close-btn-wrapper .dialog__close-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 18px;
-  height: 18px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   transition: 0.3s ease;
 }
 @media screen and (max-width: 480px) {
@@ -2049,7 +2048,7 @@ dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper {
   justify-content: space-between;
   align-content: space-between;
   flex-wrap: wrap;
-  gap: 4.5px;
+  gap: 6.6666666667px;
   width: 100%;
   height: 100%;
   rotate: 45deg;
@@ -2352,20 +2351,9 @@ dialog .backdrop {
     transition: left 0.6s ease 0.5s;
   }
 }
-dialog .mouse-cursor {
-  z-index: 50;
-  transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
-}
 dialog .mouse-cursor p {
   background: linear-gradient(#f8f1e4, #fdfaf5);
   color: var(--primary-font-color);
-}
-dialog .mouse-cursor.active {
-  opacity: 1;
-}
-dialog .mouse-cursor.active p {
-  rotate: 0deg;
-  scale: 1;
 }
 dialog[open] {
   opacity: 1;
@@ -2476,6 +2464,7 @@ img {
   border-radius: 50%;
   pointer-events: none;
   transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+  opacity: 0;
 }
 @media screen and (max-width: 1512px) {
   .mouse-cursor {

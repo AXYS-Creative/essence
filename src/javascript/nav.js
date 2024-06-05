@@ -67,7 +67,7 @@ headerLogo.addEventListener("focus", () => {
   }
 });
 
-const closeNav = () => {
+export const closeNav = () => {
   document.body.style = "overflow: auto;";
 
   navMenu.classList.remove("menu-active");

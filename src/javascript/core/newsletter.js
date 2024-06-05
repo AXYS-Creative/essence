@@ -1,4 +1,5 @@
 import { newsletterCursor } from "./mouseCursor.js";
+import { closeNav } from "../nav.js";
 
 const dialog = document.querySelector("dialog"),
   cta = document.querySelector(".cta"),
@@ -14,9 +15,10 @@ const setTabIndex = (elements, value) => {
 };
 
 const openModal = () => {
+  closeNav();
   dialog.showModal();
-  document.body.style.overflow = "hidden";
   setTabIndex(dialogElems, "0");
+  document.body.style.overflow = "hidden";
 };
 
 const closeModal = () => {
