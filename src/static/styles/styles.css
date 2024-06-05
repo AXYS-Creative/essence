@@ -241,7 +241,7 @@ header .header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   top: 64px;
   z-index: 6;
 }
@@ -335,29 +335,26 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .let
   translate: 0 0;
 }
 header .header-logo__icon {
-  width: 16px;
+  width: 20px;
   transition: 0.2s ease;
 }
 @media screen and (max-width: 1512px) {
   header .header-logo__icon {
-    width: 14px;
-  }
-}
-header .header-logo__text-wrapper {
-  position: relative;
-  overflow: hidden;
-  font-size: 20px;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 1512px) {
-  header .header-logo__text-wrapper {
-    font-size: 18px;
+    width: 18px;
   }
 }
 header .header-logo__text {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  font-size: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+@media screen and (max-width: 1512px) {
+  header .header-logo__text {
+    font-size: 18px;
+  }
 }
 header .header-logo__text .letter-wrapper {
   display: flex;
@@ -1382,7 +1379,7 @@ nav .nav-links {
 }
 @media screen and (max-width: 1024px) {
   nav .nav-links {
-    width: calc(50% - 28px);
+    width: calc(50% - 76.8px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -1529,8 +1526,8 @@ nav .nav-links .nav-link__number {
 nav .nav-img-container {
   position: absolute;
   left: 16%;
-  width: 20%;
   height: 50%;
+  aspect-ratio: 976/1368;
   opacity: 0;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -1538,9 +1535,15 @@ nav .nav-img-container {
     transition: 0.4s ease 0.3s;
   }
 }
+@media screen and (max-width: 1024px) {
+  nav .nav-img-container {
+    left: 18%;
+  }
+}
 @media screen and (max-width: 768px) {
   nav .nav-img-container {
-    left: 64%;
+    left: 54%;
+    height: 40%;
   }
 }
 @media (hover: none) and (pointer: coarse) {
@@ -1553,13 +1556,12 @@ nav .nav-img-container img {
   top: 0;
   width: 0%;
   height: 100%;
-  aspect-ratio: 4/7;
   -o-object-fit: cover;
      object-fit: cover;
-  animation: nav-image-default 0.52s cubic-bezier(0.18, 0.97, 0.47, 1) forwards;
+  animation: nav-image-default 0.64s cubic-bezier(0.18, 0.97, 0.47, 1) forwards;
 }
 nav .nav-img-container img.active {
-  animation: nav-image-active 0.52s cubic-bezier(0.18, 0.97, 0.47, 1) forwards;
+  animation: nav-image-active 0.64s cubic-bezier(0.18, 0.97, 0.47, 1) forwards;
 }
 nav .nav-abstract {
   position: absolute;

@@ -40,7 +40,7 @@ header {
   .header-logo {
     @include left-spacing;
     @include row-center;
-    gap: 12px;
+    gap: 8px;
     top: 64px;
     z-index: 6;
 
@@ -72,27 +72,23 @@ header {
     }
 
     &__icon {
-      width: 16px;
+      width: 20px;
       transition: 0.2s ease;
 
       @include mq-max("xxl") {
-        width: 14px;
-      }
-    }
-
-    &__text-wrapper {
-      position: relative;
-      overflow: hidden;
-      font-size: 20px;
-      text-transform: uppercase;
-
-      @include mq-max("xxl") {
-        font-size: 18px;
+        width: 18px;
       }
     }
 
     &__text {
       @include row-start;
+      font-size: 20px;
+      text-transform: uppercase;
+      overflow: hidden;
+
+      @include mq-max("xxl") {
+        font-size: 18px;
+      }
 
       .letter-wrapper {
         @include column-center(flex-start);
@@ -211,7 +207,6 @@ header {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
-    // mix-blend-mode: difference;
 
     @include mq-max("lg") {
       opacity: 1;
@@ -875,7 +870,7 @@ nav {
 
     @include mq-max("lg") {
       // gap: 48px;
-      width: calc(50% - 28px);
+      width: calc(50% - $right-padding / 1.25);
     }
 
     @include mq-max("md") {
@@ -1008,16 +1003,21 @@ nav {
   .nav-img-container {
     position: absolute;
     left: 16%;
-    width: 20%;
     height: 50%;
+    aspect-ratio: 976 / 1368;
     opacity: 0;
 
     @include mq-motion-allow {
       transition: 0.4s ease 0.3s;
     }
 
+    @include mq-max("lg") {
+      left: 18%;
+    }
+
     @include mq-max("md") {
-      left: 64%;
+      left: 54%;
+      height: 40%;
     }
 
     @include mq-touch {
@@ -1029,12 +1029,11 @@ nav {
       top: 0;
       width: 0%;
       height: 100%;
-      aspect-ratio: 4 / 7;
       object-fit: cover;
-      animation: nav-image-default 0.52s $cubic-ease forwards;
+      animation: nav-image-default 0.64s $cubic-ease forwards;
 
       &.active {
-        animation: nav-image-active 0.52s $cubic-ease forwards;
+        animation: nav-image-active 0.64s $cubic-ease forwards;
       }
     }
   }
