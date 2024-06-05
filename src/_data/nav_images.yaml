@@ -1,16 +1,14 @@
-# CMS use
-
 images:
   - title: blog
-    src: /static/img/nav-book-cover.png
+    src: /static/img/nav-blog-cover.png
   - title: podcasts
-    src: /static/img/nav-film-cover.png
+    src: /static/img/nav-podcast-cover.png
   - title: books
     src: /static/img/nav-book-cover.png
   - title: films
     src: /static/img/nav-film-cover.png
   - title: about
-    src: /static/img/nav-book-cover.png
+    src: /static/img/nav-about-cover.png
   - title: resources
     src: /static/img/nav-film-cover.png
   - title: contact
