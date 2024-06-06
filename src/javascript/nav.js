@@ -11,13 +11,13 @@ import { navCursor, navElements } from "./core/mouseCursor.js";
 export let isNavOpen;
 
 export const navMenu = document.querySelector(".nav-menu"),
-  navMenuBackdrop = document.querySelector(".nav-menu .backdrop"),
   menuBtn = document.querySelector(".menu-btn"),
   siteHeader = document.querySelector(".site-header"),
   headerLogo = document.querySelector(".header-logo"),
   navLinksWrapper = document.querySelector(".nav-links");
 
 const navLinks = document.querySelectorAll(".nav-link"),
+  navMenuBackdrop = document.querySelectorAll(".nav-menu .backdrop"),
   tabElementsPage = document.querySelectorAll(".tab-element-page"),
   tabElementsNav = document.querySelectorAll(".tab-element-nav");
 
@@ -93,11 +93,15 @@ export const closeNav = () => {
 
 menuBtn.addEventListener("click", toggleNav);
 
-navMenuBackdrop.addEventListener("click", (e) => {
-  if (navElements.some((className) => e.target.classList.contains(className))) {
-    closeNav();
-  }
-});
+navMenuBackdrop.forEach((el) =>
+  el.addEventListener("click", (e) => {
+    if (
+      navElements.some((className) => e.target.classList.contains(className))
+    ) {
+      closeNav();
+    }
+  })
+);
 
 // headerLogo.addEventListener("click", closeNav);
 

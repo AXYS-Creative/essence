@@ -1069,7 +1069,6 @@ nav {
 
     .nav-abstract {
       height: 100%;
-      pointer-events: none;
       // animation: nav-abstract-open 0.75s ease 0s forwards;
 
       transition: all 1.25s $cubic-ease-sudden 0s, width 0s;

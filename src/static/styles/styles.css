@@ -1586,7 +1586,6 @@ nav.menu-active {
 }
 nav.menu-active .nav-abstract {
   height: 100%;
-  pointer-events: none;
   transition: all 1.25s cubic-bezier(1, 0.07, 0.2, 1) 0s, width 0s;
 }
 nav.menu-active .nav-links {

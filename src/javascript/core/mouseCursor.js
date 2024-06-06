@@ -1,4 +1,9 @@
-export const navElements = ["backdrop__nav", "nav-img-container", "nav-img"]; // e.target to close the nav
+export const navElements = [
+  "backdrop__nav",
+  "backdrop__nav-abstract",
+  "nav-img-container",
+  "nav-img",
+]; // e.target to close the nav
 
 export const mouseCursors = document.querySelectorAll(".mouse-cursor");
 
