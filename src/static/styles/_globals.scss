@@ -603,7 +603,7 @@ header {
         &:focus {
           span:nth-of-type(2) {
             @include mq-motion-allow {
-              transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+              transition: 0.3s ease 0.4s, color 0.2s ease 0.4s;
             }
           }
         }
@@ -621,7 +621,7 @@ header {
           pointer-events: all;
 
           @include mq-motion-allow {
-            transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
+            transition: 0.3s ease 0.4s, color 0.2s ease 0.3s;
           }
         }
 

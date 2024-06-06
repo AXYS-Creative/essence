@@ -1046,7 +1046,7 @@ header .cta-wrapper.scroll-bottom .cta {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-bottom .cta:hover span:nth-of-type(2), header .cta-wrapper.scroll-bottom .cta:focus span:nth-of-type(2) {
-    transition: 0.3s ease 0.4s, color 0.2s ease 0.2s;
+    transition: 0.3s ease 0.4s, color 0.2s ease 0.4s;
   }
 }
 header .cta-wrapper.scroll-bottom .cta span:nth-of-type(1) {
@@ -1063,7 +1063,7 @@ header .cta-wrapper.scroll-bottom .cta span:nth-of-type(2) {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-bottom .cta span:nth-of-type(2) {
-    transition: 0.3s ease 0.4s, color 0.2s ease 0.5s;
+    transition: 0.3s ease 0.4s, color 0.2s ease 0.3s;
   }
 }
 header .cta-wrapper.scroll-bottom .cta__icon {
