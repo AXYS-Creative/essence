@@ -218,10 +218,6 @@
   -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   position: relative;
   background-color: var(--background-color);
@@ -1573,7 +1569,7 @@ nav .nav-img-container img {
 }
 @media (prefers-reduced-motion: no-preference) {
   nav .nav-img-container img {
-    transition: 1s cubic-bezier(0.18, 0.97, 0.47, 1);
+    transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1);
   }
 }
 nav .nav-img-container img.active {
@@ -2973,6 +2969,7 @@ img {
 .home-hero__heading {
   display: flex;
   gap: 24px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .home-hero__heading {
@@ -2984,7 +2981,12 @@ img {
 @media screen and (max-width: 768px) {
   .home-hero__heading {
     gap: 12px;
+    width: 96vw;
+    padding: 4px;
   }
+}
+.home-hero__heading span {
+  opacity: 0;
 }
 @media screen and (max-width: 768px) {
   .home-hero__heading span:first-of-type {
@@ -2997,7 +2999,7 @@ img {
   }
 }
 .home-hero__subtext {
-  opacity: 0.5;
+  opacity: 0.2;
   font-size: 16px;
 }
 @media screen and (max-width: 768px) {

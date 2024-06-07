@@ -1,5 +1,6 @@
 import { newsletterCursor } from "./mouseCursor.js";
 import { closeNav } from "../nav.js";
+import { lenis } from "./lenis.js";
 
 const dialog = document.querySelector("dialog"),
   cta = document.querySelector(".cta"),
@@ -18,14 +19,16 @@ const openModal = () => {
   closeNav();
   dialog.showModal();
   setTabIndex(dialogElems, "0");
-  document.body.style.overflow = "hidden";
+  // document.body.style.overflow = "hidden";
+  lenis.stop();
 };
 
 const closeModal = () => {
   dialog.close();
-  document.body.style.overflow = "auto";
   setTabIndex(dialogElems, "-1");
   newsletterCursor.classList.remove("active");
+  // document.body.style.overflow = "auto";
+  lenis.start();
 };
 
 cta.addEventListener("click", openModal);

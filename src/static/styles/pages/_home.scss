@@ -35,8 +35,10 @@
   &__heading {
     $text-shift: 24px;
 
+    // border: $test;
     display: flex;
     gap: 24px;
+    overflow: hidden;
 
     @include mq-max("lg") {
       flex-direction: column;
@@ -46,6 +48,12 @@
 
     @include mq-max("md") {
       gap: 12px;
+      width: 96vw;
+      padding: 4px;
+    }
+
+    span {
+      opacity: 0;
     }
 
     span:first-of-type {
@@ -62,7 +70,8 @@
   }
 
   &__subtext {
-    opacity: 0.5;
+    // opacity: 0.5;
+    opacity: 0.2;
     font-size: 16px;
 
     @include mq-max("md") {

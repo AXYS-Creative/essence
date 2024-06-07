@@ -1,4 +1,6 @@
 import { maxSm, minMd, maxLg } from "./utility.js";
+import { navCursor, navElements } from "./core/mouseCursor.js";
+import { lenis } from "./core/lenis.js";
 import {
   scrollPosition,
   scrollFromTop,
@@ -6,7 +8,6 @@ import {
   updateScrollDependentElements,
   ctaWrapper,
 } from "./scroll.js";
-import { navCursor, navElements } from "./core/mouseCursor.js";
 
 export let isNavOpen;
 
@@ -58,7 +59,12 @@ const toggleNav = () => {
     }
   }
 
-  document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
+  // document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
+  if (isNavOpen) {
+    lenis.stop();
+  } else {
+    lenis.start();
+  }
 };
 
 headerLogo.addEventListener("focus", () => {
@@ -68,7 +74,8 @@ headerLogo.addEventListener("focus", () => {
 });
 
 export const closeNav = () => {
-  document.body.style = "overflow: auto;";
+  // document.body.style = "overflow: auto;";
+  lenis.start();
 
   navMenu.classList.remove("menu-active");
   menuBtn.classList.remove("menu-active");
@@ -79,8 +86,8 @@ export const closeNav = () => {
   menuBtn.setAttribute("aria-expanded", "false");
 
   // Reset tabindex for tabElementsPage and tabElementsNav
-  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "-1"));
-  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "0"));
+  tabElementsPage.forEach((el) => el.setAttribute("tabindex", "0"));
+  tabElementsNav.forEach((el) => el.setAttribute("tabindex", "-1"));
 };
 
 // // Prevent certain navlinks from closing the nav (may not be needed)
