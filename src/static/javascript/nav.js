@@ -43,7 +43,7 @@ const toggleNav = () => {
   );
 
   //
-  // Reposition CTA based on menu toggle (MD screen and below)
+  // Reposition CTA based on menu toggle (lg screens and below)
   //
   if (maxLg.matches) {
     if (isNavOpen) {
@@ -88,6 +88,16 @@ export const closeNav = () => {
   // Reset tabindex for tabElementsPage and tabElementsNav
   tabElementsPage.forEach((el) => el.setAttribute("tabindex", "0"));
   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "-1"));
+
+  if (maxLg.matches) {
+    if (scrollPosition < scrollFromTop) {
+      ctaWrapper.classList.remove("scroll-active");
+      ctaWrapper.style.animationName = "cta-default";
+    } else {
+      ctaWrapper.classList.add("scroll-active");
+      ctaWrapper.style.animationName = "cta-animated-top";
+    }
+  }
 };
 
 // // Prevent certain navlinks from closing the nav (may not be needed)
