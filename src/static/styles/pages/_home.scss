@@ -37,7 +37,6 @@
 
     display: flex;
     gap: 24px;
-    // overflow: hidden;
 
     @include mq-max("lg") {
       flex-direction: column;
@@ -51,23 +50,15 @@
       padding: 4px;
     }
 
-    // span {
-    //   translate: 0 100%;
-
-    //   @include mq-motion-allow {
-    //     transition: 0.8s $cubic-ease 0.2s;
-    //   }
-    // }
-
     &-text {
       @include row-center;
+      position: relative;
       overflow: hidden;
 
       &:first-of-type {
-        // border: $test;
         translate: 50% 0;
 
-        @include mq-max("md") {
+        @include mq-max("lg") {
           translate: 0 0;
         }
 
@@ -77,63 +68,81 @@
         }
       }
 
-      // &:last-of-type {
-      //   @include mq-max("md") {
-      //     translate: $text-shift 0;
-      //   }
-      // }
+      &:last-of-type {
+        .home-hero__heading-text-inner-2 {
+          position: absolute;
+          top: 0;
+        }
+      }
 
       span {
         translate: 0 100%;
 
-        @include mq-max("md") {
+        @include mq-max("lg") {
           padding: 2px 0;
         }
       }
     }
 
     &.animate {
+      $duration: 2s;
+      $duration-lg: 2.5s;
+
+      $delay-lg: 0.27s;
+
       .home-hero__heading-text {
         &:first-of-type {
-          animation: text-group-1 2s $cubic-ease 0.2s forwards;
+          animation: text-group-1 $duration $cubic-ease 0.2s forwards;
 
-          @include mq-max("md") {
+          @include mq-max("lg") {
             translate: 0 0;
-            animation: text-group-1-md 2s $cubic-ease 0.2s forwards;
+            animation: text-group-1-lg $duration-lg $cubic-ease $delay-lg
+              forwards;
           }
           .home-hero__heading-text-inner-1 {
-            animation: text-letters-1 2s $cubic-ease 0.2s forwards;
+            animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+
+            @include mq-max("lg") {
+              animation-duration: $duration-lg;
+              animation-delay: $delay-lg;
+            }
           }
           .home-hero__heading-text-inner-2 {
-            animation: text-letters-2 2s $cubic-ease 0.2s forwards;
-          }
-        }
+            animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
 
-        &:last-of-type {
-          @include mq-max("md") {
-            animation: text-group-2-md 2s $cubic-ease 0.2s forwards;
-          }
-          .home-hero__heading-text-inner-1 {
-            animation: text-letters-2 2s $cubic-ease 0.34s forwards;
-
-            @include mq-max("md") {
-              animation-delay: 0.2s;
+            @include mq-max("lg") {
+              animation-duration: $duration-lg;
+              animation-delay: $delay-lg;
             }
           }
         }
 
-        // span {
-        //   @include mq-motion-allow {
-        //     transition: 1s $cubic-ease 0.5s;
-        //   }
-        // }
+        &:last-of-type {
+          @include mq-max("lg") {
+            animation: text-group-2-lg $duration-lg $cubic-ease $delay-lg
+              forwards;
+          }
+          .home-hero__heading-text-inner-1 {
+            animation: text-letters-2 $duration $cubic-ease 0.34s forwards;
+
+            @include mq-max("lg") {
+              animation-duration: $duration-lg;
+              animation-delay: $delay-lg;
+            }
+          }
+          .home-hero__heading-text-inner-2 {
+            @include mq-max("lg") {
+              animation: text-letters-1 $duration-lg $cubic-ease $delay-lg
+                forwards;
+            }
+          }
+        }
       }
     }
   }
 
   &__subtext {
     opacity: 0.5;
-    // opacity: 0.2;
     font-size: 16px;
 
     @include mq-max("md") {
