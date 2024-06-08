@@ -50,13 +50,14 @@
     }
 
     &-text {
+      // border: $test;
       @include row-center;
       position: relative;
       overflow: hidden;
 
       &:first-of-type {
         @include mq-motion-allow {
-          translate: 50% 0;
+          translate: 50% -50%;
         }
 
         @include mq-max("lg") {
@@ -70,6 +71,9 @@
       }
 
       &:last-of-type {
+        @include mq-motion-allow {
+          translate: -50% 50%;
+        }
         .home-hero__heading-text-inner-2 {
           position: absolute;
           top: 0;
@@ -88,7 +92,7 @@
     }
 
     &.animate {
-      $duration: 2s;
+      $duration: 3.2s;
       $duration-lg: 2.5s;
 
       $delay-lg: 0.27s;
@@ -123,23 +127,26 @@
           }
 
           &:last-of-type {
+            animation: text-group-2 $duration $cubic-ease 0.2s forwards;
+
             @include mq-max("lg") {
               animation: text-group-2-lg $duration-lg $cubic-ease
                 calc($delay-lg + 0.12s) forwards;
             }
 
             .home-hero__heading-text-inner-1 {
-              animation: text-letters-2 $duration $cubic-ease 0.34s forwards;
+              animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+            }
 
+            .home-hero__heading-text-inner-2 {
+              animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
+            }
+
+            .home-hero__heading-text-inner-1,
+            .home-hero__heading-text-inner-2 {
               @include mq-max("lg") {
                 animation-duration: $duration-lg;
                 animation-delay: calc($delay-lg + 0.12s);
-              }
-            }
-            .home-hero__heading-text-inner-2 {
-              @include mq-max("lg") {
-                animation: text-letters-1 calc($duration-lg - 0.12s) $cubic-ease
-                  calc($delay-lg + 0.12s) forwards;
               }
             }
           }
@@ -164,6 +171,7 @@
     span {
       @include mq-motion-allow {
         opacity: 0;
+        filter: blur(3px);
       }
     }
 
@@ -182,12 +190,18 @@
     &.animate {
       span {
         opacity: 1;
+        filter: blur(0);
 
         @for $i from 1 through 10 {
-          $delay: 1 + 0.03s * $i;
+          $delay: 1.2 + 0.03s * $i;
+          $delay-lg: 1 + 0.03s * $i;
 
           &:nth-of-type(#{$i}) {
-            transition: opacity 0.75s ease $delay;
+            transition: 1s ease $delay;
+
+            @include mq-max("lg") {
+              transition: 1s ease $delay-lg;
+            }
           }
         }
       }
