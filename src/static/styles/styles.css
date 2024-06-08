@@ -1563,9 +1563,10 @@ nav .nav-img-container img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  scale: 1.1;
+  scale: 1.05;
   opacity: 0;
   filter: blur(4px);
+  cursor: alias;
 }
 @media (prefers-reduced-motion: no-preference) {
   nav .nav-img-container img {
@@ -2969,7 +2970,6 @@ img {
 .home-hero__heading {
   display: flex;
   gap: 24px;
-  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .home-hero__heading {
@@ -2985,21 +2985,24 @@ img {
     padding: 4px;
   }
 }
-.home-hero__heading span {
-  opacity: 0;
+.home-hero__heading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
-  .home-hero__heading span:first-of-type {
+  .home-hero__heading-text:first-of-type {
     translate: -24px 0;
   }
 }
 @media screen and (max-width: 768px) {
-  .home-hero__heading span:last-of-type {
+  .home-hero__heading-text:last-of-type {
     translate: 24px 0;
   }
 }
 .home-hero__subtext {
-  opacity: 0.2;
+  opacity: 0.5;
   font-size: 16px;
 }
 @media screen and (max-width: 768px) {
