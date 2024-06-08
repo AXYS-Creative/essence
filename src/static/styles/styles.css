@@ -1382,7 +1382,12 @@ nav .nav-links {
   gap: 80px;
   width: calc(50% - 96px);
   pointer-events: none;
-  transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+  transition: 0.5s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links {
+    transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+  }
 }
 @media screen and (max-width: 1512px) {
   nav .nav-links {
@@ -1463,37 +1468,45 @@ nav .nav-links li:last-of-type {
     margin-block-end: unset;
   }
 }
-nav .nav-links li:nth-of-type(1) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.3s ease 0.05s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(1) .nav-link {
+    animation: nav-link-default 0.3s ease 0.05s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(2) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.35s ease 0.1s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(2) .nav-link {
+    animation: nav-link-default 0.35s ease 0.1s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(3) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.4s ease 0.15s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(3) .nav-link {
+    animation: nav-link-default 0.4s ease 0.15s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(4) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.45s ease 0.2s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(4) .nav-link {
+    animation: nav-link-default 0.45s ease 0.2s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(5) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.5s ease 0.25s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(5) .nav-link {
+    animation: nav-link-default 0.5s ease 0.25s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(6) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.55s ease 0.3s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(6) .nav-link {
+    animation: nav-link-default 0.55s ease 0.3s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(7) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.6s ease 0.35s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(7) .nav-link {
+    animation: nav-link-default 0.6s ease 0.35s forwards;
+  }
 }
-nav .nav-links li:nth-of-type(8) .nav-link {
-  translate: 0 0;
-  animation: nav-link-default 0.65s ease 0.4s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-links li:nth-of-type(8) .nav-link {
+    animation: nav-link-default 0.65s ease 0.4s forwards;
+  }
 }
 nav .nav-links .nav-link {
   display: flex;
@@ -1586,9 +1599,13 @@ nav .nav-abstract {
   width: 100vw;
   height: 0;
   background: #fff;
-  transition: 1.2s cubic-bezier(1, 0.07, 0.2, 1) 0.5s, width 0s;
   z-index: -1;
   cursor: alias;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav .nav-abstract {
+    transition: 1.2s cubic-bezier(1, 0.07, 0.2, 1) 0.5s, width 0s;
+  }
 }
 nav.menu-active {
   opacity: 1;
@@ -1598,43 +1615,87 @@ nav.menu-active {
 }
 nav.menu-active .nav-abstract {
   height: 100%;
-  transition: all 1.25s cubic-bezier(1, 0.07, 0.2, 1) 0s, width 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-abstract {
+    transition: all 1.25s cubic-bezier(1, 0.07, 0.2, 1) 0s, width 0s;
+  }
 }
 nav.menu-active .nav-links {
   opacity: 1;
   pointer-events: all;
 }
 nav.menu-active .nav-links li:nth-of-type(1) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.55s ease 0.55s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(1) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.55s ease 0.55s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(2) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.6s ease 0.6s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(2) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.6s ease 0.6s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(3) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.65s ease 0.65s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(3) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.65s ease 0.65s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(4) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.7s ease 0.7s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(4) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.7s ease 0.7s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(5) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.75s ease 0.75s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(5) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.75s ease 0.75s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(6) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.8s ease 0.8s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(6) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.8s ease 0.8s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(7) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.85s ease 0.85s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(7) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.85s ease 0.85s forwards;
+  }
 }
 nav.menu-active .nav-links li:nth-of-type(8) .nav-link {
-  translate: 0 100%;
-  animation: nav-link-open 0.9s ease 0.9s forwards;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  nav.menu-active .nav-links li:nth-of-type(8) .nav-link {
+    translate: 0 100%;
+    animation: nav-link-open 0.9s ease 0.9s forwards;
+  }
 }
 nav.menu-active .nav-img-container {
   opacity: 1;
@@ -3009,7 +3070,6 @@ img {
 @media screen and (max-width: 768px) {
   .home-hero__heading {
     gap: 12px;
-    width: 96vw;
     padding: 4px;
   }
 }
@@ -3020,8 +3080,10 @@ img {
   position: relative;
   overflow: hidden;
 }
-.home-hero__heading-text:first-of-type {
-  translate: 50% 0;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading-text:first-of-type {
+    translate: 50% 0;
+  }
 }
 @media screen and (max-width: 1024px) {
   .home-hero__heading-text:first-of-type {
@@ -3036,58 +3098,68 @@ img {
   position: absolute;
   top: 0;
 }
-.home-hero__heading-text span {
-  translate: 0 100%;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading-text span {
+    translate: 0 100%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .home-hero__heading-text span {
     padding: 2px 0;
   }
 }
-.home-hero__heading.animate .home-hero__heading-text:first-of-type {
-  animation: text-group-1 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading.animate .home-hero__heading-text:first-of-type {
+    animation: text-group-1 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+  }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:first-of-type {
     translate: 0 0;
     animation: text-group-1-lg 2.5s cubic-bezier(0.18, 0.97, 0.47, 1) 0.27s forwards;
   }
 }
-.home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-1 {
-  animation: text-letters-1 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-1 {
+    animation: text-letters-1 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+  }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-1 {
     animation-duration: 2.5s;
     animation-delay: 0.27s;
   }
 }
-.home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-2 {
-  animation: text-letters-2 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-2 {
+    animation: text-letters-2 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s forwards;
+  }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:first-of-type .home-hero__heading-text-inner-2 {
     animation-duration: 2.5s;
     animation-delay: 0.27s;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:last-of-type {
-    animation: text-group-2-lg 2.5s cubic-bezier(0.18, 0.97, 0.47, 1) 0.27s forwards;
+    animation: text-group-2-lg 2.5s cubic-bezier(0.18, 0.97, 0.47, 1) 0.39s forwards;
   }
 }
-.home-hero__heading.animate .home-hero__heading-text:last-of-type .home-hero__heading-text-inner-1 {
-  animation: text-letters-2 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.34s forwards;
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__heading.animate .home-hero__heading-text:last-of-type .home-hero__heading-text-inner-1 {
+    animation: text-letters-2 2s cubic-bezier(0.18, 0.97, 0.47, 1) 0.34s forwards;
+  }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:last-of-type .home-hero__heading-text-inner-1 {
     animation-duration: 2.5s;
-    animation-delay: 0.27s;
+    animation-delay: 0.39s;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (prefers-reduced-motion: no-preference) and (max-width: 1024px) {
   .home-hero__heading.animate .home-hero__heading-text:last-of-type .home-hero__heading-text-inner-2 {
-    animation: text-letters-1 2.5s cubic-bezier(0.18, 0.97, 0.47, 1) 0.27s forwards;
+    animation: text-letters-1 2.38s cubic-bezier(0.18, 0.97, 0.47, 1) 0.39s forwards;
   }
 }
 .home-hero__subtext {
@@ -3097,12 +3169,64 @@ img {
 @media screen and (max-width: 768px) {
   .home-hero__subtext {
     font-size: 14px;
+    opacity: 0.5;
   }
 }
 @media screen and (max-width: 480px) {
   .home-hero__subtext {
     font-size: 12px;
   }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__subtext span {
+    opacity: 0;
+  }
+}
+.home-hero__subtext .dot {
+  margin-inline: 8px;
+}
+@media screen and (max-width: 768px) {
+  .home-hero__subtext .dot {
+    margin-inline: 4px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .home-hero__subtext .dot {
+    margin-inline: 1px;
+  }
+}
+.home-hero__subtext.animate span {
+  opacity: 1;
+}
+.home-hero__subtext.animate span:nth-of-type(1) {
+  transition: opacity 0.75s ease 1.03s;
+}
+.home-hero__subtext.animate span:nth-of-type(2) {
+  transition: opacity 0.75s ease 1.06s;
+}
+.home-hero__subtext.animate span:nth-of-type(3) {
+  transition: opacity 0.75s ease 1.09s;
+}
+.home-hero__subtext.animate span:nth-of-type(4) {
+  transition: opacity 0.75s ease 1.12s;
+}
+.home-hero__subtext.animate span:nth-of-type(5) {
+  transition: opacity 0.75s ease 1.15s;
+}
+.home-hero__subtext.animate span:nth-of-type(6) {
+  transition: opacity 0.75s ease 1.18s;
+}
+.home-hero__subtext.animate span:nth-of-type(7) {
+  transition: opacity 0.75s ease 1.21s;
+}
+.home-hero__subtext.animate span:nth-of-type(8) {
+  transition: opacity 0.75s ease 1.24s;
+}
+.home-hero__subtext.animate span:nth-of-type(9) {
+  transition: opacity 0.75s ease 1.27s;
+}
+.home-hero__subtext.animate span:nth-of-type(10) {
+  transition: opacity 0.75s ease 1.3s;
 }
 
 .loading-screen {

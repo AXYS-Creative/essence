@@ -46,7 +46,6 @@
 
     @include mq-max("md") {
       gap: 12px;
-      width: 96vw;
       padding: 4px;
     }
 
@@ -56,7 +55,9 @@
       overflow: hidden;
 
       &:first-of-type {
-        translate: 50% 0;
+        @include mq-motion-allow {
+          translate: 50% 0;
+        }
 
         @include mq-max("lg") {
           translate: 0 0;
@@ -76,7 +77,9 @@
       }
 
       span {
-        translate: 0 100%;
+        @include mq-motion-allow {
+          translate: 0 100%;
+        }
 
         @include mq-max("lg") {
           padding: 2px 0;
@@ -90,50 +93,54 @@
 
       $delay-lg: 0.27s;
 
-      .home-hero__heading-text {
-        &:first-of-type {
-          animation: text-group-1 $duration $cubic-ease 0.2s forwards;
-
-          @include mq-max("lg") {
-            translate: 0 0;
-            animation: text-group-1-lg $duration-lg $cubic-ease $delay-lg
-              forwards;
-          }
-          .home-hero__heading-text-inner-1 {
-            animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+      @include mq-motion-allow {
+        .home-hero__heading-text {
+          &:first-of-type {
+            animation: text-group-1 $duration $cubic-ease 0.2s forwards;
 
             @include mq-max("lg") {
-              animation-duration: $duration-lg;
-              animation-delay: $delay-lg;
-            }
-          }
-          .home-hero__heading-text-inner-2 {
-            animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
-
-            @include mq-max("lg") {
-              animation-duration: $duration-lg;
-              animation-delay: $delay-lg;
-            }
-          }
-        }
-
-        &:last-of-type {
-          @include mq-max("lg") {
-            animation: text-group-2-lg $duration-lg $cubic-ease $delay-lg
-              forwards;
-          }
-          .home-hero__heading-text-inner-1 {
-            animation: text-letters-2 $duration $cubic-ease 0.34s forwards;
-
-            @include mq-max("lg") {
-              animation-duration: $duration-lg;
-              animation-delay: $delay-lg;
-            }
-          }
-          .home-hero__heading-text-inner-2 {
-            @include mq-max("lg") {
-              animation: text-letters-1 $duration-lg $cubic-ease $delay-lg
+              translate: 0 0;
+              animation: text-group-1-lg $duration-lg $cubic-ease $delay-lg
                 forwards;
+            }
+
+            .home-hero__heading-text-inner-1 {
+              animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+
+              @include mq-max("lg") {
+                animation-duration: $duration-lg;
+                animation-delay: $delay-lg;
+              }
+            }
+            .home-hero__heading-text-inner-2 {
+              animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
+
+              @include mq-max("lg") {
+                animation-duration: $duration-lg;
+                animation-delay: $delay-lg;
+              }
+            }
+          }
+
+          &:last-of-type {
+            @include mq-max("lg") {
+              animation: text-group-2-lg $duration-lg $cubic-ease
+                calc($delay-lg + 0.12s) forwards;
+            }
+
+            .home-hero__heading-text-inner-1 {
+              animation: text-letters-2 $duration $cubic-ease 0.34s forwards;
+
+              @include mq-max("lg") {
+                animation-duration: $duration-lg;
+                animation-delay: calc($delay-lg + 0.12s);
+              }
+            }
+            .home-hero__heading-text-inner-2 {
+              @include mq-max("lg") {
+                animation: text-letters-1 calc($duration-lg - 0.12s) $cubic-ease
+                  calc($delay-lg + 0.12s) forwards;
+              }
             }
           }
         }
@@ -147,10 +154,43 @@
 
     @include mq-max("md") {
       font-size: 14px;
+      opacity: 0.5;
     }
 
     @include mq-max("sm") {
       font-size: 12px;
+    }
+
+    span {
+      @include mq-motion-allow {
+        opacity: 0;
+      }
+    }
+
+    .dot {
+      margin-inline: 8px;
+
+      @include mq-max("md") {
+        margin-inline: 4px;
+      }
+
+      @include mq-max("xs") {
+        margin-inline: 1px;
+      }
+    }
+
+    &.animate {
+      span {
+        opacity: 1;
+
+        @for $i from 1 through 10 {
+          $delay: 1 + 0.03s * $i;
+
+          &:nth-of-type(#{$i}) {
+            transition: opacity 0.75s ease $delay;
+          }
+        }
+      }
     }
   }
 }

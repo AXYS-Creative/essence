@@ -141,7 +141,7 @@ const toggleClassAnimate = (
   trigger,
   start = "top 92%",
   // end = "center 4%",
-  end = "bottom top",
+  end = "120% top",
   markers
 ) => {
   gsap.to(selector, {
@@ -161,4 +161,5 @@ const toggleClassAnimate = (
   });
 };
 
-toggleClassAnimate(".home-hero__heading", ".home-hero__heading");
+toggleClassAnimate(".home-hero__heading", ".home-hero__subtext");
+toggleClassAnimate(".home-hero__subtext", ".home-hero__subtext");

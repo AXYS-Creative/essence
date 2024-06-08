@@ -879,7 +879,11 @@ nav {
     gap: 80px;
     width: calc(50% - $right-padding);
     pointer-events: none;
-    transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+    transition: 0.5s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+
+    @include mq-motion-allow {
+      transition: 0.8s cubic-bezier(0.23, 1, 0.62, 1), height 0s;
+    }
 
     @include mq-max("xxl") {
       gap: 64px;
@@ -956,19 +960,15 @@ nav {
         }
       }
 
-      // &:nth-of-type(even) {
-      //   margin-inline-start: 48px;
-      // }
-
       @for $i from 1 through 8 {
         &:nth-of-type(#{$i}) {
           $transition: 0.25s + $i * 0.05s;
           $delay: 0s + $i * 0.05s;
 
           .nav-link {
-            translate: 0 0;
-            // transition: 0.2s ease, translate $transition ease $delay;
-            animation: nav-link-default $transition ease $delay forwards;
+            @include mq-motion-allow {
+              animation: nav-link-default $transition ease $delay forwards;
+            }
           }
         }
       }
@@ -1078,12 +1078,13 @@ nav {
     translate: -50% 0;
     width: 100vw;
     height: 0;
-    // background: $white;
     background: #fff;
-    transition: 1.2s $cubic-ease-sudden 0.5s, width 0s;
-    // animation: nav-abstract-default 0.75s ease 0s forwards;
     z-index: -1;
     cursor: alias;
+
+    @include mq-motion-allow {
+      transition: 1.2s $cubic-ease-sudden 0.5s, width 0s;
+    }
   }
 
   &.menu-active {
@@ -1094,9 +1095,10 @@ nav {
 
     .nav-abstract {
       height: 100%;
-      // animation: nav-abstract-open 0.75s ease 0s forwards;
 
-      transition: all 1.25s $cubic-ease-sudden 0s, width 0s;
+      @include mq-motion-allow {
+        transition: all 1.25s $cubic-ease-sudden 0s, width 0s;
+      }
     }
 
     .nav-links {
@@ -1110,10 +1112,12 @@ nav {
             $delay: 0.5s + $i * 0.05s;
 
             .nav-link {
-              translate: 0 100%;
-              animation: nav-link-open $transition ease $delay forwards;
+              translate: 0 0;
 
-              // make me accessible
+              @include mq-motion-allow {
+                translate: 0 100%;
+                animation: nav-link-open $transition ease $delay forwards;
+              }
             }
           }
         }
