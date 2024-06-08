@@ -80,35 +80,35 @@ gsap.registerPlugin(ScrollTrigger);
 //   y: "100%",
 // });
 
-const spans1 = document.querySelectorAll(
-  ".home-hero__heading-text:first-of-type span"
-);
-const spans2 = document.querySelectorAll(
-  ".home-hero__heading-text:last-of-type span"
-);
+// const spans1 = document.querySelectorAll(
+//   ".home-hero__heading-text:first-of-type span"
+// );
+// const spans2 = document.querySelectorAll(
+//   ".home-hero__heading-text:last-of-type span"
+// );
 
-const allSpans = [...spans1, ...spans2]; // Combine both node lists into a single array
+// const allSpans = [...spans1, ...spans2];
 
-const startValue = 35;
-const endValue = 20;
-const scrubIncrement = 0.12;
+// const startValue = 35;
+// const endValue = 20;
+// const scrubIncrement = 0.12;
 
-allSpans.forEach((span, index) => {
-  const scrubValue = scrubIncrement * index;
-  const startPercentage = startValue - index * 2;
-  const endPercentage = endValue - index * 2;
+// allSpans.forEach((span, index) => {
+//   const scrubValue = scrubIncrement * index;
+//   const startPercentage = startValue - index * 2;
+//   const endPercentage = endValue - index * 2;
 
-  gsap.to(span, {
-    scrollTrigger: {
-      trigger: ".home-hero",
-      scrub: scrubValue,
-      start: `center ${startPercentage}%`,
-      end: `bottom ${endPercentage}%`,
-      // markers: true,
-    },
-    y: "250%",
-  });
-});
+//   gsap.to(span, {
+//     scrollTrigger: {
+//       trigger: ".home-hero",
+//       scrub: scrubValue,
+//       start: `center ${startPercentage}%`,
+//       end: `bottom ${endPercentage}%`,
+//       // markers: true,
+//     },
+//     y: "250%",
+//   });
+// });
 
 //
 //
@@ -136,34 +136,29 @@ allSpans.forEach((span, index) => {
 //
 //
 
-// const toggleClassAnimate = (
-//   selector,
-//   trigger,
-//   start = "top 92%",
-//   end = "center 4%",
-//   markers
-// ) => {
-//   gsap.to(selector, {
-//     scrollTrigger: {
-//       trigger: trigger,
-//       start: start,
-//       end: end,
-//       markers: markers,
-//       onEnter: () => document.querySelector(selector).classList.add("animate"),
-//       onLeave: () =>
-//         document.querySelector(selector).classList.remove("animate"),
-//       onEnterBack: () =>
-//         document.querySelector(selector).classList.add("animate"),
-//       onLeaveBack: () =>
-//         document.querySelector(selector).classList.remove("animate"),
-//     },
-//   });
-// };
+const toggleClassAnimate = (
+  selector,
+  trigger,
+  start = "top 92%",
+  // end = "center 4%",
+  end = "bottom top",
+  markers
+) => {
+  gsap.to(selector, {
+    scrollTrigger: {
+      trigger: trigger,
+      start: start,
+      end: end,
+      markers: markers,
+      onEnter: () => document.querySelector(selector).classList.add("animate"),
+      onLeave: () =>
+        document.querySelector(selector).classList.remove("animate"),
+      onEnterBack: () =>
+        document.querySelector(selector).classList.add("animate"),
+      onLeaveBack: () =>
+        document.querySelector(selector).classList.remove("animate"),
+    },
+  });
+};
 
-// toggleClassAnimate(
-//   ".home-hero__heading",
-//   ".home-hero__heading",
-//   undefined,
-//   undefined,
-//   true
-// );
+toggleClassAnimate(".home-hero__heading", ".home-hero__heading");
