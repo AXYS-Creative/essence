@@ -3307,13 +3307,6 @@ img {
   }
 }
 
-.loading-screen {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
-  position: fixed;
-  top: 0;
-  display: none;
-}
-
 .archive-section {
   display: flex;
   justify-content: center;
