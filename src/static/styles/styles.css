@@ -3676,6 +3676,21 @@ img {
     text-indent: 36px;
   }
 }
+.essence-paragraph__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.essence-paragraph__footer:has(.essence-paragraph__subheader) {
+  flex-direction: row-reverse;
+}
+.essence-paragraph__footer:has(.essence-paragraph__subheader) .essence-paragraph__subheader {
+  translate: 12px 0;
+}
+.essence-paragraph__footer:has(.essence-paragraph__subheader) .essence-paragraph__link {
+  translate: -12px 0;
+}
 .essence-paragraph__link {
   align-self: flex-start;
   translate: 164px 0;

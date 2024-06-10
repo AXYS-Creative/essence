@@ -2,20 +2,8 @@
 layout: app
 ---
 
-{% set latestPost = collections.blog[0] %}
-
-<section class="essence-paragraph hero-section hero-paragraph">
-  <h1 class="essence-paragraph__heading">
-    Our {{ category }}
-    <img
-      class="icon-arrow-down"
-      src="./static/img/icons/angle-arrow-down.svg"
-      alt="decorative angled arrow"
-      role="presentation"
-    />
-  </h1>
-  <p class="essence-paragraph__body-text">{{ heroParagraph }}</p>
-</section>
+{% set latestPost = collections.blog[0] %} {% include "partials/paragraph.html"
+%}
 
 <section class="archive-section">
   <div class="archive-header">

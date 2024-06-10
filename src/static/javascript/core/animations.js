@@ -143,19 +143,24 @@ const toggleClassAnimate = (
   end = "center 4%",
   markers
 ) => {
+  const targetElement = document.querySelector(selector);
+  const triggerElement = document.querySelector(trigger);
+
+  if (!targetElement || !triggerElement) {
+    // console.warn(`Element(s) not found: ${selector} or ${trigger}`);
+    return;
+  }
+
   gsap.to(selector, {
     scrollTrigger: {
       trigger: trigger,
       start: start,
       end: end,
       markers: markers,
-      onEnter: () => document.querySelector(selector).classList.add("animate"),
-      onLeave: () =>
-        document.querySelector(selector).classList.remove("animate"),
-      onEnterBack: () =>
-        document.querySelector(selector).classList.add("animate"),
-      onLeaveBack: () =>
-        document.querySelector(selector).classList.remove("animate"),
+      onEnter: () => targetElement.classList.add("animate"),
+      onLeave: () => targetElement.classList.remove("animate"),
+      onEnterBack: () => targetElement.classList.add("animate"),
+      onLeaveBack: () => targetElement.classList.remove("animate"),
     },
   });
 };
@@ -179,4 +184,10 @@ toggleClassAnimate(
 toggleClassAnimate(
   ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
   ".essence-paragraph__media-praises .essence-paragraph__heading-svg"
+);
+
+// Archive Page __ Hero Paragraph
+toggleClassAnimate(
+  ".hero-paragraph .essence-paragraph__heading-svg",
+  ".hero-paragraph .essence-paragraph__heading-svg"
 );

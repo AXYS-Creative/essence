@@ -1,13 +1,7 @@
 <section class="{{ paragraphClass }}">
-  {% if paragraphHeading %}
-  <h2 class="essence-paragraph__heading">
+  {% if paragraphHeading %} {% if paragraphHeadingLevel == "h1" %}
+  <h1 class="essence-paragraph__heading">
     {{ paragraphHeading }}
-    <!-- <img
-      class="icon-arrow-down"
-      src="./static/img/icons/angle-arrow-down.svg"
-      alt="decorative angled arrow"
-      role="presentation"
-    /> -->
     <svg
       class="essence-paragraph__heading-svg"
       width="13"
@@ -15,6 +9,27 @@
       viewBox="0 0 13 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      title="decorative angled arrow"
+    >
+      <path
+        d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </h1>
+  {% else %}
+  <h2 class="essence-paragraph__heading">
+    {{ paragraphHeading }}
+    <svg
+      class="essence-paragraph__heading-svg"
+      width="13"
+      height="16"
+      viewBox="0 0 13 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      title="decorative angled arrow"
     >
       <path
         d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
@@ -24,7 +39,7 @@
       ></path>
     </svg>
   </h2>
-  {%endif%}
+  {%endif%} {%endif%}
 
   <!-- prettier-ignore -->
   {%if paragraphContent %}
@@ -40,15 +55,28 @@
   {% endif %}
   <!-- prettier-ignore -->
 
-  {%if paragraphLink %}
-  <a class="essence-paragraph__link simple-link tab-element-page" href="/about">
-    {{ paragraphLink }}
-    <img
-      class="icon-arrow-right"
-      src="./static/img/icons/arrow-right.svg"
-      alt="decorative right arrow"
-      role="presentation"
-    />
-  </a>
+  {%if paragraphLink or paragraphSubHeader %}
+  <div class="essence-paragraph__footer">
+    {%if paragraphLink %}
+    <a
+      class="essence-paragraph__link simple-link tab-element-page"
+      href="{{ paragraphLinkUrl }}"
+    >
+      {{ paragraphLink }}
+      <img
+        class="icon-arrow-right"
+        src="./static/img/icons/arrow-right.svg"
+        alt="decorative right arrow"
+        role="presentation"
+      />
+    </a>
+    <!-- prettier-ignore -->
+    {%endif%} 
+    {%if paragraphSubHeader %}
+    <h3 class="h6 essence-paragraph__subheader">
+      — <cite>{{ paragraphSubHeader }}</cite>
+    </h3>
+    {%endif%}
+  </div>
   {%endif%}
 </section>

@@ -59,6 +59,32 @@
     }
   }
 
+  &__footer {
+    @include row-center(space-between);
+    width: 100%;
+
+    &:has(.essence-paragraph__subheader) {
+      flex-direction: row-reverse;
+
+      .essence-paragraph__subheader {
+        translate: 12px 0;
+      }
+
+      .essence-paragraph__link {
+        translate: -12px 0;
+
+        // @include mq-max("lg") {
+        //   translate: -16px 0;
+        // }
+
+        // @include mq-max("md") {
+        //   align-self: unset;
+        //   translate: 0 0;
+        // }
+      }
+    }
+  }
+
   &__link {
     align-self: flex-start;
     translate: 164px 0;
