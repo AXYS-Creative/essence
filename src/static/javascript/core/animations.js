@@ -140,8 +140,7 @@ const toggleClassAnimate = (
   selector,
   trigger,
   start = "top 92%",
-  // end = "center 4%",
-  end = "120% top",
+  end = "center 4%",
   markers
 ) => {
   gsap.to(selector, {
@@ -161,5 +160,23 @@ const toggleClassAnimate = (
   });
 };
 
-toggleClassAnimate(".home-hero__heading", ".home-hero__subtext");
-toggleClassAnimate(".home-hero__subtext", ".home-hero__subtext");
+toggleClassAnimate(
+  ".home-hero__heading",
+  ".home-hero__subtext",
+  undefined,
+  "120% top"
+);
+toggleClassAnimate(
+  ".home-hero__subtext",
+  ".home-hero__subtext",
+  undefined,
+  "120% top"
+);
+toggleClassAnimate(
+  ".essence-paragraph__our-mission .essence-paragraph__heading-svg",
+  ".essence-paragraph__our-mission .essence-paragraph__heading-svg"
+);
+toggleClassAnimate(
+  ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
+  ".essence-paragraph__media-praises .essence-paragraph__heading-svg"
+);

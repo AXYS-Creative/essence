@@ -2,21 +2,21 @@
 title: ESSENCE • Home
 layout: app
 path: home
-
-section2Heading: "Our Mission"
-
-section4Heading: "Media Praises"
 ---
 
 <section class="hero-section home-hero">
   <h1 class="h1 home-hero__heading">
     <span class="home-hero__heading-text">
       <span class="home-hero__heading-text-inner-1">Live more</span>
-      <span class="home-hero__heading-text-inner-2">Live more</span>
+      <span class="home-hero__heading-text-inner-2" aria-hidden="true">
+        Live more
+      </span>
     </span>
     <span class="home-hero__heading-text">
       <span class="home-hero__heading-text-inner-1">with less</span>
-      <span class="home-hero__heading-text-inner-2">with less</span>
+      <span class="home-hero__heading-text-inner-2" aria-hidden="true">
+        with less
+      </span>
     </span>
   </h1>
   <p class="hero-section__subtext home-hero__subtext">
@@ -32,46 +32,27 @@ section4Heading: "Media Praises"
   </p>
 </section>
 
-<section class="essence-paragraph our-mission">
-  <h2 class="essence-paragraph__heading">
-    {{ section2Heading }}
-    <img
-      class="icon-arrow-down"
-      src="./static/img/icons/angle-arrow-down.svg"
-      alt="decorative angled arrow"
-      role="presentation"
-    />
-  </h2>
-  <p class="essence-paragraph__body-text">
-    ESSENCE helps millions of people end their obsession with stuff, and live
-    more meaningfully, with less. Driven by a desire to reshape the world, our
-    goal is to help people narrow their focus on the essential aspects of life.
-  </p>
-  <a class="essence-paragraph__link simple-link tab-element-page" href="/about">
-    <span class="simple-link__letters" aria-label="learn more">
-      <span class="simple-link__letter">L</span>
-      <span class="simple-link__letter">e</span>
-      <span class="simple-link__letter">a</span>
-      <span class="simple-link__letter">r</span>
-      <span class="simple-link__letter">n</span>
-      &nbsp;
-      <span class="simple-link__letter">M</span>
-      <span class="simple-link__letter">o</span>
-      <span class="simple-link__letter">r</span>
-      <span class="simple-link__letter">e</span>
-    </span>
-    <img
-      class="icon-arrow-right"
-      src="./static/img/icons/arrow-right.svg"
-      alt="decorative right arrow"
-      role="presentation"
-    />
-  </a>
-</section>
+<!-- prettier-ignore -->
+
+{% set paragraphClass = "essence-paragraph essence-paragraph__our-mission" %}
+{% set paragraphHeading = "Our Mission" %}
+{% set paragraphContent = "ESSENCE helps millions of people end their obsession with stuff, and live more meaningfully, with less. Driven by a desire to reshape the world, our goal is to help people narrow their focus on the essential aspects of life." %}
+{% set paragraphType = "p" %}
+{% set paragraphLink = "Learn More" %}
+{% include "partials/paragraph.html" %}
 
 {% include "./_includes/partials/resources.html" %}
 
-<section class="essence-paragraph media-praises">
+{% set paragraphClass = "essence-paragraph essence-paragraph__media-praises" %}
+{% set paragraphHeading = "Media Praises" %}
+{% set paragraphContent = "ESSENSE proves that simplicity can indeed be revolutionary. Their minimalist approach to everyday challenges not only declutters physical spaces but also sharpens mental focus. A commendable choice for anyone seeking to elevate their daily life with direct solutions." %}
+{% set paragraphType = "blockquote" %}
+{% set paragraphLink = "View All" %}
+{% include "partials/paragraph.html" %}
+
+<!-- prettier-ignore -->
+
+<!--  <section class="essence-paragraph media-praises">
   <h2 class="essence-paragraph__heading">
     {{ section4Heading }}
     <img
@@ -105,4 +86,4 @@ section4Heading: "Media Praises"
       role="presentation"
     />
   </a>
-</section>
+</section> -->

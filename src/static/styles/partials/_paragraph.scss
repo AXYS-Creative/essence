@@ -22,8 +22,26 @@
     @include row-center;
     gap: 12px;
 
-    .icon-arrow-down {
+    &-svg {
       translate: 0 4px;
+
+      path {
+        stroke-dashoffset: 42.38288497924805px;
+        stroke-dasharray: 42.38288497924805px;
+
+        @include mq-motion-allow {
+          transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715)
+            0s;
+          -webkit-transition: stroke-dashoffset 1s
+            cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+        }
+      }
+
+      &.animate {
+        path {
+          stroke-dashoffset: 0;
+        }
+      }
     }
   }
 

@@ -1894,6 +1894,10 @@ img {
   transition: 0.8s $cubic-ease;
   opacity: 0;
 
+  @include mq-touch {
+    display: none;
+  }
+
   @include mq-max("xxl") {
     width: 112px;
     height: 112px;
