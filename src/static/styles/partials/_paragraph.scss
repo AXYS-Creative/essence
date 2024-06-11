@@ -48,14 +48,48 @@
   &__body-text {
     @extend .h4;
     text-transform: initial;
-    text-indent: 128px;
+    display: flex;
+    gap: 0 14px;
+    flex-wrap: wrap;
 
     @include mq-max("lg") {
-      text-indent: 64px;
+      gap: 0 12px;
     }
 
-    @include mq-max("md") {
-      text-indent: 36px;
+    .outter-span {
+      display: flex;
+      overflow: hidden;
+
+      &:first-of-type {
+        margin-left: 128px;
+
+        @include mq-max("lg") {
+          margin-left: 64px;
+        }
+
+        @include mq-max("md") {
+          margin-left: 36px;
+        }
+      }
+
+      .inner-span {
+        translate: 0 80%;
+      }
+    }
+
+    &.animate {
+      @include mq-motion-allow {
+        .outter-span {
+          @for $i from 1 through 48 {
+            &:nth-of-type(#{$i}) {
+              .inner-span {
+                translate: 0 0;
+                transition: 0.5s ease 0.2s + 0.016s * $i;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

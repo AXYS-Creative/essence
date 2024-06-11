@@ -1707,11 +1707,11 @@ nav.menu-active .nav-img-container {
 }
 
 section {
-  padding: 196px 160px;
+  padding: 196px 153.6px;
 }
 @media screen and (max-width: 1512px) {
   section {
-    padding: 148px 100px;
+    padding: 148px 96px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3315,7 +3315,7 @@ img {
 }
 @media screen and (max-width: 1200px) {
   .archive-section {
-    padding-inline: 100px;
+    padding-inline: 96px;
     gap: 24px;
   }
 }
@@ -3620,13 +3620,13 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 280px 160px;
+  padding: 280px 153.6px;
   gap: 48px;
 }
 @media screen and (max-width: 1512px) {
   .essence-paragraph {
     gap: 32px;
-    padding: 296px 100px;
+    padding: 296px 96px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3664,16 +3664,227 @@ img {
 }
 .essence-paragraph__body-text {
   text-transform: initial;
-  text-indent: 128px;
+  display: flex;
+  gap: 0 14px;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 1024px) {
   .essence-paragraph__body-text {
-    text-indent: 64px;
+    gap: 0 12px;
+  }
+}
+.essence-paragraph__body-text .outter-span {
+  display: flex;
+  overflow: hidden;
+}
+.essence-paragraph__body-text .outter-span:first-of-type {
+  margin-left: 128px;
+}
+@media screen and (max-width: 1024px) {
+  .essence-paragraph__body-text .outter-span:first-of-type {
+    margin-left: 64px;
   }
 }
 @media screen and (max-width: 768px) {
-  .essence-paragraph__body-text {
-    text-indent: 36px;
+  .essence-paragraph__body-text .outter-span:first-of-type {
+    margin-left: 36px;
+  }
+}
+.essence-paragraph__body-text .outter-span .inner-span {
+  translate: 0 80%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(1) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.216s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(2) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.232s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(3) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.248s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(4) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.264s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(5) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.28s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(6) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.296s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(7) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.312s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(8) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.328s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(9) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.344s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(10) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.36s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(11) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.376s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(12) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.392s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(13) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.408s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(14) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.424s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(15) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.44s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(16) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.456s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(17) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.472s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(18) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.488s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(19) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.504s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(20) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.52s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(21) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.536s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(22) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.552s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(23) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.568s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(24) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.584s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(25) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.6s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(26) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.616s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(27) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.632s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(28) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.648s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(29) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.664s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(30) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.68s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(31) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.696s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(32) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.712s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(33) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.728s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(34) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.744s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(35) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.76s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(36) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.776s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(37) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.792s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(38) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.808s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(39) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.824s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(40) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.84s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(41) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.856s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(42) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.872s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(43) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.888s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(44) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.904s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(45) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.92s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(46) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.936s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(47) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.952s;
+  }
+  .essence-paragraph__body-text.animate .outter-span:nth-of-type(48) .inner-span {
+    translate: 0 0;
+    transition: 0.5s ease 0.968s;
   }
 }
 .essence-paragraph__footer {
