@@ -405,15 +405,8 @@ header {
         translate: 0 -1px;
         transition: 0.25s ease 0.4s;
 
-        @include mq-max("lg") {
-          translate: -12px -1px;
-          opacity: 0;
-          pointer-events: none;
-          transition: 0.25s ease;
-
-          @include mq-max("md") {
-            translate: 0 -1px;
-          }
+        @include mq-max("xl") {
+          display: none;
         }
       }
     }
@@ -714,14 +707,10 @@ header {
 
     .social-media-wrapper {
       .social-media-toggle__text {
-        translate: -12px -1px;
+        margin-left: -12px;
         opacity: 0;
         pointer-events: none;
         transition: 0.25s ease;
-
-        @include mq-max("md") {
-          translate: 0 -1px;
-        }
       }
     }
 

@@ -17,13 +17,11 @@
 
   &:hover,
   &:focus {
-    .simple-link__letters {
-      .simple-link__letter {
-        @for $i from 1 through 16 {
-          &:nth-of-type(#{$i}) {
-            animation: jump 0.32s ease $i * 0.04s forwards;
-          }
-        }
+    .simple-link__span-inner {
+      translate: 0 -100%;
+
+      &:last-of-type {
+        translate: 0 0;
       }
     }
 
@@ -32,8 +30,43 @@
     }
   }
 
-  &__letters {
-    @include row-center;
+  &__span-outter {
+    @include row-center(flex-end);
+    position: relative;
+    width: 180px;
+    height: 24px;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      right: 0;
+
+      @include mq-motion-allow {
+        transition: 0.6s $cubic-ease;
+      }
+
+      &:last-of-type {
+        translate: 0 100%;
+      }
+    }
+
+    &.span-sm {
+      width: 90px;
+    }
+    &.span-md {
+      width: 134px;
+
+      @include mq-max("xl") {
+        width: 112px;
+      }
+
+      @include mq-max("md") {
+        width: 98px;
+      }
+    }
+    // &.span-lg {
+    //   background: lightgreen;
+    // }
   }
 
   .icon-arrow-right {

@@ -14,18 +14,11 @@ layout: app
     <p class="archive-header__sub-heading">{{ subheading }}</p>
     {% if page.url === "/blog/" %}
     <a href="{{ latestPost.url }}" class="simple-link tab-element-page">
-      <span class="simple-link__letters" aria-label="learn more">
-        <span class="simple-link__letter">V</span>
-        <span class="simple-link__letter">i</span>
-        <span class="simple-link__letter">e</span>
-        <span class="simple-link__letter">w</span>
-        &nbsp;
-        <span class="simple-link__letter">L</span>
-        <span class="simple-link__letter">a</span>
-        <span class="simple-link__letter">t</span>
-        <span class="simple-link__letter">e</span>
-        <span class="simple-link__letter">s</span>
-        <span class="simple-link__letter">t</span>
+      <span class="simple-link__span-outter span-md">
+        <span class="simple-link__span-inner">View Latest</span>
+        <span class="simple-link__span-inner" aria-hidden="true"
+          >View Latest</span
+        >
       </span>
       <img
         class="icon-arrow-right"

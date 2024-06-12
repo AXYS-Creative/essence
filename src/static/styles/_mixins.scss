@@ -297,14 +297,10 @@ $min-breakpoints: (
   }
 
   .social-media-toggle__text {
-    translate: -12px -1px;
+    margin-left: -12px;
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease;
-
-    @include mq-max("md") {
-      translate: 0 -1px;
-    }
   }
 
   .social-media-toggle__icon {

@@ -62,7 +62,12 @@
       class="essence-paragraph__link simple-link tab-element-page"
       href="{{ paragraphLinkUrl }}"
     >
-      {{ paragraphLink }}
+      <span class="simple-link__span-outter {{ linkSize }}">
+        <span class="simple-link__span-inner"> {{ paragraphLink }} </span>
+        <span class="simple-link__span-inner" aria-hidden="true">
+          {{ paragraphLink }}
+        </span>
+      </span>
       <img
         class="icon-arrow-right"
         src="./static/img/icons/arrow-right.svg"

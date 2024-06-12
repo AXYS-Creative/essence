@@ -1,4 +1,6 @@
 .essence-paragraph {
+  $paragraph-indent: 128px;
+
   @include column-center;
   // padding: 316px $content-padding;
   padding: 280px $content-padding;
@@ -51,9 +53,18 @@
     display: flex;
     gap: 0 14px;
     flex-wrap: wrap;
+    opacity: 0;
+
+    @include mq-motion-allow {
+      transition: opacity 1.2s ease 0.2s;
+    }
 
     @include mq-max("lg") {
       gap: 0 12px;
+    }
+
+    @include mq-max("sm") {
+      gap: 0 8px;
     }
 
     .outter-span {
@@ -61,7 +72,7 @@
       overflow: hidden;
 
       &:first-of-type {
-        margin-left: 128px;
+        margin-left: $paragraph-indent;
 
         @include mq-max("lg") {
           margin-left: 64px;
@@ -70,21 +81,29 @@
         @include mq-max("md") {
           margin-left: 36px;
         }
+
+        @include mq-max("sm") {
+          margin-left: 16px;
+        }
       }
 
       .inner-span {
-        translate: 0 80%;
+        @include mq-motion-allow {
+          translate: 0 100%;
+        }
       }
     }
 
     &.animate {
       @include mq-motion-allow {
+        opacity: 1;
+
         .outter-span {
-          @for $i from 1 through 48 {
+          @for $i from 1 through 96 {
             &:nth-of-type(#{$i}) {
               .inner-span {
                 translate: 0 0;
-                transition: 0.5s ease 0.2s + 0.016s * $i;
+                transition: translate 0.5s ease 0.2s + 0.016s * $i;
               }
             }
           }
@@ -102,10 +121,18 @@
 
       .essence-paragraph__subheader {
         translate: 12px 0;
+
+        @include mq-max("sm") {
+          translate: 4px 0;
+        }
       }
 
       .essence-paragraph__link {
         translate: -12px 0;
+
+        @include mq-max("sm") {
+          translate: -4px 0;
+        }
 
         // @include mq-max("lg") {
         //   translate: -16px 0;
@@ -121,7 +148,7 @@
 
   &__link {
     align-self: flex-start;
-    translate: 164px 0;
+    translate: $paragraph-indent 0;
 
     @include mq-max("lg") {
       translate: 140px 0;
