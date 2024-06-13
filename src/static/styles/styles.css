@@ -152,39 +152,39 @@
   }
 }
 
-.h5, .post-body p:has(strong), h5 {
+.h5, h5 {
   font-family: "Atyp Display", sans-serif;
   font-size: 40px;
   font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 768px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: calc(8px + 4vw);
   }
 }
 @media screen and (max-width: 1200px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 480px) {
-  .h5, .post-body p:has(strong), h5 {
+  .h5, h5 {
     font-size: 20px;
   }
 }
@@ -2915,10 +2915,10 @@ img {
   }
 }
 
-.classic-link {
+.classic-link, .post-body a {
   position: relative;
 }
-.classic-link::before {
+.classic-link::before, .post-body a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2929,15 +2929,15 @@ img {
   animation: classic-link-default cubic-bezier(1, 0.07, 0.2, 1) forwards;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .classic-link::before {
+  .classic-link::before, .post-body a::before {
     animation-duration: 0.64s;
   }
 }
-.classic-link:hover::before, .classic-link:focus::before {
+.classic-link:hover::before, .post-body a:hover::before, .classic-link:focus::before, .post-body a:focus::before {
   animation: classic-link-hover cubic-bezier(1, 0.07, 0.2, 1) forwards;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .classic-link:hover::before, .classic-link:focus::before {
+  .classic-link:hover::before, .post-body a:hover::before, .classic-link:focus::before, .post-body a:focus::before {
     animation-duration: 0.64s;
   }
 }
@@ -3773,6 +3773,11 @@ img {
     padding-inline: 48px;
   }
 }
+@media screen and (max-width: 480px) {
+  .post-hero {
+    padding-inline: 16px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .post-hero {
     padding-block-start: 280px;
@@ -3836,20 +3841,74 @@ img {
     padding-inline: 48px;
   }
 }
-.post-body p:has(strong) {
-  text-transform: capitalize;
-  margin-block-end: 12px;
-}
-.post-body p:has(strong) strong {
-  font-weight: 300;
-}
-@media screen and (max-width: 768px) {
-  .post-body p:has(strong) strong {
-    font-weight: 400;
+@media screen and (max-width: 480px) {
+  .post-body {
+    padding-inline: 16px;
   }
 }
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5,
+.post-body h6 {
+  text-transform: initial;
+}
 .post-body p {
-  margin-block-end: 48px;
+  margin-block: 24px;
+}
+.post-body p ~ h2 {
+  margin-block-start: 64px;
+}
+.post-body p:has(img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 96px;
+}
+.post-body p:has(img) img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.post-body ol,
+.post-body ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+  font-weight: 300;
+  gap: 12px;
+  translate: 24px 0;
+  width: calc(100% - 24px);
+  margin-block: 48px;
+}
+@media screen and (max-width: 1200px) {
+  .post-body ol,
+  .post-body ul {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-body ol,
+  .post-body ul {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .post-body ol,
+  .post-body ul {
+    font-size: 16px;
+  }
+}
+.post-body ol strong,
+.post-body ul strong {
+  font-weight: 500;
+}
+.post-body a {
+  color: #869d7a;
 }
 
 .essence-paragraph {

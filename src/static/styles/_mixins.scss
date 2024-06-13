@@ -275,6 +275,10 @@ $min-breakpoints: (
   @include mq-max("md") {
     padding-inline: $content-padding-thin-md;
   }
+
+  @include mq-max("sm") {
+    padding-inline: $body-padding-sm;
+  }
 }
 
 //

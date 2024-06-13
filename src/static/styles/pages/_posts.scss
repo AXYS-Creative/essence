@@ -44,21 +44,51 @@
 .post-body {
   @include thin-section;
 
-  p:has(strong) {
-    @extend .h5;
-    text-transform: capitalize;
-    margin-block-end: 12px;
-
-    strong {
-      font-weight: 300;
-
-      @include mq-max("md") {
-        font-weight: 400;
-      }
-    }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-transform: initial;
   }
 
   p {
-    margin-block-end: 48px;
+    margin-block: 24px;
+  }
+
+  p ~ h2 {
+    margin-block-start: 64px;
+  }
+
+  p:has(img) {
+    @include row-center;
+    margin-block: 96px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  ol,
+  ul {
+    $x-offset: 24px;
+
+    @include column-start;
+    @include body-font-styles;
+    gap: 12px;
+    translate: $x-offset 0;
+    width: calc(100% - $x-offset);
+    margin-block: 48px;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  a {
+    @extend .classic-link;
+    color: $green;
   }
 }
