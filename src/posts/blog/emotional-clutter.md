@@ -43,7 +43,7 @@ Living with less emotional clutter opens up space in your life for more peace, j
 
 By tackling emotional clutter, you not only improve your mental health but also enhance your ability to engage fully with life. Each step you take to clear this clutter makes room for new, positive experiences and connections.
 
-```
+```html
 <div class="custom-code">
   <p>This is a paragraph</p>
 </div>
