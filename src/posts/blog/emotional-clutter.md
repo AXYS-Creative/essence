@@ -31,7 +31,7 @@ People often don't realize the burden they carry until they begin to feel its ph
 3. **Therapy and Professional Help**: For deeper emotional issues, professional counseling can be an effective way to work through emotional clutter. Therapists can provide tools and strategies to help you understand and process emotions in a healthy way.
 4. **Building Emotional Awareness**: Learning to recognize when you're holding onto unnecessary emotional baggage is crucial. This might involve reflecting on why certain memories keep surfacing or why certain situations make you unusually emotional.
 
-## **Maintaining a Clutter-Free Emotional State**
+## Maintaining a Clutter-Free Emotional State
 
 Just as with physical clutter, preventing the accumulation of emotional clutter is an ongoing process. Regular check-ins with yourself, mindfulness practices, and maintaining healthy emotional outlets are all crucial. Additionally, fostering open, honest communications in your relationships can prevent misunderstandings and resentments from piling up. [This is a link to google.](https://google.com)
 
