@@ -2624,7 +2624,6 @@ dialog .newsletter-form .form-message-container .error-message {
   color: #fbffa4;
 }
 dialog .newsletter-form .form-message-container .error-message .error-icon {
-  border-color: transparent;
   border-radius: 0;
 }
 dialog .newsletter-form .form-message-container .error-message .error-icon path {
