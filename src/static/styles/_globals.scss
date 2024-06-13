@@ -67,6 +67,11 @@ header {
                 $delay: 0.03s * $i;
 
                 animation: slide-up $duration ease $delay forwards;
+
+                @include mq-motion-reduce {
+                  animation-duration: 0s;
+                  animation-delay: 0s;
+                }
               }
 
               .letter-wrapper__letter:nth-of-type(1) {
@@ -109,6 +114,11 @@ header {
 
               translate: 0 100%;
               animation: logo-text-default $duration ease $delay forwards;
+
+              @include mq-motion-reduce {
+                animation-duration: 0s;
+                animation-delay: 0s;
+              }
             }
             .letter-wrapper__letter:nth-of-type(2) {
               $duration: 0.32s + 0.05s * $i;
@@ -116,6 +126,11 @@ header {
 
               translate: 0 -100%;
               animation: logo-text-default-alt $duration ease $delay forwards;
+
+              @include mq-motion-reduce {
+                animation-duration: 0s;
+                animation-delay: 0s;
+              }
             }
           }
         }
@@ -129,7 +144,6 @@ header {
     width: calc(100% - $body-padding * 2);
     max-width: $content-width;
     top: 68px;
-    // z-index: 0; // Why is this set???
 
     @include mq-min("xxxl") {
       right: calc(50% - calc($content-width / 2 - $body-padding));
@@ -152,7 +166,10 @@ header {
       width: 100%;
       height: 1px;
       background: rgba($grey-dark, 0.8);
-      transition: 0.8s ease 0.2s;
+
+      @include mq-motion-allow {
+        transition: 0.8s ease 0.2s;
+      }
     }
 
     &__link {
@@ -180,7 +197,10 @@ header {
         &:nth-of-type(#{$i}) {
           a {
             $opacityDelay: 0.5s - 0.06s * $i;
-            transition: color 0.3s ease, opacity 0.8s ease $opacityDelay;
+
+            @include mq-motion-allow {
+              transition: color 0.3s ease, opacity 0.8s ease $opacityDelay;
+            }
           }
         }
       }
@@ -657,6 +677,11 @@ header {
                   ease
                   $delay
                   forwards;
+
+                @include mq-motion-reduce {
+                  animation-duration: 0s;
+                  animation-delay: 0s;
+                }
               }
               .letter-wrapper__letter:nth-of-type(2) {
                 translate: 0 100%;
@@ -673,7 +698,10 @@ header {
 
       &::after {
         width: 0;
-        transition: 0.6s ease 0s;
+
+        @include mq-motion-allow {
+          transition: 0.6s ease 0s;
+        }
       }
 
       &__link {
@@ -684,7 +712,9 @@ header {
         @for $i from 1 through 8 {
           &:nth-of-type(#{$i}) {
             a {
-              transition: opacity 0.3s ease calc(0.04s * $i);
+              @include mq-motion-allow {
+                transition: opacity 0.3s ease calc(0.04s * $i);
+              }
             }
           }
         }
@@ -1650,19 +1680,17 @@ dialog {
         transition: 0.3s ease 0s;
       }
 
-      .success-message,
-      .error-message {
+      .status-message {
         @include row-center;
         @include absolute-center;
         @include body-font-styles;
         width: 100%;
-        color: $green;
         text-wrap: nowrap;
         opacity: 0;
         pointer-events: none;
 
         @include mq-motion-allow {
-          transition: 0.24s ease 0.12s, font-size 0s;
+          transition: opacity 0.24s ease 0.12s;
         }
 
         @include mq-max("md") {
@@ -1677,28 +1705,38 @@ dialog {
           opacity: 1;
           pointer-events: all;
 
-          .check-icon,
+          .success-icon,
           .error-icon {
             scale: 1.2;
           }
         }
 
-        .check-icon,
+        .success-icon,
         .error-icon {
-          border: 1px solid $green;
-          border-radius: 50%;
           width: 28px;
           height: 28px;
           flex-shrink: 0;
           margin-inline-end: 12px;
           padding: 4px;
           scale: 0.5;
-          transition: 0.3s ease 0.24s;
+
+          @include mq-motion-allow {
+            transition: 0.3s ease 0.12s;
+          }
 
           @include mq-max("sm") {
             width: 24px;
             height: 24px;
           }
+        }
+      }
+
+      .success-message {
+        color: $green;
+
+        .success-icon {
+          border: 1px solid $green;
+          border-radius: 50%;
 
           path {
             fill: $green;
@@ -1874,14 +1912,18 @@ img {
 .mouse-cursor {
   @include row-center;
   position: fixed;
-  top: 0;
+  top: -16px;
   left: 0;
   width: 124px;
   height: 124px;
   border-radius: 50%;
   pointer-events: none;
-  transition: 0.8s $cubic-ease;
   opacity: 0;
+
+  @include mq-motion-allow {
+    top: 0;
+    transition: 0.8s $cubic-ease;
+  }
 
   @include mq-touch {
     display: none;

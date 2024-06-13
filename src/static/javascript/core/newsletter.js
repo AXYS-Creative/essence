@@ -5,7 +5,6 @@ import { lenis } from "./lenis.js";
 const dialog = document.querySelector("dialog"),
   cta = document.querySelector(".cta"),
   closeButton = document.querySelector("dialog button");
-// mouseCursor = document.querySelector(".mouse-cursor");
 
 const dialogElems = dialog.querySelectorAll(
   "a, button, input, textarea, select"
@@ -19,6 +18,7 @@ const openModal = () => {
   closeNav();
   dialog.showModal();
   setTabIndex(dialogElems, "0");
+  closeButton.setAttribute("aria-expanded", "true");
   // document.body.style.overflow = "hidden";
   lenis.stop();
 };
@@ -26,6 +26,7 @@ const openModal = () => {
 const closeModal = () => {
   dialog.close();
   setTabIndex(dialogElems, "-1");
+  closeButton.setAttribute("aria-expanded", "false");
   newsletterCursor.classList.remove("active");
   // document.body.style.overflow = "auto";
   lenis.start();
@@ -43,27 +44,15 @@ dialog.addEventListener("click", (e) => {
 });
 
 //
-// Mouse Cursor
-//
-
-// document.addEventListener("mousemove", (e) => {
-//   s.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
-
-//   if (e.target.classList.contains("backdrop")) {
-//     mouseCursor.classList.add("active");
-//   } else {
-//     mouseCursor.classList.remove("active");
-//   }
-// });
-
-//
 // Form Logic
 //
 
 const newsletterForm = document.querySelector(".newsletter-form"),
-  successMessage = document.querySelector(".success-message"),
-  errorMessage = document.querySelector(".error-message"),
+  statusMessage = document.querySelector(".status-message"),
   emailInput = document.querySelector(".email-input");
+
+const errorClasses = ["error-message", "active"];
+const successClasses = ["success-message", "active"];
 
 if (newsletterForm) {
   const handleSubmit = (event) => {
@@ -74,15 +63,30 @@ if (newsletterForm) {
       JSON.parse(localStorage.getItem("submittedEmails")) || [];
 
     if (submittedEmails.includes(email)) {
-      newsletterForm.classList.add("active");
-      errorMessage.classList.add("active");
-      errorMessage.setAttribute("aria-hidden", false);
+      statusMessage.innerHTML = `
+        <svg
+          class="error-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="16"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M18.3 448L0 480H36.9 475.1 512l-18.3-32L274.4 64.2 256 32 237.6 64.2 18.3 448zm438.6 0H55.1L256 96.5 456.9 448zM240 320v16h32V320 192H240V320zm40 96V368H232v48h48z"
+          />
+        </svg>
+        Error! This email has already been submitted.
+      `;
+      statusMessage.classList.add(...errorClasses);
 
       setTimeout(function () {
-        newsletterForm.classList.remove("active");
-        errorMessage.classList.remove("active");
-        errorMessage.setAttribute("aria-hidden", true);
+        statusMessage.classList.remove("active");
       }, 8000);
+
+      setTimeout(function () {
+        statusMessage.innerHTML = "";
+        statusMessage.classList.remove("error-message");
+      }, 9000);
 
       return;
     } else {
@@ -99,15 +103,32 @@ if (newsletterForm) {
       body: new URLSearchParams(formData).toString(),
     })
       .then(() => {
-        newsletterForm.classList.add("active");
-        successMessage.classList.add("active");
-        successMessage.setAttribute("aria-hidden", false);
+        statusMessage.innerHTML = `
+        <svg
+          class="success-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <path
+            opacity="1"
+            fill="#1E3050"
+            d="M448.1 118.2L437 129.7 173.6 404l-11.5 12-11.5-12L11.1 258.8 0 247.2l23.1-22.2 11.1 11.5L162.1 369.8 414 107.5 425 96l23.1 22.2z"
+          />
+        </svg>
+        Subscription Confirmed! Thanks for joining our mailing list.
+        `;
+        statusMessage.classList.add(...successClasses);
 
         setTimeout(function () {
-          newsletterForm.classList.remove("active");
-          successMessage.classList.remove("active");
-          successMessage.setAttribute("aria-hidden", true);
+          statusMessage.classList.remove("active");
         }, 8000);
+
+        setTimeout(function () {
+          statusMessage.innerHTML = "";
+          statusMessage.classList.remove("success-message");
+        }, 9000);
       })
       .catch((error) => {
         console.error("Fetch error:", error);

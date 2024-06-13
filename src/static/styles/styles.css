@@ -274,6 +274,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(1) .let
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.37s ease 0.03s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
 }
@@ -281,6 +289,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(2) .let
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1),
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.42s ease 0.06s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
@@ -290,6 +306,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(3) .let
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.47s ease 0.09s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
 }
@@ -297,6 +321,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(4) .let
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1),
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.52s ease 0.12s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
@@ -306,6 +338,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(5) .let
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.57s ease 0.15s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
 }
@@ -313,6 +353,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(6) .let
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1),
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.62s ease 0.18s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
@@ -322,6 +370,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(7) .let
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.67s ease 0.21s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
 }
@@ -329,6 +385,14 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .let
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1),
 header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
   animation: slide-up 0.72s ease 0.24s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1),
+  header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1), header .header-logo:focus .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
@@ -366,65 +430,161 @@ header .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter
   translate: 0 100%;
   animation: logo-text-default 0.37s ease 0.03s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.37s ease 0.03s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.42s ease 0.06s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.42s ease 0.06s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.47s ease 0.09s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.47s ease 0.09s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.52s ease 0.12s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.52s ease 0.12s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.57s ease 0.15s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.57s ease 0.15s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.62s ease 0.18s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.62s ease 0.18s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.67s ease 0.21s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.67s ease 0.21s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
   animation: logo-text-default 0.72s ease 0.24s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 -100%;
   animation: logo-text-default-alt 0.72s ease 0.24s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header .header-links {
   display: flex;
@@ -479,7 +639,11 @@ header .header-links::after {
   width: 100%;
   height: 1px;
   background: rgba(137, 140, 131, 0.8);
-  transition: 0.8s ease 0.2s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links::after {
+    transition: 0.8s ease 0.2s;
+  }
 }
 header .header-links__link {
   position: relative;
@@ -500,29 +664,45 @@ header .header-links__link:hover, header .header-links__link:focus {
 header .header-links li {
   position: relative;
 }
-header .header-links li:nth-of-type(1) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.44s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(1) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.44s;
+  }
 }
-header .header-links li:nth-of-type(2) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.38s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(2) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.38s;
+  }
 }
-header .header-links li:nth-of-type(3) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.32s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(3) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.32s;
+  }
 }
-header .header-links li:nth-of-type(4) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.26s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(4) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.26s;
+  }
 }
-header .header-links li:nth-of-type(5) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.2s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(5) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.2s;
+  }
 }
-header .header-links li:nth-of-type(6) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.14s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(6) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.14s;
+  }
 }
-header .header-links li:nth-of-type(7) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.08s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(7) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.08s;
+  }
 }
-header .header-links li:nth-of-type(8) a {
-  transition: color 0.3s ease, opacity 0.8s ease 0.02s;
+@media (prefers-reduced-motion: no-preference) {
+  header .header-links li:nth-of-type(8) a {
+    transition: color 0.3s ease, opacity 0.8s ease 0.02s;
+  }
 }
 header .header-links li.header-links__underline {
   position: absolute;
@@ -1065,12 +1245,24 @@ header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(1) .letter-w
   translate: 0 0;
   animation: logo-text-scroll-active 0.37s ease 0.03s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
   animation: logo-text-scroll-active 0.42s ease 0.06s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(2) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
@@ -1079,12 +1271,24 @@ header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(3) .letter-w
   translate: 0 0;
   animation: logo-text-scroll-active 0.47s ease 0.09s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(3) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
   animation: logo-text-scroll-active 0.52s ease 0.12s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(4) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
@@ -1093,12 +1297,24 @@ header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(5) .letter-w
   translate: 0 0;
   animation: logo-text-scroll-active 0.57s ease 0.15s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(5) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
   animation: logo-text-scroll-active 0.62s ease 0.18s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(6) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
@@ -1107,12 +1323,24 @@ header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(7) .letter-w
   translate: 0 0;
   animation: logo-text-scroll-active 0.67s ease 0.21s forwards;
 }
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
+}
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(7) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 0;
   animation: logo-text-scroll-active 0.72s ease 0.24s forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(1) {
+    animation-duration: 0s;
+    animation-delay: 0s;
+  }
 }
 header.scroll-active .header-logo__text .letter-wrapper:nth-of-type(8) .letter-wrapper__letter:nth-of-type(2) {
   translate: 0 100%;
@@ -1123,34 +1351,54 @@ header.scroll-active .header-links {
 }
 header.scroll-active .header-links::after {
   width: 0;
-  transition: 0.6s ease 0s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links::after {
+    transition: 0.6s ease 0s;
+  }
 }
 header.scroll-active .header-links__link {
   opacity: 0;
 }
-header.scroll-active .header-links li:nth-of-type(1) a {
-  transition: opacity 0.3s ease 0.04s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(1) a {
+    transition: opacity 0.3s ease 0.04s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(2) a {
-  transition: opacity 0.3s ease 0.08s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(2) a {
+    transition: opacity 0.3s ease 0.08s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(3) a {
-  transition: opacity 0.3s ease 0.12s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(3) a {
+    transition: opacity 0.3s ease 0.12s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(4) a {
-  transition: opacity 0.3s ease 0.16s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(4) a {
+    transition: opacity 0.3s ease 0.16s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(5) a {
-  transition: opacity 0.3s ease 0.2s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(5) a {
+    transition: opacity 0.3s ease 0.2s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(6) a {
-  transition: opacity 0.3s ease 0.24s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(6) a {
+    transition: opacity 0.3s ease 0.24s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(7) a {
-  transition: opacity 0.3s ease 0.28s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(7) a {
+    transition: opacity 0.3s ease 0.28s;
+  }
 }
-header.scroll-active .header-links li:nth-of-type(8) a {
-  transition: opacity 0.3s ease 0.32s;
+@media (prefers-reduced-motion: no-preference) {
+  header.scroll-active .header-links li:nth-of-type(8) a {
+    transition: opacity 0.3s ease 0.32s;
+  }
 }
 header.scroll-active .header-links li.header-links__underline {
   opacity: 0;
@@ -2286,8 +2534,7 @@ dialog .newsletter-form .form-message-container {
     transition: 0.3s ease 0s;
   }
 }
-dialog .newsletter-form .form-message-container .success-message,
-dialog .newsletter-form .form-message-container .error-message {
+dialog .newsletter-form .form-message-container .status-message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2298,85 +2545,78 @@ dialog .newsletter-form .form-message-container .error-message {
   font-size: 20px;
   font-weight: 300;
   width: 100%;
-  color: #869d7a;
   text-wrap: nowrap;
   opacity: 0;
   pointer-events: none;
 }
 @media screen and (max-width: 1200px) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
+  dialog .newsletter-form .form-message-container .status-message {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
+  dialog .newsletter-form .form-message-container .status-message {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
+  dialog .newsletter-form .form-message-container .status-message {
     font-size: 16px;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
-    transition: 0.24s ease 0.12s, font-size 0s;
+  dialog .newsletter-form .form-message-container .status-message {
+    transition: opacity 0.24s ease 0.12s;
   }
 }
 @media screen and (max-width: 768px) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
+  dialog .newsletter-form .form-message-container .status-message {
     text-wrap: wrap;
   }
 }
 @media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .success-message,
-  dialog .newsletter-form .form-message-container .error-message {
+  dialog .newsletter-form .form-message-container .status-message {
     font-size: 13px;
   }
 }
-dialog .newsletter-form .form-message-container .success-message.active,
-dialog .newsletter-form .form-message-container .error-message.active {
+dialog .newsletter-form .form-message-container .status-message.active {
   opacity: 1;
   pointer-events: all;
 }
-dialog .newsletter-form .form-message-container .success-message.active .check-icon,
-dialog .newsletter-form .form-message-container .success-message.active .error-icon,
-dialog .newsletter-form .form-message-container .error-message.active .check-icon,
-dialog .newsletter-form .form-message-container .error-message.active .error-icon {
+dialog .newsletter-form .form-message-container .status-message.active .success-icon,
+dialog .newsletter-form .form-message-container .status-message.active .error-icon {
   scale: 1.2;
 }
-dialog .newsletter-form .form-message-container .success-message .check-icon,
-dialog .newsletter-form .form-message-container .success-message .error-icon,
-dialog .newsletter-form .form-message-container .error-message .check-icon,
-dialog .newsletter-form .form-message-container .error-message .error-icon {
-  border: 1px solid #869d7a;
-  border-radius: 50%;
+dialog .newsletter-form .form-message-container .status-message .success-icon,
+dialog .newsletter-form .form-message-container .status-message .error-icon {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
   margin-inline-end: 12px;
   padding: 4px;
   scale: 0.5;
-  transition: 0.3s ease 0.24s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  dialog .newsletter-form .form-message-container .status-message .success-icon,
+  dialog .newsletter-form .form-message-container .status-message .error-icon {
+    transition: 0.3s ease 0.12s;
+  }
 }
 @media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .success-message .check-icon,
-  dialog .newsletter-form .form-message-container .success-message .error-icon,
-  dialog .newsletter-form .form-message-container .error-message .check-icon,
-  dialog .newsletter-form .form-message-container .error-message .error-icon {
+  dialog .newsletter-form .form-message-container .status-message .success-icon,
+  dialog .newsletter-form .form-message-container .status-message .error-icon {
     width: 24px;
     height: 24px;
   }
 }
-dialog .newsletter-form .form-message-container .success-message .check-icon path,
-dialog .newsletter-form .form-message-container .success-message .error-icon path,
-dialog .newsletter-form .form-message-container .error-message .check-icon path,
-dialog .newsletter-form .form-message-container .error-message .error-icon path {
+dialog .newsletter-form .form-message-container .success-message {
+  color: #869d7a;
+}
+dialog .newsletter-form .form-message-container .success-message .success-icon {
+  border: 1px solid #869d7a;
+  border-radius: 50%;
+}
+dialog .newsletter-form .form-message-container .success-message .success-icon path {
   fill: #869d7a;
 }
 dialog .newsletter-form .form-message-container .error-message {
@@ -2510,14 +2750,19 @@ img {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: -16px;
   left: 0;
   width: 124px;
   height: 124px;
   border-radius: 50%;
   pointer-events: none;
-  transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
   opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mouse-cursor {
+    top: 0;
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
 }
 @media (hover: none) and (pointer: coarse) {
   .mouse-cursor {
@@ -3634,10 +3879,10 @@ img {
   display: flex;
   gap: 0 14px;
   flex-wrap: wrap;
-  opacity: 0;
 }
 @media (prefers-reduced-motion: no-preference) {
   .essence-paragraph__body-text {
+    opacity: 0;
     transition: opacity 1.2s ease 0.2s;
   }
 }
