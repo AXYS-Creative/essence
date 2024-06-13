@@ -33,7 +33,7 @@ People often don't realize the burden they carry until they begin to feel its ph
 
 ## **Maintaining a Clutter-Free Emotional State**
 
-Just as with physical clutter, preventing the accumulation of emotional clutter is an ongoing process. Regular check-ins with yourself, mindfulness practices, and maintaining healthy emotional outlets are all crucial. Additionally, fostering open, honest communications in your relationships can prevent misunderstandings and resentments from piling up.
+Just as with physical clutter, preventing the accumulation of emotional clutter is an ongoing process. Regular check-ins with yourself, mindfulness practices, and maintaining healthy emotional outlets are all crucial. Additionally, fostering open, honest communications in your relationships can prevent misunderstandings and resentments from piling up. [This is a link to google.](https://google.com)
 
 ## **The Benefits of an Uncluttered Mind**
 
