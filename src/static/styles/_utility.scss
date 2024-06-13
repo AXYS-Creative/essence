@@ -37,6 +37,18 @@
     height: 24px;
     overflow: hidden;
 
+    @include mq-max("xl") {
+      width: 152px;
+    }
+
+    @include mq-max("lg") {
+      width: 138px;
+    }
+
+    @include mq-max("sm") {
+      width: 134px;
+    }
+
     span {
       position: absolute;
       right: 0;
@@ -52,7 +64,16 @@
 
     &.span-sm {
       width: 90px;
+
+      @include mq-max("xl") {
+        width: 78px;
+      }
+
+      @include mq-max("lg") {
+        width: 70px;
+      }
     }
+
     &.span-md {
       width: 134px;
 
@@ -60,7 +81,7 @@
         width: 112px;
       }
 
-      @include mq-max("md") {
+      @include mq-max("lg") {
         width: 98px;
       }
     }

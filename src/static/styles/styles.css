@@ -1773,6 +1773,7 @@ nav .nav-img-container {
   height: 50%;
   aspect-ratio: 976/1368;
   opacity: 0;
+  pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
   nav .nav-img-container {
@@ -2579,14 +2580,6 @@ dialog .newsletter-form .form-message-container .status-message {
     font-size: 13px;
   }
 }
-dialog .newsletter-form .form-message-container .status-message.active {
-  opacity: 1;
-  pointer-events: all;
-}
-dialog .newsletter-form .form-message-container .status-message.active .success-icon,
-dialog .newsletter-form .form-message-container .status-message.active .error-icon {
-  scale: 1.2;
-}
 dialog .newsletter-form .form-message-container .status-message .success-icon,
 dialog .newsletter-form .form-message-container .status-message .error-icon {
   width: 28px;
@@ -2608,6 +2601,14 @@ dialog .newsletter-form .form-message-container .status-message .error-icon {
     width: 24px;
     height: 24px;
   }
+}
+dialog .newsletter-form .form-message-container .status-message.active {
+  opacity: 1;
+  pointer-events: all;
+}
+dialog .newsletter-form .form-message-container .status-message.active .success-icon,
+dialog .newsletter-form .form-message-container .status-message.active .error-icon {
+  scale: 1.2;
 }
 dialog .newsletter-form .form-message-container .success-message {
   color: #869d7a;
@@ -2856,6 +2857,21 @@ img {
   height: 24px;
   overflow: hidden;
 }
+@media screen and (max-width: 1200px) {
+  .simple-link__span-outter {
+    width: 152px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .simple-link__span-outter {
+    width: 138px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .simple-link__span-outter {
+    width: 134px;
+  }
+}
 .simple-link__span-outter span {
   position: absolute;
   right: 0;
@@ -2871,6 +2887,16 @@ img {
 .simple-link__span-outter.span-sm {
   width: 90px;
 }
+@media screen and (max-width: 1200px) {
+  .simple-link__span-outter.span-sm {
+    width: 78px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .simple-link__span-outter.span-sm {
+    width: 70px;
+  }
+}
 .simple-link__span-outter.span-md {
   width: 134px;
 }
@@ -2879,7 +2905,7 @@ img {
     width: 112px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .simple-link__span-outter.span-md {
     width: 98px;
   }
@@ -4343,7 +4369,7 @@ img {
 }
 @media screen and (max-width: 1024px) {
   .essence-paragraph__link {
-    translate: 140px 0;
+    translate: 64px 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4431,6 +4457,11 @@ img {
   .essence-resources__images {
     flex-direction: column;
     gap: 48px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .essence-resources__images {
+    margin-block-end: 64px;
   }
 }
 .essence-resources__images figure {

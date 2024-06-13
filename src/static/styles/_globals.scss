@@ -1042,6 +1042,7 @@ nav {
     height: 50%;
     aspect-ratio: 976 / 1368;
     opacity: 0;
+    pointer-events: none;
     // overflow: hidden;
 
     @include mq-motion-allow {
@@ -1701,16 +1702,6 @@ dialog {
           font-size: 13px;
         }
 
-        &.active {
-          opacity: 1;
-          pointer-events: all;
-
-          .success-icon,
-          .error-icon {
-            scale: 1.2;
-          }
-        }
-
         .success-icon,
         .error-icon {
           width: 28px;
@@ -1727,6 +1718,16 @@ dialog {
           @include mq-max("sm") {
             width: 24px;
             height: 24px;
+          }
+        }
+
+        &.active {
+          opacity: 1;
+          pointer-events: all;
+
+          .success-icon,
+          .error-icon {
+            scale: 1.2;
           }
         }
       }

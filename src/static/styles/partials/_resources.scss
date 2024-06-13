@@ -56,6 +56,10 @@
       gap: 48px;
     }
 
+    @include mq-max("sm") {
+      margin-block-end: 64px;
+    }
+
     figure {
       flex-grow: 1;
 

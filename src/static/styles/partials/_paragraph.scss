@@ -1,5 +1,6 @@
 .essence-paragraph {
   $paragraph-indent: 128px;
+  $paragraph-indent-lg: 64px;
 
   @include column-center;
   // padding: 316px $content-padding;
@@ -75,7 +76,7 @@
         margin-left: $paragraph-indent;
 
         @include mq-max("lg") {
-          margin-left: 64px;
+          margin-left: $paragraph-indent-lg;
         }
 
         @include mq-max("md") {
@@ -151,7 +152,7 @@
     translate: $paragraph-indent 0;
 
     @include mq-max("lg") {
-      translate: 140px 0;
+      translate: $paragraph-indent-lg 0;
     }
 
     @include mq-max("md") {
