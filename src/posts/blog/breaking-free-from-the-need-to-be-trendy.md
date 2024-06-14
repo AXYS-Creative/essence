@@ -1,11 +1,11 @@
 ---
 title: Breaking Free from the Need to Be Trendy
-description: This blog post explores how to escape the constant pressure to
-  follow trends, encouraging a more personal and authentic approach to lifestyle
-  choices. Learn to embrace your unique tastes and values instead of conforming
-  to fleeting popular standards.
-author: Ben Stowe
-date: 2024-05-20T15:25:18.051Z
+description: Explore how to escape the constant pressure of following trends and
+  instead cultivate your own unique style and preferences. This post delves into
+  why we often feel compelled to keep up with trends and offers practical advice
+  for fostering authenticity in our choices.
+author: Ben Stowe & Maria Nieves
+date: 2023-12-05T16:25:18.051Z
 tags:
   - emotion
   - physical
