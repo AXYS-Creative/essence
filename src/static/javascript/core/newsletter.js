@@ -1,6 +1,6 @@
 import { newsletterCursor } from "./mouseCursor.js";
 import { closeNav } from "../nav.js";
-import { lenis } from "./lenis.js";
+// import { lenis } from "./lenis.js";
 
 const dialog = document.querySelector("dialog"),
   cta = document.querySelector(".cta"),
@@ -19,8 +19,8 @@ const openModal = () => {
   dialog.showModal();
   setTabIndex(dialogElems, "0");
   closeButton.setAttribute("aria-expanded", "true");
-  // document.body.style.overflow = "hidden";
-  lenis.stop();
+  document.body.style.overflow = "hidden";
+  // lenis.stop();
 };
 
 const closeModal = () => {
@@ -28,8 +28,8 @@ const closeModal = () => {
   setTabIndex(dialogElems, "-1");
   closeButton.setAttribute("aria-expanded", "false");
   newsletterCursor.classList.remove("active");
-  // document.body.style.overflow = "auto";
-  lenis.start();
+  document.body.style.overflow = "auto";
+  // lenis.start();
 };
 
 cta.addEventListener("click", openModal);

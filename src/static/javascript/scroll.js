@@ -7,10 +7,10 @@ let ctaHeroPosition;
 
 export const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
-  ctaWrapper = document.querySelector(".cta-wrapper");
+  ctaWrapper = document.querySelector(".cta-wrapper"),
+  heroSubText = document.querySelector(".hero-section__subtext");
 
-const heroSubText = document.querySelector(".hero-section__subtext"),
-  siteFooter = document.querySelector(".site-footer"),
+const siteFooter = document.querySelector(".site-footer"),
   footerNavLinks = document.querySelector(".footer-nav-links"),
   firstFooterNavLink = footerNavLinks.querySelector("li:first-of-type > a"),
   footerCtaTitle = document.querySelector(".footer-cta-title");

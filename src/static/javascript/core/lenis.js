@@ -1,7 +1,3 @@
-// import { isNavOpen } from "../nav.js";
-
-// const menuBtn = document.querySelector(".menu-btn");
-
 export const lenis = new Lenis();
 
 function raf(time) {
@@ -11,15 +7,8 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// // Prevent scroll when nav is open
-// // let menuOpen = false;
-// menuBtn.addEventListener("click", () => {
-//   console.log(isNavOpen);
-//   // menuOpen = !menuOpen;
-
-//   if (isNavOpen) {
-//     lenis.stop();
-//   } else {
-//     lenis.start();
-//   }
-// });
+/**
+ * Cons of using Lenis
+ * No smooth scrolling when tabbing through the page.
+ * Lenis.pause() seems to removes ALL instances of scroll. (see small nav menu doesn't scroll / not just scoped to body)
+ */

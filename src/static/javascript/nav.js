@@ -1,12 +1,13 @@
 import { maxSm, minMd, maxLg } from "./utility.js";
 import { navCursor, navElements } from "./core/mouseCursor.js";
-import { lenis } from "./core/lenis.js";
+// import { lenis } from "./core/lenis.js";
 import {
   scrollPosition,
   scrollFromTop,
   throttle,
   updateScrollDependentElements,
   ctaWrapper,
+  heroSubText,
 } from "./scroll.js";
 
 export let isNavOpen;
@@ -49,7 +50,7 @@ const toggleNav = () => {
     if (isNavOpen) {
       ctaWrapper.classList.add("scroll-active");
       ctaWrapper.style.animationName = "cta-animated-top";
-    } else if (scrollPosition < scrollFromTop) {
+    } else if (scrollPosition < scrollFromTop && heroSubText) {
       ctaWrapper.classList.remove("scroll-active");
       ctaWrapper.style.animationName = "cta-default";
     } else {
@@ -59,12 +60,12 @@ const toggleNav = () => {
     }
   }
 
-  // document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
-  if (isNavOpen) {
-    lenis.stop();
-  } else {
-    lenis.start();
-  }
+  document.body.style = `overflow: ${isNavOpen ? "hidden" : "auto"}`;
+  // if (isNavOpen) {
+  //   lenis.stop();
+  // } else {
+  //   lenis.start();
+  // }
 };
 
 headerLogo.addEventListener("focus", () => {
@@ -74,8 +75,8 @@ headerLogo.addEventListener("focus", () => {
 });
 
 export const closeNav = () => {
-  // document.body.style = "overflow: auto;";
-  lenis.start();
+  document.body.style = "overflow: auto;";
+  // lenis.start();
 
   navMenu.classList.remove("menu-active");
   menuBtn.classList.remove("menu-active");
@@ -90,7 +91,7 @@ export const closeNav = () => {
   tabElementsNav.forEach((el) => el.setAttribute("tabindex", "-1"));
 
   if (maxLg.matches) {
-    if (scrollPosition < scrollFromTop) {
+    if (scrollPosition < scrollFromTop && heroSubText) {
       ctaWrapper.classList.remove("scroll-active");
       ctaWrapper.style.animationName = "cta-default";
     } else {

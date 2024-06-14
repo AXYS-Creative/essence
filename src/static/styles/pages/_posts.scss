@@ -18,8 +18,9 @@
     padding-block-start: 164px;
   }
 
-  @include mq-max("md") {
-    padding-block-start: 212px;
+  @include mq-max("sm") {
+    padding-block-start: 224px;
+    padding-inline-start: $body-padding-sm * 3;
   }
 
   &__heading {
@@ -53,10 +54,12 @@
   }
 
   p {
+    @include body-font-styles;
     margin-block: 24px;
   }
 
-  p ~ h2 {
+  p ~ h2,
+  p ~ h3 {
     margin-block-start: 64px;
   }
 
@@ -84,6 +87,13 @@
 
     strong {
       font-weight: 500;
+    }
+  }
+
+  ul {
+    @include mq-max("sm") {
+      translate: 0 0;
+      width: 100%;
     }
   }
 
