@@ -78,6 +78,18 @@ toggleClassAnimate(
   "bottom top"
 );
 
+// About Page __ Paragraph
+toggleClassAnimate(
+  ".essence-paragraph__about-us .essence-paragraph__heading-svg",
+  ".essence-paragraph__about-us .essence-paragraph__heading-svg"
+);
+toggleClassAnimate(
+  ".essence-paragraph__about-us .essence-paragraph__body-text",
+  ".essence-paragraph__about-us .essence-paragraph__body-text",
+  "top bottom",
+  "bottom top"
+);
+
 //
 // Animating Paragraph Partial - Body Text
 //
@@ -109,3 +121,6 @@ spanWordsInParagraph(
   ".essence-paragraph__media-praises .essence-paragraph__body-text"
 );
 spanWordsInParagraph(".hero-paragraph .essence-paragraph__body-text");
+spanWordsInParagraph(
+  ".essence-paragraph__about-us .essence-paragraph__body-text"
+);
