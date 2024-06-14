@@ -21,7 +21,7 @@ Minimalism isn't just about having fewer possessions. It's about freeing up spac
 
 Before you begin, it’s important to set clear intentions. What do you hope to achieve by the end of this challenge? Whether it's reducing stress, clearing physical clutter, or finding more time for your passions, having a clear goal will keep you motivated.
 
-## Week 1: Decluttering Your Physical Space
+### Week 1: Decluttering Your Physical Space
 
 * **Day 1:** Start with your wardrobe. Donate or discard clothes you haven't worn in the past year.
 * **Day 2:** Tackle the bathroom. Dispose of expired products and items you no longer use.
@@ -31,7 +31,7 @@ Before you begin, it’s important to set clear intentions. What do you hope to 
 * **Day 6:** Clean out your kitchen. Remove duplicate tools and gadgets.
 * **Day 7:** Reflect on the week’s progress and plan for the challenges ahead.
 
-## Week 2: Digital and Mental Decluttering
+### Week 2: Digital and Mental Decluttering
 
 * **Day 8:** Unsubscribe from unwanted email lists and organize your inbox.
 * **Day 9:** Limit social media usage. Set specific times for checking platforms.
@@ -41,7 +41,7 @@ Before you begin, it’s important to set clear intentions. What do you hope to 
 * **Day 13:** Spend time alone. Reflect on your thoughts without distractions.
 * **Day 14:** Meditate for 10 minutes. Focus on clearing your mind.
 
-## Week 3: Simplifying Daily Routines
+### Week 3: Simplifying Daily Routines
 
 * **Day 15:** Create a minimalist daily schedule. What’s truly necessary?
 * **Day 16:** Prepare simple meals focused on quality ingredients.
@@ -51,7 +51,7 @@ Before you begin, it’s important to set clear intentions. What do you hope to 
 * **Day 20:** Automate what you can. Set up automatic bill payments or subscriptions.
 * **Day 21:** Reflect and adjust your routine as needed.
 
-## Week 4: Cultivating a Minimalist Mindset
+### Week 4: Cultivating a Minimalist Mindset
 
 * **Day 22:** Practice gratitude. Note three things you’re thankful for each day.
 * **Day 23:** Focus on single-tasking rather than multi-tasking.
