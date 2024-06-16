@@ -22,6 +22,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  // // Adding Previous and Next Post to each post.html
+  // eleventyConfig.addNunjucksFilter("indexOf", (array, value) =>
+  //   array.indexOf(value)
+  // );
+
   // Adjust to include all markdown files in subdirectories
   eleventyConfig.addCollection("posts", (collectionApi) =>
     collectionApi.getFilteredByGlob("./src/posts/**/*.md")

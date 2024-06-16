@@ -45,60 +45,68 @@
 .post-body {
   @include thin-section;
 
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-transform: initial;
+  article {
+    margin-block-end: 128px;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-transform: initial;
+    }
+
+    p {
+      @include body-font-styles;
+      margin-block: 24px;
+    }
+
+    p ~ h2,
+    p ~ h3 {
+      margin-block-start: 64px;
+    }
+
+    p:has(img) {
+      @include row-center;
+      margin-block: 96px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    ol,
+    ul {
+      $x-offset: 24px;
+
+      @include column-start;
+      @include body-font-styles;
+      gap: 12px;
+      translate: $x-offset 0;
+      width: calc(100% - $x-offset);
+      margin-block: 48px;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    ul {
+      @include mq-max("sm") {
+        translate: 0 0;
+        width: 100%;
+      }
+    }
+
+    a {
+      @extend .classic-link;
+      color: $green;
+    }
   }
 
-  p {
-    @include body-font-styles;
-    margin-block: 24px;
-  }
-
-  p ~ h2,
-  p ~ h3 {
-    margin-block-start: 64px;
-  }
-
-  p:has(img) {
+  &__footer-nav {
     @include row-center;
-    margin-block: 96px;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
-  ol,
-  ul {
-    $x-offset: 24px;
-
-    @include column-start;
-    @include body-font-styles;
-    gap: 12px;
-    translate: $x-offset 0;
-    width: calc(100% - $x-offset);
-    margin-block: 48px;
-
-    strong {
-      font-weight: 500;
-    }
-  }
-
-  ul {
-    @include mq-max("sm") {
-      translate: 0 0;
-      width: 100%;
-    }
-  }
-
-  a {
-    @extend .classic-link;
-    color: $green;
   }
 }

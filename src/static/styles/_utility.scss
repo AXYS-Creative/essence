@@ -85,6 +85,7 @@
         width: 98px;
       }
     }
+
     // &.span-lg {
     //   background: lightgreen;
     // }
@@ -93,6 +94,27 @@
   .icon-arrow-right {
     @include mq-motion-allow {
       transition: 0.25s ease;
+    }
+  }
+
+  &--arrow-left {
+    flex-direction: row-reverse;
+
+    &:hover {
+      .icon-arrow-right {
+        translate: -4px 0;
+      }
+    }
+
+    .simple-link__span-outter {
+      span {
+        right: auto;
+        left: 0;
+      }
+    }
+
+    .icon-arrow-right {
+      rotate: 180deg;
     }
   }
 }
