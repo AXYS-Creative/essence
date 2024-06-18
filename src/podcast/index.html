@@ -1,6 +1,6 @@
 ---
-title: "ESSENCE • Podcasts"
-layout: archives
+title: "ESSENCE • Podcast"
+layout: "archives"
 category: "Podcast"
 
 paragraphHeading: "Our Podcast"
@@ -11,7 +11,7 @@ paragraphContent: "ESSENCE audio experiences are your gateway to a world of thou
 subheading: "Tune in to explore innovative ideas and practical strategies for simplifying your life and enhancing your focus."
 ---
 
-{% set listContent = collections.podcasts | sort(attribute='data.title') %}
+{% set listContent = collections.podcast | sort(attribute='data.title') %}
 
 <div class="archive-list__category">
   <h3 class="archive-list__heading">Most popular</h3>
@@ -31,7 +31,18 @@ subheading: "Tune in to explore innovative ideas and practical strategies for si
 <div class="archive-list__category">
   <h3 class="archive-list__heading">Episodes</h3>
 
-  {% for post in listContent %}
+  {% for post in listContent | reverse %}
+
+  <details>
+    <summary class="archive-list__link tab-element-page classic-link">
+      {{ post.data.title }}
+    </summary>
+
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic
+      expedita voluptas!
+    </p>
+  </details>
 
   <a
     href="{{ post.url | url }}"

@@ -1,7 +1,7 @@
 images:
   - title: blog
     src: /static/img/nav-blog-cover.png
-  - title: podcasts
+  - title: podcast
     src: /static/img/nav-podcast-cover.png
   - title: books
     src: /static/img/nav-book-cover.png

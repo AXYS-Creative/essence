@@ -229,6 +229,7 @@ header {
 
   .menu-btn__wrapper {
     // DUPLICATE CODE AT .dialog__close-btn-wrapper
+    // MAKE SURE TO UPDATE THAT AS WELL or consolodate the differences
     @include right-spacing;
     top: 74px;
     translate: 0 -50%;

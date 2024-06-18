@@ -1,5 +1,5 @@
 ---
-layout: app
+layout: "app"
 ---
 
 <!-- prettier-ignore -->
@@ -18,9 +18,9 @@ layout: app
     <a href="{{ latestPost.url }}" class="simple-link tab-element-page">
       <span class="simple-link__span-outter span-md">
         <span class="simple-link__span-inner">View Latest</span>
-        <span class="simple-link__span-inner" aria-hidden="true"
-          >View Latest</span
-        >
+        <span class="simple-link__span-inner" aria-hidden="true">
+          View Latest
+        </span>
       </span>
       <img
         class="icon-arrow-right"
@@ -28,7 +28,7 @@ layout: app
         alt="decorative right arrow"
         role="presentation"
     /></a>
-    {%endif%} {% if page.url === "/podcasts/" %}
+    {%endif%} {% if page.url === "/podcast/" %}
     <h3 class="h6 archive-header__cta">
       Subscribe
       <img

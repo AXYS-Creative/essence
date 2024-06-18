@@ -5,8 +5,8 @@ items:
   - text: Blog
     url: "/blog"
     index: "01"
-  - text: Podcasts
-    url: "/podcasts"
+  - text: Podcast
+    url: "/podcast"
     index: "02"
   - text: Books
     url: "/books"

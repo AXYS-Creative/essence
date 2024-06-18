@@ -27,9 +27,9 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
-  - label: "Podcasts"
-    name: "podcasts"
-    folder: "src/posts/podcasts"
+  - label: "Podcast"
+    name: "podcast"
+    folder: "src/posts/podcast"
     create: true
     editor:
       preview: false
@@ -38,6 +38,27 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Poster", name: "src", widget: "image" }
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        create: true
+        options: ["popular", "general", "physical", "emotion", "finance"]
+  - label: "Books"
+    name: "books"
+    folder: "src/posts/books"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Poster", name: "src", widget: "image" }
       - widget: select
         label: "tags"
         name: "tags"
