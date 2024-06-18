@@ -209,10 +209,16 @@ header {
     li.header-links__underline {
       position: absolute;
       left: 100%;
-      bottom: -24px;
-      width: 0;
-      height: 3px;
-      background: var(--link-color-hover);
+      // bottom: -24px;
+      // width: 24px;
+      // height: 3px;
+      bottom: -7px;
+      height: 32px;
+      // background: var(--link-color-hover);
+      border: 1px solid var(--primary-font-color);
+      border-radius: 64px;
+      pointer-events: none;
+      // opacity: 0;
 
       @include mq-motion-allow {
         transition: 0.5s $cubic-ease-sudden, opacity 0.4s ease 0.4s,
@@ -222,7 +228,9 @@ header {
       &.revert-underline {
         // left: 100% !important;
         width: 0px !important;
-        height: 1px;
+        // height: 1px;
+        // height: 32px;
+        opacity: 0;
       }
     }
   }
