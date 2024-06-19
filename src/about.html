@@ -3,17 +3,44 @@ title: ESSENCE • About
 layout: "app"
 ---
 
-<section class="hero-section home-hero">
-  <h1 class="h1 home-hero__heading">
-    <span>About Us</span>
-  </h1>
-  <p class="hero-section__subtext home-hero__subtext">Coming soon</p>
+<section class="hero-section about-hero">
+  <div class="collage-wrapper">
+    <div class="collage-column collage-column__column-1">
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+    </div>
+    <div class="collage-column collage-column__column-2">
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+    </div>
+    <div class="collage-column collage-column__column-3">
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+    </div>
+    <div class="collage-column collage-column__column-4">
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+    </div>
+    <div class="collage-column collage-column__column-5">
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+      <figure class="collage-figure"></figure>
+    </div>
+  </div>
 </section>
 
 <!-- prettier-ignore -->
-{% set paragraphClass = "essence-paragraph essence-paragraph__about-us" %} 
-{% set paragraphHeading = "About Us" %} 
-{% set paragraphContent = "ESSENCE is a nimble team of coaches that help people end their obsession with stuff and live more meaningful lives. We help people narrow their focus on the essential aspects of life, so they can start living with more intent." %} 
+{% set paragraphClass = "essence-paragraph essence-paragraph__about-us" %}
+{% set paragraphHeading = "About Us" %}
+{% set paragraphHeadingLevel = "h1" %}
+{% set paragraphContent = "ESSENCE is a nimble team of coaches that help people end their obsession with stuff and live more meaningful lives. We help people narrow their focus on the essential aspects of life, so they can start living with more intent." %}
 {% set paragraphType = "p" %}
 {% include "partials/paragraph.html" %}
 

@@ -1,0 +1,29 @@
+.about-hero {
+  // border: $test;
+  padding-block: $body-padding;
+
+  .collage-wrapper {
+    // border: $test;
+    @include row-center;
+    gap: 12px;
+
+    opacity: 0;
+    scale: 1.12;
+    animation: scale-in 1.6s $cubic-ease-slow-start 0.4s forwards;
+
+    .collage-column {
+      // background: lightgreen;
+      @include column-center;
+      gap: 12px;
+      flex-grow: 1;
+
+      .collage-figure {
+        background: var(--secondary-font-color);
+        width: 100%;
+        aspect-ratio: 1 / 1.4;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+    }
+  }
+}

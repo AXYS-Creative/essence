@@ -63,16 +63,21 @@ export const updateScrollDependentElements = (scrollPosition) => {
     scrollFromTop = 96;
   }
 
-  // Account for different pages, some pages don't have heroSubText
   const hasScrolled = scrollPosition >= scrollFromTop;
 
   siteHeader.classList.toggle("scroll-active", hasScrolled);
+  // Toggle scroll-active for certain pages. i.e. 'about'
+  if (window.location.pathname.includes("about")) {
+    siteHeader.classList.add("scroll-active", hasScrolled);
+  }
+
   headerLinks.forEach((link) =>
     link.setAttribute("tabindex", hasScrolled ? "-1" : "")
   );
   menuBtn.setAttribute("aria-hidden", String(!hasScrolled));
   menuBtn.setAttribute("tabindex", hasScrolled ? "0" : "-1");
 
+  // Account for different pages, some pages don't have heroSubText
   if (heroSubText) {
     ctaWrapper.classList.toggle("scroll-active", hasScrolled);
     ctaWrapper.style.animationName = hasScrolled
