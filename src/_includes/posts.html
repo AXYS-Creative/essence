@@ -6,18 +6,12 @@ layout: "app"
 {% set pathParts = page.filePathStem | split('/') %} 
 {% set category = pathParts[2] %}
 
-<!-- prettier-ignore -->
-
 <section class="post-hero hero-section">
   <span class="post-hero__category h6">{{ category | capitalize }}</span>
   <h1 class="post-hero__heading">{{title}}</h1>
   <p class="post-hero__author h6">
-    <span>
-      by {{ author }}
-    </span>
-    <time>
-      {{ date | readableDate }}
-    </time>
+    <span> by {{ author }} </span>
+    <time> {{ date | readableDate }} </time>
   </p>
 </section>
 
@@ -30,12 +24,13 @@ layout: "app"
     <a
       href="{{ latestPost.url }}"
       class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
+      target="_self"
     >
       <span class="simple-link__span-outter span-lg">
         <span class="simple-link__span-inner">Previous Post</span>
-        <span class="simple-link__span-inner" aria-hidden="true"
-          >Previous Post</span
-        >
+        <span class="simple-link__span-inner" aria-hidden="true">
+          Previous Post
+        </span>
       </span>
       <img
         class="icon-arrow-right"
@@ -48,12 +43,13 @@ layout: "app"
     <a
       href="{{ latestPost.url }}"
       class="post-body__nav-link simple-link tab-element-page"
+      target="_self"
     >
       <span class="simple-link__span-outter span-md">
         <span class="simple-link__span-inner">Next Post</span>
-        <span class="simple-link__span-inner" aria-hidden="true"
-          >Next Post</span
-        >
+        <span class="simple-link__span-inner" aria-hidden="true">
+          Next Post
+        </span>
       </span>
       <img
         class="icon-arrow-right"

@@ -29,6 +29,8 @@ const toggleClassAnimate = (
   });
 };
 
+// Hero (Home)
+
 toggleClassAnimate(
   ".home-hero__heading",
   ".home-hero__subtext",
@@ -63,7 +65,8 @@ toggleClassAnimate(
   ".essence-paragraph__media-praises .essence-paragraph__body-text",
   ".essence-paragraph__media-praises .essence-paragraph__body-text",
   "top bottom",
-  "bottom top"
+  "bottom top",
+  false
 );
 
 // Archive Page __ Hero Paragraph

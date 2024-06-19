@@ -1,5 +1,7 @@
 const headerLinks = document.querySelector(".header-links"),
-  headerLinksUnderline = document.querySelector(".header-links__underline"),
+  headerLinksUnderline = document.querySelector(
+    ".header-links__hover-indicator"
+  ),
   links = headerLinks.querySelectorAll("li");
 
 const moveUnderlineToLink = (link) => {
@@ -14,17 +16,17 @@ const moveUnderlineToLink = (link) => {
 links.forEach((link) => {
   link.addEventListener("mouseover", () => {
     moveUnderlineToLink(link);
-    headerLinksUnderline.classList.remove("revert-underline");
+    headerLinksUnderline.classList.add("show-underline");
   });
   link.addEventListener("focusin", () => {
     moveUnderlineToLink(link);
-    headerLinksUnderline.classList.remove("revert-underline");
+    headerLinksUnderline.classList.add("show-underline");
   });
 
   link.addEventListener("mouseleave", () => {
-    headerLinksUnderline.classList.add("revert-underline");
+    headerLinksUnderline.classList.remove("show-underline");
   });
   link.addEventListener("focusout", () => {
-    headerLinksUnderline.classList.add("revert-underline");
+    headerLinksUnderline.classList.remove("show-underline");
   });
 });
