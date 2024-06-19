@@ -1,0 +1,35 @@
+---
+title: "ESSENCE • Films"
+layout: "archives"
+category: "Film"
+
+paragraphHeading: "Our Films"
+paragraphHeadingLevel: "h1"
+paragraphClass: "essence-paragraph hero-section hero-paragraph"
+paragraphContent: "ESSENCE literature is the curated collection of wisdom and inspiration, carefully selected to illuminate the path to a simpler, more meaningful life. Each book is a treasure trove of insights, offering you the opportunity to delve deeper into the art of essentialism."
+
+subheading: "Join us in exploring the written word's power to transform and enrich your life."
+reference-quote: "Whether you're seeking guidance, reflection, or motivation, our books provide a timeless companion on your journey to intentional living."
+---
+
+{% set listContent = collections.books | sort(attribute='data.title') %}
+
+<div class="archive-list__category">
+  <h3 class="archive-list__heading">Collection</h3>
+
+  {% for post in listContent %}
+
+  <a
+    href="{{ post.url | url }}"
+    class="archive-list__link tab-element-page classic-link"
+  >
+    <!-- prettier-ignore -->
+    {% if post.data.title %} 
+              {{ post.data.title }} 
+          {% else %} 
+              Untitled 
+          {%endif %}
+    <!-- prettier-ignore -->
+  </a>
+  {% endfor %}
+</div>

@@ -649,6 +649,9 @@ header .header-links::after {
     transition: 0.8s ease 0.2s;
   }
 }
+header .header-links:hover .header-links__link, header .header-links:focus-within .header-links__link {
+  color: var(--secondary-font-color);
+}
 header .header-links__link {
   position: relative;
   font-size: 14px;
@@ -664,7 +667,7 @@ header .header-links__link {
   }
 }
 header .header-links__link:hover, header .header-links__link:focus {
-  opacity: 1 !important;
+  color: var(--primary-font-color) !important;
 }
 header .header-links li {
   position: relative;
@@ -2224,11 +2227,12 @@ footer .site-footer__bottom .credits {
   justify-content: center;
   align-items: center;
   gap: 48px;
-  translate: 0 -16px;
+  translate: 0 -24px;
 }
 @media screen and (max-width: 1512px) {
   footer .site-footer__bottom .credits {
     gap: 24px;
+    translate: 0 -16px;
   }
 }
 @media (max-width: 1280px) {

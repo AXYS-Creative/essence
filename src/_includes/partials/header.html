@@ -47,7 +47,11 @@
   <ul class="header-links">
     {% for item in navigation.items %}
     <li>
-      <a class="header-links__link tab-element-page" href="{{ item.url }}">
+      <a
+        class="header-links__link tab-element-page"
+        href="{{ item.url }}"
+        target="{{ item.target }}"
+      >
         {{ item.text }}
       </a>
     </li>

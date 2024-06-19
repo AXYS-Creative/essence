@@ -172,6 +172,13 @@ header {
       }
     }
 
+    &:hover,
+    &:focus-within {
+      .header-links__link {
+        color: var(--secondary-font-color);
+      }
+    }
+
     &__link {
       position: relative;
       font-size: 14px;
@@ -187,7 +194,7 @@ header {
 
       &:hover,
       &:focus {
-        opacity: 1 !important;
+        color: var(--primary-font-color) !important;
       }
     }
 
@@ -1406,10 +1413,11 @@ footer {
     .credits {
       @include row-center;
       gap: 48px;
-      translate: 0 -16px;
+      translate: 0 -24px;
 
       @include mq-max("xxl") {
         gap: 24px;
+        translate: 0 -16px;
       }
 
       @media (max-width: 1280px) {
