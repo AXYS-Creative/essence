@@ -36,6 +36,18 @@
         }
       }
 
+      &__column-5 {
+        @include mq-max("xl") {
+          display: none;
+        }
+      }
+
+      &__column-1 {
+        @media (max-width: 956px) {
+          display: none;
+        }
+      }
+
       &__inner {
         @include column-center;
         gap: 12px;
@@ -43,14 +55,18 @@
     }
 
     .collage-figure {
-      background: var(--secondary-font-color);
       width: 100%;
       aspect-ratio: 2 / 3;
       overflow: hidden;
       border-radius: 12px;
 
+      @include mq-max("md") {
+        border-radius: 8px;
+      }
+
       img {
         width: 100%;
+        opacity: 0.75;
       }
     }
   }

@@ -11,6 +11,15 @@
     gap: 32px;
     padding: 296px $content-padding-xxl;
   }
+
+  @include mq-max("xl") {
+    padding: 248px $content-padding-xxl;
+  }
+
+  @include mq-max("lg") {
+    padding: 216px $content-padding-xxl;
+  }
+
   @include mq-max("md") {
     gap: 24px;
     padding: 164px $content-padding-md;
