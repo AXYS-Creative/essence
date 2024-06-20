@@ -1,3 +1,9 @@
+@keyframes restore-translate {
+  to {
+    translate: 0 0;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -307,5 +313,11 @@
   to {
     opacity: 1;
     scale: 1;
+  }
+}
+
+@keyframes column-offset {
+  to {
+    translate: 0 calc(0px - 12vw);
   }
 }

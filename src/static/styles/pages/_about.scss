@@ -2,27 +2,51 @@
   // border: $test;
   padding-block: $body-padding;
 
-  .collage-wrapper {
+  .collage {
     // border: $test;
-    @include row-center;
+    @include row-start;
     gap: 12px;
+    overflow: hidden;
 
     opacity: 0;
     scale: 1.12;
     animation: scale-in 1.6s $cubic-ease-slow-start 0.4s forwards;
 
     .collage-column {
-      // background: lightgreen;
-      @include column-center;
-      gap: 12px;
       flex-grow: 1;
 
-      .collage-figure {
-        background: var(--secondary-font-color);
+      &__column-1,
+      &__column-3,
+      &__column-5 {
+        @include mq-motion-allow {
+          translate: 0 -164px;
+          animation: restore-translate 1.6s $cubic-ease-slow-start 0.4s forwards;
+        }
+      }
+
+      &__column-2,
+      &__column-4 {
+        @include mq-motion-allow {
+          translate: 0 164px;
+          animation: column-offset 1.6s $cubic-ease-slow-start 0.4s forwards;
+        }
+      }
+
+      &__inner {
+        @include column-center;
+        gap: 12px;
+      }
+    }
+
+    .collage-figure {
+      background: var(--secondary-font-color);
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      overflow: hidden;
+      border-radius: 12px;
+
+      img {
         width: 100%;
-        aspect-ratio: 1 / 1.4;
-        overflow: hidden;
-        border-radius: 12px;
       }
     }
   }

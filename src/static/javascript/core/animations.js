@@ -132,8 +132,24 @@ const paragraphPartialAnimation = (() => {
 // About Page, hero collage animation
 const aboutPageHeroCollage = (() => {
   if (window.location.pathname.includes("about")) {
-    console.log("done");
+    const createScrollTriggerAnimation = (selector, endY) => {
+      gsap.fromTo(
+        selector,
+        { y: 0 },
+        {
+          y: endY,
+          scrollTrigger: {
+            trigger: ".collage",
+            start: "top top",
+            end: "bottom top",
+            scrub: 1.2,
+          },
+        }
+      );
+    };
 
-    gsap.to("");
+    createScrollTriggerAnimation(".collage-column__inner-1", "-16%");
+    createScrollTriggerAnimation(".collage-column__inner-5", "-16%");
+    createScrollTriggerAnimation(".collage-column__inner-3", "-10%");
   }
 })();
