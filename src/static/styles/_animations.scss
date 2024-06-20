@@ -316,8 +316,26 @@
   }
 }
 
-@keyframes column-offset {
-  to {
-    translate: 0 calc(0px - 12vw);
+@media all {
+  @keyframes column-offset {
+    to {
+      translate: 0 calc(0px - 16vw);
+    }
+  }
+
+  @include mq-max("xxl") {
+    @keyframes column-offset {
+      to {
+        translate: 0 calc(0px - 17vw);
+      }
+    }
+  }
+
+  @include mq-max("sm") {
+    @keyframes column-offset {
+      to {
+        translate: 0 calc(0px - 22vw);
+      }
+    }
   }
 }

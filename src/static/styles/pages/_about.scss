@@ -1,40 +1,38 @@
+main:has(.about-hero) {
+  .essence-paragraph__about-us {
+    padding-block-start: 96px;
+
+    @include mq-max("xxl") {
+      padding-block-start: 64px;
+    }
+
+    @include mq-max("sm") {
+      padding-block-start: 0;
+    }
+  }
+}
+
 .about-hero {
   padding-block: $body-padding;
 
   .collage {
+    // border: $test;
     $animation-duration: 2s;
     $animation-delay: 0.8s;
 
     @include row-start;
     gap: 12px;
     overflow: hidden;
-
     opacity: 0;
     scale: 1.12;
-    animation: scale-in $animation-duration $cubic-ease-slow-start
-      $animation-delay forwards;
+    // Figure out prefers reduced motion
+
+    @include mq-max("sm") {
+      translate: 0 24px;
+    }
 
     .collage-column {
       flex-grow: 1;
-
-      &__column-1,
-      &__column-3,
-      &__column-5 {
-        @include mq-motion-allow {
-          translate: 0 -164px;
-          animation: restore-translate $animation-duration
-            $cubic-ease-slow-start $animation-delay forwards;
-        }
-      }
-
-      &__column-2,
-      &__column-4 {
-        @include mq-motion-allow {
-          translate: 0 164px;
-          animation: column-offset $animation-duration $cubic-ease-slow-start
-            $animation-delay forwards;
-        }
-      }
 
       &__column-5 {
         @include mq-max("xl") {
@@ -42,8 +40,14 @@
         }
       }
 
-      &__column-1 {
+      &__column-4 {
         @media (max-width: 956px) {
+          display: none;
+        }
+      }
+
+      &__column-1 {
+        @include mq-max("sm") {
           display: none;
         }
       }
@@ -57,16 +61,37 @@
     .collage-figure {
       width: 100%;
       aspect-ratio: 2 / 3;
-      overflow: hidden;
-      border-radius: 12px;
-
-      @include mq-max("md") {
-        border-radius: 8px;
-      }
 
       img {
         width: 100%;
         opacity: 0.75;
+        border-radius: 12px;
+
+        @include mq-max("md") {
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &.animate {
+      @include mq-motion-allow {
+        animation: scale-in $animation-duration $cubic-ease-slow-start
+          $animation-delay forwards;
+
+        .collage-column__column-1,
+        .collage-column__column-3,
+        .collage-column__column-5 {
+          translate: 0 -164px;
+          animation: restore-translate $animation-duration
+            $cubic-ease-slow-start $animation-delay forwards;
+        }
+
+        .collage-column__column-2,
+        .collage-column__column-4 {
+          translate: 0 164px;
+          animation: column-offset $animation-duration $cubic-ease-slow-start
+            $animation-delay forwards;
+        }
       }
     }
   }

@@ -14,14 +14,19 @@ const responsiveAnimations = (() => {
     (context) => {
       let { maxSm, maxMd, maxXl, minMd } = context.conditions;
 
-      // About page image collage
+      // About page __ hero image collage
       if (window.location.pathname.includes("about")) {
-        const createScrollTriggerAnimation = (selector, endY, endYxl) => {
+        const createScrollTriggerAnimation = (
+          selector,
+          endY,
+          endYxl,
+          endYsm
+        ) => {
           gsap.fromTo(
             selector,
             { y: 0 },
             {
-              y: maxXl ? endYxl : endY,
+              y: maxSm ? endYsm : maxXl ? endYxl : endY,
               scrollTrigger: {
                 trigger: ".collage",
                 start: "top top",
@@ -34,15 +39,22 @@ const responsiveAnimations = (() => {
 
         createScrollTriggerAnimation(
           ".collage-column__inner-1",
-          "-16%",
-          "-10%"
+          "-24%",
+          "-14%",
+          null
         );
         createScrollTriggerAnimation(
           ".collage-column__inner-3",
           "-10%",
-          "-10%"
+          "-14%",
+          "-26%"
         );
-        createScrollTriggerAnimation(".collage-column__inner-5", "-16%", null);
+        createScrollTriggerAnimation(
+          ".collage-column__inner-5",
+          "-24%",
+          null,
+          null
+        );
       }
     }
   );
@@ -131,6 +143,7 @@ const generalClassToggle = (() => {
   );
 
   // About Page __ Paragraph
+  toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%", false);
   toggleClassAnimate(
     ".essence-paragraph__about-us .essence-paragraph__heading-svg",
     ".essence-paragraph__about-us .essence-paragraph__heading-svg"
