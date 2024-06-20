@@ -3317,7 +3317,7 @@ img {
   overflow: hidden;
   opacity: 0;
   scale: 1.12;
-  animation: scale-in 1.6s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
+  animation: scale-in 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.8s forwards;
 }
 .about-hero .collage .collage-column {
   flex-grow: 1;
@@ -3325,13 +3325,13 @@ img {
 @media (prefers-reduced-motion: no-preference) {
   .about-hero .collage .collage-column__column-1, .about-hero .collage .collage-column__column-3, .about-hero .collage .collage-column__column-5 {
     translate: 0 -164px;
-    animation: restore-translate 1.6s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
+    animation: restore-translate 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.8s forwards;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   .about-hero .collage .collage-column__column-2, .about-hero .collage .collage-column__column-4 {
     translate: 0 164px;
-    animation: column-offset 1.6s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
+    animation: column-offset 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.8s forwards;
   }
 }
 .about-hero .collage .collage-column__inner {

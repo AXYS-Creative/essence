@@ -1,16 +1,18 @@
 .about-hero {
-  // border: $test;
   padding-block: $body-padding;
 
   .collage {
-    // border: $test;
+    $animation-duration: 2s;
+    $animation-delay: 0.8s;
+
     @include row-start;
     gap: 12px;
     overflow: hidden;
 
     opacity: 0;
     scale: 1.12;
-    animation: scale-in 1.6s $cubic-ease-slow-start 0.4s forwards;
+    animation: scale-in $animation-duration $cubic-ease-slow-start
+      $animation-delay forwards;
 
     .collage-column {
       flex-grow: 1;
@@ -20,7 +22,8 @@
       &__column-5 {
         @include mq-motion-allow {
           translate: 0 -164px;
-          animation: restore-translate 1.6s $cubic-ease-slow-start 0.4s forwards;
+          animation: restore-translate $animation-duration
+            $cubic-ease-slow-start $animation-delay forwards;
         }
       }
 
@@ -28,7 +31,8 @@
       &__column-4 {
         @include mq-motion-allow {
           translate: 0 164px;
-          animation: column-offset 1.6s $cubic-ease-slow-start 0.4s forwards;
+          animation: column-offset $animation-duration $cubic-ease-slow-start
+            $animation-delay forwards;
         }
       }
 
