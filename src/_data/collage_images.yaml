@@ -1,41 +1,44 @@
 images:
-  - title: "column 1, row a"
+  - title: column 1, row a
     src: /static/img/collage-1a.webp
-  - title: "column 1, row b"
+  - title: column 1, row b
     src: /static/img/collage-1b.webp
-  - title: "column 1, row c"
+  - title: column 1, row c
     src: /static/img/collage-1c.webp
-  - title: "column 1, row d"
+  - title: column 1, row d
     src: /static/img/collage-1d.webp
-  - title: "column 2, row a"
+  - title: column 2, row a
     src: /static/img/collage-2a.webp
-  - title: "column 2, row b"
+  - title: column 2, row b
     src: /static/img/collage-2b.webp
-  - title: "column 2, row c"
+  - title: column 2, row c
     src: /static/img/collage-2c.webp
-  - title: "column 2, row d"
+  - title: column 2, row d
     src: /static/img/collage-2d.webp
-  - title: "column 3, row a"
+  - title: column 3, row a
     src: /static/img/collage-3a.webp
-  - title: "column 3, row b"
+  - title: column 3, row b
     src: /static/img/collage-3b.webp
-  - title: "column 3, row c"
+  - title: column 3, row c
     src: /static/img/collage-3c.webp
-  - title: "column 3, row d"
+  - title: column 3, row d
     src: /static/img/collage-3d.webp
-  - title: "column 4, row a"
+  - title: column 4, row a
     src: /static/img/collage-4a.webp
-  - title: "column 4, row b"
+  - title: column 4, row b
     src: /static/img/collage-4b.webp
-  - title: "column 4, row c"
+  - title: column 4, row c
     src: /static/img/collage-4c.webp
-  - title: "column 4, row d"
+  - title: column 4, row d
     src: /static/img/collage-4d.webp
-  - title: "column 5, row a"
+  - title: column 5, row a
     src: /static/img/collage-5a.webp
-  - title: "column 5, row b"
+  - title: column 5, row b
     src: /static/img/collage-5b.webp
-  - title: "column 5, row c"
+  - title: column 5, row c
     src: /static/img/collage-5c.webp
-  - title: "column 5, row d"
+  - title: column 5, row d
     src: /static/img/collage-5d.webp
+about_collage_images:
+  - description: A man packing boxes
+    src: /static/img/collage-1a.webp
