@@ -1,7 +1,7 @@
 about_collage_images:
-  - description: A man packing boxes
+  - description: A man packing cardboard boxes
     src: /static/img/collage-1a.webp
-  - description: A young man sitting on a couch
+  - description: A young man sitting on a couch, engaging with a coach
     src: /static/img/collage-1b.webp
   - description: A man looking out a bedroom window as he takes a break from packing boxes
     src: /static/img/collage-1c.webp
@@ -17,7 +17,7 @@ about_collage_images:
     src: /static/img/collage-2d.webp
   - description: A coach's notebook with a couple sitting on a couch in the distance
     src: /static/img/collage-3a.webp
-  - description: A couch and young woman talking and laughing
+  - description: A couch and young woman talking and laughing together
     src: /static/img/collage-3b.webp
   - description: A man and woman speaking on a couch
     src: /static/img/collage-3c.webp
@@ -33,7 +33,7 @@ about_collage_images:
     src: /static/img/collage-4d.webp
   - description: A coaching session in an elegant room
     src: /static/img/collage-5a.webp
-  - description: A man helping a woman pack her things
+  - description: A man and woman review their declutter plan as they take a break from packing
     src: /static/img/collage-5b.webp
   - description: A young woman pondering about the journey of essentialism
     src: /static/img/collage-5c.webp
