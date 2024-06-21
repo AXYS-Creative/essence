@@ -113,13 +113,10 @@ collections:
         name: "collage_images"
         file: "src/_data/collage_images.yaml"
         fields:
-          - label: "Collage Images"
-            name: "collage_images"
+          - label: "About Collage Images"
+            name: "about_collage_images"
             widget: "list"
             collapsed: false
             fields:
-              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
               - { label: "Image Source", name: "src", widget: "image" }
-
-    editor:
-      preview: false
