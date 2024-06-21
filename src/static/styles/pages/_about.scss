@@ -18,7 +18,7 @@ main:has(.about-hero) {
   .collage {
     // border: $test;
     $animation-duration: 2s;
-    $animation-delay: 0.8s;
+    $animation-delay: 0.4s;
 
     @include row-start;
     gap: 12px;

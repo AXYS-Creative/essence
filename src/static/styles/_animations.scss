@@ -304,22 +304,29 @@
 //
 // About Page
 //
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    scale: 1.12;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
 @media all {
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      scale: 1.12;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
   @keyframes column-offset {
     to {
       translate: 0 calc(0px - 16vw);
+    }
+  }
+
+  @include mq-min("xxxl") {
+    @keyframes column-offset {
+      to {
+        translate: 0 calc(0px - 312px);
+      }
     }
   }
 
