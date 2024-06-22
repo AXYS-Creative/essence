@@ -118,13 +118,11 @@ collections:
             widget: "list"
             collapsed: false
             fields:
-              - { label: "Description", name: "description", widget: "string" }
-              - { label: "Image Source", name: "src", widget: "image" }
               - widget: select
-                label: "Placement Tag"
+                label: "Placement Helper"
                 name: "tags"
-                multiple: true
-                create: true
+                multiple: false
+                create: false
                 options:
                   [
                     "Column 1",
@@ -134,3 +132,5 @@ collections:
                     "Column 5",
                     "Mobile Column",
                   ]
+              - { label: "Image Source", name: "src", widget: "image" }
+              - { label: "Description", name: "description", widget: "string" }
