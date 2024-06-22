@@ -120,5 +120,17 @@ collections:
             fields:
               - { label: "Description", name: "description", widget: "string" }
               - { label: "Image Source", name: "src", widget: "image" }
-              # Meta
-              - { label: "Image Placement", name: "tag", widget: "hidden" }
+              - widget: select
+                label: "organizing tag"
+                name: "tags"
+                multiple: true
+                create: true
+                options:
+                  [
+                    "Column 1",
+                    "Column 2",
+                    "Column 3",
+                    "Column 4",
+                    "Column 5",
+                    "Mobile Column",
+                  ]

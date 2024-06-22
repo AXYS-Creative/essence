@@ -30,9 +30,7 @@ export const maxSm = window.matchMedia("(max-width: 480px)");
   yearText.setAttribute("datetime", currentYear);
 })();
 
-//
 // Detect Safari Browser
-//
 export const isSafari = () => {
   let ua = navigator.userAgent.toLowerCase();
   return ua.indexOf("safari") !== -1 && ua.indexOf("chrome") === -1;
