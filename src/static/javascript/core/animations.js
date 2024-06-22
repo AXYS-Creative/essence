@@ -189,3 +189,69 @@ const paragraphPartialAnimation = (() => {
     ".essence-paragraph__about-us .essence-paragraph__body-text"
   );
 })();
+
+const numberTickerAnimation = (() => {
+  const numberCounters = document.querySelectorAll(".number-counter");
+
+  numberCounters.forEach((numberCounter) => {
+    wrapNumbers(numberCounter);
+
+    ScrollTrigger.create({
+      trigger: numberCounter,
+      start: "top 96%",
+      end: "bottom 4%",
+      onEnter: () => counterCountUp(numberCounter),
+      onLeave: () => counterReset(numberCounter),
+      onEnterBack: () => counterCountUp(numberCounter),
+      onLeaveBack: () => counterReset(numberCounter),
+    });
+  });
+
+  function wrapNumbers(element) {
+    let characters = element.textContent.trim().split("");
+
+    characters = characters.map((el) => {
+      if (!isNaN(el)) {
+        return `<span class='digit' data-counter-value='${el}'><span class='sequence'>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</span></span>`;
+      }
+      return el;
+    });
+
+    element.innerHTML = characters.join("");
+  }
+
+  const counterCountUp = (counter) => {
+    const digits = counter.querySelectorAll(".digit");
+
+    digits.forEach((digit) => {
+      const sequence = digit.querySelector(".sequence");
+      const value = digit.getAttribute("data-counter-value");
+
+      gsap.to(sequence, {
+        y: `-${value * 10}%`,
+        duration: 1,
+        ease: "power2.out",
+        onUpdate: function () {
+          sequence.style.transform = `translate3d(0, ${-(value * 10)}%, 0)`;
+        },
+      });
+    });
+  };
+
+  const counterReset = (counter) => {
+    const digits = counter.querySelectorAll(".digit");
+
+    digits.forEach((digit) => {
+      const sequence = digit.querySelector(".sequence");
+
+      gsap.to(sequence, {
+        y: "0%",
+        duration: 1,
+        ease: "power2.out",
+        onUpdate: function () {
+          sequence.style.transform = `translate3d(0, 0, 0)`;
+        },
+      });
+    });
+  };
+})();

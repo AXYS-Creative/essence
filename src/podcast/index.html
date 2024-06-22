@@ -13,8 +13,8 @@ subheading: "Tune in to explore innovative ideas and practical strategies for si
 
 {% set listContent = collections.podcast | sort(attribute='data.title') %}
 
-<div class="archive-list__category">
-  <h3 class="archive-list__heading">Most popular</h3>
+<div class="slider-list__category">
+  <h3 class="slider-list__heading">Most popular</h3>
   <!-- prettier-ignore -->
   {% for post in listContent | reverse %} 
     {% if "popular" in post.data.tags %}
@@ -28,8 +28,8 @@ subheading: "Tune in to explore innovative ideas and practical strategies for si
   <!-- prettier-ignore -->
 </div>
 
-<div class="archive-list__category">
-  <h3 class="archive-list__heading">Episodes</h3>
+<div class="slider-list__category">
+  <h3 class="slider-list__heading">Episodes</h3>
 
   {% for post in listContent | reverse %}
 

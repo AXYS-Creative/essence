@@ -8,13 +8,17 @@ layout: "app"
 <!-- Props passed via front matter -->
 {% include "partials/paragraph.html"%}
 
-<section class="archive-section">
-  <div class="archive-header">
-    <h2 class="archive-header__heading h1">
+<section class="slider-section archive-section">
+  <div class="slider-header archive-header">
+    <h2 class="h1 slider-header__heading archive-header__heading">
       {{ category }} <br />
       archives
     </h2>
-    <p class="archive-header__sub-heading">{{ subheading }}</p>
+    <p class="slider-header__sub-heading archive-header__sub-heading">
+      {{ subheading }}
+    </p>
+
+    <!-- prettier-ignore -->
     {% if page.url === "/blog/" %}
     <a href="{{ latestPost.url }}" class="simple-link tab-element-page">
       <span class="simple-link__span-outter span-md">
@@ -29,8 +33,11 @@ layout: "app"
         alt="decorative right arrow"
         role="presentation"
     /></a>
-    {%endif%} {% if page.url === "/podcast/" %}
-    <h3 class="h6 archive-header__cta">
+    {%endif%}
+
+    <!-- prettier-ignore -->
+    {% if page.url === "/podcast/" %}
+    <h3 class="h6 slider-header__cta archive-header__cta">
       Subscribe
       <img
         class="icon-arrow-down"
@@ -39,15 +46,30 @@ layout: "app"
         role="presentation"
       />
     </h3>
-    <div class="archive-header__cta-options">
-      <a href="" class="classic-link tab-element-page">Apple</a>
-      <a href="" class="classic-link tab-element-page">Spotify</a>
-      <a href="" class="classic-link tab-element-page">Youtube</a>
+    <div class="slider-header__cta-options archive-header__cta-options">
+      <a
+        href="https://www.apple.com/apple-podcasts/"
+        class="classic-link tab-element-page"
+      >
+        Apple
+      </a>
+      <a
+        href="https://open.spotify.com/genre/0JQ5DArNBzkmxXHCqFLx2J"
+        class="classic-link tab-element-page"
+      >
+        Spotify
+      </a>
+      <a
+        href="https://www.youtube.com/podcasts"
+        class="classic-link tab-element-page"
+      >
+        Youtube
+      </a>
     </div>
     {%endif%}
   </div>
 
-  <div class="archive-list">
+  <div class="slider-list archive-list">
     <!-- prettier-ignore -->
     {{ content | safe }}
     <!-- prettier-ignore -->
