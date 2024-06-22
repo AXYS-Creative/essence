@@ -47,7 +47,7 @@ const responsiveAnimations = (() => {
           ".collage-column__inner-3",
           "-10%",
           "-14%",
-          "-26%"
+          "-29.5%"
         );
         createScrollTriggerAnimation(
           ".collage-column__inner-5",
