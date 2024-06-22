@@ -1,8 +1,7 @@
 about_collage_images:
   - src: /static/img/collage-1a.webp
     description: A man packing cardboard boxes
-    tags:
-      - Column 1
+    tags: Column 1
   - src: /static/img/collage-1b.webp
     description: A young man sitting on a couch, engaging with a coach
     tags:
@@ -68,8 +67,7 @@ about_collage_images:
     tags:
       - Column 5
   - src: /static/img/collage-5b.webp
-    description:
-      A man and woman review their declutter plan as they take a break
+    description: A man and woman review their declutter plan as they take a break
       from packing
     tags:
       - Column 5
