@@ -1,3 +1,5 @@
+import { isSafari } from "../utility.js";
+
 export const navElements = [
   "backdrop__nav",
   "backdrop__nav-abstract",
@@ -29,3 +31,8 @@ document.addEventListener("mousemove", (e) => {
     navCursor.classList.remove("active");
   }
 });
+
+// Safari - glitchy transition on mouseCursor
+if (isSafari()) {
+  mouseCursors.forEach((el) => (el.style.transition = "none"));
+}

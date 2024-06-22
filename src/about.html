@@ -3,6 +3,8 @@ title: ESSENCE • About
 layout: "app"
 ---
 
+{% set image = collage_images.about_collage_images[20] %}
+
 <section class="hero-section about-hero">
   <div class="collage">
     <div class="collage-column collage-column__column-1">
@@ -36,8 +38,13 @@ layout: "app"
           <img src="{{ image.src }}" alt="{{ image.description }}" />
         </figure>
         {% endif %} {% endfor %}
+
         <figure class="collage-figure sm-screen-and-below">
-          <img src="./static/img/collage-1d.webp" alt="" loading="lazy" />
+          <img
+            src="{{ image.src }}"
+            alt="{{ image.description }}"
+            loading="lazy"
+          />
         </figure>
       </div>
     </div>

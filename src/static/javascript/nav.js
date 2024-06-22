@@ -1,4 +1,4 @@
-import { maxSm, minMd, maxLg } from "./utility.js";
+import { maxSm, minMd, maxLg, isSafari } from "./utility.js";
 import { navCursor, navElements } from "./core/mouseCursor.js";
 // import { lenis } from "./core/lenis.js";
 import {
@@ -123,10 +123,6 @@ navMenuBackdrop.forEach((el) =>
 
 // headerLogo.addEventListener("click", closeNav);
 
-//
-// Nav LinksWrapper based on mouse vertical mouse movement (responsive & accessible)
-//
-
 // Keyboard accessible nav-links. Reposition on focus
 const keyboardAccessibleNavLinks = (
   percentage,
@@ -222,10 +218,6 @@ const handleNavGlide = () => {
 
 handleNavGlide();
 
-//
-// Scroll logic for cta... basically it's returning when closing the menu on smaller devices
-//
-
 // Event listener for scroll events
 window.addEventListener(
   "scroll",
@@ -235,10 +227,7 @@ window.addEventListener(
   }, 50)
 );
 
-//
 // Nav Image Hover/Focus
-//
-
 const navImgs = document.querySelectorAll(".nav-img");
 
 navLinks.forEach((link, index) => {
@@ -250,3 +239,8 @@ navLinks.forEach((link, index) => {
   link.addEventListener("focus", addActiveClass);
   link.addEventListener("blur", removeActiveClass);
 });
+
+// Safari - glitchy transition on navLinksWrapper
+if (isSafari()) {
+  navLinksWrapper.style.transition = "none";
+}

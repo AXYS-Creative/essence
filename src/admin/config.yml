@@ -120,3 +120,5 @@ collections:
             fields:
               - { label: "Description", name: "description", widget: "string" }
               - { label: "Image Source", name: "src", widget: "image" }
+              # Meta
+              - { label: "Image Placement", name: "tag", widget: "hidden" }
