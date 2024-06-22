@@ -4,82 +4,61 @@ about_collage_images:
     tags: Column 1
   - src: /static/img/collage-1b.webp
     description: A young man sitting on a couch, engaging with a coach
-    tags:
-      - Column 1
+    tags: Column 1
   - src: /static/img/collage-1c.webp
     description: A man looking out a bedroom window as he takes a break from packing boxes
-    tags:
-      - Column 1
+    tags: Column 1
   - src: /static/img/collage-1d.webp
     description: A young woman relaxed on a couch, talking with a coach
-    tags:
-      - Column 1
+    tags: Column 1
   - src: /static/img/collage-2a.webp
     description: A man with glasses coaching another person
-    tags:
-      - Column 2
+    tags: Column 2
   - src: /static/img/collage-2b.webp
     description: A woman holding a packed cardboard box
-    tags:
-      - Column 2
+    tags: Column 2
   - src: /static/img/collage-2c.webp
     description: A couple sitting on a couch, talking with a coach
-    tags:
-      - Column 2
+    tags: Column 2
   - src: /static/img/collage-2d.webp
     description: Looking down at a man sitting on a couch in a coaching session
-    tags:
-      - Column 2
+    tags: Column 2
   - src: /static/img/collage-3a.webp
     description: A coach's notebook with a couple sitting on a couch in the distance
-    tags:
-      - Column 3
+    tags: Column 3
   - src: /static/img/collage-3b.webp
     description: A couch and young woman talking and laughing together
-    tags:
-      - Column 3
+    tags: Column 3
   - src: /static/img/collage-3c.webp
     description: A man and woman speaking on a couch
-    tags:
-      - Column 3
+    tags: Column 3
   - src: /static/img/collage-3d.webp
     description: A man carefully handling a cardboard box
-    tags:
-      - Column 3
+    tags: Column 3
   - src: /static/img/collage-4a.webp
     description: A man and a woman discussing clutter and packing boxes
-    tags:
-      - Column 4
+    tags: Column 4
   - src: /static/img/collage-4b.webp
     description: An elderly woman sitting gracefully as she coaches another person
-    tags:
-      - Column 4
+    tags: Column 4
   - src: /static/img/collage-4c.webp
     description: A woman thinking about a piece of clothing to get rid of
-    tags:
-      - Column 4
+    tags: Column 4
   - src: /static/img/collage-4d.webp
     description: A coach taking notes in a journal
-    tags:
-      - Column 4
+    tags: Column 4
   - src: /static/img/collage-5a.webp
     description: A coaching session in an elegant room
-    tags:
-      - Column 5
+    tags: Column 5
   - src: /static/img/collage-5b.webp
-    description: A man and woman review their declutter plan as they take a break
-      from packing
-    tags:
-      - Column 5
+    description: A man & woman review their declutter plan as they pack
+    tags: Column 5
   - src: /static/img/collage-5c.webp
     description: A young woman pondering about the journey of essentialism
-    tags:
-      - Column 5
+    tags: Column 5
   - src: /static/img/collage-5d.webp
     description: A man on a couch ready to help others learn about essentialism
-    tags:
-      - Column 5
+    tags: Column 5
   - src: /static/img/collage-1d.webp
     description: A young woman relaxed on a couch, talking with a coach
-    tags:
-      - Mobile Column
+    tags: Mobile Column

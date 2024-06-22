@@ -122,7 +122,6 @@ collections:
                 label: "Placement Helper"
                 name: "tags"
                 multiple: false
-                create: false
                 options:
                   [
                     "Column 1",
@@ -132,5 +131,6 @@ collections:
                     "Column 5",
                     "Mobile Column",
                   ]
+                default: ["Add Column"]
               - { label: "Image Source", name: "src", widget: "image" }
               - { label: "Description", name: "description", widget: "string" }
