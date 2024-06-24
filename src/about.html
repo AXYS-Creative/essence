@@ -3,14 +3,14 @@ title: ESSENCE • About
 layout: "app"
 ---
 
-{% set image = hero_collage.image[20] %}
+{% set image = collage_images.image[20] %}
 
 <section class="hero-section about-hero">
   <div class="collage">
     <div class="collage-column collage-column__column-1">
       <div class="collage-column__inner collage-column__inner-1">
         <!-- prettier-ignore -->
-        {% for image in hero_collage.image %} 
+        {% for image in collage_images.image %} 
           {% if loop.index0< 4 %}
         <figure class="collage-figure">
           <img src="{{ image.src }}" alt="{{ image.description }}" />
@@ -21,7 +21,7 @@ layout: "app"
     <div class="collage-column collage-column__column-2">
       <div class="collage-column__inner collage-column__inner-2">
         <!-- prettier-ignore -->
-        {% for image in hero_collage.image %} 
+        {% for image in collage_images.image %} 
         {% if loop.index0 >= 4 and loop.index0 < 8 %}
         <figure class="collage-figure">
           <img src="{{ image.src }}" alt="{{ image.description }}" />
@@ -32,7 +32,7 @@ layout: "app"
     <div class="collage-column collage-column__column-3">
       <div class="collage-column__inner collage-column__inner-3">
         <!-- prettier-ignore -->
-        {% for image in hero_collage.image %} 
+        {% for image in collage_images.image %} 
         {% if loop.index0 >= 8 and loop.index0 < 12 %}
         <figure class="collage-figure">
           <img src="{{ image.src }}" alt="{{ image.description }}" />
@@ -51,7 +51,7 @@ layout: "app"
     <div class="collage-column collage-column__column-4">
       <div class="collage-column__inner collage-column__inner-4">
         <!-- prettier-ignore -->
-        {% for image in hero_collage.image %} 
+        {% for image in collage_images.image %} 
         {% if loop.index0 >= 12 and loop.index0 < 16 %}
         <figure class="collage-figure">
           <img src="{{ image.src }}" alt="{{ image.description }}" />
@@ -62,7 +62,7 @@ layout: "app"
     <div class="collage-column collage-column__column-5">
       <div class="collage-column__inner collage-column__inner-5">
         <!-- prettier-ignore -->
-        {% for image in hero_collage.image %} 
+        {% for image in collage_images.image %} 
         {% if loop.index0 >= 16 and loop.index0 < 20 %}
         <figure class="collage-figure">
           <img src="{{ image.src }}" alt="{{ image.description }}" />

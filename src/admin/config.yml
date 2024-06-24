@@ -70,7 +70,7 @@ collections:
     name: "about_page"
     files:
       - label: "Hero Collage"
-        name: "hero_collage"
+        name: "collage_images"
         file: "src/_data/collage_images.yaml"
         fields:
           - label: "Collage Images"
