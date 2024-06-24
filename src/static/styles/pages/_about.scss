@@ -29,6 +29,7 @@ main:has(.about-hero) {
 
     @include mq-max("sm") {
       translate: 0 24px;
+      scale: 1.1;
     }
 
     .collage-column {
@@ -108,23 +109,23 @@ main:has(.about-hero) {
       flex: 1.6;
     }
 
-    @include mq-max("md") {
+    @include mq-max("lg") {
       margin-inline-start: 0;
+    }
+
+    @include mq-max("md") {
       margin-block-end: 56px;
     }
   }
 
   .growth-list {
-    // border: $test;
-    // flex: unset;
     gap: 148px;
 
     @include mq-max("xxl") {
-      gap: 64px; // change me
+      gap: 64px;
     }
 
     &__category {
-      // border: $test;
       gap: 8px;
     }
 
@@ -133,6 +134,10 @@ main:has(.about-hero) {
       border: none;
       margin: 0;
       padding: 0;
+
+      @include mq-max("md") {
+        font-size: calc(64px + 6.4vw);
+      }
     }
 
     h4 {
@@ -144,58 +149,51 @@ main:has(.about-hero) {
       }
     }
   }
-}
 
-// Pulled css from Jackson Lynch 'Counter' see codepen
-@media all {
-  @mixin stagger-transition-delay($i, $initial-delay, $stagger-delay) {
-    @while $i > 0 {
-      &:nth-of-type(#{$i}) {
-        transition-delay: ($initial-delay + $stagger-delay * $i);
+  // Pulled css from Jackson Lynch 'Counter' see codepen
+  @media all {
+    @mixin stagger-transition-delay($i, $initial-delay, $stagger-delay) {
+      @while $i > 0 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: ($initial-delay + $stagger-delay * $i);
+        }
+        $i: $i - 1;
       }
-      $i: $i - 1;
-    }
-  }
-
-  .number-counter {
-    display: flex;
-    color: black;
-  }
-
-  .digit {
-    // border: $test;
-    display: block;
-    width: 58px;
-    height: 112px;
-    overflow: hidden;
-    transition-property: transform;
-    @include stagger-transition-delay(20, 0, 90ms);
-
-    @include mq-max("xxl") {
-      width: 51px;
-      height: 96px;
     }
 
-    @include mq-max("xl") {
-      width: 46px;
-      height: 84px;
+    .number-counter {
+      display: flex;
     }
 
-    @include mq-max("md") {
-      width: calc(16px + 4vw);
-      height: calc(32px + 6vw);
+    .digit {
+      @include stagger-transition-delay(20, 0, 90ms);
+      display: block;
+      width: 59px;
+      height: 112px;
+      overflow: hidden;
+      transition-property: transform;
+
+      @include mq-max("xxl") {
+        width: 52px;
+        height: 96px;
+      }
+
+      @include mq-max("xl") {
+        width: 46px;
+        height: 84px;
+      }
+
+      @include mq-max("md") {
+        width: calc(40px + 4vw);
+        height: calc(80px + 6vw);
+      }
     }
 
-    @include mq-max("sm") {
-      width: 28px;
-      height: 48px;
+    .sequence {
+      display: block;
+      transition-property: transform;
+      transition-duration: 2000ms;
+      transition-delay: inherit;
     }
-  }
-
-  .sequence {
-    display: block;
-    transition-property: transform;
-    transition-duration: 2000ms;
-    transition-delay: inherit;
   }
 }

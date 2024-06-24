@@ -198,8 +198,8 @@ const numberTickerAnimation = (() => {
 
     ScrollTrigger.create({
       trigger: numberCounter,
-      start: "top 96%",
-      end: "bottom 4%",
+      start: "top 98%",
+      end: "bottom 2%",
       onEnter: () => counterCountUp(numberCounter),
       onLeave: () => counterReset(numberCounter),
       onEnterBack: () => counterCountUp(numberCounter),

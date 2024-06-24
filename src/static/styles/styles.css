@@ -3553,6 +3553,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
 @media screen and (max-width: 480px) {
   .about-hero .collage {
     translate: 0 24px;
+    scale: 1.1;
   }
 }
 .about-hero .collage .collage-column {
@@ -3620,9 +3621,13 @@ main:has(.about-hero) .essence-paragraph__about-us {
     flex: 1.6;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .growth-section .growth-header {
     margin-inline-start: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .growth-section .growth-header {
     margin-block-end: 56px;
   }
 }
@@ -3642,6 +3647,11 @@ main:has(.about-hero) .essence-paragraph__about-us {
   border: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .growth-section .growth-list__heading {
+    font-size: calc(64px + 6.4vw);
+  }
 }
 .growth-section .growth-list h4 {
   font-size: 20px;
@@ -3666,112 +3676,105 @@ main:has(.about-hero) .essence-paragraph__about-us {
 .growth-section .growth-list h4::first-letter {
   text-transform: capitalize;
 }
-
 @media all {
-  .number-counter {
+  .growth-section .number-counter {
     display: flex;
-    color: black;
   }
-  .digit {
+  .growth-section .digit {
     display: block;
-    width: 58px;
+    width: 59px;
     height: 112px;
     overflow: hidden;
     transition-property: transform;
   }
-  .digit:nth-of-type(20) {
+  .growth-section .digit:nth-of-type(20) {
     transition-delay: 1800ms;
   }
-  .digit:nth-of-type(19) {
+  .growth-section .digit:nth-of-type(19) {
     transition-delay: 1710ms;
   }
-  .digit:nth-of-type(18) {
+  .growth-section .digit:nth-of-type(18) {
     transition-delay: 1620ms;
   }
-  .digit:nth-of-type(17) {
+  .growth-section .digit:nth-of-type(17) {
     transition-delay: 1530ms;
   }
-  .digit:nth-of-type(16) {
+  .growth-section .digit:nth-of-type(16) {
     transition-delay: 1440ms;
   }
-  .digit:nth-of-type(15) {
+  .growth-section .digit:nth-of-type(15) {
     transition-delay: 1350ms;
   }
-  .digit:nth-of-type(14) {
+  .growth-section .digit:nth-of-type(14) {
     transition-delay: 1260ms;
   }
-  .digit:nth-of-type(13) {
+  .growth-section .digit:nth-of-type(13) {
     transition-delay: 1170ms;
   }
-  .digit:nth-of-type(12) {
+  .growth-section .digit:nth-of-type(12) {
     transition-delay: 1080ms;
   }
-  .digit:nth-of-type(11) {
+  .growth-section .digit:nth-of-type(11) {
     transition-delay: 990ms;
   }
-  .digit:nth-of-type(10) {
+  .growth-section .digit:nth-of-type(10) {
     transition-delay: 900ms;
   }
-  .digit:nth-of-type(9) {
+  .growth-section .digit:nth-of-type(9) {
     transition-delay: 810ms;
   }
-  .digit:nth-of-type(8) {
+  .growth-section .digit:nth-of-type(8) {
     transition-delay: 720ms;
   }
-  .digit:nth-of-type(7) {
+  .growth-section .digit:nth-of-type(7) {
     transition-delay: 630ms;
   }
-  .digit:nth-of-type(6) {
+  .growth-section .digit:nth-of-type(6) {
     transition-delay: 540ms;
   }
-  .digit:nth-of-type(5) {
+  .growth-section .digit:nth-of-type(5) {
     transition-delay: 450ms;
   }
-  .digit:nth-of-type(4) {
+  .growth-section .digit:nth-of-type(4) {
     transition-delay: 360ms;
   }
-  .digit:nth-of-type(3) {
+  .growth-section .digit:nth-of-type(3) {
     transition-delay: 270ms;
   }
-  .digit:nth-of-type(2) {
+  .growth-section .digit:nth-of-type(2) {
     transition-delay: 180ms;
   }
-  .digit:nth-of-type(1) {
+  .growth-section .digit:nth-of-type(1) {
     transition-delay: 90ms;
   }
 }
 @media screen and (max-width: 1512px) {
-  .digit {
-    width: 51px;
+  .growth-section .digit {
+    width: 52px;
     height: 96px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .digit {
+  .growth-section .digit {
     width: 46px;
     height: 84px;
   }
 }
 @media screen and (max-width: 768px) {
-  .digit {
-    width: calc(16px + 4vw);
-    height: calc(32px + 6vw);
-  }
-}
-@media screen and (max-width: 480px) {
-  .digit {
-    width: 28px;
-    height: 48px;
+  .growth-section .digit {
+    width: calc(40px + 4vw);
+    height: calc(80px + 6vw);
   }
 }
 @media all {
-  .sequence {
+  .growth-section .sequence {
     display: block;
     transition-property: transform;
     transition-duration: 2000ms;
     transition-delay: inherit;
   }
 }
+
 .home-hero {
   display: flex;
   flex-direction: column;
