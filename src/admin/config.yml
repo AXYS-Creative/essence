@@ -101,6 +101,7 @@ collections:
         file: "src/_data/recorded_growth.yaml"
         editor:
           preview: true
+          previewStyles: "/static/styles/styles.css"
         fields:
           - label: "Growth Stats"
             name: "growth_stats"
