@@ -72,6 +72,8 @@ collections:
       - label: "Hero Collage"
         name: "collage_images"
         file: "src/_data/collage_images.yaml"
+        editor:
+          preview: true
         fields:
           - label: "Collage Images"
             name: "image"
@@ -97,6 +99,8 @@ collections:
       - label: "Recorded Growth"
         name: "recorded_growth"
         file: "src/_data/recorded_growth.yaml"
+        editor:
+          preview: true
         fields:
           - label: "Growth Stats"
             name: "growth_stats"
