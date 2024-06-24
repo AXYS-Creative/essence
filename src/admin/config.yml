@@ -69,11 +69,11 @@ collections:
   - label: "About Page"
     name: "about_page"
     files:
-      - label: "Collage Images"
-        name: "collage_images"
+      - label: "Hero Collage"
+        name: "hero_collage"
         file: "src/_data/collage_images.yaml"
         fields:
-          - label: "About Collage Images"
+          - label: "Collage Images"
             name: "image"
             widget: "list"
             collapsed: false
@@ -94,7 +94,7 @@ collections:
                 default: ["Add Column"]
               - { label: "Image Source", name: "src", widget: "image" }
               - { label: "Description", name: "description", widget: "string" }
-      - label: "Recored Growth"
+      - label: "Recorded Growth"
         name: "recorded_growth"
         file: "src/_data/recorded_growth.yaml"
         fields:
