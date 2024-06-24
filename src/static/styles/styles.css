@@ -3553,7 +3553,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
 @media screen and (max-width: 480px) {
   .about-hero .collage {
     translate: 0 24px;
-    scale: 1.1;
+    scale: 1.08;
   }
 }
 .about-hero .collage .collage-column {
@@ -3651,6 +3651,11 @@ main:has(.about-hero) .essence-paragraph__about-us {
 @media screen and (max-width: 768px) {
   .growth-section .growth-list__heading {
     font-size: calc(64px + 6.4vw);
+  }
+}
+@media screen and (max-width: 480px) {
+  .growth-section .growth-list__heading {
+    font-size: calc(52px + 6.4vw);
   }
 }
 .growth-section .growth-list h4 {
@@ -3764,6 +3769,12 @@ main:has(.about-hero) .essence-paragraph__about-us {
   .growth-section .digit {
     width: calc(40px + 4vw);
     height: calc(80px + 6vw);
+  }
+}
+@media screen and (max-width: 480px) {
+  .growth-section .digit {
+    width: calc(32px + 4vw);
+    height: calc(68px + 6vw);
   }
 }
 @media all {

@@ -114,7 +114,7 @@ collections:
         file: "src/_data/collage_images.yaml"
         fields:
           - label: "About Collage Images"
-            name: "about_collage_images"
+            name: "image"
             widget: "list"
             collapsed: false
             fields:
@@ -134,3 +134,14 @@ collections:
                 default: ["Add Column"]
               - { label: "Image Source", name: "src", widget: "image" }
               - { label: "Description", name: "description", widget: "string" }
+      - label: "Recored Growth"
+        name: "recorded_growth"
+        file: "src/_data/recorded_growth.yaml"
+        fields:
+          - label: "Growth Stats"
+            name: "growth_stats"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Numbers", name: "numbers", widget: "string" }
