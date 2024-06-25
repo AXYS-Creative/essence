@@ -110,6 +110,24 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Numbers", name: "numbers", widget: "string" }
+      - label: "Team Portraits"
+        name: "team_portraits"
+        file: "src/_data/team_portraits.yaml"
+        editor:
+          preview: true
+        fields:
+          - label: "Portrait Images"
+            name: "images"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { label: "Image Caption", name: "caption", widget: "string" }
+              - { label: "Image Source", name: "src", widget: "image" }
+              - {
+                  label: "SEO Description",
+                  name: "description",
+                  widget: "string",
+                }
   - label: "Settings"
     name: "settings"
     files:

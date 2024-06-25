@@ -11,7 +11,6 @@
   }
 
   &__heading {
-    @extend .h3;
     @include column-start;
 
     span:nth-of-type(2) {
@@ -87,54 +86,55 @@
     }
   }
 
-  // WebGL
+  // WebGL + Curtains
+  @media all {
+    #canvas-wrap {
+      width: 510px;
+      height: 710px;
+      position: relative;
+      overflow: hidden;
+      margin-block-end: 48px;
+    }
 
-  #canvas-wrap {
-    width: 510px;
-    height: 710px;
-    position: relative;
-    overflow: hidden;
-    margin-block-end: 48px;
-  }
+    /*** canvas ***/
 
-  /*** canvas ***/
+    #canvas {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 510px;
+      height: 710px;
+      left: 0;
+    }
 
-  #canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 510px;
-    height: 710px;
-    left: 0;
-  }
+    #fullwidth-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 510px;
+      height: 710px;
+      // height: 100vh;
+      // width: 100vw;
+    }
 
-  #fullwidth-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 510px;
-    height: 710px;
-    // height: 100vh;
-    // width: 100vw;
-  }
+    #fullwidth-image img,
+    #fullwidth-image canvas {
+      display: none;
+    }
 
-  #fullwidth-image img,
-  #fullwidth-image canvas {
-    display: none;
-  }
+    /* handling WebGL context errors */
 
-  /* handling WebGL context errors */
+    .no-webgl #fullwidth-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .no-webgl #fullwidth-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .no-webgl #fullwidth-image img {
-    display: block;
-    object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
+    .no-webgl #fullwidth-image img {
+      display: block;
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+    }
   }
 }

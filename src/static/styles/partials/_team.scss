@@ -1,0 +1,12 @@
+.essence-team {
+  border: $test;
+}
+
+.pinned-slider {
+  border: $test;
+
+  &__inner {
+    display: flex;
+    gap: 64px;
+  }
+}

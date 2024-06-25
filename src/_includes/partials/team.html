@@ -1,0 +1,19 @@
+<section class="essence-team">
+  <div class="essence-resources__header">
+    <h2 class="h5 essence-resources__heading">
+      <span>Meet the team</span>
+      <span>Powering Essence</span>
+    </h2>
+  </div>
+
+  <div class="pinned-slider">
+    <div class="pinned-slider__inner team-portraits">
+      {% for image in team_portraits.images %}
+      <figure class="team-portraits__portrait">
+        <img src="{{ image.src }}" alt="{{ image.description }}" />
+        <figcaption>{{ image.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
