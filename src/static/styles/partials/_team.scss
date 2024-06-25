@@ -7,6 +7,17 @@
     padding-block: 80px;
   }
 
+  @include mq-max("md") {
+    // padding-block: 124px;
+    padding-block: 16vh;
+    padding-block: 16dvh;
+  }
+
+  @include mq-max("sm") {
+    padding-block: 18vh;
+    padding-block: 18dvh;
+  }
+
   // .essence-resources__header {
   //   justify-content: flex-end;
 
@@ -35,17 +46,26 @@
 
   .portrait {
     img {
-      // width: 452px;
       width: 24vw;
+      margin-block-end: 12px;
+      opacity: 0.8;
 
       @include mq-max("lg") {
-        // width: 360px;
         width: 28vw;
       }
 
       @include mq-max("md") {
-        // width: 360px;
-        width: 48vw;
+        width: 52vw;
+      }
+    }
+
+    figcaption {
+      font-size: 16px;
+      font-weight: 300;
+      // text-wrap: balance;
+
+      @include mq-max("md") {
+        font-size: 14px;
       }
     }
   }

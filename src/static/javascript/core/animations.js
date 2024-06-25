@@ -58,17 +58,19 @@ const responsiveAnimations = (() => {
         );
 
         // Team Portraits
+        const pinnedSection = document.querySelector(".essence-team");
         const slider = document.querySelector(".pinned-slider__inner");
         const container = document.querySelector(".pinned-slider");
         const sliderWidth = slider.scrollWidth;
         const containerWidth = container.offsetWidth;
         const distanceToTranslate = sliderWidth - containerWidth;
 
-        gsap.to(".essence-team", {
+        gsap.to(pinnedSection, {
           scrollTrigger: {
-            trigger: ".essence-team",
+            trigger: pinnedSection,
             start: "top top",
-            end: "bottom top",
+            // end: "bottom top",
+            end: "+=200%",
             pin: true,
             // markers: true,
           },
@@ -83,8 +85,9 @@ const responsiveAnimations = (() => {
             scrollTrigger: {
               trigger: ".essence-team",
               start: "top top",
-              end: "bottom top",
-              scrub: 1,
+              // end: "bottom top",
+              end: "+=200%",
+              scrub: 0.2,
               // markers: {
               //   startColor: "navy",
               //   endColor: "navy",

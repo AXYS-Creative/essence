@@ -1,25 +1,25 @@
 images:
   - caption: Maria Nieves, PhD  •  Founder + Lead Coach
     src: /static/img/portrait-1.webp
-    description: alt tag
+    description: Maria Nieves, an elegant elderly woman smiling
   - caption: Wayne Thomas, PhD  •  Co-founder + Lead Coach
     src: /static/img/portrait-2.webp
-    description: alt tag
-  - caption: Ben Stowe, MA, LPC  •  Coach
+    description: Wayne Thomas, a sharp man with glasses
+  - caption: Ben Stowe, MA  •  Coach
     src: /static/img/portrait-3.webp
-    description: alt tag
-  - caption: Eva Clark
+    description: Ben Stowe, a kind and wise man with a grin on his face
+  - caption: Eva Clark, LPC  •  Coach
     src: /static/img/portrait-4.webp
-    description: alt tag
-  - caption: Ethan Harris
+    description: Eva Clark, an elderly woman with glasses
+  - caption: Ethan Harris, LMHC  •  Coach
     src: /static/img/portrait-5.webp
-    description: alt tag
-  - caption: Emma Wilson
+    description: Ethan Harris, a sharp young man looking to help
+  - caption: Emma Wilson, MA  •  Coach
     src: /static/img/portrait-6.webp
-    description: alt tag
-  - caption: Noah Gates
+    description: Emma Wilson, an elegant woman deep in thought
+  - caption: Noah Gates, BA  •  Coach
     src: /static/img/portrait-7.webp
-    description: alt tag
-  - caption: Mia Nieves
+    description: Noah Gates, a casual man in glasses
+  - caption: Mia Nieves, BA  •  Coach
     src: /static/img/portrait-8.webp
-    description: alt tag
+    description: Mia Nieves, a casual woman smiling
