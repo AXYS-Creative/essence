@@ -4987,11 +4987,26 @@ main:has(.about-hero) .essence-paragraph__about-us {
   display: flex;
   gap: 64px;
 }
-.pinned-slider .portrait img {
-  width: 452px;
-}
 @media screen and (max-width: 1512px) {
+  .pinned-slider__inner {
+    gap: 48px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pinned-slider__inner {
+    gap: 32px;
+  }
+}
+.pinned-slider .portrait img {
+  width: 24vw;
+}
+@media screen and (max-width: 1024px) {
   .pinned-slider .portrait img {
-    width: 360px;
+    width: 28vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pinned-slider .portrait img {
+    width: 48vw;
   }
 }/*# sourceMappingURL=styles.css.map */

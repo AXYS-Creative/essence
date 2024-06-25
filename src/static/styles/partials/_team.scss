@@ -23,14 +23,29 @@
   &__inner {
     display: flex;
     gap: 64px;
+
+    @include mq-max("xxl") {
+      gap: 48px;
+    }
+
+    @include mq-max("xl") {
+      gap: 32px;
+    }
   }
 
   .portrait {
     img {
-      width: 452px;
+      // width: 452px;
+      width: 24vw;
 
-      @include mq-max("xxl") {
-        width: 360px;
+      @include mq-max("lg") {
+        // width: 360px;
+        width: 28vw;
+      }
+
+      @include mq-max("md") {
+        // width: 360px;
+        width: 48vw;
       }
     }
   }
