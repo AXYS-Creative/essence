@@ -1,19 +1,25 @@
 images:
   - caption: Maria Nieves, PhD  •  Founder + Lead Coach
     src: /static/img/portrait-1.webp
-    description: A man packing cardboard boxes
+    description: alt tag
   - caption: Wayne Thomas, PhD  •  Co-founder + Lead Coach
     src: /static/img/portrait-2.webp
-    description: A young man sitting on a couch, engaging with a coach
+    description: alt tag
   - caption: Ben Stowe, MA, LPC  •  Coach
     src: /static/img/portrait-3.webp
-    description: A man looking out a bedroom window as he takes a break from packing boxes
-  - caption: Maria Nieves, PhD  •  Founder + Lead Coach
-    src: /static/img/portrait-1.webp
-    description: A man packing cardboard boxes
-  - caption: Wayne Thomas, PhD  •  Co-founder + Lead Coach
-    src: /static/img/portrait-2.webp
-    description: A young man sitting on a couch, engaging with a coach
-  - caption: Ben Stowe, MA, LPC  •  Coach
-    src: /static/img/portrait-3.webp
-    description: A man looking out a bedroom window as he takes a break from packing boxes
+    description: alt tag
+  - caption: Eva Clark
+    src: /static/img/portrait-4.webp
+    description: alt tag
+  - caption: Ethan Harris
+    src: /static/img/portrait-5.webp
+    description: alt tag
+  - caption: Emma Wilson
+    src: /static/img/portrait-6.webp
+    description: alt tag
+  - caption: Noah Gates
+    src: /static/img/portrait-7.webp
+    description: alt tag
+  - caption: Mia Nieves
+    src: /static/img/portrait-8.webp
+    description: alt tag

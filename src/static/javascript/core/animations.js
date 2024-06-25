@@ -14,8 +14,9 @@ const responsiveAnimations = (() => {
     (context) => {
       let { maxSm, maxMd, maxXl, minMd } = context.conditions;
 
-      // About page __ hero image collage
+      // About Page
       if (window.location.pathname.includes("about")) {
+        // Collage Hero
         const createScrollTriggerAnimation = (
           selector,
           endY,
@@ -54,6 +55,43 @@ const responsiveAnimations = (() => {
           "-24%",
           null,
           null
+        );
+
+        // Team Portraits
+        const slider = document.querySelector(".pinned-slider__inner");
+        const container = document.querySelector(".pinned-slider");
+        const sliderWidth = slider.scrollWidth;
+        const containerWidth = container.offsetWidth;
+        const distanceToTranslate = sliderWidth - containerWidth;
+
+        gsap.to(".essence-team", {
+          scrollTrigger: {
+            trigger: ".essence-team",
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            // markers: true,
+          },
+        });
+
+        gsap.fromTo(
+          slider,
+          { x: 0 },
+          {
+            x: () => -distanceToTranslate,
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".essence-team",
+              start: "top top",
+              end: "bottom top",
+              scrub: 1,
+              // markers: {
+              //   startColor: "navy",
+              //   endColor: "navy",
+              //   indent: 124,
+              // },
+            },
+          }
         );
       }
     }
@@ -190,6 +228,7 @@ const paragraphPartialAnimation = (() => {
   );
 })();
 
+// About Page - Recorded Growth
 const numberTickerAnimation = (() => {
   const numberCounters = document.querySelectorAll(".number-counter");
 

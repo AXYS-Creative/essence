@@ -4971,13 +4971,27 @@ main:has(.about-hero) .essence-paragraph__about-us {
 }
 
 .essence-team {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
+  padding-block: 136px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1512px) {
+  .essence-team {
+    padding-block: 80px;
+  }
 }
 
 .pinned-slider {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
+  display: flex;
 }
 .pinned-slider__inner {
   display: flex;
   gap: 64px;
+}
+.pinned-slider .portrait img {
+  width: 452px;
+}
+@media screen and (max-width: 1512px) {
+  .pinned-slider .portrait img {
+    width: 360px;
+  }
 }/*# sourceMappingURL=styles.css.map */

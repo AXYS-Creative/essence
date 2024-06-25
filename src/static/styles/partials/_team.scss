@@ -1,12 +1,37 @@
 .essence-team {
-  border: $test;
+  // border: $test;
+  padding-block: 136px;
+  overflow: hidden;
+
+  @include mq-max("xxl") {
+    padding-block: 80px;
+  }
+
+  // .essence-resources__header {
+  //   justify-content: flex-end;
+
+  //   span {
+  //     translate: 0 0;
+  //   }
+  // }
 }
 
 .pinned-slider {
-  border: $test;
+  // border: $test;
+  display: flex;
 
   &__inner {
     display: flex;
     gap: 64px;
+  }
+
+  .portrait {
+    img {
+      width: 452px;
+
+      @include mq-max("xxl") {
+        width: 360px;
+      }
+    }
   }
 }
