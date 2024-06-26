@@ -1,9 +1,9 @@
-<section class="{{ paragraphClass }}">
+<section class="essence-paragraph {{ paragraphClass }}">
   {% if paragraphHeading %} {% if paragraphHeadingLevel == "h1" %}
   <h1 class="essence-paragraph__heading">
     {{ paragraphHeading }}
     <svg
-      class="essence-paragraph__heading-svg"
+      class="essence-paragraph__heading-svg {{ paragraphSvgClass }}"
       width="13"
       height="16"
       viewBox="0 0 13 16"
@@ -23,7 +23,7 @@
   <h2 class="essence-paragraph__heading">
     {{ paragraphHeading }}
     <svg
-      class="essence-paragraph__heading-svg"
+      class="essence-paragraph__heading-svg {{ paragraphSvgClass }}"
       width="13"
       height="16"
       viewBox="0 0 13 16"
@@ -42,14 +42,16 @@
   {%endif%} {%endif%}
 
   <!-- prettier-ignore -->
-  {%if paragraphContent %}
+  {%if paragraphBodyText %}
   <!-- prettier-ignore -->
   {% if paragraphType == "blockquote" %}
-  <blockquote class="essence-paragraph__body-text">
-    “{{ paragraphContent }}”
+  <blockquote class="essence-paragraph__body-text {{ paragraphBodyTextClass }}">
+    “{{ paragraphBodyText }}”
   </blockquote>
   {% else %}
-  <p class="essence-paragraph__body-text">{{ paragraphContent }}</p>
+  <p class="essence-paragraph__body-text {{ paragraphBodyTextClass }}">
+    {{ paragraphBodyText }}
+  </p>
   {% endif %}
   <!-- prettier-ignore -->
   {% endif %}

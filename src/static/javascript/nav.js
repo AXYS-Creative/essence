@@ -145,6 +145,12 @@ const keyboardAccessibleNavLinks = (
   navLinks.forEach((link, index) => {
     link.addEventListener("focus", () => focusHandler(index));
     link.addEventListener("blur", blurHandler);
+    link.addEventListener("mousedown", (event) => {
+      // Remove "focus" for mouse click. 0 indicates left mouse click
+      if (event.button === 0) {
+        blurHandler();
+      }
+    });
   });
 };
 

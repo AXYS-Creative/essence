@@ -132,7 +132,7 @@ const generalClassToggle = (() => {
     });
   };
 
-  // Hero (Home)
+  // Home Page - Hero
   toggleClassAnimate(
     ".home-hero__heading",
     ".home-hero__subtext",
@@ -146,32 +146,35 @@ const generalClassToggle = (() => {
     "120% top"
   );
 
-  // Essence Paragraph - Our Mission (Home)
+  // Home Page - Paragraph, Our Mission
   toggleClassAnimate(
-    ".essence-paragraph__our-mission .essence-paragraph__heading-svg",
-    ".essence-paragraph__our-mission .essence-paragraph__heading-svg"
+    ".essence-paragraph__our-mission-svg",
+    ".essence-paragraph__our-mission-svg"
   );
   toggleClassAnimate(
-    ".essence-paragraph__our-mission .essence-paragraph__body-text",
-    ".essence-paragraph__our-mission .essence-paragraph__body-text",
+    ".essence-paragraph__our-mission-body",
+    ".essence-paragraph__our-mission-body",
     "top bottom",
     "bottom top"
   );
 
-  // Essence Paragraph - Media Praises (Home)
+  // Home Page - Paragraph, Media Praises
   toggleClassAnimate(
-    ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
-    ".essence-paragraph__media-praises .essence-paragraph__heading-svg"
+    ".essence-paragraph__media-praises-svg",
+    ".essence-paragraph__media-praises-svg",
+    undefined,
+    undefined
+    // { startColor: "navy", endColor: "navy", indent: 128 }
   );
   toggleClassAnimate(
-    ".essence-paragraph__media-praises .essence-paragraph__body-text",
-    ".essence-paragraph__media-praises .essence-paragraph__body-text",
+    ".essence-paragraph__media-praises-body",
+    ".essence-paragraph__media-praises-body",
     "top bottom",
-    "bottom top",
-    false
+    "bottom top"
+    // true
   );
 
-  // Archive Page __ Hero Paragraph
+  // ALL Archive Pages' - Hero Paragraph [Blog, Podcasts, Books, Films]
   toggleClassAnimate(
     ".hero-paragraph .essence-paragraph__heading-svg",
     ".hero-paragraph .essence-paragraph__heading-svg"
@@ -183,7 +186,7 @@ const generalClassToggle = (() => {
     "bottom top"
   );
 
-  // About Page __ Paragraph
+  // About Page - Paragraph
   toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%", false);
   toggleClassAnimate(
     ".essence-paragraph__about-us .essence-paragraph__heading-svg",
