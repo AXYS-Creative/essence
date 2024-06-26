@@ -3,15 +3,14 @@ import { maxXxl, maxXl, maxLg, maxMd, minMd, maxSm } from "./utility.js";
 export let scrollPosition = 0;
 export let scrollFromTop;
 
-let ctaHeroPosition;
+let ctaYPosition;
 
 export const siteHeader = document.querySelector(".site-header"),
   menuBtn = document.querySelector(".menu-btn"),
   ctaWrapper = document.querySelector(".cta-wrapper"),
   heroSubText = document.querySelector(".hero-section__subtext");
 
-const siteFooter = document.querySelector(".site-footer"),
-  footerNavLinks = document.querySelector(".footer-nav-links"),
+const footerNavLinks = document.querySelector(".footer-nav-links"),
   firstFooterNavLink = footerNavLinks.querySelector("li:first-of-type > a"),
   footerCtaTitle = document.querySelector(".footer-cta-title");
 
@@ -66,13 +65,14 @@ export const updateScrollDependentElements = (scrollPosition) => {
   const hasScrolled = scrollPosition >= scrollFromTop;
 
   siteHeader.classList.toggle("scroll-active", hasScrolled);
-  // Toggle scroll-active for certain pages. i.e. 'about'
+
+  // Add scroll-active (move cta to bottom) for certain pages. i.e. 'about'
   if (window.location.pathname.includes("about")) {
     siteHeader.classList.add("scroll-active", hasScrolled);
   }
 
   headerLinks.forEach((link) =>
-    link.setAttribute("tabindex", hasScrolled ? "-1" : "")
+    link.setAttribute("tabindex", hasScrolled ? "-1" : "0")
   );
   menuBtn.setAttribute("aria-hidden", String(!hasScrolled));
   menuBtn.setAttribute("tabindex", hasScrolled ? "0" : "-1");
@@ -106,20 +106,21 @@ export const updateScrollDependentElements = (scrollPosition) => {
 
   const handleScrollBottom = (threshold, threshold2) => {
     let atBottom = scrollHeight - (scrollPosition + clientHeight) < threshold;
-
-    siteFooter.classList.toggle("footer-scroll-bottom", atBottom);
+    let closeToBottom =
+      scrollHeight - (scrollPosition + clientHeight) < threshold2 &&
+      scrollPosition > scrollFromTop;
 
     if (atBottom) {
       siteHeader.classList.add("header-scroll-bottom");
       menuBtn.setAttribute("tabindex", "-1");
-    } else if (
-      scrollHeight - (scrollPosition + clientHeight) < threshold &&
-      scrollPosition > scrollFromTop
-    ) {
+    } else if (closeToBottom) {
       siteHeader.classList.remove("header-scroll-bottom");
-      menuBtn.setAttribute("tabindex", "0");
+      siteHeader.classList.add("header-hide-menu-btn");
+      menuBtn.setAttribute("tabindex", "-1");
     } else {
       siteHeader.classList.remove("header-scroll-bottom");
+      siteHeader.classList.remove("header-hide-menu-btn");
+      menuBtn.setAttribute("tabindex", "0");
     }
 
     // CTA logic - scroll bottom
@@ -149,10 +150,12 @@ export const updateScrollDependentElements = (scrollPosition) => {
 
   // CTA position based on different pages
   if (heroSubText) {
-    ctaHeroPosition =
+    // Tuck under hero subtext
+    ctaYPosition =
       heroSubText.getBoundingClientRect().bottom + scrollPosition + 48;
   } else {
-    ctaHeroPosition = clientHeight - bodyPadding;
+    // Move to bottom of screen
+    ctaYPosition = clientHeight - bodyPadding;
     ctaWrapper.classList.add("scroll-active");
     ctaWrapper.style.animationName = "cta-animated-top";
   }
@@ -165,13 +168,13 @@ export const updateScrollDependentElements = (scrollPosition) => {
       top: calc(${scrollPosition + clientHeight}px - 64px * 1.6);
     }
     to {
-      top: ${ctaHeroPosition}px;
+      top: ${ctaYPosition}px;
     }
   }
 
   @keyframes cta-animated-top {
     from {
-      top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
+      top: calc(${ctaYPosition}px - ${scrollFromTop}px);
     }
     to {
       top: calc(100vh - 64px * 1.6);
@@ -182,7 +185,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
   @media (max-width: 768px) {
     @keyframes cta-animated-top {
       from {
-        top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
+        top: calc(${ctaYPosition}px - ${scrollFromTop}px);
       }
       to {
         top: calc(100vh - 56px);
@@ -194,7 +197,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
   @media (max-width: 480px) {
     @keyframes cta-animated-top {
       from {
-        top: calc(${ctaHeroPosition}px - ${scrollFromTop}px);
+        top: calc(${ctaYPosition}px - ${scrollFromTop}px);
       }
       to {
         top: calc(100vh - 72px);
@@ -206,8 +209,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
   `;
 };
 
-// CTA Reposition
-// let ctaScrollTrigger = 480; // Distance from the top (in px) needed to scroll to reposition the CTA
+// CTA Reposition stylesheet
 let ctaStylesheet = document.createElement("style");
 document.head.appendChild(ctaStylesheet);
 

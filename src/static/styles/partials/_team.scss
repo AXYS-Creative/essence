@@ -46,7 +46,7 @@
 
   .portrait {
     img {
-      width: 24vw;
+      width: min(24vw, 464px);
       margin-block-end: 12px;
       opacity: 0.8;
 

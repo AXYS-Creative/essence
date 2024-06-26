@@ -16,17 +16,17 @@ const moveUnderlineToLink = (link) => {
 links.forEach((link) => {
   link.addEventListener("mouseover", () => {
     moveUnderlineToLink(link);
-    headerLinksUnderline.classList.add("show-underline");
+    headerLinksUnderline.classList.add("show-indicator");
   });
   link.addEventListener("focusin", () => {
     moveUnderlineToLink(link);
-    headerLinksUnderline.classList.add("show-underline");
+    headerLinksUnderline.classList.add("show-indicator");
   });
 
   link.addEventListener("mouseleave", () => {
-    headerLinksUnderline.classList.remove("show-underline");
+    headerLinksUnderline.classList.remove("show-indicator");
   });
   link.addEventListener("focusout", () => {
-    headerLinksUnderline.classList.remove("show-underline");
+    headerLinksUnderline.classList.remove("show-indicator");
   });
 });

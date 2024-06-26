@@ -56,9 +56,12 @@ const responsiveAnimations = (() => {
           null,
           null
         );
+      }
 
-        // Team Portraits
-        const pinnedSection = document.querySelector(".essence-team");
+      // All Pages? Also... some of these aren't using the responsive context. Look into this.
+      // Team Portraits
+      const pinnedSection = document.querySelector(".essence-team");
+      if (pinnedSection) {
         const slider = document.querySelector(".pinned-slider__inner");
         const container = document.querySelector(".pinned-slider");
         const sliderWidth = slider.scrollWidth;
@@ -131,6 +134,9 @@ const generalClassToggle = (() => {
       },
     });
   };
+
+  // Global Footer - Essence brand name
+  toggleClassAnimate(".brand-name-wrapper", ".brand-name-wrapper");
 
   // Home Page - Hero
   toggleClassAnimate(

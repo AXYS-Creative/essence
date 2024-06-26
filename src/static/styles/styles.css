@@ -646,7 +646,7 @@ header .header-links::after {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links::after {
-    transition: 0.8s ease 0.2s;
+    transition: 0.8s ease 0.3s;
   }
 }
 header .header-links:hover .header-links__link, header .header-links:focus-within .header-links__link {
@@ -674,42 +674,42 @@ header .header-links li {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(1) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.44s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.74s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(2) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.38s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.68s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(3) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.32s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.62s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(4) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.26s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.56s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(5) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.2s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.5s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(6) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.14s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.44s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(7) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.08s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.38s;
   }
 }
 @media (prefers-reduced-motion: no-preference) {
   header .header-links li:nth-of-type(8) a {
-    transition: color 0.3s ease, opacity 0.8s ease 0.02s;
+    transition: color 0.3s ease, opacity 0.8s ease 0.32s;
   }
 }
 header .header-links li.header-links__hover-indicator {
@@ -727,7 +727,7 @@ header .header-links li.header-links__hover-indicator {
     transition: 0.5s cubic-bezier(0.8, -0.11, 0.11, 1.11), border 0.5s;
   }
 }
-header .header-links li.header-links__hover-indicator.show-underline {
+header .header-links li.header-links__hover-indicator.show-indicator {
   border: 1px solid var(--primary-font-color);
 }
 header .menu-btn__wrapper {
@@ -736,7 +736,9 @@ header .menu-btn__wrapper {
   translate: 0 -50%;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  rotate: -24deg;
+  scale: 0.75;
+  transition: 0.5s ease 0s;
 }
 @media screen and (min-width: 1921px) {
   header .menu-btn__wrapper {
@@ -762,6 +764,8 @@ header .menu-btn__wrapper {
   header .menu-btn__wrapper {
     opacity: 1;
     pointer-events: all;
+    rotate: 0deg;
+    scale: 1;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1421,7 +1425,9 @@ header.scroll-active .header-links li.header-links__hover-indicator {
 header.scroll-active .menu-btn__wrapper {
   opacity: 1;
   pointer-events: all;
-  transition: all 0.3s ease, opacity 0.2s ease 0.6s;
+  rotate: 0deg;
+  scale: 1;
+  transition: 0.3s ease 0.6s;
 }
 header.scroll-active .social-media-wrapper .social-media-toggle__text {
   margin-left: -12px;
@@ -1516,11 +1522,38 @@ header.menu-active .cta-wrapper .cta {
     transition: 0.4s ease, background 0.25s ease 0.8s;
   }
 }
+header.header-hide-menu-btn .menu-btn__wrapper {
+  opacity: 0;
+  pointer-events: none;
+  rotate: -24deg;
+  scale: 0.75;
+  transition: 0.5s ease 0.5s;
+}
 header.header-scroll-bottom .social-media-wrapper {
+  left: 64px;
   position: absolute;
   bottom: calc(var(--bottom-distance-social-media) - 4px);
-  left: 64px;
   pointer-events: all;
+}
+@media screen and (min-width: 1921px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: calc(50% - 960px + 64px);
+  }
+}
+@media screen and (max-width: 1512px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header.header-scroll-bottom .social-media-wrapper {
+    left: 16px;
+  }
 }
 header.header-scroll-bottom .social-media-wrapper .social-media-links {
   translate: 0 -12px;
@@ -1543,30 +1576,17 @@ header.header-scroll-bottom .social-media-wrapper .social-media-toggle__text {
 header.header-scroll-bottom .social-media-wrapper .social-media-toggle__icon {
   opacity: 0.5;
 }
-@media screen and (min-width: 1921px) {
-  header.header-scroll-bottom .social-media-wrapper {
-    left: calc(50% - 960px + 64px);
-  }
-}
-@media screen and (max-width: 1512px) {
-  header.header-scroll-bottom .social-media-wrapper {
-    left: 40px;
-  }
-}
 @media screen and (max-width: 768px) {
   header.header-scroll-bottom .social-media-wrapper {
-    left: 24px;
     bottom: calc(var(--bottom-distance-social-media) - 56px);
-  }
-}
-@media screen and (max-width: 480px) {
-  header.header-scroll-bottom .social-media-wrapper {
-    left: 16px;
   }
 }
 header.header-scroll-bottom .menu-btn__wrapper {
   opacity: 0;
   pointer-events: none;
+  rotate: -24deg;
+  scale: 0.75;
+  transition: 0.5s ease 0.5s;
 }
 
 nav.nav-menu {
@@ -2222,6 +2242,12 @@ footer .site-footer__bottom .brand-name-wrapper__brand-name {
     transition: translate 1.05s ease 0.65s;
   }
 }
+footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__locations small {
+  opacity: 1;
+}
+footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span {
+  translate: 0 0;
+}
 footer .site-footer__bottom .credits {
   display: flex;
   justify-content: center;
@@ -2269,12 +2295,6 @@ footer .site-footer__bottom .credits small {
   text-align: right;
   flex-shrink: 0;
   text-wrap: nowrap;
-}
-footer.footer-scroll-bottom .site-footer__bottom .brand-name-wrapper__locations small {
-  opacity: 1;
-}
-footer.footer-scroll-bottom .site-footer__bottom .brand-name-wrapper__brand-name span {
-  translate: 0 0;
 }
 
 dialog {
@@ -5010,7 +5030,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
   }
 }
 .pinned-slider .portrait img {
-  width: 24vw;
+  width: min(24vw, 464px);
   margin-block-end: 12px;
   opacity: 0.8;
 }
