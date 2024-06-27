@@ -60,19 +60,14 @@
     }
 
     figure {
-      flex-grow: 1;
+      width: 33%;
 
       @include mq-max("md") {
         width: 100%;
       }
 
       img {
-        width: 100%;
-        margin-block-end: 12px;
-
-        @include mq-max("md") {
-          height: 420px;
-        }
+        opacity: 0;
       }
 
       figcaption {
@@ -86,55 +81,43 @@
     }
   }
 
-  // WebGL + Curtains
+  // Three.js // WebGL shaders
   @media all {
-    #canvas-wrap {
-      width: 510px;
-      height: 710px;
+    canvas {
+      display: block;
+      transition: 1s transform;
+      margin-block-end: 12px;
+
+      &:hover {
+        transform: scale(1.12);
+      }
+    }
+
+    .wave-img-wrapper {
       position: relative;
+      // width: 480px;
+      aspect-ratio: 508938 / 666812;
       overflow: hidden;
-      margin-block-end: 48px;
-    }
-
-    /*** canvas ***/
-
-    #canvas {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 510px;
-      height: 710px;
-      left: 0;
-    }
-
-    #fullwidth-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 510px;
-      height: 710px;
-      // height: 100vh;
-      // width: 100vw;
-    }
-
-    #fullwidth-image img,
-    #fullwidth-image canvas {
-      display: none;
-    }
-
-    /* handling WebGL context errors */
-
-    .no-webgl #fullwidth-image {
       display: flex;
       justify-content: center;
       align-items: center;
+      // border-radius: 10px;
+      max-width: 100%;
+      margin-block-end: 12px;
+      filter: saturate(50%);
+      transition: all ease 0.5s;
+
+      &:hover {
+        filter: saturate(100%);
+      }
     }
 
-    .no-webgl #fullwidth-image img {
-      display: block;
+    .wave-img-wrapper > * {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
       object-fit: cover;
-      min-width: 100%;
-      min-height: 100%;
     }
   }
 }

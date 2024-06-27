@@ -52,7 +52,7 @@
     ></script>
     {% endif %}
 
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <!-- <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
@@ -66,84 +66,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <script src="https://www.curtainsjs.com/build/curtains.min.js"></script>
-
-    <!-- webGL shaders and lib -->
-    <script id="mouse-displacement-vs" type="x-shader/x-vertex">
-      #ifdef GL_ES
-        precision mediump float;
-      #endif
-
-      // default mandatory variables
-      attribute vec3 aVertexPosition;
-      attribute vec2 aTextureCoord;
-
-      uniform mat4 uMVMatrix;
-      uniform mat4 uPMatrix;
-
-      // custom variables
-      varying vec3 vVertexPosition;
-      varying vec2 vTextureCoord;
-      varying vec2 vDisplacedTextureCoord;
-
-      varying vec2 vDistortionEffect;
-
-      // custom uniforms
-      uniform mat4 displacedImageMatrix;
-      uniform vec2 uMousePosition;
-
-      void main() {
-        vec3 vertexPosition = aVertexPosition;
-
-        gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
-
-        // varyings
-        vTextureCoord = aTextureCoord;
-        vDisplacedTextureCoord = (displacedImageMatrix * vec4(aTextureCoord, 0.0, 1.0)).xy;
-        vVertexPosition = vertexPosition;
-
-      vDistortionEffect = uMousePosition - vec2(vertexPosition.x, vertexPosition.y);
-      }
-    </script>
-    <script id="mouse-displacement-fs" type="x-shader/x-fragment">
-      #ifdef GL_ES
-        precision mediump float;
-      #endif
-
-      varying vec2 vTextureCoord;
-      varying vec2 vDisplacedTextureCoord;
-      varying vec2 vDistortionEffect;
-
-      // custom uniforms
-      uniform float uDisplacementStrength;
-
-      // our textures samplers
-      uniform sampler2D displacedImage;
-      uniform sampler2D canvasTexture;
-
-      void main( void ) {
-      // our texture coords
-        vec2 textureCoords = vTextureCoord;
-
-      // get our canvas texture
-        vec4 mouseEffect = texture2D(canvasTexture, textureCoords);
-
-      // apply displacement to the texture coords based on our canvas texture RGB
-      textureCoords  = vDisplacedTextureCoord + mouseEffect .r * vDistortionEffect * (uDisplacementStrength / 10.0);
-
-      // get our image texture
-      vec4 finalColor = texture2D(displacedImage, textureCoords);
-
-      // get a B&W version of our image texture
-      vec4 finalBW = vec4(1.0);
-      finalBW.rgb = vec3(finalColor.r * 0.3 + finalColor.g * 0.59 + finalColor.b * 0.11);
-
-      // mix both texture based on our canvas texture
-      finalColor = mix(finalColor, finalBW, mouseEffect.r);
-
-      // that's all folks!
-        gl_FragColor = finalColor;
-      }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- See https://codepen.io/Juxtopposed/pen/VwVoEBr?editors=0010 for sample-->
   </body>
 </html>

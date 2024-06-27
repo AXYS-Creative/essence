@@ -4930,7 +4930,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
   }
 }
 .essence-resources__images figure {
-  flex-grow: 1;
+  width: 33%;
 }
 @media screen and (max-width: 768px) {
   .essence-resources__images figure {
@@ -4938,13 +4938,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
   }
 }
 .essence-resources__images figure img {
-  width: 100%;
-  margin-block-end: 12px;
-}
-@media screen and (max-width: 768px) {
-  .essence-resources__images figure img {
-    height: 420px;
-  }
+  opacity: 0;
 }
 .essence-resources__images figure figcaption {
   font-size: 22px;
@@ -4956,47 +4950,36 @@ main:has(.about-hero) .essence-paragraph__about-us {
   }
 }
 @media all {
-  .essence-resources {
-    /*** canvas ***/
-    /* handling WebGL context errors */
+  .essence-resources canvas {
+    display: block;
+    transition: 1s transform;
+    margin-block-end: 12px;
   }
-  .essence-resources #canvas-wrap {
-    width: 510px;
-    height: 710px;
+  .essence-resources canvas:hover {
+    transform: scale(1.12);
+  }
+  .essence-resources .wave-img-wrapper {
     position: relative;
+    aspect-ratio: 508938/666812;
     overflow: hidden;
-    margin-block-end: 48px;
-  }
-  .essence-resources #canvas {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 510px;
-    height: 710px;
-    left: 0;
-  }
-  .essence-resources #fullwidth-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 510px;
-    height: 710px;
-  }
-  .essence-resources #fullwidth-image img,
-  .essence-resources #fullwidth-image canvas {
-    display: none;
-  }
-  .essence-resources .no-webgl #fullwidth-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
+    margin-block-end: 12px;
+    filter: saturate(50%);
+    transition: all ease 0.5s;
   }
-  .essence-resources .no-webgl #fullwidth-image img {
-    display: block;
+  .essence-resources .wave-img-wrapper:hover {
+    filter: saturate(100%);
+  }
+  .essence-resources .wave-img-wrapper > * {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    min-width: 100%;
-    min-height: 100%;
   }
 }
 
