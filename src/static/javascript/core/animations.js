@@ -73,7 +73,7 @@ const responsiveAnimations = (() => {
             trigger: pinnedSection,
             start: "top top",
             // end: "bottom top",
-            end: "+=200%",
+            end: "+=400%",
             pin: true,
             // markers: true,
           },
@@ -89,7 +89,7 @@ const responsiveAnimations = (() => {
               trigger: ".essence-team",
               start: "top top",
               // end: "bottom top",
-              end: "+=200%",
+              end: "+=400%",
               scrub: 0.2,
               // markers: {
               //   startColor: "navy",
@@ -154,27 +154,27 @@ const generalClassToggle = (() => {
 
   // Home Page - Paragraph, Our Mission
   toggleClassAnimate(
-    ".essence-paragraph__our-mission-svg",
-    ".essence-paragraph__our-mission-svg"
+    ".essence-paragraph__our-mission .essence-paragraph__heading-svg",
+    ".essence-paragraph__our-mission .essence-paragraph__heading-svg"
   );
   toggleClassAnimate(
-    ".essence-paragraph__our-mission-body",
-    ".essence-paragraph__our-mission-body",
+    ".essence-paragraph__our-mission .essence-paragraph__body-text",
+    ".essence-paragraph__our-mission .essence-paragraph__body-text",
     "top bottom",
     "bottom top"
   );
 
   // Home Page - Paragraph, Media Praises
   toggleClassAnimate(
-    ".essence-paragraph__media-praises-svg",
-    ".essence-paragraph__media-praises-svg",
+    ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
+    ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
     undefined,
     undefined
     // { startColor: "navy", endColor: "navy", indent: 128 }
   );
   toggleClassAnimate(
-    ".essence-paragraph__media-praises-body",
-    ".essence-paragraph__media-praises-body",
+    ".essence-paragraph__media-praises .essence-paragraph__body-text",
+    ".essence-paragraph__media-praises .essence-paragraph__body-text",
     "top bottom",
     "bottom top"
     // true
@@ -204,6 +204,36 @@ const generalClassToggle = (() => {
     "top bottom",
     "bottom top"
   );
+})();
+
+const paragraphReveal = (() => {
+  document
+    .querySelectorAll(".show-element__parent")
+    .forEach((parentElement) => {
+      const targetChildren = parentElement.querySelectorAll(
+        ".show-element__child"
+      );
+
+      targetChildren.forEach((childElement) => {
+        gsap.fromTo(
+          childElement,
+          {
+            y: 100,
+          },
+          {
+            y: 0,
+            duration: 0.6,
+            ease: "power4.inOut",
+            scrollTrigger: {
+              trigger: parentElement,
+              start: "top 98%",
+              end: "center 2%",
+              toggleActions: "play reverse play reverse",
+            },
+          }
+        );
+      });
+    });
 })();
 
 // Animating the body text of 'Paragraph Partial'. Splitting each word.

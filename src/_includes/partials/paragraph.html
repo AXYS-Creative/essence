@@ -1,9 +1,13 @@
 <section class="essence-paragraph {{ paragraphClass }}">
   {% if paragraphHeading %} {% if paragraphHeadingLevel == "h1" %}
   <h1 class="essence-paragraph__heading">
-    {{ paragraphHeading }}
+    <span class="essence-paragraph__heading-title-wrapper show-element__parent">
+      <span class="essence-paragraph__heading-title show-element__child">
+        {{ paragraphHeading }}
+      </span>
+    </span>
     <svg
-      class="essence-paragraph__heading-svg {{ paragraphSvgClass }}"
+      class="essence-paragraph__heading-svg"
       width="13"
       height="16"
       viewBox="0 0 13 16"
@@ -21,9 +25,13 @@
   </h1>
   {% else %}
   <h2 class="essence-paragraph__heading">
-    {{ paragraphHeading }}
+    <span class="essence-paragraph__heading-title-wrapper show-element__parent">
+      <span class="essence-paragraph__heading-title show-element__child">
+        {{ paragraphHeading }}
+      </span>
+    </span>
     <svg
-      class="essence-paragraph__heading-svg {{ paragraphSvgClass }}"
+      class="essence-paragraph__heading-svg"
       width="13"
       height="16"
       viewBox="0 0 13 16"
@@ -42,16 +50,14 @@
   {%endif%} {%endif%}
 
   <!-- prettier-ignore -->
-  {%if paragraphBodyText %}
+  {%if paragraphBody %}
   <!-- prettier-ignore -->
   {% if paragraphType == "blockquote" %}
-  <blockquote class="essence-paragraph__body-text {{ paragraphBodyTextClass }}">
-    “{{ paragraphBodyText }}”
+  <blockquote class="essence-paragraph__body-text">
+    “{{ paragraphBody }}”
   </blockquote>
   {% else %}
-  <p class="essence-paragraph__body-text {{ paragraphBodyTextClass }}">
-    {{ paragraphBodyText }}
-  </p>
+  <p class="essence-paragraph__body-text">{{ paragraphBody }}</p>
   {% endif %}
   <!-- prettier-ignore -->
   {% endif %}

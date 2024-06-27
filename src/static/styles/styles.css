@@ -732,12 +732,12 @@ header .header-links li.header-links__hover-indicator.show-indicator {
 }
 header .menu-btn__wrapper {
   right: 64px;
-  top: 74px;
-  translate: 0 -50%;
   opacity: 0;
   pointer-events: none;
   rotate: -24deg;
   scale: 0.75;
+  top: 74px;
+  translate: 0 -50%;
   transition: 0.5s ease 0s;
 }
 @media screen and (min-width: 1921px) {
@@ -1428,6 +1428,11 @@ header.scroll-active .menu-btn__wrapper {
   rotate: 0deg;
   scale: 1;
   transition: 0.3s ease 0.6s;
+}
+@media screen and (max-width: 480px) {
+  header.scroll-active .menu-btn__wrapper {
+    scale: 0.9;
+  }
 }
 header.scroll-active .social-media-wrapper .social-media-toggle__text {
   margin-left: -12px;
@@ -3046,17 +3051,6 @@ img {
   }
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
 .simple-link {
   display: flex;
   justify-content: center;
@@ -3179,6 +3173,22 @@ img {
   .classic-link:hover::before, .post-body article a:hover::before, .classic-link:focus::before, .post-body article a:focus::before {
     animation-duration: 0.64s;
   }
+}
+
+.show-element__parent {
+  display: flex;
+  overflow: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .lg-screen-and-up {
@@ -5047,6 +5057,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
 .pinned-slider .portrait figcaption {
   font-size: 18px;
   font-weight: 300;
+  text-wrap: balance;
 }
 @media screen and (max-width: 1512px) {
   .pinned-slider .portrait figcaption {
