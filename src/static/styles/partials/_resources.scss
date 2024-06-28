@@ -85,30 +85,34 @@
   @media all {
     canvas {
       display: block;
-      transition: 1s transform;
+      transition: 0.8s ease;
       margin-block-end: 12px;
 
       &:hover {
-        transform: scale(1.12);
+        transform: scale(1.08);
       }
     }
 
     .wave-img-wrapper {
       position: relative;
-      // width: 480px;
       aspect-ratio: 508938 / 666812;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-      // border-radius: 10px;
       max-width: 100%;
       margin-block-end: 12px;
+      border-radius: $radius;
       filter: saturate(50%);
-      transition: all ease 0.5s;
+      transition: all 0.5s ease;
 
-      &:hover {
+      &:hover,
+      &:focus {
         filter: saturate(100%);
+
+        canvas {
+          transform: scale(1.08);
+        }
       }
     }
 

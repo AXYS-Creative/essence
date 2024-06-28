@@ -68,7 +68,9 @@ export const updateScrollDependentElements = (scrollPosition) => {
 
   // Add scroll-active (move cta to bottom) for certain pages. i.e. 'about'
   if (window.location.pathname.includes("about")) {
+    // setTimeout(() => {
     siteHeader.classList.add("scroll-active", hasScrolled);
+    // }, 400);
   }
 
   headerLinks.forEach((link) =>

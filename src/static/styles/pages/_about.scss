@@ -1,4 +1,8 @@
-main:has(.about-hero) {
+body:has(.about-hero) {
+  // .header-logo__text .letter-wrapper__letter:first-of-type {
+  //   opacity: 0 !important;
+  // }
+
   .essence-paragraph__about-us {
     padding-block-start: 96px;
 
@@ -65,7 +69,7 @@ main:has(.about-hero) {
       img {
         width: 100%;
         opacity: 0.75;
-        border-radius: 12px;
+        border-radius: $radius;
 
         @include mq-max("md") {
           border-radius: 8px;

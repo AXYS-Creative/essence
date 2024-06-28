@@ -719,7 +719,7 @@ header .header-links li.header-links__hover-indicator {
   width: 80px;
   height: 36px;
   border: 1px solid transparent;
-  border-radius: 64px;
+  border-radius: 4px;
   pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -956,7 +956,6 @@ header .social-media-wrapper .social-media-links .social-media-link {
   align-items: center;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
   overflow: hidden;
 }
 @media screen and (max-width: 480px) {
@@ -1035,7 +1034,7 @@ header .cta-wrapper .cta {
   text-transform: uppercase;
   color: var(--primary-font-color);
   border: 1px solid var(--primary-font-color);
-  border-radius: 24px;
+  border-radius: 4px;
   isolation: isolate;
   overflow: hidden;
 }
@@ -1090,7 +1089,7 @@ header .cta-wrapper .cta::after {
   height: 100%;
   background-color: var(--primary-font-color);
   border: none;
-  border-radius: 24px;
+  border-radius: 2px;
   z-index: -1;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -1170,7 +1169,7 @@ header .cta-wrapper.scroll-active .cta {
 }
 @media (prefers-reduced-motion: no-preference) {
   header .cta-wrapper.scroll-active .cta {
-    transition: 0.4s ease 0.25s, background 0.25s ease 0.5s;
+    transition: 0.4s ease 0.25s, background 0.25s ease 0.1s;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1839,6 +1838,7 @@ nav.nav-menu .nav-img-container img {
      object-fit: cover;
   scale: 1.05;
   opacity: 0;
+  border-radius: 4px;
   filter: blur(4px);
   cursor: alias;
 }
@@ -2483,7 +2483,7 @@ dialog .newsletter-form button[type=submit] {
   font-weight: 300;
   width: calc(100% - 96px);
   border: 1px solid var(--background-color);
-  border-radius: 64px;
+  border-radius: 4px;
   padding: 12px 4px;
   font-size: 20px;
   width: 764px;
@@ -3554,16 +3554,16 @@ img {
     }
   }
 }
-main:has(.about-hero) .essence-paragraph__about-us {
+body:has(.about-hero) .essence-paragraph__about-us {
   padding-block-start: 96px;
 }
 @media screen and (max-width: 1512px) {
-  main:has(.about-hero) .essence-paragraph__about-us {
+  body:has(.about-hero) .essence-paragraph__about-us {
     padding-block-start: 64px;
   }
 }
 @media screen and (max-width: 480px) {
-  main:has(.about-hero) .essence-paragraph__about-us {
+  body:has(.about-hero) .essence-paragraph__about-us {
     padding-block-start: 0;
   }
 }
@@ -3618,7 +3618,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
 .about-hero .collage .collage-figure img {
   width: 100%;
   opacity: 0.75;
-  border-radius: 12px;
+  border-radius: 4px;
 }
 @media screen and (max-width: 768px) {
   .about-hero .collage .collage-figure img {
@@ -4952,11 +4952,11 @@ main:has(.about-hero) .essence-paragraph__about-us {
 @media all {
   .essence-resources canvas {
     display: block;
-    transition: 1s transform;
+    transition: 0.8s ease;
     margin-block-end: 12px;
   }
   .essence-resources canvas:hover {
-    transform: scale(1.12);
+    transform: scale(1.08);
   }
   .essence-resources .wave-img-wrapper {
     position: relative;
@@ -4967,11 +4967,15 @@ main:has(.about-hero) .essence-paragraph__about-us {
     align-items: center;
     max-width: 100%;
     margin-block-end: 12px;
+    border-radius: 4px;
     filter: saturate(50%);
-    transition: all ease 0.5s;
+    transition: all 0.5s ease;
   }
-  .essence-resources .wave-img-wrapper:hover {
+  .essence-resources .wave-img-wrapper:hover, .essence-resources .wave-img-wrapper:focus {
     filter: saturate(100%);
+  }
+  .essence-resources .wave-img-wrapper:hover canvas, .essence-resources .wave-img-wrapper:focus canvas {
+    transform: scale(1.08);
   }
   .essence-resources .wave-img-wrapper > * {
     position: absolute;
@@ -5038,6 +5042,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
 }
 .pinned-slider .portrait-wrapper {
   width: 100%;
+  border-radius: 4px;
   overflow: hidden;
   margin-block-end: 12px;
 }
