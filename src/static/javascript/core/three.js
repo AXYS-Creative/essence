@@ -71,7 +71,7 @@ class WaveEffect {
     // create a plane mesh with materials
     this.planeMesh = new THREE.Mesh(
       // new THREE.PlaneGeometry(2, 2),
-      new THREE.PlaneGeometry(1.4, 1.8),
+      new THREE.PlaneGeometry(1.4, 1.8), // Adjust the aspect ratio of the images (width and height)
       new THREE.ShaderMaterial({
         uniforms: this.shaderUniforms,
         vertexShader,

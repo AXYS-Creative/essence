@@ -45,18 +45,28 @@
   }
 
   .portrait {
-    img {
-      width: min(24vw, 464px);
+    width: min(24vw, 464px);
+    aspect-ratio: 586 / 880;
+
+    @include mq-max("lg") {
+      width: 28vw;
+    }
+
+    @include mq-max("md") {
+      width: 52vw;
+    }
+
+    &-wrapper {
+      width: 100%;
+      // height: 100%;
+      overflow: hidden; // To allow figcaption to NOT be hidden
       margin-block-end: 12px;
-      opacity: 0.8;
+    }
 
-      @include mq-max("lg") {
-        width: 28vw;
-      }
-
-      @include mq-max("md") {
-        width: 52vw;
-      }
+    img {
+      width: 116%;
+      translate: -5% 0;
+      opacity: 0.9;
     }
 
     figcaption {

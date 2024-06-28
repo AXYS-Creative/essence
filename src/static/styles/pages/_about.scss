@@ -16,7 +16,6 @@ main:has(.about-hero) {
   padding-block: $body-padding;
 
   .collage {
-    // border: $test;
     $animation-duration: 2s;
     $animation-delay: 0.4s;
 
@@ -48,7 +47,7 @@ main:has(.about-hero) {
       }
 
       &__column-1 {
-        @include mq-max("sm") {
+        @media (max-width: 580px) {
           display: none;
         }
       }

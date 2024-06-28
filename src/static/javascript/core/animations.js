@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
+/**
+ * NOTE: The placement of functions can alter the animation.
+ * For example - Placing the 'pinnedSectionAnimation()' after/beneath
+ * the 'generalClassToggle' seems to break the footer brand name animation
+ */
+
 // Responsive animations go here
 const responsiveAnimations = (() => {
   let responsiveGsap = gsap.matchMedia();
@@ -57,51 +63,78 @@ const responsiveAnimations = (() => {
           null
         );
       }
+    }
+  );
+})();
 
-      // All Pages? Also... some of these aren't using the responsive context. Look into this.
-      // Team Portraits
-      const pinnedSection = document.querySelector(".essence-team");
-      if (pinnedSection) {
-        const slider = document.querySelector(".pinned-slider__inner");
-        const container = document.querySelector(".pinned-slider");
-        const sliderWidth = slider.scrollWidth;
-        const containerWidth = container.offsetWidth;
-        const distanceToTranslate = sliderWidth - containerWidth;
+// About Page - Pinned Section (Team Portraits). Might make it global.
+const pinnedSectionAnimation = (() => {
+  const pinnedSection = document.querySelector(".pinned-section");
 
-        gsap.to(pinnedSection, {
+  if (pinnedSection) {
+    const slider = document.querySelector(".pinned-slider__inner");
+    const container = document.querySelector(".pinned-slider");
+    const sliderWidth = slider.scrollWidth;
+    const containerWidth = container.offsetWidth;
+    const distanceToTranslate = sliderWidth - containerWidth;
+
+    // Actual Pinning
+    gsap.to(pinnedSection, {
+      scrollTrigger: {
+        trigger: pinnedSection,
+        start: "top top",
+        end: "+=400%",
+        pin: true,
+      },
+    });
+
+    // Slider Along X-Axis
+    gsap.fromTo(
+      slider,
+      { x: 0 },
+      {
+        x: () => -distanceToTranslate,
+        ease: "none",
+        scrollTrigger: {
+          trigger: pinnedSection,
+          start: "top top",
+          end: "+=400%",
+          scrub: 0.25,
+        },
+      }
+    );
+
+    // Horizontal Parallax
+    const startPositions = [
+      "-6%",
+      "-8%",
+      "-12%",
+      "-16%",
+      "-20%",
+      "-24%",
+      "-48%",
+      "-80%",
+    ];
+    const endPositions = ["8%", "6%", "4%", "2%", "2%", "-4%", "-6%", "-8%"];
+
+    startPositions.forEach((startPos, index) => {
+      gsap.fromTo(
+        `.portrait:nth-of-type(${index + 1}) img`,
+        {
+          x: startPos,
+        },
+        {
+          x: endPositions[index],
           scrollTrigger: {
             trigger: pinnedSection,
             start: "top top",
-            // end: "bottom top",
             end: "+=400%",
-            pin: true,
-            // markers: true,
+            scrub: 0.2,
           },
-        });
-
-        gsap.fromTo(
-          slider,
-          { x: 0 },
-          {
-            x: () => -distanceToTranslate,
-            ease: "none",
-            scrollTrigger: {
-              trigger: ".essence-team",
-              start: "top top",
-              // end: "bottom top",
-              end: "+=400%",
-              scrub: 0.2,
-              // markers: {
-              //   startColor: "navy",
-              //   endColor: "navy",
-              //   indent: 124,
-              // },
-            },
-          }
-        );
-      }
-    }
-  );
+        }
+      );
+    });
+  }
 })();
 
 // Toggle an '.animate' class to be used by the css
@@ -136,7 +169,12 @@ const generalClassToggle = (() => {
   };
 
   // Global Footer - Essence brand name
-  toggleClassAnimate(".brand-name-wrapper", ".brand-name-wrapper");
+  toggleClassAnimate(
+    ".brand-name-wrapper",
+    ".brand-name-wrapper",
+    undefined,
+    undefined
+  );
 
   // Home Page - Hero
   toggleClassAnimate(
@@ -170,14 +208,12 @@ const generalClassToggle = (() => {
     ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
     undefined,
     undefined
-    // { startColor: "navy", endColor: "navy", indent: 128 }
   );
   toggleClassAnimate(
     ".essence-paragraph__media-praises .essence-paragraph__body-text",
     ".essence-paragraph__media-praises .essence-paragraph__body-text",
     "top bottom",
     "bottom top"
-    // true
   );
 
   // ALL Archive Pages' - Hero Paragraph [Blog, Podcasts, Books, Films]
@@ -193,7 +229,7 @@ const generalClassToggle = (() => {
   );
 
   // About Page - Paragraph
-  toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%", false);
+  toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%");
   toggleClassAnimate(
     ".essence-paragraph__about-us .essence-paragraph__heading-svg",
     ".essence-paragraph__about-us .essence-paragraph__heading-svg"
@@ -206,7 +242,8 @@ const generalClassToggle = (() => {
   );
 })();
 
-const paragraphReveal = (() => {
+// Simple reveal that uses the parent class '.show-element__parent' and '.show-element__child'
+const slideUp = (() => {
   document
     .querySelectorAll(".show-element__parent")
     .forEach((parentElement) => {

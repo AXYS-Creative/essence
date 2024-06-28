@@ -3599,7 +3599,7 @@ main:has(.about-hero) .essence-paragraph__about-us {
     display: none;
   }
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 580px) {
   .about-hero .collage .collage-column__column-1 {
     display: none;
   }
@@ -5022,20 +5022,29 @@ main:has(.about-hero) .essence-paragraph__about-us {
     gap: 32px;
   }
 }
-.pinned-slider .portrait img {
+.pinned-slider .portrait {
   width: min(24vw, 464px);
-  margin-block-end: 12px;
-  opacity: 0.8;
+  aspect-ratio: 586/880;
 }
 @media screen and (max-width: 1024px) {
-  .pinned-slider .portrait img {
+  .pinned-slider .portrait {
     width: 28vw;
   }
 }
 @media screen and (max-width: 768px) {
-  .pinned-slider .portrait img {
+  .pinned-slider .portrait {
     width: 52vw;
   }
+}
+.pinned-slider .portrait-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-block-end: 12px;
+}
+.pinned-slider .portrait img {
+  width: 116%;
+  translate: -5% 0;
+  opacity: 0.9;
 }
 .pinned-slider .portrait figcaption {
   font-size: 18px;

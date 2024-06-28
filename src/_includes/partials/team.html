@@ -1,7 +1,7 @@
-<section class="essence-team">
+<section class="essence-team pinned-section">
   <div class="essence-resources__header">
     <h2 class="h5 essence-resources__heading">
-      <span>Meet the coaches</span>
+      <span>Our Mentors</span>
     </h2>
   </div>
 
@@ -9,7 +9,9 @@
     <div class="pinned-slider__inner team-portraits">
       {% for image in team_portraits.images %}
       <figure class="portrait">
-        <img src="{{ image.src }}" alt="{{ image.description }}" />
+        <div class="portrait-wrapper">
+          <img src="{{ image.src }}" alt="{{ image.description }}" />
+        </div>
         <figcaption>{{ image.caption }}</figcaption>
       </figure>
       {% endfor %}
