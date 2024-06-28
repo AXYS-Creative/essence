@@ -111,11 +111,11 @@ const pinnedSectionAnimation = (() => {
       "-12%",
       "-16%",
       "-20%",
-      "-24%",
-      "-48%",
+      "-32%",
+      "-64%",
       "-80%",
     ];
-    const endPositions = ["8%", "6%", "4%", "2%", "2%", "-4%", "-6%", "-8%"];
+    const endPositions = ["8%", "6%", "4%", "2%", "0%", "-6%", "-6%", "-8%"];
 
     startPositions.forEach((startPos, index) => {
       gsap.fromTo(
