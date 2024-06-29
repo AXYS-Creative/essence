@@ -112,7 +112,7 @@ const pinnedSectionAnimation = (() => {
       "-16%",
       "-20%",
       "-32%",
-      "-64%",
+      "-48%",
       "-80%",
     ];
     const endPositions = ["8%", "6%", "4%", "2%", "0%", "-6%", "-6%", "-8%"];
@@ -228,8 +228,10 @@ const generalClassToggle = (() => {
     "bottom top"
   );
 
-  // About Page - Paragraph
+  // About Page
   toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%");
+
+  // About Page - Paragraph, About Us
   toggleClassAnimate(
     ".essence-paragraph__about-us .essence-paragraph__heading-svg",
     ".essence-paragraph__about-us .essence-paragraph__heading-svg"
@@ -237,6 +239,18 @@ const generalClassToggle = (() => {
   toggleClassAnimate(
     ".essence-paragraph__about-us .essence-paragraph__body-text",
     ".essence-paragraph__about-us .essence-paragraph__body-text",
+    "top bottom",
+    "bottom top"
+  );
+
+  // About Page - Paragraph, Our Story
+  toggleClassAnimate(
+    ".essence-paragraph__our-story .essence-paragraph__heading-svg",
+    ".essence-paragraph__our-story .essence-paragraph__heading-svg"
+  );
+  toggleClassAnimate(
+    ".essence-paragraph__our-story .essence-paragraph__body-text",
+    ".essence-paragraph__our-story .essence-paragraph__body-text",
     "top bottom",
     "bottom top"
   );
@@ -304,6 +318,9 @@ const paragraphPartialAnimation = (() => {
   spanWordsInParagraph(".hero-paragraph .essence-paragraph__body-text");
   spanWordsInParagraph(
     ".essence-paragraph__about-us .essence-paragraph__body-text"
+  );
+  spanWordsInParagraph(
+    ".essence-paragraph__our-story .essence-paragraph__body-text"
   );
 })();
 

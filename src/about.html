@@ -105,10 +105,16 @@ layout: "app"
   </div>
 </section>
 
+<!-- prettier-ignore -->
+{% set textBlockBody = "We've arranged the best possible team to help you embrace a minimalist lifestyle and achieve greater clarity and purpose in your daily life." %}
+{% set textBlockWidth = "lg" %}
+{% include "./_includes/partials/text-block.html" %}
+
 {% include "./_includes/partials/team.html" %}
 
-<section class="archive-prefooter">
-  <h2 class="h5 archive-prefooter__heading">
-    Dive deeper into a life less ordinary, enriched by the essentials.
-  </h2>
-</section>
+<!-- prettier-ignore -->
+{% set paragraphClass = "essence-paragraph__our-story" %}
+{% set paragraphHeading = "Our Story" %}
+{% set paragraphType = "p" %}
+{% set paragraphBody = "ESSENCE began with a simple idea of helping people discover the joy of living with less. Founded by a group of passionate minimalists, we saw how the relentless pursuit of material possessions was overshadowing life's true value. We aim to inspire a shift towards more meaningful, clutter-free lives." %}
+{% include "partials/paragraph.html" %}

@@ -1,0 +1,37 @@
+.text-block {
+  @include row-center;
+
+  &__heading {
+    width: 496px;
+    text-transform: initial;
+    text-align: center;
+
+    @include mq-max("xxl") {
+      width: 348px;
+    }
+
+    @include mq-max("sm") {
+      width: 312px;
+    }
+
+    &.lg {
+      width: 54vw;
+
+      @include mq-max("xxl") {
+        width: 48vw;
+      }
+
+      @include mq-max("xl") {
+        width: 58vw;
+      }
+
+      @include mq-max("lg") {
+        width: 72vw;
+      }
+
+      @include mq-max("md") {
+        width: 80vw;
+      }
+    }
+  }
+}

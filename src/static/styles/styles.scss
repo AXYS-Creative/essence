@@ -1,8 +1,21 @@
-// Base
-@import "fonts", "variables", "mixins", "globals", "utility", "animations";
+// BASE
+// prettier-ignore
+@import "fonts",
+ "variables",
+ "mixins",
+ "globals",
+ "utility",
+ "animations";
 
-// Pages
-@import "./pages/about", "./pages/home", "./pages/archives", "./pages/posts";
+// PAGES
+// prettier-ignore
+@import "./pages/about",
+ "./pages/home",
+ "./pages/posts";
 
-// Partials
-@import "./partials/paragraph", "./partials/resources", "./partials/team";
+// PARTIALS
+// prettier-ignore
+@import "./partials/paragraph",
+ "./partials/resources",
+ "./partials/team",
+ "./partials/text-block";
