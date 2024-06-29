@@ -213,3 +213,33 @@ body:has(.about-hero) {
     }
   }
 }
+
+// See pinned-img-slider for component styles
+.essence-team {
+  .essence-team__header {
+    position: absolute;
+    top: 12vh;
+    top: 12dvh;
+    left: 50%;
+    translate: -50% 0;
+    justify-content: center;
+    width: 100%;
+
+    .essence-team__heading {
+      @include row-center;
+      overflow: hidden;
+
+      @include mq-motion-allow {
+        span {
+          translate: 0 100%;
+          transition: 0.6s ease;
+        }
+        &.animate {
+          span {
+            translate: 0 0;
+          }
+        }
+      }
+    }
+  }
+}

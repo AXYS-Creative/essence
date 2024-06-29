@@ -72,8 +72,8 @@ const pinnedSectionAnimation = (() => {
   const pinnedSection = document.querySelector(".pinned-section");
 
   if (pinnedSection) {
-    const slider = document.querySelector(".pinned-slider__inner");
-    const container = document.querySelector(".pinned-slider");
+    const container = document.querySelector(".pinned-img-slider");
+    const slider = document.querySelector(".pinned-img-slider__inner");
     const sliderWidth = slider.scrollWidth;
     const containerWidth = container.offsetWidth;
     const distanceToTranslate = sliderWidth - containerWidth;
@@ -221,7 +221,7 @@ const generalClassToggle = (() => {
     "bottom top"
   );
 
-  // About Page
+  // About Page - Hero Collage
   toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%");
 
   // About Page - Paragraph, About Us
@@ -234,6 +234,14 @@ const generalClassToggle = (() => {
     ".essence-paragraph__about-us .essence-paragraph__body-text",
     "top bottom",
     "bottom top"
+  );
+
+  // About Page - Pinned Slider Heading
+  toggleClassAnimate(
+    ".essence-team__heading",
+    ".pinned-section",
+    "top 80%",
+    "+=480%"
   );
 
   // About Page - Paragraph, Our Story
@@ -250,7 +258,7 @@ const generalClassToggle = (() => {
 })();
 
 // Simple reveal that uses the parent class '.show-element__parent' and '.show-element__child'
-const slideUp = (() => {
+const slideUpReveal = (() => {
   document
     .querySelectorAll(".show-element__parent")
     .forEach((parentElement) => {
@@ -266,7 +274,7 @@ const slideUp = (() => {
           },
           {
             y: 0,
-            duration: 0.6,
+            duration: 1,
             ease: "power4.inOut",
             scrollTrigger: {
               trigger: parentElement,

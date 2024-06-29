@@ -7,15 +7,16 @@
  "utility",
  "animations";
 
+// PARTIALS
+// prettier-ignore
+@import "./partials/paragraph",
+"./partials/resources",
+"./partials/pinned-img-slider",
+"./partials/text-block",
+"./partials/slider";
+
 // PAGES
 // prettier-ignore
 @import "./pages/about",
  "./pages/home",
  "./pages/posts";
-
-// PARTIALS
-// prettier-ignore
-@import "./partials/paragraph",
- "./partials/resources",
- "./partials/team",
- "./partials/text-block";

@@ -3,13 +3,12 @@
   $paragraph-indent-lg: 64px;
 
   @include column-center;
-  // padding: 316px $content-padding;
   padding: 280px $content-padding;
   gap: 48px;
 
   @include mq-max("xxl") {
     gap: 32px;
-    padding: 296px $content-padding-xxl;
+    padding: 264px $content-padding-xxl;
   }
 
   @include mq-max("xl") {
@@ -147,15 +146,6 @@
         @include mq-max("sm") {
           translate: -4px 0;
         }
-
-        // @include mq-max("lg") {
-        //   translate: -16px 0;
-        // }
-
-        // @include mq-max("md") {
-        //   align-self: unset;
-        //   translate: 0 0;
-        // }
       }
     }
   }

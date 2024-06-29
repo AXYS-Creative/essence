@@ -1,7 +1,7 @@
 .essence-resources {
   &__header {
     @include row-end(space-between);
-    margin-bottom: 24px;
+    margin-block-end: 24px;
   }
 
   &__heading {
