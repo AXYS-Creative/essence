@@ -3568,7 +3568,7 @@ body:has(.about-hero) .essence-paragraph__about-us {
   }
 }
 body:has(.about-hero) .text-block {
-  padding-block-end: 264px;
+  padding-block-end: 296px;
 }
 
 .about-hero {
@@ -4970,32 +4970,32 @@ body:has(.about-hero) .text-block {
 }
 
 .essence-team {
-  padding-block: 136px;
+  position: relative;
+  padding-block: 0;
   overflow: hidden;
 }
-@media screen and (max-width: 1512px) {
-  .essence-team {
-    padding-block: 80px;
-  }
+.essence-team .essence-resources__header {
+  position: absolute;
+  top: 12vh;
+  top: 12dvh;
+  left: 50%;
+  translate: -50% 0;
+  justify-content: center;
+  width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .essence-team {
-    padding-block: 16vh;
-    padding-block: 16dvh;
-  }
-}
-@media screen and (max-width: 480px) {
-  .essence-team {
-    padding-block: 18vh;
-    padding-block: 18dvh;
-  }
+.essence-team .essence-resources__header span {
+  translate: 0 0;
 }
 
 .pinned-slider {
   display: flex;
+  height: 100vh;
+  height: 100dvh;
 }
 .pinned-slider__inner {
   display: flex;
+  padding-top: 20vh;
+  padding-top: 20dvh;
   gap: 64px;
 }
 @media screen and (max-width: 1512px) {
@@ -5012,9 +5012,14 @@ body:has(.about-hero) .text-block {
   width: min(24vw, 464px);
   aspect-ratio: 586/880;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .pinned-slider .portrait {
     width: 28vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pinned-slider .portrait {
+    width: 32vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -5023,6 +5028,7 @@ body:has(.about-hero) .text-block {
   }
 }
 .pinned-slider .portrait-wrapper {
+  display: flex;
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
@@ -5036,7 +5042,6 @@ body:has(.about-hero) .text-block {
 .pinned-slider .portrait figcaption {
   font-size: 18px;
   font-weight: 300;
-  text-wrap: balance;
 }
 @media screen and (max-width: 1512px) {
   .pinned-slider .portrait figcaption {

@@ -107,15 +107,15 @@ const pinnedSectionAnimation = (() => {
     // Horizontal Parallax
     const startPositions = [
       "-6%",
-      "-8%",
-      "-12%",
+      "-6%",
+      "-10%",
       "-16%",
       "-20%",
       "-32%",
       "-48%",
       "-80%",
     ];
-    const endPositions = ["8%", "6%", "4%", "2%", "0%", "-6%", "-6%", "-8%"];
+    const endPositions = ["10%", "8%", "6%", "2%", "0%", "-6%", "-6%", "-8%"];
 
     startPositions.forEach((startPos, index) => {
       gsap.fromTo(
@@ -169,12 +169,7 @@ const generalClassToggle = (() => {
   };
 
   // Global Footer - Essence brand name
-  toggleClassAnimate(
-    ".brand-name-wrapper",
-    ".brand-name-wrapper",
-    undefined,
-    undefined
-  );
+  toggleClassAnimate(".brand-name-wrapper", ".brand-name-wrapper");
 
   // Home Page - Hero
   toggleClassAnimate(
@@ -205,9 +200,7 @@ const generalClassToggle = (() => {
   // Home Page - Paragraph, Media Praises
   toggleClassAnimate(
     ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
-    ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
-    undefined,
-    undefined
+    ".essence-paragraph__media-praises .essence-paragraph__heading-svg"
   );
   toggleClassAnimate(
     ".essence-paragraph__media-praises .essence-paragraph__body-text",
