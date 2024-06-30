@@ -3379,12 +3379,12 @@ cite {
 }
 @media screen and (max-width: 1200px) {
   .essence-paragraph {
-    padding: 248px 96px;
+    padding: 216px 96px;
   }
 }
 @media screen and (max-width: 1024px) {
   .essence-paragraph {
-    padding: 216px 96px;
+    padding: 196px 96px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4066,6 +4066,8 @@ cite {
 @media screen and (max-width: 1512px) {
   .pinned-section .pinned-img-slider__inner {
     gap: 48px;
+    padding-top: 16vh;
+    padding-top: 16dvh;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -4359,16 +4361,21 @@ cite {
 }
 
 body:has(.about-hero) .essence-paragraph__about-us {
-  padding-block-start: 96px;
+  padding-block: 212px 356px;
 }
 @media screen and (max-width: 1512px) {
   body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block-start: 64px;
+    padding-block: 148px 296px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1024px) {
   body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block-start: 0;
+    padding-block: 148px 236px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body:has(.about-hero) .essence-paragraph__about-us {
+    padding-block: 148px 180px;
   }
 }
 body:has(.about-hero) .text-block {
@@ -4376,7 +4383,7 @@ body:has(.about-hero) .text-block {
 }
 
 .about-hero {
-  padding-block: 64px;
+  padding-block: 64px 0;
 }
 .about-hero .collage {
   display: flex;
@@ -4450,11 +4457,11 @@ body:has(.about-hero) .text-block {
 }
 
 .growth-section .growth-header {
-  margin-inline-start: 116px;
+  margin-inline-start: 96px;
 }
 @media screen and (max-width: 1512px) {
   .growth-section .growth-header {
-    margin-inline-start: 48px;
+    margin-inline-start: 24px;
     flex: 1.6;
   }
 }
@@ -4625,12 +4632,18 @@ body:has(.about-hero) .text-block {
 
 .essence-team .essence-team__header {
   position: absolute;
-  top: 12vh;
-  top: 12dvh;
+  top: 10vh;
+  top: 10dvh;
   left: 50%;
   translate: -50% 0;
   justify-content: center;
   width: 100%;
+}
+@media screen and (max-width: 1512px) {
+  .essence-team .essence-team__header {
+    top: 8vh;
+    top: 8dvh;
+  }
 }
 .essence-team .essence-team__header .essence-team__heading {
   display: flex;
@@ -4653,17 +4666,17 @@ body:has(.about-hero) .text-block {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block: 396px;
+  padding-block: 396px 312px;
   gap: 24px;
 }
 @media screen and (max-width: 1512px) {
   .home-hero {
-    padding-block: 312px;
+    padding-block: 312px 196px;
   }
 }
 @media screen and (max-width: 1200px) {
   .home-hero {
-    padding-block: 264px;
+    padding-block: 264px 128px;
   }
 }
 @media screen and (max-width: 1024px) {

@@ -12,7 +12,7 @@ const responsiveAnimations = (() => {
 
   responsiveGsap.add(
     {
-      maxSm: "(max-width: 480px)",
+      maxSm: "(max-width: 580px)", // Unique Media Query
       maxMd: "(max-width: 768px)",
       maxXl: "(max-width: 1200px)",
       minMd: "(min-width: 769px)",
@@ -37,7 +37,7 @@ const responsiveAnimations = (() => {
               scrollTrigger: {
                 trigger: ".collage",
                 start: "top top",
-                end: "bottom top",
+                end: maxSm ? "bottom 75%" : "bottom top",
                 scrub: 1.2,
               },
             }
@@ -54,7 +54,7 @@ const responsiveAnimations = (() => {
           ".collage-column__inner-3",
           "-10%",
           "-14%",
-          "-29.5%"
+          "-26.55%"
         );
         createScrollTriggerAnimation(
           ".collage-column__inner-5",

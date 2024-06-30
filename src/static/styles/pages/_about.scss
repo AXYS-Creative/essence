@@ -4,15 +4,27 @@ body:has(.about-hero) {
   // }
 
   .essence-paragraph__about-us {
-    padding-block-start: 96px;
+    padding-block: 212px 356px;
 
     @include mq-max("xxl") {
-      padding-block-start: 64px;
+      padding-block: 148px 296px;
     }
 
-    @include mq-max("sm") {
-      padding-block-start: 0;
+    // @include mq-max("xl") {
+    //   padding-block: 148px 264px;
+    // }
+
+    @include mq-max("lg") {
+      padding-block: 148px 236px;
     }
+
+    @include mq-max("md") {
+      padding-block: 148px 180px;
+    }
+
+    // @include mq-max("sm") {
+    //   padding-block: 0 164px;
+    // }
   }
 
   .text-block {
@@ -21,7 +33,7 @@ body:has(.about-hero) {
 }
 
 .about-hero {
-  padding-block: $body-padding;
+  padding-block: $body-padding 0;
 
   .collage {
     $animation-duration: 2s;
@@ -109,10 +121,10 @@ body:has(.about-hero) {
   // See '.slider-section' in _globals.scss
 
   .growth-header {
-    margin-inline-start: 116px;
+    margin-inline-start: 96px;
 
     @include mq-max("xxl") {
-      margin-inline-start: 48px;
+      margin-inline-start: 24px;
       flex: 1.6;
     }
 
@@ -218,12 +230,17 @@ body:has(.about-hero) {
 .essence-team {
   .essence-team__header {
     position: absolute;
-    top: 12vh;
-    top: 12dvh;
+    top: 10vh;
+    top: 10dvh;
     left: 50%;
     translate: -50% 0;
     justify-content: center;
     width: 100%;
+
+    @include mq-max("xxl") {
+      top: 8vh;
+      top: 8dvh;
+    }
 
     .essence-team__heading {
       @include row-center;

@@ -12,11 +12,11 @@
   }
 
   @include mq-max("xl") {
-    padding: 248px $content-padding-xxl;
+    padding: 216px $content-padding-xxl;
   }
 
   @include mq-max("lg") {
-    padding: 216px $content-padding-xxl;
+    padding: 196px $content-padding-xxl;
   }
 
   @include mq-max("md") {

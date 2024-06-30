@@ -1,14 +1,14 @@
 .home-hero {
   @include column-center;
-  padding-block: 396px;
+  padding-block: 396px 312px;
   gap: 24px;
 
   @include mq-max("xxl") {
-    padding-block: 312px;
+    padding-block: 312px 196px;
   }
 
   @include mq-max("xl") {
-    padding-block: 264px;
+    padding-block: 264px 128px;
   }
 
   @include mq-max("lg") {
