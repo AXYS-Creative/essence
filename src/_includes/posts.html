@@ -17,47 +17,47 @@ layout: "app"
 
 <section class="post-body">
   <article>{{ content | safe }}</article>
-
-  <!-- prettier-ignore -->
-  <nav class="post-body__footer-nav">
-    
-    <a
-      href="{{ latestPost.url }}"
-      class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
-      target="_self"
-    >
-      <span class="simple-link__span-outter span-lg">
-        <span class="simple-link__span-inner">Previous Post</span>
-        <span class="simple-link__span-inner" aria-hidden="true">
-          Previous Post
-        </span>
-      </span>
-      <img
-        class="icon-arrow-right"
-        src="./static/img/icons/arrow-right.svg"
-        alt="decorative right arrow"
-        role="presentation"
-      />
-    </a>
-
-    <a
-      href="{{ latestPost.url }}"
-      class="post-body__nav-link simple-link tab-element-page"
-      target="_self"
-    >
-      <span class="simple-link__span-outter span-md">
-        <span class="simple-link__span-inner">Next Post</span>
-        <span class="simple-link__span-inner" aria-hidden="true">
-          Next Post
-        </span>
-      </span>
-      <img
-        class="icon-arrow-right"
-        src="./static/img/icons/arrow-right.svg"
-        alt="decorative right arrow"
-        role="presentation"
-      />
-    </a>
-    
-  </nav>
 </section>
+
+<!-- prettier-ignore -->
+<nav class="post-body__footer-nav">
+  
+  <a
+    href="{{ latestPost.url }}"
+    class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
+    target="_self"
+  >
+    <span class="simple-link__span-outter span-lg">
+      <span class="simple-link__span-inner">Previous Post</span>
+      <span class="simple-link__span-inner" aria-hidden="true">
+        Previous Post
+      </span>
+    </span>
+    <img
+      class="icon-arrow-right"
+      src="./static/img/icons/arrow-right.svg"
+      alt="decorative right arrow"
+      role="presentation"
+    />
+  </a>
+
+  <a
+    href="{{ latestPost.url }}"
+    class="post-body__nav-link simple-link tab-element-page"
+    target="_self"
+  >
+    <span class="simple-link__span-outter span-md">
+      <span class="simple-link__span-inner">Next Post</span>
+      <span class="simple-link__span-inner" aria-hidden="true">
+        Next Post
+      </span>
+    </span>
+    <img
+      class="icon-arrow-right"
+      src="./static/img/icons/arrow-right.svg"
+      alt="decorative right arrow"
+      role="presentation"
+    />
+  </a>
+  
+</nav>

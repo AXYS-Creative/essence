@@ -10,21 +10,17 @@ body:has(.about-hero) {
       padding-block: 148px 296px;
     }
 
-    // @include mq-max("xl") {
-    //   padding-block: 148px 264px;
-    // }
-
     @include mq-max("lg") {
-      padding-block: 148px 236px;
+      padding-block: 124px 236px;
     }
 
     @include mq-max("md") {
-      padding-block: 148px 180px;
+      padding-block: 148px 296px;
     }
 
-    // @include mq-max("sm") {
-    //   padding-block: 0 164px;
-    // }
+    @include mq-max("sm") {
+      padding-block: 0 264px;
+    }
   }
 
   .text-block {
@@ -240,6 +236,11 @@ body:has(.about-hero) {
     @include mq-max("xxl") {
       top: 8vh;
       top: 8dvh;
+    }
+
+    @include mq-max("sm") {
+      top: 20vh;
+      top: 20dvh;
     }
 
     .essence-team__heading {

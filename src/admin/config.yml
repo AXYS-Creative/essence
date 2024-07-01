@@ -128,6 +128,27 @@ collections:
                   name: "description",
                   widget: "string",
                 }
+  - label: "Resources Page"
+    name: "resources_page"
+    files:
+      - label: "Resource List"
+        name: "resource_list"
+        file: "src/_data/resources/resource_list.yaml"
+        editor:
+          preview: true
+        fields:
+          - label: "Resources"
+            name: "resource"
+            widget: "list"
+            collapsed: false
+            fields:
+              - widget: select
+                label: "Category"
+                name: "tags"
+                multiple: false
+                options: ["Physical", "Emotional", "Financial"]
+                default: ["Add Category"]
+              - { label: "Title", name: "title", widget: "string" }
   - label: "Settings"
     name: "settings"
     files:

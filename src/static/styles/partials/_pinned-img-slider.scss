@@ -23,6 +23,11 @@
       @include mq-max("xl") {
         gap: 32px;
       }
+
+      @include mq-max("sm") {
+        padding-top: 28vh;
+        padding-top: 28dvh;
+      }
     }
 
     .portrait {

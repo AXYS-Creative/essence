@@ -274,8 +274,8 @@ const slideUpReveal = (() => {
           },
           {
             y: 0,
-            duration: 1,
-            ease: "power4.inOut",
+            duration: 1.2,
+            ease: "power4.out",
             scrollTrigger: {
               trigger: parentElement,
               start: "top 98%",

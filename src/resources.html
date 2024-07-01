@@ -10,3 +10,23 @@ layout: "app"
 {% set paragraphType = "p" %}
 {% set paragraphBody = "ESSENCE resources are designed to empower you on your journey to simplicity and purpose. Whether you're looking to declutter your home, streamline your schedule, or focus on what truly matters, we provide the tools and guidance you need." %} 
 {% include "partials/paragraph.html" %}
+
+<section class="slider-section growth-section">
+  <div class="slider-header growth-header">
+    <h2 class="h1 slider-header__heading">Services</h2>
+    <p class="slider-header__sub-heading">
+      We empower change in three distinct ways: by removing physical, emotional,
+      and financial clutter and disarray.
+    </p>
+  </div>
+
+  <div class="slider-list">
+    <!-- prettier-ignore -->
+    {% set categories = ["Physical", "Emotional", "Financial"] %}
+    {% for category in categories %}
+    <div class="slider-list__category">
+      <h3 class="slider-list__heading">{{ category }}</h3>
+    </div>
+    {% endfor %}
+  </div>
+</section>

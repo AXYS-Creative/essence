@@ -4075,6 +4075,12 @@ cite {
     gap: 32px;
   }
 }
+@media screen and (max-width: 480px) {
+  .pinned-section .pinned-img-slider__inner {
+    padding-top: 28vh;
+    padding-top: 28dvh;
+  }
+}
 .pinned-section .pinned-img-slider .portrait {
   width: min(24vw, 464px);
   aspect-ratio: 586/880;
@@ -4370,12 +4376,17 @@ body:has(.about-hero) .essence-paragraph__about-us {
 }
 @media screen and (max-width: 1024px) {
   body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 148px 236px;
+    padding-block: 124px 236px;
   }
 }
 @media screen and (max-width: 768px) {
   body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 148px 180px;
+    padding-block: 148px 296px;
+  }
+}
+@media screen and (max-width: 480px) {
+  body:has(.about-hero) .essence-paragraph__about-us {
+    padding-block: 0 264px;
   }
 }
 body:has(.about-hero) .text-block {
@@ -4643,6 +4654,12 @@ body:has(.about-hero) .text-block {
   .essence-team .essence-team__header {
     top: 8vh;
     top: 8dvh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .essence-team .essence-team__header {
+    top: 20vh;
+    top: 20dvh;
   }
 }
 .essence-team .essence-team__header .essence-team__heading {
