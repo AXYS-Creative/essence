@@ -1161,11 +1161,11 @@ section {
   }
 
   @include mq-max("md") {
-    padding: 96px $content-padding-md;
+    padding-inline: $content-padding-md;
   }
 
   @include mq-max("sm") {
-    padding: 96px $body-padding-sm;
+    padding-inline: $body-padding-sm;
   }
 
   &.hero-section {
@@ -1189,15 +1189,18 @@ footer {
   @include column-center;
   position: relative;
   padding: $body-padding;
+  padding-block-start: 196px;
   gap: 248px;
 
   @include mq-max("xxl") {
     padding: $body-padding-xxl;
+    padding-block-start: 164px;
     gap: 164px;
   }
 
   @include mq-max("md") {
     padding: $body-padding-md;
+    padding-block-start: 128px;
   }
 
   @include mq-max("sm") {
