@@ -14,7 +14,8 @@
       transition: 0.6s $cubic-ease 0s;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: var(--secondary-font-color);
 
       @include mq-motion-allow {

@@ -63,6 +63,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
   }
 
   const hasScrolled = scrollPosition >= scrollFromTop;
+  const atTop = scrollPosition < scrollFromTop;
 
   siteHeader.classList.toggle("scroll-active", hasScrolled);
 
@@ -118,6 +119,8 @@ export const updateScrollDependentElements = (scrollPosition) => {
     } else if (closeToBottom) {
       siteHeader.classList.remove("header-scroll-bottom");
       siteHeader.classList.add("header-hide-menu-btn");
+      menuBtn.setAttribute("tabindex", "-1");
+    } else if (atTop) {
       menuBtn.setAttribute("tabindex", "-1");
     } else {
       siteHeader.classList.remove("header-scroll-bottom");

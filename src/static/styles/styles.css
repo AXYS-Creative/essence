@@ -3945,15 +3945,15 @@ cite {
     transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1) 0s;
   }
 }
-.essence-contact__link:hover {
+.essence-contact__link:hover, .essence-contact__link:focus {
   color: var(--secondary-font-color);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .essence-contact__link:hover {
+  .essence-contact__link:hover, .essence-contact__link:focus {
     transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s;
   }
 }
-.essence-contact__link:hover::after {
+.essence-contact__link:hover::after, .essence-contact__link:focus::after {
   width: 0;
   left: auto;
   right: 0;
