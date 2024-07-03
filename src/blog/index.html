@@ -27,26 +27,25 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
   >
     {{ post.data.title | default('Untitled') }}
   </a>
-  {% endif %} {% endfor %}
   <!-- prettier-ignore -->
+  {% endif %} 
+  {% endfor %}
 </div>
 
 <div class="slider-list__category">
   <h3 class="slider-list__heading">All blogs</h3>
 
   {% for post in listContent %}
-
   <a
     href="{{ post.url | url }}"
     class="archive-list__link tab-element-page classic-link"
   >
     <!-- prettier-ignore -->
     {% if post.data.title %} 
-              {{ post.data.title }} 
-          {% else %} 
-              Untitled 
-          {%endif %}
-    <!-- prettier-ignore -->
+      {{ post.data.title }} 
+    {% else %} 
+      Untitled 
+    {%endif %}
   </a>
   {% endfor %}
 </div>

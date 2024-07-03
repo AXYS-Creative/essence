@@ -81,8 +81,8 @@ collections:
             collapsed: false
             fields:
               - widget: select
-                label: "Placement Helper"
                 name: "tags"
+                label: "Placement Helper"
                 multiple: false
                 options:
                   [
@@ -133,18 +133,18 @@ collections:
     files:
       - label: "Resource List"
         name: "resource_list"
-        file: "src/_data/resources/resource_list.yaml"
+        file: "src/_data/resource_list.yaml"
         editor:
           preview: true
         fields:
           - label: "Resources"
-            name: "resource"
+            name: "resources"
             widget: "list"
             collapsed: false
             fields:
-              - widget: select
-                label: "Category"
+              - label: "Category"
                 name: "tags"
+                widget: select
                 multiple: false
                 options: ["Physical", "Emotional", "Financial"]
                 default: ["Add Category"]

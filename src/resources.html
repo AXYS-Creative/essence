@@ -3,6 +3,9 @@ title: ESSENCE • Resources
 layout: "app"
 ---
 
+{% set resourceList = collections.resources_page.resource_list |
+sort(attribute='data.title') %}
+
 <!-- prettier-ignore -->
 {% set paragraphClass = "hero-section hero-paragraph" %} 
 {% set paragraphHeading = "Our Resources" %}
