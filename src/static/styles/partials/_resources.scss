@@ -56,6 +56,11 @@
     figure {
       width: 33%;
 
+      @include mq-motion-allow {
+        opacity: 0;
+        scale: 0.9;
+      }
+
       @include mq-max("md") {
         width: 100%;
       }
@@ -70,6 +75,22 @@
 
         @include mq-max("xl") {
           font-size: 18px;
+        }
+      }
+    }
+
+    &.animate {
+      @include mq-motion-allow {
+        figure {
+          opacity: 1;
+          scale: 1;
+          transition: 1.6s $cubic-ease;
+
+          @for $i from 1 through 3 {
+            &:nth-of-type(#{$i}) {
+              transition-delay: 0.12s + 0.08s * $i;
+            }
+          }
         }
       }
     }

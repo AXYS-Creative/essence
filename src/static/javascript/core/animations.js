@@ -185,56 +185,8 @@ const generalClassToggle = (() => {
     "120% top"
   );
 
-  // Home Page - Paragraph, Our Mission
-  toggleClassAnimate(
-    ".essence-paragraph__our-mission .essence-paragraph__heading-svg",
-    ".essence-paragraph__our-mission .essence-paragraph__heading-svg"
-  );
-  toggleClassAnimate(
-    ".essence-paragraph__our-mission .essence-paragraph__body-text",
-    ".essence-paragraph__our-mission .essence-paragraph__body-text",
-    "top bottom",
-    "bottom top"
-  );
-
-  // Home Page - Paragraph, Media Praises
-  toggleClassAnimate(
-    ".essence-paragraph__media-praises .essence-paragraph__heading-svg",
-    ".essence-paragraph__media-praises .essence-paragraph__heading-svg"
-  );
-  toggleClassAnimate(
-    ".essence-paragraph__media-praises .essence-paragraph__body-text",
-    ".essence-paragraph__media-praises .essence-paragraph__body-text",
-    "top bottom",
-    "bottom top"
-  );
-
-  // ALL Archive Pages' - Hero Paragraph [Blog, Podcasts, Books, Films]
-  toggleClassAnimate(
-    ".hero-paragraph .essence-paragraph__heading-svg",
-    ".hero-paragraph .essence-paragraph__heading-svg"
-  );
-  toggleClassAnimate(
-    ".hero-paragraph .essence-paragraph__body-text",
-    ".hero-paragraph .essence-paragraph__body-text",
-    "top bottom",
-    "bottom top"
-  );
-
   // About Page - Hero Collage
   toggleClassAnimate(".collage", ".collage", "top bottom", "90% 4%");
-
-  // About Page - Paragraph, About Us
-  toggleClassAnimate(
-    ".essence-paragraph__about-us .essence-paragraph__heading-svg",
-    ".essence-paragraph__about-us .essence-paragraph__heading-svg"
-  );
-  toggleClassAnimate(
-    ".essence-paragraph__about-us .essence-paragraph__body-text",
-    ".essence-paragraph__about-us .essence-paragraph__body-text",
-    "top bottom",
-    "bottom top"
-  );
 
   // About Page - Pinned Slider Heading
   toggleClassAnimate(
@@ -243,18 +195,25 @@ const generalClassToggle = (() => {
     "top 80%",
     "+=480%"
   );
+})();
 
-  // About Page - Paragraph, Our Story
-  toggleClassAnimate(
-    ".essence-paragraph__our-story .essence-paragraph__heading-svg",
-    ".essence-paragraph__our-story .essence-paragraph__heading-svg"
-  );
-  toggleClassAnimate(
-    ".essence-paragraph__our-story .essence-paragraph__body-text",
-    ".essence-paragraph__our-story .essence-paragraph__body-text",
-    "top bottom",
-    "bottom top"
-  );
+// Easily toggle an 'animate' class on any element with 'gsap-animate' class
+const globalGenerateAnimate = (() => {
+  const targetElements = document.querySelectorAll(".gsap-animate");
+
+  targetElements.forEach((targetElem) => {
+    gsap.to(targetElem, {
+      scrollTrigger: {
+        trigger: targetElem,
+        start: "top 98%",
+        end: "bottom 2%",
+        onEnter: () => targetElem.classList.add("animate"),
+        onLeave: () => targetElem.classList.remove("animate"),
+        onEnterBack: () => targetElem.classList.add("animate"),
+        onLeaveBack: () => targetElem.classList.remove("animate"),
+      },
+    });
+  });
 })();
 
 // Simple reveal that uses the parent class '.show-element__parent' and '.show-element__child'

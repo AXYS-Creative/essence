@@ -27,24 +27,46 @@ layout: "app"
           View Latest
         </span>
       </span>
-      <img
-        class="icon-arrow-right"
-        src="./static/img/icons/arrow-right.svg"
-        alt="decorative right arrow"
-        role="presentation"
-    /></a>
+      <svg
+        class="icon-arrow-right gsap-animate"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 5H14L11 1L15 5L11 9L14.5 5"
+          stroke="#0E0E0E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="svg-elem-1"
+        ></path>
+      </svg>
+    </a>
     {%endif%}
 
     <!-- prettier-ignore -->
     {% if page.url === "/podcast/" %}
     <h3 class="h6 slider-header__cta archive-header__cta">
       Subscribe
-      <img
-        class="icon-arrow-down"
-        src="./static/img/icons/angle-arrow-down.svg"
-        alt="decorative angled arrow"
-        role="presentation"
-      />
+      <svg
+        class="essence-paragraph__heading-svg gsap-animate"
+        width="13"
+        height="16"
+        viewBox="0 0 13 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        title="icon-arrow-down"
+      >
+        <path
+          d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
+          stroke="black"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
     </h3>
     <div class="slider-header__cta-options archive-header__cta-options">
       <a

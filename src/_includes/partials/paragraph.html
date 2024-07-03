@@ -7,13 +7,13 @@
       </span>
     </span>
     <svg
-      class="essence-paragraph__heading-svg"
+      class="essence-paragraph__heading-svg gsap-animate"
       width="13"
       height="16"
       viewBox="0 0 13 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      title="decorative angled arrow"
+      title="icon-arrow-down"
     >
       <path
         d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
@@ -31,13 +31,13 @@
       </span>
     </span>
     <svg
-      class="essence-paragraph__heading-svg"
+      class="essence-paragraph__heading-svg gsap-animate"
       width="13"
       height="16"
       viewBox="0 0 13 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      title="decorative angled arrow"
+      title="icon-arrow-down"
     >
       <path
         d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
@@ -53,11 +53,11 @@
   {%if paragraphBody %}
   <!-- prettier-ignore -->
   {% if paragraphType == "blockquote" %}
-  <blockquote class="essence-paragraph__body-text">
+  <blockquote class="essence-paragraph__body-text gsap-animate">
     “{{ paragraphBody }}”
   </blockquote>
   {% else %}
-  <p class="essence-paragraph__body-text">{{ paragraphBody }}</p>
+  <p class="essence-paragraph__body-text gsap-animate">{{ paragraphBody }}</p>
   {% endif %}
   <!-- prettier-ignore -->
   {% endif %}
@@ -76,12 +76,23 @@
           {{ paragraphLink }}
         </span>
       </span>
-      <img
-        class="icon-arrow-right"
-        src="./static/img/icons/arrow-right.svg"
-        alt="decorative right arrow"
-        role="presentation"
-      />
+      <svg
+        class="icon-arrow-right gsap-animate"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 5H14L11 1L15 5L11 9L14.5 5"
+          stroke="#0E0E0E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="svg-elem-1"
+        ></path>
+      </svg>
     </a>
     <!-- prettier-ignore -->
     {%endif%} 
