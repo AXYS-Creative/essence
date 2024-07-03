@@ -77,11 +77,9 @@
           font-size: 18px;
         }
       }
-    }
 
-    &.animate {
-      @include mq-motion-allow {
-        figure {
+      &.animate {
+        @include mq-motion-allow {
           opacity: 1;
           scale: 1;
           transition: 1.6s $cubic-ease;

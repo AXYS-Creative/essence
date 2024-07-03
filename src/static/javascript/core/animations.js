@@ -137,7 +137,7 @@ const pinnedSectionAnimation = (() => {
   }
 })();
 
-// Toggle an '.animate' class to be used by the css
+// Toggle an '.animate' class for each element to be used by the css
 const generalClassToggle = (() => {
   const toggleClassAnimate = (
     selector,
@@ -206,7 +206,7 @@ const globalGenerateAnimate = (() => {
       scrollTrigger: {
         trigger: targetElem,
         start: "top 98%",
-        end: "bottom 2%",
+        end: "bottom top",
         onEnter: () => targetElem.classList.add("animate"),
         onLeave: () => targetElem.classList.remove("animate"),
         onEnterBack: () => targetElem.classList.add("animate"),
