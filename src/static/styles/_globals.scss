@@ -1993,6 +1993,10 @@ cite {
     -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715)
       0s;
     transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+
+    @include mq-max("sm") {
+      stroke-width: 1px;
+    }
   }
 
   &.animate {

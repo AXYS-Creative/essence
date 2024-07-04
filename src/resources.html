@@ -21,15 +21,83 @@ sort(attribute='data.tags') %}
       We empower change in three distinct ways: by removing physical, emotional,
       and financial clutter and disarray.
     </p>
+    <a href="/contact" class="simple-link tab-element-page">
+      <span class="simple-link__span-outter span-md">
+        <span class="simple-link__span-inner">Get started</span>
+        <span class="simple-link__span-inner" aria-hidden="true">
+          Get started
+        </span>
+      </span>
+      <svg
+        class="icon-arrow-right gsap-animate"
+        width="16"
+        height="10"
+        viewBox="0 0 16 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 5H14L11 1L15 5L11 9L14.5 5"
+          stroke="#0E0E0E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="svg-elem-1"
+        ></path>
+      </svg>
+    </a>
   </div>
 
-  <div class="slider-list">
-    <!-- prettier-ignore -->
-    {% set categories = ["Physical", "Emotional", "Financial"] %}
-    {% for category in categories %}
-    <div class="slider-list__category">
-      <h3 class="slider-list__heading">{{ category }}</h3>
+  <div class="slider-listing">
+    <div class="slider-listing__group">
+      <h3 class="slider-listing__group-heading">Physical</h3>
+      <ul class="slider-listing__group-list">
+        <li>Home Organization</li>
+        <li>Decluttering Workshops</li>
+        <li>Minimalist Living Consultations</li>
+        <li>Space Optimization</li>
+        <li>Simplified Moving Services</li>
+        <li>Capsule Wardrobe Creation</li>
+        <li>Sustainable Living Guides</li>
+        <li>Decluttering Challenges</li>
+        <li>Storage Solutions</li>
+        <li>Green Cleaning Techniques</li>
+        <li>Essential Items Lists</li>
+      </ul>
     </div>
-    {% endfor %}
+    <div class="slider-listing__group">
+      <h3 class="slider-listing__group-heading">Emotional</h3>
+      <ul class="slider-listing__group-list">
+        <li>Mindfulness Coaching</li>
+        <li>Stress Reduction Techniques</li>
+        <li>Guided Meditation Sessions</li>
+        <li>Mental Detox Programs</li>
+        <li>Self-Care Rituals</li>
+        <li>Life Balance Workshops</li>
+        <li>Journaling Prompts and Exercises</li>
+        <li>Counseling and Therapy Referrals</li>
+        <li>Gratitude Practices</li>
+        <li>Mental Clarity Exercises</li>
+        <li>Goal Setting and Achievement</li>
+        <li>Relationship Simplification Strategies</li>
+      </ul>
+    </div>
+    <div class="slider-listing__group">
+      <h3 class="slider-listing__group-heading">Financial</h3>
+      <ul class="slider-listing__group-list">
+        <li>Budget Planning</li>
+        <li>Debt Reduction Strategies</li>
+        <li>Minimalist Money Management</li>
+        <li>Financial Wellness Coaching</li>
+        <li>Investment Simplification</li>
+        <li>Expense Tracking Tools</li>
+        <li>Financial Freedom Workshops</li>
+        <li>Savings Plans</li>
+        <li>Simplified Tax Preparation</li>
+        <li>Frugal Living Tips</li>
+        <li>Financial Goal Setting</li>
+        <li>Wealth Mindset Coaching</li>
+      </ul>
+    </div>
   </div>
 </section>

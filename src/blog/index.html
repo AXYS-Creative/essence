@@ -16,36 +16,40 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 
 {% set listContent = collections.blog | sort(attribute='data.title') %}
 
-<div class="slider-list__category">
-  <h3 class="slider-list__heading">Most popular</h3>
+<div class="slider-listing__group">
+  <h3 class="slider-listing__group-heading">Most popular</h3>
   <!-- prettier-ignore -->
-  {% for post in listContent | reverse %} 
-    {% if "popular" in post.data.tags %}
-  <a
-    href="{{ post.url | url }}"
-    class="archive-list__link tab-element-page classic-link"
-  >
-    {{ post.data.title | default('Untitled') }}
-  </a>
-  <!-- prettier-ignore -->
-  {% endif %} 
-  {% endfor %}
+  <ul class="slider-listing__group-list">
+    {% for post in listContent | reverse %} {% if "popular" in post.data.tags %}
+    <li>
+      <a
+        href="{{ post.url | url }}"
+        class="tab-element-page classic-link"
+      >
+        {{ post.data.title | default('Untitled') }}
+      </a>
+    </li>
+    <!-- prettier-ignore -->
+    {% endif %} 
+    {% endfor %}
+  </ul>
 </div>
 
-<div class="slider-list__category">
-  <h3 class="slider-list__heading">All blogs</h3>
+<div class="slider-listing__group">
+  <h3 class="slider-listing__group-heading">All blogs</h3>
 
-  {% for post in listContent %}
-  <a
-    href="{{ post.url | url }}"
-    class="archive-list__link tab-element-page classic-link"
-  >
-    <!-- prettier-ignore -->
-    {% if post.data.title %} 
-      {{ post.data.title }} 
-    {% else %} 
-      Untitled 
-    {%endif %}
-  </a>
-  {% endfor %}
+  <ul class="slider-listing__group-list">
+    {% for post in listContent %}
+    <li>
+      <a href="{{ post.url | url }}" class="tab-element-page classic-link">
+        <!-- prettier-ignore -->
+        {% if post.data.title %} 
+        {{ post.data.title }} 
+      {% else %} 
+        Untitled 
+      {%endif %}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

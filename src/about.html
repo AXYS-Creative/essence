@@ -93,10 +93,12 @@ layout: "app"
     </p>
   </div>
 
-  <div class="slider-list growth-list">
+  <div class="slider-listing growth-list">
     {% for stat in recorded_growth.growth_stats %}
-    <div class="slider-list__category growth-list__category">
-      <h3 class="h1 slider-list__heading growth-list__heading number-counter">
+    <div class="slider-listing__group growth-list__category">
+      <h3
+        class="h1 slider-listing__group-heading growth-list__heading number-counter"
+      >
         {{ stat.numbers }}
       </h3>
       <h4>{{ stat.title }}</h4>

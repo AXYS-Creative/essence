@@ -8,8 +8,8 @@ layout: "app"
 <!-- HERO PARAGRAPH - Props passed via front matter -->
 {% include "partials/paragraph.html"%}
 
-<section class="slider-section archive-section">
-  <div class="slider-header archive-header">
+<section class="slider-section">
+  <div class="slider-header">
     <h2 class="h1 slider-header__heading archive-header__heading">
       {{ category }} <br />
       archives
@@ -91,7 +91,7 @@ layout: "app"
     {%endif%}
   </div>
 
-  <div class="slider-list archive-list">
+  <div class="slider-listing">
     <!-- prettier-ignore -->
     {{ content | safe }}
     <!-- prettier-ignore -->

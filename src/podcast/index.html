@@ -16,48 +16,38 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 
 {% set listContent = collections.podcast | sort(attribute='data.title') %}
 
-<div class="slider-list__category">
-  <h3 class="slider-list__heading">Most popular</h3>
-  <!-- prettier-ignore -->
-  {% for post in listContent | reverse %} 
-    {% if "popular" in post.data.tags %}
-  <a
-    href="{{ post.url | url }}"
-    class="archive-list__link tab-element-page classic-link"
-  >
-    {{ post.data.title | default('Untitled') }}
-  </a>
-  {% endif %} {% endfor %}
-  <!-- prettier-ignore -->
+<div class="slider-listing__group">
+  <h3 class="slider-listing__group-heading">Most popular</h3>
+  <ul class="slider-listing__group-list">
+    <!-- prettier-ignore -->
+    {% for post in listContent | reverse %} 
+      {% if "popular" in post.data.tags %}
+    <li>
+      <a href="{{ post.url | url }}" class="tab-element-page classic-link">
+        {{ post.data.title | default('Untitled') }}
+      </a>
+    </li>
+    {% endif %} {% endfor %}
+    <!-- prettier-ignore -->
+  </ul>
 </div>
 
-<div class="slider-list__category">
-  <h3 class="slider-list__heading">Episodes</h3>
+<div class="slider-listing__group">
+  <h3 class="slider-listing__group-heading">Episodes</h3>
 
-  {% for post in listContent | reverse %}
-
-  <!-- <details>
-    <summary class="archive-list__link tab-element-page classic-link">
-      {{ post.data.title }}
-    </summary>
-
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima hic
-      expedita voluptas!
-    </p>
-  </details> -->
-
-  <a
-    href="{{ post.url | url }}"
-    class="archive-list__link tab-element-page classic-link"
-  >
-    <!-- prettier-ignore -->
-    {% if post.data.title %} 
+  <ul class="slider-listing__group-list">
+    {% for post in listContent | reverse %}
+    <li>
+      <a href="{{ post.url | url }}" class="tab-element-page classic-link">
+        <!-- prettier-ignore -->
+        {% if post.data.title %} 
               {{ post.data.title }} 
           {% else %} 
               Untitled 
           {%endif %}
-    <!-- prettier-ignore -->
-  </a>
-  {% endfor %}
+        <!-- prettier-ignore -->
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
