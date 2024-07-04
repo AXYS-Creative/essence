@@ -63,78 +63,84 @@ const responsiveAnimations = (() => {
           null
         );
       }
-    }
-  );
-})();
 
-// About Page - Pinned Section (Team Portraits). Might make it global.
-const pinnedSectionAnimation = (() => {
-  const pinnedSection = document.querySelector(".pinned-section");
+      // About Page - Pinned Section (Team Portraits). Might make it global.
+      const pinnedSection = document.querySelector(".pinned-section");
+      if (pinnedSection) {
+        const container = document.querySelector(".pinned-img-slider");
+        const slider = document.querySelector(".pinned-img-slider__inner");
+        const sliderWidth = slider.scrollWidth;
+        const containerWidth = container.offsetWidth;
+        const distanceToTranslate = sliderWidth - containerWidth;
 
-  if (pinnedSection) {
-    const container = document.querySelector(".pinned-img-slider");
-    const slider = document.querySelector(".pinned-img-slider__inner");
-    const sliderWidth = slider.scrollWidth;
-    const containerWidth = container.offsetWidth;
-    const distanceToTranslate = sliderWidth - containerWidth;
-
-    // Actual Pinning
-    gsap.to(pinnedSection, {
-      scrollTrigger: {
-        trigger: pinnedSection,
-        start: "top top",
-        end: "+=400%",
-        pin: true,
-      },
-    });
-
-    // Slider Along X-Axis
-    gsap.fromTo(
-      slider,
-      { x: 0 },
-      {
-        x: () => -distanceToTranslate,
-        ease: "none",
-        scrollTrigger: {
-          trigger: pinnedSection,
-          start: "top top",
-          end: "+=400%",
-          scrub: 0.25,
-        },
-      }
-    );
-
-    // Horizontal Parallax
-    const startPositions = [
-      "-6%",
-      "-6%",
-      "-10%",
-      "-16%",
-      "-20%",
-      "-32%",
-      "-48%",
-      "-80%",
-    ];
-    const endPositions = ["10%", "8%", "6%", "2%", "0%", "-6%", "-6%", "-8%"];
-
-    startPositions.forEach((startPos, index) => {
-      gsap.fromTo(
-        `.portrait:nth-of-type(${index + 1}) img`,
-        {
-          x: startPos,
-        },
-        {
-          x: endPositions[index],
+        // Actual Pinning
+        gsap.to(pinnedSection, {
           scrollTrigger: {
             trigger: pinnedSection,
             start: "top top",
-            end: "+=400%",
-            scrub: 0.2,
+            end: maxSm ? "+=320%" : "+=400%",
+            pin: true,
           },
-        }
-      );
-    });
-  }
+        });
+
+        // Slider Along X-Axis
+        gsap.fromTo(
+          slider,
+          { x: 0 },
+          {
+            x: () => -distanceToTranslate,
+            ease: "none",
+            scrollTrigger: {
+              trigger: pinnedSection,
+              start: "top top",
+              end: maxSm ? "+=320%" : "+=400%",
+              scrub: maxSm ? 0 : 0.25,
+            },
+          }
+        );
+
+        // Horizontal Parallax
+        const startPositions = [
+          "-6%",
+          "-6%",
+          "-10%",
+          "-16%",
+          "-20%",
+          "-32%",
+          "-48%",
+          "-80%",
+        ];
+        const endPositions = [
+          "10%",
+          "8%",
+          "6%",
+          "2%",
+          "0%",
+          "-6%",
+          "-6%",
+          "-8%",
+        ];
+
+        startPositions.forEach((startPos, index) => {
+          gsap.fromTo(
+            `.portrait:nth-of-type(${index + 1}) img`,
+            {
+              x: startPos,
+            },
+            {
+              x: endPositions[index],
+              scrollTrigger: {
+                trigger: pinnedSection,
+                start: "top top",
+                end: maxSm ? "+=320%" : "+=400%",
+                scrub: maxSm ? 0 : 0.2,
+              },
+            }
+          );
+        });
+      }
+    }
+  );
 })();
 
 // Toggle an '.animate' class for each element to be used by the css
