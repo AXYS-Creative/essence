@@ -45,6 +45,14 @@
       @include mq-motion-allow {
         transition: 0.8s $cubic-ease;
       }
+
+      @include mq-max("md") {
+        height: 3px;
+      }
+
+      @include mq-max("sm") {
+        height: 2px;
+      }
     }
   }
 }

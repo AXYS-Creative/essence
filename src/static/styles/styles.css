@@ -2865,6 +2865,7 @@ cite {
 
 .icon-arrow-right path {
   stroke: var(--primary-font-color);
+  stroke-width: 1.5px;
   stroke-dashoffset: 36.6287841797px;
   stroke-dasharray: 36.6287841797px;
   transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
@@ -3985,6 +3986,16 @@ cite {
 @media (prefers-reduced-motion: no-preference) {
   .essence-contact__link::after {
     transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .essence-contact__link::after {
+    height: 3px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .essence-contact__link::after {
+    height: 2px;
   }
 }
 

@@ -1,6 +1,4 @@
----
 # Dev use only
-
 items:
   - text: Blog
     url: "/blog"
