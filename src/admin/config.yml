@@ -96,6 +96,7 @@ collections:
                 default: ["Add Column"]
               - { label: "Image Source", name: "src", widget: "image" }
               - { label: "Description", name: "description", widget: "string" }
+        thumbnail: "../static/img/collage-1a.webp"
       - label: "Recorded Growth"
         name: "recorded_growth"
         file: "src/_data/recorded_growth.yaml"
@@ -135,7 +136,7 @@ collections:
         name: "resource_list"
         file: "src/_data/resource_list.yaml"
         editor:
-          preview: true
+          preview: false
         fields:
           - label: "Resources"
             name: "resources"
