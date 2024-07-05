@@ -143,7 +143,7 @@ const responsiveAnimations = (() => {
   );
 })();
 
-// Toggle an '.animate' class for each element to be used by the css
+// SCOPED - Specify an element to toggle an '.animate' class used by the css
 const generalClassToggle = (() => {
   const toggleClassAnimate = (
     selector,
@@ -201,9 +201,31 @@ const generalClassToggle = (() => {
     "top 80%",
     "+=480%"
   );
+
+  // SLIDER SVG - Blog Archive
+  toggleClassAnimate(
+    ".slider-header__blog-svg",
+    ".slider-listing",
+    "top 70%",
+    "bottom 8%"
+  );
+  // SLIDER SVG - Podcast Archive
+  toggleClassAnimate(
+    ".slider-header__podcast-svg",
+    ".slider-listing",
+    "top 70%",
+    "bottom 8%"
+  );
+  // SLIDER SVG - Resources Page (Services)
+  toggleClassAnimate(
+    ".slider-header__services-svg",
+    ".slider-listing",
+    "top 70%",
+    "bottom 8%"
+  );
 })();
 
-// Easily toggle an 'animate' class on any element with 'gsap-animate' class
+// GLOBAL - Easily toggle an 'animate' class on any element with 'gsap-animate' class
 const globalGenerateAnimate = (() => {
   const targetElements = document.querySelectorAll(".gsap-animate");
 

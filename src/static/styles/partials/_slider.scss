@@ -1,4 +1,4 @@
-// Used on ALL Arhcive pages and About page
+// Used on all Archive pages, About page and Resources page
 .slider-section {
   $header-height: 280px;
   $header-height-xxl: 256px;
@@ -87,10 +87,13 @@
     &__cta {
       margin-block-end: 20px;
 
-      .icon-arrow-down {
-        translate: 0 8px;
-        // Consider using svg in place of image --> see paragraph partial
-      }
+      // .slider-header__blog-svg {
+      //   border: $test;
+      // }
+
+      // .slider-header__podcast-svg {
+      //   border: $test;
+      // }
     }
 
     &__cta-options {
@@ -101,8 +104,6 @@
 
   .slider-listing {
     @include column-start;
-    // display: flex;
-    // flex-direction: column;
     gap: 96px;
     flex: 1;
     translate: 0 calc($header-height / -2);

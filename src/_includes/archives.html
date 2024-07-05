@@ -20,7 +20,10 @@ layout: "app"
 
     <!-- prettier-ignore -->
     {% if page.url === "/blog/" %}
-    <a href="{{ latestPost.url }}" class="simple-link tab-element-page">
+    <a
+      href="{{ latestPost.url }}"
+      class="slider-header__cta simple-link tab-element-page"
+    >
       <span class="simple-link__span-outter span-md">
         <span class="simple-link__span-inner">View Latest</span>
         <span class="simple-link__span-inner" aria-hidden="true">
@@ -28,7 +31,7 @@ layout: "app"
         </span>
       </span>
       <svg
-        class="icon-arrow-right gsap-animate"
+        class="icon-arrow-right slider-header__blog-svg"
         width="16"
         height="10"
         viewBox="0 0 16 10"
@@ -49,10 +52,10 @@ layout: "app"
 
     <!-- prettier-ignore -->
     {% if page.url === "/podcast/" %}
-    <h3 class="h6 slider-header__cta archive-header__cta">
+    <h3 class="h6 slider-header__cta">
       Subscribe
       <svg
-        class="gsap-animate"
+        class="icon-arrow-angled-down slider-header__podcast-svg"
         width="13"
         height="16"
         viewBox="0 0 13 16"
@@ -68,7 +71,7 @@ layout: "app"
         ></path>
       </svg>
     </h3>
-    <div class="slider-header__cta-options archive-header__cta-options">
+    <div class="slider-header__cta-options">
       <a
         href="https://www.apple.com/apple-podcasts/"
         class="classic-link tab-element-page"
