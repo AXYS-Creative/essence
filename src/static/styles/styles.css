@@ -3946,8 +3946,10 @@ cite {
 
 .essence-contact {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 16px;
   padding-block-end: 364px;
 }
 @media screen and (max-width: 1512px) {
@@ -3955,28 +3957,39 @@ cite {
     padding-block-end: 256px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .essence-contact {
+    gap: 12px;
+  }
+}
+.essence-contact__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
 .essence-contact__link {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 112px;
+  height: 80px;
   overflow: hidden;
 }
 @media screen and (max-width: 1512px) {
   .essence-contact__link {
-    height: 96px;
+    height: 64px;
   }
 }
 @media screen and (max-width: 1200px) {
   .essence-contact__link {
-    height: 88px;
+    height: 56px;
   }
 }
 @media screen and (max-width: 1024px) {
   .essence-contact__link {
-    height: 82px;
+    height: 68px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -4012,12 +4025,12 @@ cite {
     transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1512px) {
   .essence-contact__link::after {
     height: 3px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .essence-contact__link::after {
     height: 2px;
   }
@@ -4102,7 +4115,7 @@ cite {
   }
 }
 .essence-resources__images figure {
-  width: 33%;
+  flex: 1;
 }
 @media (prefers-reduced-motion: no-preference) {
   .essence-resources__images figure {
@@ -4458,11 +4471,17 @@ cite {
   justify-content: center;
   align-items: flex-start;
   gap: 24px;
-  scroll-margin-block-start: 248px;
+  scroll-margin-block-start: 20vh;
 }
 @media screen and (max-width: 768px) {
   .slider-section .slider-listing__group {
     gap: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider-section .slider-listing__group {
+    scroll-margin-block-start: 12vh;
+    scroll-margin-block-start: 12dvh;
   }
 }
 .slider-section .slider-listing__group-heading {

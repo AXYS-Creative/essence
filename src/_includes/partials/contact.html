@@ -1,6 +1,32 @@
 <section class="essence-contact">
-  <a href="/contact" class="h1 essence-contact__link">
+  {%if contactSubHeader%}
+  <h2 class="h6 essence-contact__heading">
+    {{ contactSubHeader }}
+    <svg
+      class="icon-arrow-angled-down gsap-animate"
+      width="13"
+      height="16"
+      viewBox="0 0 13 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      title="icon-arrow-angle-down"
+    >
+      <path
+        d="M1 1.00005C9 0.9998 8 0 8 14L4 11.0001L8 15.0003L12 11.0001L8 14.5"
+        stroke="black"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </h2>
+  {%endif%}
+  <a href="{{ contactLink }}" class="h2 essence-contact__link">
+    {%if contactText%}
+    <span>{{ contactText }}</span>
+    <span>{{ contactText }}</span>
+    {%else%}
     <span>Get started</span>
     <span>Get started</span>
+    {%endif%}
   </a>
 </section>

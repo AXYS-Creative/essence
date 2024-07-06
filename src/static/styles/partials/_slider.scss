@@ -120,10 +120,15 @@
     &__group {
       @include column-start;
       gap: 24px;
-      scroll-margin-block-start: 248px;
+      scroll-margin-block-start: 20vh;
 
       @include mq-max("md") {
         gap: 16px;
+      }
+
+      @include mq-max("sm") {
+        scroll-margin-block-start: 12vh;
+        scroll-margin-block-start: 12dvh;
       }
     }
 

@@ -1,27 +1,37 @@
 .essence-contact {
-  @include row-center;
+  @include column-center;
+  gap: 16px;
   padding-block-end: 364px;
 
   @include mq-max("xxl") {
     padding-block-end: 256px;
   }
 
+  @include mq-max("lg") {
+    gap: 12px;
+  }
+
+  &__heading {
+    @include row-center;
+    gap: 12px;
+  }
+
   &__link {
     position: relative;
     @include column-start(flex-start);
-    height: 112px;
+    height: 80px;
     overflow: hidden;
 
     @include mq-max("xxl") {
-      height: 96px;
+      height: 64px;
     }
 
     @include mq-max("xl") {
-      height: 88px;
+      height: 56px;
     }
 
     @include mq-max("lg") {
-      height: 82px;
+      height: 68px;
     }
 
     @include mq-max("md") {
@@ -59,11 +69,11 @@
         transition: 0.8s $cubic-ease;
       }
 
-      @include mq-max("md") {
+      @include mq-max("xxl") {
         height: 3px;
       }
 
-      @include mq-max("sm") {
+      @include mq-max("md") {
         height: 2px;
       }
     }

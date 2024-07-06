@@ -16,6 +16,8 @@ const footerNavLinks = document.querySelector(".footer-nav-links"),
 
 const headerLinks = document.querySelectorAll(".header-links__link");
 
+const onAboutPage = window.location.pathname.includes("about");
+
 const rootElem = document.documentElement; // For CSS variables
 
 let bodyPadding = parseInt(
@@ -68,17 +70,20 @@ export const updateScrollDependentElements = (scrollPosition) => {
   siteHeader.classList.toggle("scroll-active", hasScrolled);
 
   // Add scroll-active (move cta to bottom) for certain pages. i.e. 'about'
-  if (window.location.pathname.includes("about")) {
-    // setTimeout(() => {
+  if (onAboutPage) {
     siteHeader.classList.add("scroll-active", hasScrolled);
-    // }, 400);
+    headerLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
+    menuBtn.setAttribute("aria-hidden", false);
+    menuBtn.setAttribute("tabindex", "0");
   }
 
-  headerLinks.forEach((link) =>
-    link.setAttribute("tabindex", hasScrolled ? "-1" : "0")
-  );
-  menuBtn.setAttribute("aria-hidden", String(!hasScrolled));
-  menuBtn.setAttribute("tabindex", hasScrolled ? "0" : "-1");
+  if (!onAboutPage) {
+    headerLinks.forEach((link) =>
+      link.setAttribute("tabindex", hasScrolled ? "-1" : "0")
+    );
+    menuBtn.setAttribute("aria-hidden", String(!hasScrolled));
+    menuBtn.setAttribute("tabindex", hasScrolled ? "0" : "-1");
+  }
 
   // Account for different pages, some pages don't have heroSubText
   if (heroSubText) {
@@ -121,7 +126,9 @@ export const updateScrollDependentElements = (scrollPosition) => {
       siteHeader.classList.add("header-hide-menu-btn");
       menuBtn.setAttribute("tabindex", "-1");
     } else if (atTop) {
-      menuBtn.setAttribute("tabindex", "-1");
+      if (!onAboutPage) {
+        menuBtn.setAttribute("tabindex", "-1");
+      }
     } else {
       siteHeader.classList.remove("header-scroll-bottom");
       siteHeader.classList.remove("header-hide-menu-btn");
@@ -229,4 +236,6 @@ window.addEventListener(
 
 updateScrollDependentElements(0);
 
-menuBtn.setAttribute("tabindex", "-1");
+if (!onAboutPage) {
+  menuBtn.setAttribute("tabindex", "-1");
+}

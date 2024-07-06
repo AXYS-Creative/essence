@@ -148,7 +148,7 @@ const generalClassToggle = (() => {
   const toggleClassAnimate = (
     selector,
     trigger,
-    start = "top 92%",
+    start = "top 96%",
     end = "center 4%",
     markers
   ) => {
