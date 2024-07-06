@@ -10,7 +10,11 @@
       {% for image in team_portraits.images %}
       <figure class="portrait">
         <div class="portrait-wrapper">
-          <img src="{{ image.src }}" alt="{{ image.description }}" />
+          <img
+            src="{{ image.src }}"
+            alt="{{ image.description }}"
+            loading="lazy"
+          />
         </div>
         <figcaption>{{ image.caption }}</figcaption>
       </figure>

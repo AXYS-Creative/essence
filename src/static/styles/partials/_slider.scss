@@ -120,6 +120,7 @@
     &__group {
       @include column-start;
       gap: 24px;
+      scroll-margin-block-start: 248px;
 
       @include mq-max("md") {
         gap: 16px;

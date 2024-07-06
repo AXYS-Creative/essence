@@ -242,6 +242,16 @@ const globalGenerateAnimate = (() => {
       },
     });
   });
+
+  // GAME CHANGER!!!
+  // Refresh ScrollTrigger instances on page load and resize
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
+
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
 })();
 
 // Simple reveal that uses the parent class '.show-element__parent' and '.show-element__child'
