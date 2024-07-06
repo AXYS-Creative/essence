@@ -1393,7 +1393,7 @@ footer {
 
             @for $i from 1 through 3 {
               &:nth-of-type(#{$i}) {
-                transition: opacity 0.8s ease calc(0.5s + 0.1s * $i);
+                transition: opacity 0.8s ease calc(0.25s + 0.1s * $i);
               }
             }
           }
@@ -1408,7 +1408,7 @@ footer {
                 transition: translate
                   calc(0.25s + 0.1s * $i)
                   ease
-                  calc(0.25s + 0.05s * $i);
+                  calc(0.15s + 0.05s * $i);
               }
             }
           }

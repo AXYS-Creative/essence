@@ -2221,40 +2221,40 @@ footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__loc
   opacity: 1;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__locations small:nth-of-type(1) {
-  transition: opacity 0.8s ease 0.6s;
+  transition: opacity 0.8s ease 0.35s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__locations small:nth-of-type(2) {
-  transition: opacity 0.8s ease 0.7s;
+  transition: opacity 0.8s ease 0.45s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__locations small:nth-of-type(3) {
-  transition: opacity 0.8s ease 0.8s;
+  transition: opacity 0.8s ease 0.55s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span {
   translate: 0 0;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(1) {
-  transition: translate 0.35s ease 0.3s;
+  transition: translate 0.35s ease 0.2s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(2) {
-  transition: translate 0.45s ease 0.35s;
+  transition: translate 0.45s ease 0.25s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(3) {
-  transition: translate 0.55s ease 0.4s;
+  transition: translate 0.55s ease 0.3s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(4) {
-  transition: translate 0.65s ease 0.45s;
+  transition: translate 0.65s ease 0.35s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(5) {
-  transition: translate 0.75s ease 0.5s;
+  transition: translate 0.75s ease 0.4s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(6) {
-  transition: translate 0.85s ease 0.55s;
+  transition: translate 0.85s ease 0.45s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(7) {
-  transition: translate 0.95s ease 0.6s;
+  transition: translate 0.95s ease 0.5s;
 }
 footer .site-footer__bottom .brand-name-wrapper.animate .brand-name-wrapper__brand-name span:nth-of-type(8) {
-  transition: translate 1.05s ease 0.65s;
+  transition: translate 1.05s ease 0.55s;
 }
 footer .site-footer__bottom .credits {
   display: flex;
