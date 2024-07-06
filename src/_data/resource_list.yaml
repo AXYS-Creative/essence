@@ -1,4 +1,4 @@
-resources:
+services:
   - tags: Physical
     title: Home Organization
   - tags: Physical
@@ -30,7 +30,7 @@ resources:
   - tags: Emotional
     title: Mental Detox Programs
   - tags: Emotional
-    title: Self-Care Rituals
+    title: Self Care Rituals
   - tags: Emotional
     title: Life Balance Workshops
   - tags: Emotional
