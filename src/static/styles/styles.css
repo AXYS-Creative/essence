@@ -3472,6 +3472,12 @@ cite {
 .essence-paragraph__body-text .outter-span {
   display: flex;
   overflow: hidden;
+  line-height: 120%;
+}
+@media screen and (max-width: 480px) {
+  .essence-paragraph__body-text .outter-span {
+    line-height: unset;
+  }
 }
 .essence-paragraph__body-text .outter-span:first-of-type {
   margin-left: 128px;
@@ -3994,7 +4000,7 @@ cite {
 }
 @media screen and (max-width: 768px) {
   .essence-contact__link {
-    height: calc(24px + 8vw);
+    height: calc(12px + 8vw);
   }
 }
 .essence-contact__link:hover::after, .essence-contact__link:focus::after {
@@ -4398,7 +4404,7 @@ cite {
 .slider-section .slider-header__sub-heading {
   font-size: 20px;
   font-weight: 300;
-  width: 420px;
+  width: 412px;
   margin-block-end: 40px;
 }
 @media screen and (max-width: 1200px) {
@@ -4433,7 +4439,8 @@ cite {
 }
 @media screen and (max-width: 480px) {
   .slider-section .slider-header__sub-heading {
-    width: 100%;
+    width: 92%;
+    text-wrap: balance;
   }
 }
 .slider-section .slider-header__cta {

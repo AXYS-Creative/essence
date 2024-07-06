@@ -64,7 +64,7 @@
 
     &__sub-heading {
       @include body-font-styles;
-      width: 420px;
+      width: 412px;
       margin-block-end: 40px;
 
       @include mq-max("xl") {
@@ -80,20 +80,13 @@
       }
 
       @include mq-max("sm") {
-        width: 100%;
+        width: 92%;
+        text-wrap: balance;
       }
     }
 
     &__cta {
       margin-block-end: 20px;
-
-      // .slider-header__blog-svg {
-      //   border: $test;
-      // }
-
-      // .slider-header__podcast-svg {
-      //   border: $test;
-      // }
     }
 
     &__cta-options {

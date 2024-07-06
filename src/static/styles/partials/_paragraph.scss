@@ -57,6 +57,11 @@
     .outter-span {
       display: flex;
       overflow: hidden;
+      line-height: 120%;
+
+      @include mq-max("sm") {
+        line-height: unset;
+      }
 
       &:first-of-type {
         margin-left: $paragraph-indent;
