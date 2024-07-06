@@ -17,6 +17,10 @@
     &.lg {
       width: 54vw;
 
+      @include mq-min("xxxl") {
+        width: 996px;
+      }
+
       @include mq-max("xxl") {
         width: 48vw;
       }

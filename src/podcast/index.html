@@ -22,7 +22,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
     <!-- prettier-ignore -->
     {% for post in listContent | reverse %} 
       {% if "popular" in post.data.tags %}
-    <li>
+    <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         {{ post.data.title | default('Untitled') }}
       </a>
@@ -37,7 +37,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 
   <ul class="slider-listing__group-list">
     {% for post in listContent | reverse %}
-    <li>
+    <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         <!-- prettier-ignore -->
         {% if post.data.title %} 

@@ -132,14 +132,43 @@
       text-transform: initial;
       padding-block-end: 16px;
       border-block-end: 2px solid var(--secondary-font-color);
+
+      .group-heading-indicator {
+        font-size: 14px;
+        display: block;
+        translate: -18px 12px;
+
+        @include mq-max("xxl") {
+          font-size: 12px;
+        }
+
+        @include mq-max("sm") {
+          translate: 0 0;
+        }
+      }
     }
 
     &__group-list {
       @include column-start;
       gap: 16px;
 
-      li {
+      li.gsap-animate {
         @include body-font-styles;
+
+        @include mq-motion-allow {
+          opacity: 0;
+          translate: 0 12px;
+          rotate: 2deg;
+          pointer-events: none;
+          transition: 1.2s ease;
+
+          &.animate {
+            opacity: 1;
+            translate: 0 0;
+            rotate: 0deg;
+            pointer-events: all;
+          }
+        }
       }
     }
 

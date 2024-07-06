@@ -249,9 +249,11 @@ const globalGenerateAnimate = (() => {
     ScrollTrigger.refresh();
   });
 
-  window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
-  });
+  if (window.innerWidth > 520) {
+    window.addEventListener("resize", () => {
+      ScrollTrigger.refresh();
+    });
+  }
 })();
 
 // Simple reveal that uses the parent class '.show-element__parent' and '.show-element__child'
