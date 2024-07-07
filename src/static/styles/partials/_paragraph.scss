@@ -139,7 +139,11 @@
 
     @include mq-max("md") {
       align-self: unset;
-      translate: 0 0;
+      translate: $body-padding-md 0;
+    }
+
+    @include mq-max("sm") {
+      translate: $body-padding-sm 0;
     }
   }
 

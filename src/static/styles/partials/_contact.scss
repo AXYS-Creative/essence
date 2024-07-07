@@ -11,6 +11,10 @@
     gap: 12px;
   }
 
+  @include mq-max("sm") {
+    padding-block-start: 148px;
+  }
+
   &__heading {
     @include row-center;
     gap: 12px;
@@ -48,7 +52,7 @@
 
       span {
         translate: 0 -100%;
-        color: var(--secondary-font-color);
+        color: var(--primary-accent-color);
 
         @include mq-motion-allow {
           transition: 0.6s $cubic-ease 0.6s, translate 1s $cubic-ease;

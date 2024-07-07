@@ -27,6 +27,7 @@
   --background-color: #fdfaf5;
   --primary-font-color: #0e0e0e;
   --secondary-font-color: #898c83;
+  --primary-accent-color: #869d7a;
   --link-color: #0e0e0e;
   --link-color-hover: #898c83;
   --cta-position: 640px;
@@ -1982,7 +1983,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   section {
-    padding-inline: 16px;
+    padding: 64px 16px;
   }
 }
 section.hero-section {
@@ -2543,11 +2544,11 @@ dialog .newsletter-form input[type=email] {
 }
 dialog .newsletter-form input[type=email]::-moz-placeholder {
   color: var(--background-color);
-  opacity: 0.25;
+  opacity: 0.4;
 }
 dialog .newsletter-form input[type=email]::placeholder {
   color: var(--background-color);
-  opacity: 0.25;
+  opacity: 0.4;
 }
 dialog .newsletter-form button[type=submit] {
   border: none;
@@ -2902,20 +2903,57 @@ cite {
 }
 
 .simple-link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
   transition: 0.25s ease;
 }
+.simple-link:hover::before, .simple-link:focus::before {
+  scale: 0;
+}
 .simple-link:hover .simple-link__span-inner, .simple-link:focus .simple-link__span-inner {
+  color: var(--primary-accent-color);
   translate: 0 -100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .simple-link:hover .simple-link__span-inner, .simple-link:focus .simple-link__span-inner {
+    transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
 }
 .simple-link:hover .simple-link__span-inner:last-of-type, .simple-link:focus .simple-link__span-inner:last-of-type {
   translate: 0 0;
 }
 .simple-link:hover .icon-arrow-right, .simple-link:focus .icon-arrow-right {
-  translate: 4px 0;
+  translate: 6px 0;
+  border-color: var(--primary-accent-color);
+}
+.simple-link:hover .icon-arrow-right path, .simple-link:focus .icon-arrow-right path {
+  stroke: var(--primary-accent-color);
+}
+.simple-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: -16px -40%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-accent-color);
+  opacity: 0.5;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .simple-link::before {
+    transition: 0.5s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .simple-link::before {
+    width: 10px;
+    height: 10px;
+  }
 }
 .simple-link__span-outter {
   display: flex;
@@ -2944,11 +2982,6 @@ cite {
 .simple-link__span-outter span {
   position: absolute;
   right: 0;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .simple-link__span-outter span {
-    transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1);
-  }
 }
 .simple-link__span-outter span:last-of-type {
   translate: 0 100%;
@@ -2979,9 +3012,21 @@ cite {
     width: 98px;
   }
 }
+.simple-link .icon-arrow-right {
+  border: 1px solid transparent;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 6px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .simple-link .icon-arrow-right {
     transition: 0.25s ease;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .simple-link .icon-arrow-right path {
+    transition: 0.5s ease;
   }
 }
 .simple-link--arrow-left {
@@ -3928,7 +3973,12 @@ cite {
 @media screen and (max-width: 768px) {
   .essence-paragraph__link {
     align-self: unset;
-    translate: 0 0;
+    translate: 24px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .essence-paragraph__link {
+    translate: 16px 0;
   }
 }
 .essence-paragraph.hero-paragraph {
@@ -3966,6 +4016,11 @@ cite {
 @media screen and (max-width: 1024px) {
   .essence-contact {
     gap: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .essence-contact {
+    padding-block-start: 148px;
   }
 }
 .essence-contact__heading {
@@ -4010,7 +4065,7 @@ cite {
 }
 .essence-contact__link:hover span, .essence-contact__link:focus span {
   translate: 0 -100%;
-  color: var(--secondary-font-color);
+  color: var(--primary-accent-color);
 }
 @media (prefers-reduced-motion: no-preference) {
   .essence-contact__link:hover span, .essence-contact__link:focus span {
@@ -4445,6 +4500,16 @@ cite {
 }
 .slider-section .slider-header__cta {
   margin-block-end: 20px;
+}
+@media screen and (max-width: 768px) {
+  .slider-section .slider-header__cta {
+    translate: 24px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider-section .slider-header__cta {
+    translate: 16px 0;
+  }
 }
 .slider-section .slider-header__cta-options {
   display: flex;

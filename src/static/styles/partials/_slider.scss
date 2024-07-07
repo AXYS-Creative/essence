@@ -87,6 +87,14 @@
 
     &__cta {
       margin-block-end: 20px;
+
+      @include mq-max("md") {
+        translate: $body-padding-md 0;
+      }
+
+      @include mq-max("sm") {
+        translate: $body-padding-sm 0;
+      }
     }
 
     &__cta-options {
