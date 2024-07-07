@@ -1,21 +1,22 @@
 .post-hero {
   @include thin-section;
-  padding-block-start: 360px;
+  @include column-center;
+  padding-block: 448px;
 
   @include mq-max("xxl") {
-    padding-block-start: 280px;
+    padding-block: 320px;
   }
 
   @include mq-max("xl") {
-    padding-block-start: 248px;
+    padding-block: 316px;
   }
 
   @include mq-max("lg") {
-    padding-block-start: 196px;
+    padding-block: 248px;
   }
 
   @include mq-max("md") {
-    padding-block-start: 164px;
+    padding-block: 280px;
   }
 
   @include mq-max("sm") {
@@ -23,21 +24,25 @@
     padding-inline-start: $body-padding-sm * 3;
   }
 
+  &__category {
+    @include body-font-styles;
+    align-self: center;
+  }
+
   &__heading {
+    @extend .h2;
     margin-block: 12px;
     text-transform: capitalize;
   }
 
   &__author {
-    @include column-start;
-    gap: 8px;
+    @include row-center(flex-start);
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 300;
 
-    time {
+    @include mq-max("md") {
       font-size: 14px;
-
-      @include mq-max("md") {
-        font-size: 12px;
-      }
     }
   }
 }
@@ -115,5 +120,9 @@
 
   &__footer-nav {
     @include row-center;
+
+    .simple-link::before {
+      display: none;
+    }
   }
 }

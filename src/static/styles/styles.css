@@ -72,29 +72,29 @@
   }
 }
 
-.h2, h2 {
+.h2, .post-hero__heading, h2 {
   font-family: "Atyp Display", sans-serif;
   font-size: 64px;
   font-weight: 300;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1512px) {
-  .h2, h2 {
+  .h2, .post-hero__heading, h2 {
     font-size: 52px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .h2, h2 {
+  .h2, .post-hero__heading, h2 {
     font-size: 44px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .h2, h2 {
+  .h2, .post-hero__heading, h2 {
     font-size: 56px;
   }
 }
 @media screen and (max-width: 768px) {
-  .h2, h2 {
+  .h2, .post-hero__heading, h2 {
     font-size: calc(12px + 5.6vw);
   }
 }
@@ -3517,7 +3517,7 @@ cite {
 .essence-paragraph__body-text .outter-span {
   display: flex;
   overflow: hidden;
-  line-height: 120%;
+  line-height: 124%;
 }
 @media screen and (max-width: 480px) {
   .essence-paragraph__body-text .outter-span {
@@ -4196,6 +4196,11 @@ cite {
   font-size: 22px;
   font-weight: 300;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .essence-resources__images figure figcaption {
+    transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
+}
 @media screen and (max-width: 1200px) {
   .essence-resources__images figure figcaption {
     font-size: 18px;
@@ -4244,6 +4249,9 @@ cite {
   }
   .essence-resources .wave-img-wrapper:hover canvas, .essence-resources .wave-img-wrapper:focus canvas {
     transform: scale(1.08);
+  }
+  .essence-resources .wave-img-wrapper:hover ~ figcaption, .essence-resources .wave-img-wrapper:focus ~ figcaption {
+    color: var(--primary-accent-color);
   }
   .essence-resources .wave-img-wrapper > * {
     position: absolute;
@@ -5236,7 +5244,11 @@ body:has(.about-hero) .text-block {
 
 .post-hero {
   padding-inline: 256px;
-  padding-block-start: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 448px;
 }
 @media screen and (max-width: 1512px) {
   .post-hero {
@@ -5260,22 +5272,22 @@ body:has(.about-hero) .text-block {
 }
 @media screen and (max-width: 1512px) {
   .post-hero {
-    padding-block-start: 280px;
+    padding-block: 320px;
   }
 }
 @media screen and (max-width: 1200px) {
   .post-hero {
-    padding-block-start: 248px;
+    padding-block: 316px;
   }
 }
 @media screen and (max-width: 1024px) {
   .post-hero {
-    padding-block-start: 196px;
+    padding-block: 248px;
   }
 }
 @media screen and (max-width: 768px) {
   .post-hero {
-    padding-block-start: 164px;
+    padding-block: 280px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -5284,23 +5296,41 @@ body:has(.about-hero) .text-block {
     padding-inline-start: 48px;
   }
 }
+.post-hero__category {
+  font-size: 20px;
+  font-weight: 300;
+  align-self: center;
+}
+@media screen and (max-width: 1200px) {
+  .post-hero__category {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-hero__category {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .post-hero__category {
+    font-size: 16px;
+  }
+}
 .post-hero__heading {
   margin-block: 12px;
   text-transform: capitalize;
 }
 .post-hero__author {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 8px;
-}
-.post-hero__author time {
-  font-size: 14px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 300;
 }
 @media screen and (max-width: 768px) {
-  .post-hero__author time {
-    font-size: 12px;
+  .post-hero__author {
+    font-size: 14px;
   }
 }
 
@@ -5422,4 +5452,7 @@ body:has(.about-hero) .text-block {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.post-body__footer-nav .simple-link::before {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

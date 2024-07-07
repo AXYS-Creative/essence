@@ -57,7 +57,7 @@
     .outter-span {
       display: flex;
       overflow: hidden;
-      line-height: 120%;
+      line-height: 124%;
 
       @include mq-max("sm") {
         line-height: unset;
