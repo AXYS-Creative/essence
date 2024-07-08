@@ -98,6 +98,14 @@
     }
   }
 
+  &__link-sm {
+    // Modifier :|
+    @include mq-max("sm") {
+      width: 180px;
+      margin: auto;
+    }
+  }
+
   // Three.js // WebGL shaders
   @media all {
     canvas {

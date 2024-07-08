@@ -148,10 +148,11 @@
   }
 
   &.hero-paragraph {
-    padding-block: 364px;
+    // padding-block: 364px;
+    padding-block: 348px;
 
     @include mq-max("xxl") {
-      padding-block: 296px;
+      padding-block: 312px;
     }
 
     @include mq-max("xl") {

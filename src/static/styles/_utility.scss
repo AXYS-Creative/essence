@@ -129,12 +129,6 @@
     @include mq-motion-allow {
       transition: 0.25s ease;
     }
-
-    path {
-      @include mq-motion-allow {
-        transition: 0.5s ease;
-      }
-    }
   }
 
   &--arrow-left {

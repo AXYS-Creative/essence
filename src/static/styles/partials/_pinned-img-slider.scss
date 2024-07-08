@@ -25,8 +25,8 @@
       }
 
       @include mq-max("sm") {
-        padding-top: 28vh;
-        padding-top: 28dvh;
+        padding-top: 22vh;
+        padding-top: 22dvh;
       }
     }
 
@@ -44,6 +44,10 @@
 
       @include mq-max("md") {
         width: 52vw;
+      }
+
+      @include mq-max("sm") {
+        width: 68vw;
       }
 
       // To show figcaption with hidden overflow

@@ -94,7 +94,7 @@ const responsiveAnimations = (() => {
               trigger: pinnedSection,
               start: "top top",
               end: maxSm ? "+=320%" : "+=400%",
-              scrub: maxSm ? 0 : 0.25,
+              scrub: maxSm ? 1 : 0.25,
             },
           }
         );

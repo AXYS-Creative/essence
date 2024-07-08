@@ -1,6 +1,10 @@
 .text-block {
   @include row-center;
 
+  @include mq-max("sm") {
+    padding-block: 164px;
+  }
+
   &__heading {
     width: 496px;
     text-transform: initial;

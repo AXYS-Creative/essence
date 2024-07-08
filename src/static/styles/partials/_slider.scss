@@ -54,6 +54,7 @@
     @include mq-max("md") {
       position: static;
       margin-block-end: 96px;
+      translate: 0 0;
     }
 
     &__heading {
@@ -87,14 +88,7 @@
 
     &__cta {
       margin-block-end: 20px;
-
-      @include mq-max("md") {
-        translate: $body-padding-md 0;
-      }
-
-      @include mq-max("sm") {
-        translate: $body-padding-sm 0;
-      }
+      translate: $body-padding-sm 0;
     }
 
     &__cta-options {
@@ -114,8 +108,12 @@
       translate: 0 calc($header-height-xxl / -2);
     }
 
-    @include mq-max("xxl") {
+    @include mq-max("xl") {
       translate: 0 calc($header-height-xl / -2);
+    }
+
+    @include mq-max("md") {
+      translate: 0 0;
     }
 
     &__group {

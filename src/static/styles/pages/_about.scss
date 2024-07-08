@@ -25,6 +25,10 @@ body:has(.about-hero) {
 
   .text-block {
     padding-block-end: 296px;
+
+    @include mq-max("sm") {
+      padding-block-end: 64px;
+    }
   }
 }
 
@@ -247,8 +251,8 @@ body:has(.about-hero) {
     }
 
     @include mq-max("sm") {
-      top: 20vh;
-      top: 20dvh;
+      top: 16vh;
+      top: 16dvh;
     }
 
     .essence-team__heading {

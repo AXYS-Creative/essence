@@ -1833,7 +1833,8 @@ nav.nav-menu .nav-img-container {
 }
 nav.nav-menu .nav-img-container img {
   position: absolute;
-  top: 0;
+  top: 50%;
+  translate: 0 -50%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1846,6 +1847,16 @@ nav.nav-menu .nav-img-container img {
 @media (prefers-reduced-motion: no-preference) {
   nav.nav-menu .nav-img-container img {
     transition: 0.6s cubic-bezier(0.18, 0.97, 0.47, 1);
+  }
+}
+@media screen and (max-width: 768px) {
+  nav.nav-menu .nav-img-container img {
+    max-height: 360px;
+  }
+}
+@media (max-width: 520px) {
+  nav.nav-menu .nav-img-container img {
+    max-height: 280px;
   }
 }
 nav.nav-menu .nav-img-container img.active {
@@ -1983,7 +1994,7 @@ section {
 }
 @media screen and (max-width: 480px) {
   section {
-    padding: 64px 16px;
+    padding: 116px 16px;
   }
 }
 section.hero-section {
@@ -2026,7 +2037,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   footer {
-    padding: 48px 16px;
+    padding: 96px 16px 48px;
   }
 }
 footer > * {
@@ -3024,11 +3035,6 @@ cite {
     transition: 0.25s ease;
   }
 }
-@media (prefers-reduced-motion: no-preference) {
-  .simple-link .icon-arrow-right path {
-    transition: 0.5s ease;
-  }
-}
 .simple-link--arrow-left {
   flex-direction: row-reverse;
 }
@@ -3982,11 +3988,11 @@ cite {
   }
 }
 .essence-paragraph.hero-paragraph {
-  padding-block: 364px;
+  padding-block: 348px;
 }
 @media screen and (max-width: 1512px) {
   .essence-paragraph.hero-paragraph {
-    padding-block: 296px;
+    padding-block: 312px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -4222,6 +4228,12 @@ cite {
     transition-delay: 0.36s;
   }
 }
+@media screen and (max-width: 480px) {
+  .essence-resources__link-sm {
+    width: 180px;
+    margin: auto;
+  }
+}
 @media all {
   .essence-resources canvas {
     display: block;
@@ -4293,8 +4305,8 @@ cite {
 }
 @media screen and (max-width: 480px) {
   .pinned-section .pinned-img-slider__inner {
-    padding-top: 28vh;
-    padding-top: 28dvh;
+    padding-top: 22vh;
+    padding-top: 22dvh;
   }
 }
 .pinned-section .pinned-img-slider .portrait {
@@ -4314,6 +4326,11 @@ cite {
 @media screen and (max-width: 768px) {
   .pinned-section .pinned-img-slider .portrait {
     width: 52vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pinned-section .pinned-img-slider .portrait {
+    width: 68vw;
   }
 }
 .pinned-section .pinned-img-slider .portrait-wrapper {
@@ -4347,6 +4364,11 @@ cite {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .text-block {
+    padding-block: 164px;
+  }
 }
 .text-block__heading {
   width: 496px;
@@ -4457,6 +4479,7 @@ cite {
   .slider-section .slider-header {
     position: static;
     margin-block-end: 96px;
+    translate: 0 0;
   }
 }
 .slider-section .slider-header__heading {
@@ -4508,16 +4531,7 @@ cite {
 }
 .slider-section .slider-header__cta {
   margin-block-end: 20px;
-}
-@media screen and (max-width: 768px) {
-  .slider-section .slider-header__cta {
-    translate: 24px 0;
-  }
-}
-@media screen and (max-width: 480px) {
-  .slider-section .slider-header__cta {
-    translate: 16px 0;
-  }
+  translate: 16px 0;
 }
 .slider-section .slider-header__cta-options {
   display: flex;
@@ -4540,9 +4554,14 @@ cite {
     translate: 0 -128px;
   }
 }
-@media screen and (max-width: 1512px) {
+@media screen and (max-width: 1200px) {
   .slider-section .slider-listing {
     translate: 0 -118px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider-section .slider-listing {
+    translate: 0 0;
   }
 }
 .slider-section .slider-listing__group {
@@ -4671,6 +4690,11 @@ body:has(.about-hero) .essence-paragraph__about-us {
 }
 body:has(.about-hero) .text-block {
   padding-block-end: 296px;
+}
+@media screen and (max-width: 480px) {
+  body:has(.about-hero) .text-block {
+    padding-block-end: 64px;
+  }
 }
 
 .about-hero {
@@ -4946,8 +4970,8 @@ body:has(.about-hero) .text-block {
 }
 @media screen and (max-width: 480px) {
   .essence-team .essence-team__header {
-    top: 20vh;
-    top: 20dvh;
+    top: 16vh;
+    top: 16dvh;
   }
 }
 .essence-team .essence-team__header .essence-team__heading {
