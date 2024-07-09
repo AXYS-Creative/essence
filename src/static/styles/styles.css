@@ -3023,6 +3023,19 @@ cite {
     width: 98px;
   }
 }
+.simple-link__span-outter.span-lg {
+  width: 148px;
+}
+@media screen and (max-width: 1200px) {
+  .simple-link__span-outter.span-lg {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .simple-link__span-outter.span-lg {
+    width: 110px;
+  }
+}
 .simple-link .icon-arrow-right {
   border: 1px solid transparent;
   width: 32px;
@@ -3038,7 +3051,7 @@ cite {
 .simple-link--arrow-left {
   flex-direction: row-reverse;
 }
-.simple-link--arrow-left:hover .icon-arrow-right {
+.simple-link--arrow-left:hover .icon-arrow-right, .simple-link--arrow-left:focus .icon-arrow-right {
   translate: -4px 0;
 }
 .simple-link--arrow-left .simple-link__span-outter span {
@@ -4112,6 +4125,12 @@ cite {
 }
 .essence-contact__link span::first-letter {
   text-transform: capitalize;
+}
+.essence-contact__link.lowercase span {
+  text-transform: lowercase;
+}
+.essence-contact__link.lowercase span::first-letter {
+  text-transform: lowercase;
 }
 
 .essence-resources__header {

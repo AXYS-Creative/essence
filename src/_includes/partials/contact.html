@@ -20,13 +20,16 @@
     </svg>
   </h2>
   {%endif%}
-  <a href="{{ contactLink }}" class="h2 essence-contact__link">
+  <a
+    href="{{ contactLink }}"
+    class="h2 essence-contact__link {{ contactClass }}"
+  >
     {%if contactText%}
     <span>{{ contactText }}</span>
     <span>{{ contactText }}</span>
     {%else%}
-    <span>Get started</span>
-    <span>Get started</span>
+    <span>Get in touch</span>
+    <span>Get in touch</span>
     {%endif%}
   </a>
 </section>

@@ -94,4 +94,14 @@
       }
     }
   }
+
+  &__link.lowercase {
+    span {
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: lowercase;
+      }
+    }
+  }
 }

@@ -114,9 +114,17 @@
       }
     }
 
-    // &.span-lg {
-    //   background: lightgreen;
-    // }
+    &.span-lg {
+      width: 148px;
+
+      @include mq-max("xl") {
+        width: 120px;
+      }
+
+      @include mq-max("lg") {
+        width: 110px;
+      }
+    }
   }
 
   .icon-arrow-right {
@@ -134,7 +142,8 @@
   &--arrow-left {
     flex-direction: row-reverse;
 
-    &:hover {
+    &:hover,
+    &:focus {
       .icon-arrow-right {
         translate: -4px 0;
       }
