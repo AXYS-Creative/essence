@@ -7,6 +7,19 @@ export const maxLg = window.matchMedia("(max-width: 1024px)");
 export const maxMd = window.matchMedia("(max-width: 768px)");
 export const maxSm = window.matchMedia("(max-width: 480px)");
 
+// Page specific logic
+export const path = window.location.pathname;
+
+export const pageClasses = {
+  "/blog": "blog-page",
+  "/podcast": "podcast-page",
+  "/books": "books-page",
+  "/films": "films-page",
+  "/about": "about-page",
+  "/resources": "resources-page",
+  "/contact": "contact-page",
+};
+
 // Clear focus from any element (except inputs) on mousemove
 (function clearFocusOnMouseMove() {
   function removeFocus() {

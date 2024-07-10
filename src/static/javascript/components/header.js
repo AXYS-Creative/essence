@@ -1,8 +1,11 @@
+import { path, pageClasses } from "../utility.js";
+
 const headerLinks = document.querySelector(".header-links"),
   headerLinksUnderline = document.querySelector(
     ".header-links__hover-indicator"
   ),
-  links = headerLinks.querySelectorAll("li");
+  linkItems = headerLinks.querySelectorAll("li"),
+  links = headerLinks.querySelectorAll("li a");
 
 const moveUnderlineToLink = (link) => {
   const linkRect = link.getBoundingClientRect();
@@ -13,7 +16,7 @@ const moveUnderlineToLink = (link) => {
   headerLinksUnderline.style.width = `${linkRect.width}px`;
 };
 
-links.forEach((link) => {
+linkItems.forEach((link) => {
   link.addEventListener("mouseover", () => {
     moveUnderlineToLink(link);
     headerLinksUnderline.classList.add("show-indicator");
@@ -29,4 +32,12 @@ links.forEach((link) => {
   link.addEventListener("focusout", () => {
     headerLinksUnderline.classList.remove("show-indicator");
   });
+});
+
+// Page specific logic
+links.forEach((link) => {
+  const href = link.getAttribute("href");
+  if (path.includes(href)) {
+    link.classList.add("active");
+  }
 });

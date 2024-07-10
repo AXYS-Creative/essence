@@ -184,7 +184,7 @@ header {
       letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--link-color);
-      padding: 4px 24px;
+      padding: 8px 24px;
       outline: none;
 
       @include mq-max("xxl") {
@@ -195,6 +195,12 @@ header {
       &:focus {
         color: var(--primary-font-color) !important;
       }
+
+      // REVISIT ME
+      // &.active {
+      //   border: 1px solid var(--primary-font-color);
+      //   border-radius: $radius;
+      // }
     }
 
     li {
