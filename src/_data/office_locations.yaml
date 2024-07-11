@@ -3,3 +3,11 @@ locations:
     src: /static/img/location-usa.webp
     address: 8405 Old Rochester Dr. Manhattan, NY 14609
     phone: 1 212 320 8826
+  - city: London
+    src: /static/img/location-uk.webp
+    address: 59 West Street, London W51 8PG
+    phone: 0871 527 9286
+  - city: Dubai
+    src: /static/img/location-uae.webp
+    address: 187 S. Sheikh Zayed Rd. Dubai United Arab Emirates
+    phone: 55 327 9516
