@@ -1,6 +1,11 @@
 .locations {
   @include column-center;
   gap: 156px;
+  padding-block: 296px;
+
+  @include mq-max("xxl") {
+    padding-block: 256px;
+  }
 
   @include mq-max("lg") {
     @include thin-section;
@@ -43,6 +48,10 @@
     // position: sticky;
     // top: 40vh;
 
+    @include mq-max("xxl") {
+      width: 40%;
+    }
+
     @include mq-max("xl") {
       width: 48%;
     }
@@ -50,6 +59,10 @@
     @include mq-max("lg") {
       gap: 16px;
       width: 100%;
+    }
+
+    &-title {
+      text-wrap: nowrap;
     }
 
     &-address,

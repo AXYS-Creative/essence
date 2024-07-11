@@ -5042,6 +5042,12 @@ body:has(.about-hero) .text-block {
   justify-content: center;
   align-items: center;
   gap: 156px;
+  padding-block: 296px;
+}
+@media screen and (max-width: 1512px) {
+  .locations {
+    padding-block: 256px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .locations {
@@ -5108,6 +5114,11 @@ body:has(.about-hero) .text-block {
   gap: 24px;
   width: 36%;
 }
+@media screen and (max-width: 1512px) {
+  .locations__details {
+    width: 40%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .locations__details {
     width: 48%;
@@ -5118,6 +5129,9 @@ body:has(.about-hero) .text-block {
     gap: 16px;
     width: 100%;
   }
+}
+.locations__details-title {
+  text-wrap: nowrap;
 }
 .locations__details-address, .locations__details-phone {
   font-size: 20px;
