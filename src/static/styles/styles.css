@@ -5041,7 +5041,7 @@ body:has(.about-hero) .text-block {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 156px;
 }
 @media screen and (max-width: 1024px) {
   .locations {
@@ -5071,7 +5071,7 @@ body:has(.about-hero) .text-block {
 .locations__block {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 6vw;
 }
 @media screen and (max-width: 1024px) {
@@ -5106,17 +5106,25 @@ body:has(.about-hero) .text-block {
   justify-content: center;
   align-items: flex-start;
   gap: 24px;
-  position: sticky;
-  top: 40vh;
+  width: 36%;
+}
+@media screen and (max-width: 1200px) {
+  .locations__details {
+    width: 48%;
+  }
 }
 @media screen and (max-width: 1024px) {
   .locations__details {
     gap: 16px;
+    width: 100%;
   }
 }
 .locations__details-address, .locations__details-phone {
   font-size: 20px;
   font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   width: 50%;
 }
 @media screen and (max-width: 1200px) {
@@ -5134,8 +5142,26 @@ body:has(.about-hero) .text-block {
     font-size: 16px;
   }
 }
-.locations__details-address:hover, .locations__details-phone:hover {
+@media (prefers-reduced-motion: no-preference) {
+  .locations__details-address, .locations__details-phone {
+    transition: 0.3s ease;
+  }
+}
+.locations__details-address:hover, .locations__details-address:focus, .locations__details-phone:hover, .locations__details-phone:focus {
   color: var(--primary-accent-color);
+}
+.locations__details-address:hover path, .locations__details-address:focus path, .locations__details-phone:hover path, .locations__details-phone:focus path {
+  fill: var(--primary-accent-color);
+}
+.locations__details-address svg, .locations__details-phone svg {
+  flex-shrink: 0;
+  width: 14px;
+  translate: 0 6px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .locations__details-address svg path, .locations__details-phone svg path {
+    transition: 0.3s ease;
+  }
 }
 
 .home-hero__heading {

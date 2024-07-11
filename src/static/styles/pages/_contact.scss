@@ -1,13 +1,13 @@
 .locations {
   @include column-center;
-  gap: 48px;
+  gap: 156px;
 
   @include mq-max("lg") {
     @include thin-section;
   }
 
   &__block {
-    @include row-start;
+    @include row-center;
     gap: 6vw;
 
     @include mq-max("lg") {
@@ -39,20 +39,50 @@
   &__details {
     @include column-start;
     gap: 24px;
-    position: sticky;
-    top: 40vh;
+    width: 36%;
+    // position: sticky;
+    // top: 40vh;
+
+    @include mq-max("xl") {
+      width: 48%;
+    }
 
     @include mq-max("lg") {
       gap: 16px;
+      width: 100%;
     }
 
     &-address,
     &-phone {
       @include body-font-styles;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
       width: 50%;
 
-      &:hover {
+      @include mq-motion-allow {
+        transition: 0.3s ease;
+      }
+
+      &:hover,
+      &:focus {
         color: var(--primary-accent-color);
+
+        path {
+          fill: var(--primary-accent-color);
+        }
+      }
+
+      svg {
+        flex-shrink: 0;
+        width: 14px;
+        translate: 0 6px;
+
+        path {
+          @include mq-motion-allow {
+            transition: 0.3s ease;
+          }
+        }
       }
     }
   }
