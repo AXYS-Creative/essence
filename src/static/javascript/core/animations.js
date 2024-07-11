@@ -289,39 +289,26 @@ const slideUpReveal = (() => {
 
 // Animating the body text of 'Paragraph Partial'. Splitting each word.
 const paragraphPartialAnimation = (() => {
-  const spanWordsInParagraph = (paragraphClass) => {
-    const paragraph = document.querySelector(paragraphClass);
-    if (paragraph) {
-      const text = paragraph.textContent || paragraph.innerText;
-      const words = text.trim().split(/\s+/);
+  const spanWordsInParagraph = (paragraph) => {
+    const text = paragraph.textContent || paragraph.innerText;
+    const words = text.trim().split(/\s+/);
 
-      const wrappedWords = words
-        .map(
-          (word) =>
-            `<span class="outter-span"><span class="inner-span">${word}</span></span>`
-        )
-        .join(" ");
+    const wrappedWords = words
+      .map(
+        (word) =>
+          `<span class="outter-span"><span class="inner-span">${word}</span></span>`
+      )
+      .join(" ");
 
-      paragraph.innerHTML = wrappedWords;
-    }
-    // else {
-    //   console.log(`Element with class ${paragraphClass} not found.`);
-    // }
+    paragraph.innerHTML = wrappedWords;
   };
 
-  spanWordsInParagraph(
-    ".essence-paragraph__our-mission .essence-paragraph__body-text"
-  );
-  spanWordsInParagraph(
-    ".essence-paragraph__media-praises .essence-paragraph__body-text"
-  );
-  spanWordsInParagraph(".hero-paragraph .essence-paragraph__body-text");
-  spanWordsInParagraph(
-    ".essence-paragraph__about-us .essence-paragraph__body-text"
-  );
-  spanWordsInParagraph(
-    ".essence-paragraph__our-story .essence-paragraph__body-text"
-  );
+  const applyWordWrappingToAll = (globalClass) => {
+    const paragraphs = document.querySelectorAll(globalClass);
+    paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
+  };
+
+  applyWordWrappingToAll(".essence-paragraph__body-text");
 })();
 
 // About Page - Recorded Growth
