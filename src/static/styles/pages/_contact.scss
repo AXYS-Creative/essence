@@ -1,0 +1,59 @@
+.locations {
+  @include column-center;
+  gap: 48px;
+
+  @include mq-max("lg") {
+    @include thin-section;
+  }
+
+  &__block {
+    @include row-start;
+    gap: 6vw;
+
+    @include mq-max("lg") {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+
+  &__figure {
+    width: 32%;
+    border-radius: $radius;
+    overflow: hidden;
+    display: flex;
+
+    @include mq-max("lg") {
+      width: 64%;
+    }
+
+    @include mq-max("md") {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__details {
+    @include column-start;
+    gap: 24px;
+    position: sticky;
+    top: 40vh;
+
+    @include mq-max("lg") {
+      gap: 16px;
+    }
+
+    &-address,
+    &-phone {
+      @include body-font-styles;
+      width: 50%;
+
+      &:hover {
+        color: var(--primary-accent-color);
+      }
+    }
+  }
+}

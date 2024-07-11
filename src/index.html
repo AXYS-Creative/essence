@@ -4,7 +4,7 @@ layout: "app"
 path: home
 ---
 
-<section class="hero-section home-hero">
+<section class="hero-section home-hero classic-hero">
   <h1 class="h1 home-hero__heading">
     <span class="home-hero__heading-text">
       <span class="home-hero__heading-text-inner-1">Live more</span>
@@ -55,8 +55,5 @@ path: home
 {% set paragraphSubHeader = "Rev Seminar" %}
 {% include "partials/paragraph.html" %}
 
-{% set contactText = '' %}
-{% set contactClass = '' %}
-{% set contactSubHeader = '' %}
-{% set contactLink = '/contact' %}
+{% set contactLink = 'javascript:void(0)' %}
 {% include "partials/contact.html" %}

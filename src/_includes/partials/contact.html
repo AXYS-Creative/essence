@@ -1,7 +1,11 @@
 <section class="essence-contact">
-  {%if contactSubHeader%}
   <h2 class="h6 essence-contact__heading">
-    {{ contactSubHeader }}
+    <!-- prettier-ignore -->
+    {%if contactSubHeader%}
+     {{ contactSubHeader }}
+    {%else%}
+     Contact us 
+    {%endif%}
     <svg
       class="icon-arrow-angled-down gsap-animate"
       width="13"
@@ -19,7 +23,6 @@
       ></path>
     </svg>
   </h2>
-  {%endif%}
   <a
     href="{{ contactLink }}"
     class="h2 essence-contact__link {{ contactClass }}"
@@ -28,8 +31,8 @@
     <span>{{ contactText }}</span>
     <span>{{ contactText }}</span>
     {%else%}
-    <span>Get in touch</span>
-    <span>Get in touch</span>
+    <span>hello@essence.com</span>
+    <span>hello@essence.com</span>
     {%endif%}
   </a>
 </section>

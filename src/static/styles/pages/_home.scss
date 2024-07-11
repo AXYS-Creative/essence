@@ -1,40 +1,5 @@
 .home-hero {
-  @include column-center;
-  padding-block: 396px 312px;
-  gap: 24px;
-
-  @include mq-max("xxl") {
-    padding-block: 312px 196px;
-  }
-
-  @include mq-max("xl") {
-    padding-block: 264px 128px;
-  }
-
-  @include mq-max("lg") {
-    padding-block: 224px;
-  }
-
-  @include mq-max("md") {
-    padding-block: 196px;
-  }
-
-  @include mq-max("sm") {
-    padding-block: 228px;
-  }
-
-  @media (max-height: 520px) {
-    padding-block: 128px;
-  }
-
-  h1,
-  p {
-    text-align: center;
-  }
-
   &__heading {
-    $text-shift: 24px;
-
     display: flex;
     gap: 24px;
 
