@@ -6,8 +6,8 @@ description: Tune in as we go over who we are and what essentialism offers for y
 quote: Essentialism is not about doing more with less; it's about doing the
   right things with precision and purpose, creating a life that is both
   meaningful and fulfilling.
-guest: Joshua Fields Millburn of The Minimalists
-src: /static/img/podcast-poster.png
+guest: Marie Kondo
+poster: /static/img/podcast-poster.png
 video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/wVXrdEYA6XE?si=aLvJWxO1mAWzzr65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - general

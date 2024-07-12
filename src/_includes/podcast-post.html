@@ -19,7 +19,13 @@ layout: "app"
 
 <section class="video-section">
   <div class="video-section__controls">
-    <button>play video</button>
+    <button class="video-section__controls-play-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path
+          d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
+        />
+      </svg>
+    </button>
   </div>
   <img src="{{ poster }}" alt="{{ title_short }}" />
   {{ video_embed | safe}}
@@ -37,10 +43,10 @@ layout: "app"
     class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
     target="_self"
   >
-    <span class="simple-link__span-outter span-lg">
-      <span class="simple-link__span-inner">Previous Post</span>
+    <span class="simple-link__span-outter">
+      <span class="simple-link__span-inner">Previous Episode</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Previous Post
+        Previous Episode
       </span>
     </span>
     <svg
@@ -67,10 +73,10 @@ layout: "app"
     class="post-body__nav-link simple-link tab-element-page"
     target="_self"
   >
-    <span class="simple-link__span-outter span-md">
-      <span class="simple-link__span-inner">Next Post</span>
+    <span class="simple-link__span-outter">
+      <span class="simple-link__span-inner">Next Episode</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Next Post
+        Next Episode
       </span>
     </span>
     <svg

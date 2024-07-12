@@ -41,7 +41,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Quote", name: "quote", widget: "string" }
       - { label: "Guest", name: "guest", widget: "string" }
-      - { label: "Poster", name: "src", widget: "image" }
+      - { label: "Poster", name: "poster", widget: "image" }
       - { label: "Video Embed", name: "video_embed", widget: "string" }
       - widget: select
         label: "tags"

@@ -99,10 +99,10 @@
   }
 
   &__link-sm {
-    // Modifier :|
+    // Modifier!
     @include mq-max("sm") {
-      width: 180px;
-      margin: auto;
+      display: inline-flex;
+      translate: $body-padding-sm 0;
     }
   }
 

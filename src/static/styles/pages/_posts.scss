@@ -4,7 +4,7 @@
   padding-block: 448px;
 
   @include mq-max("xxl") {
-    padding-block: 320px;
+    padding-block: 328px;
   }
 
   @include mq-max("xl") {
@@ -131,20 +131,83 @@
   }
 
   &__footer-nav {
-    @include row-center;
+    $link-spacing: 24px;
 
-    .simple-link::before {
-      display: none;
+    position: relative;
+    z-index: 1;
+
+    // Modifier!
+    .simple-link {
+      position: absolute;
+
+      &::before {
+        display: none;
+      }
+
+      &:first-of-type {
+        right: calc(50% + $link-spacing);
+      }
+
+      &:last-of-type {
+        left: calc(50% + $link-spacing);
+      }
     }
   }
 }
 
 .video-section {
-  border: $test;
+  background: var(--primary-font-color);
   @include column-center;
+  position: relative;
+
+  &__controls {
+    @include absolute-center;
+
+    &-play-btn {
+      @include row-center;
+      border: 2px solid var(--background-color);
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      backdrop-filter: blur(8px);
+
+      @include mq-max("xxl") {
+        width: 116px;
+        height: 116px;
+      }
+
+      svg {
+        width: 22px;
+        translate: 3px 0;
+
+        @include mq-max("xxl") {
+          width: 20px;
+        }
+
+        path {
+          fill: var(--background-color);
+        }
+      }
+    }
+  }
 
   iframe {
+    @include absolute-center;
+    scale: 0.75;
+    opacity: 0;
+    pointer-events: none;
     width: 80vw;
     height: 80vh;
+    // height: 50vw;
+
+    @include mq-motion-allow {
+      transition: 0.6s ease;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+      scale: 1;
+    }
   }
 }

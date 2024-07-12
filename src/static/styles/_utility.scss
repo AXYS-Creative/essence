@@ -41,7 +41,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    translate: -16px -40%;
+    translate: -$simple-link-offset -40%;
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -57,73 +57,24 @@
       width: 10px;
       height: 10px;
     }
+
+    @include mq-max("sm") {
+      translate: -$body-padding-sm -40%;
+    }
   }
 
   &__span-outter {
-    @include row-center(flex-end);
+    @include column-center;
+    // @include row-center(flex-end);
+    // flex-direction: column;
     position: relative;
-    width: 180px;
-    height: 24px;
     overflow: hidden;
 
-    @include mq-max("xl") {
-      width: 152px;
-    }
-
-    @include mq-max("lg") {
-      width: 138px;
-    }
-
-    @include mq-max("sm") {
-      width: 134px;
-    }
-
     span {
-      position: absolute;
-      right: 0;
-
-      // @include mq-motion-allow {
-      //   transition: 0.6s $cubic-ease;
-      // }
-
       &:last-of-type {
         translate: 0 100%;
-      }
-    }
-
-    &.span-sm {
-      width: 90px;
-
-      @include mq-max("xl") {
-        width: 78px;
-      }
-
-      @include mq-max("lg") {
-        width: 70px;
-      }
-    }
-
-    &.span-md {
-      width: 134px;
-
-      @include mq-max("xl") {
-        width: 112px;
-      }
-
-      @include mq-max("lg") {
-        width: 98px;
-      }
-    }
-
-    &.span-lg {
-      width: 148px;
-
-      @include mq-max("xl") {
-        width: 120px;
-      }
-
-      @include mq-max("lg") {
-        width: 110px;
+        position: absolute;
+        bottom: 0;
       }
     }
   }

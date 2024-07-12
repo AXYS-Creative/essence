@@ -340,6 +340,7 @@ header {
     @include column-start;
     translate: -10px 0;
     bottom: $body-padding;
+    mix-blend-mode: difference;
 
     @include mq-max("md") {
       flex-direction: row-reverse;
@@ -412,10 +413,8 @@ header {
           translate: 0 36%;
           transition: 0.25s ease;
 
-          .social-media-icon {
-            path {
-              fill: var(--primary-font-color);
-            }
+          img {
+            filter: invert(1);
           }
         }
       }
@@ -433,9 +432,12 @@ header {
         height: 36px;
         padding: 10px;
         transition: 0.25s ease;
+        filter: invert(1);
+        // mask-image: url(../img/icons/icon-social-links.svg);
       }
 
       &__text {
+        color: var(--background-color);
         text-transform: uppercase;
         translate: 0 -1px;
         transition: 0.25s ease 0.4s;

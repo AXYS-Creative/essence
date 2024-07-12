@@ -86,9 +86,12 @@
       }
     }
 
-    &__cta {
+    a.slider-header__cta {
+      translate: $simple-link-offset 0;
+    }
+
+    h3.slider-header__cta {
       margin-block-end: 20px;
-      translate: $body-padding-sm 0;
     }
 
     &__cta-options {

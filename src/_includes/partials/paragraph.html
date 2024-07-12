@@ -47,11 +47,10 @@
       ></path>
     </svg>
   </h2>
-  {%endif%} {%endif%}
+  {% endif%} {% endif %}
 
   <!-- prettier-ignore -->
-  {%if paragraphBody %}
-  <!-- prettier-ignore -->
+  {% if paragraphBody %}
   {% if paragraphType == "blockquote" %}
   <blockquote class="essence-paragraph__body-text gsap-animate">
     “{{ paragraphBody }}”
@@ -65,12 +64,13 @@
 
   {%if paragraphLink or paragraphSubHeader %}
   <div class="essence-paragraph__footer">
+    <!-- prettier-ignore -->
     {%if paragraphLink %}
     <a
       class="essence-paragraph__link simple-link tab-element-page"
       href="{{ paragraphLinkUrl }}"
     >
-      <span class="simple-link__span-outter {{ linkSize }}">
+      <span class="simple-link__span-outter">
         <span class="simple-link__span-inner"> {{ paragraphLink }} </span>
         <span class="simple-link__span-inner" aria-hidden="true">
           {{ paragraphLink }}
