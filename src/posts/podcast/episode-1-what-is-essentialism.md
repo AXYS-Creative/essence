@@ -1,16 +1,18 @@
 ---
-title: Episode 1 - What is Essentialism?
-episode: "Episode #1"
+title_full: "Episode #1 - What is Essentialism?"
+title_short: "What is Essentialism?"
+episode: "001"
 description: Tune in as we go over who we are and what essentialism offers for you.
-date: 2023-08-15T18:37:08.695Z
 quote: Essentialism is not about doing more with less; it's about doing the
   right things with precision and purpose, creating a life that is both
   meaningful and fulfilling.
-author: Ben Stowe
+guest: Joshua Fields Millburn of The Minimalists
 src: /static/img/podcast-poster.png
+video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/wVXrdEYA6XE?si=aLvJWxO1mAWzzr65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - general
 ---
+
 In this episode, we introduce the concept of essentialism and provide a comprehensive guide to getting started on your journey toward a more intentional and focused life. Essentialism is about prioritizing what truly matters and eliminating the non-essential, allowing you to live a life of purpose and clarity. We break down the fundamental principles of essentialism and offer practical tips to help you embrace this transformative philosophy.
 
 We begin by defining essentialism and its core principles. Essentialism is the disciplined pursuit of less but better, focusing on the few things that make the highest contribution to your life. We discuss how essentialism differs from minimalism, emphasizing that it’s not just about owning fewer things, but about making deliberate choices that align with your values and goals.

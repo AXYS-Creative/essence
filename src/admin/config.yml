@@ -34,13 +34,15 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Episode", name: "episode", widget: "string" }
+      - { label: "Title Full", name: "title_full", widget: "string" }
+      - { label: "Title Short", name: "title_short", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Quote", name: "quote", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Guest", name: "guest", widget: "string" }
       - { label: "Poster", name: "src", widget: "image" }
+      - { label: "Video Embed", name: "video_embed", widget: "string" }
       - widget: select
         label: "tags"
         name: "tags"

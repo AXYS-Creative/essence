@@ -9,12 +9,20 @@ layout: "app"
 <section class="post-hero hero-section">
   <div class="post-hero__header">
     <span class="post-hero__category">{{ category | capitalize }}</span>
-    <h1 class="post-hero__heading h2">{{title}}</h1>
-    <p class="post-hero__author">
-      <span> by {{ author }} </span> •
-      <time> {{ date | readableDate }} </time>
+    <h1 class="post-hero__heading">{{title_short}}</h1>
+    <p class="post-hero__guest">
+      <span>Featuring: {{ guest }}</span>
+      <span>Episode {{ episode }}</span>
     </p>
   </div>
+</section>
+
+<section class="video-section">
+  <div class="video-section__controls">
+    <button>play video</button>
+  </div>
+  <img src="{{ poster }}" alt="{{ title_short }}" />
+  {{ video_embed | safe}}
 </section>
 
 <section class="post-body">

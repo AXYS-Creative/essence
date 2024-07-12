@@ -30,13 +30,25 @@
   }
 
   &__heading {
-    @extend .h2;
     margin-block: 12px;
     text-transform: capitalize;
   }
 
+  // Blog
   &__author {
     @include row-center(flex-start);
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 300;
+
+    @include mq-max("md") {
+      font-size: 14px;
+    }
+  }
+
+  // Podcast
+  &__guest {
+    @include row-center(space-between);
     gap: 12px;
     font-size: 16px;
     font-weight: 300;
@@ -124,5 +136,15 @@
     .simple-link::before {
       display: none;
     }
+  }
+}
+
+.video-section {
+  border: $test;
+  @include column-center;
+
+  iframe {
+    width: 80vw;
+    height: 80vh;
   }
 }
