@@ -58,7 +58,6 @@
     &.animate {
       $duration: 3.2s;
       $duration-lg: 2.5s;
-
       $delay-lg: 0.27s;
 
       @include mq-motion-allow {
@@ -112,59 +111,6 @@
                 animation-duration: $duration-lg;
                 animation-delay: calc($delay-lg + 0.12s);
               }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &__subtext {
-    opacity: 0.5;
-    font-size: 16px;
-
-    @include mq-max("md") {
-      font-size: 14px;
-      opacity: 0.5;
-    }
-
-    @include mq-max("sm") {
-      font-size: 12px;
-    }
-
-    span {
-      @include mq-motion-allow {
-        opacity: 0;
-        filter: blur(3px);
-      }
-    }
-
-    .dot {
-      margin-inline: 8px;
-
-      @include mq-max("md") {
-        margin-inline: 4px;
-      }
-
-      @include mq-max("xs") {
-        margin-inline: 1px;
-      }
-    }
-
-    &.animate {
-      span {
-        opacity: 1;
-        filter: blur(0);
-
-        @for $i from 1 through 10 {
-          $delay: 1.2 + 0.03s * $i;
-          $delay-lg: 1 + 0.03s * $i;
-
-          &:nth-of-type(#{$i}) {
-            transition: 1s ease $delay;
-
-            @include mq-max("lg") {
-              transition: 1s ease $delay-lg;
             }
           }
         }

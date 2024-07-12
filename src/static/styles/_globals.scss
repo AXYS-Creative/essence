@@ -5,6 +5,10 @@
   font-family: $brand-font-family-body;
   color: var(--primary-font-color);
 
+  &::selection {
+    background-color: rgba($yellow, 0.5);
+  }
+
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -20,6 +24,7 @@ html {
 }
 
 body {
+  overflow-x: hidden; // Adding to html allows scrolling when the nav is open
   position: relative;
   background-color: var(--background-color);
   color: var(--primary-font-color);
@@ -482,7 +487,7 @@ header {
 
       &:hover,
       &:focus {
-        // border-color: var(--primary-accent-color);
+        border-color: var(--primary-accent-color);
 
         &::after {
           left: 0;
@@ -518,8 +523,8 @@ header {
         left: -100%;
         width: 100%;
         height: 100%;
-        background-color: var(--primary-font-color);
-        // background-color: var(--primary-accent-color);
+        // background-color: var(--primary-font-color);
+        background-color: var(--primary-accent-color);
         border: none;
         border-radius: $radius - calc($radius / 2);
         z-index: -1;
@@ -579,10 +584,6 @@ header {
 
       .cta {
         width: 92px;
-
-        @include mq-motion-allow {
-          transition: 0.4s ease 0.25s, background 0.25s ease 0.1s;
-        }
 
         @include mq-max("md") {
           width: 86px;
@@ -769,7 +770,7 @@ header {
         background: var(--background-color);
 
         @include mq-motion-allow {
-          transition: 0.4s ease, background 0.25s ease 0.9s,
+          transition: 0.4s ease, background 0.25s ease 0.1s,
             width 0.4s ease 0.3s;
         }
       }
@@ -1232,6 +1233,96 @@ section {
 
     * {
       text-align: center;
+    }
+
+    .classic-hero__heading {
+      overflow: hidden;
+
+      &-text {
+        position: relative;
+
+        &-inner {
+          display: flex;
+        }
+
+        &-inner:first-of-type {
+          @include mq-motion-allow {
+            translate: 0 100%;
+          }
+        }
+
+        &-inner:last-of-type {
+          position: absolute;
+          bottom: 0;
+          translate: 0 100%;
+        }
+      }
+
+      &.animate {
+        $duration: 3.2s;
+        $duration-lg: 2.5s;
+        $delay-lg: 0.27s;
+
+        .classic-hero__heading-text-inner:first-of-type {
+          animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+        }
+        .classic-hero__heading-text-inner:last-of-type {
+          animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
+        }
+      }
+    }
+
+    .classic-hero__subtext {
+      opacity: 0.5;
+      font-size: 16px;
+
+      @include mq-max("md") {
+        font-size: 14px;
+        opacity: 0.5;
+      }
+
+      @include mq-max("sm") {
+        font-size: 12px;
+      }
+
+      span {
+        @include mq-motion-allow {
+          opacity: 0;
+          filter: blur(3px);
+        }
+      }
+
+      .dot {
+        margin-inline: 8px;
+
+        @include mq-max("md") {
+          margin-inline: 4px;
+        }
+
+        @include mq-max("xs") {
+          margin-inline: 1px;
+        }
+      }
+
+      &.animate {
+        span {
+          opacity: 1;
+          filter: blur(0);
+
+          @for $i from 1 through 16 {
+            $delay: 1.2 + 0.03s * $i;
+            $delay-lg: 1 + 0.03s * $i;
+
+            &:nth-of-type(#{$i}) {
+              transition: 1s ease $delay;
+
+              @include mq-max("lg") {
+                transition: 1s ease $delay-lg;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

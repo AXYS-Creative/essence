@@ -47,6 +47,7 @@
     border-radius: 50%;
     background: var(--primary-accent-color);
     opacity: 0.5;
+    pointer-events: none;
 
     @include mq-motion-allow {
       transition: 0.5s $cubic-ease;

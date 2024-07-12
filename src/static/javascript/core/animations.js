@@ -180,13 +180,21 @@ const generalClassToggle = (() => {
   // Home Page - Hero
   toggleClassAnimate(
     ".home-hero__heading",
-    ".home-hero__subtext",
+    ".classic-hero__subtext",
+    undefined,
+    "120% top"
+  );
+
+  // Classic Hero - Home & Contact Pages
+  toggleClassAnimate(
+    ".classic-hero__heading",
+    ".classic-hero__subtext",
     undefined,
     "120% top"
   );
   toggleClassAnimate(
-    ".home-hero__subtext",
-    ".home-hero__subtext",
+    ".classic-hero__subtext",
+    ".classic-hero__subtext",
     undefined,
     "120% top"
   );
