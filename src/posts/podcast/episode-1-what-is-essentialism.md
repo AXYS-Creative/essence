@@ -1,5 +1,6 @@
 ---
 title: Episode 1 - What is Essentialism?
+episode: "Episode #1"
 description: Tune in as we go over who we are and what essentialism offers for you.
 date: 2023-08-15T18:37:08.695Z
 quote: Essentialism is not about doing more with less; it's about doing the
