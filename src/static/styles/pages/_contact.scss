@@ -66,12 +66,14 @@
     }
 
     &-address,
-    &-phone {
+    &-phone,
+    &-time {
       @include body-font-styles;
       display: flex;
       align-items: flex-start;
       gap: 12px;
       width: 50%;
+      text-wrap: balance;
 
       @include mq-motion-allow {
         transition: 0.3s ease;
@@ -95,6 +97,15 @@
           @include mq-motion-allow {
             transition: 0.3s ease;
           }
+        }
+      }
+    }
+
+    &-time {
+      &:hover,
+      &:focus {
+        path {
+          fill: var(--primary-font-color);
         }
       }
     }

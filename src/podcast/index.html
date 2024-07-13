@@ -14,7 +14,7 @@ textBlockWidth: ""
 textBlockBody: "Dive deeper into a life less ordinary, enriched by the essentials."
 ---
 
-{% set listContent = collections.podcast | sort(attribute='data.title_full') %}
+{% set listContent = collections.podcast | sort(attribute='data.title') %}
 
 <div class="slider-listing__group">
   <h3 class="slider-listing__group-heading">Most popular</h3>
@@ -24,7 +24,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
       {% if "popular" in post.data.tags %}
     <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
-        {{ post.data.title_full | default('Untitled') }}
+        {{ post.data.title | default('Untitled') }}
       </a>
     </li>
     {% endif %} {% endfor %}
@@ -40,8 +40,8 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
     <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         <!-- prettier-ignore -->
-        {% if post.data.title_full %} 
-              {{ post.data.title_full }} 
+        {% if post.data.title %} 
+              {{ post.data.title }} 
           {% else %} 
               Untitled 
           {%endif %}

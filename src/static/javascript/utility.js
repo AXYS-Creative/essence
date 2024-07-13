@@ -43,6 +43,37 @@ export const pageClasses = {
   yearText.setAttribute("datetime", currentYear);
 })();
 
+// Fetch local time for each office
+const getLocalTime = (() => {
+  const timeElements = document.querySelectorAll(
+    ".locations__details-time time"
+  );
+
+  timeElements.forEach((element) => {
+    const timezone = element.getAttribute("data-timezone");
+
+    function updateTime() {
+      const now = new Date();
+      const options = {
+        timeZone: timezone,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true, // Toggle for 12 hour vs 24 hour clock
+      };
+      const timeString = new Intl.DateTimeFormat([], options).format(now);
+      const isoString = now.toISOString();
+
+      element.textContent = `${timeString}`;
+      element.setAttribute("datetime", isoString);
+    }
+
+    updateTime();
+
+    setInterval(updateTime, 1000);
+  });
+})();
+
 // Detect Safari Browser
 export const isSafari = () => {
   let ua = navigator.userAgent.toLowerCase();

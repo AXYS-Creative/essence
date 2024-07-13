@@ -4,13 +4,16 @@ locations:
     alt: New York office. Street view of a red brick building.
     address: 8405 Old Rochester Dr. Manhattan, NY 14609
     phone: 1 212 320 8826
+    timezone: "America/New_York"
   - city: London
     src: /static/img/location-uk.webp
     alt: London office. Street view of a vintage brick building.
     address: 59 West Street, London W51 8PG
     phone: 0871 527 9286
+    timezone: "Europe/London"
   - city: Dubai
     src: /static/img/location-uae.webp
     alt: Dubai office. Pavement view of a modern building near magestic palm trees.
     address: 187 S. Sheikh Zayed Rd. Dubai United Arab Emirates
     phone: 55 327 9516
+    timezone: "Asia/Dubai"

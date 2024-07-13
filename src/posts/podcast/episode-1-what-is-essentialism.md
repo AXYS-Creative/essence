@@ -1,5 +1,5 @@
 ---
-title_full: "Episode #1 - What is Essentialism?"
+title: "Episode #1 - What is Essentialism?"
 title_short: "What is Essentialism?"
 episode: "001"
 description: Tune in as we go over who we are and what essentialism offers for you.

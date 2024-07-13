@@ -155,12 +155,22 @@
       }
     }
   }
+
+  &.post-body__podcast {
+    border: $test;
+  }
 }
 
 .video-section {
   background: var(--primary-font-color);
   @include column-center;
   position: relative;
+
+  &__poster {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    border-radius: $radius;
+  }
 
   &__controls {
     @include absolute-center;
