@@ -255,6 +255,7 @@ header .header-logo {
   gap: 8px;
   top: 64px;
   z-index: 6;
+  mix-blend-mode: difference;
 }
 @media screen and (min-width: 1921px) {
   header .header-logo {
@@ -412,6 +413,7 @@ header .header-logo:hover .header-logo__text .letter-wrapper:nth-of-type(8) .let
 header .header-logo__icon {
   width: 24px;
   transition: 0.2s ease;
+  filter: invert(1);
 }
 @media screen and (max-width: 1512px) {
   header .header-logo__icon {
@@ -437,6 +439,9 @@ header .header-logo__text .letter-wrapper {
   justify-content: flex-start;
   align-items: center;
   height: 24px;
+}
+header .header-logo__text .letter-wrapper__letter {
+  color: var(--background-color);
 }
 header .header-logo__text .letter-wrapper:nth-of-type(1) .letter-wrapper__letter:nth-of-type(1) {
   translate: 0 100%;
@@ -746,6 +751,7 @@ header .menu-btn__wrapper {
   scale: 0.75;
   top: 74px;
   translate: 0 -50%;
+  mix-blend-mode: difference;
   transition: 0.5s ease 0s;
 }
 @media screen and (min-width: 1921px) {
@@ -815,7 +821,7 @@ header .menu-btn__wrapper .menu-btn .dots-wrapper {
 header .menu-btn__wrapper .menu-btn .dots-wrapper__dot {
   width: 6px;
   height: 6px;
-  background-color: var(--primary-font-color);
+  background-color: var(--background-color);
   border-radius: 50%;
   transition: 0.3s ease;
 }
@@ -5574,6 +5580,8 @@ body:has(.about-hero) .text-block {
 }
 .post-body article {
   margin-block-end: 128px;
+  margin: auto;
+  max-width: 1024px;
 }
 .post-body article h2,
 .post-body article h3,

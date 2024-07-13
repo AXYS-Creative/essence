@@ -55,6 +55,7 @@ header {
     gap: 8px;
     top: 64px;
     z-index: 6;
+    mix-blend-mode: difference;
 
     @include mq-max("md") {
       top: 38px;
@@ -91,6 +92,7 @@ header {
     &__icon {
       width: 24px;
       transition: 0.2s ease;
+      filter: invert(1);
 
       @include mq-max("xxl") {
         width: 22px;
@@ -110,6 +112,10 @@ header {
       .letter-wrapper {
         @include column-center(flex-start);
         height: 24px;
+
+        &__letter {
+          color: var(--background-color);
+        }
 
         @for $i from 1 through 8 {
           $duration: 0.32s + 0.05s * $i;
@@ -252,6 +258,7 @@ header {
     @include menu-btn-hidden;
     top: 74px;
     translate: 0 -50%;
+    mix-blend-mode: difference;
     transition: 0.5s ease 0s;
 
     @include mq-max("lg") {
@@ -302,8 +309,8 @@ header {
         &__dot {
           width: 6px;
           height: 6px;
-          // background: $white;
-          background-color: var(--primary-font-color);
+          // background-color: var(--primary-font-color);
+          background-color: var(--background-color);
           border-radius: 50%;
           transition: 0.3s ease;
         }

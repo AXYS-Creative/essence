@@ -34,9 +34,9 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Episode", name: "episode", widget: "string" }
       - { label: "Title Full", name: "title_full", widget: "string" }
       - { label: "Title Short", name: "title_short", widget: "string" }
+      - { label: "Episode", name: "episode", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Quote", name: "quote", widget: "string" }

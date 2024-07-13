@@ -64,6 +64,8 @@
 
   article {
     margin-block-end: 128px;
+    margin: auto;
+    max-width: 1024px;
 
     h2 {
       @extend .h5;
