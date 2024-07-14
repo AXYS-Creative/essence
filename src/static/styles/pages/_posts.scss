@@ -157,7 +157,12 @@
   }
 
   &.post-body__podcast {
-    border: $test;
+    h2 {
+      max-width: 1024px;
+      margin: auto;
+      text-transform: capitalize;
+      margin-block-end: 64px;
+    }
   }
 }
 

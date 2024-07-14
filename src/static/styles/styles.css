@@ -5757,8 +5757,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .post-body__footer-nav .simple-link:last-of-type {
   left: calc(50% + 24px);
 }
-.post-body.post-body__podcast {
-  border: 1px dashed rgba(220, 20, 60, 0.75);
+.post-body.post-body__podcast h2 {
+  max-width: 1024px;
+  margin: auto;
+  text-transform: capitalize;
+  margin-block-end: 64px;
 }
 
 .video-section {
