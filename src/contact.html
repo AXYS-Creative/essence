@@ -3,10 +3,10 @@ title: ESSENCE • Contact
 layout: "app"
 ---
 
-<section class="hero-section classic-hero">
+<section class="hero-section classic-hero contact-hero">
   <h1 class="h1 classic-hero__heading">
     <span class="classic-hero__heading-text">
-      <span class="classic-hero__heading-text-inner">Contact us</span>
+      <span class="classic-hero__heading-text-inner">Let’s connect</span>
       <span class="classic-hero__heading-text-inner" aria-hidden="true">
         Contact us
       </span>
@@ -30,7 +30,7 @@ layout: "app"
 <section class="locations">
   {% for location in office_locations.locations %}
   <div class="locations__block">
-    <figure class="locations__figure">
+    <figure class="locations__figure gsap-animate">
       <img src="{{ location.src }}" alt="{{ location.alt }}" />
     </figure>
     <div class="locations__details">
@@ -40,25 +40,80 @@ layout: "app"
         class="locations__details-address"
         target="_blank"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <!-- <dotlottie-player
+          class="lottie lottie-1"
+          src="https://lottie.host/2fe0e80c-3f65-47ec-afbb-35d50c4feec8/twqrFHn3t5.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player> -->
+        <svg
+          class="lg-screen-and-up thick-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
+          <path
+            d="M336 192c0-79.5-64.5-144-144-144S48 112.5 48 192c0 12.4 4.5 31.6 15.3 57.2c10.5 24.8 25.4 52.2 42.5 79.9c28.5 46.2 61.5 90.8 86.2 122.6c24.8-31.8 57.8-76.4 86.2-122.6c17.1-27.7 32-55.1 42.5-79.9C331.5 223.6 336 204.4 336 192zm48 0c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192zm-160 0a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm-112 0a80 80 0 1 1 160 0 80 80 0 1 1 -160 0z"
+          />
+        </svg>
+        <svg
+          class="lg-screen-and-below thin-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+        >
           <path
             d="M352 192c0-88.4-71.6-160-160-160S32 103.6 32 192c0 15.6 5.4 37 16.6 63.4c10.9 25.9 26.2 54 43.6 82.1c34.1 55.3 74.4 108.2 99.9 140c25.4-31.8 65.8-84.7 99.9-140c17.3-28.1 32.7-56.3 43.6-82.1C346.6 229 352 207.6 352 192zm32 0c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192zm-240 0a48 48 0 1 0 96 0 48 48 0 1 0 -96 0zm48 80a80 80 0 1 1 0-160 80 80 0 1 1 0 160z"
           />
         </svg>
-        {{ location.address }}
+        <span>{{ location.address }}</span>
       </a>
       <a href="tel:+{{ location.phone }}" class="locations__details-phone">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <!-- <dotlottie-player
+          class="lottie lottie-2"
+          src="https://lottie.host/674ff594-02c1-4e37-bfc2-a994cd3c1378/n3eeiQrXmP.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player> -->
+        <svg
+          class="lg-screen-and-up thick-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M375.8 275.2c-16.4-7-35.4-2.4-46.7 11.4l-33.2 40.6c-46-26.7-84.4-65.1-111.1-111.1L225.3 183c13.8-11.3 18.5-30.3 11.4-46.7l-48-112C181.2 6.7 162.3-3.1 143.6 .9l-112 24C13.2 28.8 0 45.1 0 64v0C0 295.2 175.2 485.6 400.1 509.5c9.8 1 19.6 1.8 29.6 2.2c0 0 0 0 0 0c0 0 .1 0 .1 0c6.1 .2 12.1 .4 18.2 .4l0 0c18.9 0 35.2-13.2 39.1-31.6l24-112c4-18.7-5.8-37.6-23.4-45.1l-112-48zM441.5 464C225.8 460.5 51.5 286.2 48.1 70.5l99.2-21.3 43 100.4L154.4 179c-18.2 14.9-22.9 40.8-11.1 61.2c30.9 53.3 75.3 97.7 128.6 128.6c20.4 11.8 46.3 7.1 61.2-11.1l29.4-35.9 100.4 43L441.5 464zM48 64v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0s0 0 0 0"
+          />
+        </svg>
+        <svg
+          class="lg-screen-and-below thin-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
           <path
             d="M375.8 275.2c-16.4-7-35.4-2.4-46.7 11.4l-33.2 40.6c-46-26.7-84.4-65.1-111.1-111.1L225.3 183c13.8-11.3 18.5-30.3 11.4-46.7l-48-112C181.2 6.7 162.3-3.1 143.6 .9l-112 24C13.2 28.8 0 45.1 0 64v0C0 300.7 183.5 494.5 416 510.9c4.5 .3 9.1 .6 13.7 .8c0 0 0 0 0 0c0 0 0 0 .1 0c6.1 .2 12.1 .4 18.3 .4l0 0c18.9 0 35.2-13.2 39.1-31.6l24-112c4-18.7-5.8-37.6-23.4-45.1l-112-48zM447.7 480C218.1 479.8 32 293.7 32 64v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0c0-3.8 2.6-7 6.3-7.8l112-24c3.7-.8 7.5 1.2 9 4.7l48 112c1.4 3.3 .5 7.1-2.3 9.3l-40.6 33.2c-12.1 9.9-15.3 27.2-7.4 40.8c29.5 50.9 71.9 93.3 122.7 122.7c13.6 7.9 30.9 4.7 40.8-7.4l33.2-40.6c2.3-2.8 6.1-3.7 9.3-2.3l112 48c3.5 1.5 5.5 5.3 4.7 9l-24 112c-.8 3.7-4.1 6.3-7.8 6.3c-.1 0-.2 0-.3 0z"
           />
         </svg>
-        {{ location.phone }}
+        <span>{{ location.phone }}</span>
       </a>
       <p class="locations__details-time">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <svg
+          class="lg-screen-and-below thin-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
           <path
             d="M480 256A224 224 0 1 1 32 256a224 224 0 1 1 448 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM240 112V256c0 5.3 2.7 10.3 7.1 13.3l96 64c7.4 4.9 17.3 2.9 22.2-4.4s2.9-17.3-4.4-22.2L272 247.4V112c0-8.8-7.2-16-16-16s-16 7.2-16 16z"
+          />
+        </svg>
+        <svg
+          class="lg-screen-and-up thick-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
           />
         </svg>
         <time datetime="" data-timezone="{{ location.timezone }}">

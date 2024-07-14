@@ -1182,7 +1182,8 @@ nav.nav-menu {
 }
 
 section {
-  padding: 196px $content-padding;
+  // padding: 196px $content-padding;
+  padding: 248px $content-padding;
 
   @include mq-max("xxl") {
     padding: 148px $content-padding-xxl;
@@ -1196,6 +1197,7 @@ section {
     padding: 116px $body-padding-sm;
   }
 
+  // All Heroes (gradient background)
   &.hero-section {
     position: relative;
 
@@ -1252,6 +1254,7 @@ section {
 
         &-inner {
           display: flex;
+          text-wrap: nowrap;
         }
 
         &-inner:first-of-type {
@@ -1292,6 +1295,7 @@ section {
 
       @include mq-max("sm") {
         font-size: 12px;
+        width: calc(100vw - $body-padding-md * 2);
       }
 
       span {

@@ -265,6 +265,24 @@
     }
   }
 
+  @keyframes text-letters-2-contact {
+    0% {
+      translate: -50% 100%;
+    }
+    16% {
+      translate: -50% 100%;
+    }
+    32% {
+      translate: -50% 100%;
+    }
+    72% {
+      translate: -50% 0;
+    }
+    100% {
+      translate: -50% 0;
+    }
+  }
+
   @keyframes text-group-1-lg {
     0% {
       translate: 0 0;

@@ -96,8 +96,18 @@ collections:
                     "Mobile Column",
                   ]
                 default: ["Add Column"]
-              - { label: "Image Source", name: "src", widget: "image" }
-              - { label: "Description", name: "description", widget: "string" }
+              - {
+                  label: "Image Source",
+                  name: "src",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  required: true,
+                }
         thumbnail: "/static/img/collage-1a.webp"
       - label: "Recorded Growth"
         name: "recorded_growth"
@@ -124,12 +134,23 @@ collections:
             widget: "list"
             collapsed: false
             fields:
-              - { label: "Image Caption", name: "caption", widget: "string" }
-              - { label: "Image Source", name: "src", widget: "image" }
+              - {
+                  label: "Image Caption",
+                  name: "caption",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  label: "Image Source",
+                  name: "src",
+                  widget: "image",
+                  required: true,
+                }
               - {
                   label: "SEO Description",
                   name: "description",
                   widget: "string",
+                  required: true,
                 }
   - label: "Resources Page"
     name: "resources_page"
@@ -167,7 +188,18 @@ collections:
             collapsed: false
             fields:
               - { label: "City", name: "city", widget: "string" }
-              - { label: "Image Source", name: "src", widget: "image" }
+              - {
+                  label: "Image Source",
+                  name: "src",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  label: "Image Description",
+                  name: "alt",
+                  widget: "string",
+                  required: true,
+                }
               - { label: "Address", name: "address", widget: "string" }
               - { label: "Phone", name: "phone", widget: "string" }
   - label: "Settings"

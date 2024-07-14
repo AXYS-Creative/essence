@@ -32,25 +32,27 @@
     @include row-center(space-between);
     gap: 40px;
 
-    @include mq-max("xxl") {
-      gap: 32px;
-    }
+    @media all {
+      @include mq-max("xxl") {
+        gap: 32px;
+      }
 
-    @include mq-max("xl") {
-      gap: 24px;
-    }
+      @include mq-max("xl") {
+        gap: 24px;
+      }
 
-    @include mq-max("lg") {
-      gap: 16px;
-    }
+      @include mq-max("lg") {
+        gap: 16px;
+      }
 
-    @include mq-max("md") {
-      flex-direction: column;
-      gap: 48px;
-    }
+      @include mq-max("md") {
+        flex-direction: column;
+        gap: 48px;
+      }
 
-    @include mq-max("sm") {
-      margin-block-end: 64px;
+      @include mq-max("sm") {
+        margin-block-end: 64px;
+      }
     }
 
     figure {
@@ -59,6 +61,21 @@
       @include mq-motion-allow {
         opacity: 0;
         scale: 0.9;
+
+        &.animate {
+          opacity: 1;
+          scale: 1;
+          transition: 2s $cubic-ease;
+
+          @include mq-min("md") {
+            transition: 1.6s $cubic-ease;
+            @for $i from 1 through 3 {
+              &:nth-of-type(#{$i}) {
+                transition-delay: 0.12s + 0.08s * $i;
+              }
+            }
+          }
+        }
       }
 
       @include mq-max("md") {
@@ -79,20 +96,6 @@
 
         @include mq-max("xl") {
           font-size: 18px;
-        }
-      }
-
-      &.animate {
-        @include mq-motion-allow {
-          opacity: 1;
-          scale: 1;
-          transition: 1.6s $cubic-ease;
-
-          @for $i from 1 through 3 {
-            &:nth-of-type(#{$i}) {
-              transition-delay: 0.12s + 0.08s * $i;
-            }
-          }
         }
       }
     }

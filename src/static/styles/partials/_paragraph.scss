@@ -148,7 +148,6 @@
   }
 
   &.hero-paragraph {
-    // padding-block: 364px;
     padding-block: 348px;
 
     @include mq-max("xxl") {
@@ -161,6 +160,13 @@
 
     @include mq-max("lg") {
       padding-block: 196px;
+    }
+
+    .essence-paragraph__heading {
+      .essence-paragraph__heading-title {
+        // starting state (prevent flicker when visiting page)
+        translate: 0 100%;
+      }
     }
   }
 }

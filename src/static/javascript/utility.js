@@ -58,7 +58,7 @@ const getLocalTime = (() => {
         timeZone: timezone,
         hour: "2-digit",
         minute: "2-digit",
-        second: "2-digit",
+        // second: "2-digit",
         hour12: true, // Toggle for 12 hour vs 24 hour clock
       };
       const timeString = new Intl.DateTimeFormat([], options).format(now);

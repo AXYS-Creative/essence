@@ -1,3 +1,22 @@
+section.contact-hero {
+  .classic-hero__heading {
+    &-text {
+      &-inner:last-of-type {
+        display: inline-flex;
+      }
+    }
+
+    &.animate {
+      $duration: 3.2s;
+      $duration-lg: 2.5s;
+      $delay-lg: 0.27s;
+      .classic-hero__heading-text-inner:last-of-type {
+        animation: text-letters-2-contact $duration $cubic-ease 0.2s forwards;
+      }
+    }
+  }
+}
+
 .locations {
   @include column-center;
   gap: 156px;
@@ -27,6 +46,23 @@
     border-radius: $radius;
     overflow: hidden;
     display: flex;
+
+    @include mq-motion-allow {
+      opacity: 0;
+      scale: 0.9;
+      transition: 1.6s $cubic-ease;
+
+      &.animate {
+        opacity: 1;
+        scale: 1;
+
+        @for $i from 1 through 3 {
+          &:nth-of-type(#{$i}) {
+            transition-delay: 0.12s + 0.08s * $i;
+          }
+        }
+      }
+    }
 
     @include mq-max("lg") {
       width: 64%;
@@ -83,6 +119,10 @@
       &:focus {
         color: var(--primary-accent-color);
 
+        span {
+          color: var(--primary-accent-color);
+        }
+
         path {
           fill: var(--primary-accent-color);
         }
@@ -90,13 +130,43 @@
 
       svg {
         flex-shrink: 0;
-        width: 14px;
+        width: 16px;
+        height: 16px;
         translate: 0 6px;
+
+        @include mq-max("md") {
+          translate: 0 3px;
+        }
 
         path {
           @include mq-motion-allow {
             transition: 0.3s ease;
           }
+        }
+      }
+
+      // .lottie {
+      //   width: 14px;
+      //   flex-shrink: 0;
+      //   scale: 6;
+      //   translate: 0 6px;
+
+      //   @include mq-max("sm") {
+      //     scale: 1;
+      //     width: 64px;
+      //     translate: -24px 0;
+      //   }
+
+      //   &-2 {
+      //     scale: 3;
+      //   }
+      // }
+
+      span {
+        // width: 280px;
+
+        @include mq-motion-allow {
+          transition: 0.3s ease;
         }
       }
     }
