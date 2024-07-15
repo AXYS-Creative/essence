@@ -1,5 +1,5 @@
 import { newsletterCursor } from "./mouseCursor.js";
-import { closeNav } from "../nav.js";
+import { closeNav } from "../components/nav.js";
 // import { lenis } from "./lenis.js";
 
 const dialog = document.querySelector("dialog"),

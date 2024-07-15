@@ -1,4 +1,4 @@
-import { maxXxl, maxXl, maxLg, maxMd, minMd, maxSm } from "./utility.js";
+import { maxXxl, maxXl, maxLg, maxMd, minMd, maxSm } from "../utility.js";
 
 export let scrollPosition = 0;
 export let scrollFromTop;
@@ -25,8 +25,12 @@ let bodyPadding = parseInt(
   10
 );
 
-firstFooterNavLink.addEventListener("focus", () => {
-  window.scrollTo(0, document.body.scrollHeight);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    firstFooterNavLink.addEventListener("focus", () => {
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  }
 });
 
 export const throttle = (func, limit) => {

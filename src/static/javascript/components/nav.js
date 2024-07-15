@@ -1,5 +1,5 @@
-import { maxSm, minMd, maxLg, isSafari } from "./utility.js";
-import { navCursor, navElements } from "./core/mouseCursor.js";
+import { maxSm, minMd, maxLg, isSafari } from "../utility.js";
+import { navCursor, navElements } from "../core/mouseCursor.js";
 // import { lenis } from "./core/lenis.js";
 import {
   scrollPosition,
@@ -8,7 +8,7 @@ import {
   updateScrollDependentElements,
   ctaWrapper,
   heroSubText,
-} from "./scroll.js";
+} from "../core/scroll.js";
 
 export let isNavOpen;
 
@@ -123,7 +123,7 @@ navMenuBackdrop.forEach((el) =>
 
 // headerLogo.addEventListener("click", closeNav);
 
-// Keyboard accessible nav-links. Reposition on focus
+// Keyboard accessible nav-links. Reposition on focus / tab
 const keyboardAccessibleNavLinks = (
   percentage,
   multiplier,
@@ -142,12 +142,22 @@ const keyboardAccessibleNavLinks = (
     return index * multiplier;
   };
 
-  navLinks.forEach((link, index) => {
-    link.addEventListener("focus", () => focusHandler(index));
+  let lastFocusedElement = null;
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      navLinks.forEach((link, index) => {
+        link.addEventListener("focus", () => focusHandler(index));
+        lastFocusedElement = index;
+      });
+    }
+  });
+
+  navLinks.forEach((link) => {
     link.addEventListener("blur", blurHandler);
     link.addEventListener("mousedown", (event) => {
       // Remove "focus" for mouse click. 0 indicates left mouse click
-      if (event.button === 0) {
+      if (event.button === 0 && lastFocusedElement !== null) {
         blurHandler();
       }
     });
