@@ -2055,7 +2055,7 @@ section.classic-hero {
 }
 @media screen and (max-width: 480px) {
   section.classic-hero {
-    padding-block: 228px;
+    padding-block-start: 256px;
   }
 }
 section.classic-hero * {
@@ -5168,7 +5168,7 @@ body:has(.about-hero) .text-block {
 @media screen and (max-width: 480px) {
   .growth-section .digit {
     width: calc(32px + 4vw);
-    height: calc(68px + 6vw);
+    height: calc(60px + 6vw);
   }
 }
 @media all {
@@ -5368,6 +5368,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 @media (prefers-reduced-motion: no-preference) {
   .locations__details-address, .locations__details-phone, .locations__details-time {
     transition: 0.3s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  .locations__details-address, .locations__details-phone, .locations__details-time {
+    width: 248px;
   }
 }
 .locations__details-address:hover, .locations__details-address:focus, .locations__details-phone:hover, .locations__details-phone:focus, .locations__details-time:hover, .locations__details-time:focus {

@@ -221,7 +221,8 @@ body:has(.about-hero) {
 
       @include mq-max("sm") {
         width: calc(32px + 4vw);
-        height: calc(68px + 6vw);
+        // height: calc(68px + 6vw);
+        height: calc(60px + 6vw);
       }
     }
 

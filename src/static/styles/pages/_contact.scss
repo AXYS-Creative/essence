@@ -115,6 +115,10 @@ section.contact-hero {
         transition: 0.3s ease;
       }
 
+      @include mq-max("md") {
+        width: 248px;
+      }
+
       &:hover,
       &:focus {
         color: var(--primary-accent-color);
