@@ -21,7 +21,7 @@
 
   @include mq-max("sm") {
     padding-block-start: 224px;
-    padding-inline-start: $body-padding-sm * 3;
+    padding-inline-start: $body-padding-sm;
   }
 
   &__category {
@@ -134,6 +134,7 @@
 
   &__footer-nav {
     $link-spacing: 24px;
+    $link-spacing-sm: 16px;
 
     position: relative;
     z-index: 1;
@@ -142,16 +143,32 @@
     .simple-link {
       position: absolute;
 
+      @include mq-max("sm") {
+        font-size: 16px;
+      }
+
+      @include mq-max("xxs") {
+        font-size: 13px;
+      }
+
       &::before {
         display: none;
       }
 
       &:first-of-type {
         right: calc(50% + $link-spacing);
+
+        @include mq-max("sm") {
+          right: calc(50% + $link-spacing-sm);
+        }
       }
 
       &:last-of-type {
         left: calc(50% + $link-spacing);
+
+        @include mq-max("sm") {
+          left: calc(50% + $link-spacing-sm);
+        }
       }
     }
   }
@@ -188,17 +205,44 @@
       border-radius: 50%;
       backdrop-filter: blur(8px);
 
-      @include mq-max("xxl") {
-        width: 116px;
-        height: 116px;
+      @media all {
+        @include mq-max("xxl") {
+          width: 116px;
+          height: 116px;
+        }
+
+        @include mq-max("xl") {
+          width: 96px;
+          height: 96px;
+        }
+
+        @include mq-max("md") {
+          width: 14vw;
+          height: 14vw;
+        }
       }
 
       svg {
         width: 22px;
         translate: 3px 0;
 
-        @include mq-max("xxl") {
-          width: 20px;
+        @media all {
+          @include mq-max("xxl") {
+            width: 20px;
+          }
+
+          @include mq-max("xl") {
+            width: 16px;
+          }
+
+          @include mq-max("md") {
+            width: 2.6vw;
+            translate: 2px 0;
+          }
+
+          @include mq-max("sm") {
+            translate: 1px 0;
+          }
         }
 
         path {
@@ -214,8 +258,7 @@
     opacity: 0;
     pointer-events: none;
     width: 80vw;
-    height: 80vh;
-    // height: 50vw;
+    height: 46vw;
 
     @include mq-motion-allow {
       transition: 0.6s ease;
