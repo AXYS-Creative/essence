@@ -20,7 +20,6 @@
   }
 
   @include mq-max("sm") {
-    padding-block-start: 224px;
     padding-inline-start: $body-padding-sm;
   }
 

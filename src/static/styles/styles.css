@@ -5575,7 +5575,6 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 }
 @media screen and (max-width: 480px) {
   .post-hero {
-    padding-block-start: 224px;
     padding-inline-start: 16px;
   }
 }
