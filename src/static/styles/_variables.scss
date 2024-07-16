@@ -20,10 +20,14 @@ $content-padding: $body-padding * 2.4;
 $content-padding-xxl: $body-padding-xxl * 2.4;
 $content-padding-md: $body-padding-md * 2;
 
-$content-padding-thin: $body-padding * 4;
-$content-padding-thin-xxl: $body-padding-xxl * 4.4;
-$content-padding-thin-xl: $body-padding-xxl * 3.6;
-$content-padding-thin-md: $body-padding-md * 2;
+// $content-padding-thin: $body-padding * 4;
+$content-padding-thin: 16vw;
+// $content-padding-thin-xxl: $body-padding-xxl * 4.4;
+$content-padding-thin-xxl: 14vw;
+// $content-padding-thin-xl: $body-padding-xxl * 3.6;
+$content-padding-thin-xl: 12vw;
+// $content-padding-thin-md: $body-padding-md * 2;
+$content-padding-thin-md: 12vw;
 
 $simple-link-offset: 24px;
 

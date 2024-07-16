@@ -19,6 +19,7 @@ section.contact-hero {
 
 .locations {
   @include column-center;
+  @include thin-section;
   gap: 156px;
   padding-block: 296px;
 
@@ -37,12 +38,12 @@ section.contact-hero {
     @include mq-max("lg") {
       flex-direction: column;
       align-items: flex-start;
-      gap: 24px;
+      // gap: 24px;
     }
   }
 
   &__figure {
-    width: 32%;
+    flex: 1;
     border-radius: $radius;
     overflow: hidden;
     display: flex;
@@ -55,21 +56,7 @@ section.contact-hero {
       &.animate {
         opacity: 1;
         scale: 1;
-
-        @for $i from 1 through 3 {
-          &:nth-of-type(#{$i}) {
-            transition-delay: 0.12s + 0.08s * $i;
-          }
-        }
       }
-    }
-
-    @include mq-max("lg") {
-      width: 64%;
-    }
-
-    @include mq-max("md") {
-      width: 100%;
     }
 
     img {
@@ -80,21 +67,12 @@ section.contact-hero {
   &__details {
     @include column-start;
     gap: 24px;
-    width: 36%;
+    flex: 1;
     // position: sticky;
     // top: 40vh;
 
-    @include mq-max("xxl") {
-      width: 40%;
-    }
-
-    @include mq-max("xl") {
-      width: 48%;
-    }
-
     @include mq-max("lg") {
       gap: 16px;
-      width: 100%;
     }
 
     &-title {
@@ -115,8 +93,8 @@ section.contact-hero {
         transition: 0.3s ease;
       }
 
-      @include mq-max("md") {
-        width: 248px;
+      @include mq-max("lg") {
+        width: 264px;
       }
 
       &:hover,

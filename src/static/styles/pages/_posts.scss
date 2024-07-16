@@ -1,6 +1,5 @@
 .post-hero {
   @include thin-section;
-  @include column-center;
   padding-block: 448px;
 
   @include mq-max("xxl") {
@@ -64,7 +63,6 @@
   article {
     margin-block-end: 128px;
     margin: auto;
-    max-width: 1024px;
 
     h2 {
       @extend .h5;
@@ -131,6 +129,14 @@
     }
   }
 
+  &.post-body__podcast {
+    h2 {
+      margin: auto;
+      text-transform: capitalize;
+      margin-block-end: 64px;
+    }
+  }
+
   &__footer-nav {
     $link-spacing: 24px;
     $link-spacing-sm: 16px;
@@ -176,15 +182,6 @@
           left: calc(50% + $link-spacing-sm);
         }
       }
-    }
-  }
-
-  &.post-body__podcast {
-    h2 {
-      max-width: 1024px;
-      margin: auto;
-      text-transform: capitalize;
-      margin-block-end: 64px;
     }
   }
 }

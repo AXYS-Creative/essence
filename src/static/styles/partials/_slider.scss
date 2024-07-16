@@ -5,15 +5,10 @@
   $header-height-xl: 236px;
 
   @include row-start;
-  padding-inline: 248px;
+  @include thin-section;
   gap: 48px;
 
-  @include mq-max("xxl") {
-    padding-inline: 196px;
-  }
-
   @include mq-max("xl") {
-    padding-inline: $content-padding-xxl;
     gap: 24px;
   }
 
@@ -69,11 +64,11 @@
       margin-block-end: 40px;
 
       @include mq-max("xl") {
-        width: 364px;
+        width: 316px;
       }
 
       @include mq-max("lg") {
-        width: 328px;
+        width: 296px;
       }
 
       @include mq-max("md") {
