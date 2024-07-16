@@ -8,7 +8,7 @@ locations:
   - city: London
     src: /static/img/location-uk.webp
     alt: London office. Street view of a vintage brick building.
-    address: 59 West Street, London W51 8PG
+    address: 59 Willow Street, London W51 8PG
     phone: 0871 527 9286
     timezone: "Europe/London"
   - city: Dubai
