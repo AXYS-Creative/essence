@@ -1199,19 +1199,11 @@ section {
 
   // All Heroes (gradient background)
   &.hero-section {
-    position: relative;
+    @include section-theme(linear-gradient($grey-light, $white));
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      translate: -50% 0;
-      width: 100vw;
-      height: 100%;
-      background: linear-gradient($grey-light, $white);
-      z-index: -1;
-    }
+  &.dark-section {
+    @include section-theme(var(--primary-font-color));
   }
 
   // Non Paragraph Heroes

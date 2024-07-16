@@ -184,73 +184,77 @@
 }
 
 .video-section {
-  background: var(--primary-font-color);
   @include column-center;
   position: relative;
+  background: var(--primary-font-color);
 
   &__poster {
     width: 100%;
     aspect-ratio: 2 / 1;
     border-radius: $radius;
+    cursor: pointer;
   }
 
-  &__controls {
+  &__play-btn {
     @include absolute-center;
+    @include row-center;
+    border: 2px solid var(--background-color);
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    pointer-events: none;
 
-    &-play-btn {
-      @include row-center;
-      border: 2px solid var(--background-color);
-      width: 128px;
-      height: 128px;
-      border-radius: 50%;
-      backdrop-filter: blur(8px);
+    @media all {
+      @include mq-motion-allow {
+        transition: 0.8s $cubic-ease;
+      }
+
+      @include mq-max("xxl") {
+        width: 116px;
+        height: 116px;
+      }
+
+      @include mq-max("xl") {
+        width: 96px;
+        height: 96px;
+      }
+
+      @include mq-max("md") {
+        width: 14vw;
+        height: 14vw;
+      }
+    }
+
+    svg {
+      width: 22px;
+      translate: 3px 0;
 
       @media all {
         @include mq-max("xxl") {
-          width: 116px;
-          height: 116px;
+          width: 20px;
         }
 
         @include mq-max("xl") {
-          width: 96px;
-          height: 96px;
+          width: 16px;
         }
 
         @include mq-max("md") {
-          width: 14vw;
-          height: 14vw;
+          width: 2.6vw;
+          translate: 2px 0;
+        }
+
+        @include mq-max("sm") {
+          translate: 1px 0;
         }
       }
 
-      svg {
-        width: 22px;
-        translate: 3px 0;
-
-        @media all {
-          @include mq-max("xxl") {
-            width: 20px;
-          }
-
-          @include mq-max("xl") {
-            width: 16px;
-          }
-
-          @include mq-max("md") {
-            width: 2.6vw;
-            translate: 2px 0;
-          }
-
-          @include mq-max("sm") {
-            translate: 1px 0;
-          }
-        }
-
-        path {
-          fill: var(--background-color);
-        }
+      path {
+        fill: var(--background-color);
       }
     }
   }
+  // }
 
   iframe {
     @include absolute-center;

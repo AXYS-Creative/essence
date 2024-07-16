@@ -44,10 +44,10 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         <!-- prettier-ignore -->
         {% if post.data.title %} 
-        {{ post.data.title }} 
-      {% else %} 
-        Untitled 
-      {%endif %}
+          {{ post.data.title }} 
+        {% else %} 
+          Untitled 
+        {%endif %}
       </a>
     </li>
     {% endfor %}

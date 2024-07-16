@@ -71,6 +71,10 @@
     overflow: hidden;
 
     span {
+      @include mq-motion-allow {
+        transition: color 1.2s $cubic-ease;
+      }
+
       &:last-of-type {
         translate: 0 100%;
         position: absolute;
