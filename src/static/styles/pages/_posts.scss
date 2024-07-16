@@ -136,8 +136,15 @@
     $link-spacing: 24px;
     $link-spacing-sm: 16px;
 
+    padding-block: 0 128px;
     position: relative;
     z-index: 1;
+
+    @media all {
+      @include mq-max("xxl") {
+        padding-block: 64px 148px;
+      }
+    }
 
     // Modifier!
     .simple-link {
@@ -184,15 +191,44 @@
 }
 
 .video-section {
+  $btn-hover-scale: 1.25;
+
   @include column-center;
-  position: relative;
-  background: var(--primary-font-color);
+  min-height: 100vh;
+  min-height: 100dvh;
 
   &__poster {
     width: 100%;
     aspect-ratio: 2 / 1;
     border-radius: $radius;
     cursor: pointer;
+
+    &:hover {
+      & + .video-section__play-btn {
+        scale: $btn-hover-scale;
+        // border: 3px solid var(--primary-accent-color);
+        // scale: 0.75;
+
+        // svg {
+        //   path {
+        //     fill: var(--primary-accent-color);
+        //   }
+        // }
+      }
+    }
+
+    &:active {
+      & + .video-section__play-btn {
+        scale: 1;
+        // border: 2px solid var(--background-color);
+
+        // svg {
+        //   path {
+        //     fill: var(--background-color);
+        //   }
+        // }
+      }
+    }
   }
 
   &__play-btn {
@@ -202,7 +238,7 @@
     width: 128px;
     height: 128px;
     border-radius: 50%;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     pointer-events: none;
 
     @media all {
@@ -224,6 +260,10 @@
         width: 14vw;
         height: 14vw;
       }
+    }
+
+    &:focus {
+      scale: $btn-hover-scale;
     }
 
     svg {
@@ -251,27 +291,49 @@
 
       path {
         fill: var(--background-color);
+
+        @include mq-motion-allow {
+          transition: 0.8s $cubic-ease;
+        }
       }
     }
   }
-  // }
 
-  iframe {
-    @include absolute-center;
-    scale: 0.75;
+  &__iframe-wrapper {
+    position: fixed;
+    top: 0;
+    @include row-center;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
     opacity: 0;
     pointer-events: none;
-    width: 80vw;
-    height: 46vw;
+    background: rgba($black, 0.95);
+    backdrop-filter: blur(3px);
+    z-index: 10;
+    cursor: alias;
 
     @include mq-motion-allow {
       transition: 0.6s ease;
     }
 
+    iframe {
+      width: 80vw;
+      height: 46vw;
+      scale: 0.8;
+
+      @include mq-motion-allow {
+        transition: 0.6s ease;
+      }
+    }
+
     &.active {
       opacity: 1;
       pointer-events: all;
-      scale: 1;
+
+      iframe {
+        scale: 1;
+      }
     }
   }
 }

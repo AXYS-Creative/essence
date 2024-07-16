@@ -8,7 +8,7 @@ quote: Essentialism is not about doing more with less; it's about doing the
   meaningful and fulfilling.
 guest: Marie Kondo
 poster: /static/img/podcast-poster.png
-video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/wVXrdEYA6XE?si=aLvJWxO1mAWzzr65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cnTf2UxjGW8?si=NX78TvzTHdDmteNb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - general
 ---
