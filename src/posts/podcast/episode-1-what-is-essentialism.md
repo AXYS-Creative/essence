@@ -2,10 +2,8 @@
 title: "Episode #1 - What is Essentialism?"
 title_short: "What is Essentialism?"
 episode: "001"
-description: Tune in as we go over who we are and what essentialism offers for you.
-quote: Essentialism is not about doing more with less; it's about doing the
-  right things with precision and purpose, creating a life that is both
-  meaningful and fulfilling.
+description: "Tune in as we go over who we are and what essentialism offers for you."
+quote: "Essentialism is not about doing more with less; it's about doing the right things with precision and purpose, creating a life that is both meaningful and fulfilling."
 guest: Marie Kondo
 poster: /static/img/podcast-poster.png
 video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cnTf2UxjGW8?si=NX78TvzTHdDmteNb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
