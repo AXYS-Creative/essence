@@ -10,6 +10,7 @@ video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embe
 tags:
   - physical
   - emotion
+  - popular
 ---
 
 In this refreshing episode, we dive into the art and science of decluttering with Marie Johnson, a professional organizer and bestselling author known for her holistic approach to tidying up. Marie starts by defining decluttering as more than just a physical task—it’s a mindset shift towards intentional living. She explains that decluttering is about evaluating the role of possessions in our lives and making conscious choices to surround ourselves only with what brings joy and utility.

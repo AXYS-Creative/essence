@@ -9,6 +9,7 @@ poster: /static/img/podcast-poster.png
 video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/TiXOQn7z9Hg?si=KFApWPZ3uumYWJY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - finance
+  - popular
 ---
 
 In this enlightening episode, we explore the essentials of personal finance with Lance Mitchell, a seasoned financial advisor and author known for his pragmatic approach to money management. Lance begins by explaining the foundational principles of personal finance, emphasizing the importance of budgeting, saving, and investing. He stresses that financial literacy is crucial for everyone, regardless of their income level, and outlines basic steps to take control of one's financial future.

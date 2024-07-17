@@ -9,6 +9,10 @@ poster: /static/img/podcast-poster.png
 video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/TiXOQn7z9Hg?si=KFApWPZ3uumYWJY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - general
+  - physical
+  - emotion
+  - finance
+  - popular
 ---
 
 In this episode, we introduce the concept of essentialism and provide a comprehensive guide to getting started on your journey toward a more intentional and focused life. Essentialism is about prioritizing what truly matters and eliminating the non-essential, allowing you to live a life of purpose and clarity. We break down the fundamental principles of essentialism and offer practical tips to help you embrace this transformative philosophy.
