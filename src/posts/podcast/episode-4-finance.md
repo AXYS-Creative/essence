@@ -6,7 +6,7 @@ description: "In this episode, we break down the fundamentals of personal financ
 quote: "Financial independence isn't about how much you earn; it's about how you manage and grow what you have, aligning your financial decisions with your life goals."
 guest: Lance Mitchell
 poster: /static/img/podcast-poster.png
-video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cnTf2UxjGW8?si=NX78TvzTHdDmteNb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/TiXOQn7z9Hg?si=KFApWPZ3uumYWJY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - finance
 ---

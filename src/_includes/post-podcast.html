@@ -26,14 +26,38 @@ layout: "app"
     src="{{ poster }}"
     alt="{{ title_short }}"
   />
-  <button class="video-section__play-btn">
+  <button class="video-section__play-btn" type="button">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
       <path
         d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
       />
     </svg>
   </button>
-  <div class="video-section__iframe-wrapper">{{ video_embed | safe}}</div>
+  <dialog class="video-section__dialog dialog" id="video-dialog">
+    <div class="mouse-cursor mouse-cursor__video" aria-hidden="true">
+      <p>Close</p>
+    </div>
+
+    <div class="dialog__close-btn-wrapper">
+      <button
+        class="dialog__close-btn"
+        type="button"
+        aria-controls="video-dialog"
+        aria-label="Close newsletter dialog"
+        aria-expanded="false"
+      >
+        <div class="dots-wrapper">
+          <span class="dots-wrapper__dot top-left"></span>
+          <span class="dots-wrapper__dot top-right"></span>
+          <span class="dots-wrapper__dot center-dot"></span>
+          <span class="dots-wrapper__dot bottom-left"></span>
+          <span class="dots-wrapper__dot bottom-right"></span>
+        </div>
+      </button>
+    </div>
+    <!-- <button class="video-section__close-modal" type="button">Close</button> -->
+    {{ video_embed | safe}}
+  </dialog>
 </section>
 
 <section class="post-body post-body__podcast">

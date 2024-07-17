@@ -2,11 +2,11 @@ import { newsletterCursor } from "./mouseCursor.js";
 import { closeNav } from "../components/nav.js";
 // import { lenis } from "./lenis.js";
 
-const dialog = document.querySelector("dialog"),
+const dialogNewsletter = document.querySelector(".newsletter-dialog"),
   cta = document.querySelector(".cta"),
-  closeButton = document.querySelector("dialog button");
+  closeButton = document.querySelector(".newsletter-dialog button");
 
-const dialogElems = dialog.querySelectorAll(
+const dialogChildren = dialogNewsletter.querySelectorAll(
   "a, button, input, textarea, select"
 );
 
@@ -16,16 +16,16 @@ const setTabIndex = (elements, value) => {
 
 const openModal = () => {
   closeNav();
-  dialog.showModal();
-  setTabIndex(dialogElems, "0");
+  dialogNewsletter.showModal();
+  setTabIndex(dialogChildren, "0");
   closeButton.setAttribute("aria-expanded", "true");
   document.body.style.overflow = "hidden";
   // lenis.stop();
 };
 
 const closeModal = () => {
-  dialog.close();
-  setTabIndex(dialogElems, "-1");
+  dialogNewsletter.close();
+  setTabIndex(dialogChildren, "-1");
   closeButton.setAttribute("aria-expanded", "false");
   newsletterCursor.classList.remove("active");
   document.body.style.overflow = "auto";
@@ -35,9 +35,9 @@ const closeModal = () => {
 cta.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
 
-setTabIndex(dialogElems, "-1");
+setTabIndex(dialogChildren, "-1");
 
-dialog.addEventListener("click", (e) => {
+dialogNewsletter.addEventListener("click", (e) => {
   if (e.target.classList.contains("backdrop")) {
     closeModal();
   }

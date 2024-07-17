@@ -1608,23 +1608,73 @@ footer {
   }
 }
 
-dialog {
+h1 {
+  @extend .h1;
+}
+h2 {
+  @extend .h2;
+}
+h3 {
+  @extend .h3;
+}
+h4 {
+  @extend .h4;
+}
+h5 {
+  @extend .h5;
+}
+h6 {
+  @extend .h6;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+
+  @include mq-max("xxl") {
+    font-size: 18px;
+  }
+
+  @include mq-max("sm") {
+    font-size: 16px;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+cite {
+  font-style: normal;
+}
+
+.dialog {
   isolation: isolate;
+  position: fixed;
   border: none;
   background: transparent;
-  z-index: 10;
+  top: 0;
+  pointer-events: none;
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   height: 100dvh;
   max-height: 100vh; // Override system styles on dialog (mobile)
   display: block;
-  position: fixed;
-  top: 0;
-  pointer-events: none;
-
-  @include mq-motion-allow {
-    transition: opacity 1s ease;
-  }
+  z-index: 10;
 
   .dialog__close-btn-wrapper {
     // DUPLICATE CODE AT .menu-btn__wrapper
@@ -1695,239 +1745,8 @@ dialog {
     }
   }
 
-  .newsletter-form {
-    @include absolute-center;
-    @include column-center;
-    gap: 16px;
-    max-width: 1024px;
-    padding: 96px;
-
-    @include mq-motion-allow {
-      transition: opacity 0.5s ease;
-    }
-
-    @include mq-max("md") {
-      padding: 128px 48px;
-      width: 86%;
-    }
-
-    @include mq-max("sm") {
-      padding: 128px 0;
-    }
-
-    & * {
-      color: var(--background-color);
-    }
-
-    h2 {
-      display: flex;
-      text-align: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      overflow: hidden;
-      text-wrap: nowrap;
-
-      @include mq-max("xxl") {
-        gap: 10px;
-      }
-
-      @include mq-max("xl") {
-        gap: 8px;
-      }
-
-      @include mq-max("sm") {
-        flex-direction: column;
-        font-size: 30px;
-        line-height: 30px;
-        margin-bottom: 24px;
-      }
-
-      span {
-        translate: 0 100%;
-
-        @include mq-motion-allow {
-          transition: translate 1s $cubic-ease 0.12s;
-        }
-
-        @include mq-max("sm") {
-          translate: 0 240%;
-        }
-      }
-    }
-
-    input[type="email"],
-    button[type="submit"] {
-      @include body-font-styles;
-      width: calc(100% - 96px);
-      border: 1px solid var(--background-color);
-      border-radius: $radius;
-      padding: 12px 4px;
-      font-size: 20px;
-      width: 764px;
-
-      translate: 0 120%;
-      opacity: 0;
-      pointer-events: none;
-
-      @include mq-max("xxl") {
-        width: 572px;
-      }
-
-      @include mq-max("xl") {
-        padding: 10px 4px;
-        width: 448px;
-      }
-
-      @include mq-max("md") {
-        padding: 12px 4px;
-        width: 100%;
-      }
-    }
-
-    input[type="email"] {
-      background: transparent;
-      text-align: center;
-
-      @include mq-motion-allow {
-        transition: 0.9s $cubic-ease 0.06s;
-      }
-
-      &::placeholder {
-        color: var(--background-color);
-        opacity: 0.4;
-      }
-    }
-
-    button[type="submit"] {
-      border: none;
-      background: $grey-light;
-      color: var(--primary-font-color);
-
-      @include mq-motion-allow {
-        transition: 0.8s $cubic-ease 0s, background 0.3s ease;
-      }
-
-      &:hover,
-      &:focus {
-        background: var(--background-color);
-      }
-    }
-
-    .form-message-container {
-      position: relative;
-      width: 100%;
-      height: 36px;
-      opacity: 0;
-      translate: 0 100%;
-
-      @include mq-motion-allow {
-        transition: 0.3s ease 0s;
-      }
-
-      .status-message {
-        @include row-center;
-        @include absolute-center;
-        @include body-font-styles;
-        width: 100%;
-        text-wrap: nowrap;
-        opacity: 0;
-        pointer-events: none;
-
-        @include mq-motion-allow {
-          transition: opacity 0.24s ease 0.12s;
-        }
-
-        @include mq-max("md") {
-          text-wrap: wrap;
-        }
-
-        @include mq-max("sm") {
-          font-size: 13px;
-        }
-
-        .success-icon,
-        .error-icon {
-          width: 28px;
-          height: 28px;
-          flex-shrink: 0;
-          margin-inline-end: 12px;
-          padding: 4px;
-          scale: 0.5;
-
-          @include mq-motion-allow {
-            transition: 0.3s ease 0.12s;
-          }
-
-          @include mq-max("sm") {
-            width: 24px;
-            height: 24px;
-          }
-        }
-
-        &.active {
-          opacity: 1;
-          pointer-events: all;
-
-          .success-icon,
-          .error-icon {
-            scale: 1.2;
-          }
-        }
-      }
-
-      .success-message {
-        color: $green;
-
-        .success-icon {
-          border: 1px solid $green;
-          border-radius: 50%;
-
-          path {
-            fill: $green;
-          }
-        }
-      }
-
-      .error-message {
-        color: $yellow;
-
-        .error-icon {
-          border-radius: 0;
-
-          path {
-            fill: $yellow;
-          }
-        }
-      }
-    }
-  }
-
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--primary-font-color);
-    // background: var(--primary-accent-color);
-    z-index: -1;
-    cursor: alias;
-
-    @include mq-motion-allow {
-      transition: left 0.6s ease 0.5s;
-    }
-  }
-
-  .mouse-cursor {
-    p {
-      background: linear-gradient($grey-light, $white);
-      color: var(--primary-font-color);
-    }
-  }
-
   &[open] {
     opacity: 1;
-    display: block;
     pointer-events: all;
 
     .dialog__close-btn-wrapper {
@@ -1945,115 +1764,322 @@ dialog {
         }
       }
     }
+  }
 
-    .dialog__close-btn {
-      opacity: 1;
-      pointer-events: all;
+  &.newsletter-dialog {
+    @include mq-motion-allow {
+      transition: opacity 1s ease;
     }
 
     .newsletter-form {
+      @include absolute-center;
+      @include column-center;
+      gap: 16px;
+      max-width: 1024px;
+      padding: 96px;
+
+      @include mq-motion-allow {
+        transition: opacity 0.5s ease;
+      }
+
+      @include mq-max("md") {
+        padding: 128px 48px;
+        width: 86%;
+      }
+
+      @include mq-max("sm") {
+        padding: 128px 0;
+      }
+
+      & * {
+        color: var(--background-color);
+      }
+
       h2 {
+        display: flex;
+        text-align: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        text-wrap: nowrap;
+
+        @include mq-max("xxl") {
+          gap: 10px;
+        }
+
+        @include mq-max("xl") {
+          gap: 8px;
+        }
+
+        @include mq-max("sm") {
+          flex-direction: column;
+          font-size: 30px;
+          line-height: 30px;
+          margin-bottom: 24px;
+        }
+
         span {
-          translate: 0 0;
+          translate: 0 100%;
 
           @include mq-motion-allow {
-            transition: translate 0.8s $cubic-ease 0.3s;
+            transition: translate 1s $cubic-ease 0.12s;
+          }
+
+          @include mq-max("sm") {
+            translate: 0 240%;
           }
         }
       }
 
       input[type="email"],
       button[type="submit"] {
-        translate: 0 0;
-        opacity: 1;
-        pointer-events: all;
+        @include body-font-styles;
+        width: calc(100% - 96px);
+        border: 1px solid var(--background-color);
+        border-radius: $radius;
+        padding: 12px 4px;
+        font-size: 20px;
+        width: 764px;
+
+        translate: 0 120%;
+        opacity: 0;
+        pointer-events: none;
+
+        @include mq-max("xxl") {
+          width: 572px;
+        }
+
+        @include mq-max("xl") {
+          padding: 10px 4px;
+          width: 448px;
+        }
+
+        @include mq-max("md") {
+          padding: 12px 4px;
+          width: 100%;
+        }
       }
 
       input[type="email"] {
+        background: transparent;
+        text-align: center;
+
         @include mq-motion-allow {
-          transition: translate 0.9s $cubic-ease 0.4s,
-            opacity 0.7s $cubic-ease 0.4s, background 0.3s ease, color 0.3s ease;
+          transition: 0.9s $cubic-ease 0.06s;
+        }
+
+        &::placeholder {
+          color: var(--background-color);
+          opacity: 0.4;
         }
       }
 
       button[type="submit"] {
+        border: none;
+        background: $grey-light;
+        color: var(--primary-font-color);
+
         @include mq-motion-allow {
-          transition: translate 1s $cubic-ease 0.5s,
-            opacity 0.8s $cubic-ease 0.5s, background 0.3s ease, color 0.3s ease;
+          transition: 0.8s $cubic-ease 0s, background 0.3s ease;
+        }
+
+        &:hover,
+        &:focus {
+          background: var(--background-color);
         }
       }
 
       .form-message-container {
-        opacity: 1;
-        translate: 0 0;
+        position: relative;
+        width: 100%;
+        height: 36px;
+        opacity: 0;
+        translate: 0 100%;
 
         @include mq-motion-allow {
-          transition: 0.8s $cubic-ease 0.5s;
+          transition: 0.3s ease 0s;
+        }
+
+        .status-message {
+          @include row-center;
+          @include absolute-center;
+          @include body-font-styles;
+          width: 100%;
+          text-wrap: nowrap;
+          opacity: 0;
+          pointer-events: none;
+
+          @include mq-motion-allow {
+            transition: opacity 0.24s ease 0.12s;
+          }
+
+          @include mq-max("md") {
+            text-wrap: wrap;
+          }
+
+          @include mq-max("sm") {
+            font-size: 13px;
+          }
+
+          .success-icon,
+          .error-icon {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+            margin-inline-end: 12px;
+            padding: 4px;
+            scale: 0.5;
+
+            @include mq-motion-allow {
+              transition: 0.3s ease 0.12s;
+            }
+
+            @include mq-max("sm") {
+              width: 24px;
+              height: 24px;
+            }
+          }
+
+          &.active {
+            opacity: 1;
+            pointer-events: all;
+
+            .success-icon,
+            .error-icon {
+              scale: 1.2;
+            }
+          }
+        }
+
+        .success-message {
+          color: $green;
+
+          .success-icon {
+            border: 1px solid $green;
+            border-radius: 50%;
+
+            path {
+              fill: $green;
+            }
+          }
+        }
+
+        .error-message {
+          color: $yellow;
+
+          .error-icon {
+            border-radius: 0;
+
+            path {
+              fill: $yellow;
+            }
+          }
         }
       }
     }
 
     .backdrop {
-      left: 0;
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-font-color);
+      // background: var(--primary-accent-color);
+      z-index: -1;
+      cursor: alias;
 
       @include mq-motion-allow {
-        transition: left 0.6s ease 0s;
+        transition: left 0.6s ease 0.5s;
+      }
+    }
+
+    .mouse-cursor {
+      p {
+        background: linear-gradient($grey-light, $white);
+        color: var(--primary-font-color);
+      }
+    }
+
+    &[open] {
+      // opacity: 1;
+      display: block;
+      // pointer-events: all;
+
+      // .dialog__close-btn-wrapper {
+      //   opacity: 1;
+      //   pointer-events: all;
+      //   transition: 0.3s ease 0.4s;
+
+      //   .dots-wrapper {
+      //     rotate: 90deg;
+      //     transition: 0.8s $cubic-ease-sudden-back-strong 0.4s;
+
+      //     .center-dot {
+      //       opacity: 1;
+      //       transition: 0.3s ease 1s;
+      //     }
+      //   }
+      // }
+
+      .dialog__close-btn {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .newsletter-form {
+        h2 {
+          span {
+            translate: 0 0;
+
+            @include mq-motion-allow {
+              transition: translate 0.8s $cubic-ease 0.3s;
+            }
+          }
+        }
+
+        input[type="email"],
+        button[type="submit"] {
+          translate: 0 0;
+          opacity: 1;
+          pointer-events: all;
+        }
+
+        input[type="email"] {
+          @include mq-motion-allow {
+            transition: translate 0.9s $cubic-ease 0.4s,
+              opacity 0.7s $cubic-ease 0.4s, background 0.3s ease,
+              color 0.3s ease;
+          }
+        }
+
+        button[type="submit"] {
+          @include mq-motion-allow {
+            transition: translate 1s $cubic-ease 0.5s,
+              opacity 0.8s $cubic-ease 0.5s, background 0.3s ease,
+              color 0.3s ease;
+          }
+        }
+
+        .form-message-container {
+          opacity: 1;
+          translate: 0 0;
+
+          @include mq-motion-allow {
+            transition: 0.8s $cubic-ease 0.5s;
+          }
+        }
+      }
+
+      .backdrop {
+        left: 0;
+
+        @include mq-motion-allow {
+          transition: left 0.6s ease 0s;
+        }
       }
     }
   }
-}
-
-h1 {
-  @extend .h1;
-}
-h2 {
-  @extend .h2;
-}
-h3 {
-  @extend .h3;
-}
-h4 {
-  @extend .h4;
-}
-h5 {
-  @extend .h5;
-}
-h6 {
-  @extend .h6;
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  font-size: 20px;
-
-  @include mq-max("xxl") {
-    font-size: 18px;
-  }
-
-  @include mq-max("sm") {
-    font-size: 16px;
-  }
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  object-fit: cover;
-}
-
-cite {
-  font-style: normal;
 }
 
 .mouse-cursor {
@@ -2066,6 +2092,7 @@ cite {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
+  z-index: 50;
 
   @include mq-motion-allow {
     top: 0;

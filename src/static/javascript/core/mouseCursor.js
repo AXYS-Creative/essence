@@ -13,6 +13,7 @@ export const navCursor = document.querySelector(".mouse-cursor__original");
 export const newsletterCursor = document.querySelector(
   ".mouse-cursor__newsletter"
 );
+export const videoCursor = document.querySelector(".mouse-cursor__video");
 
 document.addEventListener("mousemove", (e) => {
   mouseCursors.forEach((el) => {
@@ -29,6 +30,12 @@ document.addEventListener("mousemove", (e) => {
     navCursor.classList.add("active");
   } else {
     navCursor.classList.remove("active");
+  }
+
+  if (e.target.classList.contains("video-section__dialog")) {
+    videoCursor.classList.add("active");
+  } else {
+    videoCursor.classList.remove("active");
   }
 });
 

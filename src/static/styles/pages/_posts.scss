@@ -295,40 +295,47 @@
     }
   }
 
-  &__iframe-wrapper {
-    position: fixed;
-    top: 0;
+  &__dialog {
     @include row-center;
-    width: 100vw;
-    height: 100vh;
-    height: 100dvh;
     opacity: 0;
-    pointer-events: none;
     background: rgba($black, 0.95);
     backdrop-filter: blur(3px);
-    z-index: 10;
     cursor: alias;
 
     @include mq-motion-allow {
-      transition: 0.6s ease;
+      transition: 0.6s ease 0.4s;
     }
 
     iframe {
-      width: 80vw;
-      height: 46vw;
+      width: 70vw;
+      height: 40vw;
       scale: 0.8;
+      visibility: hidden;
 
       @include mq-motion-allow {
-        transition: 0.6s ease;
+        transition: 0.8s ease;
       }
     }
 
-    &.active {
-      opacity: 1;
-      pointer-events: all;
+    .mouse-cursor {
+      p {
+        background: linear-gradient($grey-light, $white);
+        color: var(--primary-font-color);
+      }
+    }
+
+    &[open] {
+      @include mq-motion-allow {
+        transition: 0.6s ease;
+      }
+
+      .dialog__close-btn-wrapper {
+        transition: 0.3s ease 0s;
+      }
 
       iframe {
         scale: 1;
+        visibility: visible;
       }
     }
   }

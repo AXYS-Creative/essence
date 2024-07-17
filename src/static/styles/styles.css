@@ -2574,452 +2574,6 @@ footer .site-footer__bottom .credits small {
   text-wrap: nowrap;
 }
 
-dialog {
-  isolation: isolate;
-  border: none;
-  background: transparent;
-  z-index: 10;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
-  max-height: 100vh;
-  display: block;
-  position: fixed;
-  top: 0;
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog {
-    transition: opacity 1s ease;
-  }
-}
-dialog .dialog__close-btn-wrapper {
-  position: fixed;
-  right: 64px;
-  top: 74px;
-  translate: 0 -50%;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease 0.5s;
-}
-@media screen and (min-width: 1921px) {
-  dialog .dialog__close-btn-wrapper {
-    right: calc(50% - 896px);
-  }
-}
-@media screen and (max-width: 1512px) {
-  dialog .dialog__close-btn-wrapper {
-    right: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .dialog__close-btn-wrapper {
-    right: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .dialog__close-btn-wrapper {
-    right: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .dialog__close-btn-wrapper {
-    top: 50px;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .dialog__close-btn-wrapper {
-    scale: 0.9;
-  }
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  transition: 0.3s ease;
-}
-@media screen and (max-width: 480px) {
-  dialog .dialog__close-btn-wrapper .dialog__close-btn {
-    outline: none;
-  }
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn:hover, dialog .dialog__close-btn-wrapper .dialog__close-btn:focus {
-  scale: 1.1;
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn:active {
-  scale: 0.9;
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
-  flex-wrap: wrap;
-  gap: 6.6666666667px;
-  width: 100%;
-  height: 100%;
-  rotate: 45deg;
-  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0s;
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper__dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--background-color);
-  border-radius: 50%;
-  transition: 0.3s ease;
-}
-dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper .center-dot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  opacity: 0;
-  transition: 0.3s ease 0.2s;
-}
-dialog .newsletter-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  max-width: 1024px;
-  padding: 96px;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form {
-    transition: opacity 0.5s ease;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .newsletter-form {
-    padding: 128px 48px;
-    width: 86%;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form {
-    padding: 128px 0;
-  }
-}
-dialog .newsletter-form * {
-  color: var(--background-color);
-}
-dialog .newsletter-form h2 {
-  display: flex;
-  text-align: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  text-wrap: nowrap;
-}
-@media screen and (max-width: 1512px) {
-  dialog .newsletter-form h2 {
-    gap: 10px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  dialog .newsletter-form h2 {
-    gap: 8px;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form h2 {
-    flex-direction: column;
-    font-size: 30px;
-    line-height: 30px;
-    margin-bottom: 24px;
-  }
-}
-dialog .newsletter-form h2 span {
-  translate: 0 100%;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form h2 span {
-    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.12s;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form h2 span {
-    translate: 0 240%;
-  }
-}
-dialog .newsletter-form input[type=email],
-dialog .newsletter-form button[type=submit] {
-  font-size: 20px;
-  font-weight: 300;
-  width: calc(100% - 96px);
-  border: 1px solid var(--background-color);
-  border-radius: 4px;
-  padding: 12px 4px;
-  font-size: 20px;
-  width: 764px;
-  translate: 0 120%;
-  opacity: 0;
-  pointer-events: none;
-}
-@media screen and (max-width: 1200px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1512px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    width: 572px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    padding: 10px 4px;
-    width: 448px;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .newsletter-form input[type=email],
-  dialog .newsletter-form button[type=submit] {
-    padding: 12px 4px;
-    width: 100%;
-  }
-}
-dialog .newsletter-form input[type=email] {
-  background: transparent;
-  text-align: center;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form input[type=email] {
-    transition: 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.06s;
-  }
-}
-dialog .newsletter-form input[type=email]::-moz-placeholder {
-  color: var(--background-color);
-  opacity: 0.4;
-}
-dialog .newsletter-form input[type=email]::placeholder {
-  color: var(--background-color);
-  opacity: 0.4;
-}
-dialog .newsletter-form button[type=submit] {
-  border: none;
-  background: #f8f1e4;
-  color: var(--primary-font-color);
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form button[type=submit] {
-    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0s, background 0.3s ease;
-  }
-}
-dialog .newsletter-form button[type=submit]:hover, dialog .newsletter-form button[type=submit]:focus {
-  background: var(--background-color);
-}
-dialog .newsletter-form .form-message-container {
-  position: relative;
-  width: 100%;
-  height: 36px;
-  opacity: 0;
-  translate: 0 100%;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form .form-message-container {
-    transition: 0.3s ease 0s;
-  }
-}
-dialog .newsletter-form .form-message-container .status-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  font-size: 20px;
-  font-weight: 300;
-  width: 100%;
-  text-wrap: nowrap;
-  opacity: 0;
-  pointer-events: none;
-}
-@media screen and (max-width: 1200px) {
-  dialog .newsletter-form .form-message-container .status-message {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .newsletter-form .form-message-container .status-message {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .status-message {
-    font-size: 16px;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form .form-message-container .status-message {
-    transition: opacity 0.24s ease 0.12s;
-  }
-}
-@media screen and (max-width: 768px) {
-  dialog .newsletter-form .form-message-container .status-message {
-    text-wrap: wrap;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .status-message {
-    font-size: 13px;
-  }
-}
-dialog .newsletter-form .form-message-container .status-message .success-icon,
-dialog .newsletter-form .form-message-container .status-message .error-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  margin-inline-end: 12px;
-  padding: 4px;
-  scale: 0.5;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .newsletter-form .form-message-container .status-message .success-icon,
-  dialog .newsletter-form .form-message-container .status-message .error-icon {
-    transition: 0.3s ease 0.12s;
-  }
-}
-@media screen and (max-width: 480px) {
-  dialog .newsletter-form .form-message-container .status-message .success-icon,
-  dialog .newsletter-form .form-message-container .status-message .error-icon {
-    width: 24px;
-    height: 24px;
-  }
-}
-dialog .newsletter-form .form-message-container .status-message.active {
-  opacity: 1;
-  pointer-events: all;
-}
-dialog .newsletter-form .form-message-container .status-message.active .success-icon,
-dialog .newsletter-form .form-message-container .status-message.active .error-icon {
-  scale: 1.2;
-}
-dialog .newsletter-form .form-message-container .success-message {
-  color: #869d7a;
-}
-dialog .newsletter-form .form-message-container .success-message .success-icon {
-  border: 1px solid #869d7a;
-  border-radius: 50%;
-}
-dialog .newsletter-form .form-message-container .success-message .success-icon path {
-  fill: #869d7a;
-}
-dialog .newsletter-form .form-message-container .error-message {
-  color: #fbffa4;
-}
-dialog .newsletter-form .form-message-container .error-message .error-icon {
-  border-radius: 0;
-}
-dialog .newsletter-form .form-message-container .error-message .error-icon path {
-  fill: #fbffa4;
-}
-dialog .backdrop {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--primary-font-color);
-  z-index: -1;
-  cursor: alias;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog .backdrop {
-    transition: left 0.6s ease 0.5s;
-  }
-}
-dialog .mouse-cursor p {
-  background: linear-gradient(#f8f1e4, #fdfaf5);
-  color: var(--primary-font-color);
-}
-dialog[open] {
-  opacity: 1;
-  display: block;
-  pointer-events: all;
-}
-dialog[open] .dialog__close-btn-wrapper {
-  opacity: 1;
-  pointer-events: all;
-  transition: 0.3s ease 0.4s;
-}
-dialog[open] .dialog__close-btn-wrapper .dots-wrapper {
-  rotate: 90deg;
-  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0.4s;
-}
-dialog[open] .dialog__close-btn-wrapper .dots-wrapper .center-dot {
-  opacity: 1;
-  transition: 0.3s ease 1s;
-}
-dialog[open] .dialog__close-btn {
-  opacity: 1;
-  pointer-events: all;
-}
-dialog[open] .newsletter-form h2 span {
-  translate: 0 0;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog[open] .newsletter-form h2 span {
-    transition: translate 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.3s;
-  }
-}
-dialog[open] .newsletter-form input[type=email],
-dialog[open] .newsletter-form button[type=submit] {
-  translate: 0 0;
-  opacity: 1;
-  pointer-events: all;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog[open] .newsletter-form input[type=email] {
-    transition: translate 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, opacity 0.7s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease, color 0.3s ease;
-  }
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog[open] .newsletter-form button[type=submit] {
-    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, opacity 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, background 0.3s ease, color 0.3s ease;
-  }
-}
-dialog[open] .newsletter-form .form-message-container {
-  opacity: 1;
-  translate: 0 0;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog[open] .newsletter-form .form-message-container {
-    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s;
-  }
-}
-dialog[open] .backdrop {
-  left: 0;
-}
-@media (prefers-reduced-motion: no-preference) {
-  dialog[open] .backdrop {
-    transition: left 0.6s ease 0s;
-  }
-}
-
 a {
   text-decoration: none;
 }
@@ -3057,6 +2611,455 @@ cite {
   font-style: normal;
 }
 
+.dialog {
+  isolation: isolate;
+  position: fixed;
+  border: none;
+  background: transparent;
+  top: 0;
+  pointer-events: none;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  display: block;
+  z-index: 10;
+}
+.dialog .dialog__close-btn-wrapper {
+  position: fixed;
+  right: 64px;
+  top: 74px;
+  translate: 0 -50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease 0.5s;
+}
+@media screen and (min-width: 1921px) {
+  .dialog .dialog__close-btn-wrapper {
+    right: calc(50% - 896px);
+  }
+}
+@media screen and (max-width: 1512px) {
+  .dialog .dialog__close-btn-wrapper {
+    right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog .dialog__close-btn-wrapper {
+    right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog .dialog__close-btn-wrapper {
+    right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog .dialog__close-btn-wrapper {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog .dialog__close-btn-wrapper {
+    scale: 0.9;
+  }
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .dialog .dialog__close-btn-wrapper .dialog__close-btn {
+    outline: none;
+  }
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn:hover, .dialog .dialog__close-btn-wrapper .dialog__close-btn:focus {
+  scale: 1.1;
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn:active {
+  scale: 0.9;
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  gap: 6.6666666667px;
+  width: 100%;
+  height: 100%;
+  rotate: 45deg;
+  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0s;
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper__dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--background-color);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.dialog .dialog__close-btn-wrapper .dialog__close-btn .dots-wrapper .center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  transition: 0.3s ease 0.2s;
+}
+.dialog[open] {
+  opacity: 1;
+  pointer-events: all;
+}
+.dialog[open] .dialog__close-btn-wrapper {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.3s ease 0.4s;
+}
+.dialog[open] .dialog__close-btn-wrapper .dots-wrapper {
+  rotate: 90deg;
+  transition: 0.8s cubic-bezier(0.77, -0.43, 0.11, 1.11) 0.4s;
+}
+.dialog[open] .dialog__close-btn-wrapper .dots-wrapper .center-dot {
+  opacity: 1;
+  transition: 0.3s ease 1s;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog {
+    transition: opacity 1s ease;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1024px;
+  padding: 96px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form {
+    transition: opacity 0.5s ease;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog.newsletter-dialog .newsletter-form {
+    padding: 128px 48px;
+    width: 86%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form {
+    padding: 128px 0;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form * {
+  color: var(--background-color);
+}
+.dialog.newsletter-dialog .newsletter-form h2 {
+  display: flex;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+@media screen and (max-width: 1512px) {
+  .dialog.newsletter-dialog .newsletter-form h2 {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dialog.newsletter-dialog .newsletter-form h2 {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form h2 {
+    flex-direction: column;
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form h2 span {
+  translate: 0 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form h2 span {
+    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.12s;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form h2 span {
+    translate: 0 240%;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form input[type=email],
+.dialog.newsletter-dialog .newsletter-form button[type=submit] {
+  font-size: 20px;
+  font-weight: 300;
+  width: calc(100% - 96px);
+  border: 1px solid var(--background-color);
+  border-radius: 4px;
+  padding: 12px 4px;
+  font-size: 20px;
+  width: 764px;
+  translate: 0 120%;
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 1200px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1512px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    width: 572px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    padding: 10px 4px;
+    width: 448px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email],
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    padding: 12px 4px;
+    width: 100%;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form input[type=email] {
+  background: transparent;
+  text-align: center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form input[type=email] {
+    transition: 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.06s;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form input[type=email]::-moz-placeholder {
+  color: var(--background-color);
+  opacity: 0.4;
+}
+.dialog.newsletter-dialog .newsletter-form input[type=email]::placeholder {
+  color: var(--background-color);
+  opacity: 0.4;
+}
+.dialog.newsletter-dialog .newsletter-form button[type=submit] {
+  border: none;
+  background: #f8f1e4;
+  color: var(--primary-font-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form button[type=submit] {
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0s, background 0.3s ease;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form button[type=submit]:hover, .dialog.newsletter-dialog .newsletter-form button[type=submit]:focus {
+  background: var(--background-color);
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  opacity: 0;
+  translate: 0 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container {
+    transition: 0.3s ease 0s;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 20px;
+  font-weight: 300;
+  width: 100%;
+  text-wrap: nowrap;
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 1200px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    transition: opacity 0.24s ease 0.12s;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    text-wrap: wrap;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
+    font-size: 13px;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .success-icon,
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .error-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-inline-end: 12px;
+  padding: 4px;
+  scale: 0.5;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .success-icon,
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .error-icon {
+    transition: 0.3s ease 0.12s;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .success-icon,
+  .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message .error-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message.active .success-icon,
+.dialog.newsletter-dialog .newsletter-form .form-message-container .status-message.active .error-icon {
+  scale: 1.2;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .success-message {
+  color: #869d7a;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .success-message .success-icon {
+  border: 1px solid #869d7a;
+  border-radius: 50%;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .success-message .success-icon path {
+  fill: #869d7a;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .error-message {
+  color: #fbffa4;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .error-message .error-icon {
+  border-radius: 0;
+}
+.dialog.newsletter-dialog .newsletter-form .form-message-container .error-message .error-icon path {
+  fill: #fbffa4;
+}
+.dialog.newsletter-dialog .backdrop {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-font-color);
+  z-index: -1;
+  cursor: alias;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .backdrop {
+    transition: left 0.6s ease 0.5s;
+  }
+}
+.dialog.newsletter-dialog .mouse-cursor p {
+  background: linear-gradient(#f8f1e4, #fdfaf5);
+  color: var(--primary-font-color);
+}
+.dialog.newsletter-dialog[open] {
+  display: block;
+}
+.dialog.newsletter-dialog[open] .dialog__close-btn {
+  opacity: 1;
+  pointer-events: all;
+}
+.dialog.newsletter-dialog[open] .newsletter-form h2 span {
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog[open] .newsletter-form h2 span {
+    transition: translate 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.3s;
+  }
+}
+.dialog.newsletter-dialog[open] .newsletter-form input[type=email],
+.dialog.newsletter-dialog[open] .newsletter-form button[type=submit] {
+  translate: 0 0;
+  opacity: 1;
+  pointer-events: all;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog[open] .newsletter-form input[type=email] {
+    transition: translate 0.9s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, opacity 0.7s cubic-bezier(0.18, 0.97, 0.47, 1) 0.4s, background 0.3s ease, color 0.3s ease;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog[open] .newsletter-form button[type=submit] {
+    transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, opacity 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, background 0.3s ease, color 0.3s ease;
+  }
+}
+.dialog.newsletter-dialog[open] .newsletter-form .form-message-container {
+  opacity: 1;
+  translate: 0 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog[open] .newsletter-form .form-message-container {
+    transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s;
+  }
+}
+.dialog.newsletter-dialog[open] .backdrop {
+  left: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog[open] .backdrop {
+    transition: left 0.6s ease 0s;
+  }
+}
+
 .mouse-cursor {
   display: flex;
   justify-content: center;
@@ -3069,6 +3072,7 @@ cite {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
+  z-index: 50;
 }
 @media (prefers-reduced-motion: no-preference) {
   .mouse-cursor {
@@ -5887,42 +5891,45 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
     transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1);
   }
 }
-.video-section__iframe-wrapper {
-  position: fixed;
-  top: 0;
+.video-section__dialog {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  height: 100dvh;
   opacity: 0;
-  pointer-events: none;
   background: rgba(14, 14, 14, 0.95);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  z-index: 10;
   cursor: alias;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .video-section__iframe-wrapper {
-    transition: 0.6s ease;
+  .video-section__dialog {
+    transition: 0.6s ease 0.4s;
   }
 }
-.video-section__iframe-wrapper iframe {
-  width: 80vw;
-  height: 46vw;
+.video-section__dialog iframe {
+  width: 70vw;
+  height: 40vw;
   scale: 0.8;
+  visibility: hidden;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .video-section__iframe-wrapper iframe {
+  .video-section__dialog iframe {
+    transition: 0.8s ease;
+  }
+}
+.video-section__dialog .mouse-cursor p {
+  background: linear-gradient(#f8f1e4, #fdfaf5);
+  color: var(--primary-font-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .video-section__dialog[open] {
     transition: 0.6s ease;
   }
 }
-.video-section__iframe-wrapper.active {
-  opacity: 1;
-  pointer-events: all;
+.video-section__dialog[open] .dialog__close-btn-wrapper {
+  transition: 0.3s ease 0s;
 }
-.video-section__iframe-wrapper.active iframe {
+.video-section__dialog[open] iframe {
   scale: 1;
+  visibility: visible;
 }/*# sourceMappingURL=styles.css.map */

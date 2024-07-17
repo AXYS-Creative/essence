@@ -1,25 +1,30 @@
+import { videoCursor } from "../core/mouseCursor.js";
+
 const videoSection = document.querySelector(".video-section"),
   videoPoster = document.querySelector(".video-section__poster"),
-  videoWrapper = document.querySelector(".video-section__iframe-wrapper"),
-  videoBtn = document.querySelector(".video-section__play-btn");
+  videoDialog = document.querySelector(".video-section__dialog"),
+  videoBtn = document.querySelector(".video-section__play-btn"),
+  closeVideoDialogBtn = document.querySelector(
+    ".video-section__dialog .dialog__close-btn"
+  );
 
 if (videoSection) {
   const playVideo = (e) => {
-    videoWrapper.classList.add("active");
+    videoDialog.showModal();
     document.body.style.overflow = "hidden";
-    e.stopPropagation(); // Prevent the click event from bubbling up to the document
   };
 
   const closeVideo = (e) => {
-    if (e.target.classList.contains("video-section__iframe-wrapper")) {
-      videoWrapper.classList.remove("active");
-      document.body.style.overflow = "auto";
-    }
+    videoDialog.close();
+    document.body.style.overflow = "auto";
+    videoCursor.classList.remove("active");
   };
 
   videoPoster.addEventListener("click", playVideo);
+  videoBtn.addEventListener("click", playVideo);
 
-  videoSection.addEventListener("click", closeVideo);
+  videoDialog.addEventListener("click", closeVideo);
+  closeVideoDialogBtn.addEventListener("click", closeVideo);
 
   // Play button, track mouse with velocity rotation
   if (window.matchMedia("(pointer: fine)").matches) {

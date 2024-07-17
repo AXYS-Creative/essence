@@ -6,7 +6,7 @@ description: "In this episode, we delve into the complexities of attachment and 
 quote: "Attachment is the emotional bond that shapes our interactions and relationships throughout life, influencing how we connect, trust, and feel secure with others."
 guest: Dr. Emily Carter
 poster: /static/img/podcast-poster.png
-video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/cnTf2UxjGW8?si=NX78TvzTHdDmteNb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/TiXOQn7z9Hg?si=KFApWPZ3uumYWJY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 tags:
   - physical
   - emotion
