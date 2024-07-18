@@ -1,6 +1,6 @@
 import { videoCursor } from "../core/mouseCursor.js";
 
-const videoSection = document.querySelector(".video-section"),
+export const videoSection = document.querySelector(".video-section"),
   videoPoster = document.querySelector(".video-section__poster"),
   videoDialog = document.querySelector(".video-section__dialog"),
   videoBtn = document.querySelector(".video-section__play-btn"),
@@ -25,7 +25,7 @@ if (videoSection) {
 
     setTimeout(() => {
       iframe.src = "";
-    }, 800);
+    }, 750);
   };
 
   videoPoster.addEventListener("click", playVideo);

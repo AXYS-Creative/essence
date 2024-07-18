@@ -5816,6 +5816,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .video-section__poster:active + .video-section__play-btn {
   scale: 1;
 }
+@media screen and (max-width: 768px) {
+  .video-section__poster {
+    aspect-ratio: 2/1.5;
+  }
+}
 .video-section__play-btn {
   position: absolute;
   top: 50%;
@@ -5903,12 +5908,13 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 }
 @media (prefers-reduced-motion: no-preference) {
   .video-section__dialog {
-    transition: 0.6s ease 0.4s;
+    transition: opacity 0.6s ease 0.4s;
   }
 }
 .video-section__dialog iframe {
   width: 70vw;
   height: 40vw;
+  border-radius: 4px;
   scale: 0.8;
   visibility: hidden;
 }
@@ -5917,13 +5923,19 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
     transition: 0.8s ease;
   }
 }
+@media screen and (max-width: 768px) {
+  .video-section__dialog iframe {
+    width: 86vw;
+    height: 72vw;
+  }
+}
 .video-section__dialog .mouse-cursor p {
   background: linear-gradient(#f8f1e4, #fdfaf5);
   color: var(--primary-font-color);
 }
 @media (prefers-reduced-motion: no-preference) {
   .video-section__dialog[open] {
-    transition: 0.6s ease;
+    transition: opacity 0.6s ease;
   }
 }
 .video-section__dialog[open] .dialog__close-btn-wrapper {

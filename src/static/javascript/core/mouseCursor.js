@@ -1,4 +1,5 @@
 import { isSafari } from "../utility.js";
+import { videoSection } from "../components/video.js";
 
 export const navElements = [
   "backdrop__nav",
@@ -32,10 +33,12 @@ document.addEventListener("mousemove", (e) => {
     navCursor.classList.remove("active");
   }
 
-  if (e.target.classList.contains("video-section__dialog")) {
-    videoCursor.classList.add("active");
-  } else {
-    videoCursor.classList.remove("active");
+  if (videoSection) {
+    if (e.target.classList.contains("video-section__dialog")) {
+      videoCursor.classList.add("active");
+    } else {
+      videoCursor.classList.remove("active");
+    }
   }
 });
 
