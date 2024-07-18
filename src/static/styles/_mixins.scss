@@ -73,7 +73,7 @@ $min-breakpoints: (
   }
 }
 
-// header logo, nav items
+// header logo, nav items, podcast quote
 @mixin left-spacing {
   left: $body-padding;
 
@@ -94,7 +94,7 @@ $min-breakpoints: (
   }
 }
 
-// header menu button, nav social items
+// header menu button, nav social items, podcast quote
 @mixin right-spacing {
   right: $body-padding;
 

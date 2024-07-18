@@ -70,8 +70,18 @@ layout: "app"
   <article>{{ content | safe }}</article>
 </section>
 
+<section class="podcast-quote dark-section">
+  <blockquote class="podcast-quote__blockquote podcast-quote__blockquote--left">
+    “{{ quote }}”
+    <span class="podcast-quote__blockquote-guest">&mdash; {{ guest }}</span>
+  </blockquote>
+  <figure class="podcast-quote__image">
+    <img src="../static/img/quote-female.webp" alt="" />
+  </figure>
+</section>
+
 <!-- prettier-ignore -->
-<nav class="post-body__footer-nav">
+<nav class="post-footer-nav">
   
   <a
     href="{{ latestPost.url }}"
