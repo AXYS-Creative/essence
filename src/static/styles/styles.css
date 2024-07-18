@@ -5932,4 +5932,9 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .video-section__dialog[open] iframe {
   scale: 1;
   visibility: visible;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .video-section__dialog[open] iframe {
+    transition: 0.8s ease 0.4s;
+  }
 }/*# sourceMappingURL=styles.css.map */

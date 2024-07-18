@@ -6,18 +6,26 @@ const videoSection = document.querySelector(".video-section"),
   videoBtn = document.querySelector(".video-section__play-btn"),
   closeVideoDialogBtn = document.querySelector(
     ".video-section__dialog .dialog__close-btn"
-  );
+  ),
+  iframe = document.querySelector("iframe");
 
 if (videoSection) {
+  let iframeSrc = iframe.src;
+
   const playVideo = (e) => {
     videoDialog.showModal();
     document.body.style.overflow = "hidden";
+    iframe.src = iframeSrc;
   };
 
   const closeVideo = (e) => {
     videoDialog.close();
     document.body.style.overflow = "auto";
     videoCursor.classList.remove("active");
+
+    setTimeout(() => {
+      iframe.src = "";
+    }, 800);
   };
 
   videoPoster.addEventListener("click", playVideo);

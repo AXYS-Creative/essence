@@ -336,6 +336,10 @@
       iframe {
         scale: 1;
         visibility: visible;
+
+        @include mq-motion-allow {
+          transition: 0.8s ease 0.4s;
+        }
       }
     }
   }
