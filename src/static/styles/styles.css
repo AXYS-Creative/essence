@@ -2333,6 +2333,11 @@ footer .site-footer__top .footer-nav-links {
   height: 212px;
   margin-inline-start: calc(16vw - 64px);
 }
+@media screen and (min-width: 1513px) {
+  footer .site-footer__top .footer-nav-links {
+    margin-inline-start: 184px;
+  }
+}
 @media screen and (max-width: 1512px) {
   footer .site-footer__top .footer-nav-links {
     margin-inline-start: calc(14vw - 40px);
@@ -4669,6 +4674,11 @@ cite {
   padding-inline: 16vw;
   gap: 48px;
 }
+@media screen and (min-width: 1513px) {
+  .slider-section {
+    padding-inline: 248px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .slider-section {
     padding-inline: 14vw;
@@ -5266,6 +5276,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
   gap: 156px;
   padding-block: 296px;
 }
+@media screen and (min-width: 1513px) {
+  .locations {
+    padding-inline: 248px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .locations {
     padding-inline: 14vw;
@@ -5294,6 +5309,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 @media screen and (max-width: 1024px) {
   .locations {
     padding-inline: 16vw;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 1513px) {
+  .locations {
+    padding-inline: 248px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1512px) {
@@ -5552,6 +5572,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
   padding-inline: 16vw;
   padding-block: 448px;
 }
+@media screen and (min-width: 1513px) {
+  .post-hero {
+    padding-inline: 248px;
+  }
+}
 @media screen and (max-width: 1512px) {
   .post-hero {
     padding-inline: 14vw;
@@ -5650,6 +5675,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 
 .post-body {
   padding-inline: 16vw;
+}
+@media screen and (min-width: 1513px) {
+  .post-body {
+    padding-inline: 248px;
+  }
 }
 @media screen and (max-width: 1512px) {
   .post-body {

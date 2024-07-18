@@ -266,6 +266,10 @@ $min-breakpoints: (
 @mixin thin-section {
   padding-inline: $content-padding-thin;
 
+  @include mq-min("xxl") {
+    padding-inline: $content-padding-thin-min-xxl;
+  }
+
   @include mq-max("xxl") {
     padding-inline: $content-padding-thin-xxl;
   }

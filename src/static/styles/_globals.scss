@@ -1386,6 +1386,12 @@ footer {
       height: 212px;
       margin-inline-start: calc($content-padding-thin - $body-padding);
 
+      @include mq-min("xxl") {
+        margin-inline-start: calc(
+          $content-padding-thin-min-xxl - $body-padding
+        );
+      }
+
       @include mq-max("xxl") {
         margin-inline-start: calc(
           $content-padding-thin-xxl - $body-padding-xxl
