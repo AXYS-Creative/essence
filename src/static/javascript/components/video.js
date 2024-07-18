@@ -27,9 +27,10 @@ if (videoSection) {
   closeVideoDialogBtn.addEventListener("click", closeVideo);
 
   // Play button, track mouse with velocity rotation
-  if (window.matchMedia("(pointer: fine)").matches) {
+  if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
     let previousX = 0;
     let previousTime = Date.now();
+    let inactivityTimeout;
 
     videoPoster.addEventListener("mousemove", (e) => {
       const rect = videoPoster.getBoundingClientRect();
@@ -55,13 +56,19 @@ if (videoSection) {
         y - posterHeight
       }px - 50%)`;
       videoBtn.style.rotate = `${-rotationAngle}deg`;
+
+      clearTimeout(inactivityTimeout);
+
+      inactivityTimeout = setTimeout(() => {
+        videoBtn.style.rotate = `0deg`;
+      }, 100);
     });
 
     videoPoster.addEventListener("mouseleave", () => {
       videoBtn.style.translate = `-50% -50%`;
       videoBtn.style.rotate = `0deg`;
-      previousX = 0; // Reset previous position
-      previousTime = Date.now(); // Reset previous time
+      previousX = 0;
+      previousTime = Date.now();
     });
   }
 

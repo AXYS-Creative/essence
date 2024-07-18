@@ -86,15 +86,10 @@ section.contact-hero {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      width: 54%;
       text-wrap: balance;
 
       @include mq-motion-allow {
         transition: 0.3s ease;
-      }
-
-      @include mq-max("lg") {
-        width: 264px;
       }
 
       &:hover,
@@ -145,10 +140,12 @@ section.contact-hero {
       // }
 
       span {
-        // width: 280px;
-
         @include mq-motion-allow {
           transition: 0.3s ease;
+        }
+
+        &.address-wrapper {
+          @include column-start;
         }
       }
     }

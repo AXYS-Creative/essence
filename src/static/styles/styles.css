@@ -5355,7 +5355,6 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  width: 54%;
   text-wrap: balance;
 }
 @media screen and (max-width: 1200px) {
@@ -5376,11 +5375,6 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 @media (prefers-reduced-motion: no-preference) {
   .locations__details-address, .locations__details-phone, .locations__details-time {
     transition: 0.3s ease;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .locations__details-address, .locations__details-phone, .locations__details-time {
-    width: 264px;
   }
 }
 .locations__details-address:hover, .locations__details-address:focus, .locations__details-phone:hover, .locations__details-phone:focus, .locations__details-time:hover, .locations__details-time:focus {
@@ -5412,6 +5406,12 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
   .locations__details-address span, .locations__details-phone span, .locations__details-time span {
     transition: 0.3s ease;
   }
+}
+.locations__details-address span.address-wrapper, .locations__details-phone span.address-wrapper, .locations__details-time span.address-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .locations__details-time:hover path, .locations__details-time:focus path {
   fill: var(--primary-font-color);

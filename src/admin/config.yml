@@ -200,7 +200,12 @@ collections:
                   widget: "string",
                   required: true,
                 }
-              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Adress, street", name: "address_1", widget: "string" }
+              - {
+                  label: "Adress, city / state",
+                  name: "address_2",
+                  widget: "string",
+                }
               - { label: "Phone", name: "phone", widget: "string" }
   - label: "Settings"
     name: "settings"
