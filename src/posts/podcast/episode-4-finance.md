@@ -8,8 +8,7 @@ poster: /static/img/podcast-poster.png
 video_embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/TiXOQn7z9Hg?si=KFApWPZ3uumYWJY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
 quote: "Financial independence isn't about how much you earn; it's about how you manage and grow what you have, aligning your financial decisions with your life goals."
 quote_image: /static/img/quote-male.png
-quote_side:
-  - right
+quote_side: left
 tags:
   - finance
   - popular
