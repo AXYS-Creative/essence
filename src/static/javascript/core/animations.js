@@ -51,10 +51,16 @@ const responsiveAnimations = (() => {
           null
         );
         createScrollTriggerAnimation(
+          ".collage-column__inner-2",
+          undefined,
+          undefined,
+          "12%"
+        );
+        createScrollTriggerAnimation(
           ".collage-column__inner-3",
           "-10%",
           "-14%",
-          "-26.55%"
+          "-4.4%"
         );
         createScrollTriggerAnimation(
           ".collage-column__inner-5",

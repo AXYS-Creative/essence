@@ -4930,7 +4930,7 @@ body:has(.about-hero) .essence-paragraph__about-us {
 }
 @media screen and (max-width: 480px) {
   body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 0 264px;
+    padding-block: 96px 264px;
   }
 }
 body:has(.about-hero) .text-block {
@@ -5017,10 +5017,25 @@ body:has(.about-hero) .text-block {
     translate: 0 -164px;
     animation: restore-translate 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
   }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 580px) {
+  .about-hero .collage.animate .collage-column__column-1,
+  .about-hero .collage.animate .collage-column__column-3,
+  .about-hero .collage.animate .collage-column__column-5 {
+    animation: column-offset 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
   .about-hero .collage.animate .collage-column__column-2,
   .about-hero .collage.animate .collage-column__column-4 {
     translate: 0 164px;
     animation: column-offset 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width: 580px) {
+  .about-hero .collage.animate .collage-column__column-2,
+  .about-hero .collage.animate .collage-column__column-4 {
+    animation: restore-translate 2s cubic-bezier(0.09, 0.9, 0.5, 1) 0.4s forwards;
   }
 }
 

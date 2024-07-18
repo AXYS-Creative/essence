@@ -19,7 +19,7 @@ body:has(.about-hero) {
     }
 
     @include mq-max("sm") {
-      padding-block: 0 264px;
+      padding-block: 96px 264px;
     }
   }
 
@@ -112,6 +112,12 @@ body:has(.about-hero) {
           translate: 0 -164px;
           animation: restore-translate $animation-duration
             $cubic-ease-slow-start $animation-delay forwards;
+
+          @media (max-width: 580px) {
+            // translate: 0 164px;
+            animation: column-offset $animation-duration $cubic-ease-slow-start
+              $animation-delay forwards;
+          }
         }
 
         .collage-column__column-2,
@@ -119,6 +125,13 @@ body:has(.about-hero) {
           translate: 0 164px;
           animation: column-offset $animation-duration $cubic-ease-slow-start
             $animation-delay forwards;
+
+          @media (max-width: 580px) {
+            // translate: 0 -164px;
+
+            animation: restore-translate $animation-duration
+              $cubic-ease-slow-start $animation-delay forwards;
+          }
         }
       }
     }
