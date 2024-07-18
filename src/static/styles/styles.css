@@ -6007,74 +6007,6 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .podcast-quote__blockquote::first-letter {
   text-transform: capitalize;
 }
-.podcast-quote__blockquote--left {
-  left: 64px;
-  translate: 12% -50%;
-}
-@media screen and (min-width: 1921px) {
-  .podcast-quote__blockquote--left {
-    left: calc(50% - 960px + 64px);
-  }
-}
-@media screen and (max-width: 1512px) {
-  .podcast-quote__blockquote--left {
-    left: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .podcast-quote__blockquote--left {
-    left: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .podcast-quote__blockquote--left {
-    left: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .podcast-quote__blockquote--left {
-    translate: 16px -50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .podcast-quote__blockquote--left {
-    translate: 16px -50%;
-  }
-}
-.podcast-quote__blockquote--right {
-  right: 64px;
-  translate: -12% -50%;
-}
-@media screen and (min-width: 1921px) {
-  .podcast-quote__blockquote--right {
-    right: calc(50% - 896px);
-  }
-}
-@media screen and (max-width: 1512px) {
-  .podcast-quote__blockquote--right {
-    right: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .podcast-quote__blockquote--right {
-    right: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .podcast-quote__blockquote--right {
-    right: 16px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .podcast-quote__blockquote--right {
-    translate: -24px -50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .podcast-quote__blockquote--right {
-    translate: -16px -50%;
-  }
-}
 .podcast-quote__blockquote-guest {
   display: block;
   translate: 16px 24px;
@@ -6112,6 +6044,84 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 @media screen and (max-width: 768px) {
   .podcast-quote__image img {
     min-height: 520px;
+  }
+}
+.podcast-quote--left .podcast-quote__blockquote {
+  left: 64px;
+  translate: 12% -50%;
+}
+@media screen and (min-width: 1921px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    left: calc(50% - 960px + 64px);
+  }
+}
+@media screen and (max-width: 1512px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    left: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    left: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    left: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    translate: 16px -50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .podcast-quote--left .podcast-quote__blockquote {
+    translate: 16px -50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--left .podcast-quote__image img {
+    -o-object-position: 54% 50%;
+       object-position: 54% 50%;
+  }
+}
+.podcast-quote--right .podcast-quote__blockquote {
+  right: 64px;
+  translate: -12% -50%;
+}
+@media screen and (min-width: 1921px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    right: calc(50% - 896px);
+  }
+}
+@media screen and (max-width: 1512px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    right: 24px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    right: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    translate: -24px -50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .podcast-quote--right .podcast-quote__blockquote {
+    translate: -16px -50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .podcast-quote--right .podcast-quote__image img {
     -o-object-position: 54% 50%;
        object-position: 54% 50%;
   }

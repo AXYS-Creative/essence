@@ -38,11 +38,18 @@ collections:
       - { label: "Title Short", name: "title_short", widget: "string" }
       - { label: "Episode", name: "episode", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Quote", name: "quote", widget: "string" }
       - { label: "Guest", name: "guest", widget: "string" }
-      - { label: "Poster", name: "poster", widget: "image" }
+      - { label: "Video Poster", name: "poster", widget: "image" }
       - { label: "Video Embed", name: "video_embed", widget: "string" }
+      - { label: "Episode Recap", name: "body", widget: "markdown" }
+      - { label: "Quote", name: "quote", widget: "string" }
+      - { label: "Quote Image", name: "quote_image", widget: "image" }
+      - widget: select
+        label: "Quote Side"
+        name: "quote_side"
+        multiple: false
+        create: false
+        options: ["left", "right"]
       - widget: select
         label: "tags"
         name: "tags"

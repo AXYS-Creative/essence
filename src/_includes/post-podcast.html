@@ -70,13 +70,13 @@ layout: "app"
   <article>{{ content | safe }}</article>
 </section>
 
-<section class="podcast-quote dark-section">
-  <blockquote class="podcast-quote__blockquote podcast-quote__blockquote--left">
+<section class="podcast-quote podcast-quote--{{ quote-side }} dark-section">
+  <blockquote class="podcast-quote__blockquote">
     “{{ quote }}”
     <span class="podcast-quote__blockquote-guest">&mdash; {{ guest }}</span>
   </blockquote>
   <figure class="podcast-quote__image">
-    <img src="../static/img/quote-female.webp" alt="" />
+    <img src="{{ quote_image }}" alt="{{ guest }}" />
   </figure>
 </section>
 
