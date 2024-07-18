@@ -13,7 +13,7 @@ video_embed: <iframe width="560" height="315"
 quote: Essentialism is not about doing more with less; it's about doing the
   right things with precision and purpose, creating a life that is both
   meaningful and fulfilling.
-quote_image: /static/img/quote-female.png
+quote_image: /static/img/quote-female.webp
 quote_side: left
 tags:
   - general
