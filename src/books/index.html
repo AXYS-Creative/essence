@@ -18,7 +18,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 {% set listContent = collections.books | sort(attribute='data.title') %}
 
 <div class="slider-listing__group">
-  <h3 class="slider-listing__group-heading">Collection</h3>
+  <h3 class="slider-listing__group-heading gsap-animate">Collection</h3>
 
   <ul class="slider-listing__group-list">
     {% for post in listContent %}

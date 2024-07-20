@@ -17,7 +17,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 {% set listContent = collections.podcast | sort(attribute='data.title') %}
 
 <div class="slider-listing__group">
-  <h3 class="slider-listing__group-heading">Most popular</h3>
+  <h3 class="slider-listing__group-heading gsap-animate">Most popular</h3>
   <ul class="slider-listing__group-list">
     <!-- prettier-ignore -->
     {% for post in listContent | reverse %} 
@@ -33,7 +33,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 </div>
 
 <div class="slider-listing__group">
-  <h3 class="slider-listing__group-heading">Episodes</h3>
+  <h3 class="slider-listing__group-heading gsap-animate">Episodes</h3>
 
   <ul class="slider-listing__group-list">
     {% for post in listContent | reverse %}

@@ -332,7 +332,20 @@
 }
 
 .podcast-quote {
+  height: 72vh;
+  height: 72dvh;
+  min-height: 720px;
   padding: 0;
+
+  @media all {
+    @include mq-max("xxl") {
+      min-height: 640px;
+    }
+
+    @include mq-max("lg") {
+      min-height: 520px;
+    }
+  }
 
   &__blockquote {
     $indent: 16px;
@@ -389,6 +402,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 
     &::before {
       content: "";
@@ -396,13 +413,15 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($black, 0.5);
+      background-color: rgba($black, 0.4);
     }
 
     img {
+      position: relative;
       width: 120%;
+      height: 120%;
       aspect-ratio: 2.8 / 1;
-      // figure out the little black stripe
+      z-index: -1;
 
       @include mq-max("md") {
         min-height: 520px;
@@ -424,13 +443,13 @@
       }
     }
 
-    .podcast-quote__image {
-      img {
-        @include mq-max("md") {
-          object-position: 54% 50%;
-        }
-      }
-    }
+    // .podcast-quote__image {
+    //   img {
+    //     @include mq-max("md") {
+    //       object-position: 54% 50%;
+    //     }
+    //   }
+    // }
   }
 
   &--right {
@@ -449,9 +468,10 @@
 
     .podcast-quote__image {
       img {
-        @include mq-max("md") {
-          object-position: 54% 50%; // change me
-        }
+        translate: -10% 0;
+        // @include mq-max("md") {
+        //   object-position: 54% 50%; // change me
+        // }
       }
     }
   }

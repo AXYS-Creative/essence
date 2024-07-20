@@ -391,3 +391,21 @@ const numberTickerAnimation = (() => {
     });
   };
 })();
+
+// Podcast Quote - Parallax Effect
+const parallaxEffect = (() => {
+  gsap.fromTo(
+    ".parallax",
+    { yPercent: -12 },
+    {
+      yPercent: 8,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".podcast-quote",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    }
+  );
+})();
