@@ -402,6 +402,7 @@
     img {
       width: 120%;
       aspect-ratio: 2.8 / 1;
+      // figure out the little black stripe
 
       @include mq-max("md") {
         min-height: 520px;
