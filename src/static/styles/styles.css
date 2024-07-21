@@ -6190,8 +6190,14 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .podcast-quote__blockquote-guest {
   display: block;
   translate: 16px 24px;
-  color: currentColor;
+  color: #fbffa4;
   text-transform: capitalize;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .podcast-quote__blockquote-guest {
+    opacity: 0;
+    margin-inline-start: -24px;
+  }
 }
 @media screen and (max-width: 1512px) {
   .podcast-quote__blockquote-guest {
@@ -6202,6 +6208,11 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
   .podcast-quote__blockquote-guest {
     translate: 6px 16px;
   }
+}
+.podcast-quote__blockquote-guest.animate {
+  opacity: 1;
+  margin-inline-start: 0;
+  transition: 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.6s;
 }
 .podcast-quote__image {
   position: relative;

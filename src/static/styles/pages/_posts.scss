@@ -394,8 +394,15 @@
       @extend .h6;
       display: block;
       translate: $podcast-quote-offset 24px;
-      color: currentColor;
+      // color: currentColor;
+      // color: var(--secondary-font-color);
+      color: $yellow;
       text-transform: capitalize;
+
+      @include mq-motion-allow {
+        opacity: 0;
+        margin-inline-start: -24px;
+      }
 
       @include mq-max("xxl") {
         translate: $podcast-quote-offset-xxl 20px;
@@ -403,6 +410,12 @@
 
       @include mq-max("md") {
         translate: $podcast-quote-offset-md 16px;
+      }
+
+      &.animate {
+        opacity: 1;
+        margin-inline-start: 0;
+        transition: 1s $cubic-ease 0.6s;
       }
     }
   }
