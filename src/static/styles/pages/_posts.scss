@@ -125,10 +125,24 @@
   }
 
   &.post-body__podcast {
-    h2 {
+    .post-body__podcast-heading {
+      @include title-underline;
       margin: auto;
       text-transform: capitalize;
       margin-block-end: 64px;
+      padding-block-end: 24px;
+
+      @media all {
+        @include mq-max("xxl") {
+          margin-block-end: 56px;
+          padding-block-end: 16px;
+        }
+
+        @include mq-max("md") {
+          margin-block-end: 48px;
+          padding-block-end: 12px;
+        }
+      }
     }
   }
 }

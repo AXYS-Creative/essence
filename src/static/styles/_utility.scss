@@ -159,6 +159,10 @@
   gap: 12px;
   text-transform: lowercase;
 
+  @include mq-motion-allow {
+    opacity: 0; // Prevent flicker
+  }
+
   &__word {
     overflow: hidden;
   }
@@ -192,6 +196,8 @@
 
   // Thanks to custom gsap function globalGenerateAnimate()
   &.animate {
+    opacity: 1; // Prevent flicker
+
     .character-split__letter {
       translate: 0 0;
 

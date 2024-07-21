@@ -3320,6 +3320,11 @@ cite {
   gap: 12px;
   text-transform: lowercase;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .character-split {
+    opacity: 0;
+  }
+}
 .character-split__word {
   overflow: hidden;
 }
@@ -3334,6 +3339,9 @@ cite {
 }
 .character-split__letter:first-of-type {
   text-transform: uppercase;
+}
+.character-split.animate {
+  opacity: 1;
 }
 .character-split.animate .character-split__letter {
   translate: 0 0;
@@ -4974,6 +4982,9 @@ cite {
     transition: 1.6s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s;
   }
 }
+.slider-section .slider-listing__group-heading.animate::after {
+  width: 100%;
+}
 .slider-section .slider-listing__group-heading .group-heading-number {
   font-size: 14px;
   display: block;
@@ -4988,9 +4999,6 @@ cite {
   .slider-section .slider-listing__group-heading .group-heading-number {
     translate: 0 0;
   }
-}
-.slider-section .slider-listing__group-heading.animate::after {
-  width: 100%;
 }
 .slider-section .slider-listing__group-list {
   display: flex;
@@ -5898,10 +5906,41 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
 .post-body article a {
   color: #869d7a;
 }
-.post-body.post-body__podcast h2 {
+.post-body.post-body__podcast .post-body__podcast-heading {
+  position: relative;
   margin: auto;
   text-transform: capitalize;
   margin-block-end: 64px;
+  padding-block-end: 24px;
+}
+.post-body.post-body__podcast .post-body__podcast-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--secondary-font-color);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .post-body.post-body__podcast .post-body__podcast-heading::after {
+    width: 0%;
+    transition: 1.6s cubic-bezier(0.18, 0.97, 0.47, 1) 0.2s;
+  }
+}
+.post-body.post-body__podcast .post-body__podcast-heading.animate::after {
+  width: 100%;
+}
+@media screen and (max-width: 1512px) {
+  .post-body.post-body__podcast .post-body__podcast-heading {
+    margin-block-end: 56px;
+    padding-block-end: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .post-body.post-body__podcast .post-body__podcast-heading {
+    margin-block-end: 48px;
+    padding-block-end: 12px;
+  }
 }
 
 .post-footer-nav {

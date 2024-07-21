@@ -357,3 +357,28 @@ $min-breakpoints: (
     height: 36px;
   }
 }
+
+@mixin title-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--secondary-font-color);
+
+    @include mq-motion-allow {
+      width: 0%;
+      transition: 1.6s $cubic-ease 0.2s;
+    }
+  }
+
+  // Requires custom gsap-animate
+  &.animate {
+    &::after {
+      width: 100%;
+    }
+  }
+}

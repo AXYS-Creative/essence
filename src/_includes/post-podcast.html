@@ -71,7 +71,15 @@ layout: "app"
 </section>
 
 <section class="post-body post-body__podcast">
-  <h2>Episode Recap</h2>
+  <h2
+    class="post-body__podcast-heading gsap-animate"
+    aria-label="Episode Recap"
+  >
+    <span class="sr-only">Episode Recap</span>
+    <span class="character-split gsap-animate" aria-hidden="true">
+      Episode Recap
+    </span>
+  </h2>
   <article>{{ content | safe }}</article>
 </section>
 
