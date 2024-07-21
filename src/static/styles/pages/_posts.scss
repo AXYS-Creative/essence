@@ -365,21 +365,15 @@
   }
 
   &__blockquote {
-    $indent: 16px;
-    $indent-xxl: 10px;
-    $indent-md: 6px;
-
     @extend .h5;
     position: absolute;
     top: 50%;
     color: var(--background-color);
     text-transform: lowercase;
     max-width: 792px;
-    text-indent: -$indent;
     z-index: 2;
 
     @include mq-max("xxl") {
-      text-indent: -$indent-xxl;
       max-width: 580px;
     }
 
@@ -389,7 +383,6 @@
     }
 
     @include mq-max("md") {
-      text-indent: -$indent-md;
       width: 78%;
     }
 
@@ -400,16 +393,16 @@
     &-guest {
       @extend .h6;
       display: block;
-      translate: $indent 24px;
+      translate: $podcast-quote-offset 24px;
       color: currentColor;
       text-transform: capitalize;
 
       @include mq-max("xxl") {
-        translate: $indent-xxl 20px;
+        translate: $podcast-quote-offset-xxl 20px;
       }
 
       @include mq-max("md") {
-        translate: $indent-md 16px;
+        translate: $podcast-quote-offset-md 16px;
       }
     }
   }

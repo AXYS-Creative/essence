@@ -52,11 +52,13 @@
   <!-- prettier-ignore -->
   {% if paragraphBody %}
   {% if paragraphType == "blockquote" %}
-  <blockquote class="essence-paragraph__body-text gsap-animate">
+  <blockquote class="essence-paragraph__body-text word-split gsap-animate">
     “{{ paragraphBody }}”
   </blockquote>
   {% else %}
-  <p class="essence-paragraph__body-text gsap-animate">{{ paragraphBody }}</p>
+  <p class="essence-paragraph__body-text word-split gsap-animate">
+    {{ paragraphBody }}
+  </p>
   {% endif %}
   <!-- prettier-ignore -->
   {% endif %}

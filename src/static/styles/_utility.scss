@@ -152,8 +152,66 @@
   overflow: hidden;
 }
 
+.word-split {
+  text-transform: initial;
+
+  @include mq-motion-allow {
+    opacity: 0;
+    transition: opacity 1.2s ease 0.2s;
+  }
+
+  .outter-span {
+    display: inline-flex;
+    overflow: hidden;
+
+    @include mq-max("sm") {
+      line-height: unset;
+    }
+
+    .inner-span {
+      color: var(--background-color);
+
+      @include mq-motion-allow {
+        translate: 0 100%;
+      }
+    }
+  }
+
+  &.indent {
+    .outter-span {
+      &:first-of-type {
+        margin-inline-start: -$podcast-quote-offset;
+
+        @include mq-max("xxl") {
+          margin-inline-start: -$podcast-quote-offset-xxl;
+        }
+
+        @include mq-max("md") {
+          margin-inline-start: -$podcast-quote-offset-md;
+        }
+      }
+    }
+  }
+
+  &.animate {
+    @include mq-motion-allow {
+      opacity: 1;
+
+      .outter-span {
+        @for $i from 1 through 96 {
+          &:nth-of-type(#{$i}) {
+            .inner-span {
+              translate: 0 0;
+              transition: translate 0.5s ease 0.2s + 0.016s * $i;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .character-split {
-  // display: inline-block;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;

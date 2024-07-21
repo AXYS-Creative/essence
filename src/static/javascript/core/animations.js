@@ -301,8 +301,8 @@ const slideUpReveal = (() => {
     });
 })();
 
-// Animating the body text of 'Paragraph Partial'. Splitting each word.
-const paragraphPartialAnimation = (() => {
+// Animating each word via 'word-split' utility class. Also add 'gsap-animate' to the element.
+const wordSplit = (() => {
   const spanWordsInParagraph = (paragraph) => {
     const text = paragraph.textContent || paragraph.innerText;
     const words = text.trim().split(/\s+/);
@@ -322,11 +322,12 @@ const paragraphPartialAnimation = (() => {
     paragraphs.forEach((paragraph) => spanWordsInParagraph(paragraph));
   };
 
-  applyWordWrappingToAll(".essence-paragraph__body-text");
+  applyWordWrappingToAll(".word-split");
 })();
 
-const letterAnimation = (() => {
-  const spanLettersInSentence = (words) => {
+// Animating each letter per word via 'character-split' utility class. Also add 'gsap-animate' to the element
+const characterSplit = (() => {
+  const spanCharactersInSentence = (words) => {
     const text = words.textContent || words.innerText;
     words.setAttribute("aria-label", text); // Provide the full text for screen readers
     const wordsArray = text.split(" "); // Split the text into words
@@ -347,12 +348,12 @@ const letterAnimation = (() => {
     words.innerHTML = wrappedWords;
   };
 
-  const applyLetterWrappingGlobally = (globalClass) => {
+  const splitCharactersGlobally = (globalClass) => {
     const sentences = document.querySelectorAll(globalClass);
-    sentences.forEach((sentence) => spanLettersInSentence(sentence));
+    sentences.forEach((sentence) => spanCharactersInSentence(sentence));
   };
 
-  applyLetterWrappingGlobally(".character-split");
+  splitCharactersGlobally(".character-split");
 })();
 
 // About Page - Recorded Growth

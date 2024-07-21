@@ -36,32 +36,9 @@
 
   &__body-text {
     @extend .h4;
-    text-transform: initial;
-    display: flex;
-    gap: 0 14px;
-    flex-wrap: wrap;
-
-    @include mq-motion-allow {
-      opacity: 0;
-      transition: opacity 1.2s ease 0.2s;
-    }
-
-    @include mq-max("lg") {
-      gap: 0 12px;
-    }
-
-    @include mq-max("sm") {
-      gap: 0 8px;
-    }
 
     .outter-span {
-      display: flex;
-      overflow: hidden;
       line-height: 124%;
-
-      @include mq-max("sm") {
-        line-height: unset;
-      }
 
       &:first-of-type {
         margin-left: $paragraph-indent;
@@ -80,26 +57,7 @@
       }
 
       .inner-span {
-        @include mq-motion-allow {
-          translate: 0 100%;
-        }
-      }
-    }
-
-    &.animate {
-      @include mq-motion-allow {
-        opacity: 1;
-
-        .outter-span {
-          @for $i from 1 through 96 {
-            &:nth-of-type(#{$i}) {
-              .inner-span {
-                translate: 0 0;
-                transition: translate 0.5s ease 0.2s + 0.016s * $i;
-              }
-            }
-          }
-        }
+        color: var(--primary-font-color);
       }
     }
   }
