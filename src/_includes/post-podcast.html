@@ -13,9 +13,14 @@ layout: "app"
       <span class="divider">|</span>
       Ep. {{ episode }}
     </span>
-    <h1 class="post-hero__heading">{{title_short}}</h1>
+    <h1 class="post-hero__heading" aria-label="{{title_short}}">
+      <span class="sr-only">{{title_short}}</span>
+      <span class="character-split gsap-animate" aria-hidden="true">
+        {{title_short}}
+      </span>
+    </h1>
     <p class="post-hero__guest">
-      <span>Featuring: {{ guest }}</span>
+      <span>Guest: {{ guest }}</span>
     </p>
   </div>
 </section>
@@ -89,9 +94,9 @@ layout: "app"
     target="_self"
   >
     <span class="simple-link__span-outter">
-      <span class="simple-link__span-inner">Previous Episode</span>
+      <span class="simple-link__span-inner">Prev Episode</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Previous Episode
+        Prev Episode
       </span>
     </span>
     <svg

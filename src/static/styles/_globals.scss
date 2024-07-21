@@ -443,7 +443,7 @@ header {
         // mask-image: url(../img/icons/icon-social-links.svg);
       }
 
-      &__text {
+      &__label {
         color: var(--background-color);
         text-transform: uppercase;
         translate: 0 -1px;
@@ -766,8 +766,8 @@ header {
     }
 
     .social-media-wrapper {
-      .social-media-toggle__text {
-        margin-left: -12px;
+      .social-media-toggle__label {
+        margin-inline-start: $social-media-label-collapse;
         opacity: 0;
         pointer-events: none;
         transition: 0.25s ease;

@@ -325,6 +325,36 @@ const paragraphPartialAnimation = (() => {
   applyWordWrappingToAll(".essence-paragraph__body-text");
 })();
 
+const letterAnimation = (() => {
+  const spanLettersInSentence = (words) => {
+    const text = words.textContent || words.innerText;
+    words.setAttribute("aria-label", text); // Provide the full text for screen readers
+    const wordsArray = text.split(" "); // Split the text into words
+
+    const wrappedWords = wordsArray
+      .map((word) => {
+        const wrappedLetters = word
+          .split("")
+          .map(
+            (letter) => `<span class="character-split__letter">${letter}</span>`
+          )
+          .join("");
+
+        return `<span class="character-split__word">${wrappedLetters}</span>`;
+      })
+      .join('<span class="character-split__space" aria-hidden="true"> </span>'); // Join words with space span
+
+    words.innerHTML = wrappedWords;
+  };
+
+  const applyLetterWrappingGlobally = (globalClass) => {
+    const sentences = document.querySelectorAll(globalClass);
+    sentences.forEach((sentence) => spanLettersInSentence(sentence));
+  };
+
+  applyLetterWrappingGlobally(".character-split");
+})();
+
 // About Page - Recorded Growth
 const numberTickerAnimation = (() => {
   const numberCounters = document.querySelectorAll(".number-counter");
@@ -394,18 +424,24 @@ const numberTickerAnimation = (() => {
 
 // Podcast Quote - Parallax Effect
 const parallaxEffect = (() => {
-  gsap.fromTo(
-    ".parallax",
-    { yPercent: -12 },
-    {
-      yPercent: 8,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".podcast-quote",
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    }
-  );
+  let parallaxElems = document.querySelectorAll(".parallax");
+
+  if (parallaxElems) {
+    parallaxElems.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { yPercent: -16 },
+        {
+          yPercent: 8,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".podcast-quote",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
+  }
 })();

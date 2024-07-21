@@ -152,6 +152,58 @@
   overflow: hidden;
 }
 
+.character-split {
+  // display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-transform: lowercase;
+
+  &__word {
+    overflow: hidden;
+  }
+
+  &__letter {
+    display: inline-block;
+    padding-block-end: 8px;
+
+    @include mq-motion-allow {
+      translate: 0 100%;
+
+      // @for $i from 1 through 90 {
+      //   &:nth-of-type(#{$i}) {
+      //     transition: 0.8s $cubic-ease 0.1s * $i;
+      //   }
+      // }
+    }
+
+    // Capitalize each word
+    &:first-of-type {
+      text-transform: uppercase;
+    }
+  }
+
+  // // Capitalize the first word
+  // &__word:first-of-type {
+  //   .character-split__letter:first-of-type {
+  //     text-transform: uppercase;
+  //   }
+  // }
+
+  // Thanks to custom gsap function globalGenerateAnimate()
+  &.animate {
+    .character-split__letter {
+      translate: 0 0;
+
+      @for $i from 1 through 24 {
+        &:nth-of-type(#{$i}) {
+          transition: 1s $cubic-ease 0.04s * $i;
+        }
+      }
+    }
+  }
+}
+
 // Accessible
 
 .sr-only {
