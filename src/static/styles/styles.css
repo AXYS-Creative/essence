@@ -3325,10 +3325,17 @@ cite {
     opacity: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .character-split {
+    gap: 8px;
+  }
+}
 .character-split__word {
+  line-height: 100%;
   overflow: hidden;
 }
 .character-split__letter {
+  line-height: 100%;
   display: inline-block;
   padding-block-end: 8px;
 }

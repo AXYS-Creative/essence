@@ -163,11 +163,17 @@
     opacity: 0; // Prevent flicker
   }
 
+  @include mq-max("md") {
+    gap: 8px;
+  }
+
   &__word {
+    line-height: 100%;
     overflow: hidden;
   }
 
   &__letter {
+    line-height: 100%;
     display: inline-block;
     padding-block-end: 8px;
 
