@@ -27,10 +27,19 @@ layout: "app"
 </section>
 
 <!-- prettier-ignore -->
+{% set currentIndex = 0 %} 
+{% for post in collections.blog %} 
+  {% if post.url == page.url %} 
+    {% set currentIndex = loop.index %} 
+  {% endif %} 
+{% endfor %}
+
 <nav class="post-footer-nav">
-  
+  <!-- prettier-ignore -->
+  {% if currentIndex > 1 %} 
+    {% set prevPost = collections.blog[currentIndex - 2] %}
   <a
-    href="{{ latestPost.url }}"
+    href="{{ prevPost.url }}"
     class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
     target="_self"
   >
@@ -41,26 +50,30 @@ layout: "app"
       </span>
     </span>
     <svg
-    class="icon-arrow-right gsap-animate"
-    width="16"
-    height="10"
-    viewBox="0 0 16 10"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M1 5H14L11 1L15 5L11 9L14.5 5"
-      stroke="#0E0E0E"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="svg-elem-1"
-    ></path>
-  </svg>
+      class="icon-arrow-right gsap-animate"
+      width="16"
+      height="10"
+      viewBox="0 0 16 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5H14L11 1L15 5L11 9L14.5 5"
+        stroke="#0E0E0E"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-elem-1"
+      ></path>
+    </svg>
   </a>
+  {% endif %}
 
+  <!-- prettier-ignore -->
+  {% if currentIndex < collections.blog | length %} 
+  {% set nextPost = collections.blog[currentIndex] %}
   <a
-    href="{{ latestPost.url }}"
+    href="{{ nextPost.url }}"
     class="post-body__nav-link simple-link tab-element-page"
     target="_self"
   >
@@ -88,5 +101,5 @@ layout: "app"
       ></path>
     </svg>
   </a>
-  
+  {% endif %}
 </nav>

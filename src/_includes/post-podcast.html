@@ -96,40 +96,53 @@ layout: "app"
 </section>
 
 <!-- prettier-ignore -->
+{% set currentIndex = 0 %} 
+{% for post in collections.podcast %} 
+  {% if post.url == page.url %} 
+    {% set currentIndex = loop.index %} 
+  {% endif %} 
+{% endfor %}
+
 <nav class="post-footer-nav">
-  
+  <!-- prettier-ignore -->
+  {% if currentIndex > 1 %} 
+    {% set prevEpisode = collections.podcast[currentIndex - 2] %}
   <a
-    href="{{ latestPost.url }}"
+    href="{{ prevEpisode.url }}"
     class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
     target="_self"
   >
     <span class="simple-link__span-outter">
-      <span class="simple-link__span-inner">Prev Episode</span>
+      <span class="simple-link__span-inner">Previous Episode</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Prev Episode
+        Previous Episode
       </span>
     </span>
     <svg
-    class="icon-arrow-right gsap-animate"
-    width="16"
-    height="10"
-    viewBox="0 0 16 10"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M1 5H14L11 1L15 5L11 9L14.5 5"
-      stroke="#0E0E0E"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="svg-elem-1"
-    ></path>
-  </svg>
+      class="icon-arrow-right gsap-animate"
+      width="16"
+      height="10"
+      viewBox="0 0 16 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5H14L11 1L15 5L11 9L14.5 5"
+        stroke="#0E0E0E"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-elem-1"
+      ></path>
+    </svg>
   </a>
+  {% endif %}
 
+  <!-- prettier-ignore -->
+  {% if currentIndex < collections.podcast | length %} 
+  {% set nextEpisode = collections.podcast[currentIndex] %}
   <a
-    href="{{ latestPost.url }}"
+    href="{{ nextEpisode.url }}"
     class="post-body__nav-link simple-link tab-element-page"
     target="_self"
   >
@@ -157,5 +170,5 @@ layout: "app"
       ></path>
     </svg>
   </a>
-  
+  {% endif %}
 </nav>

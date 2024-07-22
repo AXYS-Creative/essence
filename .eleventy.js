@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  // Adjust to include all markdown files in subdirectories
+  // Fetch data from collection for .md files (blog, podcasts, etc.)
   eleventyConfig.addCollection("posts", (collectionApi) =>
     collectionApi.getFilteredByGlob("./src/posts/**/*.md")
   );
