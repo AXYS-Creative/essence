@@ -12,13 +12,13 @@ video_embed: <iframe width="560" height="315"
   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-quote: "\"Passion is the fire that fuels our dreams and ambitions; it's the
-  energy that propels us forward, even when the journey gets tough.\""
+quote: Passion is the fire that fuels our dreams and ambitions; it's the energy that propels us forward, even when the journey gets tough.
 quote_image: /static/img/quote-male.png
 quote_side: right
 tags:
   - emotion
 ---
+
 In this inspiring episode, we delve into the powerful role of passion in our lives with Jordan Blake, a renowned motivational speaker and life coach. Jordan begins by defining passion as an intense enthusiasm or compelling desire for something that brings us joy and fulfillment. He explains that passion is not just a fleeting emotion but a deep-seated drive that can guide our life choices and shape our destiny.
 
 Jordan shares his personal story of discovering his passion for motivational speaking. He recounts how he felt unfulfilled in his corporate job and how a life-changing event pushed him to pursue what truly made him happy. His journey was not without challenges, but his unwavering passion helped him overcome obstacles and achieve his goals. This narrative sets a motivational tone for the episode, highlighting that discovering and following one's passion is possible for anyone willing to take the leap.
