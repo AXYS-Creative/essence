@@ -11,6 +11,7 @@ quote_image: /static/img/quote-female.png
 quote_side: left
 tags:
   - general
+date: 2022-02-09T21:27:48.951Z
 ---
 
 In this engaging episode, we explore the concept of priorities with Dr. Eleanor Bennett, a renowned productivity expert and author. Dr. Bennett begins by defining what priorities are and why they are crucial for leading a fulfilled and balanced life. She emphasizes that priorities are not static and can change over time based on our circumstances and personal growth. This fluid nature of priorities makes it essential for individuals to periodically reassess and realign their goals and actions.

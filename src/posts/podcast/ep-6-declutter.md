@@ -13,6 +13,7 @@ tags:
   - physical
   - emotion
   - popular
+date: 2022-06-07T21:27:48.951Z
 ---
 
 In this refreshing episode, we dive into the art and science of decluttering with Megan Johnson, a professional organizer and bestselling author known for her holistic approach to tidying up. Megan starts by defining decluttering as more than just a physical task—it’s a mindset shift towards intentional living. She explains that decluttering is about evaluating the role of possessions in our lives and making conscious choices to surround ourselves only with what brings joy and utility.

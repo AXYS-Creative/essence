@@ -17,6 +17,7 @@ quote_image: /static/img/quote-male.png
 quote_side: right
 tags:
   - emotion
+date: 2022-07-05T21:27:48.951Z
 ---
 
 In this inspiring episode, we delve into the powerful role of passion in our lives with Jordan Blake, a renowned motivational speaker and life coach. Jordan begins by defining passion as an intense enthusiasm or compelling desire for something that brings us joy and fulfillment. He explains that passion is not just a fleeting emotion but a deep-seated drive that can guide our life choices and shape our destiny.

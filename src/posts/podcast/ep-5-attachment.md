@@ -12,6 +12,7 @@ quote_side: left
 tags:
   - physical
   - emotion
+date: 2022-05-06T21:27:48.951Z
 ---
 
 This captivating episode explores the intricate world of attachment with Dr. Emily Carter, a psychologist and author renowned for her work on human relationships. Dr. Carter begins by defining attachment and explaining its origins in early childhood. She introduces the concept of attachment styles, which are formed based on our interactions with primary caregivers and significantly influence our adult relationships. Dr. Carter outlines the four primary attachment styles: secure, anxious, avoidant, and disorganized, providing clear examples of how each style manifests in behavior and relationship dynamics.
