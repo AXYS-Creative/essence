@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 import { videoCursor } from "../core/mouseCursor.js";
 
 export const videoSection = document.querySelector(".video-section"),
@@ -25,6 +27,11 @@ if (videoSection) {
 
     setTimeout(() => {
       iframe.src = "";
+
+      // GAME CHANGER - Restore GSAP animations after video has been opened
+      ScrollTrigger.getAll().forEach((st) => {
+        st.refresh();
+      });
     }, 750);
   };
 
