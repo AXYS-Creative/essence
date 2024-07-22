@@ -1,6 +1,6 @@
 ---
-title: Passion
-title_short: "Episode #7 - Passion"
+title: "Episode #7 - Passion"
+title_short: Passion
 episode: "007"
 description: In this episode, we uncover the essence of passion and how it
   drives us to pursue our dreams, featuring insights from motivational speaker
