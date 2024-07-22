@@ -8,20 +8,18 @@ layout: "app"
 
 <section class="post-hero hero-section">
   <div class="post-hero__header">
-    <span class="post-hero__category">
+    <small class="post-hero__category">
       {{ category | capitalize }}
-      <span class="divider">|</span>
+      <span class="divider">•</span>
       Ep. {{ episode }}
-    </span>
+    </small>
     <h1 class="post-hero__heading" aria-label="{{title_short}}">
       <span class="sr-only">{{title_short}}</span>
       <span class="character-split gsap-animate" aria-hidden="true">
         {{title_short}}
       </span>
     </h1>
-    <p class="post-hero__guest">
-      <span>Guest: {{ guest }}</span>
-    </p>
+    <p class="post-hero__guest">Guest: {{ guest }}</p>
   </div>
 </section>
 

@@ -8,17 +8,18 @@ layout: "app"
 
 <section class="post-hero hero-section">
   <div class="post-hero__header">
-    <span class="post-hero__category">{{ category | capitalize }}</span>
+    <small class="post-hero__category">
+      {{ category | capitalize }}
+      <span class="divider">•</span>
+      <time> {{ date | readableDate }} </time>
+    </small>
     <h1 class="post-hero__heading" aria-label="{{title}}">
       <span class="sr-only">{{title}}</span>
       <span class="character-split gsap-animate" aria-hidden="true">
         {{title}}
       </span>
     </h1>
-    <p class="post-hero__author">
-      <span> by {{ author }} </span> •
-      <time> {{ date | readableDate }} </time>
-    </p>
+    <p class="post-hero__author">by {{ author }}</p>
   </div>
 </section>
 

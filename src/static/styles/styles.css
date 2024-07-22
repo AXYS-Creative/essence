@@ -5770,6 +5770,9 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
     font-size: 14px;
   }
 }
+.post-hero__category .divider {
+  padding-inline: 4px;
+}
 .post-hero__heading {
   margin-block: 12px;
 }

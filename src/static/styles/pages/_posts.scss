@@ -32,13 +32,16 @@
     @include mq-max("md") {
       font-size: 14px;
     }
+
+    .divider {
+      padding-inline: 4px;
+    }
   }
 
   &__heading {
     margin-block: 12px;
   }
 
-  // Blog
   &__author,
   &__guest {
     @include row-center(flex-start);
