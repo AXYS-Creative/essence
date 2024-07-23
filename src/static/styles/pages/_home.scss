@@ -57,13 +57,16 @@
 
     &.animate {
       $duration: 3.2s;
+      // $duration: 2.2s;
       $duration-lg: 2.5s;
+      $delay: 0.2s;
+      // $delay: 0s;
       $delay-lg: 0.27s;
 
       @include mq-motion-allow {
         .home-hero__heading-text {
           &:first-of-type {
-            animation: text-group-1 $duration $cubic-ease 0.2s forwards;
+            animation: text-group-1 $duration $cubic-ease $delay forwards;
 
             @include mq-max("lg") {
               translate: 0 0;
@@ -72,7 +75,7 @@
             }
 
             .home-hero__heading-text-inner-1 {
-              animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+              animation: text-letters-1 $duration $cubic-ease $delay forwards;
 
               @include mq-max("lg") {
                 animation-duration: $duration-lg;
@@ -80,7 +83,7 @@
               }
             }
             .home-hero__heading-text-inner-2 {
-              animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
+              animation: text-letters-2 $duration $cubic-ease $delay forwards;
 
               @include mq-max("lg") {
                 animation-duration: $duration-lg;
@@ -90,7 +93,7 @@
           }
 
           &:last-of-type {
-            animation: text-group-2 $duration $cubic-ease 0.2s forwards;
+            animation: text-group-2 $duration $cubic-ease $delay forwards;
 
             @include mq-max("lg") {
               animation: text-group-2-lg $duration-lg $cubic-ease
@@ -98,11 +101,11 @@
             }
 
             .home-hero__heading-text-inner-1 {
-              animation: text-letters-1 $duration $cubic-ease 0.2s forwards;
+              animation: text-letters-1 $duration $cubic-ease $delay forwards;
             }
 
             .home-hero__heading-text-inner-2 {
-              animation: text-letters-2 $duration $cubic-ease 0.2s forwards;
+              animation: text-letters-2 $duration $cubic-ease $delay forwards;
             }
 
             .home-hero__heading-text-inner-1,
