@@ -43,7 +43,7 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       &::after {
         width: 0;
         left: auto;

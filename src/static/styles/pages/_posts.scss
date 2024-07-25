@@ -258,7 +258,7 @@
       }
     }
 
-    &:focus {
+    &:focus-visible {
       scale: $btn-hover-scale;
     }
 

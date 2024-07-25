@@ -12,7 +12,7 @@
   // Autofill for form fields: input, textarea, select, etc. Feel free to delete if there are no forms
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
-  &:-webkit-autofill:focus {
+  &:-webkit-autofill:focus-visible {
     -webkit-text-fill-color: var(--primary-font-color);
     -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset;
   }
@@ -62,7 +62,7 @@ header {
     }
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       .header-logo__text {
         .letter-wrapper {
           @for $i from 1 through 8 {
@@ -203,7 +203,7 @@ header {
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         color: var(--primary-font-color) !important;
       }
 
@@ -286,7 +286,7 @@ header {
       transition: 0.2s ease 0s;
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         scale: 1.1;
       }
 
@@ -408,7 +408,7 @@ header {
         }
 
         &:hover,
-        &:focus {
+        &:focus-visible {
           .social-media-icon-wrapper {
             translate: 0 -40%;
           }
@@ -495,7 +495,7 @@ header {
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         border-color: var(--primary-accent-color);
 
         &::after {
@@ -637,7 +637,7 @@ header {
         @include cta-default-size;
 
         &:hover,
-        &:focus {
+        &:focus-visible {
           span:nth-of-type(2) {
             @include mq-motion-allow {
               transition: 0.3s ease 0.4s, color 0.2s ease 0.4s;
@@ -676,7 +676,7 @@ header {
   &.scroll-active {
     .header-logo {
       &:hover,
-      &:focus {
+      &:focus-visible {
         .header-logo__text {
           .letter-wrapper {
             .letter-wrapper__letter:nth-of-type(1) {
@@ -789,7 +789,7 @@ header {
   &.menu-active {
     .header-logo {
       &:hover,
-      &:focus {
+      &:focus-visible {
         isolation: isolate;
       }
 
@@ -1041,7 +1041,7 @@ nav.nav-menu {
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         opacity: 1;
       }
 
@@ -1416,7 +1416,7 @@ footer {
           opacity: 0.5;
 
           &:hover,
-          &:focus {
+          &:focus-visible {
             opacity: 1;
           }
         }
@@ -1714,7 +1714,7 @@ cite {
       }
 
       &:hover,
-      &:focus {
+      &:focus-visible {
         scale: 1.1;
       }
 
@@ -1890,7 +1890,7 @@ cite {
         }
 
         &:hover,
-        &:focus {
+        &:focus-visible {
           background: var(--background-color);
         }
       }

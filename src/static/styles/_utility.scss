@@ -8,7 +8,7 @@
   transition: 0.25s ease;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     &::before {
       scale: 0;
     }
@@ -99,7 +99,7 @@
     flex-direction: row-reverse;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       .icon-arrow-right {
         translate: -4px 0;
       }
@@ -137,7 +137,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     &::before {
       animation: classic-link-hover $cubic-ease-sudden forwards;
       @include mq-motion-allow {
@@ -226,7 +226,7 @@
   }
 
   &__word {
-    line-height: 100%;
+    line-height: 125%;
     overflow: hidden;
   }
 
