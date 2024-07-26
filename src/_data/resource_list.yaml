@@ -2,8 +2,6 @@ services:
   - tags: Physical
     title: Home Organization
   - tags: Physical
-    title: Decluttering Workshops
-  - tags: Physical
     title: Minimalist Living Consultations
   - tags: Physical
     title: Space Optimization
@@ -21,8 +19,6 @@ services:
     title: Essential Items Lists
   - tags: Emotional
     title: Mindfulness Coaching
-  - tags: Emotional
-    title: Stress Reduction Techniques
   - tags: Emotional
     title: Guided Meditation Sessions
   - tags: Emotional
