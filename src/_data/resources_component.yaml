@@ -1,5 +1,10 @@
 images:
-  - tags:
-      - Add Category
-    src: /static/img/blog-image-3.png
-    alt: test
+  - tags: Physical
+    src: /static/img/resources-img-1.png
+    alt: A young woman covered in clothing
+  - tags: Emotional
+    src: /static/img/resources-img-2.png
+    alt: Graffiti filled in the silhouette of a young man
+  - tags: Financial
+    src: /static/img/resources-img-3.png
+    alt: A paper bag from a fast food restaurant
