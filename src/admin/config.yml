@@ -221,7 +221,7 @@ collections:
     files:
       - label: "Resources"
         name: "partial_resources"
-        file: "src/_data/resources_component.yaml"
+        file: "src/_data/partial_resources.yaml"
         editor:
           preview: true
         fields:
@@ -229,6 +229,7 @@ collections:
             name: "images"
             widget: "list"
             collapsed: false
+            max: 3
             fields:
               - label: "Category"
                 name: "tags"
