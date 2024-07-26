@@ -2,8 +2,8 @@ backend:
   # Use netlify identity as backend
   name: "git-gateway"
   branch: "main"
-media_folder: "src/images/content"
-public_folder: "/images/content"
+media_folder: "src/images"
+public_folder: "/images"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
