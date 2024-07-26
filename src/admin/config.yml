@@ -216,6 +216,39 @@ collections:
                   widget: "string",
                 }
               - { label: "Phone", name: "phone", widget: "string" }
+  - label: "Partials"
+    name: "partials"
+    files:
+      - label: "Resources"
+        name: "partial_resources"
+        file: "src/_data/resources_component.yaml"
+        editor:
+          preview: true
+        fields:
+          - label: "images"
+            name: "images"
+            widget: "list"
+            collapsed: false
+            fields:
+              - label: "Category"
+                name: "tags"
+                widget: select
+                multiple: false
+                required: true
+                options: ["Physical", "Emotional", "Financial"]
+                default: ["Add Category"]
+              - {
+                  label: "Image Source",
+                  name: "src",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  label: "Image Description",
+                  name: "alt",
+                  widget: "string",
+                  required: true,
+                }
   - label: "Settings"
     name: "settings"
     files:

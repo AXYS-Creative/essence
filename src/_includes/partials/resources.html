@@ -39,18 +39,24 @@
   </div>
 
   <div class="essence-resources__images">
+    {% for images in partial_resources.images %}
     <figure class="gsap-animate">
-      <a href="/resources#physical-clutter" class="wave-img-wrapper">
+      <a
+        href="/resources#{{ images.tags | lower }}-clutter"
+        class="wave-img-wrapper"
+      >
         <img
-          src="./static/img/photos/resources-img-1.png"
-          alt="A young woman covered in clothing."
+          src="{{ images.src }}"
+          alt="{{ images.alt }}"
           loading="lazy"
           class="wave-img"
         />
       </a>
-      <figcaption>01. Physical Clutter</figcaption>
+      <figcaption>{{ loop.index }}. {{ images.tags}} Clutter</figcaption>
     </figure>
-    <figure class="gsap-animate">
+    {% endfor %}
+
+    <!-- <figure class="gsap-animate">
       <a href="/resources#emotional-clutter" class="wave-img-wrapper">
         <img
           src="./static/img/photos/resources-img-2.png"
@@ -60,8 +66,9 @@
         />
       </a>
       <figcaption>02. Emotional Clutter</figcaption>
-    </figure>
-    <figure class="gsap-animate">
+    </figure> -->
+
+    <!-- <figure class="gsap-animate">
       <a href="/resources#financial-clutter" class="wave-img-wrapper">
         <img
           src="./static/img/photos/resources-img-3.png"
@@ -71,7 +78,7 @@
         />
       </a>
       <figcaption>03. Financial Clutter</figcaption>
-    </figure>
+    </figure> -->
   </div>
 
   <a

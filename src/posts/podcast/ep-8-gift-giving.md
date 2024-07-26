@@ -11,7 +11,7 @@ video_embed: <iframe width="560" height="315"
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 quote: Gift-giving is more than a tradition; it's a way to express love, appreciation, and thoughtfulness, strengthening the bonds we share with others.
-quote_image: /static/img/quote-female.png
+quote_image: /static/img/podcast-quote-female.png
 quote_side: left
 tags:
   - physical

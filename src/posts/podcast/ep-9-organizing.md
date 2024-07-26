@@ -11,7 +11,7 @@ video_embed: <iframe width="560" height="315"
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 quote: Organizing isn't just about tidying up; it's about creating systems that simplify your life and make space for what truly matters.
-quote_image: /static/img/quote-female.png
+quote_image: /static/img/podcast-quote-female.png
 quote_side: left
 tags:
   - physical

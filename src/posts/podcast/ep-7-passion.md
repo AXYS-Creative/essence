@@ -13,7 +13,7 @@ video_embed: <iframe width="560" height="315"
   clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 quote: Passion is the fire that fuels our dreams and ambitions; it's the energy that propels us forward, even when the journey gets tough.
-quote_image: /static/img/quote-male.png
+quote_image: /static/img/podcast-quote-male.png
 quote_side: right
 tags:
   - emotion
