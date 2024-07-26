@@ -1,0 +1,5 @@
+images:
+  - tags:
+      - Add Category
+    src: /static/img/blog-image-3.png
+    alt: teste
