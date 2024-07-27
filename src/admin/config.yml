@@ -186,6 +186,7 @@ collections:
                 }
   - name: "resources_page"
     label: "Resources Page"
+    preview_path: "/resources#resource-list"
     files:
       - name: "resource_list"
         label: "Resource List"
@@ -208,6 +209,7 @@ collections:
               - { name: "title", label: "Title", widget: "string" }
   - name: "contact_page"
     label: "Contact Page"
+    preview_path: "/contact#office-locations"
     files:
       - name: "office_locations"
         label: "Office Locations"
