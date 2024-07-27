@@ -112,71 +112,73 @@ collections:
                   ]
                 default: ["Add Column"]
               - {
-                  label: "Image Source",
                   name: "src",
+                  label: "Image Source",
                   widget: "image",
                   required: true,
                 }
               - {
-                  label: "Description",
                   name: "description",
+                  label: "Description",
                   widget: "string",
                   required: true,
                 }
-      - label: "Recorded Growth"
-        name: "recorded_growth"
+      - name: "recorded_growth"
+        label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
         editor:
           preview: true
           previewStyles: "/static/styles/styles.css"
         fields:
-          - label: "Growth Stats"
-            name: "growth_stats"
+          - name: "growth_stats"
+            label: "Growth Stats"
+            label_singular: "Growth Stat"
             widget: "list"
             collapsed: false
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Numbers", name: "numbers", widget: "string" }
-      - label: "Team Portraits"
-        name: "team_portraits"
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "numbers", label: "Numbers", widget: "string" }
+      - name: "team_portraits"
+        label: "Team Portraits"
         file: "src/_data/team_portraits.yaml"
         editor:
           preview: true
         fields:
-          - label: "Portrait Images"
-            name: "images"
+          - name: "images"
+            label: "Portrait Images"
             widget: "list"
             collapsed: false
             fields:
               - {
-                  label: "Image Caption",
                   name: "caption",
+                  label: "Image Caption",
                   widget: "string",
                   required: true,
                 }
               - {
-                  label: "Image Source",
                   name: "src",
+                  label: "Image Source",
                   widget: "image",
                   required: true,
                 }
               - {
-                  label: "SEO Description",
                   name: "description",
+                  label: "SEO Description",
                   widget: "string",
                   required: true,
                 }
-  - label: "Resources Page"
-    name: "resources_page"
+  - name: "resources_page"
+    label: "Resources Page"
     files:
-      - label: "Resource List"
-        name: "resource_list"
+      - name: "resource_list"
+        label: "Resource List"
         file: "src/_data/resource_list.yaml"
         editor:
           preview: false
         fields:
-          - label: "Services"
-            name: "services"
+          - name: "services"
+            label: "Services"
+            label_singular: "Service"
             widget: "list"
             collapsed: false
             fields:
@@ -186,98 +188,103 @@ collections:
                 multiple: false
                 options: ["Physical", "Emotional", "Financial"]
                 default: ["Add Category"]
-              - { label: "Title", name: "title", widget: "string" }
-  - label: "Contact Page"
-    name: "contact_page"
+              - { name: "title", label: "Title", widget: "string" }
+  - name: "contact_page"
+    label: "Contact Page"
     files:
-      - label: "Office Locations"
-        name: "office_locations"
+      - name: "office_locations"
+        label: "Office Locations"
         file: "src/_data/office_locations.yaml"
         editor:
           preview: true
         fields:
-          - label: "Location Details"
-            name: "locations"
+          - name: "locations"
+            label: "Location Details"
+            label_singular: "Location"
             widget: "list"
             collapsed: false
             fields:
               - { label: "City", name: "city", widget: "string" }
               - {
-                  label: "Image Source",
                   name: "src",
+                  label: "Image Source",
                   widget: "image",
                   required: true,
                 }
               - {
-                  label: "Image Description",
                   name: "alt",
+                  label: "Image Description",
                   widget: "string",
                   required: true,
                 }
-              - { label: "Adress, street", name: "address_1", widget: "string" }
+              - { name: "address_1", label: "Adress, street", widget: "string" }
               - {
-                  label: "Adress, city / state",
                   name: "address_2",
+                  label: "Adress, city / state",
                   widget: "string",
                 }
               - { label: "Phone", name: "phone", widget: "string" }
-  - label: "Partials"
-    name: "partials"
+  - name: "partials"
+    label: "Partials"
     files:
-      - label: "Resources"
-        name: "partial_resources"
+      - name: "partial_resources"
+        label: "Resources"
         file: "src/_data/partial_resources.yaml"
         editor:
           preview: true
         fields:
-          - label: "Categories"
-            name: "categories"
+          - name: "categories"
+            label: "Categories"
+            label_singular: "Category"
             widget: "list"
             collapsed: false
             max: 3
             fields:
-              - label: "Category"
-                name: "tags"
+              - name: "tags"
+                label: "Category"
                 widget: select
                 multiple: false
                 required: true
                 options: ["Physical", "Emotional", "Financial"]
                 default: ["Add Category"]
               - {
-                  label: "Image Source",
                   name: "src",
+                  label: "Image Source",
                   widget: "image",
                   required: true,
                 }
               - {
-                  label: "Image Description",
                   name: "alt",
+                  label: "Image Description",
                   widget: "string",
                   required: true,
                 }
-  - label: "Settings"
-    name: "settings"
+  - name: "settings"
+    label: "Settings"
     files:
-      - label: "Social Media"
-        name: "links"
+      - name: "social_media"
+        label: "Social Media"
         file: "src/_data/social_media.yaml"
         fields:
-          - label: "Nav Items"
-            name: "links"
+          - name: "links"
+            label: "Nav Items"
+            label_singular: "Nav Item"
             widget: "list"
             collapsed: false
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "URL", name: "url", widget: "string" }
-              - { label: "Image Source", name: "src", widget: "image" }
-      - label: "Navigation Images"
-        name: "nav_images"
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "url", label: "URL", widget: "string" }
+              - { name: "src", label: "Image Source", widget: "image" }
+      - name: "nav_images"
+        label: "Navigation Images"
         file: "src/_data/nav_images.yaml"
         fields:
-          - label: "Nav Images"
-            name: "images"
+          - name: "images"
+            label: "Nav Images"
+            label_singular: "Nav Image"
             widget: "list"
             collapsed: false
+            max: 8
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image Source", name: "src", widget: "image" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "src", label: "Image Source", widget: "image" }
