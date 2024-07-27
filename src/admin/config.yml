@@ -83,6 +83,9 @@ collections:
         options: ["popular", "general", "physical", "emotion", "finance"]
   - name: "about_page"
     label: "About Page"
+    description: >
+      Modify content for the 'About' Page.
+      This is the description
     files:
       - name: "collage_images"
         label: "Hero Collage"
@@ -165,6 +168,7 @@ collections:
                   name: "description",
                   label: "SEO Description",
                   widget: "string",
+                  hint: "Describe the image",
                   required: true,
                 }
   - name: "resources_page"
@@ -183,7 +187,7 @@ collections:
             collapsed: false
             fields:
               - label: "Category"
-                name: "tags"
+                name: "tag"
                 widget: select
                 multiple: false
                 options: ["Physical", "Emotional", "Financial"]

@@ -1,10 +1,10 @@
 categories:
-  - tags: Physical
+  - tag: Physical
     src: /static/img/resources-img-1.png
     alt: A young woman covered in clothing
-  - tags: Emotional
+  - tag: Emotional
     src: /static/img/resources-img-2.png
     alt: Graffiti filled in the silhouette of a young man
-  - tags: Financial
+  - tag: Financial
     src: ./static/img/resources-img-3.png
     alt: A paper bag from a fast food restaurant

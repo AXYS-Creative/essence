@@ -42,7 +42,7 @@
     {% for category in partial_resources.categories %}
     <figure class="gsap-animate">
       <a
-        href="/resources#{{ category.tags | lower }}-clutter"
+        href="/resources#{{ category.tag | lower }}-clutter"
         class="wave-img-wrapper"
       >
         <img
@@ -52,7 +52,7 @@
           class="wave-img"
         />
       </a>
-      <figcaption>0{{ loop.index }}. {{ category.tags}} Clutter</figcaption>
+      <figcaption>0{{ loop.index }}. {{ category.tag}} Clutter</figcaption>
     </figure>
     {% endfor %}
   </div>
