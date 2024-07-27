@@ -7,6 +7,7 @@ description: This post explores the concept of living without compromise,
 author: Wayne Thomas
 date: 2024-01-04T15:21:05.064Z
 collage_thumbnail: /static/img/blog-image-4.png
+cover_image: /static/img/blog-image-4.png
 tags:
   - general
 ---
