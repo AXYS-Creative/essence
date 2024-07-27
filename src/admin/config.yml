@@ -24,6 +24,11 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - name: "cover_image"
+        label: "Cover Image"
+        widget: "image"
+        required: false
+        tagname: ""
       - widget: select
         label: "tags"
         name: "tags"
@@ -88,11 +93,10 @@ collections:
       This is the description
     files:
       - name: "collage_images"
-        label: "Hero Collage"
+        label: "Collage Images"
         file: "src/_data/collage_images.yaml"
         editor:
           preview: true
-        thumbnail: "/img/collage-1a.webp"
         fields:
           - name: "images"
             label: "Images"
@@ -126,6 +130,11 @@ collections:
                   widget: "string",
                   required: true,
                 }
+              - name: "collage_thumbnail"
+                label: "Collage Thumbnail"
+                widget: "image"
+                required: false
+                tagname: ""
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
@@ -141,6 +150,7 @@ collections:
             fields:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "numbers", label: "Numbers", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
       - name: "team_portraits"
         label: "Team Portraits"
         file: "src/_data/team_portraits.yaml"
@@ -245,12 +255,12 @@ collections:
             max: 3
             fields:
               - name: "tag"
-                label: "Category"
+                label: "Tag"
                 widget: select
                 multiple: false
                 required: true
                 options: ["Physical", "Emotional", "Financial"]
-                default: ["Add Category"]
+                default: ["Add Tag"]
               - {
                   name: "src",
                   label: "Image Source",
