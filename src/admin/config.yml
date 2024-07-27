@@ -6,7 +6,8 @@ media_folder: "src/static/img"
 public_folder: "/static/img"
 site_url: https://essentialism.netlify.app
 display_url: https://essentialism.netlify.app
-logo_url: https://essentialism.netlify.app/static/img/essence-full-logo-dark.svg
+# logo_url: https://essentialism.netlify.app/static/img/essence-full-logo-dark.svg
+logo_url: https://essentialism.netlify.app/static/img/admin-logo.svg
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
