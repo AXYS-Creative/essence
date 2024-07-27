@@ -24,11 +24,6 @@ collections:
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - name: "cover_image"
-        label: "Cover Image"
-        widget: "image"
-        required: false
-        tagname: ""
       - widget: select
         label: "tags"
         name: "tags"
@@ -131,11 +126,6 @@ collections:
                   widget: "string",
                   required: true,
                 }
-          - name: "collage_thumbnail ERROR"
-            label: "Collage Thumbnail"
-            widget: "image"
-            required: false
-            tagname: ""
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
@@ -144,11 +134,6 @@ collections:
           preview: true
           previewStyles: "/static/styles/styles.css"
         fields:
-          - name: "numbers_cover_image"
-            label: "Cover Image"
-            widget: "image"
-            required: false
-            tagname: ""
           - name: "growth_stats"
             label: "Growth Stats"
             label_singular: "Growth Stat"
@@ -157,7 +142,6 @@ collections:
             fields:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "numbers", label: "Numbers", widget: "string" }
-          - { label: "Cover Image ERROR", name: "image", widget: "image" }
       - name: "team_portraits"
         label: "Team Portraits"
         file: "src/_data/team_portraits.yaml"
@@ -167,6 +151,7 @@ collections:
         fields:
           - name: "images"
             label: "Portrait Images"
+            label_singular: "Image"
             widget: "list"
             collapsed: false
             fields:
