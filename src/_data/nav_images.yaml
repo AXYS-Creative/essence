@@ -1,17 +1,17 @@
 images:
   - title: blog
-    src: /static/img/nav-blog-cover.png
+    src: /static/img/nav-blog-cover.webp
   - title: podcast
-    src: /static/img/nav-podcast-cover.png
+    src: /static/img/nav-podcast-cover.webp
   - title: books
-    src: /static/img/nav-book-cover.png
+    src: /static/img/nav-book-cover.webp
   - title: films
-    src: /static/img/nav-film-cover.png
+    src: /static/img/nav-film-cover.webp
   - title: about
-    src: /static/img/nav-about-cover.png
+    src: /static/img/nav-about-cover.webp
   - title: resources
-    src: /static/img/nav-resources-cover.png
+    src: /static/img/nav-resources-cover.webp
   - title: contact
-    src: /static/img/nav-contact-cover.png
+    src: /static/img/nav-contact-cover.webp
   - title: patreon
-    src: /static/img/nav-patreon-cover.png
+    src: /static/img/nav-patreon-cover.webp
