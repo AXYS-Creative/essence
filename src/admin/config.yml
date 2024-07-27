@@ -4,17 +4,16 @@ backend:
   branch: "main"
 media_folder: "src/static/img"
 public_folder: "/static/img"
-site_url: https://essentialism.netlify.app
-display_url: https://essentialism.netlify.app
-# logo_url: https://essentialism.netlify.app/static/img/essence-full-logo-dark.svg
-logo_url: https://essentialism.netlify.app/static/img/admin-logo.svg
+site_url: https://essentialism.netlify.app # On admin login page, this adds a 'go back to site' link
+display_url: https://essentialism.netlify.app # In admin dashboard, this addes the URL in the corner
+logo_url: https://essentialism.netlify.app/static/img/admin-logo.svg # On admin login page, this adds a custom logo
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Blog"
-    name: "blog"
+  - name: "blog"
+    label: "Blog"
     folder: "src/posts/blog"
     create: true
     editor:
@@ -31,8 +30,8 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
-  - label: "Podcast"
-    name: "podcast"
+  - name: "podcast"
+    label: "Podcast"
     folder: "src/posts/podcast"
     create: true
     editor:
@@ -62,8 +61,9 @@ collections:
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
       - { label: "Publish Date", name: "date", widget: "datetime" }
-  - label: "Books"
-    name: "books"
+  - name: "books"
+    label: "Books"
+    label_singular: "Book"
     folder: "src/posts/books"
     create: true
     editor:
@@ -81,18 +81,19 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
-  - label: "About Page"
-    name: "about_page"
+  - name: "about_page"
+    label: "About Page"
     files:
-      - label: "Hero Collage"
-        name: "collage_images"
+      - name: "collage_images"
+        label: "Hero Collage"
         file: "src/_data/collage_images.yaml"
         editor:
           preview: true
         thumbnail: "/img/collage-1a.webp"
         fields:
-          - label: "Collage Images"
-            name: "image"
+          - name: "images"
+            label: "Images"
+            label_singular: "Image"
             widget: "list"
             collapsed: false
             fields:
