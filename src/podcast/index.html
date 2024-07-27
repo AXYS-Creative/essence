@@ -14,7 +14,7 @@ textBlockWidth: ""
 textBlockBody: "Dive deeper into a life less ordinary, enriched by the essentials."
 ---
 
-{% set listContent = collections.podcast | sort(attribute='data.title') %}
+{% set listContent = collections.podcast | sort(attribute='data.date') %}
 
 <div class="slider-listing__group">
   <h3 class="slider-listing__group-heading gsap-animate">Most popular</h3>

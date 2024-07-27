@@ -3,9 +3,9 @@ layout: "app"
 ---
 
 <!-- prettier-ignore -->
-{% set latestPost = collections.blog[0] %}
+{% set latestBlog = collections.blog[0] %}
 
-<!-- HERO PARAGRAPH - Props passed via front matter -->
+<!-- HERO PARAGRAPH - Props passed via front matter from each directory/index.html -->
 {% include "partials/paragraph.html"%}
 
 <section class="slider-section">
@@ -19,7 +19,7 @@ layout: "app"
     <!-- prettier-ignore -->
     {% if page.url === "/blog/" %}
     <a
-      href="{{ latestPost.url }}"
+      href="{{ latestBlog.url }}"
       class="slider-header__cta simple-link tab-element-page"
     >
       <span class="simple-link__span-outter">
@@ -94,6 +94,7 @@ layout: "app"
 
   <div class="slider-listing">
     <!-- prettier-ignore -->
+    <!-- see blog/index.html, podcast/index.html, etc. -->
     {{ content | safe }}
     <!-- prettier-ignore -->
   </div>
