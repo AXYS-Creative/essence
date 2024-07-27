@@ -6,6 +6,7 @@ description: This post explores the concept of living without compromise,
   maintain your core values in the face of societal pressures.
 author: Wayne Thomas
 date: 2024-01-04T15:21:05.064Z
+collage_thumbnail: /static/img/blog-image-4.png
 tags:
   - general
 ---
