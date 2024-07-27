@@ -95,6 +95,7 @@ collections:
       - name: "collage_images"
         label: "Collage Images"
         file: "src/_data/collage_images.yaml"
+        preview_path: "/about"
         editor:
           preview: true
         fields:
@@ -138,6 +139,7 @@ collections:
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
+        preview_path: "/about#recorded-growth"
         editor:
           preview: true
           previewStyles: "/static/styles/styles.css"
@@ -150,10 +152,11 @@ collections:
             fields:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "numbers", label: "Numbers", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Cover Image", name: "image", widget: "image" }
       - name: "team_portraits"
         label: "Team Portraits"
         file: "src/_data/team_portraits.yaml"
+        preview_path: "/about#our-team"
         editor:
           preview: true
         fields:
