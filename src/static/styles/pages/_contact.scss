@@ -22,7 +22,7 @@ section.contact-hero {
   @include thin-section;
   gap: 156px;
   padding-block: 296px;
-  scroll-margin-block: -240px; // preview_url from admin
+  scroll-margin-block: -216px; // preview_url from admin
 
   @include mq-max("xxl") {
     padding-block: 256px;
