@@ -4,6 +4,9 @@ backend:
   branch: "main"
 media_folder: "src/static/img"
 public_folder: "/static/img"
+site_url: https://essentialism.netlify.app
+display_url: https://essentialism.netlify.app
+logo_url: https://essentialism.netlify.app/static/img/essence-full-logo-dark.svg
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -85,6 +88,7 @@ collections:
         file: "src/_data/collage_images.yaml"
         editor:
           preview: true
+        thumbnail: "/img/collage-1a.webp"
         fields:
           - label: "Collage Images"
             name: "image"
@@ -117,7 +121,6 @@ collections:
                   widget: "string",
                   required: true,
                 }
-        thumbnail: "/static/img/collage-1a.webp"
       - label: "Recorded Growth"
         name: "recorded_growth"
         file: "src/_data/recorded_growth.yaml"
