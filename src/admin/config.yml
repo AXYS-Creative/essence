@@ -131,11 +131,11 @@ collections:
                   widget: "string",
                   required: true,
                 }
-              - name: "collage_thumbnail ERROR"
-                label: "Collage Thumbnail"
-                widget: "image"
-                required: false
-                tagname: ""
+          - name: "collage_thumbnail ERROR"
+            label: "Collage Thumbnail"
+            widget: "image"
+            required: false
+            tagname: ""
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
