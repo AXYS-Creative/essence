@@ -225,8 +225,8 @@ collections:
         editor:
           preview: true
         fields:
-          - label: "images"
-            name: "images"
+          - label: "Categories"
+            name: "categories"
             widget: "list"
             collapsed: false
             max: 3
