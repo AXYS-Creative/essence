@@ -131,7 +131,7 @@ collections:
                   widget: "string",
                   required: true,
                 }
-              - name: "collage_thumbnail"
+              - name: "collage_thumbnail ERROR"
                 label: "Collage Thumbnail"
                 widget: "image"
                 required: false
@@ -144,6 +144,11 @@ collections:
           preview: true
           previewStyles: "/static/styles/styles.css"
         fields:
+          - name: "numbers_cover_image"
+            label: "Cover Image"
+            widget: "image"
+            required: false
+            tagname: ""
           - name: "growth_stats"
             label: "Growth Stats"
             label_singular: "Growth Stat"
@@ -152,7 +157,7 @@ collections:
             fields:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "numbers", label: "Numbers", widget: "string" }
-          - { label: "Cover Image", name: "image", widget: "image" }
+          - { label: "Cover Image ERROR", name: "image", widget: "image" }
       - name: "team_portraits"
         label: "Team Portraits"
         file: "src/_data/team_portraits.yaml"
