@@ -249,6 +249,7 @@ collections:
       - name: "partial_resources"
         label: "Resources"
         file: "src/_data/partial_resources.yaml"
+        preview_path: "/#essence-resources"
         editor:
           preview: true
         fields:
