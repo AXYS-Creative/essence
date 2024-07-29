@@ -20,7 +20,7 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -37,15 +37,40 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Title Short", name: "title_short", widget: "string" }
-      - { label: "Episode", name: "episode", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          hint: "i.e. Episode #3 - Consumerism",
+        }
+      - {
+          label: "Title Short",
+          name: "title_short",
+          widget: "string",
+          hint: "i.e. Consumerism",
+        }
+      - {
+          label: "Episode",
+          name: "episode",
+          widget: "string",
+          hint: "i.e. 003",
+        }
+      - { label: "Description", name: "description", widget: "text" }
       - { label: "Guest", name: "guest", widget: "string" }
       - { label: "Video Poster", name: "poster", widget: "image" }
-      - { label: "Video Embed", name: "video_embed", widget: "string" }
+      - {
+          label: "Video Embed",
+          name: "video_embed",
+          widget: "string",
+          hint: "Copy the iframe embed from a youtube video and paste it here.",
+        }
       - { label: "Episode Recap", name: "body", widget: "markdown" }
-      - { label: "Quote", name: "quote", widget: "string" }
+      - {
+          label: "Quote",
+          name: "quote",
+          widget: "text",
+          hint: "Don't add quotation marks around the quote. These are already added in the code.",
+        }
       - { label: "Quote Image", name: "quote_image", widget: "image" }
       - widget: select
         label: "Quote Side"
@@ -70,7 +95,7 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -114,6 +139,7 @@ collections:
                     "Mobile Column",
                   ]
                 default: ["Add Column"]
+                hint: "Non-functional, simply a visual aid while in the admin dashboard."
               - {
                   name: "src",
                   label: "Image Source",
@@ -122,9 +148,10 @@ collections:
                 }
               - {
                   name: "description",
-                  label: "Description",
+                  label: "Image Description",
                   widget: "string",
                   required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
                 }
       - name: "recorded_growth"
         label: "Recorded Growth"
@@ -171,8 +198,8 @@ collections:
                   name: "description",
                   label: "SEO Description",
                   widget: "string",
-                  hint: "Describe the image",
                   required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
                 }
   - name: "resources_page"
     label: "Resources Page"
@@ -225,6 +252,7 @@ collections:
                   label: "Image Description",
                   widget: "string",
                   required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
                 }
               - { name: "address_1", label: "Adress, street", widget: "string" }
               - {
@@ -268,6 +296,7 @@ collections:
                   label: "Image Description",
                   widget: "string",
                   required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
                 }
   - name: "settings"
     label: "Settings"

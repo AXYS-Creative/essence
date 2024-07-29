@@ -20,7 +20,7 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
   <h3 class="slider-listing__group-heading gsap-animate">Most popular</h3>
   <!-- prettier-ignore -->
   <ul class="slider-listing__group-list">
-    {% for post in listContent | reverse %} {% if "popular" in post.data.tags %}
+    {% for post in listContent %} {% if "popular" in post.data.tags %}
     <li class="gsap-animate">
       <a
         href="{{ post.url | url }}"
