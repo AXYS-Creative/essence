@@ -41,24 +41,21 @@
     </span>
   </a>
 
-  <!-- src > _data > navidation.yaml -->
-  {% if navigation.items %}
-
+  {% if site_navigation.links %}
   <ul class="header-links">
-    {% for item in navigation.items %}
+    {% for link in site_navigation.links %}
     <li>
       <a
         class="header-links__link tab-element-page"
-        href="{{ item.url }}"
-        target="{{ item.target }}"
+        href="{{ link.url }}"
+        target="{{ link.target }}"
       >
-        {{ item.text }}
+        {{ link.title }}
       </a>
     </li>
     {% endfor %}
     <li class="header-links__hover-indicator"></li>
   </ul>
-
   {% endif %}
 
   <div class="menu-btn__wrapper">

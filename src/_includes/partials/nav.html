@@ -5,25 +5,21 @@
   aria-hidden="true"
 >
   <div class="width-constraint backdrop backdrop__nav">
+    {% if site_navigation.links %}
     <div class="nav-img-container">
-      {% for image in nav_images.images %}
-      <img
-        src="{{ image.src }}"
-        alt="{{ image.title }} cover image"
-        class="nav-img"
-      />
+      {% for link in site_navigation.links %}
+      <img src="{{ link.img_src }}" alt="{{ link.img_alt }}" class="nav-img" />
       {% endfor %}
     </div>
 
-    {% if navigation.items %}
     <ul class="nav-links">
-      {% for item in navigation.items %}
+      {% for link in site_navigation.links %}
       <li>
-        <a class="nav-link tab-element-nav" href="{{ item.url }}">
+        <a class="nav-link tab-element-nav" href="{{ link.url }}">
           <span class="nav-link__number" role="presentation" aria-hidden="true">
-            {{item.index}}
+            0{{ loop.index }}
           </span>
-          <span class="nav-link__text"> {{ item.text }} </span>
+          <span class="nav-link__text"> {{ link.title }} </span>
         </a>
       </li>
       {% endfor %}
