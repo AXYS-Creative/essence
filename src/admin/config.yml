@@ -263,6 +263,8 @@ collections:
               - { label: "Phone", name: "phone", widget: "string" }
   - name: "partials"
     label: "Partials"
+    description: >
+      Reusable components throughout the site.
     files:
       - name: "partial_resources"
         label: "Resources"
@@ -300,6 +302,8 @@ collections:
                 }
   - name: "settings"
     label: "Settings"
+    description: >
+      Website general settings and SEO configs.
     files:
       - name: "social_media"
         label: "Social Media"
@@ -324,6 +328,35 @@ collections:
             widget: "list"
             collapsed: false
             max: 8
+            fields:
+              - {
+                  name: "title",
+                  label: "Title",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "img_src",
+                  label: "Image Source",
+                  widget: "image",
+                  required: true,
+                }
+              - {
+                  name: "img_alt",
+                  label: "Image Description",
+                  widget: "string",
+                  required: true,
+                  hint: "Required for SEO and accessibility. Keep it brief.",
+                }
+      - name: "open_graph"
+        label: "Open Graph"
+        file: "src/_data/open_graph.yaml"
+        fields:
+          - name: "item"
+            label: "Items"
+            label_singular: "item"
+            widget: "list"
+            collapsed: false
             fields:
               - {
                   name: "title",

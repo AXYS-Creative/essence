@@ -1,0 +1,13 @@
+# Open Graph Protocol
+
+items:
+  - title: Blog
+    img_src: /static/img/nav-blog-cover.webp
+    img_alt: Writing a blog
+    url: /blog
+    target: _self
+  - title: Podcast
+    img_src: /static/img/nav-podcast-cover.webp
+    img_alt: A man running through a flat desert
+    url: /podcast
+    target: _self
