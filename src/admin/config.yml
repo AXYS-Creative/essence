@@ -330,14 +330,12 @@ collections:
                   label: "Title",
                   widget: "string",
                   required: true,
-                  hint: "This will also be the url you navigate to.",
                 }
               - {
                   name: "img_src",
                   label: "Image Source",
                   widget: "image",
                   required: true,
-                  hint: "This is the image shown in the dropdown menu.",
                 }
               - {
                   name: "img_alt",
