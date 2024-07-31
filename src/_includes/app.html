@@ -11,6 +11,15 @@
     <!-- prettier-ignore -->
     {% block head %}{% endblock %}
 
+    <!-- Open Graph Tags -->
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../static/img/open-graph.png" />
+    <meta property="og:url" content="essentialism.netlify.app" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:site_name" content="AXYS Creative" />
+
     <title>{{title}}</title>
 
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css" />
