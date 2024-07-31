@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{title}}</title>
-
     {% if description %}
     <meta name="description" content="{{ description }}" />
-    {% endif %} {% block head %}{% endblock %}
+    {% endif %}
+    <!-- prettier-ignore -->
+    {% block head %}{% endblock %}
+
+    <title>{{title}}</title>
+
     <link rel="stylesheet" type="text/css" href="/static/styles/styles.css" />
     <link
       rel="icon"
@@ -20,8 +24,7 @@
       href="../static/img/essence-logo-icon-dark.svg"
       media="(prefers-color-scheme: light)"
     />
-
-    <base href="/" />
+    <link rel="canonical" href="https://essentialism.netlify.app/" />
 
     <script src="../static//javascript/index.js" type="module" defer></script>
   </head>
