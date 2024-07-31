@@ -20,6 +20,14 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
 <div class="slider-listing__group">
   <h3 class="slider-listing__group-heading gsap-animate">Most popular</h3>
   <ul class="slider-listing__group-list">
+    <li class="gsap-animate">
+      <a
+        href="{{ collections.podcast[0].url }}"
+        class="tab-element-page classic-link"
+      >
+        {{ collections.podcast[0].data.title }}
+      </a>
+    </li>
     <!-- prettier-ignore -->
     {% for post in listContent | reverse %} 
       {% if "popular" in post.data.tags %}

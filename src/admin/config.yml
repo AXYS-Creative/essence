@@ -349,7 +349,7 @@ collections:
                   hint: "Required for SEO and accessibility. Keep it brief.",
                 }
       - name: "open_graph"
-        label: "Open Graph"
+        label: "Open Graph Protocol"
         file: "src/_data/open_graph.yaml"
         fields:
           - name: "item"

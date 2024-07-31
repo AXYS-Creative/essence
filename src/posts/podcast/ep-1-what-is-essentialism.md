@@ -20,7 +20,6 @@ tags:
   - physical
   - emotion
   - finance
-  - popular
 date: 2022-01-03T21:27:48.951Z
 ---
 
