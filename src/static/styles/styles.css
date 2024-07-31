@@ -671,7 +671,7 @@ header .header-links__link {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--link-color);
-  padding: 8px 24px;
+  padding: 6px 18px;
   outline: none;
 }
 @media screen and (max-width: 1512px) {
