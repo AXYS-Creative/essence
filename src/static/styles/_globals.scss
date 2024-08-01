@@ -2008,25 +2008,7 @@ cite {
     }
 
     &[open] {
-      // opacity: 1;
       display: block;
-      // pointer-events: all;
-
-      // .dialog__close-btn-wrapper {
-      //   opacity: 1;
-      //   pointer-events: all;
-      //   transition: 0.3s ease 0.4s;
-
-      //   .dots-wrapper {
-      //     rotate: 90deg;
-      //     transition: 0.8s $cubic-ease-sudden-back-strong 0.4s;
-
-      //     .center-dot {
-      //       opacity: 1;
-      //       transition: 0.3s ease 1s;
-      //     }
-      //   }
-      // }
 
       .dialog__close-btn {
         opacity: 1;
@@ -2127,7 +2109,6 @@ cite {
   p {
     @include row-center;
     background-color: var(--primary-font-color);
-    // background: crimson;
     // background: linear-gradient($grey-light, $white);
     color: var(--background-color);
     width: 100%;

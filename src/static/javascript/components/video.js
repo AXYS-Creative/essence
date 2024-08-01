@@ -41,7 +41,7 @@ if (videoSection) {
   videoDialog.addEventListener("click", closeVideo);
   closeVideoDialogBtn.addEventListener("click", closeVideo);
 
-  // Play button, track mouse with velocity rotation
+  // Play button, track mouse with velocity rotation ADVANCED
   if (window.matchMedia("(pointer: fine) and (hover: hover)").matches) {
     let previousX = 0;
     let previousTime = Date.now();
@@ -87,7 +87,7 @@ if (videoSection) {
     });
   }
 
-  // Play button, track mouse simple
+  // Play button, track mouse SIMPLE
   // if (window.matchMedia("(pointer: fine)").matches) {
   //   videoPoster.addEventListener("mousemove", (e) => {
   //     const rect = videoPoster.getBoundingClientRect();
