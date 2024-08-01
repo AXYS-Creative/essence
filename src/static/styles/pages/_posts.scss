@@ -505,3 +505,13 @@
     }
   }
 }
+
+.post-image {
+  @include row-center;
+  background: white;
+  padding: 0;
+
+  img {
+    width: 60%;
+  }
+}

@@ -6280,4 +6280,15 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
     -o-object-position: 40% 50%;
        object-position: 40% 50%;
   }
+}
+
+.post-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 0;
+}
+.post-image img {
+  width: 60%;
 }/*# sourceMappingURL=styles.css.map */
