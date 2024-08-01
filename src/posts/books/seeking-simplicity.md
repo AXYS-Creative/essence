@@ -8,9 +8,10 @@ description: Dive into the profound impact of simplicity with "Embrace
   steps, "Embrace Simplicity" is a must-read for anyone looking to enrich their
   lives by embracing the essence of essentialism.
 author: Wayne Thomas
-date: 2022-03-24T02:43:11.390Z
+date: 2022-08-24T02:43:11.390Z
 src: /static/img/book-double-2.png
 tags:
   - general
 ---
+
 T﻿his is the body

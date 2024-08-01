@@ -10,20 +10,19 @@ paragraphClass: "essence-paragraph hero-section hero-paragraph"
 paragraphBody: "ESSENCE literature is the curated collection of wisdom and inspiration, carefully selected to illuminate the path to a simpler, more meaningful life. Each book is a treasure trove of insights, offering you the opportunity to delve deeper into the art of essentialism."
 
 subheading: "Join us in exploring the written word's power to transform and enrich your life."
-reference-quote: "Whether you're seeking guidance, reflection, or motivation, our books provide a timeless companion on your journey to intentional living."
 
 textBlockWidth: ""
 textBlockBody: "Dive deeper into a life less ordinary, enriched by the essentials."
 ---
 
-{% set listContent = collections.books | sort(attribute='data.title') %}
+{% set listContent = collections.books | sort(attribute='data.date') %}
 
 <div class="slider-listing__group">
   <h3 class="slider-listing__group-heading gsap-animate">Collection</h3>
 
   <ul class="slider-listing__group-list">
-    {% for post in listContent %}
-    <li>
+    {% for post in listContent | reverse %}
+    <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         <!-- prettier-ignore -->
         {% if post.data.title %} 

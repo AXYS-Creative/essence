@@ -8,11 +8,7 @@ layout: "app"
 
 <section class="post-hero hero-section">
   <div class="post-hero__header">
-    <small class="post-hero__category">
-      {{ category | capitalize }}
-      <span class="divider">•</span>
-      <time> {{ date | readableDate }} </time>
-    </small>
+    <small class="post-hero__category"> {{ category | capitalize }} </small>
     <h1 class="post-hero__heading" aria-label="{{title}}">
       <span class="sr-only">{{title}}</span>
       <span class="character-split gsap-animate" aria-hidden="true">
@@ -44,9 +40,9 @@ layout: "app"
     class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
   >
     <span class="simple-link__span-outter">
-      <span class="simple-link__span-inner">Previous Post</span>
+      <span class="simple-link__span-inner">Previous Book</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Previous Post
+        Previous Book
       </span>
     </span>
     <svg
@@ -77,9 +73,9 @@ layout: "app"
     class="post-body__nav-link simple-link tab-element-page"
   >
     <span class="simple-link__span-outter">
-      <span class="simple-link__span-inner">Next Post</span>
+      <span class="simple-link__span-inner">Next Book</span>
       <span class="simple-link__span-inner" aria-hidden="true">
-        Next Post
+        Next Book
       </span>
     </span>
     <svg

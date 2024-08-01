@@ -9,20 +9,19 @@ paragraphClass: "essence-paragraph hero-section hero-paragraph"
 paragraphBody: "Each film is a carefully woven tapestry of images and narratives that inspire viewers to rethink their relationships with their possessions and their passions. From intimate documentaries to compelling short films, immerse yourself in cinematic journeys that resonate with the essence of a focused, fulfilled life."
 
 subheading: "Watch with us, and see the world through the lens of less."
-reference-quote: "Whether you're seeking guidance, reflection, or motivation, our books provide a timeless companion on your journey to intentional living."
 
 textBlockWidth: ""
 textBlockBody: "Dive deeper into a life less ordinary, enriched by the essentials."
 ---
 
-{% set listContent = collections.books | sort(attribute='data.title') %}
+{% set listContent = collections.films | sort(attribute='data.title') %}
 
 <div class="slider-listing__group">
   <h3 class="slider-listing__group-heading gsap-animate">Collection</h3>
 
   <ul class="slider-listing__group-list">
     {% for post in listContent %}
-    <li>
+    <li class="gsap-animate">
       <a href="{{ post.url | url }}" class="tab-element-page classic-link">
         <!-- prettier-ignore -->
         {% if post.data.title %} 
