@@ -1,0 +1,104 @@
+---
+layout: "app"
+---
+
+<!-- prettier-ignore -->
+{% set pathParts = page.filePathStem | split('/') %} 
+{% set category = pathParts[2] %}
+
+<section class="post-hero hero-section">
+  <div class="post-hero__header">
+    <small class="post-hero__category">
+      {{ category | capitalize }}
+      <span class="divider">•</span>
+      <time> {{ date | readableDate }} </time>
+    </small>
+    <h1 class="post-hero__heading" aria-label="{{title}}">
+      <span class="sr-only">{{title}}</span>
+      <span class="character-split gsap-animate" aria-hidden="true">
+        {{title}}
+      </span>
+    </h1>
+    <p class="post-hero__author">by {{ author }}</p>
+  </div>
+</section>
+
+<section class="post-body post-body__books">
+  <article>{{ content | safe }}</article>
+</section>
+
+<!-- prettier-ignore -->
+{% set currentIndex = 0 %} 
+{% for post in collections.books %} 
+  {% if post.url == page.url %} 
+    {% set currentIndex = loop.index %} 
+  {% endif %} 
+{% endfor %}
+
+<nav class="post-footer-nav">
+  <!-- prettier-ignore -->
+  {% if currentIndex > 1 %} 
+    {% set prevPost = collections.books[currentIndex - 2] %}
+  <a
+    href="{{ prevPost.url }}"
+    class="post-body__nav-link simple-link simple-link--arrow-left tab-element-page"
+  >
+    <span class="simple-link__span-outter">
+      <span class="simple-link__span-inner">Previous Post</span>
+      <span class="simple-link__span-inner" aria-hidden="true">
+        Previous Post
+      </span>
+    </span>
+    <svg
+      class="icon-arrow-right gsap-animate"
+      width="16"
+      height="10"
+      viewBox="0 0 16 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5H14L11 1L15 5L11 9L14.5 5"
+        stroke="#0E0E0E"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-elem-1"
+      ></path>
+    </svg>
+  </a>
+  {% endif %}
+
+  <!-- prettier-ignore -->
+  {% if currentIndex < collections.books | length %} 
+  {% set nextPost = collections.books[currentIndex] %}
+  <a
+    href="{{ nextPost.url }}"
+    class="post-body__nav-link simple-link tab-element-page"
+  >
+    <span class="simple-link__span-outter">
+      <span class="simple-link__span-inner">Next Post</span>
+      <span class="simple-link__span-inner" aria-hidden="true">
+        Next Post
+      </span>
+    </span>
+    <svg
+      class="icon-arrow-right gsap-animate"
+      width="16"
+      height="10"
+      viewBox="0 0 16 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 5H14L11 1L15 5L11 9L14.5 5"
+        stroke="#0E0E0E"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="svg-elem-1"
+      ></path>
+    </svg>
+  </a>
+  {% endif %}
+</nav>
