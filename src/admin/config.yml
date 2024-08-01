@@ -94,12 +94,34 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Poster", name: "src", widget: "image" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "author", label: "Author", widget: "string" }
+      - { name: "date", label: "Publish Date", widget: "datetime" }
+      - { name: "img_list", label: "List Image", widget: "image" }
+      - {
+          name: "img_list_description",
+          label: "List Image Description",
+          widget: "string",
+          required: true,
+          hint: "For the Archive Page. Required for SEO and accessibility. Keep it brief.",
+        }
+      - { name: "img_full", label: "Full Image", widget: "image" }
+      - {
+          name: "img_full_description",
+          label: "Full Image Description",
+          widget: "string",
+          required: true,
+          hint: "Required for SEO and accessibility. Keep it brief.",
+        }
+      - { name: "img_side", label: "Side Image", widget: "image" }
+      - {
+          name: "img_side_description",
+          label: "Side Image Description",
+          widget: "string",
+          required: true,
+          hint: "Required for SEO and accessibility. Keep it brief.",
+        }
       - widget: select
         label: "tags"
         name: "tags"

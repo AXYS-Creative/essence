@@ -10,9 +10,12 @@ description: Uncover the essence of essentialism with "The Power of Less." This
   existence.
 author: Maria Nieves
 date: 2022-03-24T02:43:11.390Z
-src: /static/img/book-double-1.png
+img_list: /static/img/book-single-1.avif
+img_list_description: One copy of The Power of Less
+img_full: /static/img/book-triple-1.png
+img_full_description: Three copies of The Power of Less
+img_side: /static/img/book-double-1.png
+img_side_description: Two copies of The Power of Less
 tags:
   - general
 ---
-
-Content here

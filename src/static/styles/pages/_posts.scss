@@ -507,11 +507,21 @@
 }
 
 .post-image {
-  @include row-center;
-  background: white;
   padding: 0;
 
-  img {
-    width: 60%;
+  &__full {
+    img {
+      width: 100vw;
+      height: 72vh;
+    }
+  }
+
+  &__wide {
+    @include row-center;
+    background: white;
+
+    img {
+      width: 60%;
+    }
   }
 }

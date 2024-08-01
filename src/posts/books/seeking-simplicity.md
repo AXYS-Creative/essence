@@ -9,9 +9,12 @@ description: Dive into the profound impact of simplicity with "Embrace
   lives by embracing the essence of essentialism.
 author: Wayne Thomas
 date: 2022-08-24T02:43:11.390Z
-src: /static/img/book-double-2.png
+img_list: /static/img/book-single-2.avif
+img_list_description: One copy of Seeing Simplicity
+img_full: /static/img/book-triple-2.png
+img_full_description: Three copies of Seeing Simplicity
+img_side: /static/img/book-double-2.png
+img_side_description: Two copies of Seeing Simplicity
 tags:
   - general
 ---
-
-T﻿his is the body

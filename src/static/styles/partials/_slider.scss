@@ -156,6 +156,10 @@
       @include column-start;
       gap: 16px;
 
+      &:has(img) {
+        gap: 56px;
+      }
+
       li.gsap-animate {
         @include body-font-styles;
 
@@ -171,6 +175,35 @@
             translate: 0 0;
             rotate: 0deg;
             pointer-events: all;
+          }
+        }
+      }
+
+      .books-archive-link {
+        &:hover,
+        &:focus-visible {
+          img {
+            scale: 0.96;
+          }
+        }
+
+        &:active {
+          img {
+            scale: 0.92;
+          }
+        }
+
+        img {
+          display: block;
+          padding-block-start: 12px;
+          width: 50%;
+
+          @include mq-motion-allow {
+            transition: 0.3s ease;
+          }
+
+          @include mq-max("sm") {
+            width: 80%;
           }
         }
       }

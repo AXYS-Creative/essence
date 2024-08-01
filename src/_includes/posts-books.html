@@ -19,12 +19,22 @@ layout: "app"
   </div>
 </section>
 
-<section class="post-image">
-  <img src="{{ src }}" alt="" />
+<section class="post-image post-image__full">
+  <img src="{{ img_full }}" alt="{{ img_full_description }}" />
 </section>
 
 <section class="post-body post-body__books">
-  <article>{{ content | safe }}</article>
+  <h2>About the book</h2>
+  <p>{{ description }}</p>
+</section>
+
+<section class="post-image post-image__wide">
+  <img src="{{ img_side }}" alt="{{ img_side_description }}" />
+</section>
+
+<section class="post-body post-body__books">
+  <h2>About the author</h2>
+  <p>{{ description }}</p>
 </section>
 
 <!-- prettier-ignore -->

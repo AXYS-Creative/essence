@@ -23,14 +23,15 @@ textBlockBody: "Dive deeper into a life less ordinary, enriched by the essential
   <ul class="slider-listing__group-list">
     {% for post in listContent | reverse %}
     <li class="gsap-animate">
-      <a href="{{ post.url | url }}" class="tab-element-page classic-link">
-        <!-- prettier-ignore -->
-        {% if post.data.title %} 
-                {{ post.data.title }} 
-            {% else %} 
-                Untitled 
-            {%endif %}
-        <!-- prettier-ignore -->
+      <a
+        href="{{ post.url | url }}"
+        class="tab-element-page books-archive-link"
+      >
+        <span>{{ post.data.title }}</span>
+        <img
+          src="{{ post.data.img_list }}"
+          alt="{{ post.data.img_list_description }}"
+        />
       </a>
     </li>
     {% endfor %}
