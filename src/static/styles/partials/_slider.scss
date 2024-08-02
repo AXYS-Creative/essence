@@ -163,6 +163,14 @@
       li.gsap-animate {
         @include body-font-styles;
 
+        &:has(img) {
+          width: 296px;
+
+          @include mq-max("xxl") {
+            width: 248px;
+          }
+        }
+
         @include mq-motion-allow {
           opacity: 0;
           translate: 0 12px;
@@ -170,16 +178,27 @@
           pointer-events: none;
           transition: 1.2s ease;
 
+          img {
+            rotate: -2deg;
+          }
+
           &.animate {
             opacity: 1;
             translate: 0 0;
             rotate: 0deg;
             pointer-events: all;
+
+            img {
+              rotate: 0deg;
+            }
           }
         }
       }
 
       .books-archive-link {
+        @include column-start;
+        width: 100%;
+
         &:hover,
         &:focus-visible {
           img {
@@ -194,12 +213,12 @@
         }
 
         img {
-          display: block;
           padding-block-start: 12px;
-          width: 50%;
+          width: 100%;
 
           @include mq-motion-allow {
-            transition: 0.3s ease;
+            transition: 0.3s ease, rotate 1.2s ease;
+            transform-origin: left;
           }
 
           @include mq-max("sm") {

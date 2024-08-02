@@ -58,6 +58,27 @@
 .post-body {
   @include thin-section;
 
+  &__heading {
+    @include title-underline;
+    margin: auto;
+    text-transform: capitalize;
+    margin-block-end: 64px;
+    padding-block-end: 24px;
+
+    @media all {
+      @include mq-max("xxl") {
+        margin-block-end: 56px;
+        padding-block-end: 16px;
+      }
+
+      @include mq-max("md") {
+        margin-block-end: 48px;
+        padding-block-end: 12px;
+      }
+    }
+  }
+
+  // Contents of "markdown" Widget, I wouldn't recommend using rich text for clients.
   article {
     margin-block-end: 128px;
     margin: auto;
@@ -129,25 +150,68 @@
       color: $green;
     }
   }
+}
 
-  &.post-body__podcast {
-    .post-body__podcast-heading {
-      @include title-underline;
-      margin: auto;
-      text-transform: capitalize;
-      margin-block-end: 64px;
-      padding-block-end: 24px;
+.post-image {
+  overflow: hidden;
+  height: 72vh;
+  height: 72dvh;
+  min-height: 720px;
+  padding: 0;
 
-      @media all {
-        @include mq-max("xxl") {
-          margin-block-end: 56px;
-          padding-block-end: 16px;
-        }
+  @media all {
+    @include mq-max("xxl") {
+      min-height: 640px;
+    }
 
-        @include mq-max("md") {
-          margin-block-end: 48px;
-          padding-block-end: 12px;
-        }
+    @include mq-max("lg") {
+      min-height: 520px;
+    }
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    img {
+      position: relative;
+      width: 120%;
+      height: 120%;
+      z-index: -1;
+
+      @include mq-max("md") {
+        min-height: 520px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__full {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__wide {
+    @include row-center;
+    background: white;
+
+    @include mq-max("md") {
+      min-height: auto;
+      height: auto;
+      padding: 64px 0;
+    }
+
+    img {
+      width: 60%;
+
+      @include mq-max("md") {
+        width: 100%;
       }
     }
   }
@@ -355,21 +419,6 @@
 }
 
 .podcast-quote {
-  height: 72vh;
-  height: 72dvh;
-  min-height: 720px;
-  padding: 0;
-
-  @media all {
-    @include mq-max("xxl") {
-      min-height: 640px;
-    }
-
-    @include mq-max("lg") {
-      min-height: 520px;
-    }
-  }
-
   &__blockquote {
     @extend .h5;
     position: absolute;
@@ -428,13 +477,6 @@
 
   &__image {
     position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
 
     &::before {
       content: "";
@@ -443,18 +485,6 @@
       width: 100%;
       height: 100%;
       background-color: rgba($black, 0.4);
-    }
-
-    img {
-      position: relative;
-      width: 120%;
-      height: 120%;
-      z-index: -1;
-
-      @include mq-max("md") {
-        min-height: 520px;
-        width: 100%;
-      }
     }
   }
 
@@ -502,26 +532,6 @@
           object-position: 40% 50%;
         }
       }
-    }
-  }
-}
-
-.post-image {
-  padding: 0;
-
-  &__full {
-    img {
-      width: 100vw;
-      height: 72vh;
-    }
-  }
-
-  &__wide {
-    @include row-center;
-    background: white;
-
-    img {
-      width: 60%;
     }
   }
 }

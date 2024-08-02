@@ -424,7 +424,7 @@ const numberTickerAnimation = (() => {
   };
 })();
 
-// Podcast Quote - Parallax Effect
+// Image Banner Sections (Podcast, Books, etc.) - Parallax Effect
 const parallaxEffect = (() => {
   let parallaxElems = document.querySelectorAll(".parallax");
 

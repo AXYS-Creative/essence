@@ -68,11 +68,8 @@ layout: "app"
   </dialog>
 </section>
 
-<section class="post-body post-body__podcast">
-  <h2
-    class="post-body__podcast-heading gsap-animate"
-    aria-label="Episode Recap"
-  >
+<section class="post-body">
+  <h2 class="post-body__heading gsap-animate" aria-label="Episode Recap">
     <span class="sr-only">Episode Recap</span>
     <span class="character-split gsap-animate" aria-hidden="true">
       Episode Recap
@@ -81,7 +78,9 @@ layout: "app"
   <article>{{ content | safe }}</article>
 </section>
 
-<section class="podcast-quote podcast-quote--{{ quote_side }} dark-section">
+<section
+  class="post-image podcast-quote podcast-quote--{{ quote_side }} dark-section"
+>
   <blockquote class="podcast-quote__blockquote">
     <span class="word-split indent gsap-animate">“{{ quote }}”</span>
     <span class="podcast-quote__blockquote-guest gsap-animate">

@@ -20,11 +20,22 @@ layout: "app"
 </section>
 
 <section class="post-image post-image__full">
-  <img src="{{ img_full }}" alt="{{ img_full_description }}" />
+  <figure>
+    <img
+      class="parallax"
+      src="{{ img_full }}"
+      alt="{{ img_full_description }}"
+    />
+  </figure>
 </section>
 
-<section class="post-body post-body__books">
-  <h2>About the book</h2>
+<section class="post-body">
+  <h2 class="post-body__heading gsap-animate" aria-label="About the book">
+    <span class="sr-only">About the book</span>
+    <span class="character-split gsap-animate" aria-hidden="true">
+      About the book
+    </span>
+  </h2>
   <p>{{ description }}</p>
 </section>
 
@@ -32,8 +43,13 @@ layout: "app"
   <img src="{{ img_side }}" alt="{{ img_side_description }}" />
 </section>
 
-<section class="post-body post-body__books">
-  <h2>About the author</h2>
+<section class="post-body">
+  <h2 class="post-body__heading gsap-animate" aria-label="About the author">
+    <span class="sr-only">About the author</span>
+    <span class="character-split gsap-animate" aria-hidden="true">
+      About the author
+    </span>
+  </h2>
   <p>{{ description }}</p>
 </section>
 
