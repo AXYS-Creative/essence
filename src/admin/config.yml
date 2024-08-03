@@ -15,6 +15,7 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "src/posts/blog"
+    preview_path: "posts/blog/{{filename}}/"
     create: true
     editor:
       preview: false
@@ -33,6 +34,7 @@ collections:
   - name: "podcast"
     label: "Podcast"
     folder: "src/posts/podcast"
+    preview_path: "posts/podcast/{{filename}}/"
     create: true
     editor:
       preview: false
@@ -90,6 +92,7 @@ collections:
     label: "Books"
     label_singular: "Book"
     folder: "src/posts/books"
+    preview_path: "posts/books/{{filename}}/"
     create: true
     editor:
       preview: false
