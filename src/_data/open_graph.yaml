@@ -1,5 +1,3 @@
-# Open Graph Protocol
-
 items:
   - title: Blog
     img_src: /static/img/nav-blog-cover.webp
@@ -11,3 +9,7 @@ items:
     img_alt: A man running through a flat desert
     url: /podcast
     target: _self
+item:
+  - title: Test title
+    img_src: /static/img/open-graph.png
+    img_alt: Image description here
