@@ -1,20 +1,13 @@
 ---
-title: The Power of Less
-description: Uncover the essence of essentialism with "The Power of Less." This
-  transformative guide delves into the art of simplifying your life, helping you
-  to focus on what truly matters. Through engaging narratives and practical
-  strategies, the book offers a roadmap to decluttering your mind, environment,
-  and daily routines. Learn to prioritize your goals, eliminate distractions,
-  and achieve a more meaningful and fulfilling life. "The Power of Less" is your
-  companion to mastering the discipline of less for a richer, more intentional
-  existence.
+title: The Art of Intentional Living
+description: In "The Art of Intentional Living," discover the transformative power of living with purpose and intention. This book is a comprehensive guide to aligning your daily actions with your deepest values and aspirations. Through a blend of inspiring stories, practical exercises, and insightful wisdom, you will learn how to eliminate the unnecessary and focus on what truly brings joy and fulfillment to your life.
 author: Maria Nieves, Ph.D
-date: 2022-03-24T02:43:11.390Z
-img_list: /static/img/book-1-single.avif
+date: 2022-07-24T02:43:11.390Z
+img_list: /static/img/book-3-single.avif
 img_list_description: One hard cover copy of The Power of Less
-img_full: /static/img/book-1-triple.png
+img_full: /static/img/book-3-triple.png
 img_full_description: Three hard cover copies of The Power of Less
-img_side: /static/img/book-1-double.png
+img_side: /static/img/book-3-double.png
 img_side_description: Two hard cover copies of The Power of Less
 author_portrait: /static/img/portrait-1.webp
 author_portrait_description: Maria Nieves, an elegant elderly lady
