@@ -44,14 +44,14 @@ layout: "app"
 </section>
 
 <section class="post-body author-bio">
-  <article>
+  <article class="author-bio__markdown">
     <h2 class="post-body__heading gsap-animate" aria-label="About the author">
       <span class="sr-only">About the author</span>
       <span class="character-split gsap-animate" aria-hidden="true">
         About the author
       </span>
     </h2>
-    <p>{{ bio }}</p>
+    <p>{{ content | safe }}</p>
   </article>
   <figure>
     <img src="{{ author_portrait }}" alt="{{ author_portrait_description }}" />

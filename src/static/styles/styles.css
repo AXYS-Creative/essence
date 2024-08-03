@@ -6376,6 +6376,9 @@ section.contact-hero .classic-hero__heading.animate .classic-hero__heading-text-
     width: 100%;
   }
 }
+.author-bio__markdown p {
+  margin-block-end: 16px;
+}
 .author-bio img {
   width: 100%;
   border-radius: 4px;

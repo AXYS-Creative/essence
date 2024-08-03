@@ -557,6 +557,12 @@
     }
   }
 
+  &__markdown {
+    p {
+      margin-block-end: 16px;
+    }
+  }
+
   img {
     width: 100%;
     border-radius: $radius;
