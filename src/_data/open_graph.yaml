@@ -1,15 +1,2 @@
-items:
-  - title: Blog
-    img_src: /static/img/nav-blog-cover.webp
-    img_alt: Writing a blog
-    url: /blog
-    target: _self
-  - title: Podcast
-    img_src: /static/img/nav-podcast-cover.webp
-    img_alt: A man running through a flat desert
-    url: /podcast
-    target: _self
 item:
-  - title: Test title
-    img_src: /static/img/open-graph.png
-    img_alt: Image description here
+  - image: /static/img/open-graph.png

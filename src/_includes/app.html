@@ -12,13 +12,12 @@
     {% block head %}{% endblock %}
 
     <!-- Open Graph Tags -->
-    <meta name="description" content="{{ description }}" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="../static/img/open-graph.png" />
+    <meta property="og:image" content="{{ open_graph.item.image }}" />
     <meta property="og:url" content="essentialism.netlify.app" />
     <meta property="og:description" content="{{ description }}" />
-    <meta property="og:site_name" content="AXYS Creative" />
+    <meta property="og:site_name" content="Essence" />
 
     <title>{{ title }}</title>
 
