@@ -78,6 +78,10 @@
     }
   }
 
+  p {
+    @include body-font-styles;
+  }
+
   // Contents of "markdown" Widget, I wouldn't recommend using rich text for clients.
   article {
     margin-block-end: 128px;
@@ -99,7 +103,6 @@
     }
 
     p {
-      @include body-font-styles;
       margin-block: 24px;
     }
 

@@ -94,8 +94,8 @@ collections:
     editor:
       preview: false
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "text" }
+      - { name: "title", label: "Book Title", widget: "string" }
+      - { name: "description", label: "Book Description", widget: "text" }
       - { name: "author", label: "Author", widget: "string" }
       - { name: "date", label: "Publish Date", widget: "datetime" }
       - { name: "img_list", label: "List Image", widget: "image" }
@@ -118,6 +118,15 @@ collections:
       - {
           name: "img_side_description",
           label: "Side Image Description",
+          widget: "string",
+          required: true,
+          hint: "Required for SEO and accessibility. Keep it brief.",
+        }
+      - { name: "bio", label: "About the author", widget: "text" }
+      - { name: "author_portrait", label: "Author Portrait", widget: "image" }
+      - {
+          name: "author_portrait_description",
+          label: "Author Portrait Description",
           widget: "string",
           required: true,
           hint: "Required for SEO and accessibility. Keep it brief.",
