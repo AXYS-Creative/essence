@@ -1,9 +1,9 @@
 numbers_cover_image: /static/img/podcast-poster.png
 growth_stats:
-  - title: Year founded
-    numbers: 2021
   - title: Blog subscribers
     numbers: 62k
+  - title: Year founded
+    numbers: 2021
   - title: Podcast downloads
     numbers: 480k
   - title: Books sold
