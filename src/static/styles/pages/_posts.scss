@@ -156,6 +156,7 @@
 }
 
 .post-image {
+  position: relative;
   overflow: hidden;
   height: 72vh;
   height: 72dvh;
@@ -191,12 +192,6 @@
         min-height: 520px;
         width: 100%;
       }
-    }
-  }
-
-  &__full {
-    img {
-      width: 100%;
     }
   }
 
@@ -541,6 +536,17 @@
 }
 
 // Books
+.about-the-book {
+  &__buy-heading {
+    margin-block: 64px 16px;
+  }
+
+  &__buy-links {
+    @include row-center(flex-start);
+    gap: 16px;
+  }
+}
+
 .author-bio {
   @include row-start;
   gap: 64px;
