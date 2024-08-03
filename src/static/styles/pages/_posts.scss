@@ -82,8 +82,8 @@
     @include body-font-styles;
   }
 
-  // Contents of "markdown" Widget, I wouldn't recommend using rich text for clients.
-  article {
+  // Use "modes: ["raw"]" to toggle 'rich text' feature. Visit https://decapcms.org/docs/widgets/#markdown for more
+  .rich-text {
     margin-block-end: 128px;
     margin: auto;
 
@@ -252,6 +252,7 @@
   }
 }
 
+// Podcast
 .video-section {
   $btn-hover-scale: 1.25;
 
@@ -535,6 +536,42 @@
           object-position: 40% 50%;
         }
       }
+    }
+  }
+}
+
+// Books
+.author-bio {
+  @include row-start;
+  gap: 64px;
+
+  @include mq-max("lg") {
+    flex-direction: column;
+  }
+
+  & > * {
+    width: 50%;
+
+    @include mq-max("lg") {
+      width: 100%;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: $radius;
+    translate: 0 20%;
+
+    @include mq-max("lg") {
+      width: 248px;
+      height: 248px;
+      object-position: top;
+    }
+
+    @include mq-max("md") {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
     }
   }
 }

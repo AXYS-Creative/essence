@@ -43,14 +43,19 @@ layout: "app"
   <img src="{{ img_side }}" alt="{{ img_side_description }}" />
 </section>
 
-<section class="post-body">
-  <h2 class="post-body__heading gsap-animate" aria-label="About the author">
-    <span class="sr-only">About the author</span>
-    <span class="character-split gsap-animate" aria-hidden="true">
-      About the author
-    </span>
-  </h2>
-  <p>{{ bio }}</p>
+<section class="post-body author-bio">
+  <article>
+    <h2 class="post-body__heading gsap-animate" aria-label="About the author">
+      <span class="sr-only">About the author</span>
+      <span class="character-split gsap-animate" aria-hidden="true">
+        About the author
+      </span>
+    </h2>
+    <p>{{ bio }}</p>
+  </article>
+  <figure>
+    <img src="{{ author_portrait }}" alt="{{ author_portrait_description }}" />
+  </figure>
 </section>
 
 <!-- prettier-ignore -->

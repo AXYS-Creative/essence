@@ -122,7 +122,13 @@ collections:
           required: true,
           hint: "Required for SEO and accessibility. Keep it brief.",
         }
-      - { name: "bio", label: "About the author", widget: "text" }
+      - {
+          name: "bio",
+          label: "About the author",
+          widget: "markdown",
+          modes: ["raw"],
+          sanitize_preview: true,
+        }
       - { name: "author_portrait", label: "Author Portrait", widget: "image" }
       - {
           name: "author_portrait_description",
