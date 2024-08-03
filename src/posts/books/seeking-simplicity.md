@@ -9,14 +9,6 @@ img_full: /static/img/book-triple-2.png
 img_full_description: Three hard cover copies of Seeking Simplicity
 img_side: /static/img/book-double-2.png
 img_side_description: Two hard cover copies of Seeking Simplicity
-bio: >-
-  Wayne Thomas, Ph.D., is a renowned expert in the field of minimalism and essentialism. With over two decades of research and practical experience, Dr. Thomas has dedicated his career to helping individuals and organizations achieve clarity and focus in their lives and work.
-
-
-  He holds a doctorate in Psychology from Stanford University, where his groundbreaking studies on human behavior and simplicity have earned him international acclaim. As a sought-after speaker and consultant, Dr. Thomas has worked with Fortune 500 companies, educational institutions, and non-profit organizations to implement strategies that enhance productivity and well-being through the principles of less.
-
-
-  Dr. Thomas is also a best-selling author, with several acclaimed books that explore the intersection of psychology and minimalism. His approachable style and profound insights have made him a favorite among readers seeking to transform their lives through the power of simplicity. When he's not writing or speaking, Dr. Thomas enjoys hiking, meditation, and spending time with his family in the serene landscapes of Northern California.
 author_portrait: /static/img/portrait-2.webp
 author_portrait_description: Wayne Thomas, a sharp man with glasses
 tags:

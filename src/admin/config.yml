@@ -4,9 +4,9 @@ backend:
   branch: "main"
 media_folder: "src/static/img"
 public_folder: "/static/img"
-site_url: https://essentialism.netlify.app # On admin login page, this adds a 'go back to site' link
-display_url: https://essentialism.netlify.app # In admin dashboard, this addes the URL in the corner
-logo_url: https://essentialism.netlify.app/static/img/admin-logo.svg # On admin login page, this adds a custom logo
+site_url: https://essentialism.netlify.app # On admin login page, this adds a 'go back to site' link. Also added in the corner when logged in.
+display_url: https://essentialism.netlify.app # In admin dashboard, this addes the URL in the corner. Used with 'preview_path' for collection viewing.
+logo_url: https://essentialism.netlify.app/static/img/admin-logo.svg # On admin login page, this adds a custom logo.
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -123,8 +123,8 @@ collections:
           hint: "Required for SEO and accessibility. Keep it brief.",
         }
       - {
-          name: "bio",
-          label: "About the author",
+          name: "body",
+          label: "Author Bio",
           widget: "markdown",
           modes: ["raw"],
           sanitize_preview: true,
