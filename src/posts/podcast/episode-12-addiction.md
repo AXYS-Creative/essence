@@ -1,7 +1,7 @@
 ---
-title: "Episode #12 - Addiction"
+title: "Episode #13 - Addiction"
 title_short: Addiction
-episode: "012"
+episode: "013"
 description: In this episode, we explore the challenging world of addiction and
   its profound impact on individuals and their loved ones, featuring insights
   from addiction specialist and therapist, Dr. Michael Hayes.
@@ -20,7 +20,7 @@ quote_side: right
 tags:
   - emotion
   - general
-date: 2024-08-04T13:19:36.951Z
+date: 2023-01-06T14:19:36.951Z
 ---
 In this powerful episode, we delve into the complexities of addiction with Dr. Michael Hayes, a leading addiction specialist and therapist with decades of experience helping individuals recover from substance abuse and behavioral addictions. Dr. Hayes begins by defining addiction, explaining that it is a chronic disease characterized by compulsive drug seeking and use, despite harmful consequences. He emphasizes that addiction affects the brain's reward, motivation, and memory functions, making it a formidable challenge to overcome without proper intervention.
 
