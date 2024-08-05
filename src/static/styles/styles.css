@@ -169,24 +169,24 @@
     font-size: 20px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
-    font-size: 32px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
-    font-size: calc(8px + 4vw);
-  }
-}
 @media screen and (max-width: 1200px) {
   .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
     font-size: 28px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 480px) {
   .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -4703,48 +4703,23 @@ cite {
     padding-block: 164px;
   }
 }
-.text-block__heading {
-  width: 496px;
+.text-block__text {
   text-transform: initial;
   text-align: center;
 }
-@media screen and (max-width: 1512px) {
-  .text-block__heading {
-    width: 348px;
-  }
+.text-block__line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
-@media screen and (max-width: 480px) {
-  .text-block__heading {
-    width: 312px;
-  }
+.text-block__line span:first-of-type {
+  translate: 0 0;
 }
-.text-block__heading.lg {
-  width: 54vw;
-}
-@media screen and (min-width: 1921px) {
-  .text-block__heading.lg {
-    width: 996px;
-  }
-}
-@media screen and (max-width: 1512px) {
-  .text-block__heading.lg {
-    width: 48vw;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .text-block__heading.lg {
-    width: 58vw;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .text-block__heading.lg {
-    width: 72vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .text-block__heading.lg {
-    width: 80vw;
-  }
+.text-block__line span:last-of-type {
+  position: absolute;
+  translate: 0 -102%;
 }
 
 .slider-section {

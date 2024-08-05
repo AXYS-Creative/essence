@@ -164,15 +164,23 @@ $min-breakpoints: (
 }
 
 .h5 {
-  // Archive Prefooter
-  @include heading(40px, 32px, calc(8px + 4vw));
+  // Text Block
+  @include heading(40px, null, null);
 
   @include mq-max("xl") {
     font-size: 28px;
   }
 
+  @include mq-max("lg") {
+    font-size: 24px;
+  }
+
+  @include mq-max("md") {
+    font-size: 18px;
+  }
+
   @include mq-max("sm") {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 

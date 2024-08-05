@@ -5,41 +5,22 @@
     padding-block: 164px;
   }
 
-  &__heading {
-    width: 496px;
+  &__text {
     text-transform: initial;
     text-align: center;
+  }
 
-    @include mq-max("xxl") {
-      width: 348px;
+  &__line {
+    @include row-center;
+    position: relative;
+    overflow: hidden;
+
+    span:first-of-type {
+      translate: 0 0;
     }
-
-    @include mq-max("sm") {
-      width: 312px;
-    }
-
-    &.lg {
-      width: 54vw;
-
-      @include mq-min("xxxl") {
-        width: 996px;
-      }
-
-      @include mq-max("xxl") {
-        width: 48vw;
-      }
-
-      @include mq-max("xl") {
-        width: 58vw;
-      }
-
-      @include mq-max("lg") {
-        width: 72vw;
-      }
-
-      @include mq-max("md") {
-        width: 80vw;
-      }
+    span:last-of-type {
+      position: absolute;
+      translate: 0 -102%;
     }
   }
 }

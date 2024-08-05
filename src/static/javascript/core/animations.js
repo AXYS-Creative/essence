@@ -447,3 +447,22 @@ const parallaxEffect = (() => {
     });
   }
 })();
+
+// Three line paragraph found on most pages
+const textBlockAnimation = (() => {
+  const elements = document.querySelectorAll(
+    ".text-block__line-inner, .text-block__line-inner-2, .text-block__line-inner-3"
+  );
+
+  elements.forEach((element) => {
+    gsap.to(element, {
+      yPercent: 100,
+      scrollTrigger: {
+        trigger: element,
+        scrub: 0.2,
+        start: "top 70%",
+        end: "bottom 50%",
+      },
+    });
+  });
+})();

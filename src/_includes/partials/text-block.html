@@ -1,10 +1,45 @@
 <section class="text-block">
-  <h2 class="h5 text-block__heading {{ textBlockWidth }}">
+  <p class="h5 text-block__text {{ textBlockWidth }}">
     <!-- prettier-ignore -->
-    {%if textBlockBody%} 
-      {{ textBlockBody }} 
-    {%else%} 
-      Dive deeper into a life less ordinary, enriched by the essentials. 
+    {%if textBlockLine1%}
+    <!-- {{ textBlockBody }} -->
+    <span class="text-block__line">
+      <span class="text-block__line-inner">{{ textBlockLine1 }}</span>
+      <span class="text-block__line-inner" aria-hidden="true">
+        {{ textBlockLine1 }}
+      </span>
+    </span>
+    <span class="text-block__line">
+      <span class="text-block__line-inner-2"> {{ textBlockLine2 }} </span>
+      <span class="text-block__line-inner-2" aria-hidden="true">
+        {{ textBlockLine2 }}
+      </span>
+    </span>
+    <span class="text-block__line">
+      <span class="text-block__line-inner-3">{{ textBlockLine3 }}</span>
+      <span class="text-block__line-inner-3" aria-hidden="true">
+        {{ textBlockLine3 }}
+      </span>
+    </span>
+    {%else%}
+    <span class="text-block__line">
+      <span class="text-block__line-inner">Dive deeper into a life</span>
+      <span class="text-block__line-inner" aria-hidden="true">
+        Dive deeper into a life
+      </span>
+    </span>
+    <span class="text-block__line">
+      <span class="text-block__line-inner-2"> less ordinary, enriched </span>
+      <span class="text-block__line-inner-2" aria-hidden="true">
+        less ordinary, enriched
+      </span>
+    </span>
+    <span class="text-block__line">
+      <span class="text-block__line-inner-3">by the essentials.</span>
+      <span class="text-block__line-inner-3" aria-hidden="true">
+        by the essentials.
+      </span>
+    </span>
     {%endif%}
-  </h2>
+  </p>
 </section>
