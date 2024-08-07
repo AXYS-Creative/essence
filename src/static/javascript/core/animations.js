@@ -451,7 +451,7 @@ const parallaxEffect = (() => {
 // Three line paragraph found on most pages
 const textBlockAnimation = (() => {
   const elements = document.querySelectorAll(
-    ".text-block__line-inner, .text-block__line-inner-2, .text-block__line-inner-3"
+    ".text-block__line-inner, .text-block__line-inner-2, .text-block__line-inner-3, .text-block__line-inner-4"
   );
 
   elements.forEach((element) => {
@@ -460,7 +460,7 @@ const textBlockAnimation = (() => {
       scrollTrigger: {
         trigger: element,
         scrub: 0.2,
-        start: "top 70%",
+        start: "top 80%",
         end: "bottom 50%",
       },
     });

@@ -181,12 +181,12 @@
 }
 @media screen and (max-width: 768px) {
   .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .h5, .podcast-quote__blockquote, .post-body .rich-text h2, h5 {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 

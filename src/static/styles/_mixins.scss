@@ -176,11 +176,11 @@ $min-breakpoints: (
   }
 
   @include mq-max("md") {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   @include mq-max("sm") {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
