@@ -21,13 +21,9 @@ $content-padding-xxl: $body-padding-xxl * 2.4;
 $content-padding-md: $body-padding-md * 2;
 
 $content-padding-thin-min-xxl: 248px;
-// $content-padding-thin: $body-padding * 4;
 $content-padding-thin: 16vw;
-// $content-padding-thin-xxl: $body-padding-xxl * 4.4;
 $content-padding-thin-xxl: 14vw;
-// $content-padding-thin-xl: $body-padding-xxl * 3.6;
 $content-padding-thin-xl: 12vw;
-// $content-padding-thin-md: $body-padding-md * 2;
 $content-padding-thin-md: 12vw;
 
 $simple-link-offset: 24px;
@@ -73,7 +69,7 @@ $test-bg: rgba(navy, 0.75);
 
 @media (max-width: 1512px) {
   :root {
-    --cta-position: 548;
+    --cta-position: 548px;
   }
 }
 

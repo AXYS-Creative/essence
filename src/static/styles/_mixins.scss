@@ -124,7 +124,6 @@ $min-breakpoints: (
   font-size: $size;
   font-weight: 300;
   text-transform: uppercase;
-  // line-height: 1;
 
   @include mq-max("xxl") {
     font-size: $size - 12px;
@@ -383,7 +382,7 @@ $min-breakpoints: (
     }
   }
 
-  // Requires custom gsap-animate
+  // Pair with 'gsap-animate' class
   &.animate {
     &::after {
       width: 100%;

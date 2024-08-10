@@ -42,7 +42,7 @@
 
 @media (max-width: 1512px) {
   :root {
-    --cta-position: 548;
+    --cta-position: 548px;
   }
 }
 .h1, h1, nav.nav-menu .nav-links .nav-link {
