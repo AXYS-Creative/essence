@@ -10,7 +10,7 @@ description: This post explores the concept of living without compromise,
   maintain your core values in the face of societal pressures.
 tags:
   - general
-image: /static/img/resources-img-3.png
+image: /static/img/blog-image-4.png
 ---
 ## The Allure of Uncompromising Living
 
