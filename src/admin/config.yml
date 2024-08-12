@@ -31,11 +31,18 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
   - name: "podcast"
     label: "Podcast"
     folder: "src/posts/podcast"
     preview_path: "posts/podcast/{{filename}}/"
     create: true
+    view_filters:
+      - label: Short title
+        field: title_short
     editor:
       preview: false
     fields:
