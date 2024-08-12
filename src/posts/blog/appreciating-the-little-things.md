@@ -8,6 +8,7 @@ date: 2024-05-20T15:22:54.927Z
 tags:
   - general
 ---
+
 ## The Importance of Small Moments
 
 In our pursuit of big goals and milestones, it's easy to overlook the small moments that make up the fabric of our daily lives. However, these little things—whether it's a warm cup of coffee, a smile from a stranger, or the comforting routine of a morning walk—can offer profound joy and grounding.

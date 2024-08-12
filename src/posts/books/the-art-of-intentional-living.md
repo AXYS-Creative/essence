@@ -1,5 +1,6 @@
 ---
 title: The Art of Intentional Living
+image: /static/img/book-3-single.avif
 description: In "The Art of Intentional Living," discover the transformative power of living with purpose and intention. This book is a comprehensive guide to aligning your daily actions with your deepest values and aspirations. Through a blend of inspiring stories, practical exercises, and insightful wisdom, you will learn how to eliminate the unnecessary and focus on what truly brings joy and fulfillment to your life.
 author: Maria Nieves, Ph.D
 date: 2022-07-24T02:43:11.390Z

@@ -31,7 +31,7 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
-      - label: "Cover Image"
+      - label: "Cover Image" # Only seems to work with .md collections
         name: "image"
         widget: "image"
         required: false
@@ -93,6 +93,10 @@ collections:
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
   - name: "books"
     label: "Books"
     label_singular: "Book"
@@ -151,6 +155,10 @@ collections:
         multiple: true
         create: true
         options: ["popular", "general", "physical", "emotion", "finance"]
+      - label: "Cover Image"
+        name: "image"
+        widget: "image"
+        required: false
   - name: "about_page"
     label: "About Page"
     description: >

@@ -1,5 +1,6 @@
 ---
 title: Seeking Simplicity
+image: /static/img/book-2-single.avif
 description: Dive into the profound impact of simplicity with "Seeking
   Simplicity." This book offers a compelling narrative that intertwines personal
   stories and practical advice, guiding readers towards a life of clarity and

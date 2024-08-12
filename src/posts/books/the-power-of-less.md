@@ -1,5 +1,6 @@
 ---
 title: The Power of Less
+image: /static/img/book-1-single.avif
 description: Uncover the essence of essentialism with "The Power of Less." This
   transformative guide delves into the art of simplifying your life, helping you
   to focus on what truly matters. Through engaging narratives and practical
