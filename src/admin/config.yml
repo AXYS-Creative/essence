@@ -43,7 +43,7 @@ collections:
     view_filters:
       - label: Short title
         field: title_short
-        pattern: true
+        pattern: ".+" # This pattern matches any non-empty string
     editor:
       preview: false
     fields:
