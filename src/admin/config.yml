@@ -81,6 +81,7 @@ collections:
         create: false
         options: ["left", "right"]
         required: true
+        hint: "Place text to the left or right of the section"
       - widget: select
         label: "tags"
         name: "tags"
