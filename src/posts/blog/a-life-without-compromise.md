@@ -1,15 +1,16 @@
 ---
+collage_thumbnail: /static/img/blog-image-4.png
+author: Wayne Thomas
+date: 2024-01-04T15:21:05.064Z
+cover_image: /static/img/blog-image-4.png
 title: A Life Without Compromise
 description: This post explores the concept of living without compromise,
   focusing on how steadfast adherence to one's principles and desires can lead
   to a more authentic and fulfilling life. Dive into strategies that help
   maintain your core values in the face of societal pressures.
-author: Wayne Thomas
-date: 2024-01-04T15:21:05.064Z
-collage_thumbnail: /static/img/blog-image-4.png
-cover_image: /static/img/blog-image-4.png
 tags:
   - general
+image: /static/img/resources-img-3.png
 ---
 ## The Allure of Uncompromising Living
 
