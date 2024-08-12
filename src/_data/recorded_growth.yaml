@@ -1,4 +1,5 @@
 numbers_cover_image: /static/img/podcast-poster.png
+image: /static/img/open-graph.png
 growth_stats:
   - title: Year founded
     numbers: 2021
@@ -14,4 +15,3 @@ growth_stats:
     numbers: 226k
   - title: Annual course enrollments
     numbers: 5.2k
-image: /static/img/resources-img-2.png
