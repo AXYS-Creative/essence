@@ -1,4 +1,4 @@
-image: /static/img/resources-img-2.png # Cover Image
+image: /static/img/resources-img-1.png
 images:
   - src: /static/img/collage-1a.webp
     description: A man packing cardboard boxes
