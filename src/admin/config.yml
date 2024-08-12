@@ -43,6 +43,7 @@ collections:
     view_filters:
       - label: Short title
         field: title_short
+        pattern: true
     editor:
       preview: false
     fields:
