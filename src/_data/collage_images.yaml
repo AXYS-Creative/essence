@@ -1,3 +1,4 @@
+image: /static/img/resources-img-2.png # Cover Image
 images:
   - src: /static/img/collage-1a.webp
     description: A man packing cardboard boxes
@@ -62,6 +63,3 @@ images:
   - src: /static/img/collage-1d.webp
     description: A young woman relaxed on a couch, talking with a coach
     tags: Mobile Column
-collage_thumbnail: /static/img/resources-img-3.png
-collage_thumbnail ERROR: /static/img/resources-img-1.png
-image: /static/img/resources-img-2.png

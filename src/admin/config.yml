@@ -164,6 +164,10 @@ collections:
         editor:
           preview: true
         fields:
+          - name: "image"
+            label: "Cover Image"
+            widget: "image"
+            required: false
           - name: "images"
             label: "Images"
             label_singular: "Image"
@@ -198,10 +202,6 @@ collections:
                   required: true,
                   hint: "Required for SEO and accessibility. Keep it brief.",
                 }
-          - name: "image"
-            label: "Cover Image"
-            widget: "image"
-            required: false
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
