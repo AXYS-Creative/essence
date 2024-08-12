@@ -40,10 +40,6 @@ collections:
     folder: "src/posts/podcast"
     preview_path: "posts/podcast/{{filename}}/"
     create: true
-    view_filters:
-      - label: Short title
-        field: title_short
-        pattern: ".+" # This pattern matches any non-empty string
     editor:
       preview: false
     fields:
@@ -202,6 +198,10 @@ collections:
                   required: true,
                   hint: "Required for SEO and accessibility. Keep it brief.",
                 }
+          - name: "image"
+            label: "Cover Image"
+            widget: "image"
+            required: false
       - name: "recorded_growth"
         label: "Recorded Growth"
         file: "src/_data/recorded_growth.yaml"
