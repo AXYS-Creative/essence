@@ -164,10 +164,6 @@ collections:
         editor:
           preview: true
         fields:
-          - name: "image"
-            label: "Cover Image"
-            widget: "image"
-            required: false
           - name: "images"
             label: "Images"
             label_singular: "Image"
@@ -210,6 +206,10 @@ collections:
           preview: true
           previewStyles: "/static/styles/styles.css"
         fields:
+          - name: "image"
+            label: "Cover Image"
+            widget: "image"
+            required: false
           - name: "growth_stats"
             label: "Growth Stats"
             label_singular: "Growth Stat"
