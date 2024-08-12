@@ -21,6 +21,7 @@ tags:
   - emotion
   - finance
 date: 2022-01-03T21:27:48.951Z
+image: /static/img/podcast-quote-female.png
 ---
 
 In this episode, we introduce the concept of essentialism and provide a comprehensive guide to getting started on your journey toward a more intentional and focused life. Essentialism is about prioritizing what truly matters and eliminating the non-essential, allowing you to live a life of purpose and clarity. We break down the fundamental principles of essentialism and offer practical tips to help you embrace this transformative philosophy.
