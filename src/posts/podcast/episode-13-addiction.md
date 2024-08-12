@@ -21,7 +21,9 @@ tags:
   - emotion
   - general
 date: 2023-01-06T14:19:36.951Z
+image: /static/img/podcast-quote-male.png
 ---
+
 In this powerful episode, we delve into the complexities of addiction with Dr. Michael Hayes, a leading addiction specialist and therapist with decades of experience helping individuals recover from substance abuse and behavioral addictions. Dr. Hayes begins by defining addiction, explaining that it is a chronic disease characterized by compulsive drug seeking and use, despite harmful consequences. He emphasizes that addiction affects the brain's reward, motivation, and memory functions, making it a formidable challenge to overcome without proper intervention.
 
 Dr. Hayes shares his personal journey into the field of addiction treatment, highlighting the profound impact that working with individuals struggling with addiction has had on his life. He discusses the stigma and misconceptions surrounding addiction, stressing the importance of viewing it as a medical condition rather than a moral failing. This perspective sets a compassionate tone for the episode, encouraging listeners to approach the topic with empathy and understanding.

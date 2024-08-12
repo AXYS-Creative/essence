@@ -17,6 +17,7 @@ tags:
   - physical
   - emotion
 date: 2022-10-04T21:27:48.951Z
+image: /static/img/podcast-quote-female.png
 ---
 
 In this enriching episode, we delve into the importance of personal space with Ava Mitchell, an acclaimed interior designer and lifestyle expert known for her holistic approach to creating living environments. Ava begins by discussing the fundamental role that our personal spaces play in our overall well-being. She explains that our surroundings significantly influence our mood, productivity, and mental health, making it essential to design spaces that are both functional and aesthetically pleasing.

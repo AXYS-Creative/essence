@@ -21,7 +21,9 @@ tags:
   - physical
   - emotion
 date: 2023-02-03T19:02:09.489Z
+image: /static/img/podcast-quote-female.png
 ---
+
 In this insightful episode, we delve into the essential elements of maintaining good health with Dr. Sarah Langston, a respected nutritionist and wellness coach. Dr. Langston begins by defining health as a dynamic balance between physical, mental, and emotional well-being. She explains that achieving and maintaining this balance requires intentional habits and lifestyle choices that support the body and mind.
 
 Dr. Langston shares her personal journey into the field of nutrition and wellness, highlighting how her passion for helping others achieve optimal health has shaped her career. She discusses the common misconceptions about health, emphasizing that it is not just about diet and exercise, but also about managing stress, getting adequate sleep, and fostering positive relationships. This holistic approach sets the tone for the episode, encouraging listeners to view health as a comprehensive and ongoing commitment.

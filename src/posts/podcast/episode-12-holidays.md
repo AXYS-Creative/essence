@@ -21,7 +21,9 @@ quote_side: left
 tags:
   - general
 date: 2022-12-06T14:36:06.680Z
+image: /static/img/podcast-quote-female.png
 ---
+
 In this festive episode, we delve into the rich traditions and deeper meanings of holidays with Dr. Linda Peterson, a cultural historian and author known for her extensive research on cultural practices and celebrations. Dr. Peterson begins by discussing the historical origins of various holidays, explaining how they have evolved over time. She emphasizes that holidays, regardless of their cultural or religious roots, serve a universal purpose: to bring people together in celebration and reflection.
 
 Dr. Peterson shares her personal fascination with holidays, recounting how her childhood experiences with family celebrations inspired her career. She highlights the importance of understanding the cultural significance of holidays to fully appreciate and honor their traditions. This perspective sets a reflective tone for the episode, encouraging listeners to explore and respect the diverse ways people celebrate around the world.

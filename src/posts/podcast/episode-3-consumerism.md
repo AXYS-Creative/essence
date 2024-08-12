@@ -13,6 +13,7 @@ tags:
   - general
   - popular
 date: 2022-03-04T21:27:48.951Z
+image: /static/img/podcast-quote-male.png
 ---
 
 This thought-provoking episode tackles the pervasive influence of consumerism with Dr. Samuel Hartman, an esteemed economist and author of several books on economic behavior. Dr. Hartman begins by defining consumerism and tracing its roots in modern society. He explains how consumer culture has evolved over the decades, driven by marketing, technological advancements, and the rise of the global marketplace. This historical context sets the stage for understanding the deep-seated nature of consumerism in our daily lives.

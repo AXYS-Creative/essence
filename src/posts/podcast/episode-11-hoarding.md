@@ -22,7 +22,9 @@ tags:
   - physical
   - emotion
 date: 2022-11-03T13:03:32.031Z
+image: /static/img/podcast-quote-female.png
 ---
+
 In this compelling episode, we delve into the multifaceted issue of hoarding with Dr. Karen Roberts, a clinical psychologist and specialist in hoarding disorders. Dr. Roberts begins by defining hoarding and differentiating it from simple clutter or collecting. She explains that hoarding is characterized by the excessive acquisition of items and the inability to discard them, leading to significant distress and impairment in daily functioning. This condition is often accompanied by feelings of shame, guilt, and isolation, making it a deeply challenging issue for those affected.
 
 Dr. Roberts shares her extensive experience working with individuals who struggle with hoarding. She discusses the psychological factors that contribute to hoarding behaviors, such as anxiety, depression, and traumatic experiences. Many individuals who hoard develop strong emotional attachments to their possessions, viewing them as extensions of their identity or as sources of comfort and security. Dr. Roberts emphasizes that these behaviors are not simply about being disorganized or lazy; they are deeply rooted in emotional and psychological pain.

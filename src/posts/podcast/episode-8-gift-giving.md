@@ -17,6 +17,7 @@ tags:
   - physical
   - emotion
 date: 2022-08-02T21:27:48.951Z
+image: /static/img/podcast-quote-female.png
 ---
 
 In this heartwarming episode, we delve into the nuances of gift-giving with Caroline Edwards, an etiquette expert and author celebrated for her insights into social customs and personal connections. Caroline begins by discussing the historical and cultural significance of gift-giving, explaining how it has been a fundamental part of human interactions across civilizations. She highlights that, while the practice has evolved, the core intent remains the same: to convey care, appreciation, and goodwill.
