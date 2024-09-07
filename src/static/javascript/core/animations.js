@@ -311,7 +311,7 @@ const wordSplit = (() => {
     const wrappedWords = words
       .map(
         (word) =>
-          `<span class="outter-span"><span class="inner-span">${word}</span></span>`
+          `<span class="outer-span"><span class="inner-span">${word}</span></span>`
       )
       .join(" ");
 

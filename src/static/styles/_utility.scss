@@ -160,7 +160,7 @@
     transition: opacity 1.2s ease 0.2s;
   }
 
-  .outter-span {
+  .outer-span {
     display: inline-flex;
     overflow: hidden;
 
@@ -178,7 +178,7 @@
   }
 
   &.indent {
-    .outter-span {
+    .outer-span {
       &:first-of-type {
         margin-inline-start: -$podcast-quote-offset;
 
@@ -197,7 +197,7 @@
     @include mq-motion-allow {
       opacity: 1;
 
-      .outter-span {
+      .outer-span {
         @for $i from 1 through 96 {
           &:nth-of-type(#{$i}) {
             .inner-span {

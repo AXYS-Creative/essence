@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  overflow-x: hidden; // Adding to html allows scrolling when the nav is open
+  overflow-x: hidden; // Prevent overflow scroll for mouse users. Adding to html selector allows scrolling when the nav is open
   position: relative;
   background-color: var(--background-color);
   color: var(--primary-font-color);
