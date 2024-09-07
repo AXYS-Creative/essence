@@ -6,26 +6,28 @@
   padding: 280px $content-padding;
   gap: 48px;
 
-  @include mq-max("xxl") {
-    gap: 32px;
-    padding: 264px $content-padding-xxl;
-  }
+  @media all {
+    @include mq-max("xxl") {
+      gap: 32px;
+      padding: 264px $content-padding-xxl;
+    }
 
-  @include mq-max("xl") {
-    padding: 216px $content-padding-xxl;
-  }
+    @include mq-max("xl") {
+      padding: 216px $content-padding-xxl;
+    }
 
-  @include mq-max("lg") {
-    padding: 196px $content-padding-xxl;
-  }
+    @include mq-max("lg") {
+      padding: 196px $content-padding-xxl;
+    }
 
-  @include mq-max("md") {
-    gap: 24px;
-    padding: 164px $content-padding-md;
-  }
+    @include mq-max("md") {
+      gap: 24px;
+      padding: 164px $content-padding-md;
+    }
 
-  @include mq-max("sm") {
-    padding: 164px $body-padding-sm;
+    @include mq-max("sm") {
+      padding: 164px $body-padding-sm;
+    }
   }
 
   &__heading {

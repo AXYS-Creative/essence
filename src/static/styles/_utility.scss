@@ -153,11 +153,13 @@
 }
 
 .word-split {
+  $delay: 0s;
+
   text-transform: initial;
 
   @include mq-motion-allow {
     opacity: 0;
-    transition: opacity 1.2s ease 0.2s;
+    transition: opacity 1.2s ease $delay;
   }
 
   .outer-span {
@@ -202,7 +204,7 @@
           &:nth-of-type(#{$i}) {
             .inner-span {
               translate: 0 0;
-              transition: translate 0.5s ease 0.2s + 0.016s * $i;
+              transition: translate 0.5s ease $delay + 0.016s * $i;
             }
           }
         }

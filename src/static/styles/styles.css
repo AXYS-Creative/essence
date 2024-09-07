@@ -3333,7 +3333,7 @@ cite {
 @media (prefers-reduced-motion: no-preference) {
   .word-split {
     opacity: 0;
-    transition: opacity 1.2s ease 0.2s;
+    transition: opacity 1.2s ease 0s;
   }
 }
 .word-split .outer-span {
@@ -3372,387 +3372,387 @@ cite {
   }
   .word-split.animate .outer-span:nth-of-type(1) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.216s;
+    transition: translate 0.5s ease 0.016s;
   }
   .word-split.animate .outer-span:nth-of-type(2) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.232s;
+    transition: translate 0.5s ease 0.032s;
   }
   .word-split.animate .outer-span:nth-of-type(3) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.248s;
+    transition: translate 0.5s ease 0.048s;
   }
   .word-split.animate .outer-span:nth-of-type(4) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.264s;
+    transition: translate 0.5s ease 0.064s;
   }
   .word-split.animate .outer-span:nth-of-type(5) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.28s;
+    transition: translate 0.5s ease 0.08s;
   }
   .word-split.animate .outer-span:nth-of-type(6) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.296s;
+    transition: translate 0.5s ease 0.096s;
   }
   .word-split.animate .outer-span:nth-of-type(7) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.312s;
+    transition: translate 0.5s ease 0.112s;
   }
   .word-split.animate .outer-span:nth-of-type(8) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.328s;
+    transition: translate 0.5s ease 0.128s;
   }
   .word-split.animate .outer-span:nth-of-type(9) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.344s;
+    transition: translate 0.5s ease 0.144s;
   }
   .word-split.animate .outer-span:nth-of-type(10) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.36s;
+    transition: translate 0.5s ease 0.16s;
   }
   .word-split.animate .outer-span:nth-of-type(11) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.376s;
+    transition: translate 0.5s ease 0.176s;
   }
   .word-split.animate .outer-span:nth-of-type(12) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.392s;
+    transition: translate 0.5s ease 0.192s;
   }
   .word-split.animate .outer-span:nth-of-type(13) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.408s;
+    transition: translate 0.5s ease 0.208s;
   }
   .word-split.animate .outer-span:nth-of-type(14) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.424s;
+    transition: translate 0.5s ease 0.224s;
   }
   .word-split.animate .outer-span:nth-of-type(15) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.44s;
+    transition: translate 0.5s ease 0.24s;
   }
   .word-split.animate .outer-span:nth-of-type(16) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.456s;
+    transition: translate 0.5s ease 0.256s;
   }
   .word-split.animate .outer-span:nth-of-type(17) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.472s;
+    transition: translate 0.5s ease 0.272s;
   }
   .word-split.animate .outer-span:nth-of-type(18) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.488s;
+    transition: translate 0.5s ease 0.288s;
   }
   .word-split.animate .outer-span:nth-of-type(19) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.504s;
+    transition: translate 0.5s ease 0.304s;
   }
   .word-split.animate .outer-span:nth-of-type(20) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.52s;
+    transition: translate 0.5s ease 0.32s;
   }
   .word-split.animate .outer-span:nth-of-type(21) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.536s;
+    transition: translate 0.5s ease 0.336s;
   }
   .word-split.animate .outer-span:nth-of-type(22) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.552s;
+    transition: translate 0.5s ease 0.352s;
   }
   .word-split.animate .outer-span:nth-of-type(23) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.568s;
+    transition: translate 0.5s ease 0.368s;
   }
   .word-split.animate .outer-span:nth-of-type(24) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.584s;
+    transition: translate 0.5s ease 0.384s;
   }
   .word-split.animate .outer-span:nth-of-type(25) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.6s;
+    transition: translate 0.5s ease 0.4s;
   }
   .word-split.animate .outer-span:nth-of-type(26) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.616s;
+    transition: translate 0.5s ease 0.416s;
   }
   .word-split.animate .outer-span:nth-of-type(27) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.632s;
+    transition: translate 0.5s ease 0.432s;
   }
   .word-split.animate .outer-span:nth-of-type(28) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.648s;
+    transition: translate 0.5s ease 0.448s;
   }
   .word-split.animate .outer-span:nth-of-type(29) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.664s;
+    transition: translate 0.5s ease 0.464s;
   }
   .word-split.animate .outer-span:nth-of-type(30) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.68s;
+    transition: translate 0.5s ease 0.48s;
   }
   .word-split.animate .outer-span:nth-of-type(31) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.696s;
+    transition: translate 0.5s ease 0.496s;
   }
   .word-split.animate .outer-span:nth-of-type(32) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.712s;
+    transition: translate 0.5s ease 0.512s;
   }
   .word-split.animate .outer-span:nth-of-type(33) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.728s;
+    transition: translate 0.5s ease 0.528s;
   }
   .word-split.animate .outer-span:nth-of-type(34) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.744s;
+    transition: translate 0.5s ease 0.544s;
   }
   .word-split.animate .outer-span:nth-of-type(35) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.76s;
+    transition: translate 0.5s ease 0.56s;
   }
   .word-split.animate .outer-span:nth-of-type(36) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.776s;
+    transition: translate 0.5s ease 0.576s;
   }
   .word-split.animate .outer-span:nth-of-type(37) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.792s;
+    transition: translate 0.5s ease 0.592s;
   }
   .word-split.animate .outer-span:nth-of-type(38) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.808s;
+    transition: translate 0.5s ease 0.608s;
   }
   .word-split.animate .outer-span:nth-of-type(39) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.824s;
+    transition: translate 0.5s ease 0.624s;
   }
   .word-split.animate .outer-span:nth-of-type(40) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.84s;
+    transition: translate 0.5s ease 0.64s;
   }
   .word-split.animate .outer-span:nth-of-type(41) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.856s;
+    transition: translate 0.5s ease 0.656s;
   }
   .word-split.animate .outer-span:nth-of-type(42) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.872s;
+    transition: translate 0.5s ease 0.672s;
   }
   .word-split.animate .outer-span:nth-of-type(43) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.888s;
+    transition: translate 0.5s ease 0.688s;
   }
   .word-split.animate .outer-span:nth-of-type(44) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.904s;
+    transition: translate 0.5s ease 0.704s;
   }
   .word-split.animate .outer-span:nth-of-type(45) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.92s;
+    transition: translate 0.5s ease 0.72s;
   }
   .word-split.animate .outer-span:nth-of-type(46) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.936s;
+    transition: translate 0.5s ease 0.736s;
   }
   .word-split.animate .outer-span:nth-of-type(47) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.952s;
+    transition: translate 0.5s ease 0.752s;
   }
   .word-split.animate .outer-span:nth-of-type(48) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.968s;
+    transition: translate 0.5s ease 0.768s;
   }
   .word-split.animate .outer-span:nth-of-type(49) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 0.984s;
+    transition: translate 0.5s ease 0.784s;
   }
   .word-split.animate .outer-span:nth-of-type(50) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1s;
+    transition: translate 0.5s ease 0.8s;
   }
   .word-split.animate .outer-span:nth-of-type(51) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.016s;
+    transition: translate 0.5s ease 0.816s;
   }
   .word-split.animate .outer-span:nth-of-type(52) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.032s;
+    transition: translate 0.5s ease 0.832s;
   }
   .word-split.animate .outer-span:nth-of-type(53) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.048s;
+    transition: translate 0.5s ease 0.848s;
   }
   .word-split.animate .outer-span:nth-of-type(54) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.064s;
+    transition: translate 0.5s ease 0.864s;
   }
   .word-split.animate .outer-span:nth-of-type(55) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.08s;
+    transition: translate 0.5s ease 0.88s;
   }
   .word-split.animate .outer-span:nth-of-type(56) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.096s;
+    transition: translate 0.5s ease 0.896s;
   }
   .word-split.animate .outer-span:nth-of-type(57) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.112s;
+    transition: translate 0.5s ease 0.912s;
   }
   .word-split.animate .outer-span:nth-of-type(58) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.128s;
+    transition: translate 0.5s ease 0.928s;
   }
   .word-split.animate .outer-span:nth-of-type(59) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.144s;
+    transition: translate 0.5s ease 0.944s;
   }
   .word-split.animate .outer-span:nth-of-type(60) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.16s;
+    transition: translate 0.5s ease 0.96s;
   }
   .word-split.animate .outer-span:nth-of-type(61) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.176s;
+    transition: translate 0.5s ease 0.976s;
   }
   .word-split.animate .outer-span:nth-of-type(62) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.192s;
+    transition: translate 0.5s ease 0.992s;
   }
   .word-split.animate .outer-span:nth-of-type(63) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.208s;
+    transition: translate 0.5s ease 1.008s;
   }
   .word-split.animate .outer-span:nth-of-type(64) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.224s;
+    transition: translate 0.5s ease 1.024s;
   }
   .word-split.animate .outer-span:nth-of-type(65) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.24s;
+    transition: translate 0.5s ease 1.04s;
   }
   .word-split.animate .outer-span:nth-of-type(66) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.256s;
+    transition: translate 0.5s ease 1.056s;
   }
   .word-split.animate .outer-span:nth-of-type(67) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.272s;
+    transition: translate 0.5s ease 1.072s;
   }
   .word-split.animate .outer-span:nth-of-type(68) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.288s;
+    transition: translate 0.5s ease 1.088s;
   }
   .word-split.animate .outer-span:nth-of-type(69) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.304s;
+    transition: translate 0.5s ease 1.104s;
   }
   .word-split.animate .outer-span:nth-of-type(70) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.32s;
+    transition: translate 0.5s ease 1.12s;
   }
   .word-split.animate .outer-span:nth-of-type(71) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.336s;
+    transition: translate 0.5s ease 1.136s;
   }
   .word-split.animate .outer-span:nth-of-type(72) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.352s;
+    transition: translate 0.5s ease 1.152s;
   }
   .word-split.animate .outer-span:nth-of-type(73) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.368s;
+    transition: translate 0.5s ease 1.168s;
   }
   .word-split.animate .outer-span:nth-of-type(74) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.384s;
+    transition: translate 0.5s ease 1.184s;
   }
   .word-split.animate .outer-span:nth-of-type(75) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.4s;
+    transition: translate 0.5s ease 1.2s;
   }
   .word-split.animate .outer-span:nth-of-type(76) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.416s;
+    transition: translate 0.5s ease 1.216s;
   }
   .word-split.animate .outer-span:nth-of-type(77) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.432s;
+    transition: translate 0.5s ease 1.232s;
   }
   .word-split.animate .outer-span:nth-of-type(78) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.448s;
+    transition: translate 0.5s ease 1.248s;
   }
   .word-split.animate .outer-span:nth-of-type(79) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.464s;
+    transition: translate 0.5s ease 1.264s;
   }
   .word-split.animate .outer-span:nth-of-type(80) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.48s;
+    transition: translate 0.5s ease 1.28s;
   }
   .word-split.animate .outer-span:nth-of-type(81) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.496s;
+    transition: translate 0.5s ease 1.296s;
   }
   .word-split.animate .outer-span:nth-of-type(82) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.512s;
+    transition: translate 0.5s ease 1.312s;
   }
   .word-split.animate .outer-span:nth-of-type(83) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.528s;
+    transition: translate 0.5s ease 1.328s;
   }
   .word-split.animate .outer-span:nth-of-type(84) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.544s;
+    transition: translate 0.5s ease 1.344s;
   }
   .word-split.animate .outer-span:nth-of-type(85) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.56s;
+    transition: translate 0.5s ease 1.36s;
   }
   .word-split.animate .outer-span:nth-of-type(86) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.576s;
+    transition: translate 0.5s ease 1.376s;
   }
   .word-split.animate .outer-span:nth-of-type(87) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.592s;
+    transition: translate 0.5s ease 1.392s;
   }
   .word-split.animate .outer-span:nth-of-type(88) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.608s;
+    transition: translate 0.5s ease 1.408s;
   }
   .word-split.animate .outer-span:nth-of-type(89) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.624s;
+    transition: translate 0.5s ease 1.424s;
   }
   .word-split.animate .outer-span:nth-of-type(90) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.64s;
+    transition: translate 0.5s ease 1.44s;
   }
   .word-split.animate .outer-span:nth-of-type(91) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.656s;
+    transition: translate 0.5s ease 1.456s;
   }
   .word-split.animate .outer-span:nth-of-type(92) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.672s;
+    transition: translate 0.5s ease 1.472s;
   }
   .word-split.animate .outer-span:nth-of-type(93) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.688s;
+    transition: translate 0.5s ease 1.488s;
   }
   .word-split.animate .outer-span:nth-of-type(94) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.704s;
+    transition: translate 0.5s ease 1.504s;
   }
   .word-split.animate .outer-span:nth-of-type(95) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.72s;
+    transition: translate 0.5s ease 1.52s;
   }
   .word-split.animate .outer-span:nth-of-type(96) .inner-span {
     translate: 0 0;
-    transition: translate 0.5s ease 1.736s;
+    transition: translate 0.5s ease 1.536s;
   }
 }
 
