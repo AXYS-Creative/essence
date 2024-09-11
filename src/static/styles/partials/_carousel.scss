@@ -1,0 +1,128 @@
+.carousel {
+  @include thin-section;
+
+  &-wrapper {
+    // To maintain section padding
+    display: grid; // Stack children w/o removing from document flow
+  }
+
+  .slide {
+    @include row-center(flex-start);
+    grid-area: 1 / 1;
+
+    width: 100%;
+    gap: 164px;
+    margin-block: 12px;
+    opacity: 0;
+    transition: 0.6s ease;
+
+    @include mq-max("xxl") {
+      gap: 96px;
+    }
+
+    @include mq-max("lg") {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-block-end: 24px;
+      gap: 48px;
+    }
+
+    &-text {
+      // border: $test;
+      width: 64%;
+
+      @include mq-max("lg") {
+        width: 100%;
+      }
+
+      &__name {
+        text-transform: capitalize;
+        margin-block-end: 24px;
+        overflow: hidden;
+
+        @include mq-max("xl") {
+          margin-block-end: 12px;
+        }
+
+        // &-inner {
+        //   border: $test;
+        // }
+      }
+
+      &__role {
+        text-transform: initial;
+        margin-block-end: 48px;
+
+        @include mq-max("xl") {
+          margin-block-end: 24px;
+        }
+      }
+
+      &__quote {
+        @include body-font-styles;
+      }
+    }
+
+    img {
+      border-radius: $radius;
+      width: 400px;
+      aspect-ratio: 1 / 1.2;
+
+      @include mq-max("xl") {
+        width: 320px;
+      }
+
+      @include mq-max("lg") {
+        width: min(100%, 480px);
+        aspect-ratio: 1 / 1;
+        object-position: top;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &-controls {
+    @include row-center(flex-start);
+    gap: 8px;
+
+    @include mq-max("xl") {
+      bottom: 24px;
+    }
+
+    .pagination-dot {
+      border: 1.5px solid var(--primary-accent-color);
+      width: 10px;
+      height: 10px;
+      border-radius: 24px;
+      // background-color: rgba($green, 0.5);
+      transition: 0.5s $cubic-ease-sudden-back-strong, outline 0s;
+
+      @include mq-max("xl") {
+        width: 8px;
+        height: 8px;
+        border-width: 1px;
+      }
+
+      @include mq-max("sm") {
+        width: 12px;
+        height: 12px;
+      }
+
+      &.active {
+        width: 40px;
+        background-color: var(--primary-accent-color);
+
+        @include mq-max("xl") {
+          width: 36px;
+        }
+
+        @include mq-max("sm") {
+          width: 48px;
+        }
+      }
+    }
+  }
+}

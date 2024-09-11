@@ -60,6 +60,20 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  // Line Break Token at build vs client (prevent tokens from showing up briefly)
+  eleventyConfig.addTransform("tokenReplace", function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return content.replace(/\[%br(\.[^\]]+)?%\]/g, (match, className) => {
+        if (className) {
+          const cleanClass = className.substring(1); // Remove the leading '.'
+          return `<br class="${cleanClass}" aria-hidden="true">`;
+        }
+        return `<br aria-hidden="true">`;
+      });
+    }
+    return content;
+  });
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {

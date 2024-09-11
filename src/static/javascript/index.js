@@ -1,9 +1,12 @@
 import "./utility.js";
 
+import "./components/carousel.js";
 import "./components/header.js";
 import "./components/nav.js";
 import "./components/posts.js";
 import "./components/video.js";
+
+import "./content/tokens.js";
 
 import "./core/animations.js";
 // import "./core/lenis.js";

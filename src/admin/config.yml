@@ -358,6 +358,40 @@ collections:
                   required: true,
                   hint: "Required for SEO and accessibility. Keep it brief.",
                 }
+      - name: "partial_carousel"
+        label: "Carousel"
+        file: "src/_data/partial_carousel.yaml"
+        preview_path: "/#essence-media-praises"
+        editor:
+          preview: false
+        fields:
+          - name: "testimonials"
+            label: "Testimonials"
+            label_singular: "Testimonial"
+            widget: "list"
+            collapsed: false
+            max: 5
+            fields:
+              - {
+                  name: "name",
+                  label: "Name",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "role",
+                  label: "Role",
+                  widget: "string",
+                  required: true,
+                }
+              - {
+                  name: "quote",
+                  label: "Quote",
+                  widget: "text",
+                  required: true,
+                  hint: "Please don’t wrap the quote in quotation marks, they’re already included.",
+                }
+              - { name: "img", label: "Image", widget: "image", required: true }
   - name: "settings"
     label: "Settings"
     description: >

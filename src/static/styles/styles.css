@@ -4339,6 +4339,174 @@ cite {
   translate: 0 100%;
 }
 
+.carousel {
+  padding-inline: 16vw;
+}
+@media screen and (min-width: 1513px) {
+  .carousel {
+    padding-inline: 248px;
+  }
+}
+@media screen and (max-width: 1512px) {
+  .carousel {
+    padding-inline: 14vw;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .carousel {
+    padding-inline: 12vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel {
+    padding-inline: 12vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel {
+    padding-inline: 16px;
+  }
+}
+.carousel-wrapper {
+  display: grid;
+}
+.carousel .slide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: 1/1;
+  width: 100%;
+  gap: 164px;
+  margin-block: 12px;
+  opacity: 0;
+  transition: 0.6s ease;
+}
+@media screen and (max-width: 1512px) {
+  .carousel .slide {
+    gap: 96px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel .slide {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-block-end: 24px;
+    gap: 48px;
+  }
+}
+.carousel .slide-text {
+  width: 64%;
+}
+@media screen and (max-width: 1024px) {
+  .carousel .slide-text {
+    width: 100%;
+  }
+}
+.carousel .slide-text__name {
+  text-transform: capitalize;
+  margin-block-end: 24px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1200px) {
+  .carousel .slide-text__name {
+    margin-block-end: 12px;
+  }
+}
+.carousel .slide-text__role {
+  text-transform: initial;
+  margin-block-end: 48px;
+}
+@media screen and (max-width: 1200px) {
+  .carousel .slide-text__role {
+    margin-block-end: 24px;
+  }
+}
+.carousel .slide-text__quote {
+  font-size: 20px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1200px) {
+  .carousel .slide-text__quote {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel .slide-text__quote {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel .slide-text__quote {
+    font-size: 16px;
+  }
+}
+.carousel .slide img {
+  border-radius: 4px;
+  width: 400px;
+  aspect-ratio: 1/1.2;
+}
+@media screen and (max-width: 1200px) {
+  .carousel .slide img {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel .slide img {
+    width: min(100%, 480px);
+    aspect-ratio: 1/1;
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+.carousel .slide.active {
+  opacity: 1;
+}
+.carousel-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .carousel-controls {
+    bottom: 24px;
+  }
+}
+.carousel-controls .pagination-dot {
+  border: 1.5px solid var(--primary-accent-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 24px;
+  transition: 0.5s cubic-bezier(0.77, -0.43, 0.11, 1.11), outline 0s;
+}
+@media screen and (max-width: 1200px) {
+  .carousel-controls .pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel-controls .pagination-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+.carousel-controls .pagination-dot.active {
+  width: 40px;
+  background-color: var(--primary-accent-color);
+}
+@media screen and (max-width: 1200px) {
+  .carousel-controls .pagination-dot.active {
+    width: 36px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .carousel-controls .pagination-dot.active {
+    width: 48px;
+  }
+}
+
 .essence-contact {
   display: flex;
   flex-direction: column;
@@ -5037,29 +5205,6 @@ cite {
   }
 }
 
-body:has(.about-hero) .essence-paragraph__about-us {
-  padding-block: 212px 356px;
-}
-@media screen and (max-width: 1512px) {
-  body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 148px 296px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 124px 236px;
-  }
-}
-@media screen and (max-width: 768px) {
-  body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 148px 296px;
-  }
-}
-@media screen and (max-width: 480px) {
-  body:has(.about-hero) .essence-paragraph__about-us {
-    padding-block: 96px 264px;
-  }
-}
 body:has(.about-hero) .text-block {
   padding-block-end: 296px;
 }
@@ -5186,7 +5331,7 @@ body:has(.about-hero) .text-block {
   }
 }
 .growth-section .growth-list {
-  gap: 148px;
+  gap: 96px;
 }
 @media screen and (max-width: 1512px) {
   .growth-section .growth-list {
