@@ -4874,6 +4874,28 @@ cite {
 .text-block__text {
   text-transform: initial;
   text-align: center;
+  font-size: 48px;
+  font-weight: 200;
+}
+@media screen and (max-width: 1512px) {
+  .text-block__text {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .text-block__text {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text-block__text {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .text-block__text {
+    font-size: 4.4vw;
+  }
 }
 .text-block__line {
   display: flex;
