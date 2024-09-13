@@ -7,21 +7,21 @@ export const maxLg = window.matchMedia("(max-width: 1024px)");
 export const maxMd = window.matchMedia("(max-width: 768px)");
 export const maxSm = window.matchMedia("(max-width: 480px)");
 
-// Page specific logic
-export const path = window.location.pathname;
+// // Page specific logic, intended for nav links (active page)
+// export const path = window.location.pathname;
 
-export const pageClasses = {
-  "/blog": "blog-page",
-  "/podcast": "podcast-page",
-  "/books": "books-page",
-  "/films": "films-page",
-  "/about": "about-page",
-  "/resources": "resources-page",
-  "/contact": "contact-page",
-};
+// export const pageClasses = {
+//   "/blog": "blog-page",
+//   "/podcast": "podcast-page",
+//   "/books": "books-page",
+//   "/films": "films-page",
+//   "/about": "about-page",
+//   "/resources": "resources-page",
+//   "/contact": "contact-page",
+// };
 
 // Get Current Year for Copyright
-(function getCurrentYear() {
+const getCurrentYear = (() => {
   const yearText = document.querySelector(".year-text");
   const currentYear = new Date().getFullYear();
 

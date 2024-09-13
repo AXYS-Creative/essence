@@ -8,7 +8,12 @@
     {% if site_navigation.links %}
     <div class="nav-img-container">
       {% for link in site_navigation.links %}
-      <img src="{{ link.img_src }}" alt="{{ link.img_alt }}" class="nav-img" />
+      <img
+        src="{{ link.img_src }}"
+        alt="{{ link.img_alt }}"
+        class="nav-img"
+        loading="lazy"
+      />
       {% endfor %}
     </div>
 

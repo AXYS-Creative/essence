@@ -1,4 +1,4 @@
-import { path, pageClasses } from "../utility.js";
+// import { path } from "../utility.js";
 
 const headerLinks = document.querySelector(".header-links"),
   headerLinksIndicator = document.querySelector(
@@ -34,10 +34,10 @@ linkItems.forEach((link) => {
   });
 });
 
-// Page specific logic
-links.forEach((link) => {
-  const href = link.getAttribute("href");
-  if (path.includes(href)) {
-    link.classList.add("active");
-  }
-});
+// // Page specific logic, intended to highlight acive nav link/page
+// links.forEach((link) => {
+//   const href = link.getAttribute("href");
+//   if (path.includes(href)) {
+//     link.classList.add("active");
+//   }
+// });

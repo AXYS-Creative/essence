@@ -179,4 +179,31 @@ const effectOne = (() => {
     const wrapper = waveImgWrapper[index];
     new WaveEffect(img, wrapper);
   });
+
+  // Initialize only when in view
+
+  const initializeWaveEffect = (img, wrapper) => {
+    new WaveEffect(img, wrapper);
+  };
+
+  // Set up IntersectionObserver
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("we can see the magic");
+          const img = entry.target.querySelector(".wave-img");
+          const wrapper = entry.target;
+          initializeWaveEffect(img, wrapper); // Initialize the Three.js effect
+
+          // Stop observing this element after initialization
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  ); // Trigger when 10% of the element is in view
+
+  // Start observing the wave-img-wrapper elements
+  waveImgWrapper.forEach((wrapper) => observer.observe(wrapper));
 })();
