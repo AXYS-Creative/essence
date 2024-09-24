@@ -45,7 +45,7 @@
 
     {% include "./partials/nav.html" %}
 
-    <main>{{ content | safe }}</main>
+    <main class="{{ mainClass }}">{{ content | safe }}</main>
 
     <!-- prettier-ignore -->
     {%include "./partials/footer.html" %} 
