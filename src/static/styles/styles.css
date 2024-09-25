@@ -2780,6 +2780,10 @@ cite {
     padding: 128px 0;
   }
 }
+.dialog.newsletter-dialog .newsletter-form:has(.status-message.active) .form-disclaimer {
+  translate: 0 0;
+  transition: 0.3s ease;
+}
 .dialog.newsletter-dialog .newsletter-form * {
   color: var(--background-color);
 }
@@ -2917,15 +2921,15 @@ cite {
   }
 }
 .dialog.newsletter-dialog .newsletter-form .form-message-container .status-message {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 20px;
+  font-weight: 300;
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  font-size: 20px;
-  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-wrap: nowrap;
   opacity: 0;
@@ -3010,6 +3014,28 @@ cite {
 .dialog.newsletter-dialog .newsletter-form .form-message-container .error-message .error-icon path {
   fill: #fbffa4;
 }
+.dialog.newsletter-dialog .newsletter-form .form-disclaimer {
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0;
+  translate: 0 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dialog.newsletter-dialog .newsletter-form .form-disclaimer {
+    transition: 0.3s ease 0s;
+  }
+}
+@media screen and (max-width: 1512px) {
+  .dialog.newsletter-dialog .newsletter-form .form-disclaimer {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .dialog.newsletter-dialog .newsletter-form .form-disclaimer {
+    font-size: 12px;
+  }
+}
 .dialog.newsletter-dialog .backdrop {
   position: fixed;
   top: 0;
@@ -3060,14 +3086,19 @@ cite {
     transition: translate 1s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, opacity 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s, background 0.3s ease, color 0.3s ease;
   }
 }
-.dialog.newsletter-dialog[open] .newsletter-form .form-message-container {
+.dialog.newsletter-dialog[open] .newsletter-form .form-message-container,
+.dialog.newsletter-dialog[open] .newsletter-form .form-disclaimer {
   opacity: 1;
   translate: 0 0;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .dialog.newsletter-dialog[open] .newsletter-form .form-message-container {
+  .dialog.newsletter-dialog[open] .newsletter-form .form-message-container,
+  .dialog.newsletter-dialog[open] .newsletter-form .form-disclaimer {
     transition: 0.8s cubic-bezier(0.18, 0.97, 0.47, 1) 0.5s;
   }
+}
+.dialog.newsletter-dialog[open] .newsletter-form .form-disclaimer {
+  translate: 0 -3em;
 }
 .dialog.newsletter-dialog[open] .backdrop {
   left: 0;
