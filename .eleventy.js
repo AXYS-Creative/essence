@@ -43,7 +43,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/static/fonts");
   eleventyConfig.addPassthroughCopy("./src/static/img");
   eleventyConfig.addPassthroughCopy("./src/static/javascript");
-  eleventyConfig.addPassthroughCopy({ "src/404.html": "404.html" }); // Copy it directly without making a sub directory
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
