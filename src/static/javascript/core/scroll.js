@@ -1,4 +1,4 @@
-import { maxXxl, maxXl, maxLg, maxMd, minMd, maxSm } from "../utility.js";
+import { maxXxl, maxXl, maxLg, maxMd, minLg, maxSm } from "../utility.js";
 
 export let scrollPosition = 0;
 export let scrollFromTop;
@@ -81,7 +81,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
     menuBtn.setAttribute("tabindex", "0");
   }
 
-  if (!onAboutPage) {
+  if (!onAboutPage && minLg.matches) {
     headerLinks.forEach((link) =>
       link.setAttribute("tabindex", hasScrolled ? "-1" : "0")
     );
@@ -130,7 +130,7 @@ export const updateScrollDependentElements = (scrollPosition) => {
       siteHeader.classList.add("header-hide-menu-btn");
       menuBtn.setAttribute("tabindex", "-1");
     } else if (atTop) {
-      if (!onAboutPage) {
+      if (!onAboutPage && minLg.matches) {
         menuBtn.setAttribute("tabindex", "-1");
       }
     } else {
@@ -240,6 +240,6 @@ window.addEventListener(
 
 updateScrollDependentElements(0);
 
-if (!onAboutPage) {
+if (!onAboutPage && minLg.matches) {
   menuBtn.setAttribute("tabindex", "-1");
 }
